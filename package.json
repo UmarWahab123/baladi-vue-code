@@ -1,7 +1,7 @@
 {
   "name": "vue3-project",
   "version": "1.0.0",
-  "description": "A simple starter template for Vue JS 3 and Tailwindcss",
+  "description": "Baladi vue js webstore",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
