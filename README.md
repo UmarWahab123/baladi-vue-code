@@ -1,5 +1,5 @@
 <h3 align="center">Baladi Express Vuejs store</h3>
-<p align="center">Baladi vue js webstore</p>
+<p align="center">Baladi VUE JS webstore for customer</p>
 
 <img src="./src/assets/banner.png" width="100%" alt="">
 
