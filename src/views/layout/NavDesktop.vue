@@ -1,0 +1,1503 @@
+<template>
+ <div class="header-desktop hide-mobile">
+            <div class="header-top dark border-disable">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="column align-center left">
+                            <nav class="site-menu horizontal">
+                                <ul id="menu-top-left" class="menu">
+                                    <li id="menu-item-2231"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2231">
+                                        <a href="#">About
+                                            Us</a>
+                                    </li>
+                                    <li id="menu-item-2229"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229">
+                                            <router-link class="nav-link" to="/myaccount">My account
+                                            </router-link>
+                                    </li>
+
+                                    <li id="menu-item-2199"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2199">
+                                        <a href="#">Featured
+                                            Products</a>
+                                    </li>
+                                    <li id="menu-item-2230"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2230">
+                                        <a href="#">Wishlist</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- column -->
+
+                        <div class="column align-center right">
+                            <nav class="site-menu horizontal">
+                                <ul id="menu-top-right-1" class="menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233">
+                                        <a href="#">Order
+                                            Tracking</a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2176">
+                                        <a href="#">English</a>
+                                        <ul class="sub-menu">
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2177">
+                                                <a href="#">English</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2178">
+                                                <a href="#">Spanish</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2193">
+                                                <a href="#">German</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2194">
+                                        <a href="#">USD</a>
+                                        <ul class="sub-menu">
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2195">
+                                                <a href="#">USD</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2196">
+                                                <a href="#">INR</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2197">
+                                                <a href="#">GBP</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- column -->
+
+                    </div>
+                    <!-- header-wrapper -->
+                </div>
+                <!-- container -->
+            </div>
+            <!-- header-top -->
+
+            <div class="header-main height-padding">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="column align-center left">
+                            <div class="site-brand"> <a href="#" title="Machic – Electronics Store eCommerce Theme">
+                                    <img src="/../src/assets/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme">
+                                </a> </div>
+                            <!-- site-brand -->
+                        </div>
+                        <!-- column -->
+
+                        <div class="column align-center right">
+                            <div class="header-form site-search">
+                                <div
+                                    class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled">
+                                    <form class="dgwt-wcas-search-form" role="search" action="#" method="get">
+                                        <div class="dgwt-wcas-sf-wrapp">
+                                            <label class="screen-reader-text" for="dgwt-wcas-search-input-1">Products
+                                                search</label>
+                                            <input id="dgwt-wcas-search-input-1" type="search"
+                                                class="dgwt-wcas-search-input" name="s" value=""
+                                                placeholder="Search for products..." autocomplete="off">
+                                            <div class="dgwt-wcas-preloader" style="right: 96.875px;"></div>
+                                            <button type="submit" aria-label="Search"
+                                                class="dgwt-wcas-search-submit">Search</button>
+                                            <input type="hidden" name="post_type" value="product">
+                                            <input type="hidden" name="dgwt_wcas" value="1">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- site-search -->
+
+                            <div class="header-addons login-button"> <a href="#">
+                                    <div class="header-addons-icon"><i class="klbth-icon-user-1"></i></div>
+                                    <div class="header-addons-text">
+                                        <div class="sub-text">Sign In</div>
+                                        <div class="primary-text">Account</div>
+                                    </div>
+                                    <!-- header-addons-text -->
+                                </a> </div>
+                            <!-- header-addons -->
+                            <div class="header-addons wishlist-button">
+                                <div class="header-addons-icon"> <a href="#"><i class="far fa-bell"></i></a>
+                                    <div class="button-count"><a href="#"
+                                            class="wishlist_products_counter top_wishlist-heart top_wishlist- wishlist-counter-with-products">
+                                            <span class="wishlist_products_counter_text">Wishlist -</span> <span
+                                                class="wishlist_products_counter_number">1</span> </a> </div>
+                                </div>
+                                <!-- header-addons-icon -->
+                            </div>
+                            <div class="header-addons wishlist-button">
+                                <div class="header-addons-icon"> <a href="#"><i class="klbth-icon-heart"></i></a>
+                                    <div class="button-count"><a href="#"
+                                            class="wishlist_products_counter top_wishlist-heart top_wishlist- wishlist-counter-with-products">
+                                            <span class="wishlist_products_counter_text">Wishlist -</span> <span
+                                                class="wishlist_products_counter_number">1</span> </a> </div>
+                                </div>
+                                <!-- header-addons-icon -->
+                            </div>
+                            <!-- header-addons -->
+
+                            <div class="header-addons cart-button"> <a href="#cart/">
+                                    <div class="header-addons-icon"> <i class="klbth-icon-simple-cart"></i>
+                                        <div class="button-count cart-count">2</div>
+                                    </div>
+                                    <!-- header-addons-icon -->
+                                    <div class="header-addons-text hide-mobile">
+                                        <div class="sub-text">Total</div>
+                                        <div class="primary-text cart-subtotal"><span
+                                                class="woocommerce-Price-amount amount">
+                                                <bdi><span
+                                                        class="woocommerce-Price-currencySymbol">$</span>1,218.99</bdi>
+                                            </span></div>
+                                    </div>
+                                    <!-- header-addons-text -->
+                                </a>
+                                <div class="cart-dropdown hide">
+                                    <div class="cart-dropdown-wrapper">
+                                        <div class="fl-mini-cart-content">
+                                            <div
+                                                class="products column-1 mobile-1 woocommerce-mini-cart cart_list product_list_widget ">
+                                                <div class="cart-slider swiper-container klb-mini-cart swiper-container-initialized swiper-container-vertical swiper-container-pointer-events slider-loaded"
+                                                    data-effect="slide" data-direction="vertical" data-loop="false"
+                                                    data-speed="1000" data-spacebetween="0" data-autoplay="false"
+                                                    data-autospeed="300" data-items="2" data-mobileitems="2"
+                                                    data-tabletitems="2">
+                                                    <div class="slider-loader">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="spinner"
+                                                            width="50" height="50" viewBox="0 0 44 44">
+                                                            <circle class="spinner-path" cx="22" cy="22" r="20"
+                                                                fill="none" stroke-width="3"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="slider-loader">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="spinner"
+                                                            width="50" height="50" viewBox="0 0 44 44">
+                                                            <circle class="spinner-path" cx="22" cy="22" r="20"
+                                                                fill="none" stroke-width="3"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="slider-loader">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="spinner"
+                                                            width="50" height="50" viewBox="0 0 44 44">
+                                                            <circle class="spinner-path" cx="22" cy="22" r="20"
+                                                                fill="none" stroke-width="3"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="swiper-wrapper" id="swiper-wrapper-20bf436108c0df10df"
+                                                        aria-live="polite"
+                                                        style="transform: translate3d(0px, 0px, 0px);">
+                                                        <div class="swiper-slide swiper-slide-active" role="group"
+                                                            aria-label="1 / 2" style="height: 90px;">
+                                                            <div
+                                                                class="product woocommerce-mini-cart-item mini_cart_item">
+                                                                <div class="product-wrapper">
+                                                                    <div class="product-content">
+                                                                        <div class="thumbnail-wrapper"> <a href="#">
+                                                                                <img width="90" height="90"
+                                                                                    src="/../src/assets/img/product-11-90x90.jpg"
+                                                                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                    srcset="/../src/assets/img/product-11-90x90.jpg"
+                                                                                   
+                                                                                    alt="">
+
+                                                                            </a> </div>
+                                                                        <!-- thumbnail-wrapper -->
+                                                                        <div class="content-wrapper">
+                                                                            <h3 class="product-title"><a
+                                                                                    href="#">Samsung Galaxy A52 5G
+                                                                                    Android Cell Phone</a>
+                                                                            </h3>
+                                                                            <div class="entry-price"> <span
+                                                                                    class="quantity">1 × <span
+                                                                                        class="woocommerce-Price-amount amount">
+                                                                                        <bdi><span
+                                                                                                class="woocommerce-Price-currencySymbol">$</span>469.99</bdi>
+                                                                                    </span></span> </div>
+                                                                            <a href="#"
+                                                                                class="remove remove_from_cart_button"
+                                                                                aria-label="Remove this item"
+                                                                                data-product_id="276"
+                                                                                data-cart_item_key="db8e1af0cb3aca1ae2d0018624204529"
+                                                                                data-product_sku="KGH45YRT"><i
+                                                                                    class="klbth-icon-cancel"></i></a>
+                                                                        </div>
+                                                                        <!-- content-wrapper -->
+                                                                    </div>
+                                                                    <!-- product-content -->
+                                                                </div>
+                                                                <!-- product-wrapper -->
+                                                            </div>
+                                                            <!-- product -->
+                                                        </div>
+                                                        <!-- swiper-slide -->
+                                                        <div class="swiper-slide swiper-slide-next" role="group"
+                                                            aria-label="2 / 2" style="height: 90px;">
+                                                            <div
+                                                                class="product woocommerce-mini-cart-item mini_cart_item">
+                                                                <div class="product-wrapper">
+                                                                    <div class="product-content">
+                                                                        <div class="thumbnail-wrapper"> <a
+                                                                                href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/">
+                                                                                <img width="90" height="90"
+                                                                                    src="/../src/assets/product-15-90x90.jpg"
+                                                                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                    srcset="/../src/assets/product-15-90x90.jpg"
+                                                                                   
+                                                                                    alt="">
+                                                                            </a> </div>
+                                                                        <!-- thumbnail-wrapper -->
+                                                                        <div class="content-wrapper">
+                                                                            <h3 class="product-title"><a
+                                                                                    href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/">Apple
+                                                                                    11-inch iPad
+                                                                                    Pro (2021) Wi-Fi 128GB</a></h3>
+                                                                            <div class="entry-price"> <span
+                                                                                    class="quantity">1 × <span
+                                                                                        class="woocommerce-Price-amount amount">
+                                                                                        <bdi><span
+                                                                                                class="woocommerce-Price-currencySymbol">$</span>749.00</bdi>
+                                                                                    </span></span> </div>
+                                                                            <a href="#cart/?remove_item=f3f27a324736617f20abbf2ffd806f6d&amp;_wpnonce=acc831cf67"
+                                                                                class="remove remove_from_cart_button"
+                                                                                aria-label="Remove this item"
+                                                                                data-product_id="516"
+                                                                                data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
+                                                                                data-product_sku="SR4JK74"><i
+                                                                                    class="klbth-icon-cancel"></i></a>
+                                                                        </div>
+                                                                        <!-- content-wrapper -->
+                                                                    </div>
+                                                                    <!-- product-content -->
+                                                                </div>
+                                                                <!-- product-wrapper -->
+                                                            </div>
+                                                            <!-- product -->
+                                                        </div>
+                                                        <!-- swiper-slide -->
+                                                    </div>
+                                                    <div class="swiper-button-prev swiper-button-disabled" tabindex="-1"
+                                                        role="button" aria-label="Previous slide"
+                                                        aria-controls="swiper-wrapper-20bf436108c0df10df"
+                                                        aria-disabled="true"></div>
+                                                    <div class="swiper-button-next swiper-button-disabled" tabindex="-1"
+                                                        role="button" aria-label="Next slide"
+                                                        aria-controls="swiper-wrapper-20bf436108c0df10df"
+                                                        aria-disabled="true"></div>
+                                                    <span class="swiper-notification" aria-live="assertive"
+                                                        aria-atomic="true"></span><span class="swiper-notification"
+                                                        aria-live="assertive" aria-atomic="true"></span><span
+                                                        class="swiper-notification" aria-live="assertive"
+                                                        aria-atomic="true"></span>
+                                                </div>
+                                            </div>
+                                            <p class="woocommerce-mini-cart__total total"> <strong>Subtotal:</strong>
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>1,218.99</bdi>
+                                                </span>
+                                            </p>
+                                            <p class="woocommerce-mini-cart__buttons buttons">
+                                                   <router-link class="button wc-forward" to="/cart">View cart
+                                                   </router-link>
+                                                    
+                                                    <a href="#checkout/"
+                                                    class="button checkout wc-forward">Checkout</a></p>
+                                        </div>
+                                        <div class="cart-noticy"> Free Shipping on All Orders Over $75 </div>
+                                        <!-- cart-noticy -->
+                                    </div>
+                                    <!-- cart-dropdown-wrapper -->
+                                </div>
+                                <!-- cart-dropdown -->
+                            </div>
+                            <!-- header-addons -->
+
+                        </div>
+                        <!-- column -->
+
+                    </div>
+                    <!-- header-wrapper -->
+                </div>
+                <!-- container -->
+            </div>
+            <!-- header-main -->
+
+
+            <div class="header-nav">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="column align-center left">
+                            <div class="site-departments large">
+                                <div class="site-departments-wrapper"> <a href="#" class="all-categories">
+                                        <div class="departments-icon"><i class="klbth-icon-menu"></i></div>
+                                        <div class="departments-text">All Departments</div>
+                                        <div class="departments-arrow"><i class="klbth-icon-nav-arrow-down"></i></div>
+                                    </a>
+                                    <ul id="menu-sidebar-menu-1" class="departments-menu collapse">
+                                        <li
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
+                                            <a href="#">
+                                                <div class="menu-icon"><img style="padding: 1px;"
+                                                        src="/../src/assets/img/icon/strwbarry.png"></div>
+                                                Fresh
+                                            </a>
+                                            <ul class="sub-menu"
+                                                style="background-image: url(/../src/assets/img/category-menu-3.png); width: 580px; ">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <li
+                                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                <a href="#">Fresh Products</a>
+                                                                <ul class="sub-menu">
+                                                                    <li>
+                                                                        <nav>
+                                                                            <ul class="nav-menu nav-vertical">
+                                                                                <li
+                                                                                    class="menu-item menu-item menu-item-type-taxonomy ">
+                                                                                    <a href="#">Bakery</a>
+
+                                                                                    <ul
+                                                                                        style=" width: 720px !important;">
+
+                                                                                        <div class="row">
+                                                                                            <div class="col">
+                                                                                                <li
+                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                    <a href="#">Bread
+                                                                                                        Items</a>
+                                                                                                    <ul
+                                                                                                        class="sub-menu">
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                brown
+                                                                                                                bread</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                burger
+                                                                                                                bun
+                                                                                                                1x6pcs</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                burger
+                                                                                                                bun
+                                                                                                                260gz</a>
+                                                                                                        </li>
+                                                                                                        <li class=""><a
+                                                                                                                class="link"
+                                                                                                                href="#">shop
+                                                                                                                more<img
+                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                        </li>
+
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </div>
+                                                                                            <div class="col">
+                                                                                                <li
+                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                    <a href="#">Cakes
+                                                                                                        Items</a>
+                                                                                                    <ul
+                                                                                                        class="sub-menu">
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                heart
+                                                                                                                cake</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                assorted
+                                                                                                                pasteries</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                baklava
+                                                                                                                pistachio</a>
+                                                                                                        </li>
+                                                                                                        <li><a class="link"
+                                                                                                                href="#">shop
+                                                                                                                more<img
+                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                        </li>
+
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </div>
+                                                                                            <div class="col">
+                                                                                                <li
+                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                    <a href="#">Croissant
+                                                                                                        and fatayer</a>
+                                                                                                    <ul
+                                                                                                        class="sub-menu">
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                cheese
+                                                                                                                croissant
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                cheese
+                                                                                                                fathayer</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                chicken
+                                                                                                                fathayer</a>
+                                                                                                        </li>
+                                                                                                        <li><a class="link"
+                                                                                                                href="#">shop
+                                                                                                                more<img
+                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                        </li>
+
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col">
+                                                                                                <li
+                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                    <a
+                                                                                                        href="#">Sweets</a>
+                                                                                                    <ul
+                                                                                                        class="sub-menu">
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                mamoul
+                                                                                                                tamar</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                almond
+                                                                                                                biscuit</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                            <a href="#">Baladi
+                                                                                                                baklava
+                                                                                                                daimond
+                                                                                                                kg</a>
+                                                                                                        </li>
+                                                                                                        <li><a class="link"
+                                                                                                                href="#">shop
+                                                                                                                more<img
+                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                        </li>
+
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </div>
+                                                                                            <!-- <div class="col">
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                  <a href="#">Bread Items</a>
+                                                  <ul class="sub-menu">
+                                                    <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                        href="#">Baladi brown bread</a></li>
+                                                        <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                          href="#">Baladi burger bun 1x6pcs</a></li>
+                                                          <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                            href="#">Baladi burger bun 260gz</a></li>
+    
+                                                  </ul>
+                                                  </li>
+                                              </div>
+                                              <div class="col">
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                  <a href="#">Bread Items</a>
+                                                  <ul class="sub-menu">
+                                                    <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                        href="#">Baladi brown bread</a></li>
+                                                        <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                          href="#">Baladi burger bun 1x6pcs</a></li>
+                                                          <li class=" menu-item menu-item-type-taxonomy list-sign"><a
+                                                            href="#">Baladi burger bun 260gz</a></li>
+    
+                                                  </ul>
+                                                  </li>
+                                              </div> -->
+
+                                                                                        </div>
+
+                                                                                    </ul>
+
+                                                                                </li>
+                                                                                <li class="menu-item "><a href="#">Diary
+                                                                                        products & egg</a>
+                                                                                    <ul>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Egg</a>
+
+                                                                                        </li>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Milk</a>
+
+                                                                                        </li>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Cakes</a>
+
+                                                                                        </li>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Sweets</a>
+
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li class="menu-item "><a
+                                                                                        href="#">Sweets</a>
+                                                                                    <ul style="top: -96px !important;">
+                                                                                        <li
+                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                            <a href="#">Sweet Items</a>
+                                                                                            <ul class="sub-menu">
+                                                                                                <li
+                                                                                                    class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                                    <a
+                                                                                                        href="#">Cheez</a>
+                                                                                                    <ul>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                            <a href="#">Milk
+                                                                                                                &amp;
+                                                                                                                Products</a>
+                                                                                                            <ul
+                                                                                                                class="sub-menu">
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">HD
+                                                                                                                        DVD
+                                                                                                                        Players</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">Projection
+                                                                                                                        Screens</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">Projectors</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">Television
+                                                                                                                        Accessories</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">Televisions</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">TV-DVD
+                                                                                                                        Combos</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">VCRs</a>
+                                                                                                                </li>
+                                                                                                                <li
+                                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                                    <a
+                                                                                                                        href="#">Video
+                                                                                                                        Glasses</a>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                        <li
+                                                                                            class=" menu-item menu-item-type-taxonomy list-sign">
+                                                                                            <a href="#">Bread</a>
+                                                                                            <ul>
+                                                                                                <li
+                                                                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                                                    <a href="#">Milk
+                                                                                                        &amp;
+                                                                                                        Products</a>
+                                                                                                    <ul
+                                                                                                        class="sub-menu">
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a href="#">HD
+                                                                                                                DVD
+                                                                                                                Players</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a href="#">Projection
+                                                                                                                Screens</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a
+                                                                                                                href="#">Projectors</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a href="#">Television
+                                                                                                                Accessories</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a
+                                                                                                                href="#">Televisions</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a href="#">TV-DVD
+                                                                                                                Combos</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a
+                                                                                                                href="#">VCRs</a>
+                                                                                                        </li>
+                                                                                                        <li
+                                                                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                                                            <a href="#">Video
+                                                                                                                Glasses</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Cakes</a>
+                                                                                            <ul>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Long
+                                                                                                        life milk</a>
+                                                                                                </li>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Fresh
+                                                                                                        Milk</a>
+                                                                                                </li>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Powder
+                                                                                                        Milk</a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                        <li class="menu-item "><a
+                                                                                                href="#">Croissant And
+                                                                                                Fatayer</a>
+                                                                                            <ul>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Long
+                                                                                                        life milk</a>
+                                                                                                </li>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Fresh
+                                                                                                        Milk</a>
+                                                                                                </li>
+                                                                                                <li class="menu-item ">
+                                                                                                    <a href="#">Powder
+                                                                                                        Milk</a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li><a href="#">Fish & seafood</a></li>
+                                                                                <li><a href="#">Fruits & Vegitables</a>
+                                                                                </li>
+                                                                                <li><a href="#">Meat & Poultry</a></li>
+                                                                            </ul>
+                                                                        </nav>
+
+
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+                                                        </div>
+                                                        <div class="col" style="display: none;">
+                                                            Column
+                                                        </div>
+                                                        <div class="col " style="display: none;">
+                                                            <li
+                                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                                <a
+                                                                    href="#product-category/smartwatches/">Smartwatches</a>
+                                                                <ul class="sub-menu">
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Casio Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Chronograph Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Kids Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Luxury Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Men Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Rolex Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Women Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Watch Brands</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Timex Watches</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                                        <a href="#">Sport Watches</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </ul>
+                                        </li>
+                                        <li
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
+                                            <a href="#product-category/computers-accessories/">
+                                                <div class="menu-icon"><img style="padding: 3px;"
+                                                        src="/../src/assets/img/icon/food.svg"></div>
+                                                Groceries &amp; Food
+                                            </a>
+                                            <ul class="sub-menu"
+                                                style="background-image: url(&quot;#wp-content/uploads/2021/10/computer-2.png&quot;); width: 485px;">
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                    <a href="#product-category/computers-accessories/">Computers &amp;
+                                                        Accessories</a>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/computer-components/">Computer
+                                                                Components</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/computer-accessories/">Computer
+                                                                Accessories</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/desktops/">Desktops</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/laptops/">Laptops</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/monitors/">Monitors</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/networking/">Networking</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/pc-gaming/">PC
+                                                                Gaming</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/computers-accessories/tablets/">Tablets</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                            <a href="#product-category/television-video/">
+                                                <div class="menu-icon"><img style="padding: 0px;"
+                                                        src="/../src/assets/img/icon/non-food.svg"></div>
+                                                Groceries Non Food
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                    <a href="#product-category/television-video/">Television &amp;
+                                                        Video</a>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/television-video/hd-dvd-players/">HD
+                                                                DVD Players</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/television-video/projection-screens/">Projection
+                                                                Screens</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/television-video/projectors/">Projectors</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/television-video/television-accessories/">Television
+                                                                Accessories</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a
+                                                                href="#product-category/television-video/televisions/">Televisions</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/television-video/tv-dvd-combos/">TV-DVD
+                                                                Combos</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/television-video/vcrs/">VCRs</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/television-video/video-glasses/">Video
+                                                                Glasses</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
+                                            <a href="#product-category/smartwatches/">
+                                                <div class="menu-icon"><img style="padding: 0px;"
+                                                        src="/../src/assets/img/icon/health.svg"></div>
+                                                Health & Beauty
+                                            </a>
+                                            <ul class="sub-menu"
+                                                style="background-image: url(&quot;/../src/assets/img/category-menu-3.png&quot;); width: 485px;">
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
+                                                    <a href="#product-category/smartwatches/">Smartwatches</a>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#">Casio
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#">Chronograph Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/kids-watches/">Kids
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/luxury-watches/">Luxury
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/men/">Men
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/rolex-watches/">Rolex
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/women-watches/">Women
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/watch-brands/">Watch
+                                                                Brands</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/timex-watches/">Timex
+                                                                Watches</a>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a href="#product-category/smartwatches/sport-watches/">Sport
+                                                                Watches</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                                href="#product-category/headphones/">
+                                                <div class="menu-icon"><i class="klbth-icon-headphones"></i></div>
+                                                Headphones
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                                href="#product-category/camera-photo/">
+                                                <div class="menu-icon"><i class="klbth-icon-camera"></i></div>
+                                                Camera &amp; Photo
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                                href="#product-category/video-games/">
+                                                <div class="menu-icon"><i class="klbth-icon-play-station"></i></div>
+                                                Video Games
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                                href="#product-category/sports-outdoors/">
+                                                <div class="menu-icon"><i class="klbth-icon-virtual-reality"></i></div>
+                                                Sports &amp; Outdoors
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom"><a
+                                                href="#?orderby=popularity">
+                                                <div class="menu-icon"><i class="klbth-icon-data-transfer-up"></i></div>
+                                                Best Sellers<span class="label danger">Save %25</span>
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">
+                                                <div class="menu-icon"><i class="klbth-icon-shopping-bag-arrow-up"></i>
+                                                </div>
+                                                Top 100 Offers
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">
+                                                <div class="menu-icon"><i class="klbth-icon-timer"></i></div>
+                                                New Arrivals
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <!-- site-departments-wrapper -->
+                            </div>
+                            <nav class="site-menu horizontal primary shadow-enable">
+                                <ul id="menu-menu-2" class="menu">
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children">
+                                        <a href="#">Discover</a>
+                                        <ul class="sub-menu">
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                                <a href="#">Flash Deals</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                    href="#home-2/">Holiday
+                                                    Deals</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                    href="index-2.html">Budget
+                                                    Deals</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                    href="#home-4/">Fast
+                                                    Selling</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                    href="#home-5/">Most
+                                                    Liked</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class="mega-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                        <a href="#">Shop</a>
+                                        <ul class="sub-menu">
+                                            <li
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                <a href="#">Shop Lists</a>
+                                                <ul class="sub-menu">
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#">Shop
+                                                            Default</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?opt=right-sidebar">Shop Right Sidebar</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=5&amp;opt=wide">Shop Wide</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=5&amp;opt=full-width">Filters Area</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?shop_view=list_view">List Left Sidebar</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?ft=load-more">Load More Button</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?ft=infinite">Infinite Scrolling</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-post_type menu-item-object-product menu-item-has-children">
+                                                <a href="">Product Detail</a>
+                                                <ul class="sub-menu">
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-product">
+                                                        <a href="">Product
+                                                            Default</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-product">
+                                                        <a href="#product/oneplus-8-pro-onyx-black-android-smartphone/">Product
+                                                            Variable</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-product">
+                                                        <a href="#product/samsung-galaxy-watch-active/">Product
+                                                            Grouped</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-product">
+                                                        <a href="#product/new-apple-iphone-12-128gb-4gb-ram-black/">Product
+                                                            External</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-product">
+                                                        <a
+                                                            href="#product/samsung-galaxy-watch-active-2-aluminum-smart-watch-black/">Product
+                                                            Downloadable</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a
+                                                            href="#product/oneplus-8-pro-onyx-black-android-smartphone/?ft=imgzoom">Zoom
+                                                            Image</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a
+                                                            href="#product/beats-studio3-wireless-headphones-matte-black/?ft=imgzoom">Product
+                                                            With
+                                                            Video</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                                <a href="#">Shop Pages</a>
+                                                <ul class="sub-menu">
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#cart/">Cart</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#checkout/">Checkout</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#">My
+                                                            account</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#">Wishlist</a>
+                                                    </li>
+                                                    <li
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="#order-tracking/">Order Tracking</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#">Featured
+                                                            Products</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?ft=notice_ajax">Popup Notice</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                                <a href="#">Shop Layouts</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=2">Two
+                                                            Columns</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=3">Three
+                                                            Columns</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=3&amp;opt=wide">Three Columns Wide</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=4">Four
+                                                            Columns</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=4&amp;opt=wide">Four Columns Wide</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=5&amp;opt=wide">Five Columns Wide</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                        <a href="#?column=6&amp;opt=wide">Six Columns Wide</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                            href="#"><i class="klbth-icon-smartphone"></i> Cell Phones</a></li>
+                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
+                                            href="#product-category/headphones/"><i class="klbth-icon-headphones"></i>
+                                            Headphones</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                            href="#blog/">Blog</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                            href="#contact/">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- site-menu -->
+                        </div>
+                        <!-- column -->
+
+                        <div class="column align-center right">
+                            <div class="discount-products">
+                                <div class="discount-products-wrapper">
+                                    <div class="discount-banner">
+                                        <div class="discount-banner-icon"><i class="klbth-icon-discount-black"></i>
+                                        </div>
+                                        <div class="discount-banner-text">
+                                            <div class="small-text">Only this weekend</div>
+                                            <div class="main-text">Super Discount</div>
+                                        </div>
+                                        <!-- discount-banner-text -->
+                                        <div class="discount-banner-arrow"><i class="klbth-icon-nav-arrow-down"></i>
+                                        </div>
+                                    </div>
+                                    <!-- discount-banner -->
+                                    <div class="discount-items">
+                                        <div class="discount-products-header">
+                                            <h4 class="entry-title">Items on sale this week</h4>
+                                            <p>Top picks this week. Up to 50% off the best selling products.</p>
+                                        </div>
+                                        <!-- discount-products-header -->
+
+                                        <div class="products column-6">
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a href=""><img
+                                                                    src="/../src/assets/img/single-1-400x400.jpg"
+                                                                    alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a href="">Apple 10.9-inch iPad
+                                                                    Air Wi-Fi Cellular 64GB</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 5.00 out of 5"><span
+                                                                        style="width:100%">Rated <strong
+                                                                            class="rating">5.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>699.99</bdi>
+                                                                    </span></del> <ins><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>629.99</bdi>
+                                                                    </span></ins></span><!-- price -->
+                                                            <div class="product-meta">
+                                                                <div class="product-message color-light">2-day Delivery
+                                                                </div>
+                                                            </div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a href="#"><img
+                                                                    src="/../src/assets/img/product-2-400x400.jpg"
+                                                                    alt="Apple iPhone 11 64GB Yellow Fully Unlocked"></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a href="#">Apple iPhone 11 64GB
+                                                                    Yellow Fully Unlocked</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 4.00 out of 5"><span
+                                                                        style="width:80%">Rated <strong
+                                                                            class="rating">4.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>478.67</bdi>
+                                                                    </span></del> <ins><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>438.67</bdi>
+                                                                    </span></ins></span><!-- price -->
+                                                            <div class="product-meta">
+                                                                <div class="product-message color-light">2-day Delivery
+                                                                </div>
+                                                            </div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a href="#"><img
+                                                                    src="/../src/assets/img/product-10-400x400.jpg"
+                                                                    alt="OnePlus 8 Pro Onyx Black Android Smartphone"></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a href="#">OnePlus 8 Pro Onyx
+                                                                    Black Android Smartphone</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 3.00 out of 5"><span
+                                                                        style="width:60%">Rated <strong
+                                                                            class="rating">3.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>959.00</bdi>
+                                                                    </span></del> <ins><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>859.00</bdi>
+                                                                    </span></ins></span><!-- price -->
+                                                            <div class="product-meta">
+                                                                <div class="product-message color-light">2-day Delivery
+                                                                </div>
+                                                            </div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a href="#"><img
+                                                                    src="/../src/assets/img/product-23-400x400.jpg"
+                                                                    srcset="/../src/assets/img/product-23-400x400.jpg"
+
+                                                                    alt="SAMSUNG Galaxy Watch Active 2 Aluminum"
+                                                                    
+                                                                    ></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a href="#">SAMSUNG Galaxy Watch
+                                                                    Active 2 Aluminum</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 4.00 out of 5"><span
+                                                                        style="width:80%">Rated <strong
+                                                                            class="rating">4.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><span
+                                                                    class="woocommerce-Price-amount amount">
+                                                                    <bdi><span
+                                                                            class="woocommerce-Price-currencySymbol">$</span>65.00</bdi>
+                                                                </span> – <span class="woocommerce-Price-amount amount">
+                                                                    <bdi><span
+                                                                            class="woocommerce-Price-currencySymbol">$</span>249.00</bdi>
+                                                                </span></span><!-- price -->
+                                                            <div class="product-meta"></div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a href="#"><img
+                                                                    src="/../src/assets/img/noise3-400x400.jpeg"
+                                                                    alt="Bose Noise Cancelling Wireless Bluetooth"></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a href="#">Bose Noise Cancelling
+                                                                    Wireless Bluetooth</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 4.00 out of 5"><span
+                                                                        style="width:80%">Rated <strong
+                                                                            class="rating">4.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>479.00</bdi>
+                                                                    </span></del> <ins><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>439.00</bdi>
+                                                                    </span></ins></span><!-- price -->
+                                                            <div class="product-meta">
+                                                                <div class="product-message color-light">2-day Delivery
+                                                                </div>
+                                                                <div class="product-message color-danger">Only 7 left in
+                                                                    stock</div>
+                                                            </div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <div class="product-wrapper">
+                                                    <div class="product-content">
+                                                        <div class="thumbnail-wrapper"><a
+                                                                href="#product/echo-dot-4th-gen-2020-release-smart-speaker/"><img
+                                                                    src="/../src/assets/img/echo1-400x400.jpg"
+                                                                    alt="Echo Dot (4th Gen, 2020 release) | Smart speaker"></a>
+                                                        </div>
+                                                        <!-- thumbnail-wrapper -->
+                                                        <div class="content-wrapper">
+                                                            <h3 class="product-title"><a
+                                                                    href="#product/echo-dot-4th-gen-2020-release-smart-speaker/">Echo
+                                                                    Dot (4th Gen, 2020
+                                                                    release) | Smart speaker</a></h3>
+                                                            <div class="product-rating">
+                                                                <div class="star-rating" role="img"
+                                                                    aria-label="Rated 4.00 out of 5"><span
+                                                                        style="width:80%">Rated <strong
+                                                                            class="rating">4.00</strong> out of 5</span>
+                                                                </div>
+                                                                <div class="count-rating">1 <span
+                                                                        class="rating-text">Ratings</span></div>
+                                                            </div>
+                                                            <span class="price"><del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>79.99</bdi>
+                                                                    </span></del> <ins><span
+                                                                        class="woocommerce-Price-amount amount">
+                                                                        <bdi><span
+                                                                                class="woocommerce-Price-currencySymbol">$</span>49.99</bdi>
+                                                                    </span></ins></span><!-- price -->
+                                                            <div class="product-meta"></div>
+                                                            <!-- product-meta -->
+                                                        </div>
+                                                        <!-- content-wrapper -->
+                                                    </div>
+                                                    <!-- product-content -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- discount-items -->
+                                </div>
+                                <!-- discount-products-wrapper -->
+                            </div>
+                            <!-- discount-products -->
+                        </div>
+                        <!-- column -->
+
+                    </div>
+                    <!-- header-wrapper -->
+                </div>
+                <!-- container -->
+            </div>
+            <!-- header-nav -->
+
+        </div>
+</template>
+
+
