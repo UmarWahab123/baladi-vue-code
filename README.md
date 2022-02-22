@@ -1,4 +1,4 @@
-<h3 align="center">Baladi Vuejs store</h3>
+<h3 align="center">Baladi Express Vuejs store</h3>
 <p align="center">Baladi vue js webstore</p>
 
 <img src="./src/assets/banner.png" width="100%" alt="">
