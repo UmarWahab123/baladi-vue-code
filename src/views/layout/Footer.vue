@@ -382,3 +382,14 @@
     </div>
 </div>
 </template>
+<script>
+import * as myKey from 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
+
+export default {
+  mounted() {
+    let Script = document.createElement("script");
+    Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
+    document.head.appendChild(Script);
+  }
+}
+</script>
