@@ -464,9 +464,9 @@
                                         </table>
 
                                         <div class="wc-proceed-to-checkout">
-
-                                            <a href="" class="checkout-button button alt wc-forward">
-                                                Proceed to checkout</a>
+                                                <router-link class="checkout-button button alt wc-forward" to="/checkout">
+                                                Proceed to checkout </router-link>
+                                          
                                         </div>
 
 

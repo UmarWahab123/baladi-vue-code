@@ -8,8 +8,8 @@
                                 <ul id="menu-top-left" class="menu">
                                     <li id="menu-item-2231"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2231">
-                                        <a href="#">About
-                                            Us</a>
+                                       <router-link class="nav-link" to="/aboutus">About Us
+                                            </router-link>
                                     </li>
                                     <li id="menu-item-2229"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229">
@@ -24,7 +24,8 @@
                                     </li>
                                     <li id="menu-item-2230"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2230">
-                                        <a href="#">Wishlist</a>
+                                       <router-link class="nav-link" to="/wishlist">Wishlist
+                                            </router-link>
                                     </li>
                                 </ul>
                             </nav>
@@ -35,8 +36,9 @@
                             <nav class="site-menu horizontal">
                                 <ul id="menu-top-right-1" class="menu">
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233">
-                                        <a href="#">Order
-                                            Tracking</a>
+                                        
+                                              <router-link  to="/order-tracking">Order Tracking
+                                            </router-link>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2176">
@@ -90,9 +92,11 @@
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="column align-center left">
-                            <div class="site-brand"> <a href="#" title="Machic – Electronics Store eCommerce Theme">
-                                    <img src="/../src/assets/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme">
-                                </a> </div>
+                            <div class="site-brand"> 
+                                   <router-link to="/" title="Machic – Electronics Store eCommerce Theme">
+                                    <img src="@/assets/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme">
+                                   </router-link>
+                                 </div>
                             <!-- site-brand -->
                         </div>
                         <!-- column -->
@@ -205,9 +209,9 @@
                                                                     <div class="product-content">
                                                                         <div class="thumbnail-wrapper"> <a href="#">
                                                                                 <img width="90" height="90"
-                                                                                    src="/../src/assets/img/product-11-90x90.jpg"
+                                                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                                    srcset="/../src/assets/img/product-11-90x90.jpg"
+                                                                                    srcset="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                                                                    
                                                                                     alt="">
 
@@ -250,9 +254,9 @@
                                                                         <div class="thumbnail-wrapper"> <a
                                                                                 href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/">
                                                                                 <img width="90" height="90"
-                                                                                    src="/../src/assets/product-15-90x90.jpg"
+                                                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                                    srcset="/../src/assets/product-15-90x90.jpg"
+                                                                                    srcset="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                                                                    
                                                                                     alt="">
                                                                             </a> </div>
@@ -310,9 +314,11 @@
                                             <p class="woocommerce-mini-cart__buttons buttons">
                                                    <router-link class="button wc-forward" to="/cart">View cart
                                                    </router-link>
-                                                    
-                                                    <a href="#checkout/"
-                                                    class="button checkout wc-forward">Checkout</a></p>
+
+                                                    <router-link class="button checkout wc-forward" to="/checkout">
+                                                Checkout </router-link>
+                                                  
+                                                    </p>
                                         </div>
                                         <div class="cart-noticy"> Free Shipping on All Orders Over $75 </div>
                                         <!-- cart-noticy -->
@@ -339,18 +345,18 @@
                     <div class="header-wrapper">
                         <div class="column align-center left">
                             <div class="site-departments large">
-                                <div class="site-departments-wrapper"> <a href="#" class="all-categories">
+                                <div class="site-departments-wrapper"> <a href="#" class="all-categories"  @click="menuchange">
                                         <div class="departments-icon"><i class="klbth-icon-menu"></i></div>
                                         <div class="departments-text">All Departments</div>
                                         <div class="departments-arrow"><i class="klbth-icon-nav-arrow-down"></i></div>
                                     </a>
-                                    <ul id="menu-sidebar-menu-1" class="departments-menu collapse">
+                                    <ul id="menu-sidebar-menu-1" class="departments-menu collapse" :class="showmenu">
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
                                             <a href="#">
                                                 <div class="menu-icon"><img style="padding: 1px;"
-                                                        src="/../src/assets/img/icon/strwbarry.png"></div>
-                                                Fresh
+                                                        src="@/assets/img/icon/fruits.jpg"></div>
+                                                          Fresh
                                             </a>
                                             <ul class="sub-menu"
                                                 style="background-image: url(/../src/assets/img/category-menu-3.png); width: 580px; ">
@@ -403,7 +409,7 @@
                                                                                                                 class="link"
                                                                                                                 href="#">shop
                                                                                                                 more<img
-                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                                    src="@/assets/style/icons/arrow-right-short.svg"></a>
                                                                                                         </li>
 
                                                                                                     </ul>
@@ -437,7 +443,7 @@
                                                                                                         <li><a class="link"
                                                                                                                 href="#">shop
                                                                                                                 more<img
-                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                                    src="@/assets/style/icons/arrow-right-short.svg"></a>
                                                                                                         </li>
 
                                                                                                     </ul>
@@ -472,7 +478,7 @@
                                                                                                         <li><a class="link"
                                                                                                                 href="#">shop
                                                                                                                 more<img
-                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                                    src="@/assets/style/icons/arrow-right-short.svg"></a>
                                                                                                         </li>
 
                                                                                                     </ul>
@@ -510,7 +516,7 @@
                                                                                                         <li><a class="link"
                                                                                                                 href="#">shop
                                                                                                                 more<img
-                                                                                                                    src="/../src/assets/style/icons/arrow-right-short.svg"></a>
+                                                                                                                    src="@/assets/style/icons/arrow-right-short.svg"></a>
                                                                                                         </li>
 
                                                                                                     </ul>
@@ -810,7 +816,7 @@
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
                                             <a href="#product-category/computers-accessories/">
                                                 <div class="menu-icon"><img style="padding: 3px;"
-                                                        src="/../src/assets/img/icon/food.svg"></div>
+                                                        src="@/assets/img/icon/grocery.jpg"></div>
                                                 Groceries &amp; Food
                                             </a>
                                             <ul class="sub-menu"
@@ -871,7 +877,7 @@
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
                                             <a href="#product-category/television-video/">
                                                 <div class="menu-icon"><img style="padding: 0px;"
-                                                        src="/../src/assets/img/icon/non-food.svg"></div>
+                                                        src="@/assets/img/icon/beg.jpg"></div>
                                                 Groceries Non Food
                                             </a>
                                             <ul class="sub-menu">
@@ -930,7 +936,7 @@
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1">
                                             <a href="#product-category/smartwatches/">
                                                 <div class="menu-icon"><img style="padding: 0px;"
-                                                        src="/../src/assets/img/icon/health.svg"></div>
+                                                        src="@/assets/img/icon/beauty.png"></div>
                                                 Health & Beauty
                                             </a>
                                             <ul class="sub-menu"
@@ -994,36 +1000,43 @@
                                         </li>
                                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
                                                 href="#product-category/headphones/">
-                                                <div class="menu-icon"><i class="klbth-icon-headphones"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/headphones.jpg"
+                                                        alt="camera"></div>
                                                 Headphones
                                             </a></li>
                                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
                                                 href="#product-category/camera-photo/">
-                                                <div class="menu-icon"><i class="klbth-icon-camera"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/camera.jpg"
+                                                        alt="camera"></div>
                                                 Camera &amp; Photo
                                             </a></li>
                                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
                                                 href="#product-category/video-games/">
-                                                <div class="menu-icon"><i class="klbth-icon-play-station"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/games.jpg"
+                                                        alt="camera"></div>
                                                 Video Games
                                             </a></li>
                                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
                                                 href="#product-category/sports-outdoors/">
-                                                <div class="menu-icon"><i class="klbth-icon-virtual-reality"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/sports.jpg"
+                                                        alt="camera"></div>
                                                 Sports &amp; Outdoors
                                             </a></li>
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom"><a
                                                 href="#?orderby=popularity">
-                                                <div class="menu-icon"><i class="klbth-icon-data-transfer-up"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/graph.jpg"
+                                                        alt="camera"></div>
                                                 Best Sellers<span class="label danger">Save %25</span>
                                             </a></li>
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">
-                                                <div class="menu-icon"><i class="klbth-icon-shopping-bag-arrow-up"></i>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/discount.jpg"
+                                                        alt="camera">
                                                 </div>
                                                 Top 100 Offers
                                             </a></li>
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">
-                                                <div class="menu-icon"><i class="klbth-icon-timer"></i></div>
+                                                <div class="menu-icon"><img src="@/assets/img/icon/trolley.jpg"
+                                                        alt="camera"></div>
                                                 New Arrivals
                                             </a></li>
                                     </ul>
@@ -1199,8 +1212,10 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
-                                            href="#"><i class="klbth-icon-smartphone"></i> Cell Phones</a></li>
+                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                          <router-link class="klbth-icon-smartphone"  to="/category">Cell Phones
+                                            </router-link>
+                                            </li>
                                     <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
                                             href="#product-category/headphones/"><i class="klbth-icon-headphones"></i>
                                             Headphones</a></li>
@@ -1242,7 +1257,7 @@
                                                 <div class="product-wrapper">
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a href=""><img
-                                                                    src="/../src/assets/img/single-1-400x400.jpg"
+                                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                                                     alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"></a>
                                                         </div>
                                                         <!-- thumbnail-wrapper -->
@@ -1282,7 +1297,7 @@
                                                 <div class="product-wrapper">
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a href="#"><img
-                                                                    src="/../src/assets/img/product-2-400x400.jpg"
+                                                                    src="@/assets/img/product-2-400x400.jpg"
                                                                     alt="Apple iPhone 11 64GB Yellow Fully Unlocked"></a>
                                                         </div>
                                                         <!-- thumbnail-wrapper -->
@@ -1322,7 +1337,7 @@
                                                 <div class="product-wrapper">
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a href="#"><img
-                                                                    src="/../src/assets/img/product-10-400x400.jpg"
+                                                                    src="@/assets/img/product-10-400x400.jpg"
                                                                     alt="OnePlus 8 Pro Onyx Black Android Smartphone"></a>
                                                         </div>
                                                         <!-- thumbnail-wrapper -->
@@ -1362,7 +1377,7 @@
                                                 <div class="product-wrapper">
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a href="#"><img
-                                                                    src="/../src/assets/img/product-23-400x400.jpg"
+                                                                    src="@/assets/img/product-23-400x400.jpg"
                                                                     srcset="/../src/assets/img/product-23-400x400.jpg"
 
                                                                     alt="SAMSUNG Galaxy Watch Active 2 Aluminum"
@@ -1402,7 +1417,7 @@
                                                 <div class="product-wrapper">
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a href="#"><img
-                                                                    src="/../src/assets/img/noise3-400x400.jpeg"
+                                                                    src="@/assets/img/noise3-400x400.jpeg"
                                                                     alt="Bose Noise Cancelling Wireless Bluetooth"></a>
                                                         </div>
                                                         <!-- thumbnail-wrapper -->
@@ -1445,7 +1460,7 @@
                                                     <div class="product-content">
                                                         <div class="thumbnail-wrapper"><a
                                                                 href="#product/echo-dot-4th-gen-2020-release-smart-speaker/"><img
-                                                                    src="/../src/assets/img/echo1-400x400.jpg"
+                                                                    src="@/assets/img/echo1-400x400.jpg"
                                                                     alt="Echo Dot (4th Gen, 2020 release) | Smart speaker"></a>
                                                         </div>
                                                         <!-- thumbnail-wrapper -->
@@ -1499,5 +1514,31 @@
 
         </div>
 </template>
+
+
+<script>
+export default {
+      data: () => ({
+    id: "",
+    showmenu: '',
+    results: [],
+  }),
+  mounted() {
+      if(this.$route.name=="Home"){
+          this.showmenu="show";
+      }
+    // console.log(this.$route.name);
+  },
+    methods: {
+        menuchange: function (event) {
+                if(this.showmenu=="show"){
+                    this.showmenu="";
+                }else{
+                  this.showmenu="show";   
+                }
+        }
+    },
+};
+</script>
 
 

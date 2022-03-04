@@ -1,5 +1,5 @@
 <template>
-     <div class="elementor-section elementor-top-section elementor-element elementor-element-b2529f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+         <div class="elementor-section elementor-top-section elementor-element elementor-element-b2529f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                     data-id="b2529f3" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-extended">
                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b24b142"
@@ -12,18 +12,24 @@
                                         <div class="site-module logos-module">
                                             <div class="module-body">
                                                 <div class="site-brands column-6 opacity">
-                                                    <div class="brand-item"><a href="#"><img src="/../src/assets/img/1.png"
-                                                                alt="client"></a></div>
+                                                    <div class="brand-item"><a href="#"><img
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/1.png"
+                                                                alt="client"></a>
+                                                    </div>
                                                     <div class="brand-item"><a href="#?filter_brands=asus"><img
-                                                                src="/../src/assets/img/2.png" alt="client"></a></div>
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/2.png"
+                                                                alt="client"></a></div>
                                                     <div class="brand-item"><a href="#?opt=right-sidebar"><img
-                                                                src="/../src/assets/img/3.png" alt="client"></a></div>
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/3.png"
+                                                                alt="client"></a></div>
                                                     <div class="brand-item"><a href="#?filter_brands=samsung"><img
-                                                                src="/../src/assets/img/4.png" alt="client"></a></div>
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/4.png"
+                                                                alt="client"></a></div>
                                                     <div class="brand-item"><a href="#?column=5&amp;opt=wide"><img
-                                                                src="/../src/assets/img/5.png" alt="client"></a></div>
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/5.png" alt="client"></a></div>
                                                     <div class="brand-item"><a href="#?column=5&amp;opt=full-width"><img
-                                                                src="/../src/assets/img/6.png" alt="client"></a></div>
+                                                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/5.png"
+                                                                alt="client"></a></div>
                                                 </div>
                                             </div>
                                         </div>

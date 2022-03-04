@@ -70,7 +70,7 @@
                                                             <!-- banner-content-wrapper -->
                                                         </div>
                                                         <!-- banner-content -->
-                                                        <div class="banner-image"><img src="/../src/assets/img/banner-3.jpg"
+                                                        <div class="banner-image"><img src="@/assets/img/banner-3.jpg"
                                                                 alt="banner"></div>
                                                         <a href="#product/apple-iphone-11-pro-max-64gb-silver/"
                                                             class="overlay-link"></a>
@@ -97,7 +97,7 @@
                                                                                 class="badge onsale">9%</span></div>
                                                                         <a
                                                                             href="#product/bose-noise-cancelling-wireless-bluetooth/"><img
-                                                                                src="/../src/assets/img/noise3.jpeg"
+                                                                                src="@/assets/img/noise3.jpeg"
                                                                                 alt="Bose Noise Cancelling Wireless Bluetooth"></a>
                                                                         <div class="product-buttons">
                                                                             <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
@@ -122,7 +122,7 @@
                                                                             </div>
                                                                             <a href="#?featured=yes"
                                                                                 class="most-comments"><img
-                                                                                    src="/../src/assets/img/featured.png"
+                                                                                    src="@/assets/img/featured.png"
                                                                                     alt="featured"></a><a href="#"
                                                                                 class="woosc-btn woosc-btn-440"
                                                                                 data-id="440">Compare</a><a href="#440"
@@ -212,7 +212,7 @@
                                                             <div class="product-wrapper">
                                                                 <div class="product-content">
                                                                     <div class="thumbnail-wrapper"><a href=""><img
-                                                                                src="/../src/assets/img/single-1.jpg"
+                                                                                src="@/assets/img/single-1.jpg"
                                                                                 alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"></a>
                                                                     </div>
                                                                     <!-- thumbnail-wrapper -->
@@ -243,7 +243,7 @@
                                                                 <div class="product-content">
                                                                     <div class="thumbnail-wrapper"><a
                                                                             href="#product/apple-iphone-11-64gb-fully-unlocked-yellow/"><img
-                                                                                src="/../src/assets/img/product-2.jpg"
+                                                                                src="@/assets/img/product-2.jpg"
                                                                                 alt="Apple iPhone 11 64GB Yellow Fully Unlocked"></a>
                                                                     </div>
                                                                     <!-- thumbnail-wrapper -->
@@ -275,7 +275,7 @@
                                                                 <div class="product-content">
                                                                     <div class="thumbnail-wrapper"><a
                                                                             href="#product/oneplus-8-pro-onyx-black-android-smartphone/"><img
-                                                                                src="/../src/assets/img/product-10.jpg"
+                                                                                src="@/assets/img/product-10.jpg"
                                                                                 alt="OnePlus 8 Pro Onyx Black Android Smartphone"></a>
                                                                     </div>
                                                                     <!-- thumbnail-wrapper -->
@@ -307,7 +307,7 @@
                                                                 <div class="product-content">
                                                                     <div class="thumbnail-wrapper"><a
                                                                             href="#product/samsung-galaxy-watch-active/"><img
-                                                                                src="/../src/assets/img/product-23.jpg"
+                                                                                src="@/assets/img/product-23.jpg"
                                                                                 alt="SAMSUNG Galaxy Watch Active 2 Aluminum"></a>
                                                                     </div>
                                                                     <!-- thumbnail-wrapper -->

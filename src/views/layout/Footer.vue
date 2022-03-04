@@ -150,7 +150,8 @@
                                 </li>
                                 <li id="menu-item-2223"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2223">
-                                    <a href="#">Privacy Policy</a>
+                                    <router-link  to="/privacy-policy">Privacy Policy
+                                            </router-link>
                                 </li>
                                 <li id="menu-item-2523"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2523">
@@ -198,12 +199,14 @@
                                 </li>
                                 <li id="menu-item-2513"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2513">
-                                    <a href="#">Privacy Policy</a>
+                                      <router-link  to="/privacy-policy">Privacy Policy
+                                            </router-link>
                                 </li>
                                 <li id="menu-item-2509"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2509">
-                                    <a href="#">Contact
-                                        Us</a>
+                                  
+                                            <router-link  to="/contact-us">Contact Us
+                                            </router-link>
                                 </li>
                             </ul>
                         </div>
@@ -225,7 +228,7 @@
                 <div class="col">
                     <div class="site-details">
                         <div class="site-brand"> <a href="#" title="Machic – Electronics Store eCommerce Theme">
-                                <img src="/../src/assets/img//logo-dark.png" width="171" height="34"
+                                <img src="@/assets/img//logo-dark.png" width="171" height="34"
                                     alt="Machic – Electronics Store eCommerce Theme"> </a> </div>
                         <div class="site-social">
                             <ul>
@@ -292,7 +295,7 @@
                         <div class="site-copyright">
                             <p>Copyright 2021 © Baladi <strong>Express</strong>.</p>
                         </div>
-                        <div class="site-payment-logos"> <a href="#"> <img src="/../src/assets/img/payment.png" alt="payment">
+                        <div class="site-payment-logos"> <a href="#"> <img src="@/assets/img/payment.png" alt="payment">
                             </a> </div>
                     </div>
                     <!-- footer-bottom -->
@@ -382,14 +385,18 @@
     </div>
 </div>
 </template>
+<style>
+  /* @import '/./src/styles/app.css'; */
+</style>
+
 <script>
-import * as myKey from 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
+// import * as myKey from '/../src/styles/app.css';
 
 export default {
   mounted() {
-    let Script = document.createElement("script");
-    Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
-    document.head.appendChild(Script);
+    // let Script = document.createElement("script");
+    // Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
+    // document.head.appendChild(Script);
   }
 }
 </script>
