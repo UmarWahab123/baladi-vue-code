@@ -51,7 +51,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="banner-image"><img
-                                                                    src="/../src/assets/img/slider-banner-3.jpg" alt="slider">
+                                                                    src="@/assets/img/slider-banner-3.jpg" alt="slider">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -76,7 +76,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="banner-image"><img
-                                                                    src="/../src/assets/img/slider-banner-1.jpg" alt="slider">
+                                                                    src="@/assets/img/slider-banner-1.jpg" alt="slider">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -102,7 +102,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="banner-image"><img
-                                                                    src="/../src/assets/img/slider-banner-2.jpg" alt="slider">
+                                                                    src="@/assets/img/slider-banner-2.jpg" alt="slider">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -127,7 +127,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="banner-image"><img
-                                                                    src="/../src/assets/img/slider-banner-3.jpg" alt="slider">
+                                                                    src="@/assets/img/slider-banner-3.jpg" alt="slider">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -152,7 +152,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="banner-image"><img
-                                                                    src="/../src/assets/img/slider-banner-1.jpg" alt="slider">
+                                                                    src="@/assets/img/slider-banner-1.jpg" alt="slider">
                                                             </div>
                                                         </div>
                                                     </div>

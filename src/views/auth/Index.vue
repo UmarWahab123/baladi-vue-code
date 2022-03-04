@@ -22,10 +22,6 @@
 </template>
 
 <script setup>
-	setTimeout(function(){ 
-document.getElementById("menu-sidebar-menu-1").classList.remove("show");
-
-			}, 500);
 	import Header from '../layout/Header.vue'
 	import Footer from '../layout/Footer.vue'
 	import Login from './Login.vue'
