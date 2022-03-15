@@ -16,6 +16,12 @@
                                             <router-link class="nav-link" to="/myaccount">My account
                                             </router-link>
                                     </li>
+                                      <li id="menu-item-2229"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229">
+                                            <router-link class="nav-link" to="/faq">Faqs
+                                            </router-link>
+                                    </li>
+
 
                                     <li id="menu-item-2199"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2199">
@@ -105,7 +111,7 @@
                             <div class="header-form site-search">
                                 <div
                                     class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled">
-                                    <form class="dgwt-wcas-search-form" role="search" action="#" method="get">
+                                    <form class="dgwt-wcas-search-form" role="search" action="javascript::void(0)" method="get">
                                         <div class="dgwt-wcas-sf-wrapp">
                                             <label class="screen-reader-text" for="dgwt-wcas-search-input-1">Products
                                                 search</label>
@@ -114,7 +120,7 @@
                                                 placeholder="Search for products..." autocomplete="off">
                                             <div class="dgwt-wcas-preloader" style="right: 96.875px;"></div>
                                             <button type="submit" aria-label="Search"
-                                                class="dgwt-wcas-search-submit">Search</button>
+                                                class="dgwt-wcas-search-submit"  @click="searchproducts">Search</button>
                                             <input type="hidden" name="post_type" value="product">
                                             <input type="hidden" name="dgwt_wcas" value="1">
                                         </div>
@@ -1216,13 +1222,19 @@
                                           <router-link class="klbth-icon-smartphone"  to="/category">Cell Phones
                                             </router-link>
                                             </li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"><a
-                                            href="#product-category/headphones/"><i class="klbth-icon-headphones"></i>
-                                            Headphones</a></li>
+                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                         <router-link  to="/category">
+                                         <i class="klbth-icon-headphones"></i>Headphones
+                                            </router-link>
+                                    </li>
+
+                                       
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
                                             href="#blog/">Blog</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-                                            href="#contact/">Contact</a>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                         <router-link   to="/contact-us">Contact
+                                            </router-link>
+                                        
                                     </li>
                                 </ul>
                             </nav>
@@ -1536,6 +1548,10 @@ export default {
                 }else{
                   this.showmenu="show";   
                 }
+        },
+          searchproducts: function (event) {
+              this.$router.push('category'); 
+
         }
     },
 };

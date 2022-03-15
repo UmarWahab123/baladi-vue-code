@@ -98,9 +98,29 @@ const routes = [
 		component: () => import('@/views/dashboard/OrderDetail.vue')
 	},
 	{
+		name: 'product-detail',
+		path: '/product-detail',
+		component: () => import('@/views/category/Productdetail.vue')
+	},
+	{
 		name: 'account',
 		path: '/account',
 		component: () => import('@/views/dashboard/Account.vue')
+	},
+	{
+		name: 'my-wallet',
+		path: '/my-wallet',
+		component: () => import('@/views/dashboard/Wallet.vue')
+	},
+	{
+		name: 'voucher',
+		path: '/voucher',
+		component: () => import('@/views/dashboard/Voucher.vue')
+	},
+	{
+		name: 'reward-points',
+		path: '/reward-points',
+		component: () => import('@/views/dashboard/Rewardpoints.vue')
 	},
 	{
 		name: 'About',

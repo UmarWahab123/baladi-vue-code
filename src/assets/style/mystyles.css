@@ -1,0 +1,10 @@
+a.tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-position-after {
+    display: block;
+}
+span.tinvwl_add_to_wishlist-text {
+    display: none;
+}
+ol.flex-control-thumbs .owl-item{
+    display: inline-block;
+}
+.owl-nav {display: none;}

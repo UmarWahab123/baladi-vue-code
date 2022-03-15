@@ -58,11 +58,9 @@
                                                             action="https://klbtheme.com/machic/cart/" method="post">
 
                                                             <a href="#" onclick="Cart()"
-                                                                class="shipping-calculator-button woocommerce">Change
+                                                                class="shipping-calculator-button woocommerce"  @click="changeaddress">Change
                                                                 address</a>
-                                                            <section id="shipping-cart" class="shipping-calculator-form"
-                                                                style="display:none;">
-
+                                                     <section id="shipping-cart"  v-if="changeaddress === '1'" class="shipping-calculator-form">
                                                                 <p class="form-row form-row-wide"
                                                                     id="calc_shipping_country_field">
                                                                     <select name="calc_shipping_country"
@@ -472,4 +470,25 @@
 
                                     </div>
                                 </div>
-</template>
+</template><script>
+export default {
+      data: () => ({
+    id: "",
+    changeaddress: 0,
+    results: [],
+  }),
+  mounted() {
+  },
+    methods: {
+        changeaddress: function (event) {
+                if(this.changeaddress==1){
+                    this.changeaddress=0;
+                }else{
+                    alert(changeaddress);
+                  this.changeaddress=1;   
+                }
+        },
+      
+    },
+};
+</script>
