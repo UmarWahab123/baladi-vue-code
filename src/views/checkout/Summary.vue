@@ -378,10 +378,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <div class="text-right">
-            <i class="fa fa-close close" data-dismiss="modal" @click="close"
-              >X</i
-            >
+          <div class="text-right" style="cursor: pointer">
+            <i class="fa fa-times" aria-hidden="true" @click="close"></i>
           </div>
           <div class="tabs mt-3">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
