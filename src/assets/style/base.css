@@ -17,9 +17,9 @@
   --color-background: #fff;
   --color-main-text: #021523;
   --color-text-light: #818ea0;
-  --color-primary: #041e42;
-  --color-secondary: #ffbd27;
-  --color-link: #0070dc;
+  --color-primary: #2ba447;
+  --color-secondary: #e69a3b;
+  --color-link: #00a046;
   --color-form-border: #d9dde3;
   --color-form-placeholder: #9aa5b3;
   --color-theme-danger: #ef262c;
@@ -3279,7 +3279,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .border-yellow {
-  border-color: #ffbd27 !important;
+  border-color: #e69a3b !important;
 }
 
 .overlay-link {
@@ -5717,7 +5717,7 @@ button.wide, .button.wide, input[type=submit].wide, .submit.wide, .btn.wide {
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #00a046;
 }
 
 .swiper-container {
@@ -6683,7 +6683,7 @@ button.swiper-pagination-bullet {
   top: 2px;
   right: -3px;
   color: #021523;
-  background-color: #ffbd27;
+  background-color: #e69a3b;
   border-radius: 50%;
 }
 .site-header .header-addons-text {
@@ -6825,22 +6825,22 @@ button.swiper-pagination-bullet {
   margin-left: auto;
 }
 .site-header .header-nav .site-menu .menu > li > a:hover {
-  color: #0070dc;
+  color: #00a046;
 }
 .site-header .header-nav .site-menu .menu > li.menu-item-has-children:hover > a {
-  color: #0070dc;
+  color: #00a046;
 }
 .site-header .header-nav .site-menu .menu .sub-menu a {
   color: #021523;
 }
 .site-header .header-nav .site-menu .menu .sub-menu a:hover {
-  color: #0070dc;
+  color: #00a046;
 }
 .site-header .header-nav .site-menu .menu .sub-menu .menu-item-has-children:hover > a {
-  color: #0070dc;
+  color: #00a046;
 }
 .site-header .header-nav .site-menu .menu .mega-menu .sub-menu .menu-item-has-children > a {
-  color: #0070dc;
+  color: #00a046;
 }
 .site-header .site-menu.primary .menu {
   margin-left: -0.625rem;
@@ -7197,25 +7197,25 @@ button.swiper-pagination-bullet {
   background-color: #031424;
 }
 .site-header .custom-color-dark .site-menu .menu > li > a:hover {
-  color: #ffbd27;
+  color: #e69a3b;
 }
 .site-header .custom-color-dark .site-menu .menu > li.menu-item-has-children:hover > a {
-  color: #ffbd27;
+  color: #e69a3b;
 }
 .site-header .custom-color-dark .site-departments-wrapper > a {
-  background-color: #ffbd27 !important;
+  background-color: #e69a3b !important;
 }
 .site-header .custom-color-dark .input-search-button button {
   color: #021523;
-  background-color: #ffbd27;
-  border-color: #ffbd27;
+  background-color: #e69a3b;
+  border-color: #e69a3b;
 }
 .site-header .custom-color-dark.header-main .site-menu .sub-menu a {
   color: #021523;
 }
 .site-header .custom-color-light {
   color: #021523;
-  background-color: #ffbd27;
+  background-color: #e69a3b;
 }
 .site-header .custom-color-light a:hover {
   color: #021523 !important;
@@ -8427,7 +8427,7 @@ button.swiper-pagination-bullet {
 .module-banner-text .banner-inner .entry-title strong {
   font-size: 1rem;
   font-weight: 500;
-  background-color: #ffbd27;
+  background-color: #e69a3b;
   padding: 4px 15px;
   border-radius: 34px;
   margin: 0 5px;
@@ -9750,7 +9750,7 @@ blockquote p {
   z-index: 10;
 }
 .products .product.most-commented .product-content-fade {
-  border-color: #ffbd27;
+  border-color: #e69a3b;
 }
 .products .product:hover {
   z-index: 11;
@@ -12373,7 +12373,7 @@ blockquote p {
   color: #021523;
 }
 .site-footer .footer-newsletter {
-  background-color: #041e42;
+  background-color: #2c7e3f;
   background-image: url(../img/pattern-2.png);
   background-repeat: no-repeat;
   background-position: 20% 30%;
@@ -12412,10 +12412,10 @@ blockquote p {
   font-size: 0.875rem;
 }
 .site-footer .footer-newsletter .site-newsletter .entry-description p {
-  color: #818ea0;
+  color: #ffffff;
 }
 .site-footer .footer-newsletter .site-newsletter .entry-description p strong {
-  color: #ffbd27;
+  color: #e69a3b;
 }
 @media screen and (min-width: 64rem) {
   .site-footer .footer-newsletter .site-newsletter .entry-description p {
@@ -12451,8 +12451,8 @@ blockquote p {
   padding-right: 1.875rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  color: #021523;
-  background-color: #ffbd27;
+  color: #ffffff;
+  background-color: #e69a3b;
   border: 0;
 }
 .site-footer .footer-widgets {

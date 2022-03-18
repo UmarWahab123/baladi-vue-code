@@ -24,11 +24,25 @@
                                                </router-link>
 
                                             </li>
-                                            <li
-                                                class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
-                                                <a
-                                                    href="https://klbtheme.com/machic/my-account/downloads/">Downloads</a>
+                                               <li
+                                                class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+                                                 <router-link to="my-wallet">My Wallet
+                                               </router-link>
+
                                             </li>
+                                               <li
+                                                class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+                                                 <router-link to="voucher">Voucher
+                                               </router-link>
+
+                                            </li>
+                                              <li
+                                                class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+                                                 <router-link to="reward-points">Reward Points
+                                               </router-link>
+
+                                            </li>
+                                            
                                             <li
                                                 class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
                                                <router-link to="shipping">Addresses
@@ -38,7 +52,7 @@
                                             <li
                                                 class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
                                              
-                                                      <router-link to="account">Account
+                                                      <router-link to="account">Account Details
                                                </router-link>
 
                                             </li>
