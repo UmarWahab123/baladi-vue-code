@@ -83,49 +83,7 @@
                     >Order Tracking
                   </router-link>
                 </li>
-                <li
-                  class="
-                    menu-item
-                    menu-item-type-custom
-                    menu-item-object-custom
-                    menu-item-has-children
-                    menu-item-2176
-                  "
-                >
-                  <a href="#">English</a>
-                  <ul class="sub-menu">
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-2177
-                      "
-                    >
-                      <a href="#">English</a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-2178
-                      "
-                    >
-                      <a href="#">Spanish</a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-2193
-                      "
-                    >
-                      <a href="#">German</a>
-                    </li>
-                  </ul>
-                </li>
+
                 <li
                   class="
                     menu-item
@@ -168,6 +126,28 @@
                       <a href="#">GBP</a>
                     </li>
                   </ul>
+                </li>
+                <li
+                  class="
+                    menu-item
+                    menu-item-type-custom
+                    menu-item-object-custom
+                    menu-item-has-children
+                    menu-item-2176
+                  "
+                >
+                  <span>
+                    <div class="switch">
+                      <input
+                        id="language-toggle"
+                        class="check-toggle check-toggle-round-flat"
+                        type="checkbox"
+                      />
+                      <label for="language-toggle"></label>
+                      <span class="on">EN</span>
+                      <span class="off">AR</span>
+                    </div>
+                  </span>
                 </li>
               </ul>
             </nav>
