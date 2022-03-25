@@ -2204,7 +2204,7 @@
                     menu-item-object-page
                   "
                 >
-                  <a href="#blog/">Blog</a>
+                  <router-link to="/blog">Blog </router-link>
                 </li>
                 <li
                   class="
