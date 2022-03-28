@@ -185,7 +185,27 @@ const routes = [
   {
     name: 'covid-19',
     path: '/covid-19',
-    component: () => import('@/views/Covid/index.vue'),
+    component: () => import('@/views/covid/index.vue'),
+  },
+   {
+    name: 'review',
+    path: '/review',
+    component: () => import('@/views/review/index.vue'),
+  },
+   {
+    name: 'all_categories',
+    path: '/all_categories',
+    component: () => import('@/views/category/all_categories.vue'),
+  },
+  {
+    name: 'brands',
+    path: '/brands',
+    component: () => import('@/views/category/brands.vue'),
+  },
+  {
+    name: 'careers',
+    path: '/careers',
+    component: () => import('@/views/careers/index.vue'),
   },
 ];
 

@@ -1,6 +1,5 @@
 <template>
   <TheLoader v-show="this.isloading === true"></TheLoader>
-
   <Header v-show="this.isloading === false" />
   <main id="main" class="site-primary" v-show="this.isloading === false">
     <div class="site-content">

@@ -226,7 +226,7 @@
                       menu-item-object-page menu-item-2220
                     "
                   >
-                    <a href="#">Your Account</a>
+                    <a href="/userdashboard">Your Account</a>
                   </li>
                   <li
                     id="menu-item-2182"
@@ -237,7 +237,7 @@
                       menu-item-2182
                     "
                   >
-                    <a href="#">Your Orders</a>
+                    <a href="/orders">Your Orders</a>
                   </li>
                   <li
                     id="menu-item-2525"
@@ -247,7 +247,7 @@
                       menu-item-object-page menu-item-2525
                     "
                   >
-                    <a href="#">Returns &amp; Replacements</a>
+                    <a href="/replacement">Returns &amp; Replacements</a>
                   </li>
                   <li
                     id="menu-item-2221"
@@ -257,7 +257,7 @@
                       menu-item-object-page menu-item-2221
                     "
                   >
-                    <a href="#">Shipping Rates &amp; Policies</a>
+                    <a href="/shoppingrates">Shipping Rates &amp; Policies</a>
                   </li>
                   <li
                     id="menu-item-2524"
@@ -267,7 +267,7 @@
                       menu-item-object-page menu-item-2524
                     "
                   >
-                    <a href="#">Refund and Returns Policy</a>
+                    <a href="/refund">Refund and Returns Policy</a>
                   </li>
                   <li
                     id="menu-item-2223"
@@ -291,7 +291,7 @@
                       menu-item-object-page menu-item-2523
                     "
                   >
-                    <a href="#"></a>
+                    <a href="/termscondition"></a>
                     <router-link to="/terms">Terms and Conditions </router-link>
                   </li>
                   <li
@@ -334,7 +334,7 @@
                       menu-item-2186
                     "
                   >
-                    <a href="#">Careers</a>
+                    <a href="/careers">Careers</a>
                   </li>
                   <li
                     id="menu-item-2508"
@@ -344,7 +344,7 @@
                       menu-item-object-page menu-item-2508
                     "
                   >
-                    <a href="#">About Machic</a>
+                    <a href="/aboutus">About Us</a>
                   </li>
                   <li
                     id="menu-item-2188"
@@ -377,7 +377,7 @@
                       menu-item-2190
                     "
                   >
-                    <a href="#">Customer reviews</a>
+                    <a href="/review">Customer-review</a>
                   </li>
                   <li
                     id="menu-item-2513"

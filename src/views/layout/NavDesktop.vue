@@ -1839,6 +1839,24 @@
                     >
                       <a href="#home-5/">Most Liked</a>
                     </li>
+                      <li
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
+                    >
+                      <a href="/all_categories">All Categories</a>
+                    </li>
+                       <li
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
+                    >
+                      <a href="/brands">All Brands</a>
+                    </li>
                   </ul>
                 </li>
                 <li
