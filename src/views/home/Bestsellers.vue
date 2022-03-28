@@ -39,7 +39,7 @@
             <div class="elementor-widget-container">
               <div class="site-module products-module">
                 <div class="module-header">
-                  <h4 class="entry-title">Best Sellers</h4>
+                  <h4 class="entry-title">Top Sellers</h4>
                   <div class="product-countdown">
                     <div
                       class="countdown"
@@ -76,10 +76,19 @@
                             </div>
                             <a href="#">
                               <div class="product-card">
-                                <img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/category-2.jpg"
-                                  data-hover-slides='["https://klbtheme.com/machic/wp-content/uploads/2021/09/category-3.jpg", "https://klbtheme.com/machic/wp-content/uploads/2021/09/category-1.jpg"]'
-                                />
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
+                                    />
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
+                                    />
+                                  </div>
+                                </div>
                               </div>
                             </a>
                             <div class="product-buttons">
@@ -243,3 +252,51 @@
     </div>
   </section>
 </template>
+<style scoped>
+#slidingWindow {
+  display: flex;
+  /* margin: 1em 4em; */
+  overflow: hidden;
+  width: 210px;
+  height: 250px;
+  border: 1px solid hsl(44, 25, 50);
+  @include background-image(
+    linear-gradient(to bottom, hsl(50, 60, 60), hsl(50, 40, 50))
+  );
+  box-shadow: 0 2px 3px hsla(0, 0, 12, 0.8);
+}
+
+#slidingWindow,
+.slidingSection,
+img {
+  border-radius: 2px;
+}
+.slidingSection {
+  margin: 4px;
+  @include background-image(
+    linear-gradient(to bottom, hsl(62, 52, 75) 60%, hsl(82, 45, 35))
+  );
+  width: 200px;
+  min-width: 200px;
+  height: 240px;
+  text-align: center;
+  border: 1px solid hsl(32, 25, 55);
+  transform: translate3d(0, 0, 0);
+  transition: transform 450ms linear;
+}
+
+#slidingWindow:hover > .slidingSection {
+  transform: translate3d(-210px, 0, 0);
+  transition: transform 450ms linear;
+}
+
+.img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 hsla(0, 0, 25, 0.4);
+}
+</style>

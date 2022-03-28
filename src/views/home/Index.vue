@@ -23,13 +23,16 @@
           <Bestsellers />
           <!-- black bar  -->
           <Banner2 />
+          <Brand />
+          <!-- Budget Deals -->
+          <BudgetDeal />
+          <SaveBar />
+
           <Latestdeals />
           <!-- 2nd bar  -->
-          <Bar />
           <!-- last section  -->
           <Newproducts />
           <!-- logo slider  -->
-          <Brand />
         </div>
       </div>
     </div>
@@ -55,6 +58,8 @@ import Newproducts from "./Newproducts.vue";
 import Boxinfo from "./Boxinfo.vue";
 import Bar from "./partials/Bar.vue";
 import Banner2 from "./partials/Banner.vue";
+import BudgetDeal from "./BudgetDeal.vue";
+import SaveBar from "./SaveBar.vue";
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";

@@ -132,6 +132,61 @@ const routes = [
     path: '/blank',
     component: () => import('@/views/Blank.vue'),
   },
+  {
+    name: 'Blog',
+    path: '/blog',
+    component: () => import('@/views/blog/index.vue'),
+  },
+  {
+    name: 'blog-detail',
+    path: '/blog-detail',
+    component: () => import('@/views/blog/blog-detail.vue'),
+  },
+  {
+    name: 'terms',
+    path: '/terms',
+    component: () => import('@/views/Terms.vue'),
+  },
+  {
+    name: 'helpcenter',
+    path: '/helpcenter',
+    component: () => import('@/views/helpcenter/index.vue'),
+  },
+  {
+    name: 'replacement',
+    path: '/replacement',
+    component: () => import('@/views/helpcenter/replacement.vue'),
+  },
+  {
+    name: 'privacypolicy',
+    path: '/privacypolicy',
+    component: () => import('@/views/helpcenter/privacypolicy.vue'),
+  },
+  {
+    name: 'shoppingrates',
+    path: '/shoppingrates',
+    component: () => import('@/views/helpcenter/shoppingrates.vue'),
+  },
+  {
+    name: 'termscondition',
+    path: '/termscondition',
+    component: () => import('@/views/helpcenter/terms.vue'),
+  },
+  {
+    name: 'covidhelp',
+    path: '/covidhelp',
+    component: () => import('@/views/helpcenter/covid.vue'),
+  },
+  {
+    name: 'refund',
+    path: '/refund',
+    component: () => import('@/views/helpcenter/refund.vue'),
+  },
+  {
+    name: 'covid-19',
+    path: '/covid-19',
+    component: () => import('@/views/Covid/index.vue'),
+  },
 ];
 
 const router = createRouter({

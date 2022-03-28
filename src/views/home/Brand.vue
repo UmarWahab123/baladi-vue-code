@@ -45,7 +45,6 @@
                       autoplay: true,
                       perPage: 5,
                       arrows: false,
-                      heightRatio: 0.3,
                       gap: '10rem',
                       type: 'loop',
                     }"
