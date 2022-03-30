@@ -81,107 +81,107 @@
                                         <div class="row">
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="./src/img/Brands/10.pnghttps://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png"/></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="./src/img/Brands/20.png" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-2 col-lg-2">
                                                 <div class="square-holder shadow">
-                                                    <a href=""> <img alt="" src="https://i.picsum.photos/id/905/200/200.jpg?hmac=PxOdpEd_gpj1SeeC1DMysEuacd5-lp9jjs1wfD4ds74" /></a>
+                                                    <a href=""> <img alt="" src="https://igtechservices.com/public/uploads/bannerimg/1648629836-11.png" /></a>
                                                 </div>
                                             </div>
                                         </div>

@@ -1846,7 +1846,7 @@
                         menu-item-object-page
                       "
                     >
-                      <a href="/all_categories">All Categories</a>
+                      <router-link to="/all_categories">All Categories</router-link>
                     </li>
                        <li
                       class="
@@ -1855,7 +1855,7 @@
                         menu-item-object-page
                       "
                     >
-                      <a href="/brands">All Brands</a>
+                      <router-link to="/brands">All Brands</router-link>
                     </li>
                   </ul>
                 </li>

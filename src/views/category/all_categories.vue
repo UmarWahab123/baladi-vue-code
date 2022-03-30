@@ -143,7 +143,7 @@
                                 <div class="klb-product-category col col-12 col-lg-4 col-sm-4">
                                     <div class="site-module module-category-list style-1">
                                         <div class="category-image"><a href=""><img
-                                                    src="./src/img/products/bath & shower/400/JOHNSONS vita-rich replenishing raspberry body wash 250 ml_.jpg"
+                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/category-1.jpg"
                                                     alt="Cell Phones"></a></div>
                                         <div class="category-detail">
                                             <h3 class="category-name"><a href="#">Skin Care</a></h3>
@@ -186,7 +186,7 @@
                                 <div class="klb-product-category col col-12 col-lg-4 col-sm-4">
                                     <div class="site-module module-category-list style-1">
                                         <div class="category-image"><a href="#"><img
-                                                    src="./src/img/products/bath & shower/400/johnsons-antibacterial-body-wash-sea-salt_400 ml_.jpg"
+                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/category-1.jpg"
                                                     alt="Smartwatches"></a></div>
                                         <div class="category-detail">
                                             <h3 class="category-name"><a href="#">Baby Care</a>

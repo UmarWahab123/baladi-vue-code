@@ -310,26 +310,40 @@
                             </div>
                         </div>
 
-
-
                         <div class="woocommerce-tabs wc-tabs-wrapper">
                             <ul class="tabs wc-tabs" role="tablist">
-                                <li class="description_tab active" id="tab-title-description" role="tab"
+                                <li class="description_tab"  :class="description" id="tab-title-description" role="tab"
                                     aria-controls="tab-description">
-                                    <a href="#tab-description">
+                                    <a 
+                                    href="#tab-description"
+                                    class="nav-link"
+                                  
+                                   @click="clickdescription"
+                                   data-bs-toggle="tab">
                                         Description </a>
                                 </li>
-                                <li class="specification_tab" id="tab-title-specification" role="tab"
+                                <li class="specification_tab"  :class="specification" id="tab-title-specification" role="tab"
                                     aria-controls="tab-specification">
-                                    <a href="#tab-specification">
+                                    <a 
+                                    href="#tab-specification"
+                                    class="nav-link"
+                                   
+                                    @click="clickspecification"
+                                    data-bs-toggle="tab">
                                         Specification </a>
                                 </li>
-                                <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                    <a href="#tab-reviews">
+                                <li class="reviews_tab"  :class="reviews" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+                                    <a href="#tab-reviews"
+                                    class="nav-link"
+                                   
+                                    @click="clickreviews"
+                                    data-bs-toggle="tab">
                                         Reviews (1) </a>
                                 </li>
                             </ul>
-                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
+
+                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab tab-pane fade"
+                               :class="showdescription"
                                 id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
 
                                 <h2>Description</h2>
@@ -346,9 +360,10 @@
                                     <li>backlit keyboard, touchpad with gesture support</li>
                                 </ul> -->
                             </div>
-                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--specification panel entry-content wc-tab"
+                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--specification panel entry-content wc-tab tab-pane fade"
+                            :class="showspecification"
                                 id="tab-specification" role="tabpanel" aria-labelledby="tab-title-specification"
-                                style="display: none;">
+                               >
                                 <div class="specification-content">
                                     <h2>General</h2>
                                     <!-- <table>
@@ -457,9 +472,10 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
+                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab tab-pane fade"
+                            :class="showsreviews"
                                 id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews"
-                                style="display: none;">
+                                >
                                 <div id="reviews" class="woocommerce-Reviews">
                                     <div id="comments">
                                         <h2 class="woocommerce-Reviews-title">
@@ -1251,5 +1267,59 @@
 <script setup>
 	import Header from '../layout/Header.vue'
 	import Footer from '../layout/Footer.vue'
-
 </script>
+<script>
+import TheLoader from "../Loader/TheLoader.vue";
+export default {
+  components: { TheLoader },
+  data: () => ({
+    id: "",
+    specification: "",
+    description: "",
+    showdescription: "",
+    showspecification: "",
+    reviews:"",
+    showsreviews: "",
+    results: [],
+    isloading: true,
+  }),
+  mounted() {
+    this.description = "active";
+    this.showdescription = "active show";
+    setTimeout(() => (this.isloading = false), 1000);
+  },
+  methods: {
+    clickdescription: function () {
+      this.specification = "";
+      this.showspecification = "";
+      this.showspecification = "d-none";
+      this.reviews = "";
+      this.showsreviews = "";
+      this.showsreviews = "d-none";
+      this.description = "active";
+      this.showdescription = "active show";
+    },
+    clickspecification: function () {
+      this.description = "";
+      this.showdescription = "";
+      this.showdescription = "d-none";
+      this.reviews = "";
+      this.showsreviews = "";
+      this.showsreviews = "d-none";
+      this.specification = "active";
+      this.showspecification = "active show";
+    },
+    clickreviews: function () {
+      this.description = "";
+      this.showdescription = "";
+      this.showdescription = "d-none";
+      this.specification = "";
+      this.showspecification = "";
+      this.showspecification = "d-none";
+      this.reviews = "active";
+      this.showsreviews = "active show";
+    },
+  },
+};
+</script>
+

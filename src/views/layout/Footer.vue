@@ -226,7 +226,7 @@
                       menu-item-object-page menu-item-2220
                     "
                   >
-                    <a href="/userdashboard">Your Account</a>
+                   <router-link to="/userdashboard">Your Account </router-link>
                   </li>
                   <li
                     id="menu-item-2182"
@@ -237,7 +237,7 @@
                       menu-item-2182
                     "
                   >
-                    <a href="/orders">Your Orders</a>
+                    <router-link to="/orders">Your Orders </router-link>
                   </li>
                   <li
                     id="menu-item-2525"
@@ -247,7 +247,7 @@
                       menu-item-object-page menu-item-2525
                     "
                   >
-                    <a href="/replacement">Returns &amp; Replacements</a>
+                    <router-link to="/replacement">Returns &amp; Replacements</router-link>
                   </li>
                   <li
                     id="menu-item-2221"
@@ -257,7 +257,7 @@
                       menu-item-object-page menu-item-2221
                     "
                   >
-                    <a href="/shoppingrates">Shipping Rates &amp; Policies</a>
+                    <router-link to="/shoppingrates">Shipping Rates &amp; Policies</router-link>
                   </li>
                   <li
                     id="menu-item-2524"
@@ -267,7 +267,7 @@
                       menu-item-object-page menu-item-2524
                     "
                   >
-                    <a href="/refund">Refund and Returns Policy</a>
+                    <router-link to="/refund">Refund and Returns Policy</router-link>
                   </li>
                   <li
                     id="menu-item-2223"
@@ -334,7 +334,7 @@
                       menu-item-2186
                     "
                   >
-                    <a href="/careers">Careers</a>
+                   <router-link to="/careers">Careers </router-link>
                   </li>
                   <li
                     id="menu-item-2508"
@@ -344,7 +344,7 @@
                       menu-item-object-page menu-item-2508
                     "
                   >
-                    <a href="/aboutus">About Us</a>
+                    <router-link to="/aboutus">About Us</router-link>
                   </li>
                   <li
                     id="menu-item-2188"
@@ -377,7 +377,7 @@
                       menu-item-2190
                     "
                   >
-                    <a href="/review">Customer-review</a>
+                    <router-link to="/review">Customer-review</router-link>
                   </li>
                   <li
                     id="menu-item-2513"
@@ -401,7 +401,7 @@
                       menu-item-object-page menu-item-2509
                     "
                   >
-                    <router-link to="/contact-us">Contact Us </router-link>
+                    <router-link to="/contact-us">Contact Us</router-link>
                   </li>
                 </ul>
               </div>
@@ -534,7 +534,7 @@
           <div class="col">
             <div class="footer-bottom">
               <div class="site-copyright">
-                <p>Copyright 2021 © Baladi <strong>Express</strong>.</p>
+                <p>Copyright 2022 © Baladi <strong>Express</strong>.</p>
               </div>
               <div class="site-payment-logos">
                 <a href="#">

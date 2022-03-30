@@ -564,7 +564,7 @@
                                 >
                                   <div
                                     class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
+                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
                                     data-hover-slider-i="1"
                                     style="flex-grow: 1"
                                   ></div>

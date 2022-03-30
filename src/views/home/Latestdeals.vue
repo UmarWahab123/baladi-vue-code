@@ -83,25 +83,25 @@
                                   >
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="44"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="45"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="46"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="47"
                                       style="flex-grow: 1"
                                     ></div>
@@ -135,7 +135,7 @@
                                     ></div>
                                   </div>
                                   <img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
+                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                     class="hover-slider-init"
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />
@@ -178,7 +178,7 @@
                                 </div>
                                 <a href="#?featured=yes" class="most-comments"
                                   ><img
-                                    src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                     alt="featured" /></a
                                 ><a
                                   href="#"
@@ -397,25 +397,25 @@
                                   >
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="60"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="61"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="62"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                       data-hover-slider-i="63"
                                       style="flex-grow: 1"
                                     ></div>
@@ -449,7 +449,7 @@
                                     ></div>
                                   </div>
                                   <img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
+                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                     class="hover-slider-init"
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />
@@ -492,7 +492,7 @@
                                 </div>
                                 <a href="#?featured=yes" class="most-comments"
                                   ><img
-                                    src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                     alt="featured" /></a
                                 ><a
                                   href="#"
