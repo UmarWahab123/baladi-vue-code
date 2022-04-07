@@ -207,6 +207,21 @@ const routes = [
     path: '/careers',
     component: () => import('@/views/careers/index.vue'),
   },
+   {
+    name: 'thankyou',
+    path: '/thankyou',
+    component: () => import('@/views/thankyou/thankyou.vue'),
+  },
+    {
+    name: 'order-track2',
+    path: '/order-track2',
+    component: () => import('@/views/tracking/order-track2.vue'),
+  },
+      {
+    name: 'testpost',
+    path: '/testpost',
+    component: () => import('@/views/home/postrequestapi.vue'),
+  },
 ];
 
 const router = createRouter({

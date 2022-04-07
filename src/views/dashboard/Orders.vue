@@ -119,7 +119,7 @@
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >$</span
-                                >1,068.66</span
+                               >1,068.66</span
                               >
                               for 2 items
                             </td>
@@ -190,6 +190,7 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>
+
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 export default {
@@ -201,6 +202,18 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
+    var value = (100000).toLocaleString(
+   undefined, // leave undefined to use the visitor's browser 
+             // locale or a string like 'en-US' to override it.
+    { minimumFractionDigits: 2 }
+  );
+  console.log(value);
   },
+ 
 };
+
+
 </script>
+
+
+

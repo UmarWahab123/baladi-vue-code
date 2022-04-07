@@ -232,7 +232,7 @@
                                 <div class="klb-product-category col col-12 col-lg-4 col-sm-4">
                                     <div class="site-module module-category-list style-1">
                                         <div class="category-image"><a href="#"><img
-                                                    src="./src/img/products/bath & shower/400/Enchaunteur shower gel alluring 250 ml_.jpg"
+                                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/category-1.jpg"
                                                     alt="Headphones"></a></div>
                                         <div class="category-detail">
                                             <h3 class="category-name"><a href="#">Fashion</a>

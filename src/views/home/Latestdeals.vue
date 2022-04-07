@@ -1,50 +1,23 @@
 <template>
   <section
-    class="
-      elementor-section
-      elementor-top-section
-      elementor-element
-      elementor-element-4cd6823
-      elementor-section-boxed
-      elementor-section-height-default
-      elementor-section-height-default
-    "
+    class="elementor-section elementor-top-section elementor-element elementor-element-4cd6823 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="4cd6823"
     data-element_type="section"
   >
     <section
-      class="
-        elementor-section
-        elementor-top-section
-        elementor-element
-        elementor-element-3f452c4
-        elementor-section-boxed
-        elementor-section-height-default
-        elementor-section-height-default
-      "
+      class="elementor-section elementor-top-section elementor-element elementor-element-3f452c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
       data-id="3f452c4"
       data-element_type="section"
     >
       <div class="elementor-container elementor-column-gap-extended">
         <div
-          class="
-            elementor-column
-            elementor-col-100
-            elementor-top-column
-            elementor-element
-            elementor-element-3eeb54d
-          "
+          class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3eeb54d"
           data-id="3eeb54d"
           data-element_type="column"
         >
           <div class="elementor-widget-wrap elementor-element-populated">
             <div
-              class="
-                elementor-element
-                elementor-element-d055bda
-                elementor-widget
-                elementor-widget-machic-product-list2
-              "
+              class="elementor-element elementor-element-d055bda elementor-widget elementor-widget-machic-product-list2"
               data-id="d055bda"
               data-element_type="widget"
               data-widget_type="machic-product-list2.default"
@@ -59,7 +32,12 @@
                   </div>
                   <div class="module-wrapper">
                     <div class="products list-style column-3 mobile-1">
-                      <div class="product custom-hover" v-for="n in 6">
+                      <div
+                        class="product custom-hover"
+                        :data="item"
+                        :key="indextr"
+                        v-for="(item, indextr) in results"
+                      >
                         <div class="product-wrapper">
                           <div class="product-content">
                             <div class="thumbnail-wrapper">
@@ -72,6 +50,9 @@
                                 <div
                                   class="product-card"
                                   style="position: relative"
+                                  :data="imageitem"
+                                  :key="imageindex"
+                                  v-for="(imageitem, imageindex) in item.images"
                                 >
                                   <div
                                     class="hover-slider-images-toggler"
@@ -143,12 +124,7 @@
                               </a>
                               <div class="product-buttons">
                                 <div
-                                  class="
-                                    tinv-wraper
-                                    woocommerce
-                                    tinv-wishlist
-                                    tinvwl-shortcode-add-to-cart
-                                  "
+                                  class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
                                   data-product_id="521"
                                 >
                                   <div class="tinv-wishlist-clear"></div>
@@ -156,11 +132,7 @@
                                     role="button"
                                     tabindex="0"
                                     aria-label="Add to Wishlist"
-                                    class="
-                                      tinvwl_add_to_wishlist_button
-                                      tinvwl-icon-heart
-                                      tinvwl-position-after
-                                    "
+                                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
                                     data-tinv-wl-list="[]"
                                     data-tinv-wl-product="521"
                                     data-tinv-wl-productvariation="0"
@@ -196,8 +168,7 @@
                               <h3 class="product-title">
                                 <a
                                   href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                  >Apple 10.9-inch iPad Air Wi-Fi Cellular
-                                  64GB</a
+                                  >{{ item.name }}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -208,8 +179,10 @@
                                 >
                                   <span style="width: 100%"
                                     >Rated
-                                    <strong class="rating">5.00</strong> out of
-                                    5</span
+                                    <strong class="rating">{{
+                                      item.rating
+                                    }}</strong>
+                                    out of 5</span
                                   >
                                 </div>
                                 <div class="count-rating">
@@ -223,7 +196,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >$</span
-                                      >699.99</bdi
+                                      >{{ item.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -233,7 +206,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >$</span
-                                      >629.99</bdi
+                                      >{{ item.sale_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -255,12 +228,7 @@
                               <a
                                 href="?add-to-cart=521"
                                 data-quantity="1"
-                                class="
-                                  button
-                                  product_type_simple
-                                  add_to_cart_button
-                                  ajax_add_to_cart
-                                "
+                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
                                 data-product_id="521"
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -287,25 +255,13 @@
 
       <div class="elementor-container elementor-column-gap-extended">
         <div
-          class="
-            elementor-column
-            col-md-3
-            elementor-top-column
-            elementor-element
-            elementor-element-40ba9c6
-            elementor-hidden-tablet
-          "
+          class="elementor-column col-md-3 elementor-top-column elementor-element elementor-element-40ba9c6 elementor-hidden-tablet"
           data-id="40ba9c6"
           data-element_type="column"
         >
           <div class="elementor-widget-wrap elementor-element-populated">
             <div
-              class="
-                elementor-element
-                elementor-element-0e25223
-                elementor-widget
-                elementor-widget-machic-banner-box3
-              "
+              class="elementor-element elementor-element-0e25223 elementor-widget elementor-widget-machic-banner-box3"
               data-id="0e25223"
               data-element_type="widget"
               data-widget_type="machic-banner-box3.default"
@@ -351,22 +307,13 @@
           </div>
         </div>
         <div
-          class="
-            elementor-column
-            col-md-9
-            elementor-top-column elementor-element elementor-element-08eed1f
-          "
+          class="elementor-column col-md-9 elementor-top-column elementor-element elementor-element-08eed1f"
           data-id="08eed1f"
           data-element_type="column"
         >
           <div class="elementor-widget-wrap elementor-element-populated">
             <div
-              class="
-                elementor-element
-                elementor-element-4760d3f
-                elementor-widget
-                elementor-widget-machic-product-grid
-              "
+              class="elementor-element elementor-element-4760d3f elementor-widget elementor-widget-machic-product-grid"
               data-id="4760d3f"
               data-element_type="widget"
               data-widget_type="machic-product-grid.default"
@@ -457,12 +404,7 @@
                               </a>
                               <div class="product-buttons">
                                 <div
-                                  class="
-                                    tinv-wraper
-                                    woocommerce
-                                    tinv-wishlist
-                                    tinvwl-shortcode-add-to-cart
-                                  "
+                                  class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
                                   data-product_id="521"
                                 >
                                   <div class="tinv-wishlist-clear"></div>
@@ -470,11 +412,7 @@
                                     role="button"
                                     tabindex="0"
                                     aria-label="Add to Wishlist"
-                                    class="
-                                      tinvwl_add_to_wishlist_button
-                                      tinvwl-icon-heart
-                                      tinvwl-position-after
-                                    "
+                                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
                                     data-tinv-wl-list="[]"
                                     data-tinv-wl-product="521"
                                     data-tinv-wl-productvariation="0"
@@ -536,9 +474,7 @@
                                       class="woocommerce-Price-amount amount"
                                       ><bdi
                                         ><span
-                                          class="
-                                            woocommerce-Price-currencySymbol
-                                          "
+                                          class="woocommerce-Price-currencySymbol"
                                           >$</span
                                         >699.99</bdi
                                       ></span
@@ -549,9 +485,7 @@
                                       class="woocommerce-Price-amount amount"
                                       ><bdi
                                         ><span
-                                          class="
-                                            woocommerce-Price-currencySymbol
-                                          "
+                                          class="woocommerce-Price-currencySymbol"
                                           >$</span
                                         >629.99</bdi
                                       ></span
@@ -560,12 +494,7 @@
                                 ><a
                                   href="?add-to-cart=521"
                                   data-quantity="1"
-                                  class="
-                                    button
-                                    product_type_simple
-                                    add_to_cart_button
-                                    ajax_add_to_cart
-                                  "
+                                  class="button product_type_simple add_to_cart_button ajax_add_to_cart"
                                   data-product_id="521"
                                   data-product_sku="BE45VGRT"
                                   aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -605,3 +534,26 @@
     </section>
   </section>
 </template>
+<script>
+import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
+export default {
+  components: { TheLoader },
+  data() {
+    return {
+      isloading: true,
+      results: [],
+    };
+  },
+  mounted() {
+    setTimeout(() => (this.isloading = false), 1000);
+    axios
+      .get("http://baladiweb.bteamwebs.com/api/web/home/hotdeals")
+      .then((response) => {
+        this.results = response.data.data;
+        // console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
+</script>

@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+
     <!-- site-content -->
   </main>
   <div v-show="this.isloading === false">
@@ -75,5 +76,3 @@ export default {
   },
 };
 </script>
-
-

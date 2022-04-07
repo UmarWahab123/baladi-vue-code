@@ -1,188 +1,145 @@
 <template>
   <footer class="site-footer">
-    <div class="footer-row footer-newsletter dark">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="site-newsletter">
-              <div class="site-newsletter-text">
-                <h3 class="entry-title">Sign Up For Newsletters</h3>
-                <div class="entry-description">
-                  <p>
-                    Get E-mail updates about our latest shop and
-                    <strong>special offers</strong>.
-                  </p>
-                </div>
-                <!-- entry-description -->
-              </div>
-              <!-- site-newsletter-text -->
-              <div class="site-newsletter-form">
-                <div class="subscribe-form">
-                  <!-- Mailchimp for WordPress v4.8.6 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                  <form
-                    id="mc4wp-form-1"
-                    class="mc4wp-form mc4wp-form-1852"
-                    method="post"
-                    data-id="1852"
-                    data-name="Machic"
-                  >
-                    <div class="mc4wp-form-fields">
-                      <input
-                        type="email"
-                        class="subscribe-input"
-                        name="EMAIL"
-                        placeholder="Your email address"
-                        required=""
-                      />
-                      <button type="submit">Sign Up</button>
+    <section class="newsletter">
+      <div class="newsletter_content">
+        <hr class="container newsletter_content-divider" />
+        <h4 class="container newsletter_content-head">
+          Subscribe to Our Newsletter
+        </h4>
+        <p class="container newsletter_content-p">
+          Sign up to our newsletter and be the first to know about the latest
+          company news, special offers, events, and discounts.
+        </p>
+        <div class="">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <div class="site-newsletter">
+                  <!-- site-newsletter-text -->
+                  <div class="site-newsletter-form">
+                    <div class="subscribe-form">
+                      <!-- Mailchimp for WordPress v4.8.6 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                      <form
+                        id="mc4wp-form-1"
+                        class="mc4wp-form mc4wp-form-1852"
+                        method="post"
+                        data-id="1852"
+                        data-name="Baladi"
+                      >
+                        <div class="mc4wp-form-fields d-flex">
+                          <input
+                            type="email"
+                            class="subscribe-input"
+                            name="EMAIL"
+                            placeholder="Your email address"
+                            required=""
+                          />
+                          <button class="sub-btn" type="submit">Sign Up</button>
+                        </div>
+                        <label style="display: none !important"
+                          >Leave this field empty if you're human:
+                          <input
+                            type="text"
+                            name="_mc4wp_honeypot"
+                            value=""
+                            tabindex="-1"
+                            autocomplete="off"
+                          />
+                        </label>
+                        <input
+                          type="hidden"
+                          name="_mc4wp_timestamp"
+                          value="1643343130"
+                        />
+                        <input
+                          type="hidden"
+                          name="_mc4wp_form_id"
+                          value="1852"
+                        />
+                        <input
+                          type="hidden"
+                          name="_mc4wp_form_element_id"
+                          value="mc4wp-form-1"
+                        />
+                        <div class="mc4wp-response"></div>
+                      </form>
+                      <!-- / Mailchimp for WordPress Plugin -->
                     </div>
-                    <label style="display: none !important"
-                      >Leave this field empty if you're human:
-                      <input
-                        type="text"
-                        name="_mc4wp_honeypot"
-                        value=""
-                        tabindex="-1"
-                        autocomplete="off"
-                      />
-                    </label>
-                    <input
-                      type="hidden"
-                      name="_mc4wp_timestamp"
-                      value="1643343130"
-                    />
-                    <input type="hidden" name="_mc4wp_form_id" value="1852" />
-                    <input
-                      type="hidden"
-                      name="_mc4wp_form_element_id"
-                      value="mc4wp-form-1"
-                    />
-                    <div class="mc4wp-response"></div>
-                  </form>
-                  <!-- / Mailchimp for WordPress Plugin -->
+                  </div>
+                  <!-- site-newsletter-form -->
                 </div>
+                <!-- site-newsletter -->
               </div>
-              <!-- site-newsletter-form -->
+              <!-- col -->
             </div>
-            <!-- site-newsletter -->
+            <!-- row -->
           </div>
-          <!-- col -->
+          <!-- container -->
         </div>
-        <!-- row -->
       </div>
-      <!-- container -->
-    </div>
-    <!-- footer-row -->
-
+    </section>
     <div class="footer-row footer-widgets">
       <div class="container">
         <div class="row">
-          <div class="col col-12 col-lg-3 col-five">
-            <div class="klbfooterwidget widget widget_nav_menu">
-              <h4 class="widget-title">Make Money with Us</h4>
-              <div class="menu-make-money-with-us-container">
-                <ul id="menu-make-money-with-us" class="menu">
-                  <li
-                    id="menu-item-2171"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2171
-                    "
-                  >
-                    <a href="#">Sell on Machic</a>
-                  </li>
-                  <li
-                    id="menu-item-2172"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2172
-                    "
-                  >
-                    <a href="#">Sell Your Services on Machic</a>
-                  </li>
-                  <li
-                    id="menu-item-2173"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2173
-                    "
-                  >
-                    <a href="#">Sell on Machic Business</a>
-                  </li>
-                  <li
-                    id="menu-item-2174"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2174
-                    "
-                  >
-                    <a href="#">Sell Your Apps on Machic</a>
-                  </li>
-                  <li
-                    id="menu-item-2175"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2175
-                    "
-                  >
-                    <a href="#">Become an Affilate</a>
-                  </li>
-                  <li
-                    id="menu-item-2179"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2179
-                    "
-                  >
-                    <a href="#">Advertise Your Products</a>
-                  </li>
-                  <li
-                    id="menu-item-2180"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2180
-                    "
-                  >
-                    <a href="#">Sell-Publish with Us</a>
-                  </li>
-                  <li
-                    id="menu-item-2181"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2181
-                    "
-                  >
-                    <a href="#">Become an Machic Vendor</a>
-                  </li>
-                </ul>
+          <div class="col col-12 col-lg-3">
+            <div class="klbfooterwidget widget widget_nav_menu mb-0">
+              <div class="site-brand">
+                <a href="#" title="Baladi – Electronics Store eCommerce Theme">
+                  <img
+                    src="@/assets/img//logo-dark.png"
+                    width="171"
+                    height="34"
+                    alt="Baladi – Electronics Store eCommerce Theme"
+                  />
+                </a>
               </div>
+              <div class="menu-make-money-with-us-container py-2">
+                <p class="">
+                  Souq Albaladi, founded in 1991, had grown considerably since
+                  it first opened in Doha. Our passion for fresh and diverse
+                  products worldwide drove us to launch the business in order to
+                  cater to our customers' needs.
+                </p>
+
+                <strong class="text-dark"
+                  >UAN : <span class="">05434403434</span></strong
+                >
+              </div>
+            </div>
+            <div class="social-share site-social colored">
+              <ul class="social-container">
+                <li>
+                  <a href="" class="facebook" target="_blank"
+                    ><i class="klbth-icon-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="twitter" target="_blank"
+                    ><i class="klbth-icon-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="youtube" target="_blank"
+                    ><i class="klbth-icon-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="instag" target="_blank"
+                    ><i class="klbth-icon-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="whatsapp" target="_blank"
+                    ><i class="klbth-icon-whatsapp"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
           </div>
           <!-- col -->
-          <div class="col col-12 col-lg-3 col-five">
+          <div class="col col-12 col-lg-2">
             <div
-              class="
-                klbfooterwidget
-                widget
-                woocommerce
-                widget_product_categories
-              "
+              class="klbfooterwidget widget woocommerce widget_product_categories"
             >
               <h4 class="widget-title">Product Categories</h4>
               <ul class="product-categories">
@@ -213,71 +170,50 @@
             </div>
           </div>
           <!-- col -->
-          <div class="col col-12 col-lg-3 col-five">
+          <div class="col col-12 col-lg-2">
             <div class="klbfooterwidget widget widget_nav_menu">
               <h4 class="widget-title">Let Us Help You</h4>
               <div class="menu-let-us-help-you-container">
                 <ul id="menu-let-us-help-you" class="menu">
                   <li
                     id="menu-item-2220"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2220
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"
                   >
-                   <router-link to="/userdashboard">Your Account </router-link>
+                    <router-link to="/userdashboard">Your Account </router-link>
                   </li>
                   <li
                     id="menu-item-2182"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2182
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2182"
                   >
                     <router-link to="/orders">Your Orders </router-link>
                   </li>
                   <li
                     id="menu-item-2525"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2525
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2525"
                   >
-                    <router-link to="/replacement">Returns &amp; Replacements</router-link>
+                    <router-link to="/replacement"
+                      >Returns &amp; Replacements</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2221"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2221
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2221"
                   >
-                    <router-link to="/shoppingrates">Shipping Rates &amp; Policies</router-link>
+                    <router-link to="/shoppingrates"
+                      >Shipping Rates &amp; Policies</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2524"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2524
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2524"
                   >
-                    <router-link to="/refund">Refund and Returns Policy</router-link>
+                    <router-link to="/refund"
+                      >Refund and Returns Policy</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2223"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page
-                      menu-item-privacy-policy
-                      menu-item-2223
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2223"
                   >
                     <router-link to="/privacy-policy"
                       >Privacy Policy
@@ -285,33 +221,20 @@
                   </li>
                   <li
                     id="menu-item-2523"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2523
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2523"
                   >
                     <a href="/termscondition"></a>
                     <router-link to="/terms">Terms and Conditions </router-link>
                   </li>
                   <li
                     id="menu-item-2185"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2185
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2185"
                   >
                     <router-link to="/helpcenter">Help Center</router-link>
                   </li>
                   <li
                     id="menu-item-2182"
-                    class="
-                      menu-item menu-item-type-custom
-                      text-danger
-                      menu-item-object-custom menu-item-2182
-                    "
+                    class="menu-item menu-item-type-custom text-danger menu-item-object-custom menu-item-2182"
                   >
                     <router-link to="/covid-19">Covid-19</router-link>
                   </li>
@@ -320,74 +243,44 @@
             </div>
           </div>
           <!-- col -->
-          <div class="col col-12 col-lg-3 col-five">
+          <div class="col col-12 col-lg-2">
             <div class="klbfooterwidget widget widget_nav_menu">
               <h4 class="widget-title">Get to Know Us</h4>
               <div class="menu-get-to-know-us-container">
                 <ul id="menu-get-to-know-us" class="menu">
                   <li
                     id="menu-item-2186"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2186
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2186"
                   >
-                   <router-link to="/careers">Careers </router-link>
+                    <router-link to="/careers">Careers </router-link>
                   </li>
                   <li
                     id="menu-item-2508"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2508
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508"
                   >
                     <router-link to="/aboutus">About Us</router-link>
                   </li>
                   <li
                     id="menu-item-2188"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2188
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2188"
                   >
                     <a href="#">Inverstor Relations</a>
                   </li>
                   <li
                     id="menu-item-2189"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2189
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2189"
                   >
                     <a href="#">Machic Devices</a>
                   </li>
                   <li
                     id="menu-item-2190"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2190
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2190"
                   >
                     <router-link to="/review">Customer-review</router-link>
                   </li>
                   <li
                     id="menu-item-2513"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page
-                      menu-item-privacy-policy
-                      menu-item-2513
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2513"
                   >
                     <router-link to="/privacy-policy"
                       >Privacy Policy
@@ -395,11 +288,7 @@
                   </li>
                   <li
                     id="menu-item-2509"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page menu-item-2509
-                    "
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2509"
                   >
                     <router-link to="/contact-us">Contact Us</router-link>
                   </li>
@@ -407,118 +296,71 @@
               </div>
             </div>
           </div>
-          <!-- col -->
-          <div class="col col-12 col-lg-3 col-five"></div>
-          <!-- col -->
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!-- footer-row -->
 
-    <div class="footer-row footer-details">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="site-details">
-              <div class="site-brand">
-                <a href="#" title="Machic – Electronics Store eCommerce Theme">
-                  <img
-                    src="@/assets/img//logo-dark.png"
-                    width="171"
-                    height="34"
-                    alt="Machic – Electronics Store eCommerce Theme"
-                  />
-                </a>
+          <!-- col -->
+
+          <div class="col col-12 col-lg-3">
+            <div class="klbfooterwidget widget widget_nav_menu">
+              <h4 class="widget-title text-success">Install App</h4>
+              <div class="site-mobile-app mb-1">
+                <div class="app-content d-grid">
+                  <strong class="text-dark"
+                    >Scan QR Code To Download Our App</strong
+                  >
+                </div>
+                <div class="d-flex">
+                  <div class="mx-5 ml-0">
+                    <span>Android</span>
+                    <div class="app-buttons mt-1 mx-2 ml-0">
+                      <a
+                        href="https://play.google.com/store"
+                        class="google-play"
+                      >
+                      </a>
+                    </div>
+                    <a href="https://play.google.com/store" class="google-play">
+                      <img src="/src/assets/img/qr-code.png" alt="app" />
+                    </a>
+                  </div>
+                  <div class="mx-5">
+                    <span>IOS</span>
+                    <div class="app-buttons mt-1">
+                      <a
+                        href="https://play.google.com/store"
+                        class="google-play"
+                      >
+                        <img src="/src/assets/img/qr-code.png" alt="app" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="site-social">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com/" target="_blank"
-                      ><i class="klbth-icon-facebook"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/home" target="_blank"
-                      ><i class="klbth-icon-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/" target="_blank"
-                      ><i class="klbth-icon-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://pinterest.com/" target="_blank"
-                      ><i class="klbth-icon-pinterest"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/" target="_blank"
-                      ><i class="klbth-icon-instagram"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://www.youtube.com/" target="_blank"
-                      ><i class="klbth-icon-youtube"></i
-                    ></a>
-                  </li>
-                </ul>
+              <div class="site-mobile-app">
+                <div class="app-content d-grid">
+                  <strong class="text-dark"
+                    >From App Store or Google Play :</strong
+                  >
+                  <span class="">15% discount on your first purchase</span>
+                </div>
+                <div class="app-buttons mt-1">
+                  <a href="https://play.google.com/store" class="google-play">
+                    <img
+                      src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/google-play.png"
+                      alt="app"
+                    />
+                  </a>
+                  <a
+                    href="https://www.apple.com/app-store/"
+                    class="google-play"
+                  >
+                    <img
+                      src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/app-store.png"
+                      alt="app"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
-            <!-- site-details -->
-
-            <div class="site-details">
-              <ul class="tags">
-                <li><a href="#product-tag/apple/">apple </a></li>
-                <li><a href="#product-tag/apple-watch/">Apple Watch </a></li>
-                <li><a href="#product-tag/beats/">Beats </a></li>
-                <li><a href="#product-tag/camera/">Camera </a></li>
-                <li>
-                  <a href="#product-tag/game-controller/">Game Controller </a>
-                </li>
-                <li><a href="#product-tag/hd/">HD </a></li>
-                <li><a href="#product-tag/htc/">HTC </a></li>
-                <li><a href="#product-tag/htc-one/">HTC one </a></li>
-                <li><a href="#product-tag/imac/">iMac </a></li>
-                <li><a href="#product-tag/ipad/">Ipad </a></li>
-                <li><a href="#product-tag/ipad-4-16gb/">Ipad 4 16Gb </a></li>
-                <li><a href="#product-tag/ipad-mini/">Ipad Mini </a></li>
-                <li><a href="#product-tag/keyboard/">Keyboard </a></li>
-                <li><a href="#product-tag/lenovo/">Lenovo </a></li>
-                <li><a href="#product-tag/m8/">M8 </a></li>
-                <li>
-                  <a href="#product-tag/mackbook-pro-m1/">Mackbook Pro M1 </a>
-                </li>
-                <li><a href="#product-tag/mouse/">Mouse </a></li>
-                <li><a href="#product-tag/samsung/">Samsung </a></li>
-                <li>
-                  <a href="#product-tag/samsung-galaxy-m11/"
-                    >Samsung Galaxy M11
-                  </a>
-                </li>
-                <li>
-                  <a href="#product-tag/samsung-galaxy-m31/"
-                    >Samsung Galaxy M31
-                  </a>
-                </li>
-                <li>
-                  <a href="#product-tag/samsung-galaxy-s5-64gb/"
-                    >Samsung Galaxy S5 - 64gb
-                  </a>
-                </li>
-                <li>
-                  <a href="#product-tag/samsung-galaxy-tab-4/"
-                    >Samsung Galaxy Tab 4
-                  </a>
-                </li>
-                <li>
-                  <a href="#product-tag/wireless-speaker/">Wireless Speaker </a>
-                </li>
-              </ul>
-            </div>
-            <!-- site-details -->
           </div>
           <!-- col -->
         </div>
@@ -528,18 +370,17 @@
     </div>
     <!-- footer-row -->
 
+    <!-- footer-row -->
     <div class="footer-row footer-copyright bordered">
       <div class="container">
         <div class="row">
           <div class="col">
             <div class="footer-bottom">
               <div class="site-copyright">
-                <p>Copyright 2022 © Baladi <strong>Express</strong>.</p>
-              </div>
-              <div class="site-payment-logos">
-                <a href="#">
-                  <img src="@/assets/img/payment.png" alt="payment" />
-                </a>
+                <p>
+                  Copyright 2022 © Baladi <strong>Express</strong> All Rights
+                  Reserved.
+                </p>
               </div>
             </div>
             <!-- footer-bottom -->
@@ -558,13 +399,7 @@
 
   <div class="klb-mobile-search">
     <div
-      class="
-        dgwt-wcas-search-wrapp dgwt-wcas-has-submit
-        woocommerce
-        js-dgwt-wcas-layout-classic
-        dgwt-wcas-layout-classic
-        js-dgwt-wcas-mobile-overlay-enabled
-      "
+      class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled"
     >
       <form class="dgwt-wcas-search-form" role="search" action="#" method="get">
         <div class="dgwt-wcas-sf-wrapp">
@@ -650,13 +485,7 @@
   </div>
   <div
     id="woosc-area"
-    class="
-      woosc-area
-      woosc-bar-bottom
-      woosc-bar-right
-      woosc-bar-click-outside-yes
-      woosc-hide-checkout
-    "
+    class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout"
     data-bg-color="#292a30"
     data-btn-color="#00a0d2"
     data-count="2"

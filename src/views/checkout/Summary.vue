@@ -310,17 +310,11 @@
             </div>
             <p class="form-row validate-required">
               <label
-                class="
-                  woocommerce-form__label woocommerce-form__label-for-checkbox
-                  checkbox
-                "
+                class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox"
               >
                 <input
                   type="checkbox"
-                  class="
-                    woocommerce-form__input woocommerce-form__input-checkbox
-                    input-checkbox
-                  "
+                  class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
                   name="terms"
                   id="terms"
                 />
@@ -339,7 +333,7 @@
           </div>
 
           <a
-            href="reciept.php"
+            href="/order-confirmation"
             type=""
             class="button alt"
             name=""

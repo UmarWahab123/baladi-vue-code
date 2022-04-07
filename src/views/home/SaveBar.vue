@@ -1,38 +1,19 @@
 <template>
   <!-- 2nd bar  -->
   <section
-    class="
-      elementor-section
-      elementor-top-section
-      elementor-element
-      elementor-element-e68bac6
-      elementor-section-boxed
-      elementor-section-height-default
-      elementor-section-height-default
-    "
+    class="elementor-section elementor-top-section elementor-element elementor-element-e68bac6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="e68bac6"
     data-element_type="section"
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="
-          elementor-column
-          elementor-col-100
-          elementor-top-column
-          elementor-element
-          elementor-element-0eac08e
-        "
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0eac08e"
         data-id="0eac08e"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="
-              elementor-element
-              elementor-element-ac47d68
-              elementor-widget
-              elementor-widget-machic-text-banner2
-            "
+            class="elementor-element elementor-element-ac47d68 elementor-widget elementor-widget-machic-text-banner2"
             data-id="ac47d68"
             data-element_type="widget"
             data-widget_type="machic-text-banner2.default"
@@ -56,7 +37,7 @@
                       <a
                         href="#?featured=yes"
                         class="btn small rounded link-color"
-                        >Shop Now 2</a
+                        >Shop Now</a
                       >
                     </div>
                   </div>

@@ -8,13 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coders-tm/vue-number-format": "^2.1.11",
     "@splidejs/vue-splide": "^0.5.18",
     "autoprefixer": "^10.4.2",
+    "axios": "^0.26.1",
     "pinia": "^2.0.10",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.18",
     "vue": "^3.2.25",
     "vue-hover-slider": "^0.4.0",
+    "vue-number-format": "^1.2.1",
     "vue-router": "^4.0.12",
     "vue-slick-carousel": "^1.0.6"
   },

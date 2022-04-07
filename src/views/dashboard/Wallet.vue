@@ -47,14 +47,7 @@
                       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 p-3">
                         <div class="col d-flex align-items-start">
                           <div
-                            class="
-                              icon-square
-                              bg-light
-                              text-dark
-                              flex-shrink-0
-                              me-3
-                              p-3
-                            "
+                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
                           >
                             <i class="fa fa-credit-card text-success"></i>
                           </div>
@@ -65,14 +58,7 @@
                         </div>
                         <div class="col d-flex align-items-start">
                           <div
-                            class="
-                              icon-square
-                              bg-light
-                              text-dark
-                              flex-shrink-0
-                              me-3
-                              p-3
-                            "
+                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
                           >
                             <i class="fa fa-bullhorn text-success"></i>
                           </div>
@@ -83,14 +69,7 @@
                         </div>
                         <div class="col d-flex align-items-start">
                           <div
-                            class="
-                              icon-square
-                              bg-light
-                              text-dark
-                              flex-shrink-0
-                              me-3
-                              p-3
-                            "
+                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
                           >
                             <i class="fa fa fa-credit-card text-success"></i>
                           </div>
