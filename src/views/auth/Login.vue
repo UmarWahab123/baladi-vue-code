@@ -89,13 +89,14 @@ export default {
         username: null,
         password: null,
         device: "mobile",
+        _token: "mobile",
+
       },
     };
   },
   methods: {
     submitdata() {
       axios
-        .create({ withCredentials: true })
         .post("http://baladiweb.bteamwebs.com/api/auth/login", this.formdata)
         .then((response) => {
           console.log(response);
