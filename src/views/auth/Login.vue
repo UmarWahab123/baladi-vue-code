@@ -1,4 +1,18 @@
 <template>
+  <div class="row" v-if="error == ''">
+    <p class="alert alert-danger alert-dismissible fade show col-md-6 col-6">
+      {{ errors }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+        @click="closealert()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </p>
+  </div>
   <div class="u-column1 col-md-6">
     <h2>Login</h2>
     <p
@@ -8,10 +22,9 @@
         >Username or email address&nbsp;<span class="required">*</span></label
       >
       <input
-        v-model="formdata.username"
+        v-model="formdata.email"
         type="text"
         class="woocommerce-Input woocommerce-Input--text input-text"
-        name="username"
         id="username"
         autocomplete="username"
       />
@@ -28,7 +41,6 @@
             ><input
               class="woocommerce-Input woocommerce-Input--text input-text"
               type="password"
-              name="password"
               id="password"
               autocomplete="current-password"
               v-model="formdata.password" /><span
@@ -82,23 +94,28 @@
 <script>
 import axios from "axios";
 export default {
-  name: "PostComponent",
   data() {
     return {
       formdata: {
-        username: null,
+        email: null,
         password: null,
         device: "mobile",
       },
+      errors: "",
     };
   },
+  mounted() {},
   methods: {
     submitdata() {
       axios
-        .create({ withCredentials: true })
         .post("http://baladiweb.bteamwebs.com/api/auth/login", this.formdata)
         .then((response) => {
-          console.log(response);
+          // console.log(response.data.status);
+          if (response.data.status == 400) {
+            this.errors = response.data.message;
+          } else {
+            this.$router.push("/");
+          }
         });
     },
   },
