@@ -12,60 +12,37 @@
                 <div class="my-account-wrapper">
                   <Sidebar />
 
-                  <div
-                    class="woocommerce-MyAccount-content"
-                    v-show="this.isloading === false"
-                  >
+                  <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
 
                     <div class="klb-orders-style1">
                       <table
-                        class="
-                          woocommerce-orders-table woocommerce-MyAccount-orders
-                          shop_table shop_table_responsive
-                          my_account_orders
-                          account-orders-table
-                        "
+                        class="woocommerce-orders-table rounded woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table"
                       >
                         <thead>
                           <tr>
                             <th
-                              class="
-                                woocommerce-orders-table__header
-                                woocommerce-orders-table__header-order-number
-                              "
+                              class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number"
                             >
                               <span class="nobr">Order</span>
                             </th>
                             <th
-                              class="
-                                woocommerce-orders-table__header
-                                woocommerce-orders-table__header-order-date
-                              "
+                              class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date"
                             >
                               <span class="nobr">Date</span>
                             </th>
                             <th
-                              class="
-                                woocommerce-orders-table__header
-                                woocommerce-orders-table__header-order-status
-                              "
+                              class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status"
                             >
                               <span class="nobr">Status</span>
                             </th>
                             <th
-                              class="
-                                woocommerce-orders-table__header
-                                woocommerce-orders-table__header-order-total
-                              "
+                              class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total"
                             >
                               <span class="nobr">Total</span>
                             </th>
                             <th
-                              class="
-                                woocommerce-orders-table__header
-                                woocommerce-orders-table__header-order-actions
-                              "
+                              class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions"
                             >
                               <span class="nobr">Actions</span>
                             </th>
@@ -74,26 +51,16 @@
 
                         <tbody>
                           <tr
-                            class="
-                              woocommerce-orders-table__row
-                              woocommerce-orders-table__row--status-on-hold
-                              order
-                            "
+                            class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
                           >
                             <td
-                              class="
-                                woocommerce-orders-table__cell
-                                woocommerce-orders-table__cell-order-number
-                              "
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
                               data-title="Order"
                             >
                               <a href=""> #2931 </a>
                             </td>
                             <td
-                              class="
-                                woocommerce-orders-table__cell
-                                woocommerce-orders-table__cell-order-date
-                              "
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date"
                               data-title="Date"
                             >
                               <time datetime="2022-02-28T05:29:17+00:00"
@@ -101,39 +68,71 @@
                               >
                             </td>
                             <td
-                              class="
-                                woocommerce-orders-table__cell
-                                woocommerce-orders-table__cell-order-status
-                              "
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status"
                               data-title="Status"
                             >
-                              On hold
+                              <span class="badge bg-info">On hold</span>
                             </td>
                             <td
-                              class="
-                                woocommerce-orders-table__cell
-                                woocommerce-orders-table__cell-order-total
-                              "
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
                               data-title="Total"
                             >
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >$</span
-                               >1,068.66</span
+                                >1,068.66</span
                               >
                               for 2 items
                             </td>
                             <td
-                              class="
-                                woocommerce-orders-table__cell
-                                woocommerce-orders-table__cell-order-actions
-                              "
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
                               data-title="Actions"
                             >
-                              <router-link
-                                to="order-detail"
-                                class="woocommerce-button button view"
-                                >View</router-link
+                              <a href="" class="woocommerce-button button view"
+                                >View</a
+                              >
+                            </td>
+                          </tr>
+                          <tr
+                            class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
+                          >
+                            <td
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                              data-title="Order"
+                            >
+                              <a href=""> #2931 </a>
+                            </td>
+                            <td
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date"
+                              data-title="Date"
+                            >
+                              <time datetime="2022-02-28T05:29:17+00:00"
+                                >February 28, 2022</time
+                              >
+                            </td>
+                            <td
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status"
+                              data-title="Status"
+                            >
+                              <span class="badge bg-success">In Process</span>
+                            </td>
+                            <td
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                              data-title="Total"
+                            >
+                              <span class="woocommerce-Price-amount amount"
+                                ><span class="woocommerce-Price-currencySymbol"
+                                  >$</span
+                                >1,068.66</span
+                              >
+                              for 2 items
+                            </td>
+                            <td
+                              class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                              data-title="Actions"
+                            >
+                              <a href="" class="woocommerce-button button view"
+                                >View</a
                               >
                             </td>
                           </tr>
@@ -203,17 +202,11 @@ export default {
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
     var value = (100000).toLocaleString(
-   undefined, // leave undefined to use the visitor's browser 
-             // locale or a string like 'en-US' to override it.
-    { minimumFractionDigits: 2 }
-  );
-  console.log(value);
+      undefined, // leave undefined to use the visitor's browser
+      // locale or a string like 'en-US' to override it.
+      { minimumFractionDigits: 2 }
+    );
+    console.log(value);
   },
- 
 };
-
-
 </script>
-
-
-

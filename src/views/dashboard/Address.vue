@@ -14,36 +14,104 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
 
-                    <p>
+                    <strong class="">
                       The following addresses will be used on the checkout page
-                      by default.
-                    </p>
+                      by default.</strong
+                    >
 
-                    <div class="u-columns woocommerce-Addresses row addresses">
-                      <div class="u-column1 col-md-6 woocommerce-Address">
-                        <header class="woocommerce-Address-title title">
-                          <h3>Billing address</h3>
-                          <a href="billing-update.php" class="edit">Edit</a>
-                        </header>
-                        <address>
-                          Jena Benjamin<br />Oneill Mcintyre Associates<br />128
-                          East Green Old Road<br />Illum nostrud saepe<br />Quisquam
-                          est id aliq<br />Cuscatlán<br />77241<br />El Salvador
-                        </address>
-                      </div>
+                    <table
+                      class="woocommerce-orders-table rounded my-3 woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th
+                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number"
+                          >
+                            <span class="nobr">Address</span>
+                          </th>
 
-                      <div class="u-column2 col-md-6 woocommerce-Address">
-                        <header class="woocommerce-Address-title title">
-                          <h3>Shipping address</h3>
-                          <a href="shipping-update.php" class="edit">Edit</a>
-                        </header>
-                        <address>
-                          Jena Benjamin<br />Oneill Mcintyre Associates<br />128
-                          East Green Old Road<br />Illum nostrud saepe<br />Quisquam
-                          est id aliq<br />Cuscatlán<br />77241<br />El Salvador
-                        </address>
-                      </div>
-                    </div>
+                          <th
+                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total"
+                          >
+                            <span class="nobr">Total</span>
+                          </th>
+                          <th
+                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions"
+                          >
+                            <span class="nobr">Actions</span>
+                          </th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr
+                          class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
+                        >
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                            data-title="Order"
+                          >
+                            <a href=""> Billing </a>
+                          </td>
+
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                            data-title="Total"
+                          >
+                            <span class="woocommerce-Price-amount amount"
+                              ><span
+                                class="woocommerce-Price-currencySymbol"
+                              ></span
+                              >1Jena Benjamin Oneill Mcintyre Associates 128
+                              East Green Old Road</span
+                            >
+                          </td>
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                            data-title="Actions"
+                          >
+                            <router-link
+                              to="shipping"
+                              class="woocommerce-button button view"
+                              >Edit
+                            </router-link>
+                          </td>
+                        </tr>
+                        <tr
+                          class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
+                        >
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                            data-title="Order"
+                          >
+                            <a href=""> Shipping</a>
+                          </td>
+
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                            data-title="Total"
+                          >
+                            <span class="woocommerce-Price-amount amount"
+                              ><span
+                                class="woocommerce-Price-currencySymbol"
+                              ></span
+                              >1Jena Benjamin Oneill Mcintyre Associates 128
+                              East Green Old Road</span
+                            >
+                          </td>
+                          <td
+                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                            data-title="Actions"
+                          >
+                            <router-link
+                              to="shipping"
+                              class="woocommerce-button button view"
+                              >Edit
+                            </router-link>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
                 <!-- my-account-wrapper -->

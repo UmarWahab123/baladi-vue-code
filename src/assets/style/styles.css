@@ -446,17 +446,7 @@ form.submitting .wpcf7-spinner {
 	min-height: 1.5rem;
 	padding-left: 1.5rem;
 }
-.woocommerce-thankyou-order-received {
-    margin-bottom: 30px;
-    padding: 3%;
-    width: 100%;
-    border: 2px dashed var(--color-theme-success);
-    color: var(--color-theme-success);
-    text-align: center;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 1.4;
-}
+
 .job-search-wrap {
 
 	padding: 40px;
@@ -524,9 +514,7 @@ form.submitting .wpcf7-spinner {
 	max-height: 46px;
 }
 
-.share-icon {
-	transform: rotate(180deg);
-}
+
 
 .h-90 {
 	height: 90%;
@@ -536,4 +524,43 @@ form.submitting .wpcf7-spinner {
 	font-size: 0.625rem;
 	opacity: 0.6;
 	margin-bottom: 0.1875rem;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+	cursor: pointer;
+	border: none;
+}
+
+#btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+
+
+.theme-bg {
+	background-color: #2ba447 !important;
+}
+
+.map-container-2 {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
+
+.map-container-2 iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.align-item-center {
+	align-items: center;
 }

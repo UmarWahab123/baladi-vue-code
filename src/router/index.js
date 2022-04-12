@@ -82,11 +82,17 @@ const routes = [
     path: '/userdashboard',
     component: () => import('@/views/dashboard/Index.vue'),
   },
+   {
+    name: 'edit-address',
+    path: '/edit-address',
+    component: () => import('@/views/dashboard/Address.vue'),
+  },
   {
     name: 'shipping',
     path: '/shipping',
     component: () => import('@/views/dashboard/Shipping.vue'),
   },
+  
   {
     name: 'orders',
     path: '/orders',
