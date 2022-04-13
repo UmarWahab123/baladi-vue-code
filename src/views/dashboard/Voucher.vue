@@ -158,6 +158,10 @@ export default {
     };
   },
   mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
     setTimeout(() => (this.isloading = false), 1000);
   },
 };

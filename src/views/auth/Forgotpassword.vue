@@ -10,6 +10,14 @@
               Lost your password? Please enter your email address. You will
               receive a link to create a new password via email.
             </p>
+            <div class="row ml-10 mt-10">
+              <p
+                v-if="errors"
+                class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+              >
+                {{ errors }}
+              </p>
+            </div>
             <p
               class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
             >
@@ -72,11 +80,11 @@ export default {
         )
         .then((response) => {
           console.log(response.data.message);
-          //   if (response.data.status == 400) {
-          //     this.errors = response.data.message;
-          //   } else {
-          //     this.$router.push("/");
-          //   }
+          if (response.data.status == 400) {
+            this.errors = response.data.message;
+          } else {
+            this.errors = response.data.message;
+          }
         });
     },
   },

@@ -178,7 +178,11 @@
                   <i class="klbth-icon-user-1"></i>
                 </div>
                 <div class="header-addons-text">
-                  <div class="sub-text">Sign In</div>
+                  <div v-if="this.userdata.name" class="sub-text">
+                    {{ this.userdata.name }}
+                  </div>
+                  <div v-else class="sub-text">Sign In</div>
+
                   <router-link class="primary-text" to="/myaccount"
                     >Account
                   </router-link>
@@ -1685,15 +1689,21 @@
 <script>
 export default {
   data: () => ({
+    userdata: { name: "" },
     id: "",
     showmenu: "",
     results: [],
   }),
   mounted() {
+    if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.userdata.name = userInfo.name;
+    } else {
+      this.$router.push("myaccount");
+    }
     if (this.$route.name == "Home") {
       this.showmenu = "show";
     }
-    // console.log(this.$route.name);
   },
   methods: {
     menuchange: function (event) {

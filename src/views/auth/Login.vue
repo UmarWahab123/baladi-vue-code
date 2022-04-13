@@ -1,18 +1,4 @@
 <template>
-  <div class="row" v-if="error == ''">
-    <p class="alert alert-danger alert-dismissible fade show col-md-6 col-6">
-      {{ errors }}
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-        @click="closealert()"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </p>
-  </div>
   <div class="u-column1 col-md-6">
     <h2>Login</h2>
     <p
@@ -53,7 +39,16 @@
         ><span class="show-password-input"></span
       ></span>
     </p>
+    
     <p class="form-row">
+      <div class="row ml-5">
+      <p
+        v-if="errors"
+        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+      >
+        {{ errors }}
+      </p>
+    </div>
       <label
         class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme"
       >
@@ -97,9 +92,10 @@ export default {
   data() {
     return {
       formdata: {
-        email: null,
-        password: null,
+        email: "imwa5i7@gmail.com",
+        password: "imwasil",
         device: "mobile",
+        responseData: "null",
       },
       errors: "",
     };
@@ -110,11 +106,16 @@ export default {
       axios
         .post("http://baladiweb.bteamwebs.com/api/auth/login", this.formdata)
         .then((response) => {
-          // console.log(response.data.status);
-          if (response.data.status == 400) {
-            this.errors = response.data.message;
+          if (response.data.status == 200) {
+            localStorage.setItem(
+              "userInfo",
+              JSON.stringify(response.data.data.user)
+            );
+            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            console.log(userInfo);
+            this.$router.push("/userdashboard");
           } else {
-            this.$router.push("/");
+            this.errors = response.data.message;
           }
         });
     },

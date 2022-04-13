@@ -1,17 +1,5 @@
 <template>
   <div class="u-column2 col-md-6">
-    <p class="alert alert-danger alert-dismissible fade show">
-      {{ errors }}
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-        @click="closealert()"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </p>
     <h2>Register</h2>
     <p
       class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
@@ -79,6 +67,14 @@
         ><span class="show-password-input"></span
       ></span>
     </p>
+    <div class="row ml-5">
+      <p
+        v-if="errors"
+        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+      >
+        {{ errors }}
+      </p>
+    </div>
     <div class="woocommerce-privacy-policy-text">
       <p>
         Your personal data will be used to support your experience throughout
@@ -123,7 +119,7 @@ export default {
       formdata: {
         customer_type_id: 1,
         name: null,
-        phome: null,
+        phone: null,
         email: null,
         password: null,
       },

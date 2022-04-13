@@ -87,12 +87,7 @@
                             /></span>
                           </p>
                           <p
-                            class="
-                              form-row form-row-wide
-                              address-field
-                              update_totals_on_change
-                              validate-required
-                            "
+                            class="form-row form-row-wide address-field update_totals_on_change validate-required"
                             id="shipping_country_field"
                             data-priority="40"
                           >
@@ -106,10 +101,7 @@
                               ><select
                                 name="shipping_country"
                                 id="shipping_country"
-                                class="
-                                  country_to_state country_select
-                                  select2-hidden-accessible
-                                "
+                                class="country_to_state country_select select2-hidden-accessible"
                                 autocomplete="country"
                                 data-placeholder="Select a country / region…"
                                 data-label="Country / Region"
@@ -411,19 +403,12 @@
                                 <option value="ZM">Zambia</option>
                                 <option value="ZW">Zimbabwe</option></select
                               ><span
-                                class="
-                                  select2
-                                  select2-container
-                                  select2-container--default
-                                "
+                                class="select2 select2-container select2-container--default"
                                 dir="ltr"
                                 style="width: 100%"
                                 ><span class="selection"
                                   ><span
-                                    class="
-                                      select2-selection
-                                      select2-selection--single
-                                    "
+                                    class="select2-selection select2-selection--single"
                                     aria-haspopup="true"
                                     aria-expanded="false"
                                     tabindex="0"
@@ -458,12 +443,7 @@
                             >
                           </p>
                           <p
-                            class="
-                              form-row
-                              address-field
-                              validate-required
-                              form-row-wide
-                            "
+                            class="form-row address-field validate-required form-row-wide"
                             id="shipping_address_1_field"
                             data-priority="50"
                           >
@@ -510,12 +490,7 @@
                             /></span>
                           </p>
                           <p
-                            class="
-                              form-row
-                              address-field
-                              validate-required
-                              form-row-wide
-                            "
+                            class="form-row address-field validate-required form-row-wide"
                             id="shipping_city_field"
                             data-priority="70"
                             data-o_class="form-row form-row-wide address-field validate-required"
@@ -538,12 +513,7 @@
                             /></span>
                           </p>
                           <p
-                            class="
-                              form-row
-                              address-field
-                              validate-required validate-state
-                              form-row-wide
-                            "
+                            class="form-row address-field validate-required validate-state form-row-wide"
                             id="shipping_state_field"
                             data-priority="80"
                             data-o_class="form-row form-row-wide address-field validate-required validate-state"
@@ -582,19 +552,12 @@
                                 <option value="SV-UN">La Unión</option>
                                 <option value="SV-US">Usulután</option></select
                               ><span
-                                class="
-                                  select2
-                                  select2-container
-                                  select2-container--default
-                                "
+                                class="select2 select2-container select2-container--default"
                                 dir="ltr"
                                 style="width: 100%"
                                 ><span class="selection"
                                   ><span
-                                    class="
-                                      select2-selection
-                                      select2-selection--single
-                                    "
+                                    class="select2-selection select2-selection--single"
                                     aria-haspopup="true"
                                     aria-expanded="false"
                                     tabindex="0"
@@ -620,12 +583,7 @@
                             ></span>
                           </p>
                           <p
-                            class="
-                              form-row
-                              address-field
-                              validate-required validate-postcode
-                              form-row-wide
-                            "
+                            class="form-row address-field validate-required validate-postcode form-row-wide"
                             id="shipping_postcode_field"
                             data-priority="90"
                             data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
@@ -709,6 +667,11 @@ export default {
     };
   },
   mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
+    console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
   },
 };
