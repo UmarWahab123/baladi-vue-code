@@ -1,4 +1,5 @@
 <template>
+  <!-- 3rd section  -->
   <section
     class="elementor-section elementor-top-section elementor-element elementor-element-55ef817 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="55ef817"
@@ -40,9 +41,7 @@
                       Remains until the end of the offer
                     </div>
                   </div>
-                  <a
-                    href="https://klbtheme.com/machic/shop/?orderby=popularity&amp;paged=1"
-                    class="btn link"
+                  <a href="" class="btn link"
                     >View All <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
@@ -60,27 +59,12 @@
                             <div class="product-badges">
                               <span class="badge onsale">11%</span>
                             </div>
-                            <a href="#">
+                            <a href="product-details.php">
                               <div class="product-card">
-                                <div
-                                  id="slidingWindow"
-                                  ontouchstart=""
-                                  :data="imageitem"
-                                  :key="imageindex"
-                                  v-for="(imageitem, imageindex) in item.images"
-                                >
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                                    />
-                                  </div>
-                                  <div class="slidingSection">
-                                    <img
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
-                                    />
-                                  </div>
-                                </div>
+                                <img
+                                  src="/src/assets/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg"
+                                  data-hover-slides='["./src/img/products/Dairy products/dandy/dandy laban strawberry 180 ml .jpg", "./src/img/products/Dairy products/dandy/dandy laban mango 180 ml .jpg"]'
+                                />
                               </div>
                             </a>
                             <div class="product-buttons">
@@ -90,7 +74,7 @@
                               >
                                 <div class="tinv-wishlist-clear"></div>
                                 <a
-                                  @click="clickmodal(index)"
+                                  onclick="myFunctionthree()"
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
@@ -104,20 +88,18 @@
                                   Add to Wishlist
                                 </div>
                               </div>
-                              <a
-                                href="https://klbtheme.com/machic/shop/?featured=yes"
-                                class="most-comments"
+                              <a href="#?featured=yes" class="most-comments"
                                 ><img
                                   src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                   alt="featured" /></a
                               ><a
                                 href="#"
                                 class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
-                                @click="clickcomparemodal(index)"
+                                onclick="myFunctionone()"
                                 data-id="521"
                                 >Compare</a
                               ><span
-                                @click="clickbigmodal(index)"
+                                onclick="myFunction()"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
                               ></span>
@@ -187,24 +169,18 @@
                         <div class="product-footer">
                           <div class="product-footer-buttons">
                             <a
-                              href="?add-to-cart=521"
                               data-quantity="1"
                               class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                              data-product_id="521"
-                              data-product_sku="BE45VGRT"
-                              aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                              rel="nofollow"
                               ><i class="klbth-icon-shop-1"></i> Add to cart</a
                             >
                           </div>
+
                           <!-- product-footer-buttons -->
                           <div class="product-footer-details">
                             <ul>
-                              <li class="SpecHighlights-list-label">
-                                Screen Size 10.9 in
-                              </li>
-                              <li>Operating System Apple iOS</li>
-                              <li>Product Length 9.74 in</li>
+                              <li class="SpecHighlights-list-label">laban</li>
+                              <li>Fresh</li>
+                              <li>2 kg</li>
                             </ul>
                             &nbsp;
                           </div>
@@ -226,6 +202,9 @@
       </div>
     </div>
   </section>
+
+  <!-- logo slider  -->
+
   <div
     id="wishlist"
     :class="showmodal"

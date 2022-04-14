@@ -671,7 +671,7 @@ export default {
     } else {
       this.$router.push("myaccount");
     }
-    console.log(userInfo);
+    // console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
   },
 };

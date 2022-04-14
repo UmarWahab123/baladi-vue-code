@@ -6,26 +6,13 @@
     >
       <input type="hidden" value="1" v-bind="formdata.customer_type_id" />
       <label for="reg_username"
-        >Name&nbsp;<span class="required">*</span></label
+        >Username&nbsp;<span class="required">*</span></label
       >
       <input
         v-model="formdata.name"
         type="text"
         class="woocommerce-Input woocommerce-Input--text input-text"
         id="reg_username"
-      />
-    </p>
-    <p
-      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-    >
-      <label for="reg_username"
-        >Phone&nbsp;<span class="required">*</span></label
-      >
-      <input
-        v-model="formdata.phone"
-        type="text"
-        class="woocommerce-Input woocommerce-Input--text input-text"
-        name="phones"
       />
     </p>
     <p
@@ -119,7 +106,6 @@ export default {
       formdata: {
         customer_type_id: 1,
         name: null,
-        phone: null,
         email: null,
         password: null,
       },

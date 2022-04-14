@@ -475,9 +475,6 @@
                               <div
                                 class="product-card"
                                 style="position: relative"
-                                :data="imageitem"
-                                :key="imageindex"
-                                v-for="(imageitem, imageindex) in item.images"
                               >
                                 <div
                                   class="hover-slider-images-toggler"

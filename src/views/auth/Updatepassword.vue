@@ -7,8 +7,8 @@
           <div class="woocommerce">
             <div class="woocommerce-notices-wrapper"></div>
             <p>
-              Lost your password? Please enter your email address. You will
-              receive a link to create a new password via email.
+              Lost your password? Please enter your email, password and confirm
+              the password to update your password.
             </p>
             <div class="row ml-10 mt-10">
               <p
@@ -29,11 +29,33 @@
                 id="user_login"
               />
             </p>
+            <p
+              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
+            >
+              <label for="user_login">Password</label>
+              <input
+                v-model="formdata.password"
+                class="woocommerce-Input woocommerce-Input--text input-text"
+                type="text"
+                id="user_login"
+              />
+            </p>
+            <p
+              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
+            >
+              <label for="user_login">Confirm Password</label>
+              <input
+                v-model="formdata.confirm_password"
+                class="woocommerce-Input woocommerce-Input--text input-text"
+                type="text"
+                id="user_login"
+              />
+            </p>
             <div class="clear"></div>
             <p class="woocommerce-form-row form-row">
               <input type="hidden" name="wc_reset_password" value="true" />
               <button
-                @click="sendemail()"
+                @click="resetpassword()"
                 type="submit"
                 class="woocommerce-Button button"
               >
@@ -66,16 +88,18 @@ export default {
     return {
       formdata: {
         email: null,
+        password: null,
+        confirm_password: null,
       },
       errors: "",
     };
   },
   mounted() {},
   methods: {
-    sendemail() {
+    resetpassword() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/auth/forgotPassword",
+          "http://baladiweb.bteamwebs.com/api/auth/updatePassword",
           this.formdata
         )
         .then((response) => {
@@ -83,7 +107,7 @@ export default {
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
-            this.$router.push("/verifycode");
+            this.errors = response.data.message;
           }
         });
     },

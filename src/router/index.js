@@ -72,6 +72,16 @@ const routes = [
     path: '/forgot-password',
     component: () => import('@/views/auth/Forgotpassword.vue'),
   },
+   {
+    name: 'verifycode',
+    path: '/verifycode',
+    component: () => import('@/views/auth/Verifycode.vue'),
+  },
+    {
+    name: 'updatepassword',
+    path: '/updatepassword',
+    component: () => import('@/views/auth/Updatepassword.vue'),
+  },
   {
     name: 'faq',
     path: '/faq',

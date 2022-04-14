@@ -49,29 +49,18 @@
         {{ errors }}
       </p>
     </div>
-      <label
-        class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme"
-      >
-        <input
-          class="woocommerce-form__input woocommerce-form__input-checkbox"
-          name="rememberme"
-          type="checkbox"
-          id="rememberme"
-          value="forever"
-        />
-        <span>Remember me</span>
-      </label>
-      <input
-        type="hidden"
-        id="woocommerce-login-nonce"
-        name="woocommerce-login-nonce"
-        value="9096d6b682"
-      /><input
-        type="hidden"
-        name="_wp_http_referer"
-        value="/machic/my-account/?d=rtl"
-      />
-      <button
+     <div class="d-flex justify-content-between">
+        <label
+            class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+            <input class="woocommerce-form__input woocommerce-form__input-checkbox"
+                name="rememberme" type="checkbox" id="rememberme" value="forever">
+            <span>Remember me</span>
+        </label>
+            <p class="woocommerce-LostPassword lost_password">
+      <router-link to="/forgot-password">Lost your password?</router-link>
+    </p>
+    </div>
+     <button
         type="submit"
         class="woocommerce-button button woocommerce-form-login__submit"
         name="login"
@@ -81,9 +70,21 @@
         Log in
       </button>
     </p>
-    <p class="woocommerce-LostPassword lost_password">
-      <router-link to="/forgot-password">Lost your password?</router-link>
-    </p>
+
+    <p>Or Connect with</p>
+    <div class="social-share site-social colored">
+        <ul class="social-container ">
+            <li><a href="" class="facebook" target="_blank"><i
+                        class="klbth-icon-facebook"></i></a></li>
+
+            <li><a href="" class="instag" target="_blank"><i
+                        class="klbth-icon-instagram"></i></a>
+            </li>
+            <li><a href="" class="google" target="_blank"><i
+                        class="klbth-icon-google"></i></a></li>
+        </ul>
+
+    </div>
   </div>
 </template>
 <script>

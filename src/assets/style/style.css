@@ -1729,7 +1729,6 @@ label {
 
 .my-account-page label.woocommerce-form-login__rememberme {
     display: block;
-    width: 100%;
     margin-bottom: 1rem;
 }
 
@@ -3737,7 +3736,7 @@ input::-webkit-inner-spin-button {
 }
 
 .bg-coupon-1 {
-    background: #ff9816;
+    /* background: #ff9816; */
     background-image: url('../img/icon/Group 7290.png');
 }
 
@@ -3750,8 +3749,6 @@ input::-webkit-inner-spin-button {
     /* background: #ff9816; */
     background-image: url('../img/icon/Group 7292.png');
 }
-
-
 
 
 .l-bg-orange-dark {
