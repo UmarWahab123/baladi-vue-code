@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-collaterals">
+  <div class="cart-collaterals border shadow">
     <div class="cart_totals">
       <h2>Cart totals</h2>
 
@@ -361,12 +361,7 @@
                   </p>
 
                   <p
-                    class="
-                      form-row
-                      validate-required
-                      form-row-wide
-                      address-field
-                    "
+                    class="form-row validate-required form-row-wide address-field"
                     id="calc_shipping_state_field"
                   >
                     <span>
@@ -437,12 +432,7 @@
                   </p>
 
                   <p
-                    class="
-                      form-row
-                      validate-required
-                      form-row-wide
-                      address-field
-                    "
+                    class="form-row validate-required form-row-wide address-field"
                     id="calc_shipping_city_field"
                   >
                     <input
@@ -457,12 +447,7 @@
                   </p>
 
                   <p
-                    class="
-                      form-row
-                      validate-required
-                      form-row-wide
-                      address-field
-                    "
+                    class="form-row validate-required form-row-wide address-field"
                     id="calc_shipping_postcode_field"
                   >
                     <input
@@ -527,7 +512,8 @@
       </div>
     </div>
   </div>
-</template><script>
+</template>
+<script>
 export default {
   data: () => ({
     id: "",

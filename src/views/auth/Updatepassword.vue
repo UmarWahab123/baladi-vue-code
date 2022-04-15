@@ -82,6 +82,8 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
+import.meta.env.VITE_API_KEY;
+
 import axios from "axios";
 export default {
   data() {
@@ -99,7 +101,7 @@ export default {
     resetpassword() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/auth/updatePassword",
+          import.meta.env.VITE_API_URL + "/api/auth/updatePassword",
           this.formdata
         )
         .then((response) => {

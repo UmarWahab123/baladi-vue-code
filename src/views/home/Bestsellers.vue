@@ -1380,6 +1380,7 @@ img {
 </style>
 
 <script>
+import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({
@@ -1393,7 +1394,7 @@ export default {
   }),
   mounted() {
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/home/topsellers")
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/topsellers")
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);

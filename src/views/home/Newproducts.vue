@@ -1399,6 +1399,8 @@
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
+import.meta.env.VITE_API_KEY;
+
 export default {
   components: { TheLoader },
   data() {
@@ -1412,21 +1414,21 @@ export default {
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/home/trendingproducts")
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/trendingproducts")
       .then((response) => {
         this.trends = response.data.data;
         // console.log(this.trends);
       })
       .catch((error) => {});
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/home/bestsellers")
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/bestsellers")
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);
       })
       .catch((error) => {});
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/home/newarrivals")
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/newarrivals")
       .then((response) => {
         this.arrival = response.data.data;
         // console.log(this.arrival);

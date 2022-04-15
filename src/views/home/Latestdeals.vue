@@ -532,6 +532,7 @@
   </section>
 </template>
 <script>
+import.meta.env.VITE_API_KEY;
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
 export default {
@@ -545,7 +546,7 @@ export default {
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/home/hotdeals")
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/hotdeals")
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);
