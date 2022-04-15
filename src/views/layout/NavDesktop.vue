@@ -1698,8 +1698,6 @@ export default {
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.userdata.name = userInfo.name;
-    } else {
-      this.$router.push("myaccount");
     }
     if (this.$route.name == "Home") {
       this.showmenu = "show";
