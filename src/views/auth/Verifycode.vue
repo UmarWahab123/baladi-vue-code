@@ -7,7 +7,7 @@
           <div class="woocommerce">
             <div class="woocommerce-notices-wrapper"></div>
             <p>
-              Lost your password? Please enter your email address. You will
+              Please enter email and verify your password reset code. You will
               receive a link to create a new password via email.
             </p>
             <div class="row ml-10 mt-10">
@@ -29,15 +29,26 @@
                 id="user_login"
               />
             </p>
+            <p
+              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
+            >
+              <label for="user_login">Enter Code</label>
+              <input
+                v-model="formdata.code"
+                class="woocommerce-Input woocommerce-Input--text input-text"
+                type="text"
+                id="user_login"
+              />
+            </p>
             <div class="clear"></div>
             <p class="woocommerce-form-row form-row">
               <input type="hidden" name="wc_reset_password" value="true" />
               <button
-                @click="sendemail()"
+                @click="submit()"
                 type="submit"
                 class="woocommerce-Button button"
               >
-                Reset password
+                Submit
               </button>
             </p>
             <input
@@ -66,16 +77,17 @@ export default {
     return {
       formdata: {
         email: null,
+        code: null,
       },
       errors: "",
     };
   },
   mounted() {},
   methods: {
-    sendemail() {
+    submit() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/auth/forgotPassword",
+          "http://baladiweb.bteamwebs.com/api/auth/verifyCode",
           this.formdata
         )
         .then((response) => {
@@ -83,7 +95,7 @@ export default {
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
-            this.$router.push("/verifycode");
+            this.$router.push("/updatepassword");
           }
         });
     },

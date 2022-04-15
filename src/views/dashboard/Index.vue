@@ -15,8 +15,9 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <p>
-                      Hello <strong>Jena Benjamin</strong> (not
-                      <strong>Jena Benjamin</strong>?
+                      Hello <strong>{{ this.userdata }}</strong> (not
+                      <strong>{{ this.userdata }}</strong
+                      >?
                       <a
                         href="https://klbtheme.com/machic/my-account/customer-logout/?_wpnonce=9691dc2191"
                         >Log out</a
@@ -25,12 +26,14 @@
 
                     <p>
                       From your account dashboard you can view your
-                      <a href="order-list.php">recent orders</a>, manage your
-                      <a href="edit-address.php"
-                        >shipping and billing addresses</a
+
+                      <router-link to="/orders">recent orders</router-link>,
+                      manage your
+                      <router-link to="/edit-address"
+                        >shipping and billing addresses</router-link
                       >, and
-                      <a href="account-setting.php"
-                        >edit your password and account details</a
+                      <router-link to="/account"
+                        >edit your password and account details</router-link
                       >.
                     </p>
                   </div>
@@ -64,10 +67,18 @@ export default {
   components: { TheLoader },
   data() {
     return {
+      userdata: { name: "" },
       isloading: true,
     };
   },
   mounted() {
+    if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.userdata = userInfo.name;
+      console.log(this.userdata);
+    } else {
+      this.$router.push("myaccount");
+    }
     setTimeout(() => (this.isloading = false), 1000);
   },
 };

@@ -72,6 +72,16 @@ const routes = [
     path: '/forgot-password',
     component: () => import('@/views/auth/Forgotpassword.vue'),
   },
+   {
+    name: 'verifycode',
+    path: '/verifycode',
+    component: () => import('@/views/auth/Verifycode.vue'),
+  },
+    {
+    name: 'updatepassword',
+    path: '/updatepassword',
+    component: () => import('@/views/auth/Updatepassword.vue'),
+  },
   {
     name: 'faq',
     path: '/faq',
@@ -222,14 +232,8 @@ const routes = [
     name: 'order-track2',
     path: '/order-track2',
     component: () => import('@/views/tracking/order-track2.vue'),
-  },
-      {
-    name: 'testpost',
-    path: '/testpost',
-    component: () => import('@/views/home/postrequestapi.vue'),
-  },
+  },  
 ];
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,

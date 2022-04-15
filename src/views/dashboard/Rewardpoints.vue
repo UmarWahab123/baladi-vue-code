@@ -79,11 +79,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -103,12 +99,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Expiration</h6>
@@ -119,13 +110,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      btn
-                                      text-white
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
                                     <div>Redeem 100 Points</div>
@@ -138,11 +123,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -162,12 +143,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Expiration</h6>
@@ -178,13 +154,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      btn
-                                      text-white
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
                                     <div>Redeem 100 Points</div>
@@ -197,11 +167,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -221,12 +187,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Expiration</h6>
@@ -237,13 +198,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      btn
-                                      text-white
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
                                     <div>Redeem 100 Points</div>
@@ -264,11 +219,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -288,12 +239,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Date</h6>
@@ -304,11 +250,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div></div>
                                     <div>Redeemed 100 Points</div>
@@ -321,11 +263,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -345,12 +283,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Date</h6>
@@ -361,11 +294,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div></div>
                                     <div>Redeemed 100 Points</div>
@@ -378,11 +307,7 @@
                               >
                                 <div class="py-3 py-md-3 border rounded shadow">
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
                                       <h6 class="">20% off on next order</h6>
@@ -402,12 +327,7 @@
                                   </div>
                                   <hr class="my-2" />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                      div2
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
                                       <h6 class="">Date</h6>
@@ -418,11 +338,7 @@
                                   </div>
                                   <hr />
                                   <div
-                                    class="
-                                      d-flex
-                                      justify-content-between
-                                      mx-3 mx-md-4
-                                    "
+                                    class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div></div>
                                     <div>Redeemed 100 Points</div>
@@ -474,6 +390,10 @@ export default {
     isloading: true,
   }),
   mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
     this.home = "active";
     this.showhome = "active show";
     setTimeout(() => (this.isloading = false), 1000);

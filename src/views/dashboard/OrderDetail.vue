@@ -168,3 +168,21 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>
+<script>
+import TheLoader from "../Loader/TheLoader.vue";
+export default {
+  components: { TheLoader },
+  data() {
+    return {
+      userdata: { name: "" },
+      isloading: true,
+    };
+  },
+  mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
+  },
+};
+</script>

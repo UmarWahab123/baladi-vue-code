@@ -66,10 +66,7 @@
         <li
           class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout"
         >
-          <a
-            href="https://klbtheme.com/machic/my-account/customer-logout/?_wpnonce=9691dc2191"
-            >Logout</a
-          >
+          <a @click="logout()" href="javascript:void(0);">Logout</a>
         </li>
       </ul>
     </nav>
@@ -80,4 +77,28 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+<script>
+import TheLoader from "../Loader/TheLoader.vue";
+export default {
+  components: { TheLoader },
+  data() {
+    return {
+      isloading: true,
+    };
+  },
+  mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
+    setTimeout(() => (this.isloading = false), 1000);
+  },
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push("/myaccount");
+    },
+  },
+};
 </script>

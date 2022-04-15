@@ -279,6 +279,10 @@ export default {
     isloading: true,
   }),
   mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
     this.visa = "active";
     this.showvisa = "active show";
     setTimeout(() => (this.isloading = false), 1000);

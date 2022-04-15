@@ -1,43 +1,18 @@
 <template>
   <div class="u-column2 col-md-6">
-    <p class="alert alert-danger alert-dismissible fade show">
-      {{ errors }}
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-        @click="closealert()"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </p>
     <h2>Register</h2>
     <p
       class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
     >
       <input type="hidden" value="1" v-bind="formdata.customer_type_id" />
       <label for="reg_username"
-        >Name&nbsp;<span class="required">*</span></label
+        >Username&nbsp;<span class="required">*</span></label
       >
       <input
         v-model="formdata.name"
         type="text"
         class="woocommerce-Input woocommerce-Input--text input-text"
         id="reg_username"
-      />
-    </p>
-    <p
-      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-    >
-      <label for="reg_username"
-        >Phone&nbsp;<span class="required">*</span></label
-      >
-      <input
-        v-model="formdata.phone"
-        type="text"
-        class="woocommerce-Input woocommerce-Input--text input-text"
-        name="phones"
       />
     </p>
     <p
@@ -79,6 +54,14 @@
         ><span class="show-password-input"></span
       ></span>
     </p>
+    <div class="row ml-5">
+      <p
+        v-if="errors"
+        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+      >
+        {{ errors }}
+      </p>
+    </div>
     <div class="woocommerce-privacy-policy-text">
       <p>
         Your personal data will be used to support your experience throughout
@@ -123,7 +106,6 @@ export default {
       formdata: {
         customer_type_id: 1,
         name: null,
-        phome: null,
         email: null,
         password: null,
       },

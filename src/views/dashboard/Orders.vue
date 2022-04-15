@@ -200,6 +200,10 @@ export default {
     };
   },
   mounted() {
+    if (localStorage.userInfo != null) {
+    } else {
+      this.$router.push("myaccount");
+    }
     setTimeout(() => (this.isloading = false), 1000);
     var value = (100000).toLocaleString(
       undefined, // leave undefined to use the visitor's browser
