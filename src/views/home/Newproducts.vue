@@ -279,7 +279,7 @@
                               <a
                                 href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
                                 ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
+                                  :src="this.url + trend.images[2].photo"
                                   alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
                               /></a>
                             </div>
@@ -538,7 +538,7 @@
                                   ></div>
                                 </div>
                                 <img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
+                                  :src="this.url + item.images[2].photo"
                                   class="hover-slider-init"
                                   data-options='{"touch":"end","preloadImages": true }'
                                 />
@@ -1260,7 +1260,7 @@
                                   ></div>
                                 </div>
                                 <img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
+                                  :src="this.url + items.images[0].photo"
                                   class="hover-slider-init"
                                   data-options='{"touch":"end","preloadImages": true }'
                                 />
@@ -1406,6 +1406,7 @@ export default {
   data() {
     return {
       isloading: true,
+      url: import.meta.env.VITE_API_URL + "/storage/",
       results: [],
       arrival: [],
       trends: [],

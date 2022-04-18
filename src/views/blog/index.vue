@@ -7,26 +7,19 @@
         <div class="container">
           <div class="row content-wrapper sidebar-right">
             <div class="col col-12 col-lg-9 content-primary">
-              <div class="blog-posts">
+              <div
+                :data="item"
+                :key="indextr"
+                v-for="(item, indextr) in results"
+                class="blog-posts"
+              >
                 <article
                   id="post-2117"
-                  class="
-                    klb-article
-                    post post-2117
-                    type-post
-                    status-publish
-                    format-standard
-                    has-post-thumbnail
-                    hentry
-                    category-watches
-                    tag-klbtheme tag-themeforest
-                  "
+                  class="klb-article post post-2117 type-post status-publish format-standard has-post-thumbnail hentry category-watches tag-klbtheme tag-themeforest"
                 >
                   <div class="entry-post-header">
                     <h2 class="entry-title">
-                      <a href="#"
-                        >But I must explain to you how all this mistaken idea</a
-                      >
+                      <a href="#">{{ item.title }}</a>
                     </h2>
                     <div class="entry-footer">
                       <div class="entry-meta">
@@ -51,20 +44,17 @@
                   <figure class="entry-media">
                     <a href="#"
                       ><img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-1.jpg"
+                        :src="this.url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
                     /></a>
                   </figure>
                   <div class="entry-content">
                     <div class="klb-post">
                       <p>
-                        Donec rhoncus quis diam sit amet faucibus. Vivamus
-                        pellentesque, sem sed convallis ultricies, ante eros
-                        laoreet libero, vitae suscipit lorem turpis sit amet
-                        lectus. Quisque egestas lorem ut mauris ultrices, vitae
-                        sollicitudin quam facilisis. Vivamus rutrum urna non
-                        ligula tempor aliquet. Fusce tincidunt est magna, id
-                        malesuada massa imperdiet ut. Nunc non nisi urna. Nam
+                        <span
+                          class="content-color"
+                          v-html="item.description.substring(0, 500) + ''"
+                        ></span>
                       </p>
                       <div class="klb-readmore entry-button">
                         <router-link class="btn read-more" to="/blog-detail"
@@ -74,134 +64,7 @@
                     </div>
                   </div>
                 </article>
-                <article
-                  id="post-2115"
-                  class="
-                    klb-article
-                    post post-2115
-                    type-post
-                    status-publish
-                    format-standard
-                    has-post-thumbnail
-                    hentry
-                    category-camera
-                    tag-envato tag-photo
-                  "
-                >
-                  <div class="entry-post-header">
-                    <h2 class="entry-title">
-                      <a href="#">The Problem With Typefaces on the Web</a>
-                    </h2>
-                    <div class="entry-footer">
-                      <div class="entry-meta">
-                        <span class="meta-item entry-published"
-                          ><a href="#"
-                            ><i class="klbth-icon-clock-outline"></i> October 9,
-                            2021</a
-                          ></span
-                        >
-                        <span class="meta-item category"
-                          ><i class="klbth-icon-bookmark-empty"></i>
-                          <a href="#/" rel="category tag">Camera</a></span
-                        >
-                        <span class="meta-item entry-tags"
-                          ><i class="klbth-icon-cinema"></i
-                          ><a href="#" rel="tag">envato</a>,
-                          <a href="#" rel="tag">photo</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <figure class="entry-media">
-                    <a href="#"
-                      ><img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-2.jpg"
-                        alt="The Problem With Typefaces on the Web"
-                    /></a>
-                  </figure>
-                  <div class="entry-content">
-                    <div class="klb-post">
-                      <p>
-                        Donec rhoncus quis diam sit amet faucibus. Vivamus
-                        pellentesque, sem sed convallis ultricies, ante eros
-                        laoreet libero, vitae suscipit lorem turpis sit amet
-                        lectus. Quisque egestas lorem ut mauris ultrices, vitae
-                        sollicitudin quam facilisis. Vivamus rutrum urna non
-                        ligula tempor aliquet. Fusce tincidunt est magna, id
-                        malesuada massa imperdiet ut. Nunc non nisi urna. Nam
-                      </p>
-                      <div class="klb-readmore entry-button">
-                        <router-link class="btn read-more" to="/blog-detail"
-                          >Read More
-                        </router-link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  id="post-2110"
-                  class="
-                    klb-article
-                    post post-2110
-                    type-post
-                    status-publish
-                    format-standard
-                    has-post-thumbnail
-                    hentry
-                    category-tablet
-                    tag-ipad tag-pro
-                  "
-                >
-                  <div class="entry-post-header">
-                    <h2 class="entry-title">
-                      <a href="#"
-                        >English Breakfast Tea With Tasty Donut Desserts</a
-                      >
-                    </h2>
-                    <div class="entry-footer">
-                      <div class="entry-meta">
-                        <span class="meta-item entry-published"
-                          ><a href="#"
-                            ><i class="klbth-icon-clock-outline"></i> October 9,
-                            2021</a
-                          ></span
-                        >
-                        <span class="meta-item category"
-                          ><i class="klbth-icon-bookmark-empty"></i>
-                          <a href="#" rel="category tag">Tablet</a></span
-                        >
-                        <span class="meta-item entry-tags"
-                          ><i class="klbth-icon-cinema"></i
-                          ><a href="#" rel="tag">iPad</a>,
-                          <a href="#" rel="tag">pro</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <figure class="entry-media">
-                    <a href="#"
-                      ><img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-3.jpg"
-                        alt="English Breakfast Tea With Tasty Donut Desserts"
-                    /></a>
-                  </figure>
-                  <div class="entry-content">
-                    <div class="klb-post">
-                      <p>
-                        Donec rhoncus quis diam sit amet faucibus. Vivamus
-                        pellentesque, sem sed convallis ultricies, ante eros
-                        laoreet libero, vitae suscipit lorem turpis sit amet
-                        lectus. Quisque egestas lorem ut mauris ultrices, vitae
-                        sollicitudin quam facilisis. Vivamus rutrum urna non
-                        ligula tempor aliquet. Fusce tincidunt est magna, id
-                        malesuada massa imperdiet ut. Nunc non nisi urna. Nam
-                      </p>
-                      <div class="klb-readmore entry-button">
-                        <a class="btn read-more" href="#">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+
                 <div class="col col-12">
                   <div class="site-pagination">
                     <ul class="page-numbers">
@@ -419,4 +282,23 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+<script>
+import.meta.env.VITE_API_KEY;
+import axios from "axios";
+export default {
+  data: () => ({
+    url: import.meta.env.VITE_API_URL + "/storage/",
+    results: [],
+  }),
+  mounted() {
+    axios
+      .get(import.meta.env.VITE_API_URL + "/api/web/blog"/.$id)
+      .then((response) => {
+        this.results = response.data.data;
+        console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
 </script>

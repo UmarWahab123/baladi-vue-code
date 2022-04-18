@@ -10,17 +10,7 @@
               <div class="single-post">
                 <article
                   id="post-2117"
-                  class="
-                    klb-article
-                    post-2117 post
-                    type-post
-                    status-publish
-                    format-standard
-                    has-post-thumbnail
-                    hentry
-                    category-watches
-                    tag-klbtheme tag-themeforest
-                  "
+                  class="klb-article post-2117 post type-post status-publish format-standard has-post-thumbnail hentry category-watches tag-klbtheme tag-themeforest"
                 >
                   <div class="entry-post-header">
                     <h2 class="entry-title">
@@ -150,15 +140,7 @@
                   </h5>
                   <ol class="comment-list">
                     <li
-                      class="
-                        comment
-                        byuser
-                        comment-author-sinan
-                        bypostauthor
-                        even
-                        thread-even
-                        depth-1
-                      "
+                      class="comment byuser comment-author-sinan bypostauthor even thread-even depth-1"
                       id="comment-5"
                     >
                       <div id="div-comment-5" class="comment-body">
