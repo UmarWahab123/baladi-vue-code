@@ -57,7 +57,12 @@
                         ></span>
                       </p>
                       <div class="klb-readmore entry-button">
-                        <router-link class="btn read-more" to="/blog-detail"
+                        <router-link
+                          class="btn read-more"
+                          :to="{
+                            name: 'blog-detail',
+                            params: { id: item.id },
+                          }"
                           >Read More
                         </router-link>
                       </div>
@@ -293,7 +298,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/blog"/.$id)
+      .get(import.meta.env.VITE_API_URL + "/api/web/blog")
       .then((response) => {
         this.results = response.data.data;
         console.log(this.results);

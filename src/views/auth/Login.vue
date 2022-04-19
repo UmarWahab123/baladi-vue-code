@@ -79,8 +79,27 @@
       >
         Log in
       </button>
-
-      <p>Or Connect with</p>
+      <a href="account-setting.php" class="ml-5">
+        <input
+          type="hidden"
+          id="woocommerce-login-nonce"
+          name="woocommerce-login-nonce"
+          value="9096d6b682"
+        /><input
+          type="hidden"
+          name="_wp_http_referer"
+          value="/machic/my-account/?d=rtl"
+        />
+        <button
+          type="submit"
+          class="woocommerce-button bg-dark button woocommerce-form-login__submit"
+          name="login"
+          value="Log in"
+        >
+          Continue as Guest
+        </button></a
+      >
+      <p class="mt-3">Or Connect with</p>
       <div class="social-share site-social colored">
         <ul class="social-container">
           <li>
@@ -97,6 +116,11 @@
           <li>
             <a href="" class="google" target="_blank"
               ><i class="klbth-icon-google"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" class="bg-secondary" target="_blank"
+              ><i class="fa fa-apple"></i
             ></a>
           </li>
         </ul>

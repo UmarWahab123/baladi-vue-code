@@ -78,7 +78,7 @@
                         <div class="banner-content">
                           <div class="banner-content-wrapper">
                             <h6 class="entry-subtitle style-3">
-                              Weekend Discount
+                              Weekend Discount2
                             </h6>
                             <h3 class="entry-title">
                               The world’s largest
@@ -117,7 +117,7 @@
                         <div class="banner-content">
                           <div class="banner-content-wrapper">
                             <h6 class="entry-subtitle style-3">
-                              Weekend Discount
+                              Weekend Discount2
                             </h6>
                             <h3 class="entry-title">
                               Enhance Your
@@ -137,7 +137,7 @@
                         </div>
                         <div class="banner-image">
                           <Splide :options="{ rewind: true, autoplay: true }">
-                            <SplideSlide>
+                            <!-- <SplideSlide>
                               <img
                                 src="@/assets/img/slider-banner-1.jpg"
                                 alt="Sample 1"
@@ -148,8 +148,12 @@
                                 src="@/assets/img/slider-banner-2.jpg"
                                 alt="Sample 2"
                               />
-                            </SplideSlide>
-                            <SplideSlide>
+                            </SplideSlide> -->
+                            <SplideSlide
+                              :data="item"
+                              :key="indextr"
+                              v-for="(item, indextr) in results"
+                            >
                               <img
                                 src="@/assets/img/slider-banner-3.jpg"
                                 alt="Sample 2"
@@ -173,8 +177,22 @@
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import { defineComponent } from "vue";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-
+import.meta.env.VITE_API_KEY;
+import axios from "axios";
 export default defineComponent({
   components: { Splide, SplideSlide },
+  data: () => ({
+    url: import.meta.env.VITE_API_URL + "/storage/",
+    results: [],
+  }),
+  mounted() {
+    axios
+      .get(import.meta.env.VITE_API_URL + "/api/web/home/mainslider")
+      .then((response) => {
+        this.results = response.data.data;
+        // console.log(this.results);
+      })
+      .catch((error) => {});
+  },
 });
 </script>

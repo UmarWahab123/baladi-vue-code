@@ -15,39 +15,19 @@
     </div>
   </div>
   <section
-    class="
-      elementor-section
-      elementor-top-section
-      elementor-element
-      elementor-element-c6d108d
-      elementor-section-boxed
-      elementor-section-height-default
-      elementor-section-height-default
-    "
+    class="elementor-section elementor-top-section elementor-element elementor-element-c6d108d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="c6d108d"
     data-element_type="section"
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="
-          elementor-column
-          col-md-3
-          elementor-top-column
-          elementor-element
-          elementor-element-b922ff9
-          elementor-hidden-tablet
-        "
+        class="elementor-column col-md-3 elementor-top-column elementor-element elementor-element-b922ff9 elementor-hidden-tablet"
         data-id="b922ff9"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="
-              elementor-element
-              elementor-element-ea676eb
-              elementor-widget
-              elementor-widget-machic-counter-product2
-            "
+            class="elementor-element elementor-element-ea676eb elementor-widget elementor-widget-machic-counter-product2"
             data-id="ea676eb"
             data-element_type="widget"
             data-widget_type="machic-counter-product2.default"
@@ -92,12 +72,7 @@
                         /></a>
                         <div class="product-buttons">
                           <div
-                            class="
-                              tinv-wraper
-                              woocommerce
-                              tinv-wishlist
-                              tinvwl-shortcode-add-to-cart
-                            "
+                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
                             data-product_id="400"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -105,11 +80,7 @@
                               role="button"
                               tabindex="0"
                               aria-label="Add to Wishlist"
-                              class="
-                                tinvwl_add_to_wishlist_button
-                                tinvwl-icon-heart
-                                tinvwl-position-after
-                              "
+                              class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
                               data-tinv-wl-list="[]"
                               data-tinv-wl-product="400"
                               data-tinv-wl-productvariation="0"
@@ -208,22 +179,13 @@
         </div>
       </div>
       <div
-        class="
-          elementor-column
-          col-md-9
-          elementor-top-column elementor-element elementor-element-ace6d3a
-        "
+        class="elementor-column col-md-9 elementor-top-column elementor-element elementor-element-ace6d3a"
         data-id="ace6d3a"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="
-              elementor-element
-              elementor-element-eb5a69d
-              elementor-widget
-              elementor-widget-machic-product-grid
-            "
+            class="elementor-element elementor-element-eb5a69d elementor-widget elementor-widget-machic-product-grid"
             data-id="eb5a69d"
             data-element_type="widget"
             data-widget_type="machic-product-grid.default"
@@ -242,19 +204,14 @@
                             <a href="#">
                               <div class="product-card">
                                 <img
-                                  src="/src/assets/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg"
+                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
                                   data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
                                 />
                               </div>
                             </a>
                             <div class="product-buttons">
                               <div
-                                class="
-                                  tinv-wraper
-                                  woocommerce
-                                  tinv-wishlist
-                                  tinvwl-shortcode-add-to-cart
-                                "
+                                class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
                                 data-product_id="521"
                               >
                                 <div class="tinv-wishlist-clear"></div>
@@ -262,12 +219,7 @@
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
-                                  class="
-                                    tinvwl_add_to_wishlist_button
-                                    tinvwl-icon-heart
-                                    tinvwl-position-after
-                                    tinvwl-product-in-list
-                                  "
+                                  class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after tinvwl-product-in-list"
                                   data-tinv-wl-list='{"423":{"ID":423,"title":"","status":"share","share_key":"f30715","in":[0]}}'
                                   data-tinv-wl-product="521"
                                   data-tinv-wl-productvariation="0"
@@ -289,12 +241,7 @@
                                   alt="featured" /></a
                               ><a
                                 href="#"
-                                class="
-                                  woosc-btn
-                                  woosc-btn-521
-                                  woosc-btn-added
-                                  woosc-added
-                                "
+                                class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
                                 data-id="521"
                                 >Compare</a
                               ><a
@@ -349,12 +296,7 @@
                               ><a
                                 href="?add-to-cart=521"
                                 data-quantity="1"
-                                class="
-                                  button
-                                  product_type_simple
-                                  add_to_cart_button
-                                  ajax_add_to_cart
-                                "
+                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
                                 data-product_id="521"
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"

@@ -310,28 +310,13 @@
                 </div>
                 <div class="d-flex">
                   <div class="mx-5 ml-0">
-                    <span>Android</span>
                     <div class="app-buttons mt-1 mx-2 ml-0">
                       <a
                         href="https://play.google.com/store"
                         class="google-play"
-                      >
-                      </a>
+                      ></a>
                     </div>
-                    <a href="https://play.google.com/store" class="google-play">
-                      <img src="/src/assets/img/qr-code.png" alt="app" />
-                    </a>
-                  </div>
-                  <div class="mx-5">
-                    <span>IOS</span>
-                    <div class="app-buttons mt-1">
-                      <a
-                        href="https://play.google.com/store"
-                        class="google-play"
-                      >
-                        <img src="/src/assets/img/qr-code.png" alt="app" />
-                      </a>
-                    </div>
+                    <img src="/src/assets/img/qr-code.png" alt="app" />
                   </div>
                 </div>
               </div>

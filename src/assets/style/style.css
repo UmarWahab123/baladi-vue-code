@@ -1729,6 +1729,7 @@ label {
 
 .my-account-page label.woocommerce-form-login__rememberme {
     display: block;
+    /* width: 100%; */
     margin-bottom: 1rem;
 }
 
@@ -3751,6 +3752,8 @@ input::-webkit-inner-spin-button {
 }
 
 
+
+
 .l-bg-orange-dark {
     color: #fff;
     background-image: url('../img/WhatsApp\ Image\ 2022-03-31\ at\ 12.56.24\ PM.jpeg');
@@ -3956,4 +3959,9 @@ input.check-toggle-round-flat:checked+label:after {
     font-weight: 600;
     font-size: 22px;
     line-height: 1.4;
+}
+
+.btn-check:focus+.btn-outline-dark,
+.btn-outline-dark:focus {
+    box-shadow: 0 0 0 0.1rem rgb(33 37 41 / 10%) !important;
 }

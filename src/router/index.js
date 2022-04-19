@@ -155,7 +155,7 @@ const routes = [
   },
   {
     name: 'blog-detail',
-    path: '/blog-detail',
+    path: '/blog-detail/:id?',
     component: () => import('@/views/blog/blog-detail.vue'),
   },
   {
