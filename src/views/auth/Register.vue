@@ -23,7 +23,7 @@
         class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
       >
         <label for="reg_username"
-          >Username&nbsp;<span class="required">*</span></label
+          >Phone&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.phone"

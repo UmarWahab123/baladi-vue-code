@@ -45,7 +45,7 @@
 </template>
 <script setup>
 setTimeout(function () {
-  document.getElementById("menu-sidebar-menu-1").classList.add("show");
+  // document.getElementById("menu-sidebar-menu-1").classList.add("show");
 }, 500);
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";

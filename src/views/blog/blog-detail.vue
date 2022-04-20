@@ -21,6 +21,7 @@
                     <h2 class="entry-title">
                       <a href="#">{{ item.title }}</a>
                     </h2>
+
                     <div class="entry-footer">
                       <div class="entry-meta">
                         <span class="meta-item entry-published"
@@ -69,7 +70,13 @@
                       class="comment byuser comment-author-sinan bypostauthor even thread-even depth-1"
                       id="comment-5"
                     >
-                      <div id="div-comment-5" class="comment-body">
+                      <div
+                        :data="comment"
+                        :key="indcomments"
+                        v-for="(comment, indcomments) in item.comments"
+                        id="div-comment-5"
+                        class="comment-body"
+                      >
                         <div class="comment-avatar">
                           <div class="comment-author vcard">
                             <img
@@ -88,11 +95,7 @@
                           </div>
                           <div class="klb-post">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Quis ipsum suspendisse
-                              ultrices gravida. Risus commodo viverra maecenas
-                              accumsan lacus vel facilisis.
+                              {{ comment.comment }}
                             </p>
                           </div>
                           <div class="reply">
@@ -176,121 +179,60 @@
                           ></small
                         >
                       </h3>
-                      <form
-                        action=""
-                        method="post"
-                        id="commentform"
-                        class="comment-form"
+
+                      <p class="comment-notes">
+                        <span id="email-notes"
+                          >Your email address will not be published.</span
+                        >
+                        <span class="required-field-message" aria-hidden="true"
+                          >Required fields are marked
+                          <span class="required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
+                      </p>
+                      <input
+                        type="hidden"
+                        value="1"
+                        v-bind="formdata.blog_id"
+                      />
+                      <input
+                        type="hidden"
+                        value="1"
+                        v-bind="formdata.customer_id"
+                      />
+
+                      <p class="comment-form-comment">
+                        <label for="comment"
+                          >Comment
+                          <span class="required" aria-hidden="true"
+                            >*</span
+                          ></label
+                        >
+                        <textarea
+                          id="comment"
+                          v-model="formdata.comment"
+                          cols="45"
+                          rows="8"
+                          maxlength="65525"
+                          required="required"
+                        ></textarea>
+                      </p>
+                      <p
+                        v-if="errors"
+                        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
                       >
-                        <p class="comment-notes">
-                          <span id="email-notes"
-                            >Your email address will not be published.</span
-                          >
-                          <span
-                            class="required-field-message"
-                            aria-hidden="true"
-                            >Required fields are marked
-                            <span class="required" aria-hidden="true"
-                              >*</span
-                            ></span
-                          >
-                        </p>
-                        <p class="comment-form-comment">
-                          <label for="comment"
-                            >Comment
-                            <span class="required" aria-hidden="true"
-                              >*</span
-                            ></label
-                          >
-                          <textarea
-                            id="comment"
-                            name="comment"
-                            cols="45"
-                            rows="8"
-                            maxlength="65525"
-                            required="required"
-                          ></textarea>
-                        </p>
-                        <p class="comment-form-author">
-                          <label for="author"
-                            >Name
-                            <span class="required" aria-hidden="true"
-                              >*</span
-                            ></label
-                          >
-                          <input
-                            id="author"
-                            name="author"
-                            type="text"
-                            value=""
-                            size="30"
-                            maxlength="245"
-                            required="required"
-                          />
-                        </p>
-                        <p class="comment-form-email">
-                          <label for="email"
-                            >Email
-                            <span class="required" aria-hidden="true"
-                              >*</span
-                            ></label
-                          >
-                          <input
-                            id="email"
-                            name="email"
-                            type="text"
-                            value=""
-                            size="30"
-                            maxlength="100"
-                            aria-describedby="email-notes"
-                            required="required"
-                          />
-                        </p>
-                        <p class="comment-form-url">
-                          <label for="url">Website</label>
-                          <input
-                            id="url"
-                            name="url"
-                            type="text"
-                            value=""
-                            size="30"
-                            maxlength="200"
-                          />
-                        </p>
-                        <p class="comment-form-cookies-consent">
-                          <input
-                            id="wp-comment-cookies-consent"
-                            name="wp-comment-cookies-consent"
-                            type="checkbox"
-                            value="yes"
-                          />
-                          <label for="wp-comment-cookies-consent"
-                            >Save my name, email, and website in this browser
-                            for the next time I comment.</label
-                          >
-                        </p>
-                        <p class="form-submit">
-                          <input
-                            name="submit"
-                            type="submit"
-                            id="submit"
-                            class="submit"
-                            value="Post Comment"
-                          />
-                          <input
-                            type="hidden"
-                            name="comment_post_ID"
-                            value="2117"
-                            id="comment_post_ID"
-                          />
-                          <input
-                            type="hidden"
-                            name="comment_parent"
-                            id="comment_parent"
-                            value="0"
-                          />
-                        </p>
-                      </form>
+                        {{ errors }}
+                      </p>
+                      <p class="form-submit">
+                        <input
+                          @click="PostComment()"
+                          name="submit"
+                          type="submit"
+                          class="submit"
+                          value="Post Comment"
+                        />
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -501,6 +443,12 @@ export default {
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
+    formdata: {
+      blog_id: 1,
+      customer_id: 1,
+      comment: null,
+    },
+    errors: "",
   }),
   mounted() {
     var id = this.$route.params.id;
@@ -508,9 +456,25 @@ export default {
       .get(import.meta.env.VITE_API_URL + "/api/web/blogdetails/" + id)
       .then((response) => {
         this.results = response.data.data;
-        console.log(this.results);
+        // console.log(this.results);
       })
       .catch((error) => {});
+  },
+  methods: {
+    PostComment() {
+      axios
+        .post(
+          import.meta.env.VITE_API_URL + "/api/web/addblogcomment",
+          this.formdata
+        )
+        .then((response) => {
+          if (response.data.status == 400) {
+            this.errors = response.data.message;
+          } else {
+            this.errors = response.data.message;
+          }
+        });
+    },
   },
 };
 </script>
