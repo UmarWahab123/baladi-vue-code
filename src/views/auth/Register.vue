@@ -22,6 +22,19 @@
       <p
         class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
       >
+        <label for="reg_username"
+          >Phone&nbsp;<span class="required">*</span></label
+        >
+        <input
+          v-model="formdata.phone"
+          type="text"
+          class="woocommerce-Input woocommerce-Input--text input-text"
+          id="reg_username"
+        />
+      </p>
+      <p
+        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+      >
         <label for="reg_email"
           >Email address&nbsp;<span class="required">*</span></label
         >
@@ -113,6 +126,7 @@ export default {
         customer_type_id: 1,
         name: null,
         email: null,
+        phone: null,
         password: null,
       },
       errors: "",

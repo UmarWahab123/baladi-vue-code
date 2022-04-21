@@ -176,18 +176,6 @@
               <div class="menu-let-us-help-you-container">
                 <ul id="menu-let-us-help-you" class="menu">
                   <li
-                    id="menu-item-2220"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"
-                  >
-                    <router-link to="/userdashboard">Your Account </router-link>
-                  </li>
-                  <li
-                    id="menu-item-2182"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2182"
-                  >
-                    <router-link to="/orders">Your Orders </router-link>
-                  </li>
-                  <li
                     id="menu-item-2525"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2525"
                   >
@@ -261,18 +249,6 @@
                     <router-link to="/aboutus">About Us</router-link>
                   </li>
                   <li
-                    id="menu-item-2188"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2188"
-                  >
-                    <a href="#">Inverstor Relations</a>
-                  </li>
-                  <li
-                    id="menu-item-2189"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2189"
-                  >
-                    <a href="#">Machic Devices</a>
-                  </li>
-                  <li
                     id="menu-item-2190"
                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2190"
                   >
@@ -310,28 +286,13 @@
                 </div>
                 <div class="d-flex">
                   <div class="mx-5 ml-0">
-                    <span>Android</span>
                     <div class="app-buttons mt-1 mx-2 ml-0">
                       <a
                         href="https://play.google.com/store"
                         class="google-play"
-                      >
-                      </a>
+                      ></a>
                     </div>
-                    <a href="https://play.google.com/store" class="google-play">
-                      <img src="/src/assets/img/qr-code.png" alt="app" />
-                    </a>
-                  </div>
-                  <div class="mx-5">
-                    <span>IOS</span>
-                    <div class="app-buttons mt-1">
-                      <a
-                        href="https://play.google.com/store"
-                        class="google-play"
-                      >
-                        <img src="/src/assets/img/qr-code.png" alt="app" />
-                      </a>
-                    </div>
+                    <img src="/src/assets/img/qr-code.png" alt="app" />
                   </div>
                 </div>
               </div>

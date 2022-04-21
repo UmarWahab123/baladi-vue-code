@@ -62,7 +62,7 @@
                             <a href="product-details.php">
                               <div class="product-card">
                                 <img
-                                  src="/src/assets/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg"
+                                  :src="this.url + item.images[0].photo"
                                   data-hover-slides='["./src/img/products/Dairy products/dandy/dandy laban strawberry 180 ml .jpg", "./src/img/products/Dairy products/dandy/dandy laban mango 180 ml .jpg"]'
                                 />
                               </div>
@@ -70,15 +70,20 @@
                             <div class="product-buttons">
                               <div
                                 class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
-                                data-product_id="521"
+                                data-product_id="478"
                               >
                                 <div class="tinv-wishlist-clear"></div>
                                 <a
-                                  onclick="myFunctionthree()"
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
-                                  class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after tinvwl-product-in-list"
+                                  class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                                  data-tinv-wl-list="[]"
+                                  data-tinv-wl-product="478"
+                                  data-tinv-wl-productvariation="0"
+                                  data-tinv-wl-productvariations="[0]"
+                                  data-tinv-wl-producttype="simple"
+                                  data-tinv-wl-action="add"
                                   ><span class="tinvwl_add_to_wishlist-text"
                                     >Add to Wishlist</span
                                   ></a
@@ -1385,6 +1390,7 @@ import axios from "axios";
 export default {
   data: () => ({
     showmodal: "",
+    url: import.meta.env.VITE_API_URL + "/storage/",
     showmodalstyle: "",
     showbigmodal: "",
     showbigmodalstyle: "",

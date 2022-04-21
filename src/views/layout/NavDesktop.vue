@@ -183,7 +183,13 @@
                   </div>
                   <div v-else class="sub-text">Sign In</div>
 
-                  <router-link class="primary-text" to="/myaccount"
+                  <router-link
+                    v-if="this.userdata.name"
+                    class="primary-text"
+                    to="/userdashboard"
+                    >Account
+                  </router-link>
+                  <router-link v-else class="primary-text" to="/myaccount"
                     >Account
                   </router-link>
                 </div>

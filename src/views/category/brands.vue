@@ -124,150 +124,15 @@
                     <h6 class="mb-sm py-3">Our <strong>Brands</strong></h6>
                     <strong>
                       <div class="row">
-                        <div class="col-sm-6 col-md-2 col-lg-2">
+                        <div
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in results"
+                          class="col-sm-6 col-md-2 col-lg-2"
+                        >
                           <div class="square-holder shadow">
                             <a href="">
-                              <img alt="" src="/src/assets/Brands/1.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/2.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/3.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/4.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/5.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/6.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/7.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/8.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/9.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/10.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/11.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/12.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/13.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/14.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/15.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/16.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/17.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/18.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/19.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/20.png"
-                            /></a>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-2 col-lg-2">
-                          <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" src="/src/assets/Brands/21.png"
+                              <img alt="" :src="this.url + item.photo"
                             /></a>
                           </div>
                         </div>
@@ -288,4 +153,23 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+<script>
+import.meta.env.VITE_API_KEY;
+import axios from "axios";
+export default {
+  data: () => ({
+    url: import.meta.env.VITE_API_URL + "/storage/",
+    results: [],
+  }),
+  mounted() {
+    axios
+      .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands")
+      .then((response) => {
+        this.results = response.data.data;
+        console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
 </script>

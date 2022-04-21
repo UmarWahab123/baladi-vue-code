@@ -113,7 +113,7 @@
                                     ></div>
                                   </div>
                                   <img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                    :src="this.url + item.images[2].photo"
                                     class="hover-slider-init"
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />
@@ -540,6 +540,7 @@ export default {
   data() {
     return {
       isloading: true,
+      url: import.meta.env.VITE_API_URL + "/storage/",
       results: [],
     };
   },
