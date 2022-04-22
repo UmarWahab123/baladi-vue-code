@@ -1,9 +1,7 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
+  <Header />
 
-  <Header v-show="this.isloading === false" />
-
-  <main id="main" class="site-primary" v-show="this.isloading === false">
+  <main id="main" class="site-primary">
     <div class="site-content">
       <div class="shop-content">
         <div class="container">
@@ -71,21 +69,12 @@
                   <div class="sorting-product hide-mobile">
                     <span>Show:</span>
                     <form
-                      class="
-                        woocommerce-ordering
-                        product-filter
-                        products-per-page
-                      "
+                      class="woocommerce-ordering product-filter products-per-page"
                       method="get"
                     >
                       <select
                         name="perpage"
-                        class="
-                          perpage
-                          showing
-                          filterSelect
-                          select2-hidden-accessible
-                        "
+                        class="perpage showing filterSelect select2-hidden-accessible"
                         data-class="select-filter-perpage"
                         data-select2-id="4"
                         tabindex="-1"
@@ -142,7 +131,7 @@
     </div>
     <!-- site-content -->
   </main>
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>

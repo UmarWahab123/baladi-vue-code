@@ -1,6 +1,4 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
   <Header />
   <main id="main" class="site-primary">
     <div class="site-content">

@@ -1,6 +1,4 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
   <Header />
   <main id="main" class="site-primary">
     <div class="site-content">
@@ -11,10 +9,7 @@
               <div class="col-12 col-md-12 col-lg-12 content-primary">
                 <div class="my-account-wrapper">
                   <Sidebar />
-                  <div
-                    class="woocommerce-MyAccount-content"
-                    v-show="this.isloading === false"
-                  >
+                  <div class="woocommerce-MyAccount-content">
                     <div class="col-md-12">
                       <h3 class="align-items-center p-3">Baladi Wallet</h3>
 

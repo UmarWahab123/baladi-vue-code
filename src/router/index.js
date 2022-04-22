@@ -219,6 +219,11 @@ const routes = [
     component: () => import('@/views/category/brands.vue'),
   },
   {
+    name: 'brandsProduct',
+    path: '/brandsproduct/:id?',
+    component: () => import('@/views/category/brandsProduct.vue'),
+  },
+  {
     name: 'careers',
     path: '/careers',
     component: () => import('@/views/careers/index.vue'),

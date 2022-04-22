@@ -1,6 +1,4 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
   <Header />
   <main id="main" class="site-primary">
     <div class="site-content">
@@ -12,10 +10,7 @@
                 <div class="my-account-wrapper">
                   <Sidebar />
 
-                  <div
-                    class="woocommerce-MyAccount-content"
-                    v-show="this.isloading === false"
-                  >
+                  <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
 
                     <form method="post">

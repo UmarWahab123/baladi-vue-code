@@ -131,9 +131,14 @@
                           class="col-sm-6 col-md-2 col-lg-2"
                         >
                           <div class="square-holder shadow">
-                            <a href="">
-                              <img alt="" :src="this.url + item.photo"
-                            /></a>
+                            <router-link
+                              class="btn read-more"
+                              :to="{
+                                name: 'brandsProduct',
+                                params: { id: item.id },
+                              }"
+                              ><img alt="" :src="this.url + item.photo" />
+                            </router-link>
                           </div>
                         </div>
                       </div>

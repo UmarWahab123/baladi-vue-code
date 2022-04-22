@@ -46,7 +46,6 @@
           <Quickview />
           <!-- quickview-product -->
         </div>
-        <div class="mfp-preloader">Loading...</div>
       </div>
     </div>
     <Topbar />

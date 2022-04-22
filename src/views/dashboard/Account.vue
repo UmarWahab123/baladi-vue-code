@@ -1,5 +1,4 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
   <Header />
   <main id="main" class="site-primary">
     <div class="site-content">
@@ -10,12 +9,10 @@
               <div class="col-12 col-md-12 col-lg-12 content-primary">
                 <div class="my-account-wrapper">
                   <Sidebar />
-                  <div
-                    class="woocommerce-MyAccount-content"
-                    v-show="this.isloading === false"
-                  >
+                  <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <legend>Basic Info change</legend>
+                    <input type="hidden" value="6" v-bind="formdata.id" />
 
                     <p
                       class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
@@ -24,7 +21,6 @@
                         >First name&nbsp;<span class="required">*</span></label
                       >
                       <input
-                        v-model="formdata.firstname"
                         type="text"
                         class="woocommerce-Input woocommerce-Input--text input-text"
                         id="account_first_name"
@@ -38,7 +34,6 @@
                         >Last name&nbsp;<span class="required">*</span></label
                       >
                       <input
-                        v-model="formdata.lastname"
                         type="text"
                         class="woocommerce-Input woocommerce-Input--text input-text"
                         id="account_last_name"
@@ -60,6 +55,15 @@
                         type="text"
                         class="woocommerce-Input woocommerce-Input--text input-text"
                         id="account_display_name"
+                      />
+                      <label for="account_display_name"
+                        >Phone&nbsp;<span class="required">*</span></label
+                      >
+                      <input
+                        v-model="formdata.phone"
+                        type="text"
+                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        id="phone"
                       />
                       <span
                         ><em
@@ -220,13 +224,11 @@ export default {
   data() {
     return {
       isloading: true,
-      userdata: { name: "", email: "" },
+      userdata: { id: "", name: "", email: "" },
 
       formdata: {
-        firstname: null,
-        lastname: null,
-        displayname: null,
-        email: null,
+        id: 6,
+        phone: null,
       },
       errors: "",
 
@@ -243,6 +245,8 @@ export default {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.userdata = userInfo.name;
       this.userdata1 = userInfo.email;
+      this.userdata2 = userInfo.id;
+
       console.log(userInfo);
     } else {
       this.$router.push("myaccount");
@@ -257,7 +261,7 @@ export default {
           this.formdata
         )
         .then((response) => {
-          // console.log(response);
+          console.log(response);
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
