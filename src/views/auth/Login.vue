@@ -154,7 +154,12 @@ export default {
               "userInfo",
               JSON.stringify(response.data.data.user)
             );
+            // console.log(response);
             var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            userInfo.token = response.data.data.token;
+            localStorage.setItem("userInfo", JSON.stringify(userInfo));
+            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
             console.log(userInfo);
             this.$router.push("/userdashboard");
           } else {
