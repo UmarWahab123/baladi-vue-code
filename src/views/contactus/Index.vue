@@ -1,8 +1,6 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
-  <Header v-show="this.isloading === false" />
-  <main id="main" class="site-primary" v-show="this.isloading === false">
+  <Header />
+  <main id="main" class="site-primary">
     <div class="site-content">
       <div data-elementor-id="1985" class="elementor elementor-1985">
         <div class="elementor-section-wrap">
@@ -14,7 +12,7 @@
     <!-- site-content -->
   </main>
 
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>

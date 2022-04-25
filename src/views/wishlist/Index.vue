@@ -1,7 +1,6 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-  <Header v-show="this.isloading === false" />
-  <main id="main" class="site-primary" v-show="this.isloading === false">
+  <Header />
+  <main id="main" class="site-primary">
     <div class="site-content">
       <div
         data-elementor-type="wp-page"
@@ -11,38 +10,19 @@
       >
         <div class="elementor-section-wrap">
           <section
-            class="
-              elementor-section
-              elementor-top-section
-              elementor-element
-              elementor-element-17370978
-              elementor-section-boxed
-              elementor-section-height-default
-              elementor-section-height-default
-            "
+            class="elementor-section elementor-top-section elementor-element elementor-element-17370978 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
             data-id="17370978"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="
-                  elementor-column
-                  elementor-col-100
-                  elementor-top-column
-                  elementor-element
-                  elementor-element-651ccb50
-                "
+                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-651ccb50"
                 data-id="651ccb50"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="
-                      elementor-element
-                      elementor-element-19726f3e
-                      elementor-widget
-                      elementor-widget-shortcode
-                    "
+                    class="elementor-element elementor-element-19726f3e elementor-widget elementor-widget-shortcode"
                     data-id="19726f3e"
                     data-element_type="widget"
                     data-widget_type="shortcode.default"
@@ -70,7 +50,7 @@
     </div>
     <!-- site-content -->
   </main>
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>
@@ -98,4 +78,3 @@ export default {
   },
 };
 </script>
-

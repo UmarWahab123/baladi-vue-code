@@ -1,12 +1,6 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-  <Header v-show="this.isloading === false" />
-  <main
-    id="main"
-    class="site-primary"
-    style="transform: none"
-    v-show="this.isloading === false"
-  >
+  <Header />
+  <main id="main" class="site-primary" style="transform: none">
     <div class="site-content" style="transform: none">
       <div
         data-elementor-type="wp-page"
@@ -39,7 +33,7 @@
 
     <!-- site-content -->
   </main>
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>

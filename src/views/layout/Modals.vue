@@ -383,7 +383,6 @@
             </div>
             <!-- quickview-product -->
           </div>
-          <div class="mfp-preloader">Loading...</div>
         </div>
       </div>
     </div>

@@ -1,8 +1,6 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
-  <Header v-show="this.isloading === false" />
-  <main id="main" class="site-primary" v-show="this.isloading === false">
+  <Header />
+  <main id="main" class="site-primary">
     <div class="site-content">
       <div class="shop-content my-account-page mt-60">
         <div class="container">
@@ -50,7 +48,7 @@
     </div>
     <!-- site-content -->
   </main>
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>

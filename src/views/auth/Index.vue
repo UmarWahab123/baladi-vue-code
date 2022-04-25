@@ -1,7 +1,5 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
-  <div v-show="this.isloading === false">
+  <div>
     <Header />
     <main id="main" class="site-primary">
       <div class="site-content">
@@ -22,7 +20,7 @@
     </main>
   </div>
 
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>

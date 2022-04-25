@@ -1,8 +1,6 @@
 <template>
-  <TheLoader v-show="this.isloading === true"></TheLoader>
-
-  <Header v-show="this.isloading === false  " />
-  <main id="main" class="site-primary" v-show="this.isloading === false">
+  <Header />
+  <main id="main" class="site-primary">
     <div class="site-content">
       <div class="shop-content my-account-page mt-60">
         <div class="container">
@@ -102,38 +100,19 @@
       >
         <div class="elementor-section-wrap">
           <section
-            class="
-              elementor-section
-              elementor-top-section
-              elementor-element
-              elementor-element-677addc
-              elementor-section-boxed
-              elementor-section-height-default
-              elementor-section-height-default
-            "
+            class="elementor-section elementor-top-section elementor-element elementor-element-677addc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
             data-id="677addc"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="
-                  elementor-column
-                  elementor-col-100
-                  elementor-top-column
-                  elementor-element
-                  elementor-element-45b25de
-                "
+                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-45b25de"
                 data-id="45b25de"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="
-                      elementor-element
-                      elementor-element-58f7dcf
-                      elementor-widget
-                      elementor-widget-machic-custom-title
-                    "
+                    class="elementor-element elementor-element-58f7dcf elementor-widget elementor-widget-machic-custom-title"
                     data-id="58f7dcf"
                     data-element_type="widget"
                     data-widget_type="machic-custom-title.default"
@@ -152,38 +131,19 @@
           </section>
 
           <section
-            class="
-              elementor-section
-              elementor-top-section
-              elementor-element
-              elementor-element-187d03f
-              elementor-section-boxed
-              elementor-section-height-default
-              elementor-section-height-default
-            "
+            class="elementor-section elementor-top-section elementor-element elementor-element-187d03f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
             data-id="187d03f"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="
-                  elementor-column
-                  elementor-col-43
-                  elementor-top-column
-                  elementor-element
-                  elementor-element-fa6036d
-                "
+                class="elementor-column elementor-col-43 elementor-top-column elementor-element elementor-element-fa6036d"
                 data-id="fa6036d"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="
-                      elementor-element
-                      elementor-element-4178a16
-                      elementor-widget
-                      elementor-widget-machic-contact-form-7
-                    "
+                    class="elementor-element elementor-element-4178a16 elementor-widget elementor-widget-machic-contact-form-7"
                     data-id="4178a16"
                     data-element_type="widget"
                     data-widget_type="machic-contact-form-7.default"
@@ -254,11 +214,7 @@
                                     name="your-name"
                                     value=""
                                     size="40"
-                                    class="
-                                      wpcf7-form-control
-                                      wpcf7-text
-                                      wpcf7-validates-as-required
-                                    "
+                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -271,13 +227,7 @@
                                     name="your-email"
                                     value=""
                                     size="40"
-                                    class="
-                                      wpcf7-form-control
-                                      wpcf7-text
-                                      wpcf7-email
-                                      wpcf7-validates-as-required
-                                      wpcf7-validates-as-email
-                                    "
+                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -291,11 +241,7 @@
                                     name="your-subject"
                                     value=""
                                     size="40"
-                                    class="
-                                      wpcf7-form-control
-                                      wpcf7-text
-                                      wpcf7-validates-as-required
-                                    "
+                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -318,11 +264,7 @@
                                 <input
                                   type="submit"
                                   value="Send Message"
-                                  class="
-                                    wpcf7-form-control
-                                    has-spinner
-                                    wpcf7-submit
-                                  "
+                                  class="wpcf7-form-control has-spinner wpcf7-submit"
                                 /><span class="wpcf7-spinner"></span>
                               </div>
                             </div>
@@ -343,7 +285,7 @@
       </div>
     </div>
   </main>
-  <div v-show="this.isloading === false">
+  <div>
     <Footer />
   </div>
 </template>
