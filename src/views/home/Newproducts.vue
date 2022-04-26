@@ -279,7 +279,7 @@
                               <a
                                 href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
                                 ><img
-                                  :src="this.url + trend.images[2].photo"
+                                  :src="this.url + trend.images[0].photo"
                                   alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
                               /></a>
                             </div>
@@ -459,9 +459,9 @@
                   <div class="products column-4 mobile-2 total-4">
                     <div
                       class="product custom-hover"
-                      :data="item"
+                      :data="best"
                       :key="indextr"
-                      v-for="(item, indextr) in results"
+                      v-for="(best, indextr) in bestresults"
                     >
                       <div class="product-wrapper product-type-1">
                         <div class="product-content">
@@ -538,7 +538,7 @@
                                   ></div>
                                 </div>
                                 <img
-                                  :src="this.url + item.images[2].photo"
+                                  :src="this.url + best.images[0].photo"
                                   class="hover-slider-init"
                                   data-options='{"touch":"end","preloadImages": true }'
                                 />
@@ -590,7 +590,7 @@
                             <h3 class="product-title">
                               <a
                                 href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                >{{ item.name }}</a
+                                >{{ best.name }}</a
                               >
                             </h3>
                             <div class="product-rating">
@@ -602,7 +602,7 @@
                                 <span style="width: 100%"
                                   >Rated
                                   <strong class="rating">{{
-                                    item.rating
+                                    best.rating
                                   }}</strong>
                                   out of 5</span
                                 >
@@ -619,7 +619,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >$</span
-                                      >{{ item.previous_price }}</bdi
+                                      >{{ best.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -629,7 +629,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >$</span
-                                      >{{ item.sale_price }}</bdi
+                                      >{{ best.sale_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -1407,9 +1407,9 @@ export default {
     return {
       isloading: true,
       url: import.meta.env.VITE_API_URL + "/storage/",
-      results: [],
       arrival: [],
       trends: [],
+      bestresults: [],
     };
   },
   mounted() {
@@ -1424,8 +1424,8 @@ export default {
     axios
       .get(import.meta.env.VITE_API_URL + "/api/web/home/bestsellers")
       .then((response) => {
-        this.results = response.data.data;
-        // console.log(this.results);
+        this.bestresults = response.data.data;
+        console.log(this.bestresults);
       })
       .catch((error) => {});
     axios

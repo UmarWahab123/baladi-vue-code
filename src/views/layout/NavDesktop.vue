@@ -1391,7 +1391,7 @@
                 <li
                   class="mega-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
                 >
-                  <a href="brands.php">Top Brands</a>
+                  <router-link to="/brands">Top Brands </router-link>
                   <ul class="sub-menu">
                     <li
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
@@ -1558,8 +1558,9 @@
                 <li
                   class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                 >
-                  <a href="#"
-                    ><i class="klbth-icon-home"></i> Home And Living</a
+                  <router-link to="/category"
+                    ><i class="klbth-icon-home"></i> Home And
+                    Living</router-link
                   >
                 </li>
 

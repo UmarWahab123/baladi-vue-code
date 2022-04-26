@@ -15,55 +15,16 @@
                     <input type="hidden" value="6" v-bind="formdata.id" />
 
                     <p
-                      class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
-                    >
-                      <label for="account_first_name"
-                        >First name&nbsp;<span class="required">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
-                        id="account_first_name"
-                        autocomplete="given-name"
-                      />
-                    </p>
-                    <p
                       class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last"
                     >
                       <label for="account_last_name"
-                        >Last name&nbsp;<span class="required">*</span></label
+                        >Name&nbsp;<span class="">*</span></label
                       >
                       <input
                         type="text"
                         class="woocommerce-Input woocommerce-Input--text input-text"
                         id="account_last_name"
                         autocomplete="family-name"
-                      />
-                    </p>
-                    <div class="clear"></div>
-
-                    <p
-                      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                    >
-                      <label for="account_display_name"
-                        >Display name&nbsp;<span class="required"
-                          >*</span
-                        ></label
-                      >
-                      <input
-                        v-model="this.userdata"
-                        type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
-                        id="account_display_name"
-                      />
-                      <label for="account_display_name"
-                        >Phone&nbsp;<span class="required">*</span></label
-                      >
-                      <input
-                        v-model="formdata.phone"
-                        type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
-                        id="phone"
                       />
                       <span
                         ><em
@@ -77,14 +38,49 @@
                     <p
                       class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
                     >
+                      <label for="account_display_name"
+                        >Display name&nbsp;<span class="required"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        type="text"
+                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        id="account_display_name"
+                      />
+                      <label for="account_display_name"
+                        >Phone&nbsp;<span class="required">*</span></label
+                      >
+                      <input
+                        v-model="formdata.phone"
+                        type="text"
+                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        id="phone"
+                      />
+                    </p>
+                    <div class="clear"></div>
+
+                    <p
+                      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                    >
                       <label for="account_email"
                         >Email address&nbsp;<span class="required"
                           >*</span
                         ></label
                       >
                       <input
-                        v-model="this.userdata1"
                         type="email"
+                        class="woocommerce-Input woocommerce-Input--email input-text"
+                        id="account_email"
+                        autocomplete="email"
+                      />
+                    </p>
+                    <p>
+                      <label for="account_email"
+                        >DOB&nbsp;<span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
                         class="woocommerce-Input woocommerce-Input--email input-text"
                         id="account_email"
                         autocomplete="email"
@@ -217,6 +213,7 @@ import Footer from "../layout/Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>
 <script>
+import.meta.env.VITE_API_KEY;
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
 export default {
@@ -229,6 +226,9 @@ export default {
       formdata: {
         id: 6,
         phone: null,
+        name: "",
+        email: "",
+        dob: "",
       },
       errors: "",
 
@@ -241,16 +241,41 @@ export default {
     };
   },
   mounted() {
+    //session
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.userdata = userInfo.name;
       this.userdata1 = userInfo.email;
       this.userdata2 = userInfo.id;
 
-      console.log(userInfo);
+      // console.log(userInfo);
     } else {
       this.$router.push("myaccount");
     }
+    userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
+    //userprofile data
+    axios
+      .get(import.meta.env.VITE_API_URL + "/api/auth/getProfile", {
+        headers: {
+          Authorization: `${userInfo.token}`,
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    // axios
+    //   .get(import.meta.env.VITE_API_URL + "/api/auth/getProfile")
+    //   .then((response) => {
+    //     // console.log(response);
+    //     this.formdata = response.data.data;
+    //     // console.log(this.formdata);
+    //   })
+    //   .catch((error) => {});
+
     setTimeout(() => (this.isloading = false), 1000);
   },
   methods: {
@@ -261,7 +286,7 @@ export default {
           this.formdata
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
@@ -276,7 +301,7 @@ export default {
           this.passdata
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
