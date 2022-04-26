@@ -276,12 +276,15 @@
                         <div class="product-wrapper">
                           <div class="product-content">
                             <div class="thumbnail-wrapper">
-                              <a
-                                href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              <router-link
+                                :to="{
+                                  name: 'product-detail',
+                                  params: { id: trend.id },
+                                }"
                                 ><img
                                   :src="this.url + trend.images[0].photo"
                                   alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
-                              /></a>
+                              /></router-link>
                             </div>
                             <div class="content-wrapper">
                               <h3 class="product-title">
@@ -469,8 +472,11 @@
                             <div class="product-badges">
                               <span class="badge onsale">11%</span>
                             </div>
-                            <a
-                              href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                            <router-link
+                              :to="{
+                                name: 'product-detail',
+                                params: { id: best.id },
+                              }"
                             >
                               <div
                                 class="product-card"
@@ -543,7 +549,7 @@
                                   data-options='{"touch":"end","preloadImages": true }'
                                 />
                               </div>
-                            </a>
+                            </router-link>
                             <div class="product-buttons">
                               <div
                                 class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
@@ -1203,7 +1209,12 @@
                             <div class="product-badges">
                               <span class="badge super">Super Price</span>
                             </div>
-                            <a href="#apple-11-inch-ipad-pro-2021-wi-fi-128gb/">
+                            <router-link
+                              :to="{
+                                name: 'product-detail',
+                                params: { id: items.id },
+                              }"
+                            >
                               <div
                                 class="product-card"
                                 style="position: relative"
@@ -1265,7 +1276,7 @@
                                   data-options='{"touch":"end","preloadImages": true }'
                                 />
                               </div>
-                            </a>
+                            </router-link>
                             <div class="product-buttons">
                               <div
                                 class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"

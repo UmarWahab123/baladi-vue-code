@@ -71,14 +71,16 @@
                               <div class="clear"></div>
 
                               <p class="form-row">
-                                <button
-                                  type="submit"
-                                  class="button"
-                                  name="track"
-                                  value="Track"
-                                >
-                                  Track
-                                </button>
+                                <router-link to="/order-track2">
+                                  <button
+                                    type="submit"
+                                    class="button"
+                                    name="track"
+                                    value="Track"
+                                  >
+                                    Track
+                                  </button>
+                                </router-link>
                               </p>
                               <input
                                 type="hidden"

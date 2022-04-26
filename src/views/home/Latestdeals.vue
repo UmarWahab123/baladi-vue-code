@@ -44,8 +44,11 @@
                               <div class="product-badges">
                                 <span class="badge onsale">11%</span>
                               </div>
-                              <a
-                                href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              <router-link
+                                :to="{
+                                  name: 'product-detail',
+                                  params: { id: item.id },
+                                }"
                               >
                                 <div
                                   class="product-card"
@@ -118,7 +121,7 @@
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />
                                 </div>
-                              </a>
+                              </router-link>
                               <div class="product-buttons">
                                 <div
                                   class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"

@@ -59,14 +59,19 @@
                             <div class="product-badges">
                               <span class="badge onsale">11%</span>
                             </div>
-                            <a href="product-details.php">
+                            <router-link
+                              :to="{
+                                name: 'product-detail',
+                                params: { id: item.id },
+                              }"
+                            >
                               <div class="product-card">
                                 <img
                                   :src="this.url + item.images[0].photo"
                                   data-hover-slides='["./src/img/products/Dairy products/dandy/dandy laban strawberry 180 ml .jpg", "./src/img/products/Dairy products/dandy/dandy laban mango 180 ml .jpg"]'
                                 />
                               </div>
-                            </a>
+                            </router-link>
                             <div class="product-buttons">
                               <div
                                 class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"

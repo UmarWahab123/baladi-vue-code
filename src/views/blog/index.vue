@@ -25,8 +25,8 @@
                       <div class="entry-meta">
                         <span class="meta-item entry-published"
                           ><a href="#"
-                            ><i class="klbth-icon-clock-outline"></i> October 9,
-                            2021</a
+                            ><i class="klbth-icon-clock-outline"></i>
+                            {{ item.created_at }}</a
                           ></span
                         >
                         <span class="meta-item category"

@@ -26,8 +26,8 @@
                       <div class="entry-meta">
                         <span class="meta-item entry-published"
                           ><a href="#"
-                            ><i class="klbth-icon-clock-outline"></i> October 9,
-                            2021</a
+                            ><i class="klbth-icon-clock-outline"></i>
+                            {{ item.created_at }}</a
                           ></span
                         >
                         <span class="meta-item category"
@@ -86,6 +86,7 @@
                             />
                           </div>
                         </div>
+
                         <div class="comment-content">
                           <div class="comment-meta">
                             <b class="fn"><a class="url">admin</a></b>
@@ -93,15 +94,17 @@
                               <time>October 11, 2021</time>
                             </div>
                           </div>
+
                           <div class="klb-post">
                             <p>
                               {{ comment.comment }}
                             </p>
                           </div>
+
                           <div class="reply">
                             <a
                               rel="nofollow"
-                              class="comment-reply-link"
+                              class="comment-reply-link reply-btn"
                               href="#?replytocom=5#respond"
                               data-commentid="5"
                               data-postid="2117"
@@ -115,6 +118,22 @@
                         </div>
                       </div>
                     </li>
+                    <p class="comment-form-comment reply-comment">
+                      <label for="comment"
+                        >Reply
+                        <span class="required" aria-hidden="true"
+                          >*</span
+                        ></label
+                      >
+                      <textarea
+                        id="comment"
+                        v-model="formdata.comment"
+                        cols="45"
+                        rows="4"
+                        maxlength="65525"
+                        required="required"
+                      ></textarea>
+                    </p>
                     <ul class="children">
                       <li class="comment odd alt depth-2" id="comment-6">
                         <div id="div-comment-6" class="comment-body">
@@ -475,6 +494,7 @@ export default {
           }
         });
     },
+    HideFunction() {},
   },
 };
 </script>
