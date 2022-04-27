@@ -108,6 +108,7 @@
                               href="#?replytocom=5#respond"
                               data-commentid="5"
                               data-postid="2117"
+                              @click="isShow = !isShow"
                               data-belowelement="comment-5"
                               data-respondelement="respond"
                               data-replyto="Reply to admin"
@@ -118,7 +119,16 @@
                         </div>
                       </div>
                     </li>
-                    <p class="comment-form-comment reply-comment">
+                    <input type="hidden" value="1" v-bind="formdata1.blog_id" />
+                    <input
+                      type="hidden"
+                      value="1"
+                      v-bind="formdata1.comment_id"
+                    />
+                    <p
+                      :class="{ hide: !isShow }"
+                      class="comment-form-comment reply-comment"
+                    >
                       <label for="comment"
                         >Reply
                         <span class="required" aria-hidden="true"
@@ -127,12 +137,27 @@
                       >
                       <textarea
                         id="comment"
-                        v-model="formdata.comment"
+                        v-model="formdata1.comment"
                         cols="45"
                         rows="4"
                         maxlength="65525"
                         required="required"
                       ></textarea>
+                    </p>
+                    <p
+                      v-if="errors"
+                      class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+                    >
+                      {{ errors }}
+                    </p>
+                    <p class="form-submit">
+                      <input
+                        @click="PostReply()"
+                        name="submit"
+                        type="submit"
+                        class="submit"
+                        value="Post Reply"
+                      />
                     </p>
                     <ul class="children">
                       <li class="comment odd alt depth-2" id="comment-6">
@@ -468,6 +493,12 @@ export default {
       comment: null,
     },
     errors: "",
+    formdata1: {
+      blog_id: 1,
+      comment_id: 1,
+      comment: null,
+    },
+    errors: "",
   }),
   mounted() {
     var id = this.$route.params.id;
@@ -475,7 +506,7 @@ export default {
       .get(import.meta.env.VITE_API_URL + "/api/web/blogdetails/" + id)
       .then((response) => {
         this.results = response.data.data;
-        // console.log(this.results);
+        console.log(this.results);
       })
       .catch((error) => {});
   },
@@ -494,7 +525,21 @@ export default {
           }
         });
     },
-    HideFunction() {},
+    PostReply() {
+      axios
+        .post(
+          import.meta.env.VITE_API_URL + "/api/web/addcommentreply",
+          this.formdata1
+        )
+        .then((response) => {
+          // console.log(response.data);
+          if (response.data.status == 400) {
+            this.errors = response.data.message;
+          } else {
+            this.errors = response.data.message;
+          }
+        });
+    },
   },
 };
 </script>

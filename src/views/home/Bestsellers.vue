@@ -66,10 +66,19 @@
                               }"
                             >
                               <div class="product-card">
-                                <img
-                                  :src="this.url + item.images[0].photo"
-                                  data-hover-slides='["./src/img/products/Dairy products/dandy/dandy laban strawberry 180 ml .jpg", "./src/img/products/Dairy products/dandy/dandy laban mango 180 ml .jpg"]'
-                                />
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      :src="this.url + item.images[0].photo"
+                                    />
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img
+                                      :src="this.url + item.images[0].photo"
+                                    />
+                                  </div>
+                                </div>
                               </div>
                             </router-link>
                             <div class="product-buttons">
@@ -79,6 +88,7 @@
                               >
                                 <div class="tinv-wishlist-clear"></div>
                                 <a
+                                  :onclick="clickmodal"
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
@@ -105,11 +115,11 @@
                               ><a
                                 href="#"
                                 class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
-                                onclick="myFunctionone()"
+                                :onclick="clickcomparemodal"
                                 data-id="521"
                                 >Compare</a
                               ><span
-                                onclick="myFunction()"
+                                :onclick="clickbigmodal"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
                               ></span>

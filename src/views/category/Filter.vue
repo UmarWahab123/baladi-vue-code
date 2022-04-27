@@ -79,8 +79,8 @@
                 />
                 <button type="submit" class="button">Filter</button>
                 <div class="price_label values">
-                  Price: <span id="range1" class="from">$0</span> —
-                  <span id="range2" class="to">$5,440</span>
+                  Price: <span id="range1" class="from">27</span> —
+                  <span id="range2" class="to">77</span>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -153,7 +153,12 @@
           class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav"
         >
           <h4 class="widget-title">Brands</h4>
-          <ul class="woocommerce-widget-layered-nav-list">
+          <ul
+            :data="brand"
+            :key="indextr"
+            v-for="(brand, indextr) in brands"
+            class="woocommerce-widget-layered-nav-list"
+          >
             <li
               class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term"
             >
@@ -162,7 +167,7 @@
                 ><a
                   rel="nofollow"
                   href="/product-category/apple/?filter_brands=apple"
-                  >Apple</a
+                  >{{ brand.name }}</a
                 >
                 <span class="count">(12)</span>
               </div>
@@ -206,6 +211,7 @@ export default {
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
+    brands: [],
   }),
   mounted() {
     axios
@@ -213,6 +219,13 @@ export default {
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);
+      })
+      .catch((error) => {});
+    axios
+      .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands")
+      .then((response) => {
+        this.brands = response.data.data;
+        // console.log(this.brands);
       })
       .catch((error) => {});
   },

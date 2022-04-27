@@ -24,14 +24,16 @@
                   id="menu-item-2229"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229"
                 >
-                  <a href="#">Help</a>
+                  <router-link to="/faq">Help </router-link>
                 </li>
 
                 <li
                   id="menu-item-2230"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2230"
                 >
-                  <a href="#">Returns & Replacements</a>
+                  <router-link to="/replacement"
+                    >Returns &amp; Replacements</router-link
+                  >
                 </li>
               </ul>
             </nav>
