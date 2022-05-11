@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- floating social media -->
+    <!-- floating social media -->
     <div class="box">
       <div class="con-icon">
         <div class="icon facebook">
@@ -34,8 +35,16 @@
               ><i class="fab fa-instagram"></i></a
           ></span>
         </div>
+        <div class="icon whatsapp">
+          <div class="tooltip">Whatsapp</div>
+          <span
+            ><a href="https://www.multiwebpress.com/"
+              ><i class="fab fa-whatsapp"></i></a
+          ></span>
+        </div>
       </div>
     </div>
+    <!-- floating social media end -->
     <div
       class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready"
       tabindex="-1"

@@ -3858,7 +3858,7 @@ input.check-toggle-round-flat+label {
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
     -o-border-radius: 60px;
-    border-radius: 60px px;
+    border-radius: 60px;
 }
 
 input.check-toggle-round-flat+label:before,

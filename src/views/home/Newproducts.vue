@@ -575,7 +575,7 @@
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
-                                  class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                                  class="tinvwl_add_to_wishlist_button d-none tinvwl-icon-heart tinvwl-position-after"
                                   data-tinv-wl-list="[]"
                                   data-tinv-wl-product="521"
                                   data-tinv-wl-productvariation="0"
@@ -586,6 +586,7 @@
                                     >Add to Wishlist</span
                                   ></a
                                 >
+
                                 <div class="tinv-wishlist-clear"></div>
                                 <div class="tinvwl-tooltip">
                                   Add to Wishlist

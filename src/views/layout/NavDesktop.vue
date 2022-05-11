@@ -199,23 +199,338 @@
               </a>
             </div>
             <!-- header-addons -->
-            <div class="header-addons wishlist-button">
-              <div class="header-addons-icon">
-                <a href="#"><i class="far fa-bell"></i></a>
-                <div class="button-count">
-                  <a
-                    href="#"
-                    class="wishlist_products_counter top_wishlist-heart top_wishlist- wishlist-counter-with-products"
-                  >
-                    <span class="wishlist_products_counter_text"
-                      >Wishlist -</span
-                    >
-                    <span class="wishlist_products_counter_number">1</span>
-                  </a>
+            <div class="header-addons cart-button">
+              <a href="#cart/">
+                <div class="header-addons-icon">
+                  <i class="far fa-bell"></i>
+                  <div class="button-count cart-count">2</div>
                 </div>
+                <!-- header-addons-icon -->
+
+                <!-- header-addons-text -->
+              </a>
+              <div class="cart-dropdown hide">
+                <div class="cart-dropdown-wrapper">
+                  <div class="fl-mini-cart-content">
+                    <div
+                      class="products column-1 mobile-1 woocommerce-mini-cart cart_list product_list_widget"
+                    >
+                      <div
+                        class="cart-slider swiper-container klb-mini-cart swiper-container-initialized swiper-container-vertical swiper-container-pointer-events slider-loaded"
+                        data-effect="slide"
+                        data-direction="vertical"
+                        data-loop="false"
+                        data-speed="1000"
+                        data-spacebetween="0"
+                        data-autoplay="false"
+                        data-autospeed="300"
+                        data-items="2"
+                        data-mobileitems="2"
+                        data-tabletitems="2"
+                      >
+                        <div class="slider-loader">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="spinner"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 44 44"
+                          >
+                            <circle
+                              class="spinner-path"
+                              cx="22"
+                              cy="22"
+                              r="20"
+                              fill="none"
+                              stroke-width="3"
+                            ></circle>
+                          </svg>
+                        </div>
+                        <div class="slider-loader">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="spinner"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 44 44"
+                          >
+                            <circle
+                              class="spinner-path"
+                              cx="22"
+                              cy="22"
+                              r="20"
+                              fill="none"
+                              stroke-width="3"
+                            ></circle>
+                          </svg>
+                        </div>
+                        <div class="slider-loader">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="spinner"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 44 44"
+                          >
+                            <circle
+                              class="spinner-path"
+                              cx="22"
+                              cy="22"
+                              r="20"
+                              fill="none"
+                              stroke-width="3"
+                            ></circle>
+                          </svg>
+                        </div>
+                        <div
+                          class="swiper-wrapper"
+                          id="swiper-wrapper-20bf436108c0df10df"
+                          aria-live="polite"
+                          style="transform: translate3d(0px, 0px, 0px)"
+                        >
+                          <div
+                            class="swiper-slide swiper-slide-active"
+                            role="group"
+                            aria-label="1 / 2"
+                            style="height: 90px"
+                          >
+                            <div
+                              class="product woocommerce-mini-cart-item mini_cart_item"
+                            >
+                              <div class="product-wrapper">
+                                <div class="product-content">
+                                  <div class="thumbnail-wrapper">
+                                    <a href="#">
+                                      <img
+                                        width="90"
+                                        height="90"
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                        alt=""
+                                      />
+                                    </a>
+                                  </div>
+                                  <!-- thumbnail-wrapper -->
+                                  <div class="content-wrapper">
+                                    <h3 class="product-title">
+                                      <a href="#">Your Order is placed</a>
+                                    </h3>
+                                    <div class="small-text-1">
+                                      Your Order of cheese product is placed
+                                    </div>
+
+                                    <a
+                                      href="#"
+                                      class="remove remove_from_cart_button"
+                                      aria-label="Remove this item"
+                                      data-product_id="516"
+                                      data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
+                                      data-product_sku="SR4JK74"
+                                      ><i class="klbth-icon-cancel"></i
+                                    ></a>
+                                  </div>
+                                  <!-- content-wrapper -->
+                                </div>
+                                <!-- product-content -->
+                              </div>
+                              <!-- product-wrapper -->
+                            </div>
+                            <!-- product -->
+                          </div>
+                          <!-- swiper-slide -->
+                          <div
+                            class="swiper-slide swiper-slide-next"
+                            role="group"
+                            aria-label="2 / 2"
+                            style="height: 90px"
+                          >
+                            <div
+                              class="product woocommerce-mini-cart-item mini_cart_item"
+                            >
+                              <div class="product-wrapper">
+                                <div class="product-content">
+                                  <div class="thumbnail-wrapper">
+                                    <a href="#">
+                                      <img
+                                        width="90"
+                                        height="90"
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                        alt=""
+                                      />
+                                    </a>
+                                  </div>
+                                  <!-- thumbnail-wrapper -->
+                                  <div class="content-wrapper">
+                                    <h3 class="product-title">
+                                      <a href="#">Your Order is placed</a>
+                                    </h3>
+                                    <div class="small-text-1">
+                                      Your Order of cheese product is placed
+                                    </div>
+
+                                    <a
+                                      href="#"
+                                      class="remove remove_from_cart_button"
+                                      aria-label="Remove this item"
+                                      data-product_id="516"
+                                      data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
+                                      data-product_sku="SR4JK74"
+                                      ><i class="klbth-icon-cancel"></i
+                                    ></a>
+                                  </div>
+                                  <!-- content-wrapper -->
+                                </div>
+                                <!-- product-content -->
+                              </div>
+                              <!-- product-wrapper -->
+                            </div>
+                            <!-- product -->
+                          </div>
+                          <div
+                            class="swiper-slide swiper-slide-next"
+                            role="group"
+                            aria-label="2 / 2"
+                            style="height: 90px"
+                          >
+                            <div
+                              class="product woocommerce-mini-cart-item mini_cart_item"
+                            >
+                              <div class="product-wrapper">
+                                <div class="product-content">
+                                  <div class="thumbnail-wrapper">
+                                    <a href="#">
+                                      <img
+                                        width="90"
+                                        height="90"
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                        alt=""
+                                      />
+                                    </a>
+                                  </div>
+                                  <!-- thumbnail-wrapper -->
+                                  <div class="content-wrapper">
+                                    <h3 class="product-title">
+                                      <a href="#">Your Order is placed</a>
+                                    </h3>
+                                    <div class="small-text-1">
+                                      Your Order of cheese product is placed
+                                    </div>
+
+                                    <a
+                                      href="#"
+                                      class="remove remove_from_cart_button"
+                                      aria-label="Remove this item"
+                                      data-product_id="516"
+                                      data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
+                                      data-product_sku="SR4JK74"
+                                      ><i class="klbth-icon-cancel"></i
+                                    ></a>
+                                  </div>
+                                  <!-- content-wrapper -->
+                                </div>
+                                <!-- product-content -->
+                              </div>
+                              <!-- product-wrapper -->
+                            </div>
+                            <!-- product -->
+                          </div>
+                          <div
+                            class="swiper-slide swiper-slide-next"
+                            role="group"
+                            aria-label="2 / 2"
+                            style="height: 90px"
+                          >
+                            <div
+                              class="product woocommerce-mini-cart-item mini_cart_item"
+                            >
+                              <div class="product-wrapper">
+                                <div class="product-content">
+                                  <div class="thumbnail-wrapper">
+                                    <a href="#">
+                                      <img
+                                        width="90"
+                                        height="90"
+                                        src="./src/img/products/Dairy products/Cheese/slice edam cheese close up_.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                        alt=""
+                                      />
+                                    </a>
+                                  </div>
+                                  <!-- thumbnail-wrapper -->
+                                  <div class="content-wrapper">
+                                    <h3 class="product-title">
+                                      <a href="#">Your Order is placed</a>
+                                    </h3>
+                                    <div class="small-text-1">
+                                      Your Order of cheese product is placed
+                                    </div>
+
+                                    <a
+                                      href="#"
+                                      class="remove remove_from_cart_button"
+                                      aria-label="Remove this item"
+                                      data-product_id="516"
+                                      data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
+                                      data-product_sku="SR4JK74"
+                                      ><i class="klbth-icon-cancel"></i
+                                    ></a>
+                                  </div>
+                                  <!-- content-wrapper -->
+                                </div>
+                                <!-- product-content -->
+                              </div>
+                              <!-- product-wrapper -->
+                            </div>
+                            <!-- product -->
+                          </div>
+                          <!-- swiper-slide -->
+                        </div>
+                        <div
+                          class="swiper-button-prev swiper-button-disabled"
+                          tabindex="-1"
+                          role="button"
+                          aria-label="Previous slide"
+                          aria-controls="swiper-wrapper-20bf436108c0df10df"
+                          aria-disabled="true"
+                        ></div>
+                        <div
+                          class="swiper-button-next swiper-button-disabled"
+                          tabindex="-1"
+                          role="button"
+                          aria-label="Next slide"
+                          aria-controls="swiper-wrapper-20bf436108c0df10df"
+                          aria-disabled="true"
+                        ></div>
+                        <span
+                          class="swiper-notification"
+                          aria-live="assertive"
+                          aria-atomic="true"
+                        ></span
+                        ><span
+                          class="swiper-notification"
+                          aria-live="assertive"
+                          aria-atomic="true"
+                        ></span
+                        ><span
+                          class="swiper-notification"
+                          aria-live="assertive"
+                          aria-atomic="true"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-noticy">
+                    Free Shipping on All Orders Over QAR 75
+                  </div>
+                  <!-- cart-noticy -->
+                </div>
+                <!-- cart-dropdown-wrapper -->
               </div>
-              <!-- header-addons-icon -->
+              <!-- cart-dropdown -->
             </div>
+
             <div class="header-addons wishlist-button">
               <div class="header-addons-icon">
                 <a href="#"><i class="klbth-icon-heart"></i></a>
