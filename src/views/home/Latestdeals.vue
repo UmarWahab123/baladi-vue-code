@@ -435,16 +435,18 @@
                               <div class="product-buttons">
                                 <div
                                   class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
-                                  data-product_id="521"
+                                  data-product_id="478"
                                 >
                                   <div class="tinv-wishlist-clear"></div>
+
                                   <a
+                                    :onclick="clickmodal"
                                     role="button"
                                     tabindex="0"
                                     aria-label="Add to Wishlist"
-                                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                                    class="d-none tinvwl-position-after"
                                     data-tinv-wl-list="[]"
-                                    data-tinv-wl-product="521"
+                                    data-tinv-wl-product="478"
                                     data-tinv-wl-productvariation="0"
                                     data-tinv-wl-productvariations="[0]"
                                     data-tinv-wl-producttype="simple"
@@ -453,6 +455,18 @@
                                       >Add to Wishlist</span
                                     ></a
                                   >
+                                  <a
+                                    :onclick="clickmodal"
+                                    href="javascript::void(0)"
+                                    ><i
+                                      class="fa fa-heart"
+                                      aria-hidden="true"
+                                    ></i
+                                    ><span class="tinvwl_add_to_wishlist-text"
+                                      >Add to Wishlist</span
+                                    ></a
+                                  >
+
                                   <div class="tinv-wishlist-clear"></div>
                                   <div class="tinvwl-tooltip">
                                     Add to Wishlist
@@ -460,18 +474,19 @@
                                 </div>
                                 <a href="#?featured=yes" class="most-comments"
                                   ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                    src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                     alt="featured" /></a
                                 ><a
-                                  href="#"
-                                  class="woosc-btn woosc-btn-521"
+                                  href="javascript::void(0)"
+                                  class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                                  :onclick="clickcomparemodal"
                                   data-id="521"
                                   >Compare</a
-                                ><a
-                                  href="521"
+                                ><span
+                                  :onclick="clickbigmodal"
                                   class="detail-bnt quickview animated"
                                   ><i class="klbth-icon-eye-empty"></i
-                                ></a>
+                                ></span>
                               </div>
                             </div>
                             <div class="content-wrapper">
