@@ -148,8 +148,9 @@
   ul.products li.product .tinvwl_add_to_wishlist_button {
     margin-top: 1em
   }
+ 
   .tinvwl_add_to_wishlist_button {
-    display: inline-block;
+    display: none;
     cursor: pointer;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;

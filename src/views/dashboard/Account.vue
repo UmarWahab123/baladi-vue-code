@@ -221,7 +221,7 @@ export default {
   data() {
     return {
       isloading: true,
-      userdata: { id: "", name: "", email: "" },
+      userdata: { name: "", email: "" },
 
       formdata: {
         id: 6,
@@ -244,9 +244,8 @@ export default {
     //session
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.userdata = userInfo.name;
-      this.userdata1 = userInfo.email;
-      this.userdata2 = userInfo.id;
+      this.userdata.name = userInfo.name;
+      this.userdata.email = userInfo.email;
 
       // console.log(userInfo);
     } else {

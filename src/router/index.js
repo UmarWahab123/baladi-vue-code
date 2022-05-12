@@ -115,7 +115,7 @@ const routes = [
   },
   {
     name: 'product-detail',
-    path: '/product-detail',
+    path: '/product-detail/:id?',
     component: () => import('@/views/category/Productdetail.vue'),
   },
   {
