@@ -239,9 +239,17 @@ const routes = [
     component: () => import('@/views/tracking/order-track2.vue'),
   },  
 ];
+
 const router = createRouter({
+  
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  
 });
-
+//use this bellow function when you click on any links an scroll up the page  
+router.afterEach(() => {
+ window.scrollTo(0, 0);  
+});
 export default router;
+
+

@@ -1,6 +1,5 @@
 <template>
   <Header />
-
   <main id="main" class="site-primary">
     <div class="site-content">
       <div class="klb-blog page-content">
@@ -44,7 +43,7 @@
                   <figure class="entry-media">
                     <a href="#"
                       ><img
-                        :src="this.url + item.photo"
+                        :src="url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
                     /></a>
                   </figure>
@@ -257,24 +256,6 @@
                   </ul>
                 </div>
               </div>
-              <div class="widget widget_media_image">
-                <img
-                  width="293"
-                  height="587"
-                  src="https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner.jpg"
-                  class="image wp-image-2119 attachment-full size-full"
-                  alt=""
-                  loading="lazy"
-                  style="max-width: 100%; height: auto"
-                  srcset="
-                    https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner.jpg         293w,
-                    https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner-27x54.jpg    27w,
-                    https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner-150x300.jpg 150w,
-                    https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner-64x128.jpg   64w
-                  "
-                  sizes="(max-width: 293px) 100vw, 293px"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -283,25 +264,23 @@
   </main>
   <Footer />
 </template>
-
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
   }),
   mounted() {
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/blog")
+      // .get(import.meta.env.VITE_API_URL + "/api/web/blog")
+      .get("http://baladiweb.bteamwebs.com/api/web/blog")
       .then((response) => {
         this.results = response.data.data;
-        console.log(this.results);
       })
       .catch((error) => {});
   },

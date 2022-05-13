@@ -13,8 +13,8 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <p>
-                      Hello <strong>{{ this.userdata.name }}</strong> (not
-                      <strong>{{ this.userdata.name }}</strong
+                      Hello <strong>{{ userdata.name }}</strong> (not
+                      <strong>{{ userdata.name }}</strong
                       >?
                       <a
                         href="https://klbtheme.com/machic/my-account/customer-logout/?_wpnonce=9691dc2191"
@@ -73,7 +73,7 @@ export default {
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.userdata.name = userInfo.name;
-      console.log(this.userdata);
+      // console.log(this.userdata);
     } else {
       this.$router.push("myaccount");
     }

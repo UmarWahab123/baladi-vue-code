@@ -137,7 +137,7 @@
                                 name: 'brandsProduct',
                                 params: { id: item.id },
                               }"
-                              ><img alt="" :src="this.url + item.photo" />
+                              ><img alt="" :src="url + item.photo" />
                             </router-link>
                           </div>
                         </div>
@@ -160,16 +160,15 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
   }),
   mounted() {
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands")
+      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands")
       .then((response) => {
         this.results = response.data.data;
         console.log(this.results);

@@ -175,28 +175,34 @@
             <!-- site-search -->
 
             <div class="header-addons login-button">
-              <a href="#">
-                <div class="header-addons-icon">
-                  <i class="klbth-icon-user-1"></i>
-                </div>
-                <div class="header-addons-text">
-                  <div v-if="this.userdata.name" class="sub-text">
-                    {{ this.userdata.name }}
-                  </div>
-                  <div v-else class="sub-text">Sign In</div>
+              <div class="header-addons-icon">
+                <i class="klbth-icon-user-1"></i>
+              </div>
 
-                  <router-link
-                    v-if="this.userdata.name"
-                    class="primary-text"
-                    to="/userdashboard"
-                    >Account
-                  </router-link>
-                  <router-link v-else class="primary-text" to="/myaccount"
-                    >Account
-                  </router-link>
-                </div>
-                <!-- header-addons-text -->
-              </a>
+              <div class="header-addons-text">
+                <router-link
+                  v-if="userdata.name"
+                  class="primary-text"
+                  to="/userdashboard"
+                >
+                  <div v-if="userdata.name" class="sub-text">
+                    {{ userdata.name }}
+                  </div>
+                </router-link>
+
+                <div v-else class="sub-text">Sign In</div>
+                <router-link
+                  v-if="userdata.name"
+                  class="primary-text"
+                  to="/userdashboard"
+                >
+                  Account
+                </router-link>
+                <router-link v-else class="primary-text" to="/myaccount"
+                  >Account
+                </router-link>
+              </div>
+              <!-- header-addons-text -->
             </div>
             <!-- header-addons -->
             <div class="header-addons cart-button">
@@ -452,7 +458,7 @@
                                       <img
                                         width="90"
                                         height="90"
-                                        src="./src/img/products/Dairy products/Cheese/slice edam cheese close up_.jpg"
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         alt=""
                                       />
