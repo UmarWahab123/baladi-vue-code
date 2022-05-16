@@ -132,7 +132,7 @@
                         >
                           <div class="square-holder shadow">
                             <router-link
-                              class="btn read-more"
+                              class=""
                               :to="{
                                 name: 'brandsProduct',
                                 params: { id: item.id },

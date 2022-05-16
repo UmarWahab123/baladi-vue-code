@@ -1687,7 +1687,9 @@
                 <li
                   class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children"
                 >
-                  <router-link to="/category">Top Categories </router-link>
+                  <router-link to="/all_categories"
+                    >Top Categories
+                  </router-link>
 
                   <ul class="sub-menu">
                     <li
@@ -1882,7 +1884,7 @@
                 <li
                   class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                 >
-                  <router-link to=""
+                  <router-link to="category"
                     ><i class="klbth-icon-home"></i> Home And
                     Living</router-link
                   >

@@ -45,7 +45,7 @@
                   <figure class="entry-media">
                     <a href="#"
                       ><img
-                        :src="this.url + item.photo"
+                        :src="url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
                     /></a>
                   </figure>
@@ -481,11 +481,10 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
     formdata: {
       blog_id: 1,
@@ -503,7 +502,7 @@ export default {
   mounted() {
     var id = this.$route.params.id;
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/blogdetails/" + id)
+      .get("http://baladiweb.bteamwebs.com/api/web/blogdetails/" + id)
       .then((response) => {
         this.results = response.data.data;
         console.log(this.results);
@@ -514,7 +513,7 @@ export default {
     PostComment() {
       axios
         .post(
-          import.meta.env.VITE_API_URL + "/api/web/addblogcomment",
+          "http://baladiweb.bteamwebs.com/api/web/addblogcomment",
           this.formdata
         )
         .then((response) => {
@@ -528,7 +527,7 @@ export default {
     PostReply() {
       axios
         .post(
-          import.meta.env.VITE_API_URL + "/api/web/addcommentreply",
+          "http://baladiweb.bteamwebs.com/api/web/addcommentreply",
           this.formdata1
         )
         .then((response) => {
