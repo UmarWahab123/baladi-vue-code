@@ -268,6 +268,12 @@
                   >
                     <router-link to="/contact-us">Contact Us</router-link>
                   </li>
+                  <li
+                    id="menu-item-2509"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2509"
+                  >
+                    <router-link to="/faq">FAQs</router-link>
+                  </li>
                 </ul>
               </div>
             </div>

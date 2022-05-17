@@ -64,25 +64,25 @@
                                   >
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
                                       data-hover-slider-i="44"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
                                       data-hover-slider-i="45"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
                                       data-hover-slider-i="46"
                                       style="flex-grow: 1"
                                     ></div>
                                     <div
                                       class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
                                       data-hover-slider-i="47"
                                       style="flex-grow: 1"
                                     ></div>
@@ -115,24 +115,11 @@
                                       class="hover-slider-indicator-dot"
                                     ></div>
                                   </div>
-                                  <div class="product-card">
-                                    <div id="slidingWindow" ontouchstart="">
-                                      <div class="slidingSection">
-                                        <img
-                                          :src="this.url + item.images[0].photo"
-                                          class="hover-slider-init"
-                                          data-options='{"touch":"end","preloadImages": true }'
-                                        />
-                                      </div>
-                                      <div class="slidingSection">
-                                        <img
-                                          :src="this.url + item.images[0].photo"
-                                          class="hover-slider-init"
-                                          data-options='{"touch":"end","preloadImages": true }'
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <img
+                                    :src="this.url + item.images[0].photo"
+                                    class="hover-slider-init"
+                                    data-options='{"touch":"end","preloadImages": true }'
+                                  />
                                 </div>
                               </router-link>
                               <div class="product-buttons">
@@ -225,7 +212,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >$</span
+                                        >QAR </span
                                       >{{ item.previous_price }}</bdi
                                     ></span
                                   ></del
@@ -235,7 +222,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >$</span
+                                        >QAR </span
                                       >{{ item.sale_price }}</bdi
                                     ></span
                                   ></ins
@@ -520,7 +507,7 @@
                                       ><bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >699.99</bdi
                                       ></span
                                     ></del
@@ -531,7 +518,7 @@
                                       ><bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >629.99</bdi
                                       ></span
                                     ></ins
@@ -969,12 +956,43 @@
                     </div>
 
                     <div class="product-info-bottom">
-                      <div class="info-message">
-                        <i class="klbth-icon-delivery-box-3"></i>
-                        <strong>2-day Delivery</strong>
+                      <div class="">
+                        <div class="social-share site-social colored mt-0">
+                          <ul class="social-container">
+                            <li>
+                              <a href="" class="facebook" target="_blank"
+                                ><i class="klbth-icon-facebook"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="twitter" target="_blank"
+                                ><i class="klbth-icon-twitter"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="youtube" target="_blank"
+                                ><i class="klbth-icon-youtube"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="instag" target="_blank"
+                                ><i class="klbth-icon-instagram"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="whatsapp" target="_blank"
+                                ><i class="klbth-icon-whatsapp"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="info-message">
-                        Speedy and reliable parcel delivery!
+                      <div class="info-message m-4 mt-2">
+                        <i
+                          class="fa share-icon fa-share"
+                          aria-hidden="true"
+                        ></i>
+                        <strong>Share</strong>
                       </div>
                     </div>
                   </div>
@@ -1271,7 +1289,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1280,7 +1298,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1291,7 +1309,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1300,7 +1318,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1311,7 +1329,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1320,7 +1338,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >438.67</bdi
                         ></span
                       ></ins

@@ -19,7 +19,7 @@
             <td class="product-total">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
+                  ><span class="woocommerce-Price-currencySymbol">QAR </span
                   >749.90</bdi
                 ></span
               >
@@ -32,7 +32,7 @@
             <td>
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
+                  ><span class="woocommerce-Price-currencySymbol">QAR </span
                   >749.90</bdi
                 ></span
               >
@@ -56,7 +56,8 @@
                     >Flat rate:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >QAR </span
                         >5.00</bdi
                       ></span
                     ></label
@@ -96,7 +97,7 @@
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">$</span
+                    ><span class="woocommerce-Price-currencySymbol">QAR </span
                     >754.90</bdi
                   ></span
                 ></strong

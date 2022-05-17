@@ -137,10 +137,13 @@
                           <a href="#">{{ item.name }}</a>
                         </h3>
                         <ul>
-                          <li><a href="">Fresh Products</a></li>
-                          <li><a href="">Bread Items</a></li>
-                          <li><a href="">Sweets</a></li>
-                          <li><a href="">Cakes Item</a></li>
+                          <li
+                            :data="items"
+                            :key="indextr"
+                            v-for="(items, indextr) in item.sub_categories"
+                          >
+                            <a href="">{{ items.name }}</a>
+                          </li>
                         </ul>
                         <a href="#" class="btn link"
                           >All Fresh Products

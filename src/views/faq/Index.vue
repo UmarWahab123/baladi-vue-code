@@ -4,7 +4,7 @@
     <div class="site-content">
       <div class="shop-content my-account-page mt-60">
         <div class="container">
-          <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
+          <h3 class="text-center mb-4 pb-2 text-success fw-bold">FAQ's</h3>
           <div class="row">
             <section>
               <div class="site-module module-title small">
@@ -15,73 +15,74 @@
 
               <div class="row mt-60">
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="far fa-paper-plane text-primary pe-2"></i> A
-                    simple question?
+                  <h6 class="mb-3">
+                    <i class="far fa-paper-plane text-success pe-2"></i> A Where
+                    can I find the opening hours of my local store?
                   </h6>
                   <p>
-                    <strong><u>Absolutely!</u></strong> We work with top payment
-                    companies which guarantees your safety and security. All
-                    billing information is stored on our payment processing
-                    partner.
+                    <strong><u></u></strong> We have a dedicated section with
+                    all of the opening hours for all of our stores. Please visit
+                    our Store Locator page to learn more.
                   </p>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="fas fa-pen-alt text-primary pe-2"></i> A question
-                    that is longer then the previous one?
+                  <h6 class="mb-3">
+                    <i class="fas fa-pen-alt text-success pe-2"></i> Where's my
+                    nearest store?
                   </h6>
                   <p>
-                    <strong><u>Yes, it is possible!</u></strong> You can cancel
-                    your subscription anytime in your account. Once the
-                    subscription is cancelled, you will not be charged next
-                    month.
+                    <strong><u></u></strong> Please visit our Store Locator page
+                    type in your area, and it will bring up the nearest stores
+                    to you.
                   </p>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="fas fa-user text-primary pe-2"></i> A simple
-                    question?
+                  <h6 class="mb-3">
+                    <i class="fas fa-user text-success pe-2"></i> What type of
+                    payment can I use in-store?
                   </h6>
                   <p>
-                    Currently, we only offer monthly subscription. You can
-                    upgrade or cancel your monthly account at any time with no
-                    further obligation.
+                    We accept the following payment methods in our stores: Cash,
+                    Credit cards, Gift Cards and Loyalty Voucher.
                   </p>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="fas fa-rocket text-primary pe-2"></i> A simple
-                    question?
+                  <h6 class="mb-3">
+                    <i class="fas fa-rocket text-success pe-2"></i> I have a
+                    gift card; how can I use it?
                   </h6>
                   <p>
-                    Yes. Go to the billing section of your dashboard and update
-                    your payment information.
+                    Baladi gift cards can be used for full or partial payment at
+                    any Carrefour hypermarket or Carrefour Market stores in
+                    Qatar. Any remaining balance will be stored on the card and
+                    can be used against future purchases. Baladi Gift cards have
+                    an expiry date of 1 year from the purchasing date.
                   </p>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="fas fa-home text-primary pe-2"></i> A simple
-                    question?
+                  <h6 class="mb-3">
+                    <i class="fas fa-home text-success pe-2"></i> I seem to have
+                    been charged twice for the same transaction. What should I
+                    do?
                   </h6>
                   <p>
-                    <strong><u>Unfortunately no</u>.</strong> We do not issue
-                    full or partial refunds for any reason.
+                    <strong></strong> Please consult our customer service desk
+                    or reach our customer service on 80073.
                   </p>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-4">
-                  <h6 class="mb-3 text-primary">
-                    <i class="fas fa-book-open text-primary pe-2"></i> Another
-                    question that is longer than usual
+                  <h6 class="mb-3">
+                    <i class="fas fa-book-open text-success pe-2"></i> What
+                    shall I do if I've been overcharged?
                   </h6>
                   <p>
-                    Of course! We’re happy to offer a free plan to anyone who
-                    wants to try our service.
+                    Please consult our customer service desk or reach our
+                    customer service on 80073.
                   </p>
                 </div>
               </div>

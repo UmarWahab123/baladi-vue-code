@@ -350,7 +350,7 @@
                         ><span class="woocommerce-Price-amount amount">
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >699.99</bdi
                           >
                         </span></del
@@ -359,7 +359,7 @@
                         ><span class="woocommerce-Price-amount amount">
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >629.99</bdi
                           >
                         </span></ins
@@ -1368,7 +1368,7 @@
                         <span class="woocommerce-Price-amount amount">
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >1,218.99</bdi
                           >
                         </span>
@@ -1494,7 +1494,7 @@
                                               <bdi
                                                 ><span
                                                   class="woocommerce-Price-currencySymbol"
-                                                  >$</span
+                                                  >QAR </span
                                                 >469.99</bdi
                                               >
                                             </span></span
@@ -1558,7 +1558,7 @@
                                               <bdi
                                                 ><span
                                                   class="woocommerce-Price-currencySymbol"
-                                                  >$</span
+                                                  >QAR </span
                                                 >749.00</bdi
                                               >
                                             </span></span
@@ -1622,7 +1622,7 @@
                           <span class="woocommerce-Price-amount amount">
                             <bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >1,218.99</bdi
                             >
                           </span>
@@ -1638,7 +1638,7 @@
                         </p>
                       </div>
                       <div class="cart-noticy">
-                        Free Shipping on All Orders Over $75
+                        Free Shipping on All Orders Over QAR 75
                       </div>
                       <!-- cart-noticy -->
                     </div>
@@ -2890,7 +2890,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >699.99</bdi
                                       >
                                     </span></del
@@ -2902,7 +2902,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >629.99</bdi
                                       >
                                     </span></ins
@@ -2962,7 +2962,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >478.67</bdi
                                       >
                                     </span></del
@@ -2974,7 +2974,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >438.67</bdi
                                       >
                                     </span></ins
@@ -3034,7 +3034,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >959.00</bdi
                                       >
                                     </span></del
@@ -3046,7 +3046,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >859.00</bdi
                                       >
                                     </span></ins
@@ -3104,7 +3104,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >$</span
+                                        >QAR </span
                                       >65.00</bdi
                                     >
                                   </span>
@@ -3113,7 +3113,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >$</span
+                                        >QAR </span
                                       >249.00</bdi
                                     >
                                   </span></span
@@ -3167,7 +3167,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >479.00</bdi
                                       >
                                     </span></del
@@ -3179,7 +3179,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >439.00</bdi
                                       >
                                     </span></ins
@@ -3244,7 +3244,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >79.99</bdi
                                       >
                                     </span></del
@@ -3256,7 +3256,7 @@
                                       <bdi
                                         ><span
                                           class="woocommerce-Price-currencySymbol"
-                                          >$</span
+                                          >QAR </span
                                         >49.99</bdi
                                       >
                                     </span></ins
@@ -3393,7 +3393,8 @@
                   <div class="primary-text cart-subtotal">
                     <span class="woocommerce-Price-amount amount">
                       <bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >QAR </span
                         >1,218.99</bdi
                       >
                     </span>
@@ -3514,7 +3515,7 @@
                                           <bdi
                                             ><span
                                               class="woocommerce-Price-currencySymbol"
-                                              >$</span
+                                              >QAR </span
                                             >469.99</bdi
                                           >
                                         </span></span
@@ -3573,7 +3574,7 @@
                                           <bdi
                                             ><span
                                               class="woocommerce-Price-currencySymbol"
-                                              >$</span
+                                              >QAR </span
                                             >469.99</bdi
                                           >
                                         </span></span
@@ -3637,7 +3638,7 @@
                       <span class="woocommerce-Price-amount amount">
                         <bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >1,218.99</bdi
                         >
                       </span>
@@ -3650,7 +3651,7 @@
                     </p>
                   </div>
                   <div class="cart-noticy">
-                    Free Shipping on All Orders Over $75
+                    Free Shipping on All Orders Over QAR 75
                   </div>
                   <!-- cart-noticy -->
                 </div>

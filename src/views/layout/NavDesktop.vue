@@ -18,13 +18,13 @@
                   id="menu-item-2199"
                   class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2199"
                 >
-                  <a href="#">Featured Products</a>
+                  <router-link to="/category">Featured Products </router-link>
                 </li>
                 <li
                   id="menu-item-2229"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229"
                 >
-                  <router-link to="/faq">Help </router-link>
+                  <router-link to="/helpcenter">Help </router-link>
                 </li>
 
                 <li
@@ -60,28 +60,6 @@
                   </router-link>
                 </li>
 
-                <li
-                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2194"
-                >
-                  <a href="#">USD</a>
-                  <ul class="sub-menu">
-                    <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2195"
-                    >
-                      <a href="#">USD</a>
-                    </li>
-                    <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2196"
-                    >
-                      <a href="#">INR</a>
-                    </li>
-                    <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2197"
-                    >
-                      <a href="#">GBP</a>
-                    </li>
-                  </ul>
-                </li>
                 <li
                   class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2176"
                 >
@@ -539,7 +517,9 @@
 
             <div class="header-addons wishlist-button">
               <div class="header-addons-icon">
-                <a href="#"><i class="klbth-icon-heart"></i></a>
+                <router-link to="/wishlist"
+                  ><i class="klbth-icon-heart"></i
+                ></router-link>
                 <div class="button-count">
                   <a
                     href="#"
@@ -568,7 +548,8 @@
                   <div class="primary-text cart-subtotal">
                     <span class="woocommerce-Price-amount amount">
                       <bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >QAR </span
                         >1,218.99</bdi
                       >
                     </span>
@@ -702,7 +683,7 @@
                                           <bdi
                                             ><span
                                               class="woocommerce-Price-currencySymbol"
-                                              >$</span
+                                              >QAR </span
                                             >749.00</bdi
                                           >
                                         </span></span
@@ -766,7 +747,7 @@
                       <span class="woocommerce-Price-amount amount">
                         <bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >1,218.99</bdi
                         >
                       </span>
@@ -785,7 +766,7 @@
                     </p>
                   </div>
                   <div class="cart-noticy">
-                    Free Shipping on All Orders Over $75
+                    Free Shipping on All Orders Over QAR 75
                   </div>
                   <!-- cart-noticy -->
                 </div>
@@ -1973,7 +1954,7 @@
                                   <bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >$</span
+                                      >QAR </span
                                     >699.99</bdi
                                   >
                                 </span></del
@@ -1983,7 +1964,7 @@
                                   <bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >$</span
+                                      >QAR </span
                                     >629.99</bdi
                                   >
                                 </span></ins
@@ -1991,7 +1972,7 @@
                             ><!-- price -->
                             <div class="product-meta">
                               <div class="product-message color-light">
-                                2-day Delivery
+                                <!-- 2-day Delivery -->
                               </div>
                             </div>
                             <!-- product-meta -->

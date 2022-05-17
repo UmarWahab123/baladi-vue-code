@@ -252,7 +252,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >95.00</bdi
                             ></span
                           ></del
@@ -261,7 +261,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >65.00</bdi
                             ></span
                           ></ins
@@ -645,7 +645,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >189.99</bdi
                           ></span
                         ></del
@@ -654,7 +654,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >129.99</bdi
                           ></span
                         ></ins
@@ -665,7 +665,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >699.99</bdi
                           ></span
                         ></del
@@ -674,7 +674,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >629.99</bdi
                           ></span
                         ></ins
@@ -685,7 +685,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >478.67</bdi
                           ></span
                         ></del
@@ -694,7 +694,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >438.67</bdi
                           ></span
                         ></ins

@@ -1,37 +1,18 @@
 <template>
   <div
-    class="
-      elementor-section
-      elementor-top-section
-      elementor-element
-      elementor-element-b2529f3
-      elementor-section-boxed
-      elementor-section-height-default
-      elementor-section-height-default
-    "
+    class="elementor-section elementor-top-section elementor-element elementor-element-b2529f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="b2529f3"
     data-element_type="section"
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="
-          elementor-column
-          elementor-col-100
-          elementor-top-column
-          elementor-element
-          elementor-element-b24b142
-        "
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b24b142"
         data-id="b24b142"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="
-              elementor-element
-              elementor-element-5de25eb
-              elementor-widget
-              elementor-widget-machic-clients-box
-            "
+            class="elementor-element elementor-element-5de25eb elementor-widget elementor-widget-machic-clients-box"
             data-id="5de25eb"
             data-element_type="widget"
             data-widget_type="machic-clients-box.default"

@@ -165,7 +165,7 @@
                           ><span class="woocommerce-Price-amount amount">
                             <bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >699.99</bdi
                             >
                           </span></del
@@ -174,7 +174,7 @@
                           ><span class="woocommerce-Price-amount amount">
                             <bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >629.99</bdi
                             >
                           </span></ins
@@ -633,12 +633,43 @@
                     </div>
 
                     <div class="product-info-bottom">
-                      <div class="info-message">
-                        <i class="klbth-icon-delivery-box-3"></i>
-                        <strong>2-day Delivery</strong>
+                      <div class="">
+                        <div class="social-share site-social colored mt-0">
+                          <ul class="social-container">
+                            <li>
+                              <a href="" class="facebook" target="_blank"
+                                ><i class="klbth-icon-facebook"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="twitter" target="_blank"
+                                ><i class="klbth-icon-twitter"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="youtube" target="_blank"
+                                ><i class="klbth-icon-youtube"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="instag" target="_blank"
+                                ><i class="klbth-icon-instagram"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a href="" class="whatsapp" target="_blank"
+                                ><i class="klbth-icon-whatsapp"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="info-message">
-                        Speedy and reliable parcel delivery!
+                      <div class="info-message m-4 mt-2">
+                        <i
+                          class="fa share-icon fa-share"
+                          aria-hidden="true"
+                        ></i>
+                        <strong>Share</strong>
                       </div>
                     </div>
                   </div>
@@ -935,7 +966,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -944,7 +975,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -955,7 +986,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -964,7 +995,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -975,7 +1006,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -984,7 +1015,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >438.67</bdi
                         ></span
                       ></ins

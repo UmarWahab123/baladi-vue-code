@@ -2,29 +2,37 @@
   "name": "vue3-project",
   "version": "1.0.0",
   "description": "Baladi vue js webstore",
+  "author": "Qaiser Abbas",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "dev": "vite",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "preview": "vite preview"
   },
   "dependencies": {
     "@coders-tm/vue-number-format": "^2.1.11",
+    "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@splidejs/vue-splide": "^0.5.18",
+    "@vue/cli": "^5.0.4",
+    "@vue/cli-shared-utils": "^5.0.4",
     "autoprefixer": "^10.4.2",
     "axios": "^0.26.1",
     "dayjs": "^1.11.1",
+    "netlify-cli": "^10.3.1",
     "pinia": "^2.0.10",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.18",
     "vue": "^3.2.25",
     "vue-hover-slider": "^0.4.0",
+    "vue-i18n": "^9.1.0",
     "vue-number-format": "^1.2.1",
     "vue-router": "^4.0.12",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
     "@vitejs/plugin-vue": "^2.0.0",
-    "vite": "^2.7.2"
-  },
-  "author": "Qaiser Abbas"
+    "vite": "^2.7.2",
+    "vue-cli-plugin-i18n": "~2.3.1"
+  }
 }

@@ -60,7 +60,7 @@
                                 ><bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >$</span
+                                    >Q</span
                                   >629.99</bdi
                                 ></span
                               >
@@ -85,7 +85,7 @@
                                 ><bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >$</span
+                                    >Q</span
                                   >438.67</bdi
                                 ></span
                               >
@@ -99,7 +99,7 @@
                             <td>
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >$</span
+                                  >Q</span
                                 >1,068.66</span
                               >
                             </td>
@@ -117,7 +117,7 @@
                             <td>
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >$</span
+                                  >Q</span
                                 >1,068.66</span
                               >
                             </td>

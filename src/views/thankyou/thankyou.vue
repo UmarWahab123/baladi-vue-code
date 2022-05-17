@@ -29,7 +29,8 @@
                   <strong
                     ><span class="woocommerce-Price-amount amount"
                       ><bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >QAR </span
                         >644.99</bdi
                       ></span
                     ></strong
@@ -77,7 +78,7 @@
                         <span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >629.99</bdi
                           ></span
                         >
@@ -91,7 +92,7 @@
                       <td>
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >629.99</span
                         >
                       </td>
@@ -101,7 +102,7 @@
                       <td>
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >15.00</span
                         >&nbsp;<small class="shipped_via">via Flat rate</small>
                       </td>
@@ -115,7 +116,7 @@
                       <td>
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >644.99</span
                         >
                       </td>
