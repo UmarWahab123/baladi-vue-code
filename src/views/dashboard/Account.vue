@@ -254,7 +254,7 @@ export default {
     userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
     //userprofile data
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/auth/getProfile", {
+      .get("http://baladiweb.bteamwebs.com/api/auth/getProfile", {
         headers: {
           Authorization: `${userInfo.token}`,
         },

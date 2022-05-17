@@ -240,7 +240,7 @@
                     id="menu-item-2186"
                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2186"
                   >
-                    <router-link to="/careers">Careers </router-link>
+                    <!-- <router-link to="/careers">Careers </router-link> -->
                   </li>
                   <li
                     id="menu-item-2508"

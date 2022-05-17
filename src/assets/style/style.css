@@ -1960,7 +1960,7 @@ p.woocommerce-mini-cart__buttons.buttons a:not(.checkout) {
 
 p.woocommerce-mini-cart__buttons.buttons a.checkout {
     color: #fff;
-    background-color: #ef262c;
+    /* background-color: #ef262c; */
     border-color: transparent;
 }
 

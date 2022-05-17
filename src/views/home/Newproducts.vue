@@ -2683,7 +2683,7 @@ export default {
       .get(import.meta.env.VITE_API_URL + "/api/web/home/bestsellers")
       .then((response) => {
         this.bestresults = response.data.data;
-        console.log(this.bestresults);
+        // console.log(this.bestresults);
       })
       .catch((error) => {});
     axios
