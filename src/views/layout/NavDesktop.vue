@@ -47,7 +47,7 @@
                   id="menu-item-2233"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"
                 >
-                  <router-link to="/order-tracking"
+                  <router-link to=""
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
                     &nbsp; Location
                   </router-link>
@@ -153,9 +153,18 @@
             <!-- site-search -->
 
             <div class="header-addons login-button">
-              <div class="header-addons-icon">
-                <i class="klbth-icon-user-1"></i>
-              </div>
+              <router-link
+                v-if="userdata.name"
+                class="primary-text"
+                to="/userdashboard"
+              >
+                <div class="header-addons-icon">
+                  <i class="klbth-icon-user-1"></i>
+                </div>
+              </router-link>
+              <router-link v-else class="primary-text" to="/myaccount"
+                >Account
+              </router-link>
 
               <div class="header-addons-text">
                 <router-link

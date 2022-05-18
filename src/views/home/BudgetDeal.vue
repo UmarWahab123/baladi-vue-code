@@ -698,6 +698,14 @@
                         >
                           <span>Add to cart</span>
                         </button>
+                        <button
+                          type="submit"
+                          name="add-to-cart"
+                          value="408"
+                          class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                        >
+                          <span>Buy Now</span>
+                        </button>
 
                         <div
                           class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"

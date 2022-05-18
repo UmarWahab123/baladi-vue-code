@@ -10,7 +10,6 @@
       >
         <div class="elementor-section-wrap">
           <Part1 />
-          <Part2 />
         </div>
       </div>
     </div>

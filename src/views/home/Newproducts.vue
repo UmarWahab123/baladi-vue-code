@@ -147,16 +147,28 @@
                                 >
                                   <div class="tinv-wishlist-clear"></div>
                                   <a
+                                    :onclick="clickmodal"
                                     role="button"
                                     tabindex="0"
                                     aria-label="Add to Wishlist"
-                                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                                    class="d-none tinvwl-position-after"
                                     data-tinv-wl-list="[]"
-                                    data-tinv-wl-product="440"
+                                    data-tinv-wl-product="478"
                                     data-tinv-wl-productvariation="0"
                                     data-tinv-wl-productvariations="[0]"
                                     data-tinv-wl-producttype="simple"
                                     data-tinv-wl-action="add"
+                                    ><span class="tinvwl_add_to_wishlist-text"
+                                      >Add to Wishlist</span
+                                    ></a
+                                  >
+                                  <a
+                                    :onclick="clickmodal"
+                                    href="javascript::void(0)"
+                                    ><i
+                                      class="fa fa-heart"
+                                      aria-hidden="true"
+                                    ></i
                                     ><span class="tinvwl_add_to_wishlist-text"
                                       >Add to Wishlist</span
                                     ></a
@@ -171,15 +183,16 @@
                                     src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                     alt="featured" /></a
                                 ><a
-                                  href="#"
-                                  class="woosc-btn woosc-btn-440"
-                                  data-id="440"
+                                  href="javascript::void(0)"
+                                  class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                                  :onclick="clickcomparemodal"
+                                  data-id="521"
                                   >Compare</a
-                                ><a
-                                  href="440"
+                                ><span
+                                  :onclick="clickbigmodal"
                                   class="detail-bnt quickview animated"
                                   ><i class="klbth-icon-eye-empty"></i
-                                ></a>
+                                ></span>
                               </div>
                             </div>
                             <div class="content-wrapper">
@@ -301,7 +314,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >QAR <br /></span
                                       >{{ trend.previous_price }}</bdi
                                     ></span
                                   ></del
@@ -311,7 +324,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >QAR <br /></span
                                       >{{ trend.sale_price }}</bdi
                                     ></span
                                   ></ins
@@ -874,305 +887,672 @@
               </div>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-f777aa4 elementor-widget elementor-widget-machic-category-banner"
-            data-id="f777aa4"
-            data-element_type="widget"
-            data-widget_type="machic-category-banner.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module products-category-module style-1">
-                <div class="module-header">
-                  <h4 class="entry-title">Smartphones &amp; Accessories</h4>
-                  <a href="" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
-                  ></a>
-                </div>
-                <div class="module-wrapper">
-                  <div class="module-column">
-                    <div class="product-category-detail">
-                      <div class="category-banner">
-                        <div class="banner dark align-top">
-                          <div class="banner-content">
-                            <div class="banner-content-wrapper">
-                              <h6 class="entry-subtitle style-2">
-                                Samsung Phone
-                              </h6>
-                              <h3 class="entry-title">Galaxy A46</h3>
-                              <div class="entry-description">
-                                <p>Don't miss the last opportunity.</p>
-                              </div>
-                              <div class="entry-button">
-                                <a href="" class="btn small rounded link-color"
-                                  >Shop Now</a
-                                >
-                              </div>
-                            </div>
+          <div class="elementor-widget-container my-5">
+            <div class="site-module products-module">
+              <div class="module-header">
+                <h4 class="entry-title">Smart Phone &amp; Accesseries</h4>
+                <a href="#" class="btn link"
+                  >View All <i class="klbth-icon-right-arrow"></i
+                ></a>
+              </div>
+              <div class="module-wrapper">
+                <div class="products column-4 mobile-2 total-4">
+                  <div class="product custom-hover">
+                    <div class="product-wrapper product-type-1">
+                      <div class="product-content">
+                        <div class="thumbnail-wrapper">
+                          <div class="product-badges">
+                            <span class="badge onsale">11%</span>
                           </div>
-                          <div class="banner-image">
-                            <img
-                              src="https://klbtheme.com/machic/wp-content/plugins/machic-core/elementor/images/category-banner.jpg"
-                              alt=""
-                            />
-                          </div>
-                          <a href="" class="overlay-link"></a>
-                        </div>
-                      </div>
-                      <div class="categories-list">
-                        <h4 class="entry-title">Cell Phones</h4>
-                        <ul>
-                          <li>
-                            <a href=""
-                              >iPhone <span class="count">( 1 )</span></a
+                          <a
+                            href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                          >
+                            <div
+                              class="product-card"
+                              style="position: relative"
                             >
-                          </li>
-                          <li>
-                            <a href=""
-                              >Phone Accessories
-                              <span class="count">( 1 )</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href=""
-                              >Phone Cases <span class="count">( 0 )</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href=""
-                              >Postpaid Phones
-                              <span class="count">( 1 )</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href=""
-                              >Prepaid Phones
-                              <span class="count">( 2 )</span></a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="module-column">
-                    <div class="products column-3 mobile-2">
-                      <div class="product custom-hover" v-for="n in 6">
-                        <div class="product-wrapper product-type-1">
-                          <div class="product-content">
-                            <div class="thumbnail-wrapper">
-                              <div class="product-badges">
-                                <span class="badge onsale">11%</span>
-                              </div>
-                              <a
-                                href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              <div
+                                class="hover-slider-images-toggler"
+                                style="
+                                  position: absolute;
+                                  inset: 0px;
+                                  display: flex;
+                                "
                               >
                                 <div
-                                  class="product-card"
-                                  style="position: relative"
-                                >
-                                  <div
-                                    class="hover-slider-images-toggler"
-                                    style="
-                                      position: absolute;
-                                      inset: 0px;
-                                      display: flex;
-                                    "
-                                  >
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
-                                      data-hover-slider-i="13"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                                      data-hover-slider-i="14"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
-                                      data-hover-slider-i="15"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
-                                      data-hover-slider-i="16"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="17"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                  </div>
-                                  <div class="hover-slider-indicator">
-                                    <div
-                                      data-hover-slider-i="13"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="14"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="15"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="16"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="17"
-                                      class="hover-slider-indicator-dot active"
-                                    ></div>
-                                  </div>
-                                  <img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                    class="hover-slider-init"
-                                    data-options='{"touch":"end","preloadImages": true }'
-                                  />
-                                </div>
-                              </a>
-                              <div class="product-buttons">
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
+                                  data-hover-slider-i="1"
+                                  style="flex-grow: 1"
+                                ></div>
                                 <div
-                                  class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
-                                  data-product_id="521"
-                                >
-                                  <div class="tinv-wishlist-clear"></div>
-                                  <a
-                                    role="button"
-                                    tabindex="0"
-                                    aria-label="Add to Wishlist"
-                                    class="tinvwl_add_to_wishlist_button d-none tinvwl-icon-heart tinvwl-position-after"
-                                    data-tinv-wl-list="[]"
-                                    data-tinv-wl-product="521"
-                                    data-tinv-wl-productvariation="0"
-                                    data-tinv-wl-productvariations="[0]"
-                                    data-tinv-wl-producttype="simple"
-                                    data-tinv-wl-action="add"
-                                    ><span class="tinvwl_add_to_wishlist-text"
-                                      >Add to Wishlist</span
-                                    ></a
-                                  >
-                                  <a
-                                    :onclick="clickmodal"
-                                    href="javascript::void(0)"
-                                    ><i
-                                      class="fa fa-heart"
-                                      aria-hidden="true"
-                                    ></i
-                                    ><span class="tinvwl_add_to_wishlist-text"
-                                      >Add to Wishlist</span
-                                    ></a
-                                  >
-
-                                  <div class="tinv-wishlist-clear"></div>
-                                  <div class="tinvwl-tooltip">
-                                    Add to Wishlist
-                                  </div>
-                                </div>
-                                <a href="#?featured=yes" class="most-comments"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                    alt="featured" /></a
-                                ><a
-                                  href="javascript::void(0)"
-                                  class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
-                                  :onclick="clickcomparemodal"
-                                  data-id="521"
-                                  >Compare</a
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
+                                  data-hover-slider-i="2"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
+                                  data-hover-slider-i="3"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
+                                  data-hover-slider-i="4"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                  data-hover-slider-i="5"
+                                  style="flex-grow: 1"
+                                ></div>
+                              </div>
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="1"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="2"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="3"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="4"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="5"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                              </div>
+                              <img
+                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
+                                class="hover-slider-init"
+                                data-options='{"touch":"end","preloadImages": true }'
+                              />
+                            </div>
+                          </a>
+                          <div class="product-buttons">
+                            <div
+                              class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                              data-product_id="521"
+                            >
+                              <div class="tinv-wishlist-clear"></div>
+                              <a href="javascript::void(0)" data-v-9705c064=""
+                                ><i
+                                  class="fa fa-heart"
+                                  aria-hidden="true"
+                                  data-v-9705c064=""
+                                ></i
                                 ><span
-                                  :onclick="clickbigmodal"
-                                  class="detail-bnt quickview animated"
-                                  ><i class="klbth-icon-eye-empty"></i
-                                ></span>
-                              </div>
+                                  class="tinvwl_add_to_wishlist-text"
+                                  data-v-9705c064=""
+                                  >Add to Wishlist</span
+                                ></a
+                              >
+
+                              <div class="tinv-wishlist-clear"></div>
+                              <div class="tinvwl-tooltip">Add to Wishlist</div>
                             </div>
-                            <div class="content-wrapper">
-                              <h3 class="product-title">
-                                <a
-                                  href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                  >Apple 10.9-inch iPad Air Wi-Fi Cellular
-                                  64GB</a
-                                >
-                              </h3>
-                              <div class="product-rating">
-                                <div
-                                  class="star-rating"
-                                  role="img"
-                                  aria-label="Rated 5.00 out of 5"
-                                >
-                                  <span style="width: 100%"
-                                    >Rated
-                                    <strong class="rating">5.00</strong> out of
-                                    5</span
-                                  >
-                                </div>
-                                <div class="count-rating">
-                                  1 <span class="rating-text">Ratings</span>
-                                </div>
-                              </div>
-                              <div class="product-price-cart">
-                                <span class="price"
-                                  ><del aria-hidden="true"
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        ><span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >QAR </span
-                                        >699.99</bdi
-                                      ></span
-                                    ></del
-                                  >
-                                  <ins
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        ><span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >QAR </span
-                                        >629.99</bdi
-                                      ></span
-                                    ></ins
-                                  ></span
-                                ><a
-                                  href="?add-to-cart=521"
-                                  data-quantity="1"
-                                  class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                  data-product_id="521"
-                                  data-product_sku="BE45VGRT"
-                                  aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                                  rel="nofollow"
-                                  ><i class="klbth-icon-shop-1"></i> Add to
-                                  cart</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-footer">
-                            <div class="product-footer-details">
-                              <ul>
-                                <li class="SpecHighlights-list-label">
-                                  Screen Size 10.9 in
-                                </li>
-                                <li>Operating System Apple iOS</li>
-                                <li>Product Length 9.74 in</li>
-                              </ul>
-                              &nbsp;
-                            </div>
+                            <a href="#?featured=yes" class="most-comments"
+                              ><img
+                                src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                                alt="featured" /></a
+                            ><a
+                              href="#"
+                              class="woosc-btn woosc-btn-521"
+                              data-id="521"
+                              >Compare</a
+                            ><a href="521" class="detail-bnt quickview animated"
+                              ><i class="klbth-icon-eye-empty"></i
+                            ></a>
                           </div>
                         </div>
-                        <div
-                          class="product-content-fade"
-                          style="margin-bottom: -109px"
-                        ></div>
+                        <div class="content-wrapper">
+                          <h3 class="product-title">
+                            <a
+                              href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
+                            >
+                          </h3>
+                          <div class="product-rating">
+                            <div
+                              class="star-rating"
+                              role="img"
+                              aria-label="Rated 5.00 out of 5"
+                            >
+                              <span style="width: 100%"
+                                >Rated <strong class="rating">5.00</strong> out
+                                of 5</span
+                              >
+                            </div>
+                            <div class="count-rating">
+                              1 <span class="rating-text">Ratings</span>
+                            </div>
+                          </div>
+                          <div class="product-price-cart">
+                            <span class="price"
+                              ><del aria-hidden="true"
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >699.99</bdi
+                                  ></span
+                                ></del
+                              >
+                              <ins
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >629.99</bdi
+                                  ></span
+                                ></ins
+                              ></span
+                            ><a
+                              href="?add-to-cart=521"
+                              data-quantity="1"
+                              class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                              data-product_id="521"
+                              data-product_sku="BE45VGRT"
+                              aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
+                              rel="nofollow"
+                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-footer">
+                        <div class="product-footer-details">
+                          <ul>
+                            <li class="SpecHighlights-list-label">
+                              Screen Size 10.9 in
+                            </li>
+                            <li>Operating System Apple iOS</li>
+                            <li>Product Length 9.74 in</li>
+                          </ul>
+                          &nbsp;
+                        </div>
                       </div>
                     </div>
+                    <div
+                      class="product-content-fade"
+                      style="margin-bottom: -109px"
+                    ></div>
+                  </div>
+                  <div class="product custom-hover">
+                    <div class="product-wrapper product-type-1">
+                      <div class="product-content">
+                        <div class="thumbnail-wrapper">
+                          <div class="product-badges">
+                            <span class="badge onsale">9%</span>
+                          </div>
+                          <a
+                            href="#apple-iphone-11-64gb-fully-unlocked-yellow/"
+                          >
+                            <div
+                              class="product-card"
+                              style="position: relative"
+                            >
+                              <div
+                                class="hover-slider-images-toggler"
+                                style="
+                                  position: absolute;
+                                  inset: 0px;
+                                  display: flex;
+                                "
+                              >
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-400x400.jpg"
+                                  data-hover-slider-i="6"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow2-400x400.jpg"
+                                  data-hover-slider-i="7"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow3-400x400.jpg"
+                                  data-hover-slider-i="8"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow4-400x400.jpg"
+                                  data-hover-slider-i="9"
+                                  style="flex-grow: 1"
+                                ></div>
+                              </div>
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="6"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="7"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="8"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="9"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                              </div>
+                              <img
+                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-400x400.jpg"
+                                data-hover-slides="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow2-400x400.jpg,https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow3-400x400.jpg,https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow4-400x400.jpg"
+                                data-options='{"touch":"end","preloadImages": true }'
+                                alt="Apple iPhone 11 64GB Yellow Fully Unlocked"
+                                class="hover-slider-init"
+                              />
+                            </div>
+                          </a>
+                          <div class="product-buttons">
+                            <div
+                              class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                              data-product_id="500"
+                            >
+                              <div class="tinv-wishlist-clear"></div>
+                              <a data-v-9705c064="" href="javascript::void(0)"
+                                ><i
+                                  class="fa fa-heart"
+                                  aria-hidden="true"
+                                  data-v-9705c064=""
+                                ></i
+                                ><span
+                                  class="tinvwl_add_to_wishlist-text"
+                                  data-v-9705c064=""
+                                  >Add to Wishlist</span
+                                ></a
+                              >
+                              <div class="tinv-wishlist-clear"></div>
+                              <div class="tinvwl-tooltip">Add to Wishlist</div>
+                            </div>
+                            <a href="#?featured=yes" class="most-comments"
+                              ><img
+                                src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                                alt="featured" /></a
+                            ><a
+                              href="#"
+                              class="woosc-btn woosc-btn-500"
+                              data-id="500"
+                              >Compare</a
+                            ><a href="500" class="detail-bnt quickview animated"
+                              ><i class="klbth-icon-eye-empty"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="content-wrapper">
+                          <h3 class="product-title">
+                            <a
+                              href="#apple-iphone-11-64gb-fully-unlocked-yellow/"
+                              >Apple iPhone 11 64GB Yellow Fully Unlocked</a
+                            >
+                          </h3>
+                          <div class="product-rating">
+                            <div
+                              class="star-rating"
+                              role="img"
+                              aria-label="Rated 4.00 out of 5"
+                            >
+                              <span style="width: 80%"
+                                >Rated <strong class="rating">4.00</strong> out
+                                of 5</span
+                              >
+                            </div>
+                            <div class="count-rating">
+                              1 <span class="rating-text">Ratings</span>
+                            </div>
+                          </div>
+                          <div class="product-price-cart">
+                            <span class="price"
+                              ><del aria-hidden="true"
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >478.67</bdi
+                                  ></span
+                                ></del
+                              >
+                              <ins
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >438.67</bdi
+                                  ></span
+                                ></ins
+                              ></span
+                            ><a
+                              href="?add-to-cart=500"
+                              data-quantity="1"
+                              class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                              data-product_id="500"
+                              data-product_sku="SO4JK74"
+                              aria-label="Add “Apple iPhone 11 64GB Yellow Fully Unlocked” to your cart"
+                              rel="nofollow"
+                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-footer">
+                        <div class="product-footer-details">
+                          <ul>
+                            <li>Fully Unlocked</li>
+                            <li>iPhone 11 Pro Max</li>
+                            <li>6.50 in</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="product-content-fade"
+                      style="margin-bottom: -91px"
+                    ></div>
+                  </div>
+                  <div class="product custom-hover">
+                    <div class="product-wrapper product-type-1">
+                      <div class="product-content">
+                        <div class="thumbnail-wrapper">
+                          <div class="product-badges">
+                            <span class="badge top">Top Product</span>
+                          </div>
+                          <a
+                            href="#asus-vivobook-15-thin-and-light-laptop-15-6-fhd-display/"
+                            ><img
+                              src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-3-400x400.jpg"
+                              alt="ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD Display"
+                          /></a>
+                          <div class="product-buttons">
+                            <div
+                              class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                              data-product_id="462"
+                            >
+                              <div class="tinv-wishlist-clear"></div>
+                              <a data-v-9705c064="" href="javascript::void(0)"
+                                ><i
+                                  class="fa fa-heart"
+                                  aria-hidden="true"
+                                  data-v-9705c064=""
+                                ></i
+                                ><span
+                                  class="tinvwl_add_to_wishlist-text"
+                                  data-v-9705c064=""
+                                  >Add to Wishlist</span
+                                ></a
+                              >
+                              <div class="tinv-wishlist-clear"></div>
+                              <div class="tinvwl-tooltip">Add to Wishlist</div>
+                            </div>
+                            <a
+                              href="#"
+                              class="woosc-btn woosc-btn-462"
+                              data-id="462"
+                              >Compare</a
+                            ><a href="462" class="detail-bnt quickview animated"
+                              ><i class="klbth-icon-eye-empty"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="content-wrapper">
+                          <h3 class="product-title">
+                            <a
+                              href="#asus-vivobook-15-thin-and-light-laptop-15-6-fhd-display/"
+                              >ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD
+                              Display</a
+                            >
+                          </h3>
+                          <div class="product-rating">
+                            <div
+                              class="star-rating"
+                              role="img"
+                              aria-label="Rated 5.00 out of 5"
+                            >
+                              <span style="width: 100%"
+                                >Rated <strong class="rating">5.00</strong> out
+                                of 5</span
+                              >
+                            </div>
+                            <div class="count-rating">
+                              1 <span class="rating-text">Ratings</span>
+                            </div>
+                          </div>
+                          <div class="product-price-cart">
+                            <span class="price"
+                              ><del aria-hidden="true"
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >519.00</bdi
+                                  ></span
+                                ></del
+                              >
+                              <ins
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >469.00</bdi
+                                  ></span
+                                ></ins
+                              ></span
+                            ><a
+                              href="?add-to-cart=462"
+                              data-quantity="1"
+                              class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                              data-product_id="462"
+                              data-product_sku="SL4JK74"
+                              aria-label="Add “ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD Display” to your cart"
+                              rel="nofollow"
+                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-footer">
+                        <div class="product-footer-details">
+                          <ul>
+                            <li>Intel i3-1005G1 CPU</li>
+                            <li>8GB RAM</li>
+                            <li>128GB SSD</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="product-content-fade"
+                      style="margin-bottom: -91px"
+                    ></div>
+                  </div>
+                  <div class="product custom-hover">
+                    <div class="product-wrapper product-type-1">
+                      <div class="product-content">
+                        <div class="thumbnail-wrapper">
+                          <div class="product-badges">
+                            <span class="badge onsale">32%</span>
+                          </div>
+                          <a
+                            href="#cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                          >
+                            <div
+                              class="product-card"
+                              style="position: relative"
+                            >
+                              <div
+                                class="hover-slider-images-toggler"
+                                style="
+                                  position: absolute;
+                                  inset: 0px;
+                                  display: flex;
+                                "
+                              >
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4-400x400.jpg"
+                                  data-hover-slider-i="10"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
+                                  data-hover-slider-i="11"
+                                  style="flex-grow: 1"
+                                ></div>
+                                <div
+                                  class="hover-slider-toggle-pane"
+                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3-400x400.jpg"
+                                  data-hover-slider-i="12"
+                                  style="flex-grow: 1"
+                                ></div>
+                              </div>
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="10"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="11"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="12"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                              </div>
+                              <img
+                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3-400x400.jpg"
+                                class="hover-slider-init"
+                                data-options='{"touch":"end","preloadImages": true }'
+                              />
+                            </div>
+                          </a>
+                          <div class="product-buttons">
+                            <div
+                              class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                              data-product_id="408"
+                            >
+                              <div class="tinv-wishlist-clear"></div>
+                              <a href="javascript::void(0)" data-v-9705c064=""
+                                ><i
+                                  class="fa fa-heart"
+                                  aria-hidden="true"
+                                  data-v-9705c064=""
+                                ></i
+                                ><span
+                                  class="tinvwl_add_to_wishlist-text"
+                                  data-v-9705c064=""
+                                  >Add to Wishlist</span
+                                ></a
+                              >
+                              <div class="tinv-wishlist-clear"></div>
+                              <div class="tinvwl-tooltip">Add to Wishlist</div>
+                            </div>
+                            <a
+                              href="#"
+                              class="woosc-btn woosc-btn-408"
+                              data-id="408"
+                              >Compare</a
+                            ><a href="408" class="detail-bnt quickview animated"
+                              ><i class="klbth-icon-eye-empty"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="content-wrapper">
+                          <h3 class="product-title">
+                            <a
+                              href="#cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                              >Cubitt Smart Watch CT2S Waterproof Fitness
+                              Tracker</a
+                            >
+                          </h3>
+                          <div class="product-rating">
+                            <div
+                              class="star-rating"
+                              role="img"
+                              aria-label="Rated 3.00 out of 5"
+                            >
+                              <span style="width: 60%"
+                                >Rated <strong class="rating">3.00</strong> out
+                                of 5</span
+                              >
+                            </div>
+                            <div class="count-rating">
+                              1 <span class="rating-text">Ratings</span>
+                            </div>
+                          </div>
+                          <div class="product-price-cart">
+                            <span class="price"
+                              ><del aria-hidden="true"
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >95.00</bdi
+                                  ></span
+                                ></del
+                              >
+                              <ins
+                                ><span class="woocommerce-Price-amount amount"
+                                  ><bdi
+                                    ><span
+                                      class="woocommerce-Price-currencySymbol"
+                                      >QAR </span
+                                    >65.00</bdi
+                                  ></span
+                                ></ins
+                              ></span
+                            ><a
+                              href="?add-to-cart=408"
+                              data-quantity="1"
+                              class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                              data-product_id="408"
+                              data-product_sku="KM45VGRT"
+                              aria-label="Add “Cubitt Smart Watch CT2S Waterproof Fitness Tracker” to your cart"
+                              rel="nofollow"
+                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-footer">
+                        <div class="product-footer-details">
+                          <ul>
+                            <li>Heart Rate Monitor</li>
+                            <li>Calorie Counting</li>
+                            <li>With Bluetooth and Full Touch</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="product-content-fade"
+                      style="margin-bottom: -91px"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -1336,22 +1716,6 @@
                               >
                                 <div class="tinv-wishlist-clear"></div>
 
-                                <a
-                                  :onclick="clickmodal"
-                                  role="button"
-                                  tabindex="0"
-                                  aria-label="Add to Wishlist"
-                                  class="d-none tinvwl-position-after"
-                                  data-tinv-wl-list="[]"
-                                  data-tinv-wl-product="478"
-                                  data-tinv-wl-productvariation="0"
-                                  data-tinv-wl-productvariations="[0]"
-                                  data-tinv-wl-producttype="simple"
-                                  data-tinv-wl-action="add"
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
                                 <a
                                   :onclick="clickmodal"
                                   href="javascript::void(0)"
@@ -1829,6 +2193,14 @@
                           class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
                         >
                           <span>Add to cart</span>
+                        </button>
+                        <button
+                          type="submit"
+                          name="add-to-cart"
+                          value="408"
+                          class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                        >
+                          <span>Buy Now</span>
                         </button>
 
                         <div

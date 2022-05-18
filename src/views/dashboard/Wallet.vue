@@ -135,7 +135,7 @@
                   aria-controls="visa"
                   aria-selected="true"
                 >
-                  <img src="https://i.imgur.com/sB4jftM.png" width="80" />
+                  <!-- <img src="https://i.imgur.com/sB4jftM.png" width="80" /> -->
                 </a>
               </li>
               <li class="nav-item" role="presentation">

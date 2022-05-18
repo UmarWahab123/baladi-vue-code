@@ -338,6 +338,15 @@
     <!-- footer-row -->
 
     <!-- footer-row -->
+    <button
+      type="button"
+      :onclick="scrollup"
+      class="btn btn-danger btn-floating btn-lg"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <div class="footer-row footer-copyright bordered">
       <div class="container">
         <div class="row">
@@ -358,6 +367,7 @@
       </div>
       <!-- container -->
     </div>
+
     <!-- footer-row -->
   </footer>
   <!-- site-footer -->
@@ -511,6 +521,12 @@ export default {
     // let Script = document.createElement("script");
     // Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
     // document.head.appendChild(Script);
+  },
+
+  methods: {
+    scrollup(index) {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
