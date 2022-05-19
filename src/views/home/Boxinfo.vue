@@ -19,7 +19,11 @@
           >
             <div class="elementor-widget-container">
               <div class="klb-icon-box site-module iconbox-module">
-                <div class="icon"><i class="klbth-icon-shipment"></i></div>
+                <div class="icon">
+                  <router-link to="/shipping">
+                    <i class="klbth-icon-shipment"></i
+                  ></router-link>
+                </div>
                 <!-- icon -->
                 <div class="content">
                   <h4 class="entry-title">Free Delivery</h4>
@@ -46,7 +50,11 @@
           >
             <div class="elementor-widget-container">
               <div class="klb-icon-box site-module iconbox-module">
-                <div class="icon"><i class="klbth-icon-operator-1"></i></div>
+                <div class="icon">
+                  <router-link to="/helpcenter">
+                    <i class="klbth-icon-operator-1"> </i
+                  ></router-link>
+                </div>
                 <!-- icon -->
                 <div class="content">
                   <h4 class="entry-title">Online Support 24/7</h4>
@@ -72,7 +80,11 @@
           >
             <div class="elementor-widget-container">
               <div class="klb-icon-box site-module iconbox-module">
-                <div class="icon"><i class="klbth-icon-credit-card-2"></i></div>
+                <div class="icon">
+                  <router-link to="/refund"
+                    ><i class="klbth-icon-credit-card-2"></i
+                  ></router-link>
+                </div>
                 <!-- icon -->
                 <div class="content">
                   <h4 class="entry-title">Money Return</h4>

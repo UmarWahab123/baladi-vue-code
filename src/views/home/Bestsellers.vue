@@ -88,7 +88,6 @@
                                 data-product_id="478"
                               >
                                 <div class="tinv-wishlist-clear"></div>
-
                                 <a
                                   :onclick="clickmodal"
                                   role="button"

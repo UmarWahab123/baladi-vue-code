@@ -21,6 +21,7 @@
                         >Name&nbsp;<span class="">*</span></label
                       >
                       <input
+                        v-model="formdata.name"
                         type="text"
                         class="woocommerce-Input woocommerce-Input--text input-text"
                         id="account_last_name"
@@ -69,6 +70,7 @@
                         ></label
                       >
                       <input
+                        v-model="formdata.email"
                         type="email"
                         class="woocommerce-Input woocommerce-Input--email input-text"
                         id="account_email"
@@ -244,8 +246,8 @@ export default {
     //session
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.userdata.name = userInfo.name;
-      this.userdata.email = userInfo.email;
+      this.formdata.name = userInfo.name;
+      this.formdata.email = userInfo.email;
 
       // console.log(userInfo);
     } else {
@@ -253,18 +255,18 @@ export default {
     }
     userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
     //userprofile data
-    axios
-      .get("http://baladiweb.bteamwebs.com/api/auth/getProfile", {
-        headers: {
-          Authorization: `${userInfo.token}`,
-        },
-      })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    // axios
+    //   .get("http://baladiweb.bteamwebs.com/api/auth/getProfile", {
+    //     headers: {
+    //       Authorization: `${userInfo.token}`,
+    //     },
+    //   })
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
 
     // axios
     //   .get(import.meta.env.VITE_API_URL + "/api/auth/getProfile")
@@ -275,7 +277,7 @@ export default {
     //   })
     //   .catch((error) => {});
 
-    setTimeout(() => (this.isloading = false), 1000);
+    // setTimeout(() => (this.isloading = false), 1000);
   },
   methods: {
     updateprofile() {

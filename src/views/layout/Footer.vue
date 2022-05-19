@@ -411,29 +411,29 @@
       <nav class="mobile-menu">
         <ul>
           <li>
-            <a href="#" class="store">
-              <i class="klbth-icon-shop"></i> <span>Store</span>
-            </a>
+            <router-link to="/Blog" class="store">
+              <i class="klbth-icon-shop"></i> <span>Blogs</span>
+            </router-link>
           </li>
           <li>
-            <a href="#" class="search">
-              <i class="klbth-icon-search"></i> <span>Search</span>
-            </a>
+            <router-link to="/brands" class="search">
+              <i class="klbth-icon-search"></i> <span>Brands</span>
+            </router-link>
           </li>
           <li>
-            <a href="#" class="wishlist">
+            <router-link to="/wishlist" class="wishlist">
               <i class="klbth-icon-heart"></i> <span>Wishlist</span>
-            </a>
+            </router-link>
           </li>
           <li>
-            <a href="#" class="user">
+            <router-link to="/myaccount" class="user">
               <i class="klbth-icon-user-1"></i> <span>Account</span>
-            </a>
+            </router-link>
           </li>
           <li class="menu-item">
-            <a href="#" class="categories">
+            <router-link to="/category" class="categories">
               <i class="klbth-icon-menu-scale"></i> <span>Categories</span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </nav>

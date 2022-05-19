@@ -2010,6 +2010,12 @@ export default {
     isloading: true,
   }),
   mounted() {
+    this.specification = "";
+    this.showspecification = "";
+    this.showspecification = "d-none";
+    this.reviews = "";
+    this.showsreviews = "";
+    this.showsreviews = "d-none";
     this.description = "active";
     this.showdescription = "active show";
     setTimeout(() => (this.isloading = false), 1000);

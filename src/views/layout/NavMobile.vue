@@ -4,12 +4,15 @@
       <div class="site-offcanvas-row site-offcanvas-header">
         <div class="column left">
           <div class="site-brand">
-            <a href="#" title="Machic – Electronics Store eCommerce Theme">
+            <router-link
+              to="/"
+              title="Machic – Electronics Store eCommerce Theme"
+            >
               <img
-                src="@/assets/img/logo-light.png"
+                src="http://english-template.bteamwebs.com/src/img/logo-dark.png"
                 alt="Machic – Electronics Store eCommerce Theme"
               />
-            </a>
+            </router-link>
           </div>
           <!-- site-brand -->
         </div>
@@ -646,7 +649,7 @@
                   id="menu-item-2233"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"
                 >
-                  <a href="#">Order Tracking</a>
+                  <router-link to="/order-tracking">Order Tracking</router-link>
                 </li>
                 <li
                   id="menu-item-2176"
@@ -670,47 +673,7 @@
                       id="menu-item-2178"
                       class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2178"
                     >
-                      <a href="#">Spanish</a>
-                    </li>
-                    <li
-                      id="menu-item-2193"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2193"
-                    >
-                      <a href="#">German</a>
-                    </li>
-                  </ul>
-
-                  <a class="next" href="#"></a>
-                </li>
-                <li
-                  id="menu-item-2194"
-                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2194"
-                >
-                  <a href="#" class="next-link">USD</a>
-                  <ul class="sub-menu">
-                    <li class="menu-header">
-                      <a class="back" href="#">USD</a>
-                    </li>
-                    <li class="menu-header">
-                      <a class="back" href="#">USD</a>
-                    </li>
-                    <li
-                      id="menu-item-2195"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2195"
-                    >
-                      <a href="#">USD</a>
-                    </li>
-                    <li
-                      id="menu-item-2196"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2196"
-                    >
-                      <a href="#">INR</a>
-                    </li>
-                    <li
-                      id="menu-item-2197"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2197"
-                    >
-                      <a href="#">GBP</a>
+                      <a href="#">Arabic</a>
                     </li>
                   </ul>
 
@@ -778,19 +741,22 @@
       <!-- column -->
       <div class="column center">
         <div class="site-brand">
-          <a href="#" title="Machic – Electronics Store eCommerce Theme">
+          <router-link
+            to="/"
+            title="Machic – Electronics Store eCommerce Theme"
+          >
             <img
-              src="/../src/assets/img/logo-dark.png"
+              src="http://english-template.bteamwebs.com/src/img/logo-dark.png"
               alt="Machic – Electronics Store eCommerce Theme"
             />
-          </a>
+          </router-link>
         </div>
         <!-- site-brand -->
       </div>
       <!-- column -->
       <div class="column right">
         <div class="header-addons cart-button">
-          <a href="#cart/">
+          <router-link to="/cart">
             <div class="header-addons-icon">
               <i class="klbth-icon-simple-cart"></i>
               <div class="button-count cart-count">2</div>
@@ -808,7 +774,7 @@
               </div>
             </div>
             <!-- header-addons-text -->
-          </a>
+          </router-link>
           <div class="cart-dropdown hide">
             <div class="cart-dropdown-wrapper">
               <div class="fl-mini-cart-content">

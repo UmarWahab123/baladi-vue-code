@@ -97,7 +97,7 @@
                 title="Machic – Electronics Store eCommerce Theme"
               >
                 <img
-                  src="@/assets/img/logo-dark.png"
+                  src="http://english-template.bteamwebs.com/src/img/logo-dark.png"
                   alt="Machic2 – Electronics Store eCommerce Theme"
                 />
               </router-link>
@@ -162,8 +162,10 @@
                   <i class="klbth-icon-user-1"></i>
                 </div>
               </router-link>
-              <router-link v-else class="primary-text" to="/myaccount"
-                >Account
+              <router-link v-else class="primary-text" to="/myaccount">
+                <div class="header-addons-icon">
+                  <i class="klbth-icon-user-1"></i>
+                </div>
               </router-link>
 
               <div class="header-addons-text">
