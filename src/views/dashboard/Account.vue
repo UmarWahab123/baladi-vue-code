@@ -85,7 +85,7 @@
                         type="text"
                         class="woocommerce-Input woocommerce-Input--email input-text"
                         id="account_email"
-                        autocomplete="email"
+                        autocomplete=""
                       />
                     </p>
                     <button
@@ -253,7 +253,7 @@ export default {
     } else {
       this.$router.push("myaccount");
     }
-    userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
+    // userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
     //userprofile data
     // axios
     //   .get("http://baladiweb.bteamwebs.com/api/auth/getProfile", {

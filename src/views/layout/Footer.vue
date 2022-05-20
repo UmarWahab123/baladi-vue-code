@@ -341,7 +341,7 @@
     <button
       type="button"
       :onclick="scrollup"
-      class="btn btn-danger btn-floating btn-lg"
+      class="btn btn-danger scroll-btn btn-floating btn-lg"
       id="btn-back-to-top"
     >
       <i class="fas fa-arrow-up"></i>

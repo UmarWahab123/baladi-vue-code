@@ -623,6 +623,7 @@
   .tinv-wishlist .tinvwl-buttons-group button + button {
     margin-top: 7px
   }
+  
   .tinv-wishlist .tinvwl-buttons-group button i {
     position: relative
   }
@@ -659,6 +660,15 @@
   }
   .tinvwl-tooltip {
     display: none
+  }
+
+  .tinvwl-tooltip-custom{
+font-size: 0.75rem;
+    text-decoration: none;
+  cursor: pointer;
+  }
+  .custom-wish-style{
+    display: contents;
   }
   .tinvwl-input-group {
     position: relative;
