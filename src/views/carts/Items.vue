@@ -58,7 +58,7 @@
           <td class="product-price" data-title="Price">
             <span class="woocommerce-Price-amount amount"
               ><bdi
-                ><span class="woocommerce-Price-currencySymbol">$</span
+                ><span class="woocommerce-Price-currencySymbol">QAR </span
                 >{{ item.price }}</bdi
               ></span
             >
@@ -99,7 +99,7 @@
           <td class="product-subtotal" data-title="Subtotal">
             <span class="woocommerce-Price-amount amount"
               ><bdi
-                ><span class="woocommerce-Price-currencySymbol">$</span
+                ><span class="woocommerce-Price-currencySymbol">QAR </span
                 >{{ item.subtotal }}</bdi
               ></span
             >

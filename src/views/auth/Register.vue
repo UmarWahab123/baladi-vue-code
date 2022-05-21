@@ -84,12 +84,7 @@
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
           described in our
-          <a
-            href="https://klbtheme.com/machic/privacy-policy/"
-            class="woocommerce-privacy-policy-link"
-            target="_blank"
-            >privacy policy</a
-          >.
+          <router-link to="/privacy-policy">Privacy Policy </router-link>.
         </p>
       </div>
       <p class="woocommerce-form-row form-row">

@@ -10,7 +10,7 @@
             <td data-title="Subtotal">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
+                  ><span class="woocommerce-Price-currencySymbol">QAR </span
                   >1,068.66</bdi
                 ></span
               >
@@ -34,7 +34,8 @@
                     >Flat rate:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >QAR </span
                         >15.00</bdi
                       ></span
                     ></label
@@ -492,7 +493,7 @@
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">$</span
+                    ><span class="woocommerce-Price-currencySymbol">QAR </span
                     >1,083.66</bdi
                   ></span
                 ></strong

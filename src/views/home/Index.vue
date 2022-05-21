@@ -1,4 +1,5 @@
 <template>
+  <!-- <h1>{{ $t("message") }}</h1> -->
   <Header />
   <main id="main" class="site-primary" style="transform: none">
     <div class="site-content" style="transform: none">

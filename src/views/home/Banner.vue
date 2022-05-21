@@ -100,7 +100,7 @@
                         </div>
                         <div class="banner-image">
                           <img
-                            src="@/assets/img/slider-banner-3.jpg"
+                            src="http://english-template.bteamwebs.com/src/img/cover1.jpeg"
                             alt="slider"
                           />
                         </div>
@@ -137,25 +137,13 @@
                         </div>
                         <div class="banner-image">
                           <Splide :options="{ rewind: true, autoplay: true }">
-                            <!-- <SplideSlide>
-                              <img
-                                src="@/assets/img/slider-banner-1.jpg"
-                                alt="Sample 1"
-                              />
-                            </SplideSlide>
-                            <SplideSlide>
-                              <img
-                                src="@/assets/img/slider-banner-2.jpg"
-                                alt="Sample 2"
-                              />
-                            </SplideSlide> -->
                             <SplideSlide
                               :data="item"
                               :key="indextr"
                               v-for="(item, indextr) in results"
                             >
                               <img
-                                src="@/assets/img/slider-banner-3.jpg"
+                                src="http://english-template.bteamwebs.com/src/img/cover1.jpeg"
                                 alt="Sample 2"
                               />
                             </SplideSlide>

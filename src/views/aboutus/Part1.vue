@@ -1,243 +1,315 @@
 <template>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-a5f5515 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="a5f5515"
-    data-element_type="section"
-  >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="elementor-column elementor-col-300 elementor-top-column elementor-element elementor-element-6cd6b07"
-        data-id="6cd6b07"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-ef53a64 elementor-widget elementor-widget-machic-custom-title"
-            data-id="ef53a64"
-            data-element_type="widget"
-            data-widget_type="machic-custom-title.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module module-title">
-                <h4 class="entry-subtitle">
-                  Our Mission, About Baladi Express
-                </h4>
-                <h1 class="entry-title">
-                  We belive the best experience always wins
-                </h1>
-                <div class="entry-content">
-                  <p>
-                    Quisque lacinia commodo euismod. Nullam tempus nec mi id
-                    blandit. In lacinia nibh vitae ante laoreet rhoncus. Quisque
-                    in dapibus lorem, luctus gravida velit. Nulla gravida eros
-                    ac pharetra porta.
-                  </p>
+  <main id="main" class="site-primary">
+    <div class="site-content">
+      <div class="homepage-content">
+        <div
+          data-elementor-type="wp-page"
+          data-elementor-id="1544"
+          class="elementor elementor-1544"
+          data-elementor-settings="[]"
+        >
+          <div class="elementor-section-wrap">
+            <section
+              class="elementor-section mt-3 elementor-top-section elementor-element elementor-element-3551755 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="3551755"
+              data-element_type="section"
+            >
+              <div class="elementor-container elementor-column-gap-extended">
+                <div
+                  class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6f96f87"
+                  data-id="6f96f87"
+                  data-element_type="column"
+                >
+                  <div
+                    class="elementor-widget-wrap elementor-element-populated"
+                  >
+                    <section
+                      class="elementor-section elementor-inner-section elementor-element elementor-element-d2a69d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                      data-id="d2a69d1"
+                      data-element_type="section"
+                    >
+                      <div class="elementor-container elementor-column-gap-no">
+                        <div
+                          class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3da8ad0"
+                          data-id="3da8ad0"
+                          data-element_type="column"
+                        >
+                          <div
+                            class="elementor-widget-wrap elementor-element-populated"
+                          >
+                            <div
+                              class="elementor-element elementor-element-bf5a32e elementor-widget elementor-widget-heading"
+                              data-id="bf5a32e"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <h2
+                                  class="elementor-heading-title elementor-size-default"
+                                >
+                                  About Baladi Express
+                                </h2>
+                                <h5>
+                                  We belive the best experience always wins
+                                </h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section
+                      class="elementor-section elementor-inner-section elementor-element elementor-element-dae2cc1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                      data-id="dae2cc1"
+                      data-element_type="section"
+                    >
+                      <div class="elementor-container elementor-column-gap-no">
+                        <div
+                          class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-769fd1d"
+                          data-id="769fd1d"
+                          data-element_type="column"
+                        >
+                          <div
+                            class="elementor-widget-wrap elementor-element-populated"
+                          >
+                            <div
+                              class="elementor-element elementor-element-563075f elementor-widget elementor-widget-heading"
+                              data-id="563075f"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <p
+                                  class="elementor-heading-title elementor-size-default"
+                                >
+                                  We are pleased to announce the launch of Souq
+                                  Albaladi Online Hypermarket, your number one
+                                  source for all food and household goods. Our
+                                  goal is to deliver to your door the freshest
+                                  food and groceries possible, with a focus on
+                                  fresh and clean food, quick delivery, and the
+                                  availability of everything in stock.
+                                  Furthermore, we assure you that all of our
+                                  products are always available at the best
+                                  prices in Qatar.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
                 </div>
-                <!-- entry-content -->
               </div>
-              <!-- site-module -->
-            </div>
+            </section>
+            <section
+              class="elementor-section elementor-top-section elementor-element elementor-element-f600bf8 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="f600bf8"
+              data-element_type="section"
+            >
+              <div class="elementor-container elementor-column-gap-no">
+                <div
+                  class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e769e7d"
+                  data-id="e769e7d"
+                  data-element_type="column"
+                >
+                  <div
+                    class="elementor-widget-wrap elementor-element-populated"
+                  >
+                    <section
+                      class="elementor-section elementor-inner-section elementor-element elementor-element-faa9e1d elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                      data-id="faa9e1d"
+                      data-element_type="section"
+                    >
+                      <div
+                        class="elementor-container elementor-column-gap-extended"
+                      >
+                        <div
+                          class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-915cf91"
+                          data-id="915cf91"
+                          data-element_type="column"
+                        >
+                          <div
+                            class="elementor-widget-wrap elementor-element-populated"
+                          >
+                            <div
+                              class="elementor-element elementor-element-393e4f6 elementor-widget elementor-widget-image"
+                              data-id="393e4f6"
+                              data-element_type="widget"
+                              data-widget_type="image.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <img
+                                  width="600"
+                                  height="900"
+                                  src="http://english-template.bteamwebs.com/src/img/about.jpeg"
+                                  class="attachment-large size-large"
+                                  alt=""
+                                  loading="lazy"
+                                  srcset="http://english-template.bteamwebs.com/src/img/about.jpeg"
+                                  sizes="(max-width: 600px) 100vw, 600px"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1fe836e"
+                          data-id="1fe836e"
+                          data-element_type="column"
+                        >
+                          <div
+                            class="elementor-widget-wrap elementor-element-populated"
+                          >
+                            <div
+                              class="elementor-element elementor-element-13850b5 elementor-widget elementor-widget-heading"
+                              data-id="13850b5"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container mb-0">
+                                <span
+                                  class="elementor-heading-title mb-0 elementor-size-default"
+                                  >Souq Albaladi</span
+                                >
+                              </div>
+                            </div>
+                            <div
+                              class="elementor-element elementor-element-9ecc34f mb-0 elementor-widget elementor-widget-heading"
+                              data-id="9ecc34f"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <h3
+                                  class="elementor-heading-title elementor-size-default"
+                                >
+                                  Low Prices And So Much More
+                                </h3>
+                              </div>
+                            </div>
+
+                            <div
+                              class="elementor-element elementor-element-037413a elementor-widget elementor-widget-heading"
+                              data-id="037413a"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <p
+                                  class="elementor-heading-title elementor-size-default"
+                                >
+                                  Souq Albaladi, founded in 1991, had grown
+                                  considerably since it first opened in Doha.
+                                  Our passion for fresh and diverse products
+                                  worldwide drove us to launch the business in
+                                  order to cater to our customers' needs. In
+                                  Doha, Souq Al Baladi has been a leading
+                                  consumer for all fresh food products and
+                                  groceries Online Hypermarket for nearly three
+                                  decades. It is the sole distributor in Doha
+                                  for many brands like Active guard, Adeera,
+                                  Agrico, Ahlia, Ahmed, Airport mop, Ajwa,
+                                  Akawi, Al ahlam, Al ameer, Al rifai, Al riyan,
+                                  Al sadara, Al samariya, Al seedawi, American
+                                  garden, California garden, Camay, Canola,
+                                  carefree, Chandrika, Cheddar, Cheetos, Chef
+                                  Gourmet chefs, Chings, Chocitos, Crisco,
+                                  Crystal and many more.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section
+                      class="elementor-section elementor-inner-section elementor-element elementor-element-ae4c3f3 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                      data-id="ae4c3f3"
+                      data-element_type="section"
+                      data-settings='{"background_background":"classic"}'
+                    >
+                      <div
+                        class="elementor-container elementor-column-gap-extended"
+                      >
+                        <div
+                          class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c55e507"
+                          data-id="c55e507"
+                          data-element_type="column"
+                          data-settings='{"background_background":"classic"}'
+                        >
+                          <div
+                            class="elementor-widget-wrap elementor-element-populated"
+                          >
+                            <div
+                              class="elementor-element elementor-element-56f89a9 elementor-widget elementor-widget-heading"
+                              data-id="56f89a9"
+                              data-element_type="widget"
+                              data-widget_type="heading.default"
+                            >
+                              <div class="elementor-widget-container">
+                                <h5>Our Mission</h5>
+                                <p
+                                  class="elementor-heading-title elementor-size-default"
+                                >
+                                  We ensure that our fresh food products have
+                                  the best quality and most diverse selection
+                                  possible in Doha. Multi-ethnic employees are a
+                                  vital part of our business, and we strive to
+                                  be the most preferred employer for them. If
+                                  you have any questions or comments, please
+                                  don't hesitate to contact us at
+                                  info@albaladi-qatar.com.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              class="elementor-section elementor-top-section elementor-element elementor-element-c3a3091 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="c3a3091"
+              data-element_type="section"
+            >
+              <div class="elementor-container elementor-column-gap-extended">
+                <div
+                  class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7ae1ceb"
+                  data-id="7ae1ceb"
+                  data-element_type="column"
+                >
+                  <div
+                    class="elementor-widget-wrap elementor-element-populated"
+                  >
+                    <div
+                      class="elementor-element elementor-element-0ab0b16 elementor-widget elementor-widget-heading"
+                      data-id="0ab0b16"
+                      data-element_type="widget"
+                      data-widget_type="heading.default"
+                    >
+                      <div class="elementor-widget-container">
+                        <h5>Free Delivery Service</h5>
+                        <p
+                          class="elementor-heading-title elementor-size-default"
+                        >
+                          Whatever time you place your order, we guarantee that
+                          the product will reach you within 24 hours at no
+                          additional cost.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-d9d0d9d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="d9d0d9d"
-    data-element_type="section"
-  >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-951e09a"
-        data-id="951e09a"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-191b6aa elementor-widget elementor-widget-machic-text-block"
-            data-id="191b6aa"
-            data-element_type="widget"
-            data-widget_type="machic-text-block.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module text-check">
-                <h3 class="entry-title">Class aptent taciti sociosqu</h3>
-                <div class="entry-description">
-                  <p>
-                    Quisque luctus leo sit amet ante finibus lobortis. Class
-                    aptent taciti sociosqu.
-                  </p>
-                </div>
-                <!-- entry-description -->
-              </div>
-              <!-- site-module -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9f8a138"
-        data-id="9f8a138"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-63848d2 elementor-widget elementor-widget-machic-text-block"
-            data-id="63848d2"
-            data-element_type="widget"
-            data-widget_type="machic-text-block.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module text-check">
-                <h3 class="entry-title">Class aptent taciti sociosqu</h3>
-                <div class="entry-description">
-                  <p>
-                    Quisque luctus leo sit amet ante finibus lobortis. Class
-                    aptent taciti sociosqu.
-                  </p>
-                </div>
-                <!-- entry-description -->
-              </div>
-              <!-- site-module -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-00fc50e"
-        data-id="00fc50e"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-3658c8b elementor-widget elementor-widget-machic-text-block"
-            data-id="3658c8b"
-            data-element_type="widget"
-            data-widget_type="machic-text-block.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module text-check">
-                <h3 class="entry-title">Class aptent taciti sociosqu</h3>
-                <div class="entry-description">
-                  <p>
-                    Quisque luctus leo sit amet ante finibus lobortis. Class
-                    aptent taciti sociosqu.
-                  </p>
-                </div>
-                <!-- entry-description -->
-              </div>
-              <!-- site-module -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-1298d0a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="1298d0a"
-    data-element_type="section"
-  >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1d97292"
-        data-id="1d97292"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-19c5942 elementor-widget elementor-widget-image"
-            data-id="19c5942"
-            data-element_type="widget"
-            data-widget_type="image.default"
-          >
-            <div class="elementor-widget-container">
-              <img
-                width="1280"
-                height="760"
-                src="https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1.jpg"
-                class="attachment-full size-full"
-                alt=""
-                loading="lazy"
-                srcset="
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1.jpg          1280w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-90x54.jpg      90w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-600x356.jpg   600w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-64x38.jpg      64w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-300x178.jpg   300w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-1024x608.jpg 1024w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/10/about-1-768x456.jpg   768w
-                "
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-9baf384 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="9baf384"
-    data-element_type="section"
-  >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5e986b7"
-        data-id="5e986b7"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-c82a70a elementor-widget elementor-widget-text-editor"
-            data-id="c82a70a"
-            data-element_type="widget"
-            data-widget_type="text-editor.default"
-          >
-            <div class="elementor-widget-container">
-              <p>
-                Nam maximus nunc a augue pulvinar, non euismod mauris tempus.
-                Cras non elit vel magna molestie pellentesque in eu dui. Donec
-                laoreet quis erat vitae finibus. Vestibulum enim eros, porta
-                eget quam et, euismod dictum elit. Nullam eu tempus magna. Fusce
-                malesuada nisi id felis placerat porta vel sed augue. Vivamus
-                mollis mauris vitae rhoncus egestas. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada fames ac turpis
-                egestas. Phasellus luctus tempor ante in dapibus. Curabitur sed
-                lectus tempus, pulvinar magna vel, laoreet sapien.
-              </p>
-              <p>
-                Pellentesque sodales ornare nulla. Nullam elementum est quis
-                tortor ultricies tristique. Nulla tempor eros quis arcu
-                imperdiet, rutrum pharetra mi lobortis. Donec tortor ipsum,
-                maximus quis pellentesque vel, bibendum eu mauris.
-              </p>
-              <p>
-                Nulla bibendum tincidunt ligula, a placerat dolor viverra eget.
-                Maecenas id diam sed ligula facilisis lacinia. Nunc maximus est
-                ut sem varius suscipit. Phasellus vel tellus viverra, lacinia
-                metus et, faucibus tellus. Etiam hendrerit est viverra eros
-                mollis, a laoreet ante dictum. Aliquam erat volutpat. Vivamus
-                tempor blandit dui vel interdum. Etiam ut libero eget ex sodales
-                lobortis vitae at est. Nulla facilisis velit nec pellentesque
-                commodo. Phasellus suscipit sodales magna in vehicula.
-              </p>
-              <p>
-                Ut ac semper ligula. Pellentesque laoreet justo nec ex sodales
-                euismod. Aliquam orci tortor, bibendum nec ultricies ac, auctor
-                nec purus. Maecenas in consectetur erat. Proin ut nisi ut ipsum
-                blandit vehicula. Nulla orci eros, ornare vitae tristique et,
-                iaculis nec mauris. Aliquam ornare, turpis sed lobortis
-                ultricies, lectus felis lacinia lacus, et convallis ipsum erat
-                sed tortor. Proin molestie sagittis augue, id sollicitudin
-                libero congue vel. Suspendisse id elementum nunc. Donec in neque
-                vitae nisl consequat accumsan.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 </template>

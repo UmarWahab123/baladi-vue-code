@@ -26,7 +26,7 @@
                                   Available Balance
                                 </h6>
                                 <h2 class="d-flex align-items-center mt-2 mb-0">
-                                  $11.61k
+                                  QAR 11.61k
                                 </h2>
                               </div>
                               <small class="col-4 text-right">
@@ -135,7 +135,7 @@
                   aria-controls="visa"
                   aria-selected="true"
                 >
-                  <img src="https://i.imgur.com/sB4jftM.png" width="80" />
+                  <!-- <img src="https://i.imgur.com/sB4jftM.png" width="80" /> -->
                 </a>
               </li>
               <li class="nav-item" role="presentation">
