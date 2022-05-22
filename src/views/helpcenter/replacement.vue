@@ -29,10 +29,7 @@
                     data-widget_type="text-editor.default"
                   >
                     <div class="elementor-widget-container">
-                      <!-- wp:paragraph -->
-                      <p><b>This is a sample page.</b></p>
-                      <!-- /wp:paragraph -->
-
+                    
                       <!-- wp:paragraph -->
                       <p></p>
                       <h3>Overview</h3>

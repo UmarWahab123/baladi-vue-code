@@ -83,7 +83,7 @@
                       />
                     </div>
                     <a
-                      href="https://klbtheme.com/machic/shop/"
+                      href="javascript::void(0)"
                       class="overlay-link"
                     ></a>
                   </div>
@@ -145,7 +145,7 @@
                       />
                     </div>
                     <a
-                      href="https://klbtheme.com/machic/product/asus-vivobook-17-3-i5-8gb_1tb-17-3-fhd-display/"
+                      href="javascript::void(0)"
                       class="overlay-link"
                     ></a>
                   </div>
@@ -207,7 +207,7 @@
                       />
                     </div>
                     <a
-                      href="https://klbtheme.com/machic/shop/?column=5&amp;opt=full-width"
+                      href="javascript::void(0)"
                       class="overlay-link"
                     ></a>
                   </div>

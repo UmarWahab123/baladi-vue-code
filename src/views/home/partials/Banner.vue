@@ -17,7 +17,7 @@
             data-element_type="widget"
             data-widget_type="machic-text-banner.default"
           >
-            <div class="elementor-widget-container">
+            <div class="elementor-widget-container ">
               <div class="site-module coupon-banner-module">
                 <div class="module-wrapper">
                   <div class="coupon-banner light">
@@ -36,7 +36,7 @@
                       </div>
                     </div>
                     <a
-                      href="https://klbtheme.com/machic/shop/"
+                      href="javascript::void(0)"
                       class="overlay-link"
                     ></a>
                   </div>

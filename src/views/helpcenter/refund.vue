@@ -67,10 +67,6 @@
                                 >
                                   <div class="elementor-widget-container">
                                     <!-- wp:paragraph -->
-                                    <p><b>This is a refund sample page.</b></p>
-                                    <!-- /wp:paragraph -->
-
-                                    <!-- wp:paragraph -->
                                     <p></p>
                                     <h3>Overview</h3>
                                     <p></p>

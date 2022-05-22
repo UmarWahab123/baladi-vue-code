@@ -35,7 +35,7 @@
                     <!-- banner-details -->
                     <div class="banner-button">
                       <a
-                        href="#?featured=yes"
+                        href="javascript::void(0)"
                         class="btn small rounded link-color"
                         >Shop Now</a
                       >

@@ -863,7 +863,7 @@
             data-element_type="widget"
             data-widget_type="machic-text-banner.default"
           >
-            <div class="elementor-widget-container">
+            <div class="elementor-widget-container mt-15">
               <div class="site-module coupon-banner-module">
                 <div class="module-wrapper">
                   <div class="coupon-banner light">

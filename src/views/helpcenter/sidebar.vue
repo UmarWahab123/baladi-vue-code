@@ -37,7 +37,7 @@
             woocommerce-MyAccount-navigation-link--voucher
           "
         >
-          <router-link to="/replacement">Returns & Replacements</router-link>
+          <router-link to="/refund">Returns & Replacements</router-link>
         </li>
         <li
           class="

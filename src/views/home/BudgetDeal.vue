@@ -67,7 +67,7 @@
                         </div>
                         <a href=""
                           ><img
-                            src="/src/assets/img/1.png"
+                            src="http://english-template.bteamwebs.com/src/img/cocacolajpeg.jpeg"
                             alt="Dragon Touch Max10 Tablet Android 10.0 OS"
                         /></a>
                         <div class="product-buttons">
@@ -172,6 +172,7 @@
                     <!-- product-content -->
                   </div>
                   <!-- product-wrapper -->
+                  <br><br><br>
                 </div>
                 <!-- product -->
               </div>
@@ -205,7 +206,7 @@
                             <a href="#">
                               <div class="product-card">
                                 <img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
+                                  src="http://english-template.bteamwebs.com/src/img/products/Tea/ahmad%20tea%20english%20breakfast%20100%20bags_.jpg"
                                   data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
                                 />
                               </div>

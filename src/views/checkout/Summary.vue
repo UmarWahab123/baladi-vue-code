@@ -125,7 +125,7 @@
               <button
                 type="button"
                 class="button"
-                @click="Modal"
+                @click="showpaymentmodel"
                 data-toggle="modal"
                 data-target="#staticBackdrop"
               >
@@ -523,7 +523,10 @@ export default {
     this.showvisa = "active show";
   },
   methods: {
-    Modal: function () {
+    showpaymentmodel: function (event) {
+   console.log('asdf');
+         alert(event.target.tagName);
+
       this.showmodal = "show";
       this.stylemodal = "display: block; padding-right: 0.200073px;";
     },

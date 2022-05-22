@@ -17,7 +17,7 @@
             data-element_type="widget"
             data-widget_type="machic-text-banner2.default"
           >
-            <div class="elementor-widget-container">
+            <div class="elementor-widget-container ">
               <div class="site-module module-banner-text">
                 <div class="banner-wrapper" style="background-color: #f5f5f7">
                   <div class="banner-inner">
@@ -34,7 +34,7 @@
                     <!-- banner-details -->
                     <div class="banner-button">
                       <a
-                        href="https://klbtheme.com/machic/shop/?featured=yes"
+                        href="javascript::void(0)"
                         class="btn small rounded link-color"
                         >Shop Now</a
                       >

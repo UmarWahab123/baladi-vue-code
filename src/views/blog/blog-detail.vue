@@ -44,10 +44,17 @@
                   </div>
                   <figure class="entry-media">
                     <a href="#"
-                      ><img
+                      >
+                      <!--
+                      <img
                         :src="url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
-                    /></a>
+                    /> -->
+                     <img
+                        src="http://baladiweb.bteamwebs.com/storage/images/blogs/1650282422_product-3-400x400.webp"
+                        alt="But I must explain to you how all this mistaken idea"
+                    />
+                    </a> 
                   </figure>
                   <div class="entry-content">
                     <div class="klb-post">

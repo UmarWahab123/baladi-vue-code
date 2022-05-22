@@ -33,12 +33,7 @@
                         <div class="woocommerce mt-4 row">
                           <div class="col-md-8 mx-auto text-center">
                             <h3>Track Your Order</h3>
-                            <p>
-                              To track your order please enter your Order ID in
-                              the box below and press the "Track" button. This
-                              was given to you on your receipt and in the
-                              confirmation email you should have received.
-                            </p>
+                            
                           </div>
                           <div class="col-sm-6 col-md-5 mx-auto shadow p-4">
                             <form
@@ -57,17 +52,7 @@
                                   placeholder="Found in your order confirmation email."
                                 />
                               </p>
-                              <p class="form-row form-row-last">
-                                <label for="order_email">Billing email</label>
-                                <input
-                                  class="input-text"
-                                  type="text"
-                                  name="order_email"
-                                  id="order_email"
-                                  value=""
-                                  placeholder="Email you used during checkout."
-                                />
-                              </p>
+                             
                               <div class="clear"></div>
 
                               <p class="form-row">

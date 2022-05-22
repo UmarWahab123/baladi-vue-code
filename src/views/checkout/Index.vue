@@ -1974,10 +1974,10 @@ import Billing from "./Billing.vue";
 import Summary from "./Summary.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
+// import.meta.env.VITE_API_KEY;
 export default {
   data: () => ({
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    // url: import.meta.env.VITE_API_URL + "/storage/",
   }),
   mounted() {
     var acc = document.getElementsByClassName("input-radio");
