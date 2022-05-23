@@ -104,148 +104,41 @@
     <!-- site-content -->
   </main>
   <div
-    class="modal fade"
+    id="wishlist"
     :class="showmodal"
-    id="staticBackdrop"
-    style=""
-    :style="stylemodal"
-    data-backdrop="static"
-    data-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
+    style="display: none"
+    :style="showmodalstyle"
+    class="tinv-wishlist"
   >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="text-right" style="cursor: pointer">
-            <i class="fa fa-times" aria-hidden="true" @click="close"></i>
-          </div>
-          <div class="tabs mt-3">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  :class="visa"
-                  @click="clickvisa"
-                  id="visa-tab"
-                  data-toggle="tab"
-                  href="#visa"
-                  role="tab"
-                  aria-controls="visa"
-                  aria-selected="true"
-                >
-                  <!-- <img src="https://i.imgur.com/sB4jftM.png" width="80" /> -->
-                </a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="paypal-tab"
-                  :class="paypal"
-                  @click="clickpaypal"
-                  data-toggle="tab"
-                  href="#paypal"
-                  role="tab"
-                  aria-controls="paypal"
-                  aria-selected="false"
-                >
-                  <img src="https://i.imgur.com/yK7EDD1.png" width="80" />
-                </a>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-              <div
-                class="tab-pane fade"
-                :class="showvisa"
-                id="visa"
-                role="tabpanel"
-                aria-labelledby="visa-tab"
-              >
-                <div class="mt-4 mx-4">
-                  <div class="text-center">
-                    <h5>Credit card</h5>
-                  </div>
-                  <div class="form mt-3">
-                    <div class="inputbox">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        required="required"
-                      />
-                      <span>Cardholder Name</span>
-                    </div>
-                    <div class="inputbox">
-                      <input
-                        type="text"
-                        name="name"
-                        min="1"
-                        max="999"
-                        class="form-control"
-                        required="required"
-                      />
-                      <span>Card Number</span>
-                    </div>
-                    <div class="d-flex flex-row">
-                      <div class="inputbox">
-                        <input
-                          type="text"
-                          name="name"
-                          min="1"
-                          max="999"
-                          class="form-control"
-                          required="required"
-                        />
-                        <span>Expiration Date</span>
-                      </div>
-                      <div class="inputbox">
-                        <input
-                          type="text"
-                          name="name"
-                          min="1"
-                          max="999"
-                          class="form-control"
-                          required="required"
-                        />
-                        <span>CVV</span>
-                      </div>
-                    </div>
-                    <div class="pay">
-                      <button class="btn btn-success btn-block">
-                        Add card
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                :class="showpaypal"
-                id="paypal"
-                role="tabpanel"
-                aria-labelledby="paypal-tab"
-              >
-                <div class="mt-4 mx-4">
-                  <div class="px-5 mt-5">
-                    <div class="inputbox">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        required="required"
-                      />
-                      <span>Paypal Email Address</span>
-                    </div>
-                    <div class="pay">
-                      <button class="btn btn-primary btn-block">
-                        Add paypal
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="tinvwl_added_to_wishlist tinv-modal tinv-modal-open">
+      <div class="tinv-overlay"></div>
+      <div class="tinv-table">
+        <div class="tinv-cell">
+          <div class="tinv-modal-inner">
+            <i class="icon_big_heart_check"></i>
+            <div class="tinv-txt">
+              Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
             </div>
+            <div class="tinvwl-buttons-group tinv-wishlist-clear">
+              <button>
+                <router-link
+                  to="/wishlist"
+                  class="button tinvwl_button_view tinvwl-btn-onclick"
+                >
+                  <i class="ftinvwl ftinvwl-heart-o"></i>View
+                  Wishlist</router-link
+                >
+              </button>
+
+              <button
+                @click="closemodal"
+                class="button tinvwl_button_close"
+                type="button"
+              >
+                <i class="ftinvwl ftinvwl-times"></i>Close
+              </button>
+            </div>
+            <div class="tinv-wishlist-clear"></div>
           </div>
         </div>
       </div>

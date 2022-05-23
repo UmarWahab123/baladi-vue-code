@@ -425,12 +425,7 @@
 
                     <div class="product-info">
                       <div style="width: max-content" class="product-info-top">
-                        <form
-                          class="cart single-ajax"
-                          action="#product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                          method="post"
-                          enctype="multipart/form-data"
-                        >
+                        <form class="cart single-ajax">
                           <div class="quantity">
                             <label
                               class="screen-reader-text"
@@ -1326,13 +1321,16 @@
                 Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
               </div>
               <div class="tinvwl-buttons-group tinv-wishlist-clear">
-                <button
-                  class="button tinvwl_button_view tinvwl-btn-onclick"
-                  data-url="https://klbtheme.com/machic/wishlist/990457/"
-                  type="button"
-                >
-                  <i class="ftinvwl ftinvwl-heart-o"></i>View Wishlist
+                <button>
+                  <router-link
+                    to="/wishlist"
+                    class="button tinvwl_button_view tinvwl-btn-onclick"
+                  >
+                    <i class="ftinvwl ftinvwl-heart-o"></i>View
+                    Wishlist</router-link
+                  >
                 </button>
+
                 <button
                   @click="closemodal"
                   class="button tinvwl_button_close"

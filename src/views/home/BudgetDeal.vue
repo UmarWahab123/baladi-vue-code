@@ -77,12 +77,13 @@
                           >
                             <div class="tinv-wishlist-clear"></div>
                             <a
+                              :onclick="clickmodal"
                               role="button"
                               tabindex="0"
                               aria-label="Add to Wishlist"
-                              class="tinvwl_add_to_wishlist_button d-none tinvwl-icon-heart tinvwl-position-after"
+                              class="d-none tinvwl-position-after"
                               data-tinv-wl-list="[]"
-                              data-tinv-wl-product="400"
+                              data-tinv-wl-product="478"
                               data-tinv-wl-productvariation="0"
                               data-tinv-wl-productvariations="[0]"
                               data-tinv-wl-producttype="simple"
@@ -91,18 +92,31 @@
                                 >Add to Wishlist</span
                               ></a
                             >
+                            <a :onclick="clickmodal" href="javascript::void(0)"
+                              ><i class="fa fa-heart" aria-hidden="true"></i
+                              ><span class="tinvwl_add_to_wishlist-text"
+                                >Add to Wishlist</span
+                              ></a
+                            >
 
                             <div class="tinv-wishlist-clear"></div>
                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                           </div>
-                          <a
-                            href="#"
-                            class="woosc-btn woosc-btn-400"
-                            data-id="400"
+                          <a href="#?featured=yes" class="most-comments"
+                            ><img
+                              src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                              alt="featured" /></a
+                          ><a
+                            href="javascript::void(0)"
+                            class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                            :onclick="clickcomparemodal"
+                            data-id="521"
                             >Compare</a
-                          ><a href="400" class="detail-bnt quickview animated"
+                          ><span
+                            :onclick="clickbigmodal"
+                            class="detail-bnt quickview animated"
                             ><i class="klbth-icon-eye-empty"></i
-                          ></a>
+                          ></span>
                         </div>
                         <!-- product-buttons -->
                       </div>
@@ -172,7 +186,7 @@
                     <!-- product-content -->
                   </div>
                   <!-- product-wrapper -->
-                  <br><br><br>
+                  <br /><br /><br />
                 </div>
                 <!-- product -->
               </div>
@@ -362,13 +376,16 @@
               Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
             </div>
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
-              <button
-                class="button tinvwl_button_view tinvwl-btn-onclick"
-                data-url="https://klbtheme.com/machic/wishlist/990457/"
-                type="button"
-              >
-                <i class="ftinvwl ftinvwl-heart-o"></i>View Wishlist
+              <button>
+                <router-link
+                  to="/wishlist"
+                  class="button tinvwl_button_view tinvwl-btn-onclick"
+                >
+                  <i class="ftinvwl ftinvwl-heart-o"></i>View
+                  Wishlist</router-link
+                >
               </button>
+
               <button
                 @click="closemodal"
                 class="button tinvwl_button_close"

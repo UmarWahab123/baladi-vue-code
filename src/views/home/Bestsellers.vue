@@ -186,11 +186,7 @@
                               ></span
                             >
                             <!-- price -->
-                            <div class="product-meta">
-                              <div class="product-message color-light">
-                                2-day Delivery
-                              </div>
-                            </div>
+
                             <!-- product-meta -->
                           </div>
                           <!-- content-wrapper -->
@@ -252,13 +248,16 @@
               Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
             </div>
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
-              <button
-                class="button tinvwl_button_view tinvwl-btn-onclick"
-                data-url="https://klbtheme.com/machic/wishlist/990457/"
-                type="button"
-              >
-                <i class="ftinvwl ftinvwl-heart-o"></i>View Wishlist
+              <button>
+                <router-link
+                  to="/wishlist"
+                  class="button tinvwl_button_view tinvwl-btn-onclick"
+                >
+                  <i class="ftinvwl ftinvwl-heart-o"></i>View
+                  Wishlist</router-link
+                >
               </button>
+
               <button
                 @click="closemodal"
                 class="button tinvwl_button_close"

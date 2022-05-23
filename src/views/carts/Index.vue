@@ -870,7 +870,7 @@
 
                       <div class="wc-proceed-to-checkout">
                         <router-link
-                          to="/checkout"
+                          to="/cart"
                           class="checkout-button button alt wc-forward"
                           >Proceed to checkout
                         </router-link>
@@ -1140,13 +1140,14 @@
                 Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
               </div>
               <div class="tinvwl-buttons-group tinv-wishlist-clear">
-                <button
+                <router-link
+                  to="/wishlist"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
-                  data-url="https://klbtheme.com/machic/wishlist/990457/"
-                  type="button"
                 >
-                  <i class="ftinvwl ftinvwl-heart-o"></i>View Wishlist
-                </button>
+                  <i class="ftinvwl ftinvwl-heart-o"></i>View
+                  Wishlist</router-link
+                >
+
                 <button
                   @click="closemodal"
                   class="button tinvwl_button_close"

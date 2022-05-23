@@ -6,7 +6,7 @@
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b24b142"
+        class="elementor-column elementor-col-100 text-center elementor-top-column elementor-element elementor-element-b24b142"
         data-id="b24b142"
         data-element_type="column"
       >
@@ -20,101 +20,46 @@
             <div class="elementor-widget-container">
               <div class="site-module logos-module">
                 <div class="module-body">
-                  <Splide
-                    :options="{
-                      rewind: true,
-                      autoplay: true,
-                      perPage: 5,
-                      arrows: false,
-                      gap: '10rem',
-                      type: 'loop',
-                    }"
-                  >
-                    <SplideSlide>
-                      <div class="brand-item">
-                        <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/1.png"
-                          alt="Sample 1"
-                        />
+                  <div class="site-brands column-6 opacity">
+                    <div
+                      class="swiper mySwiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events"
+                    >
+                      <div
+                        class="swiper-wrapper"
+                        id="swiper-wrapper-2ba9e1027610af998d"
+                        aria-live="off"
+                        style=""
+                      >
+                        <div
+                          class="swiper-slide"
+                          style="width: 175px; margin-right: 50px"
+                          role="group"
+                          aria-label="1 / 20"
+                          :data="brand"
+                          :key="indextr"
+                          v-for="(brand, indextr) in results"
+                        >
+                          <router-link
+                            class=""
+                            :to="{
+                              name: 'brandsProduct',
+                              params: { id: brand.id },
+                            }"
+                            ><img
+                              class="logo-client"
+                              :src="url + brand.photo"
+                              alt=""
+                          /></router-link>
+                        </div>
                       </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                      <div class="brand-item">
-                        <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/2.png"
-                          alt="Sample 1"
-                        />
-                      </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                      <div class="brand-item">
-                        <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/3.png"
-                          alt="Sample 1"
-                        />
-                      </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                      <div class="brand-item">
-                        <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/4.png"
-                          alt="Sample 1"
-                        />
-                      </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                      <div class="brand-item opacity">
-                        <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/5.png"
-                          alt="Sample 1"
-                        />
-                      </div>
-                    </SplideSlide>
-                  </Splide>
-                  <!-- <div class="site-brands column-6 opacity">
-                    <div class="brand-item">
-                      <a href="#"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/1.png"
-                          alt="client"
-                      /></a>
+                      <div class="swiper-pagination"></div>
+                      <span
+                        class="swiper-notification"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      ></span>
                     </div>
-                    <div class="brand-item">
-                      <a href="#?filter_brands=asus"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/2.png"
-                          alt="client"
-                      /></a>
-                    </div>
-                    <div class="brand-item">
-                      <a href="#?opt=right-sidebar"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/3.png"
-                          alt="client"
-                      /></a>
-                    </div>
-                    <div class="brand-item">
-                      <a href="#?filter_brands=samsung"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/4.png"
-                          alt="client"
-                      /></a>
-                    </div>
-                    <div class="brand-item">
-                      <a href="#?column=5&amp;opt=wide"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/5.png"
-                          alt="client"
-                      /></a>
-                    </div>
-                    <div class="brand-item">
-                      <a href="#?column=5&amp;opt=full-width"
-                        ><img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/5.png"
-                          alt="client"
-                      /></a>
-                    </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,7 +74,20 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import { defineComponent } from "vue";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
-export default defineComponent({
-  components: { Splide, SplideSlide },
-});
+import axios from "axios";
+export default {
+  data: () => ({
+    url: "http://baladiweb.bteamwebs.com/storage/",
+    results: [],
+  }),
+  mounted() {
+    axios
+      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands")
+      .then((response) => {
+        this.results = response.data.data;
+        console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
 </script>

@@ -1966,7 +1966,7 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >699.99</bdi
+                                    >9.00</bdi
                                   >
                                 </span></del
                               >
@@ -1976,7 +1976,7 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >629.99</bdi
+                                    >4.00</bdi
                                   >
                                 </span></ins
                               ></span
