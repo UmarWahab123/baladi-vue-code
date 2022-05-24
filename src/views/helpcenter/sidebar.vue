@@ -23,53 +23,39 @@
     <nav class="woocommerce-MyAccount-navigation">
       <ul>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard"
-          :class="about"
-          @click="clickabout"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard nav__list__item__link is-active"
         >
           <router-link to="/helpcenter">About Baladi</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--voucher"
-          :class="test"
-          @click="clicktest"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--voucher nav__list__item__link"
         >
           <router-link to="/refund">Returns & Replacements</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--rewards"
-          :class="shipping"
-          @click="clickshipping"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--rewards nav__list__item__link"
         >
           <router-link to="/shoppingrates"
             >Shipping Rates & Policies</router-link
           >
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address"
-          :class="refund"
-          @click="clickrefund"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address nav__list__item__link"
         >
           <router-link to="/refund">Refund and Returns Policy</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account"
-          :class="privacy"
-          @click="clickprivacy"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account nav__list__item__link"
         >
           <router-link to="/privacypolicy">Privacy Policy</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wishlist"
-          :class="terms"
-          @click="clickterms"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wishlist nav__list__item__link"
         >
           <router-link to="/termscondition">Terms and Conditions</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders"
-          :class="covid"
-          @click="clickcovid"
+          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders nav__list__item__link"
         >
           <router-link to="/covidhelp">Covid-19</router-link>
         </li>
@@ -81,90 +67,100 @@
 <script>
 export default {
   data: () => ({
-    about: "",
-    test: "",
-    shipping: "",
-    refund: "",
-    privacy: "",
-    terms: "",
-    covid: "",
+    // about: "",
+    // test: "",
+    // shipping: "",
+    // refund: "",
+    // privacy: "",
+    // terms: "",
+    // covid: "",
+    tabs: "",
   }),
   mounted() {
-    this.test = "";
-    this.shipping = "";
-    this.refund = "";
-    this.privacy = "";
-    this.terms = "";
-    this.covid = "";
-    this.about = "is-active";
+    // this.test = "";
+    // this.shipping = "";
+    // this.refund = "";
+    // this.privacy = "";
+    // this.terms = "";
+    // this.covid = "";
+    // this.about = "is-active";
+    const tabs = document.querySelectorAll(".nav__list__item__link");
+    tabs.forEach((clickedTab) => {
+      clickedTab.addEventListener("click", (e) => {
+        tabs.forEach((tab) => {
+          tab.classList.remove("is-active");
+        });
+        e.target.parentElement.classList.add("is-active");
+      });
+    });
   },
-  methods: {
-    clickabout: function () {
-      this.test = "";
-      this.shipping = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.about = "is-active";
-    },
-    clicktest: function () {
-      this.about = "";
-      this.shipping = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.test = "is-active";
-    },
-    clickshipping: function () {
-      this.about = "";
-      this.test = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.shipping = "is-active";
-    },
-    clickrefund: function () {
-      this.about = "";
-      this.test = "";
-      this.shipping = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.refund = "is-active";
-    },
-    clickprivacy: function () {
-      this.about = "";
-      this.test = "";
-      this.shipping = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.privacy = "is-active";
-    },
-    clickterms: function () {
-      this.about = "";
-      this.test = "";
-      this.shipping = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.terms = "is-active";
-    },
-    clickcovid: function () {
-      this.about = "";
-      this.test = "";
-      this.shipping = "";
-      this.refund = "";
-      this.privacy = "";
-      this.terms = "";
-      this.covid = "";
-      this.covid = "is-active";
-    },
-  },
+  // methods: {
+  //   clickabout: function () {
+  //     this.test = "";
+  //     this.shipping = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.about = "is-active";
+  //   },
+  //   clicktest: function () {
+  //     this.about = "";
+  //     this.shipping = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.test = "is-active";
+  //   },
+  //   clickshipping: function () {
+  //     this.about = "";
+  //     this.test = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.shipping = "is-active";
+  //   },
+  //   clickrefund: function () {
+  //     this.about = "";
+  //     this.test = "";
+  //     this.shipping = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.refund = "is-active";
+  //   },
+  //   clickprivacy: function () {
+  //     this.about = "";
+  //     this.test = "";
+  //     this.shipping = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.privacy = "is-active";
+  //   },
+  //   clickterms: function () {
+  //     this.about = "";
+  //     this.test = "";
+  //     this.shipping = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.terms = "is-active";
+  //   },
+  //   clickcovid: function () {
+  //     this.about = "";
+  //     this.test = "";
+  //     this.shipping = "";
+  //     this.refund = "";
+  //     this.privacy = "";
+  //     this.terms = "";
+  //     this.covid = "";
+  //     this.covid = "is-active";
+  //   },
+  // },
 };
 </script>
