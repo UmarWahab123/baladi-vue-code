@@ -15,19 +15,39 @@
     </div>
   </div>
   <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-c6d108d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    class="
+      elementor-section
+      elementor-top-section
+      elementor-element
+      elementor-element-c6d108d
+      elementor-section-boxed
+      elementor-section-height-default
+      elementor-section-height-default
+    "
     data-id="c6d108d"
     data-element_type="section"
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="elementor-column col-md-3 elementor-top-column elementor-element elementor-element-b922ff9 elementor-hidden-tablet"
+        class="
+          elementor-column
+          col-md-3
+          elementor-top-column
+          elementor-element
+          elementor-element-b922ff9
+          elementor-hidden-tablet
+        "
         data-id="b922ff9"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="elementor-element elementor-element-ea676eb elementor-widget elementor-widget-machic-counter-product2"
+            class="
+              elementor-element
+              elementor-element-ea676eb
+              elementor-widget
+              elementor-widget-machic-counter-product2
+            "
             data-id="ea676eb"
             data-element_type="widget"
             data-widget_type="machic-counter-product2.default"
@@ -72,7 +92,12 @@
                         /></a>
                         <div class="product-buttons">
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-shortcode-add-to-cart
+                            "
                             data-product_id="400"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -108,7 +133,12 @@
                               alt="featured" /></a
                           ><a
                             href="javascript::void(0)"
-                            class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                            class="
+                              woosc-btn
+                              woosc-btn-521
+                              woosc-btn-added
+                              woosc-added
+                            "
                             :onclick="clickcomparemodal"
                             data-id="521"
                             >Compare</a
@@ -195,13 +225,22 @@
         </div>
       </div>
       <div
-        class="elementor-column col-md-9 elementor-top-column elementor-element elementor-element-ace6d3a"
+        class="
+          elementor-column
+          col-md-9
+          elementor-top-column elementor-element elementor-element-ace6d3a
+        "
         data-id="ace6d3a"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="elementor-element elementor-element-eb5a69d elementor-widget elementor-widget-machic-product-grid"
+            class="
+              elementor-element
+              elementor-element-eb5a69d
+              elementor-widget
+              elementor-widget-machic-product-grid
+            "
             data-id="eb5a69d"
             data-element_type="widget"
             data-widget_type="machic-product-grid.default"
@@ -227,7 +266,12 @@
                             </a>
                             <div class="product-buttons">
                               <div
-                                class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                                class="
+                                  tinv-wraper
+                                  woocommerce
+                                  tinv-wishlist
+                                  tinvwl-shortcode-add-to-cart
+                                "
                                 data-product_id="521"
                               >
                                 <div class="tinv-wishlist-clear"></div>
@@ -235,7 +279,13 @@
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
-                                  class="tinvwl_add_to_wishlist_button d-none tinvwl-icon-heart tinvwl-position-after tinvwl-product-in-list"
+                                  class="
+                                    tinvwl_add_to_wishlist_button
+                                    d-none
+                                    tinvwl-icon-heart
+                                    tinvwl-position-after
+                                    tinvwl-product-in-list
+                                  "
                                   data-tinv-wl-list='{"423":{"ID":423,"title":"","status":"share","share_key":"f30715","in":[0]}}'
                                   data-tinv-wl-product="521"
                                   data-tinv-wl-productvariation="0"
@@ -266,7 +316,12 @@
                               ><a
                                 href="javascript::void(0)"
                                 :onclick="clickcomparemodal"
-                                class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                                class="
+                                  woosc-btn
+                                  woosc-btn-521
+                                  woosc-btn-added
+                                  woosc-added
+                                "
                                 data-id="521"
                                 >Compare</a
                               ><span
@@ -309,7 +364,9 @@
                                   ></del
                                 >
                                 <ins
-                                  ><span class="woocommerce-Price-amount amount"
+                                  ><span
+                                    class="woocommerce-Price-amount amount"
+                                    style="margin: 4px"
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
@@ -321,7 +378,12 @@
                               ><a
                                 href="?add-to-cart=521"
                                 data-quantity="1"
-                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                class="
+                                  button
+                                  product_type_simple
+                                  add_to_cart_button
+                                  ajax_add_to_cart
+                                "
                                 data-product_id="521"
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -429,7 +491,15 @@
                       <div class="images-wrapper">
                         <div
                           id="product-images"
-                          class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-autoheight swiper-container-rtl slider-loaded"
+                          class="
+                            swiper-container
+                            swiper-container-initialized
+                            swiper-container-horizontal
+                            swiper-container-pointer-events
+                            swiper-container-autoheight
+                            swiper-container-rtl
+                            slider-loaded
+                          "
                           data-effect="slide"
                           data-direction="horizontal"
                           data-loop="false"
@@ -526,7 +596,16 @@
                       <div class="thumbnails-wrapper">
                         <div
                           id="product-thumbnails"
-                          class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-rtl swiper-container-thumbs slider-loaded"
+                          class="
+                            swiper-container
+                            swiper-container-initialized
+                            swiper-container-horizontal
+                            swiper-container-pointer-events
+                            swiper-container-free-mode
+                            swiper-container-rtl
+                            swiper-container-thumbs
+                            slider-loaded
+                          "
                           data-effect="slide"
                           data-direction="horizontal"
                           data-loop="false"
@@ -545,7 +624,12 @@
                             style="transform: translate3d(0px, 0px, 0px)"
                           >
                             <div
-                              class="swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active"
+                              class="
+                                swiper-slide
+                                swiper-slide-thumb-active
+                                swiper-slide-visible
+                                swiper-slide-active
+                              "
                               role="group"
                               aria-label="1 / 3"
                               style="width: 85.8px; margin-left: 7px"
@@ -557,7 +641,11 @@
                             </div>
                             <!-- swiper-slide -->
                             <div
-                              class="swiper-slide swiper-slide-visible swiper-slide-next"
+                              class="
+                                swiper-slide
+                                swiper-slide-visible
+                                swiper-slide-next
+                              "
                               role="group"
                               aria-label="2 / 3"
                               style="width: 85.8px; margin-left: 7px"
@@ -712,7 +800,13 @@
                           type="submit"
                           name="add-to-cart"
                           value="408"
-                          class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                          class="
+                            button button-primary
+                            add_to_cart_button
+                            single_add_to_cart_button
+                            button
+                            alt
+                          "
                         >
                           <span>Add to cart</span>
                         </button>
@@ -720,13 +814,24 @@
                           type="submit"
                           name="add-to-cart"
                           value="408"
-                          class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                          class="
+                            button button-primary
+                            add_to_cart_button
+                            single_add_to_cart_button
+                            button
+                            alt
+                          "
                         >
                           <span>Buy Now</span>
                         </button>
 
                         <div
-                          class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"
+                          class="
+                            tinv-wraper
+                            woocommerce
+                            tinv-wishlist
+                            tinvwl-after-add-to-cart
+                          "
                           data-product_id="408"
                         >
                           <div class="tinv-wishlist-clear"></div>
@@ -736,7 +841,12 @@
 
                       <div class="product-actions">
                         <div
-                          class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                          class="
+                            tinv-wraper
+                            woocommerce
+                            tinv-wishlist
+                            tinvwl-shortcode-add-to-cart
+                          "
                           data-product_id="408"
                         >
                           <div class="tinv-wishlist-clear"></div>
@@ -744,7 +854,11 @@
                             role="button"
                             tabindex="0"
                             aria-label="Add to Wishlist"
-                            class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                            class="
+                              tinvwl_add_to_wishlist_button
+                              tinvwl-icon-heart
+                              tinvwl-position-after
+                            "
                             data-tinv-wl-product="408"
                           ></a>
                           <div class="tinvwl-tooltip">Add to Wishlist</div>
@@ -835,7 +949,15 @@
     :class="showcomparemodal"
     :style="showcomparemodalstyle"
     id="newDiv"
-    class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout woosc-area-open-bar woosc-area-open-table"
+    class="
+      woosc-area
+      woosc-bar-bottom
+      woosc-bar-right
+      woosc-bar-click-outside-yes
+      woosc-hide-checkout
+      woosc-area-open-bar
+      woosc-area-open-table
+    "
     data-bg-color="#292a30"
     data-btn-color="#00a0d2"
     data-count="3"
@@ -859,7 +981,10 @@
             ></span
           ></a>
           <div
-            class="woosc-table-items woosc-table-items-loaded ps-container ps-theme-wpc ps-active-y"
+            class="
+              woosc-table-items woosc-table-items-loaded
+              ps-container ps-theme-wpc ps-active-y
+            "
             style="overflow: auto"
             data-ps-id="d26f5069-dad8-fe4f-e843-16cb75c95a96"
           >
@@ -1199,7 +1324,12 @@
                       <a
                         href=""
                         data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                        class="
+                          button
+                          product_type_simple
+                          add_to_cart_button
+                          ajax_add_to_cart
+                        "
                         data-product_id="400"
                         data-product_sku="ZR45VGRT"
                         aria-label="Add “Dragon Touch Max10 Tablet Android 10.0 OS” to your cart"
@@ -1213,7 +1343,12 @@
                       <a
                         href=""
                         data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                        class="
+                          button
+                          product_type_simple
+                          add_to_cart_button
+                          ajax_add_to_cart
+                        "
                         data-product_id="521"
                         data-product_sku="BE45VGRT"
                         aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -1227,7 +1362,12 @@
                       <a
                         href=""
                         data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                        class="
+                          button
+                          product_type_simple
+                          add_to_cart_button
+                          ajax_add_to_cart
+                        "
                         data-product_id="500"
                         data-product_sku="SO4JK74"
                         aria-label="Add “Apple iPhone 11 64GB Yellow Fully Unlocked” to your cart"

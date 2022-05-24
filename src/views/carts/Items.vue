@@ -5,7 +5,12 @@
     method="post"
   >
     <table
-      class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+      class="
+        table
+        shop_table shop_table_responsive
+        cart
+        woocommerce-cart-form__contents
+      "
       cellspacing="0"
     >
       <thead>
@@ -30,7 +35,10 @@
                 width="90"
                 height="90"
                 src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-90x90.jpg"
-                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                class="
+                  attachment-woocommerce_thumbnail
+                  size-woocommerce_thumbnail
+                "
                 alt=""
                 loading="lazy"
                 srcset="
@@ -173,12 +181,19 @@ export default {
   data: () => ({
     results: {
       0: {
+        id: 1,
         product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
         price: 233,
         quantity: 1,
         subtotal: 233,
       },
-      1: { product: "test 2", price: 253, quantity: 1, subtotal: 253 },
+      1: {
+        id: 2,
+        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 2",
+        price: 253,
+        quantity: 1,
+        subtotal: 253,
+      },
     },
   }),
   mounted() {

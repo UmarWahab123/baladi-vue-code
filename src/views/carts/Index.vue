@@ -11,11 +11,16 @@
                 <div class="cart-wrapper">
                   <form
                     class="woocommerce-cart-form border shadow p-3"
-                    action="https://klbtheme.com/machic/cart/"
+                    action="javascript:void(0)"
                     method="post"
                   >
                     <table
-                      class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+                      class="
+                        table
+                        shop_table shop_table_responsive
+                        cart
+                        woocommerce-cart-form__contents
+                      "
                       cellspacing="0"
                     >
                       <thead>
@@ -29,15 +34,20 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="woocommerce-cart-form__cart-item cart_item">
+                        <tr
+                          class="woocommerce-cart-form__cart-item cart_item"
+                          v-for="(item, indextr) in results"
+                        >
                           <td class="product-thumbnail">
-                            <a
-                              href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                            <a href="javascript:void(0)"
                               ><img
                                 width="90"
                                 height="90"
                                 src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-90x90.jpg"
-                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                class="
+                                  attachment-woocommerce_thumbnail
+                                  size-woocommerce_thumbnail
+                                "
                                 alt=""
                                 loading="lazy"
                                 srcset="
@@ -55,10 +65,7 @@
                             /></a>
                           </td>
                           <td class="product-name" data-title="Product">
-                            <a
-                              href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                              >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
-                            >
+                            <a href="javascript:void(0)"> {{ item.product }}</a>
                           </td>
 
                           <td class="product-price" data-title="Price">
@@ -66,7 +73,7 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >629.99</bdi
+                                >{{ item.price }}</bdi
                               ></span
                             >
                           </td>
@@ -79,7 +86,11 @@
                                 >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB
                                 quantity</label
                               >
-                              <div class="quantity-button minus"></div>
+                              <div
+                                class="quantity-button minus"
+                                @click="decrement"
+                                v-bind:input_Index="indextr"
+                              ></div>
                               <input
                                 type="text"
                                 id="quantity_621364ed017d6"
@@ -88,13 +99,17 @@
                                 min="0"
                                 max="10"
                                 name="cart[07563a3fe3bbe7e3ba84431ad9d055af][qty]"
-                                value="1"
+                                :value="item.quantity"
                                 title="Qty"
                                 size="4"
                                 placeholder=""
                                 inputmode="numeric"
                               />
-                              <div class="quantity-button plus"></div>
+                              <div
+                                class="quantity-button plus"
+                                @click="increment"
+                                v-bind:input_Index="indextr"
+                              ></div>
                             </div>
                           </td>
 
@@ -103,111 +118,18 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >629.99</bdi
+                                >{{ item.subtotal }}</bdi
                               ></span
                             >
                           </td>
 
                           <td class="product-remove">
                             <a
-                              href="https://klbtheme.com/machic/cart/?remove_item=07563a3fe3bbe7e3ba84431ad9d055af&amp;_wpnonce=6d4198d000"
+                              href="javascript:void(0)"
                               class="remove"
                               aria-label="Remove this item"
                               data-product_id="521"
                               data-product_sku="BE45VGRT"
-                              >×</a
-                            >
-                          </td>
-                        </tr>
-                        <tr class="woocommerce-cart-form__cart-item cart_item">
-                          <td class="product-thumbnail">
-                            <a
-                              href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                              ><img
-                                width="90"
-                                height="90"
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-90x90.jpg"
-                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                alt=""
-                                loading="lazy"
-                                srcset="
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-90x90.jpg       90w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-54x54.jpg       54w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-600x600.jpg    600w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-64x64.jpg       64w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-300x300.jpg    300w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-1024x1024.jpg 1024w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-150x150.jpg    150w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-768x768.jpg    768w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-450x450.jpg    450w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg       96w,
-                                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2.jpg           1200w
-                                "
-                                sizes="(max-width: 90px) 100vw, 90px"
-                            /></a>
-                          </td>
-
-                          <td class="product-name" data-title="Product">
-                            <a
-                              href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                              >Apple iPhone 11 64GB Yellow Fully Unlocked</a
-                            >
-                          </td>
-
-                          <td class="product-price" data-title="Price">
-                            <span class="woocommerce-Price-amount amount"
-                              ><bdi
-                                ><span class="woocommerce-Price-currencySymbol"
-                                  >QAR </span
-                                >438.67</bdi
-                              ></span
-                            >
-                          </td>
-
-                          <td class="product-quantity" data-title="Quantity">
-                            <div class="quantity">
-                              <label
-                                class="screen-reader-text"
-                                for="quantity_621364ed01c8a"
-                                >Apple iPhone 11 64GB Yellow Fully Unlocked
-                                quantity</label
-                              >
-                              <div class="quantity-button minus"></div>
-                              <input
-                                type="text"
-                                id="quantity_621364ed01c8a"
-                                class="input-text qty text"
-                                step="1"
-                                min="0"
-                                max="21"
-                                name="cart[cee631121c2ec9232f3a2f028ad5c89b][qty]"
-                                value="1"
-                                title="Qty"
-                                size="4"
-                                placeholder=""
-                                inputmode="numeric"
-                              />
-                              <div class="quantity-button plus"></div>
-                            </div>
-                          </td>
-
-                          <td class="product-subtotal" data-title="Subtotal">
-                            <span class="woocommerce-Price-amount amount"
-                              ><bdi
-                                ><span class="woocommerce-Price-currencySymbol"
-                                  >QAR </span
-                                >438.67</bdi
-                              ></span
-                            >
-                          </td>
-
-                          <td class="product-remove">
-                            <a
-                              href="https://klbtheme.com/machic/cart/?remove_item=cee631121c2ec9232f3a2f028ad5c89b&amp;_wpnonce=6d4198d000"
-                              class="remove"
-                              aria-label="Remove this item"
-                              data-product_id="500"
-                              data-product_sku="SO4JK74"
                               >×</a
                             >
                           </td>
@@ -307,7 +229,9 @@
                                       class="woocommerce-Price-amount amount"
                                       ><bdi
                                         ><span
-                                          class="woocommerce-Price-currencySymbol"
+                                          class="
+                                            woocommerce-Price-currencySymbol
+                                          "
                                           >QAR </span
                                         >15.00</bdi
                                       ></span
@@ -346,11 +270,11 @@
 
                               <form
                                 class="woocommerce-shipping-calculator"
-                                action="https://klbtheme.com/machic/cart/"
+                                action="javascript:void(0)"
                                 method="post"
                               >
                                 <a
-                                  href="#"
+                                  href="javascript:void(0)"
                                   onclick="Cart()"
                                   class="shipping-calculator-button woocommerce"
                                   >Change address</a
@@ -705,7 +629,12 @@
                                   </p>
 
                                   <p
-                                    class="form-row validate-required form-row-wide address-field"
+                                    class="
+                                      form-row
+                                      validate-required
+                                      form-row-wide
+                                      address-field
+                                    "
                                     id="calc_shipping_state_field"
                                   >
                                     <span>
@@ -796,7 +725,12 @@
                                   </p>
 
                                   <p
-                                    class="form-row validate-required form-row-wide address-field"
+                                    class="
+                                      form-row
+                                      validate-required
+                                      form-row-wide
+                                      address-field
+                                    "
                                     id="calc_shipping_city_field"
                                   >
                                     <input
@@ -811,7 +745,12 @@
                                   </p>
 
                                   <p
-                                    class="form-row validate-required form-row-wide address-field"
+                                    class="
+                                      form-row
+                                      validate-required
+                                      form-row-wide
+                                      address-field
+                                    "
                                     id="calc_shipping_postcode_field"
                                   >
                                     <input
@@ -870,7 +809,7 @@
 
                       <div class="wc-proceed-to-checkout">
                         <router-link
-                          to="/cart"
+                          to="/checkout"
                           class="checkout-button button alt wc-forward"
                           >Proceed to checkout
                         </router-link>
@@ -889,7 +828,22 @@
                   </div>
                   <div class="products column-6 mobile-2">
                     <div
-                      class="product type-product post-521 status-publish first instock product_cat-apple product_cat-cell-phones has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple custom-hover"
+                      class="
+                        product
+                        type-product
+                        post-521
+                        status-publish
+                        first
+                        instock
+                        product_cat-apple product_cat-cell-phones
+                        has-post-thumbnail
+                        sale
+                        featured
+                        shipping-taxable
+                        purchasable
+                        product-type-simple
+                        custom-hover
+                      "
                     >
                       <div class="product-wrapper product-type-1">
                         <div class="product-content">
@@ -897,9 +851,7 @@
                             <div class="product-badges">
                               <span class="badge onsale">11%</span>
                             </div>
-                            <a
-                              href="/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                            >
+                            <a href="javascript:void(0)">
                               <div
                                 class="product-card"
                                 style="position: relative"
@@ -976,7 +928,12 @@
                             </a>
                             <div class="product-buttons">
                               <div
-                                class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                                class="
+                                  tinv-wraper
+                                  woocommerce
+                                  tinv-wishlist
+                                  tinvwl-shortcode-add-to-cart
+                                "
                                 data-product_id="521"
                               >
                                 <div class="tinv-wishlist-clear"></div>
@@ -993,13 +950,18 @@
                                   Add to Wishlist
                                 </div>
                               </div>
-                              <a href="" class="most-comments"
+                              <a href="javascript:void(0)" class="most-comments"
                                 ><img
                                   src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                   alt="featured" /></a
                               ><a
                                 href="javascript::void(0)"
-                                class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                                class="
+                                  woosc-btn
+                                  woosc-btn-521
+                                  woosc-btn-added
+                                  woosc-added
+                                "
                                 :onclick="clickcomparemodal"
                                 data-id="521"
                                 >Compare</a
@@ -1012,8 +974,7 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a
-                                href="/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              <a href="javascript:void(0)"
                                 >always diamond 24 pads</a
                               >
                             </h3>
@@ -1060,9 +1021,14 @@
                                   </span></ins
                                 ></span
                               ><a
-                                href="/product-category/apple/?add-to-cart=521"
+                                href="javascript:void(0)"
                                 data-quantity="1"
-                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                class="
+                                  button
+                                  product_type_simple
+                                  add_to_cart_button
+                                  ajax_add_to_cart
+                                "
                                 data-product_id="521"
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -1091,7 +1057,12 @@
                         style="margin-bottom: -109px"
                       ></div>
                       <div
-                        class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart tinvwl-loop-button-wrapper"
+                        class="
+                          tinv-wraper
+                          woocommerce
+                          tinv-wishlist
+                          tinvwl-after-add-to-cart tinvwl-loop-button-wrapper
+                        "
                         data-product_id="521"
                       >
                         <div class="tinv-wishlist-clear"></div>
@@ -1099,7 +1070,12 @@
                           role="button"
                           tabindex="0"
                           aria-label="Add to Wishlist"
-                          class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after tinvwl-loop"
+                          class="
+                            tinvwl_add_to_wishlist_button
+                            tinvwl-icon-heart
+                            tinvwl-position-after
+                            tinvwl-loop
+                          "
                           data-tinv-wl-list="[]"
                           data-tinv-wl-product="521"
                           data-tinv-wl-productvariation="0"
@@ -1173,7 +1149,12 @@
         <div class="mfp-container mfp-s-ready">
           <div class="mfp-content">
             <div
-              class="quickview-product single-product-wrapper product white-popup"
+              class="
+                quickview-product
+                single-product-wrapper
+                product
+                white-popup
+              "
             >
               <div class="quick-product-wrapper single-product-container">
                 <button
@@ -1191,7 +1172,15 @@
                         <div class="images-wrapper">
                           <div
                             id="product-images"
-                            class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-autoheight swiper-container-rtl slider-loaded"
+                            class="
+                              swiper-container
+                              swiper-container-initialized
+                              swiper-container-horizontal
+                              swiper-container-pointer-events
+                              swiper-container-autoheight
+                              swiper-container-rtl
+                              slider-loaded
+                            "
                             data-effect="slide"
                             data-direction="horizontal"
                             data-loop="false"
@@ -1218,7 +1207,7 @@
                                 aria-label="1 / 3"
                                 style="width: 455px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
                                 /></a>
@@ -1230,7 +1219,7 @@
                                 aria-label="2 / 3"
                                 style="width: 455px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
                                 /></a>
@@ -1242,7 +1231,7 @@
                                 aria-label="3 / 3"
                                 style="width: 455px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
                                 /></a>
@@ -1288,7 +1277,16 @@
                         <div class="thumbnails-wrapper">
                           <div
                             id="product-thumbnails"
-                            class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-rtl swiper-container-thumbs slider-loaded"
+                            class="
+                              swiper-container
+                              swiper-container-initialized
+                              swiper-container-horizontal
+                              swiper-container-pointer-events
+                              swiper-container-free-mode
+                              swiper-container-rtl
+                              swiper-container-thumbs
+                              slider-loaded
+                            "
                             data-effect="slide"
                             data-direction="horizontal"
                             data-loop="false"
@@ -1307,24 +1305,33 @@
                               style="transform: translate3d(0px, 0px, 0px)"
                             >
                               <div
-                                class="swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active"
+                                class="
+                                  swiper-slide
+                                  swiper-slide-thumb-active
+                                  swiper-slide-visible
+                                  swiper-slide-active
+                                "
                                 role="group"
                                 aria-label="1 / 3"
                                 style="width: 85.8px; margin-left: 7px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
                                 /></a>
                               </div>
                               <!-- swiper-slide -->
                               <div
-                                class="swiper-slide swiper-slide-visible swiper-slide-next"
+                                class="
+                                  swiper-slide
+                                  swiper-slide-visible
+                                  swiper-slide-next
+                                "
                                 role="group"
                                 aria-label="2 / 3"
                                 style="width: 85.8px; margin-left: 7px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
                                 /></a>
@@ -1336,7 +1343,7 @@
                                 aria-label="3 / 3"
                                 style="width: 85.8px; margin-left: 7px"
                               >
-                                <a href="#"
+                                <a href="javascript:void(0)"
                                   ><img
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
                                 /></a>
@@ -1401,7 +1408,7 @@
                         </div>
                         <div class="count-rating">
                           <a
-                            href="#reviews"
+                            href="javascript:void(0)"
                             class="woocommerce-review-link"
                             rel="nofollow"
                             ><span class="count">1</span> review</a
@@ -1441,7 +1448,7 @@
                       <div class="product-info-top">
                         <form
                           class="cart single-ajax"
-                          action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                          action="javascript:void(0)"
                           method="post"
                           enctype="multipart/form-data"
                         >
@@ -1474,7 +1481,13 @@
                             type="submit"
                             name="add-to-cart"
                             value="408"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Add to cart</span>
                           </button>
@@ -1482,13 +1495,24 @@
                             type="submit"
                             name="add-to-cart"
                             value="408"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Buy Now</span>
                           </button>
 
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-after-add-to-cart
+                            "
                             data-product_id="408"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -1498,7 +1522,12 @@
 
                         <div class="product-actions">
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-shortcode-add-to-cart
+                            "
                             data-product_id="408"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -1506,13 +1535,17 @@
                               role="button"
                               tabindex="0"
                               aria-label="Add to Wishlist"
-                              class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                              class="
+                                tinvwl_add_to_wishlist_button
+                                tinvwl-icon-heart
+                                tinvwl-position-after
+                              "
                               data-tinv-wl-product="408"
                             ></a>
                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                           </div>
                           <a
-                            href="#"
+                            href="javascript:void(0)"
                             class="woosc-btn woosc-btn-408"
                             data-id="408"
                             >Compare</a
@@ -1525,27 +1558,42 @@
                           <div class="social-share site-social colored mt-0">
                             <ul class="social-container">
                               <li>
-                                <a href="" class="facebook" target="_blank"
+                                <a
+                                  href="javascript:void(0)"
+                                  class="facebook"
+                                  target="_blank"
                                   ><i class="klbth-icon-facebook"></i
                                 ></a>
                               </li>
                               <li>
-                                <a href="" class="twitter" target="_blank"
+                                <a
+                                  href="javascript:void(0)"
+                                  class="twitter"
+                                  target="_blank"
                                   ><i class="klbth-icon-twitter"></i
                                 ></a>
                               </li>
                               <li>
-                                <a href="" class="youtube" target="_blank"
+                                <a
+                                  href="javascript:void(0)"
+                                  class="youtube"
+                                  target="_blank"
                                   ><i class="klbth-icon-youtube"></i
                                 ></a>
                               </li>
                               <li>
-                                <a href="" class="instag" target="_blank"
+                                <a
+                                  href="javascript:void(0)"
+                                  class="instag"
+                                  target="_blank"
                                   ><i class="klbth-icon-instagram"></i
                                 ></a>
                               </li>
                               <li>
-                                <a href="" class="whatsapp" target="_blank"
+                                <a
+                                  href="javascript:void(0)"
+                                  class="whatsapp"
+                                  target="_blank"
                                   ><i class="klbth-icon-whatsapp"></i
                                 ></a>
                               </li>
@@ -1573,9 +1621,7 @@
 
                       <span class="posted_in"
                         >Category:
-                        <a
-                          href="https://klbtheme.com/machic/product-category/smartwatches/"
-                          rel="tag"
+                        <a href="javascript:void(0)" rel="tag"
                           >Smartwatches</a
                         ></span
                       >
@@ -1598,7 +1644,15 @@
       :class="showcomparemodal"
       :style="showcomparemodalstyle"
       id="newDiv"
-      class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout woosc-area-open-bar woosc-area-open-table"
+      class="
+        woosc-area
+        woosc-bar-bottom
+        woosc-bar-right
+        woosc-bar-click-outside-yes
+        woosc-hide-checkout
+        woosc-area-open-bar
+        woosc-area-open-table
+      "
       data-bg-color="#292a30"
       data-btn-color="#00a0d2"
       data-count="3"
@@ -1622,7 +1676,10 @@
               ></span
             ></a>
             <div
-              class="woosc-table-items woosc-table-items-loaded ps-container ps-theme-wpc ps-active-y"
+              class="
+                woosc-table-items woosc-table-items-loaded
+                ps-container ps-theme-wpc ps-active-y
+              "
               style="overflow: auto"
               data-ps-id="d26f5069-dad8-fe4f-e843-16cb75c95a96"
             >
@@ -1645,9 +1702,7 @@
                         top: 0px;
                       "
                     >
-                      <a
-                        href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         >Dragon Touch Max10 Tablet Android 10.0 OS</a
                       >
                     </th>
@@ -1658,9 +1713,7 @@
                         top: 0px;
                       "
                     >
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                       >
                     </th>
@@ -1672,9 +1725,7 @@
                         padding: 15px;
                       "
                     >
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         >Apple iPhone 11 64GB Yellow Fully Unlocked</a
                       >
                     </th>
@@ -1693,9 +1744,7 @@
                       Image
                     </td>
                     <td>
-                      <a
-                        href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         ><img
                           width="600"
                           height="600"
@@ -1721,9 +1770,7 @@
                       /></a>
                     </td>
                     <td>
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         ><img
                           width="600"
                           height="600"
@@ -1747,9 +1794,7 @@
                       /></a>
                     </td>
                     <td>
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         ><img
                           width="600"
                           height="600"
@@ -1963,9 +2008,14 @@
                         style=""
                       >
                         <a
-                          href=""
+                          href="javascript:void(0)"
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="400"
                           data-product_sku="ZR45VGRT"
                           aria-label="Add “Dragon Touch Max10 Tablet Android 10.0 OS” to your cart"
@@ -1980,9 +2030,14 @@
                         style=""
                       >
                         <a
-                          href=""
+                          href="javascript:void(0)"
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="521"
                           data-product_sku="BE45VGRT"
                           aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -1997,9 +2052,14 @@
                         style=""
                       >
                         <a
-                          href=""
+                          href="javascript:void(0)"
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="500"
                           data-product_sku="SO4JK74"
                           aria-label="Add “Apple iPhone 11 64GB Yellow Fully Unlocked” to your cart"
@@ -2322,6 +2382,22 @@ export default {
     showbigmodalstyle: "",
     showcomparemodal: "",
     showcomparemodalstyle: "",
+    results: {
+      0: {
+        id: 1,
+        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
+        price: 233,
+        quantity: 1,
+        subtotal: 233,
+      },
+      1: {
+        id: 2,
+        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 2",
+        price: 253,
+        quantity: 1,
+        subtotal: 253,
+      },
+    },
   }),
   mounted() {},
   methods: {
@@ -2348,6 +2424,18 @@ export default {
     closecomparemodal() {
       this.showcomparemodal = "";
       this.showcomparemodalstyle = "";
+    },
+    increment: function (event) {
+      const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.results[input_index].quantity =
+        this.results[input_index].quantity + 1;
+    },
+    decrement: function (event) {
+      const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.results[input_index].quantity =
+        this.results[input_index].quantity - 1;
     },
   },
 };

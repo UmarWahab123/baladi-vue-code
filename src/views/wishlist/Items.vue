@@ -1,5 +1,5 @@
 <template>
-  <form action="" method="post" autocomplete="off">
+  <form action="javascript:void(0)" method="post" autocomplete="off">
     <table class="tinvwl-table-manage-list">
       <thead>
         <tr>
@@ -48,7 +48,10 @@
                 width="90"
                 height="90"
                 src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-90x90.jpg"
-                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                class="
+                  attachment-woocommerce_thumbnail
+                  size-woocommerce_thumbnail
+                "
                 alt=""
                 loading="lazy"
                 srcset="
@@ -121,12 +124,7 @@
             />
           </td>
           <td class="product-remove">
-            <button
-              type="submit"
-              name="tinvwl-remove"
-              value="599"
-              title="Remove"
-            >
+            <button name="tinvwl-remove" value="599" title="Remove">
               <i class="ftinvwl ftinvwl-times"></i>
             </button>
           </td>
@@ -136,7 +134,10 @@
                 width="90"
                 height="90"
                 src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-90x90.jpg"
-                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                class="
+                  attachment-woocommerce_thumbnail
+                  size-woocommerce_thumbnail
+                "
                 alt=""
                 loading="lazy"
                 srcset="
@@ -222,7 +223,6 @@
                   <option value="remove">Remove</option></select
                 ><span class="tinvwl-input-group-btn"
                   ><button
-                    type="submit"
                     class="button tinvwl-break-input tinvwl-break-checkbox"
                     name="tinvwl-action"
                     value="product_apply"
@@ -235,7 +235,6 @@
             </div>
             <div class="tinvwl-to-right look_in">
               <button
-                type="submit"
                 class="btn"
                 name="tinvwl-action"
                 value="product_selected"
@@ -245,7 +244,6 @@
               </button>
               &nbsp;
               <button
-                type="submit"
                 class="btn"
                 name="tinvwl-action"
                 value="product_all"
@@ -270,3 +268,4 @@
     </table>
   </form>
 </template>
+

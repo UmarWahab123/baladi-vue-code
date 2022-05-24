@@ -139,7 +139,12 @@
           <!-- col -->
           <div class="col col-12 col-lg-2">
             <div
-              class="klbfooterwidget widget woocommerce widget_product_categories"
+              class="
+                klbfooterwidget
+                widget
+                woocommerce
+                widget_product_categories
+              "
             >
               <h4 class="widget-title">Product Categories</h4>
               <ul class="product-categories">
@@ -177,7 +182,11 @@
                 <ul id="menu-let-us-help-you" class="menu">
                   <li
                     id="menu-item-2525"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2525"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2525
+                    "
                   >
                     <router-link to="/replacement"
                       >Returns &amp; Replacements</router-link
@@ -185,7 +194,11 @@
                   </li>
                   <li
                     id="menu-item-2221"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2221"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2221
+                    "
                   >
                     <router-link to="/shoppingrates"
                       >Shipping Rates &amp; Policies</router-link
@@ -193,7 +206,11 @@
                   </li>
                   <li
                     id="menu-item-2524"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2524"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2524
+                    "
                   >
                     <router-link to="/refund"
                       >Refund and Returns Policy</router-link
@@ -201,7 +218,13 @@
                   </li>
                   <li
                     id="menu-item-2223"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2223"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page
+                      menu-item-privacy-policy
+                      menu-item-2223
+                    "
                   >
                     <router-link to="/privacy-policy"
                       >Privacy Policy
@@ -209,20 +232,33 @@
                   </li>
                   <li
                     id="menu-item-2523"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2523"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2523
+                    "
                   >
                     <a href="/termscondition"></a>
                     <router-link to="/terms">Terms and Conditions </router-link>
                   </li>
                   <li
                     id="menu-item-2185"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2185"
+                    class="
+                      menu-item
+                      menu-item-type-custom
+                      menu-item-object-custom
+                      menu-item-2185
+                    "
                   >
                     <router-link to="/helpcenter">Help Center</router-link>
                   </li>
                   <li
                     id="menu-item-2182"
-                    class="menu-item menu-item-type-custom text-danger menu-item-object-custom menu-item-2182"
+                    class="
+                      menu-item menu-item-type-custom
+                      text-danger
+                      menu-item-object-custom menu-item-2182
+                    "
                   >
                     <router-link to="/covid-19">Covid-19</router-link>
                   </li>
@@ -238,25 +274,45 @@
                 <ul id="menu-get-to-know-us" class="menu">
                   <li
                     id="menu-item-2186"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2186"
+                    class="
+                      menu-item
+                      menu-item-type-custom
+                      menu-item-object-custom
+                      menu-item-2186
+                    "
                   >
                     <!-- <router-link to="/careers">Careers </router-link> -->
                   </li>
                   <li
                     id="menu-item-2508"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2508
+                    "
                   >
                     <router-link to="/aboutus">About Us</router-link>
                   </li>
                   <li
                     id="menu-item-2190"
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2190"
+                    class="
+                      menu-item
+                      menu-item-type-custom
+                      menu-item-object-custom
+                      menu-item-2190
+                    "
                   >
                     <router-link to="/review">Customer-review</router-link>
                   </li>
                   <li
                     id="menu-item-2513"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2513"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page
+                      menu-item-privacy-policy
+                      menu-item-2513
+                    "
                   >
                     <router-link to="/privacy-policy"
                       >Privacy Policy
@@ -264,13 +320,21 @@
                   </li>
                   <li
                     id="menu-item-2509"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2509"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2509
+                    "
                   >
                     <router-link to="/contact-us">Contact Us</router-link>
                   </li>
                   <li
                     id="menu-item-2509"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2509"
+                    class="
+                      menu-item
+                      menu-item-type-post_type
+                      menu-item-object-page menu-item-2509
+                    "
                   >
                     <router-link to="/faq">FAQs</router-link>
                   </li>
@@ -341,8 +405,10 @@
     <button
       type="button"
       :onclick="scrollup"
-      class="btn btn-danger scroll-btn btn-floating btn-lg"
+      class="btn btn-success scroll-btn btn-floating btn-lg"
+      :class="displaynone"
       id="btn-back-to-top"
+      v-show="scY > 300"
     >
       <i class="fas fa-arrow-up"></i>
     </button>
@@ -376,7 +442,13 @@
 
   <div class="klb-mobile-search">
     <div
-      class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled"
+      class="
+        dgwt-wcas-search-wrapp dgwt-wcas-has-submit
+        woocommerce
+        js-dgwt-wcas-layout-classic
+        dgwt-wcas-layout-classic
+        js-dgwt-wcas-mobile-overlay-enabled
+      "
     >
       <form class="dgwt-wcas-search-form" role="search" action="#" method="get">
         <div class="dgwt-wcas-sf-wrapp">
@@ -462,7 +534,13 @@
   </div>
   <div
     id="woosc-area"
-    class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout"
+    class="
+      woosc-area
+      woosc-bar-bottom
+      woosc-bar-right
+      woosc-bar-click-outside-yes
+      woosc-hide-checkout
+    "
     data-bg-color="#292a30"
     data-btn-color="#00a0d2"
     data-count="2"
@@ -517,15 +595,33 @@
 // import * as myKey from '/../src/styles/app.css';
 
 export default {
+  data() {
+    return {
+      scTimer: 0,
+      scY: 0,
+    };
+  },
   mounted() {
     // let Script = document.createElement("script");
     // Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
     // document.head.appendChild(Script);
+    window.addEventListener("scroll", this.handleScroll);
   },
 
   methods: {
+    handleScroll: function () {
+      if (this.scTimer) return;
+      this.scTimer = setTimeout(() => {
+        this.scY = window.scrollY;
+        clearTimeout(this.scTimer);
+        this.scTimer = 0;
+      }, 100);
+    },
     scrollup(index) {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     },
   },
 };

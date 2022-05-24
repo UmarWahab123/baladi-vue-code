@@ -16,14 +16,33 @@
             <div class="woocommerce-notices-wrapper"></div>
             <div
               id="product-521"
-              class="product type-product post-521 status-publish first instock product_cat-apple product_cat-cell-phones has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple"
+              class="
+                product
+                type-product
+                post-521
+                status-publish
+                first
+                instock
+                product_cat-apple product_cat-cell-phones
+                has-post-thumbnail
+                sale
+                featured
+                shipping-taxable
+                purchasable
+                product-type-simple
+              "
             >
               <div class="single-product-container">
                 <div class="row">
                   <div class="col col-12 col-lg-6">
                     <div class="single-thumbnails default">
                       <div
-                        class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-7 images"
+                        class="
+                          woocommerce-product-gallery
+                          woocommerce-product-gallery--with-images
+                          woocommerce-product-gallery--columns-7
+                          images
+                        "
                         data-columns="7"
                         style="
                           opacity: 1;
@@ -52,7 +71,10 @@
                             <div
                               data-thumb="#wp-content/uploads/2021/09/single-1-150x150.jpg"
                               data-thumb-alt=""
-                              class="woocommerce-product-gallery__image flex-active-slide"
+                              class="
+                                woocommerce-product-gallery__image
+                                flex-active-slide
+                              "
                               style="
                                 width: 613px;
                                 margin-right: 0px;
@@ -239,7 +261,10 @@
                           </figure>
                         </div>
                         <ol
-                          class="flex-control-nav flex-control-thumbs owl-carousel owl-loaded owl-drag"
+                          class="
+                            flex-control-nav flex-control-thumbs
+                            owl-carousel owl-loaded owl-drag
+                          "
                           id="product-thumbnails"
                         >
                           <div class="owl-stage-outer">
@@ -404,7 +429,7 @@
                           id="radio1"
                           autocomplete="off"
                         />
-                        <label class="button btn-outline-dark" for="radio1"
+                        <label class="button2 btn-outline-dark" for="radio1"
                           >PCS</label
                         >
                         <input
@@ -415,7 +440,7 @@
                           autocomplete="off"
                         />
                         <label
-                          class="button btn-outline-dark gaf-btton"
+                          class="button2 btn-outline-dark gaf-btton"
                           for="radio3"
                           >CTN</label
                         >
@@ -454,7 +479,13 @@
                             type="submit"
                             name="add-to-cart"
                             value="521"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Add to cart</span>
                           </button>
@@ -462,7 +493,13 @@
                             type="submit"
                             name="add-to-cart"
                             value="521"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Buy Now</span>
                           </button>
@@ -505,7 +542,12 @@
                         </div>
                         <div class="product-actions">
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-shortcode-add-to-cart
+                            "
                             data-product_id="521"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -513,7 +555,11 @@
                               role="button"
                               tabindex="0"
                               aria-label="Add to Wishlist"
-                              class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                              class="
+                                tinvwl_add_to_wishlist_button
+                                tinvwl-icon-heart
+                                tinvwl-position-after
+                              "
                               data-tinv-wl-list="[]"
                               data-tinv-wl-product="521"
                               data-tinv-wl-productvariation="0"
@@ -591,7 +637,10 @@
                       </ul>
                     </div>
                     <div
-                      class="product-extra-detail woocommerce-product-details__short-description"
+                      class="
+                        product-extra-detail
+                        woocommerce-product-details__short-description
+                      "
                     >
                       <!-- <ul>
                                             <li class="SpecHighlights-list-label">Screen Size 10.9 in</li>
@@ -657,7 +706,14 @@
                 </ul>
 
                 <div
-                  class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab tab-pane fade"
+                  class="
+                    woocommerce-Tabs-panel woocommerce-Tabs-panel--description
+                    panel
+                    entry-content
+                    wc-tab
+                    tab-pane
+                    fade
+                  "
                   :class="showdescription"
                   id="tab-description"
                   role="tabpanel"
@@ -689,7 +745,14 @@
                                 </ul> -->
                 </div>
                 <div
-                  class="woocommerce-Tabs-panel woocommerce-Tabs-panel--specification panel entry-content wc-tab tab-pane fade"
+                  class="
+                    woocommerce-Tabs-panel woocommerce-Tabs-panel--specification
+                    panel
+                    entry-content
+                    wc-tab
+                    tab-pane
+                    fade
+                  "
                   :class="showspecification"
                   id="tab-specification"
                   role="tabpanel"
@@ -804,7 +867,14 @@
                   </div>
                 </div>
                 <div
-                  class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab tab-pane fade"
+                  class="
+                    woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews
+                    panel
+                    entry-content
+                    wc-tab
+                    tab-pane
+                    fade
+                  "
                   :class="showsreviews"
                   id="tab-reviews"
                   role="tabpanel"
@@ -818,7 +888,15 @@
 
                       <ol class="commentlist">
                         <li
-                          class="review byuser comment-author-sinan bypostauthor even thread-even depth-1"
+                          class="
+                            review
+                            byuser
+                            comment-author-sinan
+                            bypostauthor
+                            even
+                            thread-even
+                            depth-1
+                          "
                           id="li-comment-29"
                         >
                           <div id="comment-29" class="comment_container">
@@ -1015,7 +1093,15 @@
               <div class="row">
                 <div class="col">
                   <section
-                    class="elementor-section elementor-top-section elementor-element elementor-element-55ef817 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    class="
+                      elementor-section
+                      elementor-top-section
+                      elementor-element
+                      elementor-element-55ef817
+                      elementor-section-boxed
+                      elementor-section-height-default
+                      elementor-section-height-default
+                    "
                     data-id="55ef817"
                     data-element_type="section"
                   >
@@ -1023,15 +1109,28 @@
                       class="elementor-container elementor-column-gap-extended"
                     >
                       <div
-                        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-64c48a6"
+                        class="
+                          elementor-column
+                          elementor-col-100
+                          elementor-top-column
+                          elementor-element
+                          elementor-element-64c48a6
+                        "
                         data-id="64c48a6"
                         data-element_type="column"
                       >
                         <div
-                          class="elementor-widget-wrap elementor-element-populated"
+                          class="
+                            elementor-widget-wrap elementor-element-populated
+                          "
                         >
                           <div
-                            class="elementor-element elementor-element-57bc36c elementor-widget elementor-widget-machic-product-grid"
+                            class="
+                              elementor-element
+                              elementor-element-57bc36c
+                              elementor-widget
+                              elementor-widget-machic-product-grid
+                            "
                             data-id="57bc36c"
                             data-element_type="widget"
                             data-widget_type="machic-product-grid.default"
@@ -1070,7 +1169,9 @@
                                                 style="position: relative"
                                               >
                                                 <div
-                                                  class="hover-slider-images-toggler"
+                                                  class="
+                                                    hover-slider-images-toggler
+                                                  "
                                                   style="
                                                     position: absolute;
                                                     inset: 0px;
@@ -1078,19 +1179,25 @@
                                                   "
                                                 >
                                                   <div
-                                                    class="hover-slider-toggle-pane"
+                                                    class="
+                                                      hover-slider-toggle-pane
+                                                    "
                                                     data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/a523-400x400.jpg"
                                                     data-hover-slider-i="1"
                                                     style="flex-grow: 1"
                                                   ></div>
                                                   <div
-                                                    class="hover-slider-toggle-pane"
+                                                    class="
+                                                      hover-slider-toggle-pane
+                                                    "
                                                     data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/a523-400x400.jpg"
                                                     data-hover-slider-i="2"
                                                     style="flex-grow: 1"
                                                   ></div>
                                                   <div
-                                                    class="hover-slider-toggle-pane"
+                                                    class="
+                                                      hover-slider-toggle-pane
+                                                    "
                                                     data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/a523-400x400.jpg"
                                                     data-hover-slider-i="3"
                                                     style="flex-grow: 1"
@@ -1101,15 +1208,22 @@
                                                 >
                                                   <div
                                                     data-hover-slider-i="1"
-                                                    class="hover-slider-indicator-dot"
+                                                    class="
+                                                      hover-slider-indicator-dot
+                                                    "
                                                   ></div>
                                                   <div
                                                     data-hover-slider-i="2"
-                                                    class="hover-slider-indicator-dot active"
+                                                    class="
+                                                      hover-slider-indicator-dot
+                                                      active
+                                                    "
                                                   ></div>
                                                   <div
                                                     data-hover-slider-i="3"
-                                                    class="hover-slider-indicator-dot"
+                                                    class="
+                                                      hover-slider-indicator-dot
+                                                    "
                                                   ></div>
                                                 </div>
                                                 <img
@@ -1121,7 +1235,12 @@
                                             </a>
                                             <div class="product-buttons">
                                               <div
-                                                class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                                                class="
+                                                  tinv-wraper
+                                                  woocommerce
+                                                  tinv-wishlist
+                                                  tinvwl-shortcode-add-to-cart
+                                                "
                                                 data-product_id="521"
                                               >
                                                 <div
@@ -1132,7 +1251,10 @@
                                                   role="button"
                                                   tabindex="0"
                                                   aria-label="Add to Wishlist"
-                                                  class="d-none tinvwl-position-after"
+                                                  class="
+                                                    d-none
+                                                    tinvwl-position-after
+                                                  "
                                                   data-tinv-wl-list="[]"
                                                   data-tinv-wl-product="478"
                                                   data-tinv-wl-productvariation="0"
@@ -1140,7 +1262,9 @@
                                                   data-tinv-wl-producttype="simple"
                                                   data-tinv-wl-action="add"
                                                   ><span
-                                                    class="tinvwl_add_to_wishlist-text"
+                                                    class="
+                                                      tinvwl_add_to_wishlist-text
+                                                    "
                                                     >Add to Wishlist</span
                                                   ></a
                                                 >
@@ -1152,7 +1276,9 @@
                                                     aria-hidden="true"
                                                   ></i
                                                   ><span
-                                                    class="tinvwl_add_to_wishlist-text"
+                                                    class="
+                                                      tinvwl_add_to_wishlist-text
+                                                    "
                                                     >Add to Wishlist</span
                                                   ></a
                                                 >
@@ -1171,13 +1297,22 @@
                                                   alt="featured" /></a
                                               ><a
                                                 href="javascript::void(0)"
-                                                class="woosc-btn woosc-btn-521 woosc-btn-added woosc-added"
+                                                class="
+                                                  woosc-btn
+                                                  woosc-btn-521
+                                                  woosc-btn-added
+                                                  woosc-added
+                                                "
                                                 :onclick="clickcomparemodal"
                                                 data-id="521"
                                                 >Compare</a
                                               ><span
                                                 :onclick="clickbigmodal"
-                                                class="detail-bnt quickview animated"
+                                                class="
+                                                  detail-bnt
+                                                  quickview
+                                                  animated
+                                                "
                                                 ><i
                                                   class="klbth-icon-eye-empty"
                                                 ></i
@@ -1216,10 +1351,15 @@
                                             <span class="price"
                                               ><del aria-hidden="true"
                                                 ><span
-                                                  class="woocommerce-Price-amount amount"
+                                                  class="
+                                                    woocommerce-Price-amount
+                                                    amount
+                                                  "
                                                   ><bdi
                                                     ><span
-                                                      class="woocommerce-Price-currencySymbol"
+                                                      class="
+                                                        woocommerce-Price-currencySymbol
+                                                      "
                                                       >QAR </span
                                                     >699.99</bdi
                                                   ></span
@@ -1227,10 +1367,15 @@
                                               >
                                               <ins
                                                 ><span
-                                                  class="woocommerce-Price-amount amount"
+                                                  class="
+                                                    woocommerce-Price-amount
+                                                    amount
+                                                  "
                                                   ><bdi
                                                     ><span
-                                                      class="woocommerce-Price-currencySymbol"
+                                                      class="
+                                                        woocommerce-Price-currencySymbol
+                                                      "
                                                       >QAR </span
                                                     >629.99</bdi
                                                   ></span
@@ -1238,13 +1383,7 @@
                                               ></span
                                             >
                                             <!-- price -->
-                                            <div class="product-meta">
-                                              <div
-                                                class="product-message color-light"
-                                              >
-                                                2-day Delivery
-                                              </div>
-                                            </div>
+
                                             <!-- product-meta -->
                                           </div>
                                           <!-- content-wrapper -->
@@ -1255,7 +1394,12 @@
                                             <a
                                               href="?add-to-cart=521"
                                               data-quantity="1"
-                                              class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                              class="
+                                                button
+                                                product_type_simple
+                                                add_to_cart_button
+                                                ajax_add_to_cart
+                                              "
                                               data-product_id="521"
                                               data-product_sku="BE45VGRT"
                                               aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -1268,7 +1412,9 @@
                                           <div class="product-footer-details">
                                             <ul>
                                               <li
-                                                class="SpecHighlights-list-label"
+                                                class="
+                                                  SpecHighlights-list-label
+                                                "
                                               >
                                                 Vegetables
                                               </li>
@@ -1356,7 +1502,12 @@
         <div class="mfp-container mfp-s-ready">
           <div class="mfp-content">
             <div
-              class="quickview-product single-product-wrapper product white-popup"
+              class="
+                quickview-product
+                single-product-wrapper
+                product
+                white-popup
+              "
             >
               <div class="quick-product-wrapper single-product-container">
                 <button
@@ -1374,7 +1525,15 @@
                         <div class="images-wrapper">
                           <div
                             id="product-images"
-                            class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-autoheight swiper-container-rtl slider-loaded"
+                            class="
+                              swiper-container
+                              swiper-container-initialized
+                              swiper-container-horizontal
+                              swiper-container-pointer-events
+                              swiper-container-autoheight
+                              swiper-container-rtl
+                              slider-loaded
+                            "
                             data-effect="slide"
                             data-direction="horizontal"
                             data-loop="false"
@@ -1471,7 +1630,16 @@
                         <div class="thumbnails-wrapper">
                           <div
                             id="product-thumbnails"
-                            class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-rtl swiper-container-thumbs slider-loaded"
+                            class="
+                              swiper-container
+                              swiper-container-initialized
+                              swiper-container-horizontal
+                              swiper-container-pointer-events
+                              swiper-container-free-mode
+                              swiper-container-rtl
+                              swiper-container-thumbs
+                              slider-loaded
+                            "
                             data-effect="slide"
                             data-direction="horizontal"
                             data-loop="false"
@@ -1490,7 +1658,12 @@
                               style="transform: translate3d(0px, 0px, 0px)"
                             >
                               <div
-                                class="swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active"
+                                class="
+                                  swiper-slide
+                                  swiper-slide-thumb-active
+                                  swiper-slide-visible
+                                  swiper-slide-active
+                                "
                                 role="group"
                                 aria-label="1 / 3"
                                 style="width: 85.8px; margin-left: 7px"
@@ -1502,7 +1675,11 @@
                               </div>
                               <!-- swiper-slide -->
                               <div
-                                class="swiper-slide swiper-slide-visible swiper-slide-next"
+                                class="
+                                  swiper-slide
+                                  swiper-slide-visible
+                                  swiper-slide-next
+                                "
                                 role="group"
                                 aria-label="2 / 3"
                                 style="width: 85.8px; margin-left: 7px"
@@ -1657,7 +1834,13 @@
                             type="submit"
                             name="add-to-cart"
                             value="408"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Add to cart</span>
                           </button>
@@ -1665,13 +1848,24 @@
                             type="submit"
                             name="add-to-cart"
                             value="408"
-                            class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                            class="
+                              button button-primary
+                              add_to_cart_button
+                              single_add_to_cart_button
+                              button
+                              alt
+                            "
                           >
                             <span>Buy Now</span>
                           </button>
 
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-after-add-to-cart
+                            "
                             data-product_id="408"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -1681,7 +1875,12 @@
 
                         <div class="product-actions">
                           <div
-                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                            class="
+                              tinv-wraper
+                              woocommerce
+                              tinv-wishlist
+                              tinvwl-shortcode-add-to-cart
+                            "
                             data-product_id="408"
                           >
                             <div class="tinv-wishlist-clear"></div>
@@ -1689,7 +1888,11 @@
                               role="button"
                               tabindex="0"
                               aria-label="Add to Wishlist"
-                              class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                              class="
+                                tinvwl_add_to_wishlist_button
+                                tinvwl-icon-heart
+                                tinvwl-position-after
+                              "
                               data-tinv-wl-product="408"
                             ></a>
                             <div class="tinvwl-tooltip">Add to Wishlist</div>
@@ -1781,7 +1984,15 @@
       :class="showcomparemodal"
       :style="showcomparemodalstyle"
       id="newDiv"
-      class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout woosc-area-open-bar woosc-area-open-table"
+      class="
+        woosc-area
+        woosc-bar-bottom
+        woosc-bar-right
+        woosc-bar-click-outside-yes
+        woosc-hide-checkout
+        woosc-area-open-bar
+        woosc-area-open-table
+      "
       data-bg-color="#292a30"
       data-btn-color="#00a0d2"
       data-count="3"
@@ -1805,7 +2016,10 @@
               ></span
             ></a>
             <div
-              class="woosc-table-items woosc-table-items-loaded ps-container ps-theme-wpc ps-active-y"
+              class="
+                woosc-table-items woosc-table-items-loaded
+                ps-container ps-theme-wpc ps-active-y
+              "
               style="overflow: auto"
               data-ps-id="d26f5069-dad8-fe4f-e843-16cb75c95a96"
             >
@@ -2148,7 +2362,12 @@
                         <a
                           href=""
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="400"
                           data-product_sku="ZR45VGRT"
                           aria-label="Add “Dragon Touch Max10 Tablet Android 10.0 OS” to your cart"
@@ -2165,7 +2384,12 @@
                         <a
                           href=""
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="521"
                           data-product_sku="BE45VGRT"
                           aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
@@ -2182,7 +2406,12 @@
                         <a
                           href=""
                           data-quantity="1"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                          class="
+                            button
+                            product_type_simple
+                            add_to_cart_button
+                            ajax_add_to_cart
+                          "
                           data-product_id="500"
                           data-product_sku="SO4JK74"
                           aria-label="Add “Apple iPhone 11 64GB Yellow Fully Unlocked” to your cart"

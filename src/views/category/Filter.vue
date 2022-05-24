@@ -77,7 +77,9 @@
                   placeholder="Max price"
                   style="display: none"
                 />
-                <button type="submit" class="button">Filter</button>
+                <button type="submit" class="button" style="margin-right: 14px">
+                  Filter
+                </button>
                 <div class="price_label values">
                   Price: <span id="range1" class="from">27</span> —
                   <span id="range2" class="to">77</span>
@@ -88,12 +90,20 @@
           </form>
         </div>
         <div
-          class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav"
+          class="
+            widget
+            woocommerce
+            widget_layered_nav
+            woocommerce-widget-layered-nav
+          "
         >
           <h4 class="widget-title">Filter by Color</h4>
           <ul class="woocommerce-widget-layered-nav-list">
             <li
-              class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term"
+              class="
+                woocommerce-widget-layered-nav-list__item
+                wc-layered-nav-term
+              "
             >
               <div class="type-color">
                 <span class="color-box" style="background-color: #000000"></span
@@ -106,7 +116,10 @@
               </div>
             </li>
             <li
-              class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term"
+              class="
+                woocommerce-widget-layered-nav-list__item
+                wc-layered-nav-term
+              "
             >
               <div class="type-color">
                 <span class="color-box" style="background-color: #ff7900"></span
@@ -150,7 +163,12 @@
           </div>
         </div>
         <div
-          class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav"
+          class="
+            widget
+            woocommerce
+            widget_layered_nav
+            woocommerce-widget-layered-nav
+          "
         >
           <h4 class="widget-title">Brands</h4>
           <ul
@@ -160,7 +178,10 @@
             class="woocommerce-widget-layered-nav-list"
           >
             <li
-              class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term"
+              class="
+                woocommerce-widget-layered-nav-list__item
+                wc-layered-nav-term
+              "
             >
               <div class="type-button">
                 <span class="button-box"></span
@@ -178,7 +199,7 @@
           <img
             width="293"
             height="587"
-            src="http://localhost/english_baladi/src/img/widget-banner.jpg"
+            src="https://klbtheme.com/machic/wp-content/uploads/2021/10/widget-banner.jpg"
             class="image wp-image-2119 attachment-full size-full"
             alt=""
             loading="lazy"
