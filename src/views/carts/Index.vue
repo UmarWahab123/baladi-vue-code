@@ -275,14 +275,14 @@
                               >
                                 <a
                                   href="javascript:void(0)"
-                                  onclick="Cart()"
+                               @click="clickaddress"
                                   class="shipping-calculator-button woocommerce"
                                   >Change address</a
                                 >
                                 <section
                                   id="shipping-cart"
                                   class="shipping-calculator-form"
-                                  style="display: none"
+                                    v-if="changeaddress === 1"
                                 >
                                   <p
                                     class="form-row form-row-wide"
@@ -2381,6 +2381,7 @@ export default {
     showbigmodal: "",
     showbigmodalstyle: "",
     showcomparemodal: "",
+    changeaddress: 0,
     showcomparemodalstyle: "",
     results: {
       0: {
@@ -2436,6 +2437,13 @@ export default {
 
       this.results[input_index].quantity =
         this.results[input_index].quantity - 1;
+    },
+      clickaddress: function (event) {
+      if (this.changeaddress === 0) {
+        this.changeaddress = 1;
+      } else if (this.changeaddress === 1) {
+        this.changeaddress = 0;
+      }
     },
   },
 };

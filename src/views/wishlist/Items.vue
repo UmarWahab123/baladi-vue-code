@@ -8,6 +8,8 @@
               type="checkbox"
               class="global-cb"
               title="Select all for bulk action"
+              @click="select"
+              v-model="select_all"
             />
           </th>
           <th class="product-remove"></th>
@@ -23,14 +25,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="wishlist_item">
+        <tr
+          class="wishlist_item"
+          v-for="(item, indextr) in results"
+          :key="item.id"
+        >
           <td class="product-cb">
-            <input
-              type="checkbox"
-              name="wishlist_pr[]"
-              value="605"
-              title="Select for bulk action"
-            />
+            <input type="checkbox" :value="item.id" v-model="selected" />
           </td>
           <td class="product-remove">
             <button
@@ -69,9 +70,7 @@
             /></a>
           </td>
           <td class="product-name">
-            <a href="javascript:void(0)"
-              >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
-            >
+            <a href="javascript:void(0)">{{ item.product }}</a>
           </td>
           <td class="product-price">
             <del aria-hidden="true"
@@ -86,7 +85,7 @@
               ><span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">$</span
-                  >629.99</bdi
+                  >{{ item.price }}</bdi
                 ></span
               ></ins
             >
@@ -107,94 +106,6 @@
               class="button alt"
               name="tinvwl-add-to-cart"
               value="605"
-              title="Add to Cart"
-            >
-              <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt">Add to Cart</span>
-            </button>
-          </td>
-        </tr>
-        <tr class="wishlist_item">
-          <td class="product-cb">
-            <input
-              type="checkbox"
-              name="wishlist_pr[]"
-              value="599"
-              title="Select for bulk action"
-            />
-          </td>
-          <td class="product-remove">
-            <button name="tinvwl-remove" value="599" title="Remove">
-              <i class="ftinvwl ftinvwl-times"></i>
-            </button>
-          </td>
-          <td class="product-thumbnail">
-            <a href="javascript:void(0)"
-              ><img
-                width="90"
-                height="90"
-                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-90x90.jpg"
-                class="
-                  attachment-woocommerce_thumbnail
-                  size-woocommerce_thumbnail
-                "
-                alt=""
-                loading="lazy"
-                srcset="
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-90x90.jpg       90w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-54x54.jpg       54w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-600x600.jpg    600w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-64x64.jpg       64w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-300x300.jpg    300w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-1024x1024.jpg 1024w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-150x150.jpg    150w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-768x768.jpg    768w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-450x450.jpg    450w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-96x96.jpg       96w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8.jpg           1200w
-                "
-                sizes="(max-width: 90px) 100vw, 90px"
-            /></a>
-          </td>
-          <td class="product-name">
-            <a href="javascript:void(0)"
-              >Apple iPhone 11 Pro Max (64GB) - Silver</a
-            >
-          </td>
-          <td class="product-price">
-            <del aria-hidden="true"
-              ><span class="woocommerce-Price-amount amount"
-                ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
-                  >814.76</bdi
-                ></span
-              ></del
-            >
-            <ins
-              ><span class="woocommerce-Price-amount amount"
-                ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
-                  >714.76</bdi
-                ></span
-              ></ins
-            >
-          </td>
-          <td class="product-date">
-            <time class="entry-date" datetime="2022-02-14 10:43:27"
-              >February 14, 2022</time
-            >
-          </td>
-          <td class="product-stock">
-            <p class="stock in-stock">
-              <span><i class="ftinvwl ftinvwl-check"></i></span
-              ><span>In Stock</span>
-            </p>
-          </td>
-          <td class="product-action">
-            <button
-              class="button alt"
-              name="tinvwl-add-to-cart"
-              value="599"
               title="Add to Cart"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
@@ -268,4 +179,42 @@
     </table>
   </form>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    select_all: false,
+    selected: [],
+    results: [
+      {
+        id: 1,
+        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 1",
+        price: 233,
+        quantity: 1,
+        subtotal: 233,
+      },
+      {
+        id: 2,
+        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 2",
+        price: 253,
+        quantity: 1,
+        subtotal: 253,
+      },
+    ],
+  }),
+  mounted() {
+    console.log(this.selected);
+  },
+  methods: {
+    select() {
+      this.selected = [];
+      if (!this.select_all) {
+        for (let i in this.results) {
+          this.selected.push(this.results[i].id);
+        }
+      }
+    },
+  },
+};
+</script>
 

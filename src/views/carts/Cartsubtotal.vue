@@ -362,7 +362,12 @@
                   </p>
 
                   <p
-                    class="form-row validate-required form-row-wide address-field"
+                    class="
+                      form-row
+                      validate-required
+                      form-row-wide
+                      address-field
+                    "
                     id="calc_shipping_state_field"
                   >
                     <span>
@@ -433,7 +438,12 @@
                   </p>
 
                   <p
-                    class="form-row validate-required form-row-wide address-field"
+                    class="
+                      form-row
+                      validate-required
+                      form-row-wide
+                      address-field
+                    "
                     id="calc_shipping_city_field"
                   >
                     <input
@@ -448,7 +458,12 @@
                   </p>
 
                   <p
-                    class="form-row validate-required form-row-wide address-field"
+                    class="
+                      form-row
+                      validate-required
+                      form-row-wide
+                      address-field
+                    "
                     id="calc_shipping_postcode_field"
                   >
                     <input

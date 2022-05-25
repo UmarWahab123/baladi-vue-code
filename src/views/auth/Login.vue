@@ -2,11 +2,21 @@
   <div class="u-column1 col-md-6">
     <h2>Login</h2>
     <div
-      class="woocommerce-form woocommerce-form-login login border shadow p-3 h-90"
+      class="
+        woocommerce-form woocommerce-form-login
+        login
+        border
+        shadow
+        p-3
+        h-90
+      "
       method="post"
     >
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="username"
           >Username or email address&nbsp;<span class="required">*</span></label
@@ -19,8 +29,14 @@
           autocomplete="username"
         />
       </p>
+      <div class="error text-danger" v-if="v$.formdata.email.$error">
+        {{ v$.formdata.email.required.$message }}
+      </div>
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="password"
           >Password&nbsp;<span class="required">*</span></label
@@ -43,6 +59,9 @@
           ><span class="show-password-input"></span
         ></span>
       </p>
+      <div class="error text-danger" v-if="v$.formdata.password.$error">
+        {{ v$.formdata.password.required.$message }}
+      </div>
 
       <p class="form-row"></p>
       <div class="row ml-5">
@@ -55,7 +74,10 @@
       </div>
       <div class="d-flex justify-content-between">
         <label
-          class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme"
+          class="
+            woocommerce-form__label woocommerce-form__label-for-checkbox
+            woocommerce-form-login__rememberme
+          "
         >
           <input
             class="woocommerce-form__input woocommerce-form__input-checkbox"
@@ -79,7 +101,7 @@
       >
         Log in
       </button>
-      <a href="account-setting.php" class="ml-5">
+      <a to="/" class="ml-5">
         <input
           type="hidden"
           id="woocommerce-login-nonce"
@@ -90,14 +112,14 @@
           name="_wp_http_referer"
           value="/machic/my-account/?d=rtl"
         />
-        <button
-          type="submit"
-          class="woocommerce-button bg-dark button woocommerce-form-login__submit"
+        <router-link
+          to="/"
+          class="woocommerce-button button2 woocommerce-form-login__submit"
           name="login"
           value="Log in"
         >
           Continue as Guest
-        </button></a
+        </router-link></a
       >
       <p class="mt-3">Or Connect with</p>
       <div class="social-share site-social colored">
@@ -120,7 +142,7 @@
           </li>
           <li>
             <a href="" class="bg-secondary" target="_blank"
-              ><i class="fa fa-apple"></i
+              ><i class="klbth-icon-apple"></i
             ></a>
           </li>
         </ul>
@@ -131,7 +153,11 @@
 <script>
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
+import { required, helpers } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
+
 export default {
+  setup: () => ({ v$: useVuelidate() }),
   data() {
     return {
       formdata: {
@@ -143,9 +169,26 @@ export default {
       errors: "",
     };
   },
+  validations() {
+    return {
+      formdata: {
+        email: {
+          required: helpers.withMessage("Email cannot be empty!", required),
+        },
+        password: {
+          required: helpers.withMessage("Password cannot be empty!", required),
+        },
+      },
+    };
+  },
   mounted() {},
   methods: {
-    submitdata() {
+    async submitdata() {
+      const result = await this.v$.$validate();
+      // alert(result);
+      if (!result) {
+        return;
+      }
       axios
         .post(import.meta.env.VITE_API_URL + "/api/auth/login", this.formdata)
         .then((response) => {

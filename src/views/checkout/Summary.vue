@@ -19,7 +19,7 @@
             <td class="product-total">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">QAR </span
+                  ><span class="woocommerce-Price-currencySymbol">$</span
                   >749.90</bdi
                 ></span
               >
@@ -32,7 +32,7 @@
             <td>
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">QAR </span
+                  ><span class="woocommerce-Price-currencySymbol">$</span
                   >749.90</bdi
                 ></span
               >
@@ -56,8 +56,7 @@
                     >Flat rate:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
-                        ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                        ><span class="woocommerce-Price-currencySymbol">$</span
                         >5.00</bdi
                       ></span
                     ></label
@@ -97,7 +96,7 @@
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">QAR </span
+                    ><span class="woocommerce-Price-currencySymbol">$</span
                     >754.90</bdi
                   ></span
                 ></strong
@@ -120,12 +119,12 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_bacs"> Direct bank transfer </label>
+            <label for="payment_method_bacs"> QR PAY </label>
             <div class="panel payment_box payment_method_bacs p-3">
               <button
                 type="button"
                 class="button"
-                @click="showpaymentmodel"
+                @click="Modal"
                 data-toggle="modal"
                 data-target="#staticBackdrop"
               >
@@ -133,7 +132,10 @@
               </button>
             </div>
           </li>
-          <li class="wc_payment_method payment_method_cheque">
+          <li
+            class="wc_payment_method payment_method_cheque"
+            style="display: none"
+          >
             <input
               id="payment_method_cheque"
               type="radio"
@@ -141,9 +143,12 @@
               name="payment_method"
               value="cheque"
               data-order_button_text=""
+              style="display: none"
             />
 
-            <label for="payment_method_cheque"> Check payments </label>
+            <label for="payment_method_cheque" style="display: none">
+              Check payments
+            </label>
             <div
               class="panel payment_box payment_method_cheque"
               style="display: none"
@@ -311,11 +316,17 @@
             </div>
             <p class="form-row validate-required">
               <label
-                class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox"
+                class="
+                  woocommerce-form__label woocommerce-form__label-for-checkbox
+                  checkbox
+                "
               >
                 <input
                   type="checkbox"
-                  class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+                  class="
+                    woocommerce-form__input woocommerce-form__input-checkbox
+                    input-checkbox
+                  "
                   name="terms"
                   id="terms"
                 />
@@ -359,41 +370,107 @@
     </div>
   </div>
   <div
-    id="wishlist"
+    class="modal fade"
     :class="showmodal"
-    style="display: none"
-    :style="showmodalstyle"
-    class="tinv-wishlist"
+    id="staticBackdrop"
+    style=""
+    :style="stylemodal"
+    data-backdrop="static"
+    data-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
   >
-    <div class="tinvwl_added_to_wishlist tinv-modal tinv-modal-open">
-      <div class="tinv-overlay"></div>
-      <div class="tinv-table">
-        <div class="tinv-cell">
-          <div class="tinv-modal-inner">
-            <i class="icon_big_heart_check"></i>
-            <div class="tinv-txt">
-              Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
-            </div>
-            <div class="tinvwl-buttons-group tinv-wishlist-clear">
-              <button>
-                <router-link
-                  to="/wishlist"
-                  class="button tinvwl_button_view tinvwl-btn-onclick"
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-right" style="cursor: pointer">
+            <i class="fa fa-times" aria-hidden="true" @click="close"></i>
+          </div>
+          <div class="tabs mt-3">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  :class="visa"
+                  @click="clickvisa"
+                  id="visa-tab"
+                  data-toggle="tab"
+                  href="#visa"
+                  role="tab"
+                  aria-controls="visa"
+                  aria-selected="true"
                 >
-                  <i class="ftinvwl ftinvwl-heart-o"></i>View
-                  Wishlist</router-link
-                >
-              </button>
-
-              <button
-                @click="closemodal"
-                class="button tinvwl_button_close"
-                type="button"
+                  <img src="https://i.imgur.com/sB4jftM.png" width="80" />
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade"
+                :class="showvisa"
+                id="visa"
+                role="tabpanel"
+                aria-labelledby="visa-tab"
               >
-                <i class="ftinvwl ftinvwl-times"></i>Close
-              </button>
+                <div class="mt-4 mx-4">
+                  <div class="text-center">
+                    <h5>Credit card</h5>
+                  </div>
+                  <div class="form mt-3">
+                    <div class="inputbox">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        required="required"
+                      />
+                      <span>Cardholder Name</span>
+                    </div>
+                    <div class="inputbox">
+                      <input
+                        type="text"
+                        name="name"
+                        min="1"
+                        max="999"
+                        class="form-control"
+                        required="required"
+                      />
+                      <span>Card Number</span>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="inputbox">
+                        <input
+                          type="text"
+                          name="name"
+                          min="1"
+                          max="999"
+                          class="form-control"
+                          required="required"
+                        />
+                        <span>Expiration Date</span>
+                      </div>
+                      <div class="inputbox">
+                        <input
+                          type="text"
+                          name="name"
+                          min="1"
+                          max="999"
+                          class="form-control"
+                          required="required"
+                        />
+                        <span>CVV</span>
+                      </div>
+                    </div>
+                    <div class="pay">
+                      <button class="btn btn-success btn-block">
+                        Add card
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="tinv-wishlist-clear"></div>
           </div>
         </div>
       </div>
@@ -416,10 +493,7 @@ export default {
     this.showvisa = "active show";
   },
   methods: {
-    showpaymentmodel: function (event) {
-      console.log("asdf");
-      alert(event.target.tagName);
-
+    Modal: function () {
       this.showmodal = "show";
       this.stylemodal = "display: block; padding-right: 0.200073px;";
     },
