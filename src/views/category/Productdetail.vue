@@ -450,14 +450,20 @@
 
                     <div class="product-info">
                       <div style="width: max-content" class="product-info-top">
-                        <form class="cart single-ajax">
+                        <form
+                          class="cart single-ajax"
+                          action="javascript:void(0)"
+                        >
                           <div class="quantity">
                             <label
                               class="screen-reader-text"
                               for="quantity_61f3794abda55"
                               >Fresh Vegetables</label
                             >
-                            <div class="quantity-button minus"></div>
+                            <div
+                              class="quantity-button minus"
+                              @click="decrement"
+                            ></div>
                             <input
                               type="text"
                               id="quantity_61f3794abda55"
@@ -466,19 +472,20 @@
                               min="1"
                               max="41"
                               name="quantity"
-                              value="1"
+                              :value="this.quantity"
                               title="Qty"
                               size="4"
                               placeholder=""
                               inputmode="numeric"
                             />
-                            <div class="quantity-button plus"></div>
+                            <div
+                              class="quantity-button plus"
+                              @click="increment"
+                            ></div>
                           </div>
 
                           <button
-                            type="submit"
                             name="add-to-cart"
-                            value="521"
                             class="
                               button button-primary
                               add_to_cart_button
@@ -489,10 +496,9 @@
                           >
                             <span>Add to cart</span>
                           </button>
-                          <button
-                            type="submit"
+                          <router-link
+                            to="/checkout"
                             name="add-to-cart"
-                            value="521"
                             class="
                               button button-primary
                               add_to_cart_button
@@ -502,7 +508,7 @@
                             "
                           >
                             <span>Buy Now</span>
-                          </button>
+                          </router-link>
 
                           <!-- <div
                             class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"
@@ -964,7 +970,7 @@
                             ></span
                           >
                           <form
-                            action="#wp-comments-post.php"
+                            action="javascript:void(0)"
                             method="post"
                             id="commentform"
                             class="comment-form"
@@ -1801,7 +1807,7 @@
                       <div class="product-info-top">
                         <form
                           class="cart single-ajax"
-                          action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                          action="javascript:void(0)"
                           method="post"
                           enctype="multipart/form-data"
                         >
@@ -1812,7 +1818,10 @@
                               >Cubitt Smart Watch CT2S Waterproof Fitness
                               Tracker quantity</label
                             >
-                            <div class="quantity-button minus"></div>
+                            <div
+                              class="quantity-button minus"
+                              @click="decrement"
+                            ></div>
                             <input
                               type="text"
                               id="quantity_61f6cbce294fd"
@@ -1821,13 +1830,16 @@
                               min="1"
                               max="56"
                               name="quantity"
-                              value="1"
+                              :value="this.quantity"
                               title="Qty"
                               size="4"
                               placeholder=""
                               inputmode="numeric"
                             />
-                            <div class="quantity-button plus"></div>
+                            <div
+                              class="quantity-button plus"
+                              @click="increment"
+                            ></div>
                           </div>
 
                           <button
@@ -1844,8 +1856,8 @@
                           >
                             <span>Add to cart</span>
                           </button>
-                          <button
-                            type="submit"
+                          <router-link
+                            to="/checkout"
                             name="add-to-cart"
                             value="408"
                             class="
@@ -1857,7 +1869,7 @@
                             "
                           >
                             <span>Buy Now</span>
-                          </button>
+                          </router-link>
 
                           <div
                             class="
@@ -2735,6 +2747,7 @@ export default {
     showcomparemodal: "",
     showcomparemodalstyle: "",
     isloading: true,
+    quantity: 1,
   }),
   mounted() {
     this.specification = "";
@@ -2748,6 +2761,15 @@ export default {
     setTimeout(() => (this.isloading = false), 1000);
   },
   methods: {
+    increment: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+      this.quantity = this.quantity + 1;
+    },
+    decrement: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.quantity = this.quantity - 1;
+    },
     clickdescription: function () {
       this.specification = "";
       this.showspecification = "";

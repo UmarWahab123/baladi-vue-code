@@ -364,78 +364,64 @@
                               transform: translate3d(0px, 0px, 0px);
                             "
                           >
-                            <div
-                              class="swiper-slide swiper-slide-active"
-                              role="group"
-                              aria-label="1 / 3"
-                              style="width: 455px"
+                            <Splide
+                              :options="{
+                                rewind: true,
+                                autoplay: true,
+                                width: 460,
+                              }"
                             >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
-                            <div
-                              class="swiper-slide swiper-slide-next"
-                              role="group"
-                              aria-label="2 / 3"
-                              style="width: 455px"
-                            >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
-                            <div
-                              class="swiper-slide"
-                              role="group"
-                              aria-label="3 / 3"
-                              style="width: 455px"
-                            >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
+                              <!-- swiper-slide -->
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide swiper-slide-next"
+                                  role="group"
+                                  aria-label="2 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+                              <!-- swiper-slide -->
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide"
+                                  role="group"
+                                  aria-label="3 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide"
+                                  role="group"
+                                  aria-label="3 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+
+                              <!-- swiper-slide -->
+                            </Splide>
                           </div>
                           <!-- swiper-wrapper -->
-                          <div
-                            class="swiper-button-prev swiper-button-disabled"
-                            tabindex="-1"
-                            role="button"
-                            aria-label="Previous slide"
-                            aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                            aria-disabled="true"
-                          ></div>
-                          <div
-                            class="swiper-button-next"
-                            tabindex="0"
-                            role="button"
-                            aria-label="Next slide"
-                            aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                            aria-disabled="false"
-                          ></div>
-                          <span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span
-                          ><span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span
-                          ><span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span>
                         </div>
+
                         <!-- product-images -->
                       </div>
+
                       <!-- images-wrapper -->
                       <div class="thumbnails-wrapper">
                         <div
@@ -531,6 +517,7 @@
                         </div>
                         <!-- product-thumbnails -->
                       </div>
+
                       <!-- thumbnails-wrapper -->
                     </div>
                     <!-- woocommerce-product-gallery -->
@@ -1559,9 +1546,13 @@ img {
 </style>
 
 <script>
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
+  components: { Splide, SplideSlide },
   data: () => ({
     showmodal: "",
     url: import.meta.env.VITE_API_URL + "/storage/",
