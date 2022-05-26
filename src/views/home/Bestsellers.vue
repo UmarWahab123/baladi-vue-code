@@ -168,10 +168,7 @@
                           <!-- thumbnail-wrapper -->
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a
-                                href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                >{{ item.name }}</a
-                              >
+                              <a href="javascript:void(0)">{{ item.name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -852,9 +849,7 @@
                       top: 0px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                     >
                   </th>
@@ -915,9 +910,7 @@
                     /></a>
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"

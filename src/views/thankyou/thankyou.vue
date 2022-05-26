@@ -8,13 +8,19 @@
           <div class="woocommerce">
             <div class="woocommerce-order">
               <p
-                class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"
+                class="
+                  woocommerce-notice woocommerce-notice--success
+                  woocommerce-thankyou-order-received
+                "
               >
                 Thank you. Your order has been received.
               </p>
 
               <ul
-                class="woocommerce-order-overview woocommerce-thankyou-order-details order_details"
+                class="
+                  woocommerce-order-overview woocommerce-thankyou-order-details
+                  order_details
+                "
               >
                 <li class="woocommerce-order-overview__order order">
                   Order number: <strong>2994</strong>
@@ -47,7 +53,11 @@
                 <h2 class="woocommerce-order-details__title">Order details</h2>
 
                 <table
-                  class="woocommerce-table woocommerce-table--order-details shop_table order_details"
+                  class="
+                    woocommerce-table woocommerce-table--order-details
+                    shop_table
+                    order_details
+                  "
                 >
                   <thead>
                     <tr>
@@ -65,8 +75,7 @@
                   <tbody>
                     <tr class="woocommerce-table__line-item order_item">
                       <td class="woocommerce-table__product-name product-name">
-                        <a
-                          href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                        <a href="javascript:void(0)"
                           >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                         >
                         <strong class="product-quantity">×&nbsp;1</strong>

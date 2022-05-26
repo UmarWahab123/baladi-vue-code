@@ -29,8 +29,7 @@
           v-for="(item, indextr) in results"
         >
           <td class="product-thumbnail">
-            <a
-              href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+            <a href="javascript:void(0)"
               ><img
                 width="90"
                 height="90"
@@ -56,11 +55,7 @@
             /></a>
           </td>
           <td class="product-name" data-title="Product">
-            <a
-              href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-            >
-              {{ item.product }}</a
-            >
+            <a href="javascript:void(0)"> {{ item.product }}</a>
           </td>
 
           <td class="product-price" data-title="Price">

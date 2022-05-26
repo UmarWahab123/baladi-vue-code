@@ -24,17 +24,27 @@
                       </h2>
 
                       <table
-                        class="woocommerce-table woocommerce-table--order-details shop_table order_details"
+                        class="
+                          woocommerce-table woocommerce-table--order-details
+                          shop_table
+                          order_details
+                        "
                       >
                         <thead>
                           <tr>
                             <th
-                              class="woocommerce-table__product-name product-name"
+                              class="
+                                woocommerce-table__product-name
+                                product-name
+                              "
                             >
                               Product
                             </th>
                             <th
-                              class="woocommerce-table__product-table product-total"
+                              class="
+                                woocommerce-table__product-table
+                                product-total
+                              "
                             >
                               Total
                             </th>
@@ -44,17 +54,22 @@
                         <tbody>
                           <tr class="woocommerce-table__line-item order_item">
                             <td
-                              class="woocommerce-table__product-name product-name"
+                              class="
+                                woocommerce-table__product-name
+                                product-name
+                              "
                             >
-                              <a
-                                href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                              <a href="javascript:void(0)"
                                 >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                               >
                               <strong class="product-quantity">×&nbsp;1</strong>
                             </td>
 
                             <td
-                              class="woocommerce-table__product-total product-total"
+                              class="
+                                woocommerce-table__product-total
+                                product-total
+                              "
                             >
                               <span class="woocommerce-Price-amount amount"
                                 ><bdi
@@ -69,7 +84,10 @@
 
                           <tr class="woocommerce-table__line-item order_item">
                             <td
-                              class="woocommerce-table__product-name product-name"
+                              class="
+                                woocommerce-table__product-name
+                                product-name
+                              "
                             >
                               <a
                                 href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
@@ -79,7 +97,10 @@
                             </td>
 
                             <td
-                              class="woocommerce-table__product-total product-total"
+                              class="
+                                woocommerce-table__product-total
+                                product-total
+                              "
                             >
                               <span class="woocommerce-Price-amount amount"
                                 ><bdi

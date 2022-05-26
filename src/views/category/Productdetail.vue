@@ -472,7 +472,7 @@
                               min="1"
                               max="41"
                               name="quantity"
-                              :value="this.quantity"
+                              :value="quantity"
                               title="Qty"
                               size="4"
                               placeholder=""
@@ -1830,7 +1830,7 @@
                               min="1"
                               max="56"
                               name="quantity"
-                              :value="this.quantity"
+                              :value="quantity"
                               title="Qty"
                               size="4"
                               placeholder=""
@@ -2067,9 +2067,7 @@
                         top: 0px;
                       "
                     >
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                       >
                     </th>
@@ -2130,9 +2128,7 @@
                       /></a>
                     </td>
                     <td>
-                      <a
-                        href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                        draggable="false"
+                      <a href="javascript:void(0)" draggable="false"
                         ><img
                           width="600"
                           height="600"

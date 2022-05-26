@@ -1023,9 +1023,7 @@
                           <div class="product-badges">
                             <span class="badge onsale">11%</span>
                           </div>
-                          <a
-                            href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                          >
+                          <a href="javascript:void(0)">
                             <div
                               class="product-card"
                               style="position: relative"
@@ -1125,7 +1123,7 @@
                               <div class="tinv-wishlist-clear"></div>
                               <div class="tinvwl-tooltip">Add to Wishlist</div>
                             </div>
-                            <a href="#?featured=yes" class="most-comments"
+                            <a href="javascript:void(0)" class="most-comments"
                               ><img
                                 src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                 alt="featured" /></a
@@ -1141,8 +1139,7 @@
                         </div>
                         <div class="content-wrapper">
                           <h3 class="product-title">
-                            <a
-                              href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                            <a href="javascript:void(0)"
                               >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                             >
                           </h3>
@@ -1186,7 +1183,7 @@
                                 ></ins
                               ></span
                             ><a
-                              href="?add-to-cart=521"
+                              href="javascript:void(0)"
                               data-quantity="1"
                               class="
                                 button
@@ -1228,9 +1225,7 @@
                           <div class="product-badges">
                             <span class="badge onsale">9%</span>
                           </div>
-                          <a
-                            href="#apple-iphone-11-64gb-fully-unlocked-yellow/"
-                          >
+                          <a href="javascript:void(0)">
                             <div
                               class="product-card"
                               style="position: relative"
@@ -1337,8 +1332,7 @@
                         </div>
                         <div class="content-wrapper">
                           <h3 class="product-title">
-                            <a
-                              href="#apple-iphone-11-64gb-fully-unlocked-yellow/"
+                            <a href="javascript:void(0)"
                               >Apple iPhone 11 64GB Yellow Fully Unlocked</a
                             >
                           </h3>
@@ -1382,7 +1376,7 @@
                                 ></ins
                               ></span
                             ><a
-                              href="?add-to-cart=500"
+                              href="javascript:void(0)"
                               data-quantity="1"
                               class="
                                 button
@@ -1421,8 +1415,7 @@
                           <div class="product-badges">
                             <span class="badge top">Top Product</span>
                           </div>
-                          <a
-                            href="#asus-vivobook-15-thin-and-light-laptop-15-6-fhd-display/"
+                          <a href="javascript:void(0)"
                             ><img
                               src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-3-400x400.jpg"
                               alt="ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD Display"
@@ -1465,8 +1458,7 @@
                         </div>
                         <div class="content-wrapper">
                           <h3 class="product-title">
-                            <a
-                              href="#asus-vivobook-15-thin-and-light-laptop-15-6-fhd-display/"
+                            <a href="javascript:void(0)"
                               >ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD
                               Display</a
                             >
@@ -1511,7 +1503,7 @@
                                 ></ins
                               ></span
                             ><a
-                              href="?add-to-cart=462"
+                              href="javascript:void(0)"
                               data-quantity="1"
                               class="
                                 button
@@ -1550,9 +1542,7 @@
                           <div class="product-badges">
                             <span class="badge onsale">32%</span>
                           </div>
-                          <a
-                            href="#cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
-                          >
+                          <a href="javascript:void(0)">
                             <div
                               class="product-card"
                               style="position: relative"
@@ -1636,15 +1626,16 @@
                               class="woosc-btn woosc-btn-408"
                               data-id="408"
                               >Compare</a
-                            ><a href="408" class="detail-bnt quickview animated"
+                            ><a
+                              href="javascript:void(0)"
+                              class="detail-bnt quickview animated"
                               ><i class="klbth-icon-eye-empty"></i
                             ></a>
                           </div>
                         </div>
                         <div class="content-wrapper">
                           <h3 class="product-title">
-                            <a
-                              href="#cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                            <a href="javascript:void(0)"
                               >Cubitt Smart Watch CT2S Waterproof Fitness
                               Tracker</a
                             >
@@ -1689,7 +1680,7 @@
                                 ></ins
                               ></span
                             ><a
-                              href="?add-to-cart=408"
+                              href="javascript:void(0)"
                               data-quantity="1"
                               class="
                                 button
@@ -1749,7 +1740,7 @@
                         </div>
                         <div class="entry-button">
                           <a
-                            href="#?column=5&amp;opt=full-width"
+                            href="javascript:void(0)"
                             class="btn small rounded link-color"
                             >Shop Now</a
                           >
@@ -1762,10 +1753,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a
-                      href="#?column=5&amp;opt=full-width"
-                      class="overlay-link"
-                    ></a>
+                    <a href="javascript:void(0)" class="overlay-link"></a>
                   </div>
                 </div>
               </div>
@@ -1912,7 +1900,7 @@
                                   Add to Wishlist
                                 </div>
                               </div>
-                              <a href="#?featured=yes" class="most-comments"
+                              <a href="javascript:void(0)" class="most-comments"
                                 ><img
                                   src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                   alt="featured" /></a
@@ -1936,10 +1924,7 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a
-                                href="#apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
-                                >{{ items.name }}</a
-                              >
+                              <a href="javascript:void(0)">{{ items.name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -1984,7 +1969,7 @@
                                   ></ins
                                 ></span
                               ><a
-                                href="?add-to-cart=516"
+                                href="javascript:void(0)"
                                 data-quantity="1"
                                 class="
                                   button
@@ -2133,75 +2118,58 @@
                               transform: translate3d(0px, 0px, 0px);
                             "
                           >
-                            <div
-                              class="swiper-slide swiper-slide-active"
-                              role="group"
-                              aria-label="1 / 3"
-                              style="width: 455px"
+                            <Splide
+                              :options="{
+                                rewind: true,
+                                autoplay: true,
+                                width: 460,
+                              }"
                             >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
-                            <div
-                              class="swiper-slide swiper-slide-next"
-                              role="group"
-                              aria-label="2 / 3"
-                              style="width: 455px"
-                            >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
-                            <div
-                              class="swiper-slide"
-                              role="group"
-                              aria-label="3 / 3"
-                              style="width: 455px"
-                            >
-                              <a href="#"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
-                              /></a>
-                            </div>
-                            <!-- swiper-slide -->
+                              <!-- swiper-slide -->
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide swiper-slide-next"
+                                  role="group"
+                                  aria-label="2 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+                              <!-- swiper-slide -->
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide"
+                                  role="group"
+                                  aria-label="3 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+                              <SplideSlide>
+                                <div
+                                  class="swiper-slide"
+                                  role="group"
+                                  aria-label="3 / 3"
+                                  style="width: 455px"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                  /></a>
+                                </div>
+                              </SplideSlide>
+
+                              <!-- swiper-slide -->
+                            </Splide>
                           </div>
-                          <!-- swiper-wrapper -->
-                          <div
-                            class="swiper-button-prev swiper-button-disabled"
-                            tabindex="-1"
-                            role="button"
-                            aria-label="Previous slide"
-                            aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                            aria-disabled="true"
-                          ></div>
-                          <div
-                            class="swiper-button-next"
-                            tabindex="0"
-                            role="button"
-                            aria-label="Next slide"
-                            aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                            aria-disabled="false"
-                          ></div>
-                          <span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span
-                          ><span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span
-                          ><span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span>
                         </div>
                         <!-- product-images -->
                       </div>
@@ -2340,7 +2308,7 @@
                       </div>
                       <div class="count-rating">
                         <a
-                          href="#reviews"
+                          href="javascript:void(0)"
                           class="woocommerce-review-link"
                           rel="nofollow"
                           ><span class="count">1</span> review</a
@@ -2538,9 +2506,7 @@
 
                     <span class="posted_in"
                       >Category:
-                      <a
-                        href="https://klbtheme.com/machic/product-category/smartwatches/"
-                        rel="tag"
+                      <a href="javascript:void(0)" rel="tag"
                         >Smartwatches</a
                       ></span
                     >
@@ -2621,9 +2587,7 @@
                       top: 0px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       >Dragon Touch Max10 Tablet Android 10.0 OS</a
                     >
                   </th>
@@ -2634,9 +2598,7 @@
                       top: 0px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
                     >
                   </th>
@@ -2648,9 +2610,7 @@
                       padding: 15px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                      draggable="false"
+                    <a href="javascript:void(0)"
                       >Apple iPhone 11 64GB Yellow Fully Unlocked</a
                     >
                   </th>
@@ -2669,9 +2629,7 @@
                     Image
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"
@@ -2697,9 +2655,7 @@
                     /></a>
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"
@@ -2723,9 +2679,7 @@
                     /></a>
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"
@@ -3330,9 +3284,10 @@ img {
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
 import.meta.env.VITE_API_KEY;
-
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 export default {
-  components: { TheLoader },
+  components: { TheLoader, Splide, SplideSlide },
   data() {
     return {
       showmodal: "",

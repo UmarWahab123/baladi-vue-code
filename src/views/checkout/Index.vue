@@ -19,7 +19,7 @@
               class="checkout_coupon woocommerce-form-coupon"
               method="post"
               action="javascript:void(0)"
-              v-if="this.showCoupon"
+              v-if="showCoupon"
             >
               <p>If you have a coupon code, please apply it below.</p>
 

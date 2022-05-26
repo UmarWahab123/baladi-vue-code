@@ -3,10 +3,21 @@
     <h2>Register</h2>
     <div
       method="post"
-      class="woocommerce-form border shadow p-3 h-90 woocommerce-form-register register"
+      class="
+        woocommerce-form
+        border
+        shadow
+        p-3
+        h-90
+        woocommerce-form-register
+        register
+      "
     >
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <input type="hidden" value="1" v-bind="formdata.customer_type_id" />
         <label for="reg_username"
@@ -19,8 +30,14 @@
           id="reg_username"
         />
       </p>
+      <div class="error text-danger" v-if="v$.formdata.name.$error">
+        {{ v$.formdata.name.required.$message }}
+      </div>
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="reg_username"
           >Phone&nbsp;<span class="required">*</span></label
@@ -32,8 +49,14 @@
           id="reg_username"
         />
       </p>
+      <div class="error text-danger" v-if="v$.formdata.phone.$error">
+        {{ v$.formdata.phone.required.$message }}
+      </div>
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="reg_email"
           >Email address&nbsp;<span class="required">*</span></label
@@ -47,8 +70,14 @@
           autocomplete="email"
         />
       </p>
+      <div class="error text-danger" v-if="v$.formdata.email.$error">
+        {{ v$.formdata.email.required.$message }}
+      </div>
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="reg_password"
           >Password&nbsp;<span class="required">*</span></label
@@ -71,6 +100,9 @@
           ><span class="show-password-input"></span
         ></span>
       </p>
+      <div class="error text-danger" v-if="v$.formdata.password.$error">
+        {{ v$.formdata.password.required.$message }}
+      </div>
       <div class="row ml-5">
         <p
           v-if="errors"
@@ -100,7 +132,11 @@
         />
         <button
           type="submit"
-          class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"
+          class="
+            woocommerce-Button woocommerce-button
+            button
+            woocommerce-form-register__submit
+          "
           name="register"
           value="Register"
           @click="register()"
@@ -114,7 +150,10 @@
 <script>
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
+import { required, helpers } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 export default {
+  setup: () => ({ v$: useVuelidate() }),
   data() {
     return {
       formdata: {
@@ -127,12 +166,35 @@ export default {
       errors: "",
     };
   },
+  validations() {
+    return {
+      formdata: {
+        email: {
+          required: helpers.withMessage("Email cannot be empty!", required),
+        },
+        password: {
+          required: helpers.withMessage("Password cannot be empty!", required),
+        },
+        phone: {
+          required: helpers.withMessage("phone cannot be empty!", required),
+        },
+        name: {
+          required: helpers.withMessage("name cannot be empty!", required),
+        },
+      },
+    };
+  },
   mounted() {
     console.log(import.meta.env);
   },
 
   methods: {
-    register() {
+    async register() {
+      const result = await this.v$.$validate();
+      // alert(result);
+      if (!result) {
+        return;
+      }
       axios
         .post(
           import.meta.env.VITE_API_URL + "/api/auth/register",

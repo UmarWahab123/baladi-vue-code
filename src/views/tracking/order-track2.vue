@@ -32,19 +32,38 @@
 
         <div class="elementor-section-wrap">
           <section
-            class="elementor-section elementor-top-section elementor-element elementor-element-a8dca56 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            class="
+              elementor-section
+              elementor-top-section
+              elementor-element
+              elementor-element-a8dca56
+              elementor-section-boxed
+              elementor-section-height-default
+              elementor-section-height-default
+            "
             data-id="a8dca56"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e346431"
+                class="
+                  elementor-column
+                  elementor-col-100
+                  elementor-top-column
+                  elementor-element
+                  elementor-element-e346431
+                "
                 data-id="e346431"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="elementor-element elementor-element-16bb66b elementor-widget elementor-widget-shortcode"
+                    class="
+                      elementor-element
+                      elementor-element-16bb66b
+                      elementor-widget
+                      elementor-widget-shortcode
+                    "
                     data-id="16bb66b"
                     data-element_type="widget"
                     data-widget_type="shortcode.default"
@@ -68,17 +87,28 @@
                             </h2>
 
                             <table
-                              class="woocommerce-table woocommerce-table--order-details shop_table order_details"
+                              class="
+                                woocommerce-table
+                                woocommerce-table--order-details
+                                shop_table
+                                order_details
+                              "
                             >
                               <thead>
                                 <tr>
                                   <th
-                                    class="woocommerce-table__product-name product-name"
+                                    class="
+                                      woocommerce-table__product-name
+                                      product-name
+                                    "
                                   >
                                     Product
                                   </th>
                                   <th
-                                    class="woocommerce-table__product-table product-total"
+                                    class="
+                                      woocommerce-table__product-table
+                                      product-total
+                                    "
                                   >
                                     Total
                                   </th>
@@ -87,13 +117,18 @@
 
                               <tbody>
                                 <tr
-                                  class="woocommerce-table__line-item order_item"
+                                  class="
+                                    woocommerce-table__line-item
+                                    order_item
+                                  "
                                 >
                                   <td
-                                    class="woocommerce-table__product-name product-name"
+                                    class="
+                                      woocommerce-table__product-name
+                                      product-name
+                                    "
                                   >
-                                    <a
-                                      href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                                    <a href="javascript:void(0)"
                                       >Apple 10.9-inch iPad Air Wi-Fi Cellular
                                       64GB</a
                                     >
@@ -103,13 +138,18 @@
                                   </td>
 
                                   <td
-                                    class="woocommerce-table__product-total product-total"
+                                    class="
+                                      woocommerce-table__product-total
+                                      product-total
+                                    "
                                   >
                                     <span
                                       class="woocommerce-Price-amount amount"
                                       ><bdi
                                         ><span
-                                          class="woocommerce-Price-currencySymbol"
+                                          class="
+                                            woocommerce-Price-currencySymbol
+                                          "
                                           >QAR </span
                                         >629.99</bdi
                                       ></span
@@ -179,19 +219,38 @@
         </div>
 
         <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-3b0d1a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+          class="
+            elementor-section
+            elementor-top-section
+            elementor-element
+            elementor-element-3b0d1a1
+            elementor-section-boxed
+            elementor-section-height-default
+            elementor-section-height-default
+          "
           data-id="3b0d1a1"
           data-element_type="section"
         >
           <div class="elementor-container elementor-column-gap-extended">
             <div
-              class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5bbc87b"
+              class="
+                elementor-column
+                elementor-col-25
+                elementor-top-column
+                elementor-element
+                elementor-element-5bbc87b
+              "
               data-id="5bbc87b"
               data-element_type="column"
             >
               <div class="elementor-widget-wrap elementor-element-populated">
                 <div
-                  class="elementor-element elementor-element-97892be elementor-widget elementor-widget-machic-icon-box"
+                  class="
+                    elementor-element
+                    elementor-element-97892be
+                    elementor-widget
+                    elementor-widget-machic-icon-box
+                  "
                   data-id="97892be"
                   data-element_type="widget"
                   data-widget_type="machic-icon-box.default"
@@ -213,13 +272,24 @@
               </div>
             </div>
             <div
-              class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-065ec1c"
+              class="
+                elementor-column
+                elementor-col-25
+                elementor-top-column
+                elementor-element
+                elementor-element-065ec1c
+              "
               data-id="065ec1c"
               data-element_type="column"
             >
               <div class="elementor-widget-wrap elementor-element-populated">
                 <div
-                  class="elementor-element elementor-element-3f0d5e3 elementor-widget elementor-widget-machic-icon-box"
+                  class="
+                    elementor-element
+                    elementor-element-3f0d5e3
+                    elementor-widget
+                    elementor-widget-machic-icon-box
+                  "
                   data-id="3f0d5e3"
                   data-element_type="widget"
                   data-widget_type="machic-icon-box.default"
@@ -241,13 +311,24 @@
               </div>
             </div>
             <div
-              class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-0dcd911"
+              class="
+                elementor-column
+                elementor-col-25
+                elementor-top-column
+                elementor-element
+                elementor-element-0dcd911
+              "
               data-id="0dcd911"
               data-element_type="column"
             >
               <div class="elementor-widget-wrap elementor-element-populated">
                 <div
-                  class="elementor-element elementor-element-c73a023 elementor-widget elementor-widget-machic-icon-box"
+                  class="
+                    elementor-element
+                    elementor-element-c73a023
+                    elementor-widget
+                    elementor-widget-machic-icon-box
+                  "
                   data-id="c73a023"
                   data-element_type="widget"
                   data-widget_type="machic-icon-box.default"
@@ -269,13 +350,24 @@
               </div>
             </div>
             <div
-              class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3f15ab8"
+              class="
+                elementor-column
+                elementor-col-25
+                elementor-top-column
+                elementor-element
+                elementor-element-3f15ab8
+              "
               data-id="3f15ab8"
               data-element_type="column"
             >
               <div class="elementor-widget-wrap elementor-element-populated">
                 <div
-                  class="elementor-element elementor-element-5143c60 elementor-widget elementor-widget-machic-icon-box"
+                  class="
+                    elementor-element
+                    elementor-element-5143c60
+                    elementor-widget
+                    elementor-widget-machic-icon-box
+                  "
                   data-id="5143c60"
                   data-element_type="widget"
                   data-widget_type="machic-icon-box.default"
