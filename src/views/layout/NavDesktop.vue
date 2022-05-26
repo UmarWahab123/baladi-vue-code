@@ -8,11 +8,7 @@
               <ul id="menu-top-left" class="menu">
                 <li
                   id="menu-item-2231"
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-2231
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2231"
                 >
                   <router-link class="nav-link" to="/aboutus"
                     >About Us
@@ -20,33 +16,20 @@
                 </li>
                 <li
                   id="menu-item-2199"
-                  class="
-                    menu-item
-                    menu-item-type-custom
-                    menu-item-object-custom
-                    menu-item-2199
-                  "
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2199"
                 >
                   <router-link to="/category">Featured Products </router-link>
                 </li>
                 <li
                   id="menu-item-2229"
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-2229
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229"
                 >
                   <router-link to="/helpcenter">Help </router-link>
                 </li>
 
                 <li
                   id="menu-item-2230"
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-2230
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2230"
                 >
                   <router-link to="/replacement"
                     >Returns &amp; Replacements</router-link
@@ -62,11 +45,7 @@
               <ul id="menu-top-right-1" class="menu">
                 <li
                   id="menu-item-2233"
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-2233
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"
                 >
                   <router-link to=""
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
@@ -74,11 +53,7 @@
                   </router-link>
                 </li>
                 <li
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-2233
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"
                 >
                   <router-link to="/order-tracking"
                     >Order Tracking
@@ -86,13 +61,7 @@
                 </li>
 
                 <li
-                  class="
-                    menu-item
-                    menu-item-type-custom
-                    menu-item-object-custom
-                    menu-item-has-children
-                    menu-item-2176
-                  "
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2176"
                 >
                   <span>
                     <div class="switch">
@@ -140,13 +109,7 @@
           <div class="column align-center right">
             <div class="header-form site-search">
               <div
-                class="
-                  dgwt-wcas-search-wrapp dgwt-wcas-has-submit
-                  woocommerce
-                  js-dgwt-wcas-layout-classic
-                  dgwt-wcas-layout-classic
-                  js-dgwt-wcas-mobile-overlay-enabled
-                "
+                class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled"
               >
                 <form
                   class="dgwt-wcas-search-form"
@@ -245,25 +208,10 @@
                 <div class="cart-dropdown-wrapper">
                   <div class="fl-mini-cart-content">
                     <div
-                      class="
-                        products
-                        column-1
-                        mobile-1
-                        woocommerce-mini-cart
-                        cart_list
-                        product_list_widget
-                      "
+                      class="products column-1 mobile-1 woocommerce-mini-cart cart_list product_list_widget"
                     >
                       <div
-                        class="
-                          cart-slider
-                          swiper-container
-                          klb-mini-cart
-                          swiper-container-initialized
-                          swiper-container-vertical
-                          swiper-container-pointer-events
-                          slider-loaded
-                        "
+                        class="cart-slider swiper-container klb-mini-cart swiper-container-initialized swiper-container-vertical swiper-container-pointer-events slider-loaded"
                         data-effect="slide"
                         data-direction="vertical"
                         data-loop="false"
@@ -342,11 +290,7 @@
                             style="height: 90px"
                           >
                             <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
+                              class="product woocommerce-mini-cart-item mini_cart_item"
                             >
                               <div class="product-wrapper">
                                 <div class="product-content">
@@ -356,10 +300,7 @@
                                         width="90"
                                         height="90"
                                         src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         alt=""
                                       />
                                     </a>
@@ -399,11 +340,7 @@
                             style="height: 90px"
                           >
                             <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
+                              class="product woocommerce-mini-cart-item mini_cart_item"
                             >
                               <div class="product-wrapper">
                                 <div class="product-content">
@@ -413,10 +350,7 @@
                                         width="90"
                                         height="90"
                                         src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         alt=""
                                       />
                                     </a>
@@ -455,11 +389,7 @@
                             style="height: 90px"
                           >
                             <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
+                              class="product woocommerce-mini-cart-item mini_cart_item"
                             >
                               <div class="product-wrapper">
                                 <div class="product-content">
@@ -469,10 +399,7 @@
                                         width="90"
                                         height="90"
                                         src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         alt=""
                                       />
                                     </a>
@@ -511,11 +438,7 @@
                             style="height: 90px"
                           >
                             <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
+                              class="product woocommerce-mini-cart-item mini_cart_item"
                             >
                               <div class="product-wrapper">
                                 <div class="product-content">
@@ -525,10 +448,7 @@
                                         width="90"
                                         height="90"
                                         src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         alt=""
                                       />
                                     </a>
@@ -614,11 +534,7 @@
                 <div class="button-count">
                   <a
                     href="#"
-                    class="
-                      wishlist_products_counter
-                      top_wishlist-heart top_wishlist-
-                      wishlist-counter-with-products
-                    "
+                    class="wishlist_products_counter top_wishlist-heart top_wishlist- wishlist-counter-with-products"
                   >
                     <span class="wishlist_products_counter_text"
                       >Wishlist -</span
@@ -656,25 +572,10 @@
                 <div class="cart-dropdown-wrapper">
                   <div class="fl-mini-cart-content">
                     <div
-                      class="
-                        products
-                        column-1
-                        mobile-1
-                        woocommerce-mini-cart
-                        cart_list
-                        product_list_widget
-                      "
+                      class="products column-1 mobile-1 woocommerce-mini-cart cart_list product_list_widget"
                     >
                       <div
-                        class="
-                          cart-slider
-                          swiper-container
-                          klb-mini-cart
-                          swiper-container-initialized
-                          swiper-container-vertical
-                          swiper-container-pointer-events
-                          slider-loaded
-                        "
+                        class="cart-slider swiper-container klb-mini-cart swiper-container-initialized swiper-container-vertical swiper-container-pointer-events slider-loaded"
                         data-effect="slide"
                         data-direction="vertical"
                         data-loop="false"
@@ -755,11 +656,7 @@
                             v-for="n in 4"
                           >
                             <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
+                              class="product woocommerce-mini-cart-item mini_cart_item"
                             >
                               <div class="product-wrapper">
                                 <div class="product-content">
@@ -771,10 +668,7 @@
                                         width="90"
                                         height="90"
                                         src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                         srcset="
                                           https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg
                                         "
@@ -795,16 +689,11 @@
                                       <span class="quantity"
                                         >1 ×
                                         <span
-                                          class="
-                                            woocommerce-Price-amount
-                                            amount
-                                          "
+                                          class="woocommerce-Price-amount amount"
                                         >
                                           <bdi
                                             ><span
-                                              class="
-                                                woocommerce-Price-currencySymbol
-                                              "
+                                              class="woocommerce-Price-currencySymbol"
                                               >QAR </span
                                             >749.00</bdi
                                           >
@@ -887,9 +776,7 @@
                       </router-link>
                     </p>
                   </div>
-                  <div class="cart-noticy">
-                    Free Shipping on All Orders Over QAR 75
-                  </div>
+
                   <!-- cart-noticy -->
                 </div>
                 <!-- cart-dropdown-wrapper -->
@@ -927,13 +814,7 @@
                   :class="showmenu"
                 >
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      has-image
-                      column-1
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -955,12 +836,7 @@
                         <div class="row">
                           <div class="col">
                             <li
-                              class="
-                                menu-item menu-item-type-taxonomy
-                                menu-item-object-product_cat
-                                menu-item-has-children
-                                column-1
-                              "
+                              class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                             >
                               <a href="#">Fresh Products</a>
                               <ul class="sub-menu">
@@ -968,11 +844,7 @@
                                   <nav>
                                     <ul class="nav-menu nav-vertical">
                                       <li
-                                        class="
-                                          menu-item
-                                          menu-item
-                                          menu-item-type-taxonomy
-                                        "
+                                        class="menu-item menu-item menu-item-type-taxonomy"
                                       >
                                         <a href="#">Bakery</a>
 
@@ -980,33 +852,19 @@
                                           <div class="row">
                                             <div class="col">
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                               >
                                                 <a href="#">Bread Items</a>
                                                 <ul class="sub-menu">
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi brown bread</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi burger bun
@@ -1014,11 +872,7 @@
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi burger bun
@@ -1036,33 +890,19 @@
                                             </div>
                                             <div class="col">
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                               >
                                                 <a href="#">Cakes Items</a>
                                                 <ul class="sub-menu">
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi heart cake</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi assorted
@@ -1070,11 +910,7 @@
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi baklava
@@ -1092,46 +928,28 @@
                                             </div>
                                             <div class="col">
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                               >
                                                 <a href="#"
                                                   >Croissant and fatayer</a
                                                 >
                                                 <ul class="sub-menu">
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi cheese croissant
                                                     </a>
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi cheese fathayer</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi chicken
@@ -1151,44 +969,26 @@
                                           <div class="row">
                                             <div class="col">
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                               >
                                                 <a href="#">Sweets</a>
                                                 <ul class="sub-menu">
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi mamoul tamar</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi almond biscuit</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy list-sign"
                                                   >
                                                     <a href="#"
                                                       >Baladi baklava daimond
@@ -1256,76 +1056,45 @@
                                         <a href="#">Sweets</a>
                                         <ul style="top: -96px !important">
                                           <li
-                                            class="
-                                              menu-item menu-item-type-taxonomy
-                                              menu-item-object-product_cat
-                                              menu-item-has-children
-                                              column-1
-                                            "
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                           >
                                             <a href="#">Sweet Items</a>
                                             <ul class="sub-menu">
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  list-sign
-                                                "
+                                                class="menu-item menu-item-type-taxonomy list-sign"
                                               >
                                                 <a href="#">Cheez</a>
                                                 <ul>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                      menu-item-has-children
-                                                      column-1
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                                   >
                                                     <a href="#"
                                                       >Milk &amp; Products</a
                                                     >
                                                     <ul class="sub-menu">
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >HD DVD Players</a
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >Projection Screens</a
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >Projectors</a
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >Television
@@ -1333,42 +1102,26 @@
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >Televisions</a
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >TV-DVD Combos</a
                                                         >
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#">VCRs</a>
                                                       </li>
                                                       <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                       >
                                                         <a href="#"
                                                           >Video Glasses</a
@@ -1381,103 +1134,62 @@
                                             </ul>
                                           </li>
                                           <li
-                                            class="
-                                              menu-item menu-item-type-taxonomy
-                                              list-sign
-                                            "
+                                            class="menu-item menu-item-type-taxonomy list-sign"
                                           >
                                             <a href="#">Bread</a>
                                             <ul>
                                               <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                                               >
                                                 <a href="#"
                                                   >Milk &amp; Products</a
                                                 >
                                                 <ul class="sub-menu">
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#"
                                                       >HD DVD Players</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#"
                                                       >Projection Screens</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#">Projectors</a>
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#"
                                                       >Television Accessories</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#">Televisions</a>
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#"
                                                       >TV-DVD Combos</a
                                                     >
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#">VCRs</a>
                                                   </li>
                                                   <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                                   >
                                                     <a href="#"
                                                       >Video Glasses</a
@@ -1533,94 +1245,59 @@
                           <div class="col" style="display: none">Column</div>
                           <div class="col" style="display: none">
                             <li
-                              class="
-                                menu-item menu-item-type-taxonomy
-                                menu-item-object-product_cat
-                                menu-item-has-children
-                                column-1
-                              "
+                              class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                             >
                               <a href="#product-category/smartwatches/"
                                 >Smartwatches</a
                               >
                               <ul class="sub-menu">
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Casio Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Chronograph Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Kids Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Luxury Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Men Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Rolex Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Women Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Watch Brands</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Timex Watches</a>
                                 </li>
                                 <li
-                                  class="
-                                    menu-item menu-item-type-taxonomy
-                                    menu-item-object-product_cat
-                                  "
+                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                                 >
                                   <a href="#">Sport Watches</a>
                                 </li>
@@ -1632,13 +1309,7 @@
                     </ul>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      has-image
-                      column-1
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1"
                   >
                     <a href="#product-category/computers-accessories/">
                       <div class="menu-icon">
@@ -1657,22 +1328,14 @@
                       "
                     >
                       <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
+                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                       >
                         <a href="#product-category/computers-accessories/"
                           >Computers &amp; Accessories</a
                         >
                         <ul class="sub-menu">
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/computer-components/"
@@ -1680,10 +1343,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/computer-accessories/"
@@ -1691,10 +1351,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/desktops/"
@@ -1702,10 +1359,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/laptops/"
@@ -1713,10 +1367,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/monitors/"
@@ -1724,10 +1375,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/networking/"
@@ -1735,10 +1383,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/pc-gaming/"
@@ -1746,10 +1391,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/computers-accessories/tablets/"
@@ -1761,12 +1403,7 @@
                     </ul>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      column-1
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                   >
                     <a href="#product-category/television-video/">
                       <div class="menu-icon">
@@ -1779,22 +1416,14 @@
                     </a>
                     <ul class="sub-menu">
                       <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
+                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                       >
                         <a href="#product-category/television-video/"
                           >Television &amp; Video</a
                         >
                         <ul class="sub-menu">
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/hd-dvd-players/"
@@ -1802,10 +1431,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/projection-screens/"
@@ -1813,10 +1439,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/projectors/"
@@ -1824,10 +1447,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/television-accessories/"
@@ -1835,10 +1455,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/televisions/"
@@ -1846,10 +1463,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/tv-dvd-combos/"
@@ -1857,20 +1471,14 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a href="#product-category/television-video/vcrs/"
                               >VCRs</a
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/television-video/video-glasses/"
@@ -1882,13 +1490,7 @@
                     </ul>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      has-image
-                      column-1
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children has-image column-1"
                   >
                     <a href="#product-category/smartwatches/">
                       <div class="menu-icon">
@@ -1907,38 +1509,24 @@
                       "
                     >
                       <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
+                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1"
                       >
                         <a href="#product-category/smartwatches/"
                           >Smartwatches</a
                         >
                         <ul class="sub-menu">
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a href="#">Casio Watches</a>
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a href="#">Chronograph Watches</a>
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/kids-watches/"
@@ -1946,10 +1534,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/luxury-watches/"
@@ -1957,20 +1542,14 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a href="#product-category/smartwatches/men/"
                               >Men Watches</a
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/rolex-watches/"
@@ -1978,10 +1557,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/women-watches/"
@@ -1989,10 +1565,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/watch-brands/"
@@ -2000,10 +1573,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/timex-watches/"
@@ -2011,10 +1581,7 @@
                             >
                           </li>
                           <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                           >
                             <a
                               href="#product-category/smartwatches/sport-watches/"
@@ -2026,10 +1593,7 @@
                     </ul>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                   >
                     <a href="#product-category/headphones/">
                       <div class="menu-icon">
@@ -2042,10 +1606,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                   >
                     <a href="#product-category/camera-photo/">
                       <div class="menu-icon">
@@ -2055,10 +1616,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                   >
                     <a href="#product-category/video-games/">
                       <div class="menu-icon">
@@ -2068,10 +1626,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                   >
                     <a href="#product-category/sports-outdoors/">
                       <div class="menu-icon">
@@ -2081,9 +1636,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom"
                   >
                     <a href="#?orderby=popularity">
                       <div class="menu-icon">
@@ -2093,9 +1646,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -2108,9 +1659,7 @@
                     </a>
                   </li>
                   <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
+                    class="menu-item menu-item-type-custom menu-item-object-custom"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -2126,13 +1675,7 @@
             <nav class="site-menu horizontal primary shadow-enable">
               <ul id="menu-menu-2" class="menu">
                 <li
-                  class="
-                    menu-item menu-item-type-custom menu-item-object-custom
-                    current-menu-item current_page_item
-                    menu-item-home
-                    current-menu-ancestor current-menu-parent
-                    menu-item-has-children
-                  "
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children"
                 >
                   <router-link to="/all_categories"
                     >Top Categories
@@ -2140,330 +1683,187 @@
 
                   <ul class="sub-menu">
                     <li
-                      class="
-                        menu-item menu-item-type-custom menu-item-object-custom
-                        current-menu-item current_page_item
-                        menu-item-home
-                      "
+                      class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"
                     >
                       <a href="#">Top Electronics</a>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
                     >
                       <a href="#home-2/">Top Baby Products</a>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
                     >
                       <a href="index-2.html">Top Personal Care </a>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
                     >
                       <a href="#home-4/">Top Groceries</a>
                     </li>
                   </ul>
                 </li>
                 <li
-                  class="
-                    mega-menu
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page menu-item-has-children
-                  "
+                  class="mega-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
                 >
                   <router-link to="/brands">Top Brands </router-link>
                   <ul class="sub-menu">
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page menu-item-has-children
-                      "
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
                     >
                       <a href="#">Samsung</a>
                       <ul class="sub-menu">
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Mobiles</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?opt=right-sidebar">Waches</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=5&amp;opt=wide">Laptops Pcs</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=5&amp;opt=full-width">Headphones</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?shop_view=list_view">Tv And Projectors</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?ft=load-more">Gadgets</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?ft=infinite">Small Appliences</a>
                         </li>
                       </ul>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-product menu-item-has-children
-                      "
+                      class="menu-item menu-item-type-post_type menu-item-object-product menu-item-has-children"
                     >
                       <a href="">Nestle</a>
                       <ul class="sub-menu">
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-product"
                         >
                           <a href="">Nestle Milk</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-product"
                         >
                           <a href="#">Nestle Powdered Milk</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-product"
                         >
                           <a href="#">Nestle Juices</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-product"
                         >
                           <a href="#">Nestle Coffee</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-product"
                         >
                           <a href="#">Nestle Water</a>
                         </li>
                       </ul>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-has-children
-                      "
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"
                     >
                       <a href="#">Lays</a>
                       <ul class="sub-menu">
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Lays Dips</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Lays Kettle Cooked </a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Lays Layers</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Lays Poppibles</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
+                          class="menu-item menu-item-type-post_type menu-item-object-page"
                         >
                           <a href="#">Lays Stakes</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#">Lays wavy</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#">Lays Varaity Pack </a>
                         </li>
                       </ul>
                     </li>
                     <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-has-children
-                      "
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"
                     >
                       <a href="#">Baladi Products</a>
                       <ul class="sub-menu">
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#">Fruits </a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#">Vegetables </a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#">Bakery</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=4">Eggs</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=4&amp;opt=wide">Milk And Laban</a>
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=5&amp;opt=wide"
                             >Fish And See Food</a
                           >
                         </li>
                         <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
+                          class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                           <a href="#?column=6&amp;opt=wide">Yughurt</a>
                         </li>
@@ -2472,10 +1872,7 @@
                   </ul>
                 </li>
                 <li
-                  class="
-                    menu-item menu-item-type-taxonomy
-                    menu-item-object-product_cat
-                  "
+                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
                 >
                   <router-link to="category"
                     ><i class="klbth-icon-home"></i> Home And
@@ -2484,20 +1881,12 @@
                 </li>
 
                 <li
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
                   <router-link to="/blog">Blogs </router-link>
                 </li>
                 <li
-                  class="
-                    menu-item
-                    menu-item-type-post_type
-                    menu-item-object-page
-                  "
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
                   <router-link to="/contact-us">Contact </router-link>
                 </li>
