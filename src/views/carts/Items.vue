@@ -1,7 +1,7 @@
 <template>
   <form
     class="woocommerce-cart-form border shadow p-3"
-    action="https://klbtheme.com/machic/cart/"
+    action="javascript:void(0)"
     method="post"
   >
     <table

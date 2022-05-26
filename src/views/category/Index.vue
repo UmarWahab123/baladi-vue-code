@@ -22,7 +22,7 @@
           <div class="before-shop-loop">
             <div class="row sidebar-left">
               <div class="col col-12 col-lg-9 content-column">
-                <div class="filter-button hide-desktop">
+                <div class="filter-button">
                   <a href="#">
                     <i class="klbth-icon-filter"></i> Filter Products
                   </a>
@@ -37,7 +37,7 @@
                     >
                       <select
                         name="orderby"
-                        class="orderby filterSelect select2-hidden-accessible"
+                        class="orderby filterSelect"
                         aria-label="Shop order"
                         data-class="select-filter-orderby"
                         data-select2-id="1"
@@ -69,12 +69,16 @@
                   <div class="sorting-product hide-mobile">
                     <span>Show:</span>
                     <form
-                      class="woocommerce-ordering product-filter products-per-page"
+                      class="
+                        woocommerce-ordering
+                        product-filter
+                        products-per-page
+                      "
                       method="get"
                     >
                       <select
                         name="perpage"
-                        class="perpage showing filterSelect select2-hidden-accessible"
+                        class="perpage showing filterSelect"
                         data-class="select-filter-perpage"
                         data-select2-id="4"
                         tabindex="-1"
@@ -89,7 +93,7 @@
                   </div>
                   <div class="product-views-buttons hide-mobile">
                     <a
-                      href="/product-category/apple/?shop_view=grid_view"
+                      href="javascript:void(0)"
                       class="grid-view active"
                       data-bs-toggle="tooltip"
                       data-bs-placement="top"
@@ -99,7 +103,7 @@
                       ><i class="klbth-icon-view-grid"></i
                     ></a>
                     <a
-                      href="/product-category/apple/?shop_view=list_view"
+                      href="javascript:void(0)"
                       class="list-view"
                       data-bs-toggle="tooltip"
                       data-bs-placement="top"

@@ -7,7 +7,7 @@
           <div class="single-product-wrapper">
             <nav class="woocommerce-breadcrumb">
               <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="javascript:void(0)" >Home</a></li>
                 <li><a href="">Vegetables</a></li>
                 <li>Organic Food with fresh quality</li>
               </ul>
@@ -82,7 +82,7 @@
                                 display: block;
                               "
                             >
-                              <a href=""
+                              <a href="javascript:void(0)"
                                 ><img
                                   width="600"
                                   height="600"
@@ -114,7 +114,7 @@
                                 display: block;
                               "
                             >
-                              <a href="#wp-content/uploads/2021/09/single-2.jpg"
+                              <a href="javascript:void(0)"
                                 ><img
                                   width="600"
                                   height="600"
@@ -146,7 +146,7 @@
                                 display: block;
                               "
                             >
-                              <a href="#wp-content/uploads/2021/09/single-3.jpg"
+                              <a href="javascript:void(0)"
                                 ><img
                                   width="600"
                                   height="600"
@@ -185,7 +185,7 @@
                                 display: block;
                               "
                             >
-                              <a href="#wp-content/uploads/2021/09/air3.jpg"
+                              <a href="javascript:void(0)"
                                 ><img
                                   width="600"
                                   height="600"
@@ -227,7 +227,7 @@
                                 display: block;
                               "
                             >
-                              <a href="#wp-content/uploads/2021/09/air4.jpg"
+                              <a href="javascript:void(0)"
                                 ><img
                                   width="600"
                                   height="600"
@@ -385,7 +385,7 @@
                         </div>
                         <div class="count-rating">
                           <a
-                            href="#reviews"
+                           href="javascript:void(0)"
                             class="woocommerce-review-link"
                             rel="nofollow"
                             ><span class="count">1</span> review</a
@@ -1296,7 +1296,7 @@
                                                 </div>
                                               </div>
                                               <a
-                                                href="https://klbtheme.com/machic/shop/?featured=yes"
+                                                href="javascript:void(0)"
                                                 class="most-comments"
                                                 ><img
                                                   src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
@@ -1398,7 +1398,7 @@
                                         <div class="product-footer">
                                           <div class="product-footer-buttons">
                                             <a
-                                              href="?add-to-cart=521"
+                                            href="javascript:void(0)"
                                               data-quantity="1"
                                               class="
                                                 button
@@ -1560,75 +1560,58 @@
                                 transform: translate3d(0px, 0px, 0px);
                               "
                             >
-                              <div
-                                class="swiper-slide swiper-slide-active"
-                                role="group"
-                                aria-label="1 / 3"
-                                style="width: 455px"
+                              <Splide
+                                :options="{
+                                  rewind: true,
+                                  autoplay: true,
+                                  width: 460,
+                                }"
                               >
-                                <a href="#"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
-                              <div
-                                class="swiper-slide swiper-slide-next"
-                                role="group"
-                                aria-label="2 / 3"
-                                style="width: 455px"
-                              >
-                                <a href="#"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
-                              <div
-                                class="swiper-slide"
-                                role="group"
-                                aria-label="3 / 3"
-                                style="width: 455px"
-                              >
-                                <a href="#"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
+                                <!-- swiper-slide -->
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide swiper-slide-next"
+                                    role="group"
+                                    aria-label="2 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+                                <!-- swiper-slide -->
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide"
+                                    role="group"
+                                    aria-label="3 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide"
+                                    role="group"
+                                    aria-label="3 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+
+                                <!-- swiper-slide -->
+                              </Splide>
                             </div>
-                            <!-- swiper-wrapper -->
-                            <div
-                              class="swiper-button-prev swiper-button-disabled"
-                              tabindex="-1"
-                              role="button"
-                              aria-label="Previous slide"
-                              aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                              aria-disabled="true"
-                            ></div>
-                            <div
-                              class="swiper-button-next"
-                              tabindex="0"
-                              role="button"
-                              aria-label="Next slide"
-                              aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                              aria-disabled="false"
-                            ></div>
-                            <span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span
-                            ><span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span
-                            ><span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span>
                           </div>
                           <!-- product-images -->
                         </div>
@@ -1886,28 +1869,19 @@
                         </form>
 
                         <div class="product-actions">
-                          <div
-                            class="
-                              tinv-wraper
-                              woocommerce
-                              tinv-wishlist
-                              tinvwl-shortcode-add-to-cart
-                            "
-                            data-product_id="408"
-                          >
-                            <div class="tinv-wishlist-clear"></div>
-                            <a
-                              role="button"
-                              tabindex="0"
-                              aria-label="Add to Wishlist"
-                              class="
-                                tinvwl_add_to_wishlist_button
-                                tinvwl-icon-heart
-                                tinvwl-position-after
-                              "
-                              data-tinv-wl-product="408"
-                            ></a>
-                            <div class="tinvwl-tooltip">Add to Wishlist</div>
+                          <div class="custom-wish-style">
+                            <a :onclick="clickmodal" href="javascript::void(0)"
+                              ><i class="fa fa-heart" aria-hidden="true"></i
+                              ><span class="tinvwl_add_to_wishlist-text"
+                                >Add to Wishlist</span
+                              ></a
+                            >
+                            <div
+                              class="tinvwl-tooltip-custom"
+                              style="margin-left: 7px"
+                            >
+                              Add to Wishlist
+                            </div>
                           </div>
                           <a
                             href="#"
@@ -1972,7 +1946,7 @@
                       <span class="posted_in"
                         >Category:
                         <a
-                          href="https://klbtheme.com/machic/product-category/smartwatches/"
+                         href="javascript:void(0)"
                           rel="tag"
                           >Smartwatches</a
                         ></span
@@ -2055,7 +2029,7 @@
                       "
                     >
                       <a
-                        href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
+                       href="javascript:void(0)"
                         draggable="false"
                         >Dragon Touch Max10 Tablet Android 10.0 OS</a
                       >
@@ -2080,7 +2054,7 @@
                       "
                     >
                       <a
-                        href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
+                        href="javascript:void(0)"
                         draggable="false"
                         >Apple iPhone 11 64GB Yellow Fully Unlocked</a
                       >
@@ -2101,7 +2075,7 @@
                     </td>
                     <td>
                       <a
-                        href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
+                        href="javascript:void(0)"
                         draggable="false"
                         ><img
                           width="600"
@@ -2153,7 +2127,7 @@
                     </td>
                     <td>
                       <a
-                        href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
+                        href="javascript:void(0)"
                         draggable="false"
                         ><img
                           width="600"
@@ -2725,8 +2699,11 @@ import Footer from "../layout/Footer.vue";
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 export default {
-  components: { TheLoader },
+  components: { TheLoader, Splide, SplideSlide },
+
   data: () => ({
     id: "",
     specification: "",

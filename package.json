@@ -12,6 +12,7 @@
   "dependencies": {
     "@coders-tm/vue-number-format": "^2.1.11",
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
+    "@splidejs/splide-extension-auto-scroll": "^0.4.2",
     "@splidejs/vue-splide": "^0.5.18",
     "@vue/cli": "^5.0.4",
     "@vue/cli-shared-utils": "^5.0.4",
@@ -23,6 +24,7 @@
     "netlify-cli": "^10.3.1",
     "pinia": "^2.0.10",
     "postcss": "^8.4.5",
+    "sweetalert2": "^11.4.17",
     "tailwindcss": "^3.0.18",
     "vee-validate": "^4.5.11",
     "vue": "^3.2.25",
@@ -30,7 +32,9 @@
     "vue-i18n": "^9.1.0",
     "vue-number-format": "^1.2.1",
     "vue-router": "^4.0.12",
-    "vue-slick-carousel": "^1.0.6"
+    "vue-slick-carousel": "^1.0.6",
+    "vue-sweetalert2": "^5.0.5",
+    "vue-toast-notification": "^3.0"
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^3.0.0",

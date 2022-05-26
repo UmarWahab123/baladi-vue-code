@@ -275,14 +275,14 @@
                               >
                                 <a
                                   href="javascript:void(0)"
-                               @click="clickaddress"
+                                  @click="clickaddress"
                                   class="shipping-calculator-button woocommerce"
                                   >Change address</a
                                 >
                                 <section
                                   id="shipping-cart"
                                   class="shipping-calculator-form"
-                                    v-if="changeaddress === 1"
+                                  v-if="changeaddress === 1"
                                 >
                                   <p
                                     class="form-row form-row-wide"
@@ -1201,75 +1201,58 @@
                                 transform: translate3d(0px, 0px, 0px);
                               "
                             >
-                              <div
-                                class="swiper-slide swiper-slide-active"
-                                role="group"
-                                aria-label="1 / 3"
-                                style="width: 455px"
+                              <Splide
+                                :options="{
+                                  rewind: true,
+                                  autoplay: true,
+                                  width: 460,
+                                }"
                               >
-                                <a href="javascript:void(0)"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
-                              <div
-                                class="swiper-slide swiper-slide-next"
-                                role="group"
-                                aria-label="2 / 3"
-                                style="width: 455px"
-                              >
-                                <a href="javascript:void(0)"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
-                              <div
-                                class="swiper-slide"
-                                role="group"
-                                aria-label="3 / 3"
-                                style="width: 455px"
-                              >
-                                <a href="javascript:void(0)"
-                                  ><img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
-                                /></a>
-                              </div>
-                              <!-- swiper-slide -->
+                                <!-- swiper-slide -->
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide swiper-slide-next"
+                                    role="group"
+                                    aria-label="2 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+                                <!-- swiper-slide -->
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide"
+                                    role="group"
+                                    aria-label="3 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+                                <SplideSlide>
+                                  <div
+                                    class="swiper-slide"
+                                    role="group"
+                                    aria-label="3 / 3"
+                                    style="width: 455px"
+                                  >
+                                    <a href="#"
+                                      ><img
+                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3.jpg"
+                                    /></a>
+                                  </div>
+                                </SplideSlide>
+
+                                <!-- swiper-slide -->
+                              </Splide>
                             </div>
-                            <!-- swiper-wrapper -->
-                            <div
-                              class="swiper-button-prev swiper-button-disabled"
-                              tabindex="-1"
-                              role="button"
-                              aria-label="Previous slide"
-                              aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                              aria-disabled="true"
-                            ></div>
-                            <div
-                              class="swiper-button-next"
-                              tabindex="0"
-                              role="button"
-                              aria-label="Next slide"
-                              aria-controls="swiper-wrapper-39f31b07e93eaefa"
-                              aria-disabled="false"
-                            ></div>
-                            <span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span
-                            ><span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span
-                            ><span
-                              class="swiper-notification"
-                              aria-live="assertive"
-                              aria-atomic="true"
-                            ></span>
                           </div>
                           <!-- product-images -->
                         </div>
@@ -1459,7 +1442,10 @@
                               >Cubitt Smart Watch CT2S Waterproof Fitness
                               Tracker quantity</label
                             >
-                            <div class="quantity-button minus"></div>
+                            <div
+                              class="quantity-button minus"
+                              @click="decrementcount"
+                            ></div>
                             <input
                               type="text"
                               id="quantity_61f6cbce294fd"
@@ -1468,13 +1454,16 @@
                               min="1"
                               max="56"
                               name="quantity"
-                              value="1"
+                              :value="count"
                               title="Qty"
                               size="4"
                               placeholder=""
                               inputmode="numeric"
                             />
-                            <div class="quantity-button plus"></div>
+                            <div
+                              class="quantity-button plus"
+                              @click="incrementcount"
+                            ></div>
                           </div>
 
                           <button
@@ -2370,10 +2359,13 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 import Items from "./Items.vue";
 import Cartsubtotal from "./Cartsubtotal.vue";
-
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import.meta.env.VITE_API_KEY;
 
 export default {
+  components: { Splide, SplideSlide },
+
   data: () => ({
     showmodal: "",
     url: import.meta.env.VITE_API_URL + "/storage/",
@@ -2382,6 +2374,7 @@ export default {
     showbigmodalstyle: "",
     showcomparemodal: "",
     changeaddress: 0,
+    count: 0,
     showcomparemodalstyle: "",
     results: {
       0: {
@@ -2402,6 +2395,15 @@ export default {
   }),
   mounted() {},
   methods: {
+    incrementcount: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+      this.count = this.count + 1;
+    },
+    decrementcount: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.count = this.count - 1;
+    },
     clickmodal(index) {
       this.showmodal = "show";
       this.showmodalstyle = "display:block";
@@ -2438,7 +2440,7 @@ export default {
       this.results[input_index].quantity =
         this.results[input_index].quantity - 1;
     },
-      clickaddress: function (event) {
+    clickaddress: function (event) {
       if (this.changeaddress === 0) {
         this.changeaddress = 1;
       } else if (this.changeaddress === 1) {

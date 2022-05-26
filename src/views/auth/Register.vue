@@ -202,10 +202,44 @@ export default {
         )
         .then((response) => {
           // console.log(response);
+
           if (response.data.status == 400) {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+            console.log(response.data.data[0]);
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
           }
         });
     },

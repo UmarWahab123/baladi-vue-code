@@ -23,48 +23,82 @@
     <nav class="woocommerce-MyAccount-navigation">
       <ul>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--dashboard
+          "
+          :class="activeClass"
         >
           <router-link to="userdashboard">Dashboard </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--orders
+          "
+          :class="orders"
         >
           <router-link to="orders">Orders </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--orders
+          "
+          :class="mywallet"
         >
           <router-link to="my-wallet">My Wallet </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--orders
+          "
+          :class="voucher"
         >
           <router-link to="voucher">Voucher </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--orders
+          "
+          :class="rewardpoints"
         >
           <router-link to="reward-points">Reward Points </router-link>
         </li>
 
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--edit-address
+          "
+          :class="editaddress"
         >
           <router-link to="edit-address">Addresses </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--edit-account
+          "
+          :class="account"
         >
           <router-link to="account">Account Details </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wishlist"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--tinv_wishlist
+          "
         >
           <router-link to="wishlist">Wishlist </router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--customer-logout
+          "
         >
           <a @click="logout()" href="javascript:void(0);">Logout</a>
         </li>
@@ -85,9 +119,90 @@ export default {
   data() {
     return {
       isloading: true,
+      activeClass: "",
+      orders: "",
+      mywallet: "",
+      voucher: "",
+      rewardpoints: "",
+      editaddress: "",
+      account: "",
+      wishlist: "",
     };
   },
   mounted() {
+    if (this.$route.name == "userdashboard") {
+      this.activeClass = "is-active";
+      this.orders = "iis-active";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "orders") {
+      this.activeClass = "";
+      this.orders = "is-active";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "my-wallet") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "is-active";
+      this.voucher = "";
+      this.rewardpoints = "";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "voucher") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "";
+      this.voucher = "is-active";
+      this.rewardpoints = "";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "reward-points") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "is-active";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "reward-points") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "is-active";
+      this.editaddress = "";
+      this.account = "";
+    }
+    if (this.$route.name == "edit-address") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "";
+      this.editaddress = "is-active";
+      this.account = "";
+    }
+    if (this.$route.name == "account") {
+      this.activeClass = "";
+      this.orders = "";
+      this.mywallet = "";
+      this.voucher = "";
+      this.rewardpoints = "";
+      this.editaddress = "";
+      this.account = "is-active";
+    }
+
     if (localStorage.userInfo != null) {
     } else {
       this.$router.push("myaccount");

@@ -32,7 +32,23 @@
   --color-shop-button: #00a046;
   --color-shop-button-active: #037535;
 }
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	border-radius: 25px;
+	position: absolute;
+	z-index: -1;
+}
 
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	position: absolute;
+	z-index: -1;
+}
 :root {
   --font-primary: "aktiv-grotesk", sans-serif;
   --font-secondary: "pragmatica", sans-serif;
@@ -10231,6 +10247,7 @@ blockquote p {
   align-items: flex-start;
   padding-right: 0.9375rem;
   margin-bottom: 0;
+  flex-direction: row-reverse;
 }
 .products .product-price-cart .price del {
   font-size: 65%;

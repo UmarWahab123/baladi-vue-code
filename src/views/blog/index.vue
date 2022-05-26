@@ -14,7 +14,17 @@
               >
                 <article
                   id="post-2117"
-                  class="klb-article post post-2117 type-post status-publish format-standard has-post-thumbnail hentry category-watches tag-klbtheme tag-themeforest"
+                  class="
+                    klb-article
+                    post post-2117
+                    type-post
+                    status-publish
+                    format-standard
+                    has-post-thumbnail
+                    hentry
+                    category-watches
+                    tag-klbtheme tag-themeforest
+                  "
                 >
                   <div class="entry-post-header">
                     <h2 class="entry-title">
@@ -97,7 +107,7 @@
                   <form
                     class="search-form"
                     id="search-form"
-                    action="https://klbtheme.com/machic/"
+                    action="javascript:void(0)"
                     method="get"
                   >
                     <input

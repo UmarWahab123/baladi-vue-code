@@ -777,7 +777,7 @@
                                   ></ins
                                 ></span
                               ><a
-                                href="?add-to-cart=521"
+                                href=""
                                 data-quantity="1"
                                 class="
                                   button
@@ -1016,7 +1016,7 @@
               </div>
               <div class="module-wrapper">
                 <div class="products column-4 mobile-2 total-4">
-                  <div class="product custom-hover">
+                  <div class="product custom-hover" v-for="n in 4">
                     <div class="product-wrapper product-type-1">
                       <div class="product-content">
                         <div class="thumbnail-wrapper">
@@ -1128,11 +1128,14 @@
                                 src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                                 alt="featured" /></a
                             ><a
-                              href="#"
+                              :onclick="clickcomparemodal"
                               class="woosc-btn woosc-btn-521"
                               data-id="521"
+                              href="javascript::void(0)"
                               >Compare</a
-                            ><a href="521" class="detail-bnt quickview animated"
+                            ><a
+                              :onclick="clickbigmodal"
+                              class="detail-bnt quickview animated"
                               ><i class="klbth-icon-eye-empty"></i
                             ></a>
                           </div>
@@ -1216,500 +1219,6 @@
                     <div
                       class="product-content-fade"
                       style="margin-bottom: -109px"
-                    ></div>
-                  </div>
-                  <div class="product custom-hover">
-                    <div class="product-wrapper product-type-1">
-                      <div class="product-content">
-                        <div class="thumbnail-wrapper">
-                          <div class="product-badges">
-                            <span class="badge onsale">9%</span>
-                          </div>
-                          <a href="javascript:void(0)">
-                            <div
-                              class="product-card"
-                              style="position: relative"
-                            >
-                              <div
-                                class="hover-slider-images-toggler"
-                                style="
-                                  position: absolute;
-                                  inset: 0px;
-                                  display: flex;
-                                "
-                              >
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-400x400.jpg"
-                                  data-hover-slider-i="6"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow2-400x400.jpg"
-                                  data-hover-slider-i="7"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow3-400x400.jpg"
-                                  data-hover-slider-i="8"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow4-400x400.jpg"
-                                  data-hover-slider-i="9"
-                                  style="flex-grow: 1"
-                                ></div>
-                              </div>
-                              <div class="hover-slider-indicator">
-                                <div
-                                  data-hover-slider-i="6"
-                                  class="hover-slider-indicator-dot active"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="7"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="8"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="9"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                              </div>
-                              <img
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-400x400.jpg"
-                                data-hover-slides="https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow2-400x400.jpg,https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow3-400x400.jpg,https://klbtheme.com/machic/wp-content/uploads/2021/09/yellow4-400x400.jpg"
-                                data-options='{"touch":"end","preloadImages": true }'
-                                alt="Apple iPhone 11 64GB Yellow Fully Unlocked"
-                                class="hover-slider-init"
-                              />
-                            </div>
-                          </a>
-                          <div class="product-buttons">
-                            <div
-                              class="
-                                tinv-wraper
-                                woocommerce
-                                tinv-wishlist
-                                tinvwl-shortcode-add-to-cart
-                              "
-                              data-product_id="500"
-                            >
-                              <div class="tinv-wishlist-clear"></div>
-                              <a data-v-9705c064="" href="javascript::void(0)"
-                                ><i
-                                  class="fa fa-heart"
-                                  aria-hidden="true"
-                                  data-v-9705c064=""
-                                ></i
-                                ><span
-                                  class="tinvwl_add_to_wishlist-text"
-                                  data-v-9705c064=""
-                                  >Add to Wishlist</span
-                                ></a
-                              >
-                              <div class="tinv-wishlist-clear"></div>
-                              <div class="tinvwl-tooltip">Add to Wishlist</div>
-                            </div>
-                            <a href="#?featured=yes" class="most-comments"
-                              ><img
-                                src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                alt="featured" /></a
-                            ><a
-                              href="#"
-                              class="woosc-btn woosc-btn-500"
-                              data-id="500"
-                              >Compare</a
-                            ><a href="500" class="detail-bnt quickview animated"
-                              ><i class="klbth-icon-eye-empty"></i
-                            ></a>
-                          </div>
-                        </div>
-                        <div class="content-wrapper">
-                          <h3 class="product-title">
-                            <a href="javascript:void(0)"
-                              >Apple iPhone 11 64GB Yellow Fully Unlocked</a
-                            >
-                          </h3>
-                          <div class="product-rating">
-                            <div
-                              class="star-rating"
-                              role="img"
-                              aria-label="Rated 4.00 out of 5"
-                            >
-                              <span style="width: 80%"
-                                >Rated <strong class="rating">4.00</strong> out
-                                of 5</span
-                              >
-                            </div>
-                            <div class="count-rating">
-                              1 <span class="rating-text">Ratings</span>
-                            </div>
-                          </div>
-                          <div class="product-price-cart">
-                            <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >478.67</bdi
-                                  ></span
-                                ></del
-                              >
-                              <ins
-                                ><span
-                                  class="woocommerce-Price-amount amount"
-                                  style="margin: 4px"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >438.67</bdi
-                                  ></span
-                                ></ins
-                              ></span
-                            ><a
-                              href="javascript:void(0)"
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              data-product_id="500"
-                              data-product_sku="SO4JK74"
-                              aria-label="Add “Apple iPhone 11 64GB Yellow Fully Unlocked” to your cart"
-                              rel="nofollow"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="product-footer">
-                        <div class="product-footer-details">
-                          <ul>
-                            <li>Fully Unlocked</li>
-                            <li>iPhone 11 Pro Max</li>
-                            <li>6.50 in</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="product-content-fade"
-                      style="margin-bottom: -91px"
-                    ></div>
-                  </div>
-                  <div class="product custom-hover">
-                    <div class="product-wrapper product-type-1">
-                      <div class="product-content">
-                        <div class="thumbnail-wrapper">
-                          <div class="product-badges">
-                            <span class="badge top">Top Product</span>
-                          </div>
-                          <a href="javascript:void(0)"
-                            ><img
-                              src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-3-400x400.jpg"
-                              alt="ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD Display"
-                          /></a>
-                          <div class="product-buttons">
-                            <div
-                              class="
-                                tinv-wraper
-                                woocommerce
-                                tinv-wishlist
-                                tinvwl-shortcode-add-to-cart
-                              "
-                              data-product_id="462"
-                            >
-                              <div class="tinv-wishlist-clear"></div>
-                              <a data-v-9705c064="" href="javascript::void(0)"
-                                ><i
-                                  class="fa fa-heart"
-                                  aria-hidden="true"
-                                  data-v-9705c064=""
-                                ></i
-                                ><span
-                                  class="tinvwl_add_to_wishlist-text"
-                                  data-v-9705c064=""
-                                  >Add to Wishlist</span
-                                ></a
-                              >
-                              <div class="tinv-wishlist-clear"></div>
-                              <div class="tinvwl-tooltip">Add to Wishlist</div>
-                            </div>
-                            <a
-                              href="#"
-                              class="woosc-btn woosc-btn-462"
-                              data-id="462"
-                              >Compare</a
-                            ><a href="462" class="detail-bnt quickview animated"
-                              ><i class="klbth-icon-eye-empty"></i
-                            ></a>
-                          </div>
-                        </div>
-                        <div class="content-wrapper">
-                          <h3 class="product-title">
-                            <a href="javascript:void(0)"
-                              >ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD
-                              Display</a
-                            >
-                          </h3>
-                          <div class="product-rating">
-                            <div
-                              class="star-rating"
-                              role="img"
-                              aria-label="Rated 5.00 out of 5"
-                            >
-                              <span style="width: 100%"
-                                >Rated <strong class="rating">5.00</strong> out
-                                of 5</span
-                              >
-                            </div>
-                            <div class="count-rating">
-                              1 <span class="rating-text">Ratings</span>
-                            </div>
-                          </div>
-                          <div class="product-price-cart">
-                            <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >519.00</bdi
-                                  ></span
-                                ></del
-                              >
-                              <ins
-                                ><span
-                                  class="woocommerce-Price-amount amount"
-                                  style="margin: 4px"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >469.00</bdi
-                                  ></span
-                                ></ins
-                              ></span
-                            ><a
-                              href="javascript:void(0)"
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              data-product_id="462"
-                              data-product_sku="SL4JK74"
-                              aria-label="Add “ASUS VivoBook 15 Thin and Light Laptop 15.6” FHD Display” to your cart"
-                              rel="nofollow"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="product-footer">
-                        <div class="product-footer-details">
-                          <ul>
-                            <li>Intel i3-1005G1 CPU</li>
-                            <li>8GB RAM</li>
-                            <li>128GB SSD</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="product-content-fade"
-                      style="margin-bottom: -91px"
-                    ></div>
-                  </div>
-                  <div class="product custom-hover">
-                    <div class="product-wrapper product-type-1">
-                      <div class="product-content">
-                        <div class="thumbnail-wrapper">
-                          <div class="product-badges">
-                            <span class="badge onsale">32%</span>
-                          </div>
-                          <a href="javascript:void(0)">
-                            <div
-                              class="product-card"
-                              style="position: relative"
-                            >
-                              <div
-                                class="hover-slider-images-toggler"
-                                style="
-                                  position: absolute;
-                                  inset: 0px;
-                                  display: flex;
-                                "
-                              >
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-4-400x400.jpg"
-                                  data-hover-slider-i="10"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
-                                  data-hover-slider-i="11"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3-400x400.jpg"
-                                  data-hover-slider-i="12"
-                                  style="flex-grow: 1"
-                                ></div>
-                              </div>
-                              <div class="hover-slider-indicator">
-                                <div
-                                  data-hover-slider-i="10"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="11"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="12"
-                                  class="hover-slider-indicator-dot active"
-                                ></div>
-                              </div>
-                              <img
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt3-400x400.jpg"
-                                class="hover-slider-init"
-                                data-options='{"touch":"end","preloadImages": true }'
-                              />
-                            </div>
-                          </a>
-                          <div class="product-buttons">
-                            <div
-                              class="
-                                tinv-wraper
-                                woocommerce
-                                tinv-wishlist
-                                tinvwl-shortcode-add-to-cart
-                              "
-                              data-product_id="408"
-                            >
-                              <div class="tinv-wishlist-clear"></div>
-                              <a href="javascript::void(0)" data-v-9705c064=""
-                                ><i
-                                  class="fa fa-heart"
-                                  aria-hidden="true"
-                                  data-v-9705c064=""
-                                ></i
-                                ><span
-                                  class="tinvwl_add_to_wishlist-text"
-                                  data-v-9705c064=""
-                                  >Add to Wishlist</span
-                                ></a
-                              >
-                              <div class="tinv-wishlist-clear"></div>
-                              <div class="tinvwl-tooltip">Add to Wishlist</div>
-                            </div>
-                            <a
-                              href="#"
-                              class="woosc-btn woosc-btn-408"
-                              data-id="408"
-                              >Compare</a
-                            ><a
-                              href="javascript:void(0)"
-                              class="detail-bnt quickview animated"
-                              ><i class="klbth-icon-eye-empty"></i
-                            ></a>
-                          </div>
-                        </div>
-                        <div class="content-wrapper">
-                          <h3 class="product-title">
-                            <a href="javascript:void(0)"
-                              >Cubitt Smart Watch CT2S Waterproof Fitness
-                              Tracker</a
-                            >
-                          </h3>
-                          <div class="product-rating">
-                            <div
-                              class="star-rating"
-                              role="img"
-                              aria-label="Rated 3.00 out of 5"
-                            >
-                              <span style="width: 60%"
-                                >Rated <strong class="rating">3.00</strong> out
-                                of 5</span
-                              >
-                            </div>
-                            <div class="count-rating">
-                              1 <span class="rating-text">Ratings</span>
-                            </div>
-                          </div>
-                          <div class="product-price-cart">
-                            <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >95.00</bdi
-                                  ></span
-                                ></del
-                              >
-                              <ins
-                                ><span
-                                  class="woocommerce-Price-amount amount"
-                                  style="margin: 4px"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >65.00</bdi
-                                  ></span
-                                ></ins
-                              ></span
-                            ><a
-                              href="javascript:void(0)"
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              data-product_id="408"
-                              data-product_sku="KM45VGRT"
-                              aria-label="Add “Cubitt Smart Watch CT2S Waterproof Fitness Tracker” to your cart"
-                              rel="nofollow"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="product-footer">
-                        <div class="product-footer-details">
-                          <ul>
-                            <li>Heart Rate Monitor</li>
-                            <li>Calorie Counting</li>
-                            <li>With Bluetooth and Full Touch</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="product-content-fade"
-                      style="margin-bottom: -91px"
                     ></div>
                   </div>
                 </div>
@@ -2348,7 +1857,7 @@
                     <div class="product-info-top">
                       <form
                         class="cart single-ajax"
-                        action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                        action="javascript:void(0)"
                         method="post"
                         enctype="multipart/form-data"
                       >
@@ -2359,7 +1868,10 @@
                             >Cubitt Smart Watch CT2S Waterproof Fitness Tracker
                             quantity</label
                           >
-                          <div class="quantity-button minus"></div>
+                          <div
+                            class="quantity-button minus"
+                            @click="decrement"
+                          ></div>
                           <input
                             type="text"
                             id="quantity_61f6cbce294fd"
@@ -2368,13 +1880,16 @@
                             min="1"
                             max="56"
                             name="quantity"
-                            value="1"
+                            :value="quantity"
                             title="Qty"
                             size="4"
                             placeholder=""
                             inputmode="numeric"
                           />
-                          <div class="quantity-button plus"></div>
+                          <div
+                            class="quantity-button plus"
+                            @click="increment"
+                          ></div>
                         </div>
 
                         <button
@@ -2421,28 +1936,19 @@
                       </form>
 
                       <div class="product-actions">
-                        <div
-                          class="
-                            tinv-wraper
-                            woocommerce
-                            tinv-wishlist
-                            tinvwl-shortcode-add-to-cart
-                          "
-                          data-product_id="408"
-                        >
-                          <div class="tinv-wishlist-clear"></div>
-                          <a
-                            role="button"
-                            tabindex="0"
-                            aria-label="Add to Wishlist"
-                            class="
-                              tinvwl_add_to_wishlist_button
-                              tinvwl-icon-heart
-                              tinvwl-position-after
-                            "
-                            data-tinv-wl-product="408"
-                          ></a>
-                          <div class="tinvwl-tooltip">Add to Wishlist</div>
+                        <div class="custom-wish-style">
+                          <a :onclick="clickmodal" href="javascript::void(0)"
+                            ><i class="fa fa-heart" aria-hidden="true"></i
+                            ><span class="tinvwl_add_to_wishlist-text"
+                              >Add to Wishlist</span
+                            ></a
+                          >
+                          <div
+                            class="tinvwl-tooltip-custom"
+                            style="margin-left: 7px"
+                          >
+                            Add to Wishlist
+                          </div>
                         </div>
                         <a
                           href="#"
@@ -3301,6 +2807,7 @@ export default {
       showbigmodalstyle: "",
       showcomparemodal: "",
       showcomparemodalstyle: "",
+      quantity: 0,
     };
   },
   mounted() {
@@ -3351,6 +2858,15 @@ export default {
     closecomparemodal() {
       this.showcomparemodal = "";
       this.showcomparemodalstyle = "";
+    },
+    increment: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+      this.quantity = this.quantity + 1;
+    },
+    decrement: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.quantity = this.quantity - 1;
     },
   },
 };

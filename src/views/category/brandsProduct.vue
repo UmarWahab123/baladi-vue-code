@@ -572,7 +572,7 @@
                     <div class="product-info-top">
                       <form
                         class="cart single-ajax"
-                        action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                        action="javascript:void(0)"
                         method="post"
                         enctype="multipart/form-data"
                       >

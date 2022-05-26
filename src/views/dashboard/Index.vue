@@ -17,7 +17,7 @@
                       <strong>{{ userdata.name }}</strong
                       >?
                       <a
-                        href="https://klbtheme.com/machic/my-account/customer-logout/?_wpnonce=9691dc2191"
+                        href="#"
                         >Log out</a
                       >)
                     </p>

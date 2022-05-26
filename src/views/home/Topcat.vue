@@ -1,46 +1,37 @@
 <template>
-  <div
-    class="elementor-section elementor-top-section elementor-element elementor-element-544c1c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="544c1c4"
-    data-element_type="section"
-  >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-165e7da"
-        data-id="165e7da"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-686e485 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-            data-id="686e485"
-            data-element_type="widget"
-            data-widget_type="divider.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="elementor-divider">
-                <span class="elementor-divider-separator"> </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-8dff6a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    class="
+      elementor-section
+      elementor-top-section
+      elementor-element
+      elementor-element-8dff6a0
+      elementor-section-boxed
+      elementor-section-height-default
+      elementor-section-height-default
+    "
     data-id="8dff6a0"
     data-element_type="section"
   >
     <div class="elementor-container elementor-column-gap-extended">
       <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083"
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-1715083
+        "
         data-id="1715083"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2"
+            class="
+              elementor-element
+              elementor-element-9ee7e40
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
             data-id="9ee7e40"
             data-element_type="widget"
             data-widget_type="machic-banner-box2.default"
@@ -82,10 +73,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a
-                      href="javascript::void(0)"
-                      class="overlay-link"
-                    ></a>
+                    <a href="javascript::void(0)" class="overlay-link"></a>
                   </div>
                   <!-- banner -->
                 </div>
@@ -96,13 +84,24 @@
         </div>
       </div>
       <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-99ac9d5"
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-99ac9d5
+        "
         data-id="99ac9d5"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="elementor-element elementor-element-b65da31 elementor-widget elementor-widget-machic-banner-box2"
+            class="
+              elementor-element
+              elementor-element-b65da31
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
             data-id="b65da31"
             data-element_type="widget"
             data-widget_type="machic-banner-box2.default"
@@ -144,10 +143,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a
-                      href="javascript::void(0)"
-                      class="overlay-link"
-                    ></a>
+                    <a href="javascript::void(0)" class="overlay-link"></a>
                   </div>
                   <!-- banner -->
                 </div>
@@ -158,13 +154,24 @@
         </div>
       </div>
       <div
-        class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-479e832"
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-479e832
+        "
         data-id="479e832"
         data-element_type="column"
       >
         <div class="elementor-widget-wrap elementor-element-populated">
           <div
-            class="elementor-element elementor-element-95905b3 elementor-widget elementor-widget-machic-banner-box2"
+            class="
+              elementor-element
+              elementor-element-95905b3
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
             data-id="95905b3"
             data-element_type="widget"
             data-widget_type="machic-banner-box2.default"
@@ -206,10 +213,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a
-                      href="javascript::void(0)"
-                      class="overlay-link"
-                    ></a>
+                    <a href="javascript::void(0)" class="overlay-link"></a>
                   </div>
                   <!-- banner -->
                 </div>

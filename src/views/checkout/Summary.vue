@@ -119,7 +119,7 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_bacs"> QR PAY </label>
+            <label for="payment_method_bacs">Add Credit and Debit Card </label>
             <div class="panel payment_box payment_method_bacs p-3">
               <button
                 type="button"

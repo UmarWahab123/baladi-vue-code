@@ -595,7 +595,7 @@
                     <div class="product-info-top">
                       <form
                         class="cart single-ajax"
-                        action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                        action="javascript:void(0)"
                         method="post"
                         enctype="multipart/form-data"
                       >
@@ -606,22 +606,28 @@
                             >Cubitt Smart Watch CT2S Waterproof Fitness Tracker
                             quantity</label
                           >
-                          <div class="quantity-button minus"></div>
+                          <div
+                            class="quantity-button minus"
+                            @click="decrement"
+                          ></div>
                           <input
                             type="text"
                             id="quantity_61f6cbce294fd"
                             class="input-text qty text"
                             step="1"
-                            min="1"
+                         min="1"
                             max="56"
                             name="quantity"
-                            value="1"
+                            :value="quantity"
                             title="Qty"
                             size="4"
                             placeholder=""
                             inputmode="numeric"
                           />
-                          <div class="quantity-button plus"></div>
+                          <div
+                            class="quantity-button plus"
+                            @click="increment"
+                          ></div>
                         </div>
 
                         <button
@@ -668,28 +674,19 @@
                       </form>
 
                       <div class="product-actions">
-                        <div
-                          class="
-                            tinv-wraper
-                            woocommerce
-                            tinv-wishlist
-                            tinvwl-shortcode-add-to-cart
-                          "
-                          data-product_id="408"
-                        >
-                          <div class="tinv-wishlist-clear"></div>
-                          <a
-                            role="button"
-                            tabindex="0"
-                            aria-label="Add to Wishlist"
-                            class="
-                              tinvwl_add_to_wishlist_button
-                              tinvwl-icon-heart
-                              tinvwl-position-after
-                            "
-                            data-tinv-wl-product="408"
-                          ></a>
-                          <div class="tinvwl-tooltip">Add to Wishlist</div>
+                        <div class="custom-wish-style">
+                          <a :onclick="clickmodal" href="javascript::void(0)"
+                            ><i class="fa fa-heart" aria-hidden="true"></i
+                            ><span class="tinvwl_add_to_wishlist-text"
+                              >Add to Wishlist</span
+                            ></a
+                          >
+                          <div
+                            class="tinvwl-tooltip-custom"
+                            style="margin-left: 7px"
+                          >
+                            Add to Wishlist
+                          </div>
                         </div>
                         <a
                           href="#"
@@ -1555,6 +1552,7 @@ export default {
     showcomparemodal: "",
     showcomparemodalstyle: "",
     results: [],
+    quantity: 0,
   }),
   mounted() {
     axios
@@ -1589,6 +1587,15 @@ export default {
     closecomparemodal() {
       this.showcomparemodal = "";
       this.showcomparemodalstyle = "";
+    },
+    increment: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+      this.quantity = this.quantity + 1;
+    },
+    decrement: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.quantity = this.quantity - 1;
     },
   },
 };

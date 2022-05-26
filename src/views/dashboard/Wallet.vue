@@ -9,7 +9,10 @@
               <div class="col-12 col-md-12 col-lg-12 content-primary">
                 <div class="my-account-wrapper">
                   <Sidebar />
-                  <div class="woocommerce-MyAccount-content">
+                  <div
+                    class="woocommerce-MyAccount-content"
+                    style="padding: 0px"
+                  >
                     <div class="col-md-12">
                       <h3 class="align-items-center p-3">Baladi Wallet</h3>
 
@@ -42,7 +45,14 @@
                       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 p-3">
                         <div class="col d-flex align-items-start">
                           <div
-                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
+                            class="
+                              icon-square
+                              bg-light
+                              text-dark
+                              flex-shrink-0
+                              me-3
+                              p-3
+                            "
                           >
                             <i class="fa fa-credit-card text-success"></i>
                           </div>
@@ -53,7 +63,14 @@
                         </div>
                         <div class="col d-flex align-items-start">
                           <div
-                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
+                            class="
+                              icon-square
+                              bg-light
+                              text-dark
+                              flex-shrink-0
+                              me-3
+                              p-3
+                            "
                           >
                             <i class="fa fa-bullhorn text-success"></i>
                           </div>
@@ -64,7 +81,14 @@
                         </div>
                         <div class="col d-flex align-items-start">
                           <div
-                            class="icon-square bg-light text-dark flex-shrink-0 me-3 p-3"
+                            class="
+                              icon-square
+                              bg-light
+                              text-dark
+                              flex-shrink-0
+                              me-3
+                              p-3
+                            "
                           >
                             <i class="fa fa fa-credit-card text-success"></i>
                           </div>

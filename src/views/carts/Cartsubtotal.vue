@@ -72,7 +72,7 @@
 
               <form
                 class="woocommerce-shipping-calculator"
-                action="https://klbtheme.com/machic/cart/"
+                action="javascript:void(0)"
                 method="post"
               >
                 <a

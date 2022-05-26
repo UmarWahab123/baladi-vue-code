@@ -855,7 +855,7 @@
                     <div class="product-info-top">
                       <form
                         class="cart single-ajax"
-                        action="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                        action="javascript:void(0)"
                         method="post"
                         enctype="multipart/form-data"
                       >
@@ -1755,6 +1755,7 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 export default {
   components: { Splide, SplideSlide },
+
   data: () => ({
     showmodal: "",
     url: import.meta.env.VITE_API_URL + "/storage/",

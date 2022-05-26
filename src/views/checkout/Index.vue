@@ -49,7 +49,7 @@
                   name="checkout"
                   method="post"
                   class="checkout woocommerce-checkout"
-                  action="https://klbtheme.com/machic/checkout/"
+                  action="javascript:void(0)"
                   enctype="multipart/form-data"
                   novalidate="novalidate"
                 >

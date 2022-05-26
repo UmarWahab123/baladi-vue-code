@@ -23,39 +23,74 @@
     <nav class="woocommerce-MyAccount-navigation">
       <ul>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard nav__list__item__link is-active"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--dashboard
+            nav__list__item__link
+          "
+          :class="about"
         >
           <router-link to="/helpcenter">About Baladi</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--voucher nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--voucher
+            nav__list__item__link
+          "
+          :class="replacement"
         >
-          <router-link to="/refund">Returns & Replacements</router-link>
+          <router-link to="/replacement">Returns & Replacements</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--rewards nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--rewards
+            nav__list__item__link
+          "
+          :class="shipping"
         >
           <router-link to="/shoppingrates"
             >Shipping Rates & Policies</router-link
           >
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--edit-address
+            nav__list__item__link
+          "
+          :class="refund"
         >
           <router-link to="/refund">Refund and Returns Policy</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--edit-account
+            nav__list__item__link
+          "
+          :class="privacy"
         >
           <router-link to="/privacypolicy">Privacy Policy</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wishlist nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--tinv_wishlist
+            nav__list__item__link
+          "
+          :class="terms"
         >
           <router-link to="/termscondition">Terms and Conditions</router-link>
         </li>
         <li
-          class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders nav__list__item__link"
+          class="
+            woocommerce-MyAccount-navigation-link
+            woocommerce-MyAccount-navigation-link--orders
+            nav__list__item__link
+          "
+          :class="covid"
         >
           <router-link to="/covidhelp">Covid-19</router-link>
         </li>
@@ -67,23 +102,81 @@
 <script>
 export default {
   data: () => ({
-    // about: "",
-    // test: "",
-    // shipping: "",
-    // refund: "",
-    // privacy: "",
-    // terms: "",
-    // covid: "",
+    about: "",
+    test: "",
+    shipping: "",
+    refund: "",
+    privacy: "",
+    terms: "",
+    covid: "",
     tabs: "",
+    replacement: "",
   }),
   mounted() {
-    // this.test = "";
-    // this.shipping = "";
-    // this.refund = "";
-    // this.privacy = "";
-    // this.terms = "";
-    // this.covid = "";
-    // this.about = "is-active";
+    if (this.$route.name == "helpcenter") {
+      this.shipping = "";
+      this.refund = "";
+      this.privacy = "";
+      this.terms = "";
+      this.covid = "";
+      this.replacement = "";
+      this.about = "is-active";
+    }
+    if (this.$route.name == "replacement") {
+      this.shipping = "";
+      this.refund = "";
+      this.privacy = "";
+      this.terms = "";
+      this.covid = "";
+      this.replacement = "is-active";
+      this.about = "";
+    }
+    if (this.$route.name == "shoppingrates") {
+      this.shipping = "is-active";
+      this.refund = "";
+      this.privacy = "";
+      this.terms = "";
+      this.covid = "";
+      this.replacement = "";
+      this.about = "";
+    }
+    if (this.$route.name == "refund") {
+      this.shipping = "";
+      this.refund = "is-active";
+      this.privacy = "";
+      this.terms = "";
+      this.covid = "";
+      this.replacement = "";
+      this.about = "";
+    }
+    if (this.$route.name == "privacypolicy") {
+      this.shipping = "";
+      this.refund = "";
+      this.privacy = "is-active";
+      this.terms = "";
+      this.covid = "";
+      this.replacement = "";
+      this.about = "";
+    }
+    if (this.$route.name == "termscondition") {
+      this.shipping = "";
+      this.refund = "";
+      this.privacy = "";
+      this.terms = "is-active";
+      this.covid = "";
+      this.replacement = "";
+      this.about = "";
+    }
+    if (this.$route.name == "covidhelp") {
+      this.shipping = "";
+      this.refund = "";
+      this.privacy = "";
+      this.terms = "";
+      this.covid = "is-active";
+      this.replacement = "";
+      this.about = "";
+    }
+
     const tabs = document.querySelectorAll(".nav__list__item__link");
     tabs.forEach((clickedTab) => {
       clickedTab.addEventListener("click", (e) => {
@@ -94,73 +187,5 @@ export default {
       });
     });
   },
-  // methods: {
-  //   clickabout: function () {
-  //     this.test = "";
-  //     this.shipping = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.about = "is-active";
-  //   },
-  //   clicktest: function () {
-  //     this.about = "";
-  //     this.shipping = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.test = "is-active";
-  //   },
-  //   clickshipping: function () {
-  //     this.about = "";
-  //     this.test = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.shipping = "is-active";
-  //   },
-  //   clickrefund: function () {
-  //     this.about = "";
-  //     this.test = "";
-  //     this.shipping = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.refund = "is-active";
-  //   },
-  //   clickprivacy: function () {
-  //     this.about = "";
-  //     this.test = "";
-  //     this.shipping = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.privacy = "is-active";
-  //   },
-  //   clickterms: function () {
-  //     this.about = "";
-  //     this.test = "";
-  //     this.shipping = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.terms = "is-active";
-  //   },
-  //   clickcovid: function () {
-  //     this.about = "";
-  //     this.test = "";
-  //     this.shipping = "";
-  //     this.refund = "";
-  //     this.privacy = "";
-  //     this.terms = "";
-  //     this.covid = "";
-  //     this.covid = "is-active";
-  //   },
-  // },
 };
 </script>
