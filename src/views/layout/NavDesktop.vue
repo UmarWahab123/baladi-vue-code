@@ -241,7 +241,7 @@
 
                 <!-- header-addons-text -->
               </a>
-              <div class="cart-dropdown hide">
+              <div class="cart-dropdown hide ">
                 <div class="cart-dropdown-wrapper">
                   <div class="fl-mini-cart-content">
                     <div
@@ -251,8 +251,9 @@
                         mobile-1
                         woocommerce-mini-cart
                         cart_list
-                        product_list_widget
+                        product_list_widget   
                       "
+                      
                     >
                       <div
                         class="
@@ -263,6 +264,7 @@
                           swiper-container-vertical
                           swiper-container-pointer-events
                           slider-loaded
+                         
                         "
                         data-effect="slide"
                         data-direction="vertical"
@@ -330,7 +332,7 @@
                           </svg>
                         </div>
                         <div
-                          class="swiper-wrapper"
+                          class="swiper-wrapper sidebar-sticky"
                           id="swiper-wrapper-20bf436108c0df10df "
                           aria-live="polite"
                           style="height: 30vh; overflow: auto"
@@ -741,7 +743,7 @@
                           </svg>
                         </div>
                         <div
-                          class="swiper-wrapper"
+                          class="swiper-wrapper cart-scroll"
                           id="swiper-wrapper-20bf436108c0df10df"
                           aria-live="polite"
                           style="height: 30vh; overflow: auto"
@@ -832,20 +834,22 @@
                           <!-- swiper-slide -->
                         </div>
                         <div
-                          class="swiper-button-prev swiper-button-disabled"
+                          class="swiper-button-prev swiper-button"
                           tabindex="-1"
                           role="button"
                           aria-label="Previous slide"
                           aria-controls="swiper-wrapper-20bf436108c0df10df"
                           aria-disabled="true"
+                          @click="clickscrolldown"
                         ></div>
                         <div
-                          class="swiper-button-next swiper-button-disabled"
+                          class="swiper-button-next swiper-button"
                           tabindex="-1"
                           role="button"
                           aria-label="Next slide"
                           aria-controls="swiper-wrapper-20bf436108c0df10df"
                           aria-disabled="true"
+                          @click="clickscrollup"
                         ></div>
                         <span
                           class="swiper-notification"
@@ -2626,6 +2630,8 @@ export default {
     showmenu: "",
     results: [],
     overflow: "",
+    notificationheight:0,
+    
   }),
   mounted() {
     if (localStorage.userInfo != null) {
@@ -2635,6 +2641,7 @@ export default {
     if (this.$route.name == "Home") {
       this.showmenu = "show";
     }
+    
   },
   methods: {
     menuchange: function (event) {
@@ -2648,13 +2655,37 @@ export default {
       this.$router.push("category");
     },
     down: function () {
-      console.log(
-        window.scrollTo({
-          top: 10,
-        })
-      );
+      var height= document.querySelector('.sidebar-sticky').scrollHeight;
+      var upheight = 0;
+     if(this.notificationheight > upheight){
+      this.notificationheight -=20;
+     document.querySelector('.sidebar-sticky').scrollTop =this.notificationheight;
+      }
     },
-    up: function () {},
+    up: function () {
+      var height= document.querySelector('.sidebar-sticky').scrollHeight;
+     if(height >  this.notificationheight){
+      this.notificationheight +=20;
+      document.querySelector('.sidebar-sticky').scrollTop = this.notificationheight;
+     }
+
+    },
+     clickscrolldown: function () {
+      var height= document.querySelector('.cart-scroll').scrollHeight;
+      var upheight = 0;
+     if(this.notificationheight > upheight){
+      this.notificationheight -=20;
+     document.querySelector('.cart-scroll').scrollTop =this.notificationheight;
+      }
+    },
+    clickscrollup: function () {
+      var height= document.querySelector('.cart-scroll').scrollHeight;
+     if(height >  this.notificationheight){
+      this.notificationheight +=20;
+      document.querySelector('.cart-scroll').scrollTop = this.notificationheight;
+     }
+
+    },
   },
 };
 </script>

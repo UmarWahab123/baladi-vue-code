@@ -119,12 +119,12 @@
 
                   <div class="col col-12 col-lg-6">
                     <h1 class="product_title entry-title">
-                      Laban Mango and snowberry flavors
+                     {{productDetails.name}}
                     </h1>
                     <div class="product-meta">
                       <div class="product-model">
                         <span>weight:</span>
-                        4 kg
+                       {{productDetails.weight}}
                       </div>
                       <!-- product-model -->
                       <div class="sku-wrapper"></div>
@@ -150,7 +150,7 @@
                             href="javascript:void(0)"
                             class="woocommerce-review-link"
                             rel="nofollow"
-                            ><span class="count">1</span> review</a
+                            ><span class="count">{{productDetails.allow_reviews}}</span> review</a
                           >
                         </div>
                       </div>
@@ -489,7 +489,7 @@
                 >
                   <h2>Description</h2>
 
-                  <h6>Description</h6>
+                  <h6>{{productDetails.short_description}}</h6>
 
                   <p>Fresh laban botel with minimum price available</p>
                   <p>Key Features:</p>
@@ -2403,9 +2403,11 @@ import Footer from "../layout/Footer.vue";
 import TheLoader from "../Loader/TheLoader.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import axios from "axios";
+
 export default {
   components: { TheLoader, Splide, SplideSlide },
-
+    
   data: () => ({
     id: "",
     specification: "",
@@ -2423,6 +2425,9 @@ export default {
     showcomparemodalstyle: "",
     isloading: true,
     quantity: 1,
+    url:"http://baladiweb.bteamwebs.com/storage/",
+    productDetails: {name:"",allow_reviews:"",weight:"",short_description:""},
+    errors: "",
     //Index of the active image
     activeImage: 0,
     //Hold the timeout, so we can clear it when it is needed
@@ -2477,6 +2482,17 @@ export default {
     this.description = "active";
     this.showdescription = "active show";
     setTimeout(() => (this.isloading = false), 1000);
+    var id = this.$route.params.id;
+    axios
+      .get("http://baladiweb.bteamwebs.com/api/mobile/product/getProducts/" + id)
+      .then((response) => {
+        this.productDetails.name = response.data.data[0].name;
+        this.productDetails.allow_reviews = response.data.data[0].allow_reviews;
+        this.productDetails.weight = response.data.data[0].weight;
+        this.productDetails.short_description = response.data.data[0].short_description;
+        
+      })
+      .catch((error) => {});
   },
   methods: {
     increment: function () {
@@ -2696,3 +2712,4 @@ export default {
   color: #eee;
 }
 </style>
+

@@ -69,7 +69,7 @@
                             <a href="#">
                               <div class="product-card">
                                 <img
-                                  :src="this.url + item.images[0].photo"
+                                  :src="url + item.images[0].photo"
                                   data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
                                 />
                               </div>
@@ -1469,17 +1469,15 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
-import.meta.env.VITE_API_KEY;
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url:"http://baladiweb.bteamwebs.com/storage/",
     results: [],
     showmodal: "",
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url:"http://baladiweb.bteamwebs.com/storage/",
     showmodalstyle: "",
     showbigmodal: "",
     showbigmodalstyle: "",
@@ -1491,10 +1489,10 @@ export default {
   mounted() {
     var id = this.$route.params.id;
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/header/brandProducts/" + id)
+      .get("http://baladiweb.bteamwebs.com/api/web/header/brandProducts/" + id)
       .then((response) => {
         this.results = response.data.data.data;
-        console.log(this.results);
+        // console.log(this.results);
       })
       .catch((error) => {});
   },
