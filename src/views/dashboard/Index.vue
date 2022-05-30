@@ -15,11 +15,7 @@
                     <p>
                       Hello <strong>{{ userdata.name }}</strong> (not
                       <strong>{{ userdata.name }}</strong
-                      >?
-                      <a
-                        href="#"
-                        >Log out</a
-                      >)
+                      >? <a href="#">Log out</a>)
                     </p>
 
                     <p>

@@ -598,9 +598,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="cart-noticy">
-                    Free Shipping on All Orders Over QAR 75
-                  </div>
+
                   <!-- cart-noticy -->
                 </div>
                 <!-- cart-dropdown-wrapper -->

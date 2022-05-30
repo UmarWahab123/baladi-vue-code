@@ -56,61 +56,101 @@
                   <ul class="sub-menu">
                     <li
                       id="menu-item-2129"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2129"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2129
+                      "
                     >
                       <a href="#">Phone Accessories</a>
                     </li>
                     <li
                       id="menu-item-2130"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2130"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2130
+                      "
                     >
                       <a href="#">Phone Cases</a>
                     </li>
                     <li
                       id="menu-item-2131"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2131"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2131
+                      "
                     >
                       <a href="#">Postpaid Phones</a>
                     </li>
                     <li
                       id="menu-item-2137"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2137"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2137
+                      "
                     >
                       <a href="#">Unlocked Phones</a>
                     </li>
                     <li
                       id="menu-item-2132"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2132"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2132
+                      "
                     >
                       <a href="#">Prepaid Phones</a>
                     </li>
                     <li
                       id="menu-item-2133"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2133"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2133
+                      "
                     >
                       <a href="#">Prepaid Plans</a>
                     </li>
                     <li
                       id="menu-item-2134"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2134"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2134
+                      "
                     >
                       <a href="#">Refurbished Phones</a>
                     </li>
                     <li
                       id="menu-item-2136"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2136"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2136
+                      "
                     >
                       <a href="#">Straight Talk</a>
                     </li>
                     <li
                       id="menu-item-2128"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2128"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2128
+                      "
                     >
                       <a href="#">iPhone</a>
                     </li>
                     <li
                       id="menu-item-2135"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2135"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2135
+                      "
                     >
                       <a href="#">Samsung Galaxy</a>
                     </li>
@@ -118,7 +158,12 @@
                 </li>
                 <li
                   id="menu-item-2122"
-                  class="klbth-icon-laptop menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-2122"
+                  class="
+                    klbth-icon-laptop
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-has-children menu-item-2122
+                  "
                 >
                   <a href="#" class="next-link">Computers &amp; Accessories</a>
                   <ul class="sub-menu">
@@ -128,49 +173,81 @@
 
                     <li
                       id="menu-item-2142"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2142"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2142
+                      "
                     >
                       <a href="#">Computer Components</a>
                     </li>
                     <li
                       id="menu-item-2141"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2141"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2141
+                      "
                     >
                       <a href="#">Computer Accessories</a>
                     </li>
                     <li
                       id="menu-item-2143"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2143"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2143
+                      "
                     >
                       <a href="#">Desktops</a>
                     </li>
                     <li
                       id="menu-item-2144"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2144"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2144
+                      "
                     >
                       <a href="#">Laptops</a>
                     </li>
                     <li
                       id="menu-item-2145"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2145"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2145
+                      "
                     >
                       <a href="#">Monitors</a>
                     </li>
                     <li
                       id="menu-item-2146"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2146"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2146
+                      "
                     >
                       <a href="#">Networking</a>
                     </li>
                     <li
                       id="menu-item-2147"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2147"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2147
+                      "
                     >
                       <a href="#">PC Gaming</a>
                     </li>
                     <li
                       id="menu-item-2148"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2148"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2148
+                      "
                     >
                       <a href="#">Tablets</a>
                     </li>
@@ -180,7 +257,12 @@
                 </li>
                 <li
                   id="menu-item-2125"
-                  class="klbth-icon-screen menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-2125"
+                  class="
+                    klbth-icon-screen
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-has-children menu-item-2125
+                  "
                 >
                   <a href="#" class="next-link">Television &amp; Video</a>
                   <ul class="sub-menu">
@@ -190,49 +272,81 @@
 
                     <li
                       id="menu-item-2149"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2149"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2149
+                      "
                     >
                       <a href="#">HD DVD Players</a>
                     </li>
                     <li
                       id="menu-item-2150"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2150"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2150
+                      "
                     >
                       <a href="#">Projection Screens</a>
                     </li>
                     <li
                       id="menu-item-2151"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2151"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2151
+                      "
                     >
                       <a href="#">Projectors</a>
                     </li>
                     <li
                       id="menu-item-2152"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2152"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2152
+                      "
                     >
                       <a href="#">Television Accessories</a>
                     </li>
                     <li
                       id="menu-item-2153"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2153"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2153
+                      "
                     >
                       <a href="#">Televisions</a>
                     </li>
                     <li
                       id="menu-item-2154"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2154"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2154
+                      "
                     >
                       <a href="#">TV-DVD Combos</a>
                     </li>
                     <li
                       id="menu-item-2155"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2155"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2155
+                      "
                     >
                       <a href="#">VCRs</a>
                     </li>
                     <li
                       id="menu-item-2156"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2156"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2156
+                      "
                     >
                       <a href="#">Video Glasses</a>
                     </li>
@@ -242,7 +356,12 @@
                 </li>
                 <li
                   id="menu-item-2124"
-                  class="klbth-icon-smartwatch menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-2124"
+                  class="
+                    klbth-icon-smartwatch
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-has-children menu-item-2124
+                  "
                 >
                   <a href="#" class="next-link">Smartwatches</a>
                   <ul class="sub-menu">
@@ -252,61 +371,101 @@
 
                     <li
                       id="menu-item-2160"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2160"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2160
+                      "
                     >
                       <a href="#">Casio Watches</a>
                     </li>
                     <li
                       id="menu-item-2161"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2161"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2161
+                      "
                     >
                       <a href="#">Chronograph Watches</a>
                     </li>
                     <li
                       id="menu-item-2162"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2162"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2162
+                      "
                     >
                       <a href="#">Kids Watches</a>
                     </li>
                     <li
                       id="menu-item-2163"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2163"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2163
+                      "
                     >
                       <a href="#">Luxury Watches</a>
                     </li>
                     <li
                       id="menu-item-2164"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2164"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2164
+                      "
                     >
                       <a href="#">Men Watches</a>
                     </li>
                     <li
                       id="menu-item-2165"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2165"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2165
+                      "
                     >
                       <a href="#">Rolex Watches</a>
                     </li>
                     <li
                       id="menu-item-2169"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2169"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2169
+                      "
                     >
                       <a href="#">Women Watches</a>
                     </li>
                     <li
                       id="menu-item-2168"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2168"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2168
+                      "
                     >
                       <a href="#">Watch Brands</a>
                     </li>
                     <li
                       id="menu-item-2167"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2167"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2167
+                      "
                     >
                       <a href="#">Timex Watches</a>
                     </li>
                     <li
                       id="menu-item-2166"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2166"
+                      class="
+                        menu-item menu-item-type-taxonomy
+                        menu-item-object-product_cat
+                        menu-item-2166
+                      "
                     >
                       <a href="#">Sport Watches</a>
                     </li>
@@ -316,43 +475,81 @@
                 </li>
                 <li
                   id="menu-item-2123"
-                  class="klbth-icon-headphones menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2123"
+                  class="
+                    klbth-icon-headphones
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-2123
+                  "
                 >
                   <a href="#">Headphones</a>
                 </li>
                 <li
                   id="menu-item-2120"
-                  class="klbth-icon-camera menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2120"
+                  class="
+                    klbth-icon-camera
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-2120
+                  "
                 >
                   <a href="#">Camera &amp; Photo</a>
                 </li>
                 <li
                   id="menu-item-2126"
-                  class="klbth-icon-play-station menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2126"
+                  class="
+                    klbth-icon-play-station
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-2126
+                  "
                 >
                   <a href="#">Video Games</a>
                 </li>
                 <li
                   id="menu-item-2127"
-                  class="klbth-icon-virtual-reality menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2127"
+                  class="
+                    klbth-icon-virtual-reality
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                    menu-item-2127
+                  "
                 >
                   <a href="#">Sports &amp; Outdoors</a>
                 </li>
                 <li
                   id="menu-item-2138"
-                  class="klbth-icon-data-transfer-up menu-item menu-item-type-custom menu-item-object-custom menu-item-2138"
+                  class="
+                    klbth-icon-data-transfer-up
+                    menu-item
+                    menu-item-type-custom
+                    menu-item-object-custom
+                    menu-item-2138
+                  "
                 >
                   <a href="#">Best Sellers</a>
                 </li>
                 <li
                   id="menu-item-2139"
-                  class="klbth-icon-shopping-bag-arrow-up menu-item menu-item-type-custom menu-item-object-custom menu-item-2139"
+                  class="
+                    klbth-icon-shopping-bag-arrow-up
+                    menu-item
+                    menu-item-type-custom
+                    menu-item-object-custom
+                    menu-item-2139
+                  "
                 >
                   <a href="#">Top 100 Offers</a>
                 </li>
                 <li
                   id="menu-item-2140"
-                  class="klbth-icon-timer menu-item menu-item-type-custom menu-item-object-custom menu-item-2140"
+                  class="
+                    klbth-icon-timer
+                    menu-item
+                    menu-item-type-custom
+                    menu-item-object-custom
+                    menu-item-2140
+                  "
                 >
                   <a href="#">New Arrivals</a>
                 </li>
@@ -361,7 +558,13 @@
             <nav class="site-menu vertical primary">
               <ul id="menu-menu-1" class="menu">
                 <li
-                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children"
+                  class="
+                    menu-item menu-item-type-custom menu-item-object-custom
+                    current-menu-item current_page_item
+                    menu-item-home
+                    current-menu-ancestor current-menu-parent
+                    menu-item-has-children
+                  "
                 >
                   <a href="#" class="next-link">Home</a>
                   <ul class="sub-menu">
@@ -372,27 +575,47 @@
                       <a class="back" href="#">Home</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"
+                      class="
+                        menu-item menu-item-type-custom menu-item-object-custom
+                        current-menu-item current_page_item
+                        menu-item-home
+                      "
                     >
                       <a href="#">Home 1</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
                     >
                       <a href="#">Home 2</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
                     >
                       <a href="#">Home 3</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
                     >
                       <a href="#">Home 4</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page
+                      "
                     >
                       <a href="#">Home 5</a>
                     </li>
@@ -401,7 +624,12 @@
                   <a class="next" href="#"></a>
                 </li>
                 <li
-                  class="mega-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
+                  class="
+                    mega-menu
+                    menu-item
+                    menu-item-type-post_type
+                    menu-item-object-page menu-item-has-children
+                  "
                 >
                   <a href="#" class="next-link">Shop</a>
                   <ul class="sub-menu">
@@ -412,7 +640,11 @@
                       <a class="back" href="#">Shop</a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-page menu-item-has-children
+                      "
                     >
                       <a href="#" class="next-link">Shop Lists</a>
                       <ul class="sub-menu">
@@ -423,39 +655,67 @@
                           <a class="back" href="#">Shop Lists</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">Shop Default</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?opt=right-sidebar">Shop Right Sidebar</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?column=5&amp;opt=wide">Shop Wide</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?column=5&amp;opt=full-width"
                             >Filters Area</a
                           >
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?shop_view=list_view">List Left Sidebar</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?ft=load-more">Load More Button</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#?ft=infinite">Infinite Scrolling</a>
                         </li>
@@ -464,7 +724,11 @@
                       <a class="next" href="#"></a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-post_type menu-item-object-product menu-item-has-children"
+                      class="
+                        menu-item
+                        menu-item-type-post_type
+                        menu-item-object-product menu-item-has-children
+                      "
                     >
                       <a href="#" class="next-link">Product Detail</a>
                       <ul class="sub-menu">
@@ -475,37 +739,65 @@
                           <a class="back" href="#">Product Detail</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-product"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-product
+                          "
                         >
                           <a href="#">Product Default</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-product"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-product
+                          "
                         >
                           <a href="#">Product Variable</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-product"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-product
+                          "
                         >
                           <a href="#">Product Grouped</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-product"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-product
+                          "
                         >
                           <a href="#">Product External</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-product"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-product
+                          "
                         >
                           <a href="#">Product Downloadable</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Zoom Image</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Product With Video</a>
                         </li>
@@ -514,7 +806,12 @@
                       <a class="next" href="#"></a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-has-children
+                      "
                     >
                       <a href="#" class="next-link">Shop Pages</a>
                       <ul class="sub-menu">
@@ -525,37 +822,65 @@
                           <a class="back" href="#">Shop Pages</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">Cart</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">Checkout</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">My account </a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">Wishlist</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page"
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
                         >
                           <a href="#">Order Tracking</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="category.php">Featured Products</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Popup Notice</a>
                         </li>
@@ -564,7 +889,12 @@
                       <a class="next" href="#"></a>
                     </li>
                     <li
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-has-children
+                      "
                     >
                       <a href="#" class="next-link">Shop Layouts</a>
                       <ul class="sub-menu">
@@ -575,37 +905,65 @@
                           <a class="back" href="#">Shop Layouts</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Two Columns</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Three Columns</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Three Columns Wide</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Four Columns</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Four Columns Wide</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Five Columns Wide</a>
                         </li>
                         <li
-                          class="menu-item menu-item-type-custom menu-item-object-custom"
+                          class="
+                            menu-item
+                            menu-item-type-custom
+                            menu-item-object-custom
+                          "
                         >
                           <a href="#">Six Columns Wide</a>
                         </li>
@@ -618,26 +976,40 @@
                   <a class="next" href="#"></a>
                 </li>
                 <li
-                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
+                  class="
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                  "
                 >
                   <a href="#"
                     ><i class="klbth-icon-smartphone"></i> Cell Phones</a
                   >
                 </li>
                 <li
-                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
+                  class="
+                    menu-item menu-item-type-taxonomy
+                    menu-item-object-product_cat
+                  "
                 >
                   <a href="#"
                     ><i class="klbth-icon-headphones"></i> Headphones</a
                   >
                 </li>
                 <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                  class="
+                    menu-item
+                    menu-item-type-post_type
+                    menu-item-object-page
+                  "
                 >
                   <a href="#">Blog</a>
                 </li>
                 <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                  class="
+                    menu-item
+                    menu-item-type-post_type
+                    menu-item-object-page
+                  "
                 >
                   <a href="#">Contact</a>
                 </li>
@@ -647,13 +1019,23 @@
               <ul id="menu-top-right" class="menu">
                 <li
                   id="menu-item-2233"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"
+                  class="
+                    menu-item
+                    menu-item-type-post_type
+                    menu-item-object-page menu-item-2233
+                  "
                 >
                   <router-link to="/order-tracking">Order Tracking</router-link>
                 </li>
                 <li
                   id="menu-item-2176"
-                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2176"
+                  class="
+                    menu-item
+                    menu-item-type-custom
+                    menu-item-object-custom
+                    menu-item-has-children
+                    menu-item-2176
+                  "
                 >
                   <a href="#" class="next-link">English</a>
                   <ul class="sub-menu">
@@ -665,13 +1047,23 @@
                     </li>
                     <li
                       id="menu-item-2177"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2177"
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-2177
+                      "
                     >
                       <a href="#">English</a>
                     </li>
                     <li
                       id="menu-item-2178"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2178"
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-2178
+                      "
                     >
                       <a href="#">Arabic</a>
                     </li>
@@ -779,10 +1171,25 @@
             <div class="cart-dropdown-wrapper">
               <div class="fl-mini-cart-content">
                 <div
-                  class="products column-1 mobile-1 woocommerce-mini-cart cart_list product_list_widget"
+                  class="
+                    products
+                    column-1
+                    mobile-1
+                    woocommerce-mini-cart
+                    cart_list
+                    product_list_widget
+                  "
                 >
                   <div
-                    class="cart-slider swiper-container klb-mini-cart swiper-container-initialized swiper-container-vertical swiper-container-pointer-events slider-loaded"
+                    class="
+                      cart-slider
+                      swiper-container
+                      klb-mini-cart
+                      swiper-container-initialized
+                      swiper-container-vertical
+                      swiper-container-pointer-events
+                      slider-loaded
+                    "
                     data-effect="slide"
                     data-direction="vertical"
                     data-loop="false"
@@ -856,7 +1263,11 @@
                     >
                       <div class="swiper-slide">
                         <div
-                          class="product woocommerce-mini-cart-item mini_cart_item"
+                          class="
+                            product
+                            woocommerce-mini-cart-item
+                            mini_cart_item
+                          "
                         >
                           <div class="product-wrapper">
                             <div class="product-content">
@@ -866,7 +1277,10 @@
                                     width="90"
                                     height="90"
                                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
-                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                    class="
+                                      attachment-woocommerce_thumbnail
+                                      size-woocommerce_thumbnail
+                                    "
                                     alt=""
                                     srcset="
                                       https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg
@@ -888,7 +1302,9 @@
                                     >
                                       <bdi
                                         ><span
-                                          class="woocommerce-Price-currencySymbol"
+                                          class="
+                                            woocommerce-Price-currencySymbol
+                                          "
                                           >QAR </span
                                         >469.99</bdi
                                       >
@@ -916,7 +1332,11 @@
                       <!-- swiper-slide -->
                       <div class="swiper-slide">
                         <div
-                          class="product woocommerce-mini-cart-item mini_cart_item"
+                          class="
+                            product
+                            woocommerce-mini-cart-item
+                            mini_cart_item
+                          "
                         >
                           <div class="product-wrapper">
                             <div class="product-content">
@@ -931,7 +1351,10 @@
                                     srcset="
                                       https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg
                                     "
-                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                    class="
+                                      attachment-woocommerce_thumbnail
+                                      size-woocommerce_thumbnail
+                                    "
                                     alt=""
                                   />
                                 </a>
@@ -953,7 +1376,9 @@
                                     >
                                       <bdi
                                         ><span
-                                          class="woocommerce-Price-currencySymbol"
+                                          class="
+                                            woocommerce-Price-currencySymbol
+                                          "
                                           >QAR </span
                                         >749.00</bdi
                                       >
@@ -1060,7 +1485,7 @@ export default {
     // console.log(this.$route.name);
   },
   methods: {
-    menuchange: function (event) {
+    menuchange: function () {
       if (this.showmenu == "mobilemenu") {
         this.showmenu = "";
       } else {

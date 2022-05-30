@@ -109,7 +109,7 @@
                 <span class="color-box" style="background-color: #000000"></span
                 ><a
                   rel="nofollow"
-                  href="/product-category/apple/?filter_color=black"
+                  href="javascript::void(0)"
                   >Black</a
                 >
                 <span class="count">(1)</span>
@@ -125,7 +125,7 @@
                 <span class="color-box" style="background-color: #ff7900"></span
                 ><a
                   rel="nofollow"
-                  href="/product-category/apple/?filter_color=orange"
+                  href="avascript::void(0)"
                   >Orange</a
                 >
                 <span class="count">(1)</span>
@@ -138,7 +138,7 @@
           <div class="widget-checkbox-list">
             <ul>
               <li>
-                <a href="/product-category/apple/?stock_status=instock">
+                <a href="avascript::void(0)">
                   <input
                     name="stockonsale"
                     value="instock"
@@ -149,7 +149,7 @@
                 </a>
               </li>
               <li>
-                <a href="/product-category/apple/?on_sale=onsale">
+                <a href="avascript::void(0)e">
                   <input
                     name="stockonsale"
                     value="onsale"
@@ -187,7 +187,7 @@
                 <span class="button-box"></span
                 ><a
                   rel="nofollow"
-                  href="/product-category/apple/?filter_brands=apple"
+                  href="avascript::void(0)e"
                   >{{ brand.name }}</a
                 >
                 <span class="count">(12)</span>

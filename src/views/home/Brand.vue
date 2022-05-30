@@ -97,3 +97,9 @@ export default {
   },
 };
 </script>
+
+<style setup>
+.splide__pagination {
+  display: none !important;
+}
+</style>

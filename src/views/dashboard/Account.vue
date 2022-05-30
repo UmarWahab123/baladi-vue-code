@@ -11,11 +11,14 @@
                   <Sidebar />
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
-                    <legend>Basic Info change</legend>
+                    <!-- <legend>Basic Info change</legend> -->
                     <input type="hidden" value="6" v-bind="formdata.id" />
 
                     <p
-                      class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last"
+                      class="
+                        woocommerce-form-row woocommerce-form-row--last
+                        form-row form-row-last
+                      "
                     >
                       <label for="account_last_name"
                         >Name&nbsp;<span class="">*</span></label
@@ -23,7 +26,10 @@
                       <input
                         v-model="formdata.name"
                         type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        class="
+                          woocommerce-Input woocommerce-Input--text
+                          input-text
+                        "
                         id="account_last_name"
                         autocomplete="family-name"
                       />
@@ -37,7 +43,10 @@
                     <div class="clear"></div>
 
                     <p
-                      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                      class="
+                        woocommerce-form-row woocommerce-form-row--wide
+                        form-row form-row-wide
+                      "
                     >
                       <label for="account_display_name"
                         >Display name&nbsp;<span class="required"
@@ -46,7 +55,10 @@
                       >
                       <input
                         type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        class="
+                          woocommerce-Input woocommerce-Input--text
+                          input-text
+                        "
                         id="account_display_name"
                       />
                       <label for="account_display_name"
@@ -55,14 +67,20 @@
                       <input
                         v-model="formdata.phone"
                         type="text"
-                        class="woocommerce-Input woocommerce-Input--text input-text"
+                        class="
+                          woocommerce-Input woocommerce-Input--text
+                          input-text
+                        "
                         id="phone"
                       />
                     </p>
                     <div class="clear"></div>
 
                     <p
-                      class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                      class="
+                        woocommerce-form-row woocommerce-form-row--wide
+                        form-row form-row-wide
+                      "
                     >
                       <label for="account_email"
                         >Email address&nbsp;<span class="required"
@@ -72,7 +90,10 @@
                       <input
                         v-model="formdata.email"
                         type="email"
-                        class="woocommerce-Input woocommerce-Input--email input-text"
+                        class="
+                          woocommerce-Input woocommerce-Input--email
+                          input-text
+                        "
                         id="account_email"
                         autocomplete="email"
                       />
@@ -83,12 +104,15 @@
                       >
                       <input
                         type="text"
-                        class="woocommerce-Input woocommerce-Input--email input-text"
+                        class="
+                          woocommerce-Input woocommerce-Input--email
+                          input-text
+                        "
                         id="account_email"
                         autocomplete=""
                       />
                     </p>
-                    <button
+                    <!-- <button
                       @click="updateprofile()"
                       type="submit"
                       class="woocommerce-Button button"
@@ -96,15 +120,8 @@
                       value="Save changes"
                     >
                       Save changes
-                    </button>
-                    <div class="row">
-                      <p
-                        v-if="errors"
-                        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
-                      >
-                        {{ errors }}
-                      </p>
-                    </div>
+                    </button> -->
+
                     <fieldset>
                       <legend>Password change</legend>
                       <input
@@ -114,7 +131,10 @@
                       />
 
                       <p
-                        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        class="
+                          woocommerce-form-row woocommerce-form-row--wide
+                          form-row form-row-wide
+                        "
                       >
                         <label for="password_current"
                           >Current password (leave blank to leave
@@ -124,7 +144,10 @@
                           ><input
                             v-model="passdata.current_password"
                             type="password"
-                            class="woocommerce-Input woocommerce-Input--password input-text"
+                            class="
+                              woocommerce-Input woocommerce-Input--password
+                              input-text
+                            "
                             id="password_current"
                             autocomplete="off" /><span
                             class="show-password-input"
@@ -132,7 +155,10 @@
                         ></span>
                       </p>
                       <p
-                        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        class="
+                          woocommerce-form-row woocommerce-form-row--wide
+                          form-row form-row-wide
+                        "
                       >
                         <label for="password_1"
                           >New password (leave blank to leave unchanged)</label
@@ -141,7 +167,10 @@
                           ><input
                             v-model="passdata.new_password"
                             type="password"
-                            class="woocommerce-Input woocommerce-Input--password input-text"
+                            class="
+                              woocommerce-Input woocommerce-Input--password
+                              input-text
+                            "
                             id="password_1"
                             autocomplete="off" /><span
                             class="show-password-input"
@@ -149,13 +178,19 @@
                         ></span>
                       </p>
                       <p
-                        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        class="
+                          woocommerce-form-row woocommerce-form-row--wide
+                          form-row form-row-wide
+                        "
                       >
                         <label for="password_2">Confirm new password</label>
                         <span class="password-input"
                           ><input
                             type="password"
-                            class="woocommerce-Input woocommerce-Input--password input-text"
+                            class="
+                              woocommerce-Input woocommerce-Input--password
+                              input-text
+                            "
                             name="password_2"
                             id="password_2"
                             autocomplete="off" /><span
@@ -215,11 +250,9 @@ import Footer from "../layout/Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
-import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
+
 export default {
-  components: { TheLoader },
   data() {
     return {
       isloading: true,
@@ -253,31 +286,6 @@ export default {
     } else {
       this.$router.push("myaccount");
     }
-    // userInfo.token = "5|H9ur6GcusWdc2U0P7KQoYi3HXZjB5xpZtIDcfBzs";
-    //userprofile data
-    // axios
-    //   .get("http://baladiweb.bteamwebs.com/api/auth/getProfile", {
-    //     headers: {
-    //       Authorization: `${userInfo.token}`,
-    //     },
-    //   })
-    //   .then((res) => {
-    //     console.log(res.data);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
-
-    // axios
-    //   .get(import.meta.env.VITE_API_URL + "/api/auth/getProfile")
-    //   .then((response) => {
-    //     // console.log(response);
-    //     this.formdata = response.data.data;
-    //     // console.log(this.formdata);
-    //   })
-    //   .catch((error) => {});
-
-    // setTimeout(() => (this.isloading = false), 1000);
   },
   methods: {
     updateprofile() {
@@ -288,10 +296,44 @@ export default {
         )
         .then((response) => {
           // console.log(response);
-          if (response.data.status == 400) {
-            this.errors = response.data.message;
+          if (response.data.status == 400 || response.data.status === 401) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           }
         });
     },
@@ -303,10 +345,44 @@ export default {
         )
         .then((response) => {
           // console.log(response);
-          if (response.data.status == 400) {
-            this.errors = response.data.message;
+          if (response.data.status == 400 || response.data.statu === 401) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           }
         });
     },

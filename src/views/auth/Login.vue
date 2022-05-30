@@ -2,11 +2,21 @@
   <div class="u-column1 col-md-6">
     <h2>Login</h2>
     <div
-      class="woocommerce-form woocommerce-form-login login border shadow p-3 h-90"
+      class="
+        woocommerce-form woocommerce-form-login
+        login
+        border
+        shadow
+        p-3
+        h-90
+      "
       method="post"
     >
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="username"
           >Username or email address&nbsp;<span class="required">*</span></label
@@ -23,7 +33,10 @@
         {{ v$.formdata.email.required.$message }}
       </div>
       <p
-        class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+        class="
+          woocommerce-form-row woocommerce-form-row--wide
+          form-row form-row-wide
+        "
       >
         <label for="password"
           >Password&nbsp;<span class="required">*</span></label
@@ -61,7 +74,10 @@
       </div>
       <div class="d-flex justify-content-between">
         <label
-          class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme"
+          class="
+            woocommerce-form__label woocommerce-form__label-for-checkbox
+            woocommerce-form-login__rememberme
+          "
         >
           <input
             class="woocommerce-form__input woocommerce-form__input-checkbox"

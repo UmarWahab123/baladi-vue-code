@@ -3,7 +3,7 @@
     <!-- floating social media -->
     <!-- floating social media -->
     <div class="box">
-      <div class="con-icon">
+      <div class="con-icon" style="z-index: 20 !important">
         <div class="icon facebook">
           <div class="tooltip">Facebook</div>
           <span

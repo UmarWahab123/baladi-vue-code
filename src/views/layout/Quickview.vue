@@ -9,7 +9,14 @@
               <div class="images-wrapper">
                 <div
                   id="product-images"
-                  class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-autoheight slider-loaded"
+                  class="
+                    swiper-container
+                    swiper-container-initialized
+                    swiper-container-horizontal
+                    swiper-container-pointer-events
+                    swiper-container-autoheight
+                    slider-loaded
+                  "
                   data-effect="slide"
                   data-direction="horizontal"
                   data-loop="false"
@@ -132,7 +139,15 @@
               <div class="thumbnails-wrapper">
                 <div
                   id="product-thumbnails"
-                  class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-thumbs slider-loaded"
+                  class="
+                    swiper-container
+                    swiper-container-initialized
+                    swiper-container-horizontal
+                    swiper-container-pointer-events
+                    swiper-container-free-mode
+                    swiper-container-thumbs
+                    slider-loaded
+                  "
                   data-effect="slide"
                   data-direction="horizontal"
                   data-loop="false"
@@ -151,7 +166,12 @@
                     style="transform: translate3d(0px, 0px, 0px)"
                   >
                     <div
-                      class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active"
+                      class="
+                        swiper-slide
+                        swiper-slide-visible
+                        swiper-slide-active
+                        swiper-slide-thumb-active
+                      "
                       role="group"
                       aria-label="1 / 5"
                       style="width: 85.8px; margin-right: 7px"
@@ -162,7 +182,9 @@
                     </div>
                     <!-- swiper-slide -->
                     <div
-                      class="swiper-slide swiper-slide-visible swiper-slide-next"
+                      class="
+                        swiper-slide swiper-slide-visible swiper-slide-next
+                      "
                       role="group"
                       aria-label="2 / 5"
                       style="width: 85.8px; margin-right: 7px"
@@ -335,12 +357,23 @@
                   type="submit"
                   name="add-to-cart"
                   value="521"
-                  class="button button-primary add_to_cart_button single_add_to_cart_button button alt"
+                  class="
+                    button button-primary
+                    add_to_cart_button
+                    single_add_to_cart_button
+                    button
+                    alt
+                  "
                 >
                   <span>Add to cart</span>
                 </button>
                 <div
-                  class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart"
+                  class="
+                    tinv-wraper
+                    woocommerce
+                    tinv-wishlist
+                    tinvwl-after-add-to-cart
+                  "
                   data-product_id="521"
                 >
                   <div class="tinv-wishlist-clear"></div>
@@ -348,7 +381,11 @@
                     role="button"
                     tabindex="0"
                     aria-label="Add to Wishlist"
-                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                    class="
+                      tinvwl_add_to_wishlist_button
+                      tinvwl-icon-heart
+                      tinvwl-position-after
+                    "
                     data-tinv-wl-list="[]"
                     data-tinv-wl-product="521"
                     data-tinv-wl-productvariation="0"
@@ -365,7 +402,12 @@
               </form>
               <div class="product-actions">
                 <div
-                  class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
+                  class="
+                    tinv-wraper
+                    woocommerce
+                    tinv-wishlist
+                    tinvwl-shortcode-add-to-cart
+                  "
                   data-product_id="521"
                 >
                   <div class="tinv-wishlist-clear"></div>
@@ -373,7 +415,11 @@
                     role="button"
                     tabindex="0"
                     aria-label="Add to Wishlist"
-                    class="tinvwl_add_to_wishlist_button tinvwl-icon-heart tinvwl-position-after"
+                    class="
+                      tinvwl_add_to_wishlist_button
+                      tinvwl-icon-heart
+                      tinvwl-position-after
+                    "
                     data-tinv-wl-list="[]"
                     data-tinv-wl-product="521"
                     data-tinv-wl-productvariation="0"
