@@ -14,7 +14,9 @@
                     menu-item-object-page menu-item-2231
                   "
                 >
-                  <router-link class="nav-link" to="/aboutus"
+                  <router-link
+                    class="nav-link"
+                    :to="'/' + langCode + '/aboutus'"
                     >About Us
                   </router-link>
                 </li>
@@ -27,7 +29,9 @@
                     menu-item-2199
                   "
                 >
-                  <router-link to="/category">Featured Products </router-link>
+                  <router-link :to="'/' + langCode + '/category'"
+                    >Featured Products
+                  </router-link>
                 </li>
                 <li
                   id="menu-item-2229"
@@ -37,7 +41,9 @@
                     menu-item-object-page menu-item-2229
                   "
                 >
-                  <router-link to="/helpcenter">Help </router-link>
+                  <router-link :to="'/' + langCode + '/helpcenter'"
+                    >Help
+                  </router-link>
                 </li>
 
                 <li
@@ -48,7 +54,7 @@
                     menu-item-object-page menu-item-2230
                   "
                 >
-                  <router-link to="/replacement"
+                  <router-link :to="'/' + langCode + '/replacement'"
                     >Returns &amp; Replacements</router-link
                   >
                 </li>
@@ -80,7 +86,7 @@
                     menu-item-object-page menu-item-2233
                   "
                 >
-                  <router-link to="/order-tracking"
+                  <router-link :to="'/' + langCode + '/order-tracking'"
                     >Order Tracking
                   </router-link>
                 </li>
@@ -95,15 +101,16 @@
                   "
                 >
                   <span>
-                    <div class="switch">
+                    <div class="switch" @change="changeLang($event)">
                       <input
                         id="language-toggle"
                         class="check-toggle check-toggle-round-flat"
                         type="checkbox"
+                        v-model="isChecked"
                       />
                       <label for="language-toggle"></label>
-                      <span class="on">EN</span>
-                      <span class="off">AR</span>
+                      <span class="on" data-value="en">EN</span>
+                      <span class="off" data-value="en">AR</span>
                     </div>
                   </span>
                 </li>
@@ -124,7 +131,7 @@
           <div class="column align-center left">
             <div class="site-brand">
               <router-link
-                to="/"
+                :to="'/' + langCode"
                 title="Machic – Electronics Store eCommerce Theme"
               >
                 <img
@@ -193,13 +200,17 @@
               <router-link
                 v-if="userdata.name"
                 class="primary-text"
-                to="/userdashboard"
+                :to="'/' + langCode + '/userdashboard'"
               >
                 <div class="header-addons-icon">
                   <i class="klbth-icon-user-1"></i>
                 </div>
               </router-link>
-              <router-link v-else class="primary-text" to="/myaccount">
+              <router-link
+                v-else
+                class="primary-text"
+                :to="'/' + langCode + '/myaccount'"
+              >
                 <div class="header-addons-icon">
                   <i class="klbth-icon-user-1"></i>
                 </div>
@@ -209,7 +220,7 @@
                 <router-link
                   v-if="userdata.name"
                   class="primary-text"
-                  to="/userdashboard"
+                  :to="'/' + langCode + '/userdashboard'"
                 >
                   <div v-if="userdata.name" class="sub-text">
                     {{ userdata.name }}
@@ -220,19 +231,23 @@
                 <router-link
                   v-if="userdata.name"
                   class="primary-text"
-                  to="/userdashboard"
+                  :to="'/' + langCode + '/userdashboard'"
                 >
                   Account
                 </router-link>
-                <router-link v-else class="primary-text" to="/myaccount"
-                  >Account
+                <router-link
+                  v-else
+                  class="primary-text"
+                  :to="'/' + langCode + '/myaccount'"
+                >
+                  Account
                 </router-link>
               </div>
               <!-- header-addons-text -->
             </div>
             <!-- header-addons -->
             <div class="header-addons cart-button">
-              <a href="#cart/">
+              <router-link :to="'/' + langCode + '/cart'">
                 <div class="header-addons-icon">
                   <i class="far fa-bell"></i>
                   <div class="button-count cart-count">2</div>
@@ -240,8 +255,8 @@
                 <!-- header-addons-icon -->
 
                 <!-- header-addons-text -->
-              </a>
-              <div class="cart-dropdown hide ">
+              </router-link>
+              <div class="cart-dropdown hide">
                 <div class="cart-dropdown-wrapper">
                   <div class="fl-mini-cart-content">
                     <div
@@ -251,9 +266,8 @@
                         mobile-1
                         woocommerce-mini-cart
                         cart_list
-                        product_list_widget   
+                        product_list_widget
                       "
-                      
                     >
                       <div
                         class="
@@ -264,7 +278,6 @@
                           swiper-container-vertical
                           swiper-container-pointer-events
                           slider-loaded
-                         
                         "
                         data-effect="slide"
                         data-direction="vertical"
@@ -610,7 +623,7 @@
 
             <div class="header-addons wishlist-button">
               <div class="header-addons-icon">
-                <router-link to="/wishlist"
+                <router-link :to="'/' + langCode + '/wishlist'"
                   ><i class="klbth-icon-heart"></i
                 ></router-link>
                 <div class="button-count">
@@ -879,13 +892,15 @@
                       </span>
                     </p>
                     <p class="woocommerce-mini-cart__buttons buttons">
-                      <router-link class="button wc-forward" to="/cart"
+                      <router-link
+                        class="button wc-forward"
+                        :to="'/' + langCode + '/cart'"
                         >View cart
                       </router-link>
 
                       <router-link
                         class="button checkout wc-forward"
-                        to="/checkout"
+                        :to="'/' + langCode + '/checkout'"
                       >
                         Checkout
                       </router-link>
@@ -2136,7 +2151,7 @@
                     menu-item-has-children
                   "
                 >
-                  <router-link to="/all_categories"
+                  <router-link :to="'/' + langCode + '/all_categories'"
                     >Top Categories
                   </router-link>
 
@@ -2187,7 +2202,9 @@
                     menu-item-object-page menu-item-has-children
                   "
                 >
-                  <router-link to="/brands">Top Brands </router-link>
+                  <router-link :to="'/' + langCode + '/brands' "
+                    >Top Brands
+                  </router-link>
                   <ul class="sub-menu">
                     <li
                       class="
@@ -2479,7 +2496,7 @@
                     menu-item-object-product_cat
                   "
                 >
-                  <router-link to="category"
+                  <router-link :to="'/' + langCode + '/category' "
                     ><i class="klbth-icon-home"></i> Home And
                     Living</router-link
                   >
@@ -2492,7 +2509,7 @@
                     menu-item-object-page
                   "
                 >
-                  <router-link to="/blog">Blogs </router-link>
+                  <router-link :to="'/' + langCode + '/blog' ">Blogs </router-link>
                 </li>
                 <li
                   class="
@@ -2501,7 +2518,9 @@
                     menu-item-object-page
                   "
                 >
-                  <router-link to="/contact-us">Contact </router-link>
+                  <router-link :to="'/' + langCode + '/contact-us' "
+                    >Contact
+                  </router-link>
                 </li>
               </ul>
             </nav>
@@ -2630,8 +2649,9 @@ export default {
     showmenu: "",
     results: [],
     overflow: "",
-    notificationheight:0,
-    
+    notificationheight: 0,
+    isChecked: false,
+    langCode: "en",
   }),
   mounted() {
     if (localStorage.userInfo != null) {
@@ -2641,7 +2661,18 @@ export default {
     if (this.$route.name == "Home") {
       this.showmenu = "show";
     }
-    
+    var lang = localStorage.getItem("lang");
+    // console.log(lang);
+    if (lang == null) {
+      localStorage.setItem("lang", "en");
+      this.isChecked = false;
+    }
+    if (lang == "en") {
+      this.isChecked = false;
+    } else if (lang == "ar") {
+      this.isChecked = true;
+    }
+    this.langCode = lang;
   },
   methods: {
     menuchange: function (event) {
@@ -2655,36 +2686,50 @@ export default {
       this.$router.push("category");
     },
     down: function () {
-      var height= document.querySelector('.sidebar-sticky').scrollHeight;
+      var height = document.querySelector(".sidebar-sticky").scrollHeight;
       var upheight = 0;
-     if(this.notificationheight > upheight){
-      this.notificationheight -=20;
-     document.querySelector('.sidebar-sticky').scrollTop =this.notificationheight;
+      if (this.notificationheight > upheight) {
+        this.notificationheight -= 20;
+        document.querySelector(".sidebar-sticky").scrollTop =
+          this.notificationheight;
       }
     },
     up: function () {
-      var height= document.querySelector('.sidebar-sticky').scrollHeight;
-     if(height >  this.notificationheight){
-      this.notificationheight +=20;
-      document.querySelector('.sidebar-sticky').scrollTop = this.notificationheight;
-     }
-
+      var height = document.querySelector(".sidebar-sticky").scrollHeight;
+      if (height > this.notificationheight) {
+        this.notificationheight += 20;
+        document.querySelector(".sidebar-sticky").scrollTop =
+          this.notificationheight;
+      }
     },
-     clickscrolldown: function () {
-      var height= document.querySelector('.cart-scroll').scrollHeight;
+    clickscrolldown: function () {
+      var height = document.querySelector(".cart-scroll").scrollHeight;
       var upheight = 0;
-     if(this.notificationheight > upheight){
-      this.notificationheight -=20;
-     document.querySelector('.cart-scroll').scrollTop =this.notificationheight;
+      if (this.notificationheight > upheight) {
+        this.notificationheight -= 20;
+        document.querySelector(".cart-scroll").scrollTop =
+          this.notificationheight;
       }
     },
     clickscrollup: function () {
-      var height= document.querySelector('.cart-scroll').scrollHeight;
-     if(height >  this.notificationheight){
-      this.notificationheight +=20;
-      document.querySelector('.cart-scroll').scrollTop = this.notificationheight;
-     }
+      var height = document.querySelector(".cart-scroll").scrollHeight;
+      if (height > this.notificationheight) {
+        this.notificationheight += 20;
+        document.querySelector(".cart-scroll").scrollTop =
+          this.notificationheight;
+      }
+    },
+    changeLang: function (event) {
+      if (event.target.checked) {
+        this.isChecked = true;
+        localStorage.setItem("lang", "ar");
 
+        window.location.reload();
+      } else {
+        this.isChecked = false;
+        localStorage.setItem("lang", "en");
+        window.location.reload();
+      }
     },
   },
 };

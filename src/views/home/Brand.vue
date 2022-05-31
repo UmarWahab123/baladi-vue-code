@@ -53,10 +53,7 @@
                       <div class="brand-item">
                         <router-link
                           class=""
-                          :to="{
-                            name: 'brandsProduct',
-                            params: { id: brand.id },
-                          }"
+                          :to="'/' + langCode + '/brandsProduct/' + brand.id"
                           ><img
                             class="logo-client"
                             :src="url + brand.photo"
@@ -86,6 +83,7 @@ export default {
   data: () => ({
     url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
+    langCode: "en",
   }),
   mounted() {
     axios
@@ -94,6 +92,9 @@ export default {
         this.results = response.data.data;
       })
       .catch((error) => {});
+
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 };
 </script>

@@ -72,10 +72,9 @@
                                 <span class="badge onsale">11%</span>
                               </div>
                               <router-link
-                                :to="{
-                                  name: 'product-detail',
-                                  params: { id: item.id },
-                                }"
+                                :to="
+                                  '/' + langCode + '/product-detail/' + item.id
+                                "
                               >
                                 <div
                                   class="product-card"
@@ -668,7 +667,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -748,7 +747,7 @@
                               transform: translate3d(0px, 0px, 0px);
                             "
                           >
-                           <div
+                            <div
                               class="card-carousel"
                               @mouseover="stopTimer"
                               @mouseleave="restartTimer"
@@ -815,7 +814,7 @@
                             aria-live="polite"
                             style="transform: translate3d(0px, 0px, 0px)"
                           >
-                           <div class="thumbnails">
+                            <div class="thumbnails">
                               <div
                                 v-for="(image, index) in images"
                                 :key="image.id"
@@ -1916,6 +1915,7 @@ export default {
           length: 1,
         },
       },
+      langCode: "en",
     };
   },
   computed: {
@@ -1941,6 +1941,9 @@ export default {
         // console.log(this.results);
       })
       .catch((error) => {});
+
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     clickmodal(index) {

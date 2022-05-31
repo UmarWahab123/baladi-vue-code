@@ -146,7 +146,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -189,6 +189,7 @@ export default {
     showpaypal: "",
     showvisa: "",
     isloading: true,
+    langCode: "en",
   }),
   mounted() {
     if (localStorage.userInfo != null) {
@@ -198,6 +199,8 @@ export default {
     this.visa = "active";
     this.showvisa = "active show";
     setTimeout(() => (this.isloading = false), 1000);
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     Modal: function () {

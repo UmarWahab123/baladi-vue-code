@@ -12,7 +12,9 @@
                   menu-item-object-page menu-item-2233
                 "
               >
-                <router-link to="/order-tracking">Order Tracking</router-link>
+                <router-link :to="'/' + langCode + '/order-tracking'"
+                  >Order Tracking</router-link
+                >
               </li>
               <li
                 class="

@@ -1,241 +1,251 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/home/Index.vue";
-
+var url = window.location.href;
+var params = url.split("/")[3];
+var main_url = document.location.href;
+let text = document.location.pathname.split("/");
+var langCode = localStorage.getItem("lang");
+var url = main_url.replace(text[1], langCode);
+if (langCode !== params) {
+  location.href = url;
+}
+// var params = url.split("/")[3];
+// var params = localStorage.getItem("lang");
 const routes = [
   {
     name: "Home",
-    path: "/",
+    path: "/" + langCode,
     component: Home,
   },
   {
     name: "category",
-    path: "/category",
+    path: "/" + langCode + "/category",
     component: () => import("@/views/category/Index.vue"),
   },
   {
     name: "cart",
-    path: "/cart",
+    path: "/" + langCode + "/cart",
     component: () => import("@/views/carts/Index.vue"),
   },
   {
     name: "wishlist",
-    path: "/wishlist",
+    path: "/" + langCode + "/wishlist",
     component: () => import("@/views/wishlist/Index.vue"),
   },
   {
     name: "checkout",
-    path: "/checkout",
+    path: "/" + langCode + "/checkout",
     component: () => import("@/views/checkout/Index.vue"),
   },
   {
     name: "order-confirmation",
-    path: "/order-confirmation",
+    path: "/" + langCode + "/order-confirmation",
     component: () => import("@/views/checkout/Orderconfirmation.vue"),
   },
   {
     name: "order-tracking",
-    path: "/order-tracking",
+    path: "/" + langCode + "/order-tracking",
     component: () => import("@/views/tracking/Index.vue"),
   },
   {
     name: "aboutus",
-    path: "/aboutus",
+    path: "/" + langCode + "/aboutus",
     component: () => import("@/views/aboutus/Index.vue"),
   },
   {
     name: "contact-us",
-    path: "/contact-us",
+    path: "/" + langCode + "/contact-us",
     component: () => import("@/views/contactus/Index.vue"),
   },
   {
     name: "privacy-policy",
-    path: "/privacy-policy",
+    path: "/" + langCode + "/privacy-policy",
     component: () => import("@/views/privacy/Index.vue"),
   },
   {
     name: "refund-returns",
-    path: "/refund-returns",
+    path: "/" + langCode + "/refund-returns",
     component: () => import("@/views/refund/Index.vue"),
   },
   {
     name: "privacy-policy",
-    path: "/privacy-policy",
+    path: "/" + langCode + "/privacy-policy",
     component: () => import("@/views/privacy/Index.vue"),
   },
   {
     name: "myaccount",
-    path: "/myaccount",
+    path: "/" + langCode + "/myaccount",
     component: () => import("@/views/auth/Index.vue"),
   },
   {
     name: "forgot-password",
-    path: "/forgot-password",
+    path: "/" + langCode + "/forgot-password",
     component: () => import("@/views/auth/Forgotpassword.vue"),
   },
   {
     name: "verifycode",
-    path: "/verifycode",
+    path: "/" + langCode + "/verifycode",
     component: () => import("@/views/auth/Verifycode.vue"),
   },
   {
     name: "updatepassword",
-    path: "/updatepassword",
+    path: "/" + langCode + "/updatepassword",
     component: () => import("@/views/auth/Updatepassword.vue"),
   },
   {
     name: "faq",
-    path: "/faq",
+    path: "/" + langCode + "/faq",
     component: () => import("@/views/faq/Index.vue"),
   },
   {
     name: "userdashboard",
-    path: "/userdashboard",
+    path: "/" + langCode + "/userdashboard",
     component: () => import("@/views/dashboard/Index.vue"),
   },
   {
     name: "edit-address",
-    path: "/edit-address",
+    path: "/" + langCode + "/edit-address",
     component: () => import("@/views/dashboard/Address.vue"),
   },
   {
     name: "shipping",
-    path: "/shipping",
+    path: "/" + langCode + "/shipping",
     component: () => import("@/views/dashboard/Shipping.vue"),
   },
 
   {
     name: "orders",
-    path: "/orders",
+    path: "/" + langCode + "/orders",
     component: () => import("@/views/dashboard/Orders.vue"),
   },
   {
     name: "order-detail",
-    path: "/order-detail",
+    path: "/" + langCode + "/order-detail",
     component: () => import("@/views/dashboard/OrderDetail.vue"),
   },
   {
     name: "product-detail",
-    path: "/product-detail/:id?",
+    path: "/" + langCode + "/product-detail/:id?",
     component: () => import("@/views/category/Productdetail.vue"),
   },
   {
     name: "account",
-    path: "/account",
+    path: "/" + langCode + "/account/",
     component: () => import("@/views/dashboard/Account.vue"),
   },
   {
     name: "my-wallet",
-    path: "/my-wallet",
+    path: "/" + langCode + "/my-wallet",
     component: () => import("@/views/dashboard/Wallet.vue"),
   },
   {
     name: "voucher",
-    path: "/voucher",
+    path: "/" + langCode + "/voucher",
     component: () => import("@/views/dashboard/Voucher.vue"),
   },
   {
     name: "reward-points",
-    path: "/reward-points",
+    path: "/" + langCode + "/reward-points/",
     component: () => import("@/views/dashboard/Rewardpoints.vue"),
   },
   {
     name: "About",
-    path: "/about",
+    path: "/" + langCode + "/about",
     component: () => import("@/views/About.vue"),
   },
   {
     name: "Blank",
-    path: "/blank",
+    path: "/" + langCode + "/blank",
     component: () => import("@/views/Blank.vue"),
   },
   {
     name: "Blog",
-    path: "/blog",
+    path: "/" + langCode + "/blog",
     component: () => import("@/views/blog/index.vue"),
   },
   {
     name: "blog-detail",
-    path: "/blog-detail/:id?",
+    path: "/" + langCode + "/blog-detail/:id?",
     component: () => import("@/views/blog/blog-detail.vue"),
   },
   {
     name: "terms",
-    path: "/terms",
+    path: "/" + langCode + "/terms",
     component: () => import("@/views/Terms.vue"),
   },
   {
     name: "helpcenter",
-    path: "/helpcenter",
+    path: "/" + langCode + "/helpcenter",
     component: () => import("@/views/helpcenter/index.vue"),
   },
   {
     name: "replacement",
-    path: "/replacement",
+    path: "/" + langCode + "/replacement",
     component: () => import("@/views/helpcenter/replacement.vue"),
   },
   {
     name: "privacypolicy",
-    path: "/privacypolicy",
+    path: "/" + langCode + "/privacypolicy",
     component: () => import("@/views/helpcenter/privacypolicy.vue"),
   },
   {
     name: "shoppingrates",
-    path: "/shoppingrates",
+    path: "/" + langCode + "/shoppingrates",
     component: () => import("@/views/helpcenter/shoppingrates.vue"),
   },
   {
     name: "termscondition",
-    path: "/termscondition",
+    path: "/" + langCode + "/termscondition",
     component: () => import("@/views/helpcenter/terms.vue"),
   },
   {
     name: "covidhelp",
-    path: "/covidhelp",
+    path: "/" + langCode + "/covidhelp",
     component: () => import("@/views/helpcenter/covid.vue"),
   },
   {
     name: "refund",
-    path: "/refund",
+    path: "/" + langCode + "/refund",
     component: () => import("@/views/helpcenter/refund.vue"),
   },
   {
     name: "covid-19",
-    path: "/covid-19",
+    path: "/" + langCode + "/covid-19",
     component: () => import("@/views/covid/index.vue"),
   },
   {
     name: "review",
-    path: "/review",
+    path: "/" + langCode + "/review",
     component: () => import("@/views/review/index.vue"),
   },
   {
     name: "all_categories",
-    path: "/all_categories",
+    path: "/" + langCode + "/all_categories",
     component: () => import("@/views/category/all_categories.vue"),
   },
   {
     name: "brands",
-    path: "/brands",
+    path: "/" + langCode + "/brands",
     component: () => import("@/views/category/brands.vue"),
   },
   {
     name: "brandsProduct",
-    path: "/brandsproduct/:id?",
+    path: "/" + langCode + "/brandsproduct/ :id?",
     component: () => import("@/views/category/brandsProduct.vue"),
   },
   {
     name: "careers",
-    path: "/careers",
+    path: "/" + langCode + "/careers",
     component: () => import("@/views/careers/index.vue"),
   },
   {
     name: "thankyou",
-    path: "/thankyou",
+    path: "/" + langCode + "/thankyou",
     component: () => import("@/views/thankyou/thankyou.vue"),
   },
   {
     name: "order-track2",
-    path: "/order-track2",
+    path: "/" + langCode + "/order-track2",
     component: () => import("@/views/tracking/order-track2.vue"),
   },
 ];

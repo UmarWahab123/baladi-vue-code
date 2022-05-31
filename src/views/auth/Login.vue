@@ -89,7 +89,9 @@
           <span>Remember me</span>
         </label>
         <p class="woocommerce-LostPassword lost_password">
-          <router-link to="/forgot-password">Lost your password?</router-link>
+          <router-link :to="'/' + langCode + '/forgot-password'"
+            >Lost your password?</router-link
+          >
         </p>
       </div>
       <button
@@ -113,7 +115,7 @@
           value="/machic/my-account/?d=rtl"
         />
         <router-link
-          to="/"
+          :to="'/' + langCode"
           class="woocommerce-button button2 woocommerce-form-login__submit"
           name="login"
           value="Log in"
@@ -181,6 +183,7 @@ export default {
         responseData: "null",
       },
       errors: "",
+      langCode: "en",
     };
   },
   validations() {
@@ -195,7 +198,10 @@ export default {
       },
     };
   },
-  mounted() {},
+  mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+  },
   methods: {
     async submitdata() {
       const result = await this.v$.$validate();
@@ -216,9 +222,10 @@ export default {
             userInfo.token = response.data.data.token;
             localStorage.setItem("userInfo", JSON.stringify(userInfo));
             var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            var lang = localStorage.getItem("lang");
 
-            console.log(userInfo);
-            this.$router.push("/userdashboard");
+            // console.log(userInfo);
+            this.$router.push("/" + lang + "/userdashboard");
           } else {
             this.errors = response.data.message;
           }

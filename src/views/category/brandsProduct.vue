@@ -245,7 +245,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -1474,15 +1474,17 @@ import Footer from "../layout/Footer.vue";
 import axios from "axios";
 export default {
   data: () => ({
-    url:"http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
     showmodal: "",
-    url:"http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladiweb.bteamwebs.com/storage/",
     showmodalstyle: "",
     showbigmodal: "",
     showbigmodalstyle: "",
     showcomparemodal: "",
     showcomparemodalstyle: "",
+    langCode: "en",
+
 
     errors: "",
   }),
@@ -1495,6 +1497,8 @@ export default {
         // console.log(this.results);
       })
       .catch((error) => {});
+      var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     clickmodal(index) {

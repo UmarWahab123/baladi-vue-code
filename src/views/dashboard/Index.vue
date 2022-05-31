@@ -21,12 +21,13 @@
                     <p>
                       From your account dashboard you can view your
 
-                      <router-link to="/orders">recent orders</router-link>,
-                      manage your
-                      <router-link to="/edit-address"
+                      <router-link :to="'/' + langCode + '/orders'"
+                        >recent orders</router-link
+                      >, manage your
+                      <router-link :to="'/' + langCode + '/edit-address'"
                         >shipping and billing addresses</router-link
                       >, and
-                      <router-link to="/account"
+                      <router-link :to="'/' + langCode + '/account'"
                         >edit your password and account details</router-link
                       >.
                     </p>
@@ -63,6 +64,7 @@ export default {
     return {
       userdata: { name: "" },
       isloading: true,
+      langCode: "en",
     };
   },
   mounted() {
@@ -74,6 +76,8 @@ export default {
       this.$router.push("myaccount");
     }
     setTimeout(() => (this.isloading = false), 1000);
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 };
 </script>

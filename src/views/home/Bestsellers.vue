@@ -80,10 +80,9 @@
                             </div>
 
                             <router-link
-                              :to="{
-                                name: 'product-detail',
-                                params: { id: item.id },
-                              }"
+                              :to="
+                                '/' + langCode + '/product-detail/' + item.id
+                              "
                             >
                               <div class="product-card">
                                 <div id="slidingWindow" ontouchstart="">
@@ -308,7 +307,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -1541,6 +1540,7 @@ export default {
     timerInterval: null,
     //Every 10ms decrease the timeLeft
     countdownInterval: 10,
+    langCode: "en",
     images: {
       0: {
         thumb:
@@ -1581,6 +1581,9 @@ export default {
         // console.log(this.results);
       })
       .catch((error) => {});
+
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     clickmodal(index) {

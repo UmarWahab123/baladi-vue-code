@@ -188,7 +188,7 @@
                       menu-item-object-page menu-item-2525
                     "
                   >
-                    <router-link to="/replacement"
+                    <router-link :to="'/' + langCode + '/replacement'"
                       >Returns &amp; Replacements</router-link
                     >
                   </li>
@@ -200,7 +200,7 @@
                       menu-item-object-page menu-item-2221
                     "
                   >
-                    <router-link to="/shoppingrates"
+                    <router-link :to="'/' + langCode + '/shoppingrates'"
                       >Shipping Rates &amp; Policies</router-link
                     >
                   </li>
@@ -212,7 +212,7 @@
                       menu-item-object-page menu-item-2524
                     "
                   >
-                    <router-link to="/refund"
+                    <router-link :to="'/' + langCode + '/refund'"
                       >Refund and Returns Policy</router-link
                     >
                   </li>
@@ -226,7 +226,7 @@
                       menu-item-2223
                     "
                   >
-                    <router-link to="/privacy-policy"
+                    <router-link :to="'/' + langCode + '/privacy-policy'"
                       >Privacy Policy
                     </router-link>
                   </li>
@@ -238,8 +238,10 @@
                       menu-item-object-page menu-item-2523
                     "
                   >
-                    <a href="/termscondition"></a>
-                    <router-link to="/terms">Terms and Conditions </router-link>
+                    <!-- <a href="/termscondition"></a> -->
+                    <router-link :to="'/' + langCode + '/terms'"
+                      >Terms and Conditions
+                    </router-link>
                   </li>
                   <li
                     id="menu-item-2185"
@@ -250,7 +252,9 @@
                       menu-item-2185
                     "
                   >
-                    <router-link to="/helpcenter">Help Center</router-link>
+                    <router-link :to="'/' + langCode + '/helpcenter'"
+                      >Help Center</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2182"
@@ -260,7 +264,9 @@
                       menu-item-object-custom menu-item-2182
                     "
                   >
-                    <router-link to="/covid-19">Covid-19</router-link>
+                    <router-link :to="'/' + langCode + '/covid-19'"
+                      >Covid-19</router-link
+                    >
                   </li>
                 </ul>
               </div>
@@ -291,7 +297,9 @@
                       menu-item-object-page menu-item-2508
                     "
                   >
-                    <router-link to="/aboutus">About Us</router-link>
+                    <router-link :to="'/' + langCode + '/aboutus'"
+                      >About Us</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2190"
@@ -302,7 +310,9 @@
                       menu-item-2190
                     "
                   >
-                    <router-link to="/review">Customer-review</router-link>
+                    <router-link :to="'/' + langCode + '/review'"
+                      >Customer-review</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2513"
@@ -314,7 +324,7 @@
                       menu-item-2513
                     "
                   >
-                    <router-link to="/privacy-policy"
+                    <router-link :to="'/' + langCode + '/privacy-policy'"
                       >Privacy Policy
                     </router-link>
                   </li>
@@ -326,7 +336,9 @@
                       menu-item-object-page menu-item-2509
                     "
                   >
-                    <router-link to="/contact-us">Contact Us</router-link>
+                    <router-link :to="'/' + langCode + '/contact-us'"
+                      >Contact Us</router-link
+                    >
                   </li>
                   <li
                     id="menu-item-2509"
@@ -336,7 +348,9 @@
                       menu-item-object-page menu-item-2509
                     "
                   >
-                    <router-link to="/faq">FAQs</router-link>
+                    <router-link :to="'/' + langCode + '/faq'"
+                      >FAQs</router-link
+                    >
                   </li>
                 </ul>
               </div>
@@ -483,27 +497,27 @@
       <nav class="mobile-menu">
         <ul>
           <li>
-            <router-link to="/Blog" class="store">
+            <router-link :to="'/' + langCode + '/Blog'" class="store">
               <i class="klbth-icon-shop"></i> <span>Blogs</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/brands" class="search">
+            <router-link :to="'/' + langCode + '/brands'" class="search">
               <i class="klbth-icon-search"></i> <span>Brands</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/wishlist" class="wishlist">
+            <router-link :to="'/' + langCode + '/wishlist'" class="wishlist">
               <i class="klbth-icon-heart"></i> <span>Wishlist</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/myaccount" class="user">
+            <router-link :to="'/' + langCode + '/myaccount'" class="user">
               <i class="klbth-icon-user-1"></i> <span>Account</span>
             </router-link>
           </li>
           <li class="menu-item">
-            <router-link to="/category" class="categories">
+            <router-link :to="'/' + langCode + '/category'" class="categories">
               <i class="klbth-icon-menu-scale"></i> <span>Categories</span>
             </router-link>
           </li>
@@ -599,6 +613,7 @@ export default {
     return {
       scTimer: 0,
       scY: 0,
+      langCode: "en",
     };
   },
   mounted() {
@@ -606,6 +621,8 @@ export default {
     // Script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
     // document.head.appendChild(Script);
     window.addEventListener("scroll", this.handleScroll);
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 
   methods: {

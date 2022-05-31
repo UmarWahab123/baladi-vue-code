@@ -108,39 +108,7 @@
                       role="group"
                       aria-label="1 / 5"
                       style="width: 938px"
-                    >
-                      <div class="banner dark align-center large">
-                        <div class="banner-content">
-                          <div class="banner-content-wrapper">
-                            <h6 class="entry-subtitle style-3">
-                              Weekend Discount2
-                            </h6>
-                            <h3 class="entry-title">
-                              The world’s largest
-                              <strong> online store</strong>
-                            </h3>
-                            <div class="entry-description">
-                              <p>
-                                Last call for up to <strong>%40</strong> off!
-                              </p>
-                            </div>
-                            <div class="entry-button">
-                              <a
-                                href="#?ft=infinite"
-                                class="btn small rounded link-color"
-                                >Shop Now</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="banner-image">
-                          <img
-                            src="http://english-template.bteamwebs.com/src/img/cover1.jpeg"
-                            alt="slider"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    ></div>
                     <div
                       class="swiper-slide swiper-slide-active"
                       data-swiper-slide-index="0"
@@ -148,43 +116,61 @@
                       aria-label="2 / 5"
                       style="width: 938px"
                     >
-                      <div class="banner dark align-center large">
-                        <div class="banner-content">
-                          <div class="banner-content-wrapper">
-                            <h6 class="entry-subtitle style-3">
-                              Weekend Discount2
-                            </h6>
-                            <h3 class="entry-title">
-                              Enhance Your
-                              <strong>Entertainment</strong>
-                            </h3>
-                            <div class="entry-description">
-                              <p>
-                                Last call for up to <strong>%20</strong> off!
-                              </p>
-                            </div>
-                            <div class="entry-button">
-                              <a href="#" class="btn small rounded link-color"
-                                >Shop Now
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="banner-image">
-                          <Splide :options="{ rewind: true, autoplay: true }">
-                            <SplideSlide
-                              :data="item"
-                              :key="indextr"
-                              v-for="(item, indextr) in results"
-                            >
+                      <Splide :options="{ rewind: true, autoplay: true }">
+                        <!-- <SplideSlide>
                               <img
-                                src="http://english-template.bteamwebs.com/src/img/cover1.jpeg"
-                                alt="Sample 2"
+                                src="@/assets/img/slider-banner-1.jpg"
+                                alt="Sample 1"
                               />
                             </SplideSlide>
-                          </Splide>
-                        </div>
-                      </div>
+                            <SplideSlide>
+                              <img
+                                src="@/assets/img/slider-banner-2.jpg"
+                                alt="Sample 2"
+                              />
+                            </SplideSlide> -->
+                        <SplideSlide
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in results"
+                        >
+                          <div
+                            class="banner dark align-center large"
+                            :key="indextr"
+                          >
+                            <div class="banner-content">
+                              <div class="banner-content-wrapper">
+                                <h6 class="entry-subtitle style-3">
+                                  Weekend Discount2
+                                </h6>
+                                <h3 class="entry-title">
+                                  {{ item.heading }}
+                                  <strong> {{ item.subheading }}</strong>
+                                </h3>
+                                <div class="entry-description">
+                                  <p>
+                                    Last call for up to
+                                    <strong>%20</strong> off!
+                                  </p>
+                                </div>
+                                <div class="entry-button">
+                                  <a
+                                    href="#"
+                                    class="btn small rounded link-color"
+                                    >Shop Now
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="banner-image">
+                              <img
+                                src="@/assets/img/slider-banner-3.jpg"
+                                alt="Sample 2"
+                              />
+                            </div>
+                          </div>
+                        </SplideSlide>
+                      </Splide>
                     </div>
                   </div>
                 </div>

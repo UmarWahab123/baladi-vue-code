@@ -277,7 +277,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -1457,6 +1457,7 @@ export default {
         length: 1,
       },
     },
+    langCode: "en",
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -1472,7 +1473,10 @@ export default {
       return 100 - (this.timeLeft / this.autoSlideInterval) * 100;
     },
   },
-  mounted() {},
+  mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+  },
   methods: {
     clickmodal(index) {
       this.showmodal = "show";

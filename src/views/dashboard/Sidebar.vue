@@ -29,7 +29,9 @@
           "
           :class="activeClass"
         >
-          <router-link to="userdashboard">Dashboard </router-link>
+          <router-link :to="'/' + langCode + '/userdashboard'"
+            >Dashboard
+          </router-link>
         </li>
         <li
           class="
@@ -38,7 +40,7 @@
           "
           :class="orders"
         >
-          <router-link to="orders">Orders </router-link>
+          <router-link :to="'/' + langCode + '/orders'">Orders </router-link>
         </li>
         <li
           class="
@@ -47,7 +49,9 @@
           "
           :class="mywallet"
         >
-          <router-link to="my-wallet">My Wallet </router-link>
+          <router-link :to="'/' + langCode + '/my-wallet'"
+            >My Wallet
+          </router-link>
         </li>
         <li
           class="
@@ -56,7 +60,7 @@
           "
           :class="voucher"
         >
-          <router-link to="voucher">Voucher </router-link>
+          <router-link :to="'/' + langCode + '/voucher'">Voucher </router-link>
         </li>
         <li
           class="
@@ -65,7 +69,9 @@
           "
           :class="rewardpoints"
         >
-          <router-link to="reward-points">Reward Points </router-link>
+          <router-link :to="'/' + langCode + '/reward-points'"
+            >Reward Points
+          </router-link>
         </li>
 
         <li
@@ -75,7 +81,9 @@
           "
           :class="editaddress"
         >
-          <router-link to="edit-address">Addresses </router-link>
+          <router-link :to="'/' + langCode + '/edit-address'"
+            >Addresses
+          </router-link>
         </li>
         <li
           class="
@@ -84,7 +92,9 @@
           "
           :class="account"
         >
-          <router-link to="account">Account Details </router-link>
+          <router-link :to="'/' + langCode + '/account'"
+            >Account Details
+          </router-link>
         </li>
         <li
           class="
@@ -92,7 +102,9 @@
             woocommerce-MyAccount-navigation-link--tinv_wishlist
           "
         >
-          <router-link to="wishlist">Wishlist </router-link>
+          <router-link :to="'/' + langCode + '/wishlist'"
+            >Wishlist
+          </router-link>
         </li>
         <li
           class="
@@ -127,6 +139,7 @@ export default {
       editaddress: "",
       account: "",
       wishlist: "",
+      langCode: "en",
     };
   },
   mounted() {
@@ -208,11 +221,16 @@ export default {
       this.$router.push("myaccount");
     }
     setTimeout(() => (this.isloading = false), 1000);
+
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     logout() {
       localStorage.clear();
-      this.$router.push("/myaccount");
+      localStorage.setItem("lang", "en");
+      var lang = localStorage.getItem("lang");
+      this.$router.push("/" + lang + "/myaccount");
     },
   },
 };

@@ -68,10 +68,7 @@
                       <div class="klb-readmore entry-button">
                         <router-link
                           class="btn read-more"
-                          :to="{
-                            name: 'blog-detail',
-                            params: { id: item.id },
-                          }"
+                          :to="'/' + langCode + '/blog-detail/' + item.id"
                           >Read More
                         </router-link>
                       </div>
@@ -284,6 +281,7 @@ export default {
   data: () => ({
     url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
+    langCode: "en",
   }),
   mounted() {
     axios
@@ -293,6 +291,8 @@ export default {
         this.results = response.data.data;
       })
       .catch((error) => {});
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 };
 </script>

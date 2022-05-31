@@ -337,10 +337,9 @@
                           <div class="product-content">
                             <div class="thumbnail-wrapper">
                               <router-link
-                                :to="{
-                                  name: 'product-detail',
-                                  params: { id: trend.id },
-                                }"
+                                :to="
+                                  '/' + langCode + '/product-detail' + trend.id
+                                "
                               >
                                 <img
                                   :src="this.url + trend.images[0].photo"
@@ -575,10 +574,7 @@
                               <span class="badge onsale">11%</span>
                             </div>
                             <router-link
-                              :to="{
-                                name: 'product-detail',
-                                params: { id: best.id },
-                              }"
+                              :to=" '/' + langCode + '/product-detail'+ best.id "
                             >
                               <div
                                 class="product-card"
@@ -1302,10 +1298,7 @@
                               <span class="badge super">Super Price</span>
                             </div>
                             <router-link
-                              :to="{
-                                name: 'product-detail',
-                                params: { id: items.id },
-                              }"
+                              :to="'/' + langCode + '/product-detail'+items.id "
                             >
                               <div
                                 class="product-card"
@@ -1547,7 +1540,7 @@
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -2786,6 +2779,7 @@ export default {
           length: 1,
         },
       },
+      langCode: "en",
     };
   },
   computed: {
@@ -2825,6 +2819,8 @@ export default {
         // console.log(this.arrival);
       })
       .catch((error) => {});
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     clickmodal(index) {

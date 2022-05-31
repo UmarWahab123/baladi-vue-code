@@ -101,19 +101,38 @@
       <!-- row -->
     </div>
     <section
-      class="elementor-section elementor-top-section elementor-element elementor-element-52524a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      class="
+        elementor-section
+        elementor-top-section
+        elementor-element
+        elementor-element-52524a1
+        elementor-section-boxed
+        elementor-section-height-default
+        elementor-section-height-default
+      "
       data-id="52524a1"
       data-element_type="section"
     >
       <div class="elementor-container elementor-column-gap-extended">
         <div
-          class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6cf7656"
+          class="
+            elementor-column
+            elementor-col-100
+            elementor-top-column
+            elementor-element
+            elementor-element-6cf7656
+          "
           data-id="6cf7656"
           data-element_type="column"
         >
           <div class="elementor-widget-wrap elementor-element-populated">
             <div
-              class="elementor-element elementor-element-d96753c elementor-widget elementor-widget-machic-product-categories"
+              class="
+                elementor-element
+                elementor-element-d96753c
+                elementor-widget
+                elementor-widget-machic-product-categories
+              "
               data-id="d96753c"
               data-element_type="widget"
               data-widget_type="machic-product-categories.default"
@@ -133,10 +152,8 @@
                           <div class="square-holder shadow">
                             <router-link
                               class=""
-                              :to="{
-                                name: 'brandsProduct',
-                                params: { id: item.id },
-                              }"
+                              :to=" '/' + langCode +'/brandsProduct'+item.id ,
+                              "
                               ><img alt="" :src="url + item.photo" />
                             </router-link>
                           </div>
@@ -165,6 +182,7 @@ export default {
   data: () => ({
     url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
+    langCode: "en",
   }),
   mounted() {
     axios
@@ -174,6 +192,8 @@ export default {
         console.log(this.results);
       })
       .catch((error) => {});
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 };
 </script>

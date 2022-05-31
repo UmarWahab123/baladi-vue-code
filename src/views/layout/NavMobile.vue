@@ -5,7 +5,7 @@
         <div class="column left">
           <div class="site-brand">
             <router-link
-              to="/"
+              :to="'/' + langCode"
               title="Machic – Electronics Store eCommerce Theme"
             >
               <img
@@ -1025,7 +1025,9 @@
                     menu-item-object-page menu-item-2233
                   "
                 >
-                  <router-link to="/order-tracking">Order Tracking</router-link>
+                  <router-link :to="'/' + langCode + '/order-tracking'"
+                    >Order Tracking</router-link
+                  >
                 </li>
                 <li
                   id="menu-item-2176"
@@ -1134,7 +1136,7 @@
       <div class="column center">
         <div class="site-brand">
           <router-link
-            to="/"
+            :to="'/' + langCode"
             title="Machic – Electronics Store eCommerce Theme"
           >
             <img
@@ -1148,7 +1150,7 @@
       <!-- column -->
       <div class="column right">
         <div class="header-addons cart-button">
-          <router-link to="/cart">
+          <router-link :to="'/' + langCode + '/cart'">
             <div class="header-addons-icon">
               <i class="klbth-icon-simple-cart"></i>
               <div class="button-count cart-count">2</div>
@@ -1477,11 +1479,14 @@ export default {
     id: "",
     showmenu: "",
     results: [],
+    langCode: "en",
   }),
   mounted() {
     if (this.$route.name == "Home") {
       this.showmenu = "show";
     }
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
     // console.log(this.$route.name);
   },
   methods: {

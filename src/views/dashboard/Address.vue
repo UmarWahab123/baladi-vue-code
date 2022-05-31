@@ -19,23 +19,40 @@
                     >
 
                     <table
-                      class="woocommerce-orders-table rounded my-3 woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table"
+                      class="
+                        woocommerce-orders-table
+                        rounded
+                        my-3
+                        woocommerce-MyAccount-orders
+                        shop_table shop_table_responsive
+                        my_account_orders
+                        account-orders-table
+                      "
                     >
                       <thead>
                         <tr>
                           <th
-                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number"
+                            class="
+                              woocommerce-orders-table__header
+                              woocommerce-orders-table__header-order-number
+                            "
                           >
                             <span class="nobr">Address</span>
                           </th>
 
                           <th
-                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total"
+                            class="
+                              woocommerce-orders-table__header
+                              woocommerce-orders-table__header-order-total
+                            "
                           >
                             <span class="nobr">Total</span>
                           </th>
                           <th
-                            class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions"
+                            class="
+                              woocommerce-orders-table__header
+                              woocommerce-orders-table__header-order-actions
+                            "
                           >
                             <span class="nobr">Actions</span>
                           </th>
@@ -44,17 +61,27 @@
 
                       <tbody>
                         <tr
-                          class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
+                          class="
+                            woocommerce-orders-table__row
+                            woocommerce-orders-table__row--status-on-hold
+                            order
+                          "
                         >
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-number
+                            "
                             data-title="Order"
                           >
                             <a href=""> Billing </a>
                           </td>
 
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-total
+                            "
                             data-title="Total"
                           >
                             <span class="woocommerce-Price-amount amount"
@@ -66,28 +93,41 @@
                             >
                           </td>
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-actions
+                            "
                             data-title="Actions"
                           >
                             <router-link
-                              to="shipping"
+                              :to="'/' + langCode + '/shipping'"
                               class="woocommerce-button button view"
                               >Edit
                             </router-link>
                           </td>
                         </tr>
                         <tr
-                          class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order"
+                          class="
+                            woocommerce-orders-table__row
+                            woocommerce-orders-table__row--status-on-hold
+                            order
+                          "
                         >
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-number
+                            "
                             data-title="Order"
                           >
                             <a href=""> Shipping</a>
                           </td>
 
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-total
+                            "
                             data-title="Total"
                           >
                             <span class="woocommerce-Price-amount amount"
@@ -99,11 +139,14 @@
                             >
                           </td>
                           <td
-                            class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                            class="
+                              woocommerce-orders-table__cell
+                              woocommerce-orders-table__cell-order-actions
+                            "
                             data-title="Actions"
                           >
                             <router-link
-                              to="shipping"
+                              :to="'/' + langCode + '/shipping'"
                               class="woocommerce-button button view"
                               >Edit
                             </router-link>
@@ -141,6 +184,7 @@ export default {
   data() {
     return {
       isloading: true,
+      langCode: "en",
     };
   },
   mounted() {
@@ -149,6 +193,8 @@ export default {
       this.$router.push("myaccount");
     }
     setTimeout(() => (this.isloading = false), 1000);
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 };
 </script>

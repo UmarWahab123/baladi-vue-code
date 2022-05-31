@@ -521,7 +521,7 @@
       <div class="wc-proceed-to-checkout">
         <router-link
           class="checkout-button button alt wc-forward"
-          to="/checkout"
+          :to="'/' + langCode + '/checkout'"
         >
           Proceed to checkout
         </router-link>
@@ -535,8 +535,12 @@ export default {
     id: "",
     changeaddress: 0,
     results: [],
+    langCode: "en",
   }),
-  mounted() {},
+  mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+  },
   methods: {
     clickaddress: function (event) {
       if (this.changeaddress === 0) {

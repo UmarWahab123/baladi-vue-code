@@ -119,12 +119,12 @@
 
                   <div class="col col-12 col-lg-6">
                     <h1 class="product_title entry-title">
-                     {{productDetails.name}}
+                      {{ productDetails.name }}
                     </h1>
                     <div class="product-meta">
                       <div class="product-model">
                         <span>weight:</span>
-                       {{productDetails.weight}}
+                        {{ productDetails.weight }}
                       </div>
                       <!-- product-model -->
                       <div class="sku-wrapper"></div>
@@ -150,7 +150,10 @@
                             href="javascript:void(0)"
                             class="woocommerce-review-link"
                             rel="nofollow"
-                            ><span class="count">{{productDetails.allow_reviews}}</span> review</a
+                            ><span class="count">{{
+                              productDetails.allow_reviews
+                            }}</span>
+                            review</a
                           >
                         </div>
                       </div>
@@ -259,7 +262,7 @@
                             <span>Add to cart</span>
                           </button>
                           <router-link
-                            to="/checkout"
+                            :to="'/' + langCode + '/checkout'"
                             name="add-to-cart"
                             class="
                               button button-primary
@@ -489,7 +492,7 @@
                 >
                   <h2>Description</h2>
 
-                  <h6>{{productDetails.short_description}}</h6>
+                  <h6>{{ productDetails.short_description }}</h6>
 
                   <p>Fresh laban botel with minimum price available</p>
                   <p>Key Features:</p>
@@ -1237,7 +1240,7 @@
               <div class="tinvwl-buttons-group tinv-wishlist-clear">
                 <button>
                   <router-link
-                    to="/wishlist"
+                    :to="'/' + langCode + '/wishlist'"
                     class="button tinvwl_button_view tinvwl-btn-onclick"
                   >
                     <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -1552,7 +1555,7 @@
                             <span>Add to cart</span>
                           </button>
                           <router-link
-                            to="/checkout"
+                            :to="'/' + langCode + '/checkout'"
                             name="add-to-cart"
                             value="408"
                             class="
@@ -2407,7 +2410,7 @@ import axios from "axios";
 
 export default {
   components: { TheLoader, Splide, SplideSlide },
-    
+
   data: () => ({
     id: "",
     specification: "",
@@ -2425,8 +2428,13 @@ export default {
     showcomparemodalstyle: "",
     isloading: true,
     quantity: 1,
-    url:"http://baladiweb.bteamwebs.com/storage/",
-    productDetails: {name:"",allow_reviews:"",weight:"",short_description:""},
+    url: "http://baladiweb.bteamwebs.com/storage/",
+    productDetails: {
+      name: "",
+      allow_reviews: "",
+      weight: "",
+      short_description: "",
+    },
     errors: "",
     //Index of the active image
     activeImage: 0,
@@ -2440,6 +2448,7 @@ export default {
     timerInterval: null,
     //Every 10ms decrease the timeLeft
     countdownInterval: 10,
+    langCode: "en",
     images: {
       0: {
         thumb:
@@ -2484,15 +2493,19 @@ export default {
     setTimeout(() => (this.isloading = false), 1000);
     var id = this.$route.params.id;
     axios
-      .get("http://baladiweb.bteamwebs.com/api/mobile/product/getProducts/" + id)
+      .get(
+        "http://baladiweb.bteamwebs.com/api/mobile/product/getProducts/" + id
+      )
       .then((response) => {
         this.productDetails.name = response.data.data[0].name;
         this.productDetails.allow_reviews = response.data.data[0].allow_reviews;
         this.productDetails.weight = response.data.data[0].weight;
-        this.productDetails.short_description = response.data.data[0].short_description;
-        
+        this.productDetails.short_description =
+          response.data.data[0].short_description;
       })
       .catch((error) => {});
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
   methods: {
     increment: function () {

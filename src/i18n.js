@@ -1,4 +1,4 @@
-import { createI18n } from 'vue-i18n'
+import { createI18n } from "vue-i18n";
 
 /**
  * Load locale messages
@@ -7,8 +7,8 @@ import { createI18n } from 'vue-i18n'
  * See: https://github.com/intlify/vue-i18n-loader#rocket-i18n-resource-pre-compilation
  */
 
-import en from './locales/en.json';
-import ar from './locales/ar.json';
+import en from "./locales/en.json";
+import ar from "./locales/ar.json";
 
 function loadLocaleMessages() {
   return {
@@ -28,9 +28,10 @@ function loadLocaleMessages() {
 //   })
 //   return messages
 // }
-
+var url = window.location.href;
+var params = url.split("/")[3];
 export default createI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || 'ar',
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: loadLocaleMessages()
-})
+  locale: process.env.VUE_APP_I18N_LOCALE || params,
+  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
+  messages: loadLocaleMessages(),
+});

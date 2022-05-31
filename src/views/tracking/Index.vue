@@ -11,19 +11,38 @@
       >
         <div class="elementor-section-wrap">
           <section
-            class="elementor-section elementor-top-section elementor-element elementor-element-a8dca56 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            class="
+              elementor-section
+              elementor-top-section
+              elementor-element
+              elementor-element-a8dca56
+              elementor-section-boxed
+              elementor-section-height-default
+              elementor-section-height-default
+            "
             data-id="a8dca56"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e346431"
+                class="
+                  elementor-column
+                  elementor-col-100
+                  elementor-top-column
+                  elementor-element
+                  elementor-element-e346431
+                "
                 data-id="e346431"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="elementor-element elementor-element-16bb66b elementor-widget elementor-widget-shortcode"
+                    class="
+                      elementor-element
+                      elementor-element-16bb66b
+                      elementor-widget
+                      elementor-widget-shortcode
+                    "
                     data-id="16bb66b"
                     data-element_type="widget"
                     data-widget_type="shortcode.default"
@@ -33,13 +52,15 @@
                         <div class="woocommerce mt-4 row">
                           <div class="col-md-8 mx-auto text-center">
                             <h3>Track Your Order</h3>
-                            
                           </div>
                           <div class="col-sm-6 col-md-5 mx-auto shadow p-4">
                             <form
                               action="https://klbtheme.com/machic/order-tracking/"
                               method="post"
-                              class="woocommerce-form woocommerce-form-track-order track_order"
+                              class="
+                                woocommerce-form woocommerce-form-track-order
+                                track_order
+                              "
                             >
                               <p class="form-row form-row-first">
                                 <label for="orderid">Order ID</label>
@@ -52,11 +73,13 @@
                                   placeholder="Found in your order confirmation email."
                                 />
                               </p>
-                             
+
                               <div class="clear"></div>
 
                               <p class="form-row">
-                                <router-link to="/order-track2">
+                                <router-link
+                                  :to="'/' + langCode + '/order-track2'"
+                                >
                                   <button
                                     type="submit"
                                     class="button"

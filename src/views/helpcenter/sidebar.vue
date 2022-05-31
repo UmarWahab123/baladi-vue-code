@@ -30,7 +30,9 @@
           "
           :class="about"
         >
-          <router-link to="/helpcenter">About Baladi</router-link>
+          <router-link :to="'/' + langCode + '/helpcenter'"
+            >About Baladi</router-link
+          >
         </li>
         <li
           class="
@@ -40,7 +42,9 @@
           "
           :class="replacement"
         >
-          <router-link to="/replacement">Returns & Replacements</router-link>
+          <router-link :to="'/' + langCode + '/replacement'"
+            >Returns & Replacements</router-link
+          >
         </li>
         <li
           class="
@@ -50,7 +54,7 @@
           "
           :class="shipping"
         >
-          <router-link to="/shoppingrates"
+          <router-link :to="'/' + langCode + '/shoppingrates'"
             >Shipping Rates & Policies</router-link
           >
         </li>
@@ -62,7 +66,9 @@
           "
           :class="refund"
         >
-          <router-link to="/refund">Refund and Returns Policy</router-link>
+          <router-link :to="'/' + langCode + '/refund'"
+            >Refund and Returns Policy</router-link
+          >
         </li>
         <li
           class="
@@ -72,7 +78,9 @@
           "
           :class="privacy"
         >
-          <router-link to="/privacypolicy">Privacy Policy</router-link>
+          <router-link :to="'/' + langCode + '/privacypolicy'"
+            >Privacy Policy</router-link
+          >
         </li>
         <li
           class="
@@ -82,7 +90,9 @@
           "
           :class="terms"
         >
-          <router-link to="/termscondition">Terms and Conditions</router-link>
+          <router-link :to="'/' + langCode + '/termscondition'"
+            >Terms and Conditions</router-link
+          >
         </li>
         <li
           class="
@@ -92,7 +102,9 @@
           "
           :class="covid"
         >
-          <router-link to="/covidhelp">Covid-19</router-link>
+          <router-link :to="'/' + langCode + '/covidhelp'"
+            >Covid-19</router-link
+          >
         </li>
       </ul>
     </nav>
@@ -111,8 +123,11 @@ export default {
     covid: "",
     tabs: "",
     replacement: "",
+    langCode: "en",
   }),
   mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
     if (this.$route.name == "helpcenter") {
       this.shipping = "";
       this.refund = "";

@@ -809,7 +809,7 @@
 
                       <div class="wc-proceed-to-checkout">
                         <router-link
-                          to="/checkout"
+                          :to="'/' + langCode + '/checkout'"
                           class="checkout-button button alt wc-forward"
                           >Proceed to checkout
                         </router-link>
@@ -1117,7 +1117,7 @@
               </div>
               <div class="tinvwl-buttons-group tinv-wishlist-clear">
                 <router-link
-                  to="/wishlist"
+                  :to="'/' + langCode + '/wishlist'"
                   class="button tinvwl_button_view tinvwl-btn-onclick"
                 >
                   <i class="ftinvwl ftinvwl-heart-o"></i>View
@@ -2392,8 +2392,12 @@ export default {
         subtotal: 253,
       },
     },
+    langCode: "en",
   }),
-  mounted() {},
+  mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+  },
   methods: {
     incrementcount: function () {
       // const input_index = event.currentTarget.getAttribute("input_Index");

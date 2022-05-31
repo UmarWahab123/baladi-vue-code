@@ -116,7 +116,9 @@
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
           described in our
-          <router-link to="/privacy-policy">Privacy Policy </router-link>.
+          <router-link :to="'/' + langCode + '/privacy-policy'"
+            >Privacy Policy </router-link
+          >.
         </p>
       </div>
       <p class="woocommerce-form-row form-row">
@@ -164,6 +166,7 @@ export default {
         password: null,
       },
       errors: "",
+      langCode: "en",
     };
   },
   validations() {
@@ -185,7 +188,9 @@ export default {
     };
   },
   mounted() {
-    console.log(import.meta.env);
+    // console.log(import.meta.env);
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
   },
 
   methods: {
