@@ -153,6 +153,8 @@
                   js-dgwt-wcas-layout-classic
                   dgwt-wcas-layout-classic
                   js-dgwt-wcas-mobile-overlay-enabled
+                  dgwt-wcas-search-filled dgwt-wcas-active
+                  pre-suggestions
                 "
               >
                 <form
@@ -175,6 +177,7 @@
                       value=""
                       placeholder="Search for products..."
                       autocomplete="off"
+                      @keyup="onchangesearch($event)"
                     />
                     <div
                       class="dgwt-wcas-preloader"
@@ -193,6 +196,68 @@
                   </div>
                 </form>
               </div>
+            </div>
+            <div
+              class="
+                dgwt-wcas-suggestions-wrapp
+                woocommerce
+                dgwt-wcas-has-img dgwt-wcas-has-price dgwt-wcas-has-headings
+                js-dgwt-wcas-initialized
+              "
+              unselectable="on"
+              style="
+                position: absolute;
+                max-height: 600px;
+                z-index: 999999999;
+                width: 700.047px;
+                top: 70px;
+                left: 165.5px;
+                display: none;
+              "
+            >
+              <a
+                href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                class="dgwt-wcas-suggestion dgwt-wcas-suggestion-product"
+                data-index="0"
+                data-post-id="521"
+                ><span class="dgwt-wcas-si"
+                  ><img
+                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-64x64.jpg"
+                    alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
+                  />
+                </span>
+                <div class="dgwt-wcas-content-wrapp">
+                  <div class="dgwt-wcas-st">
+                    <span class="dgwt-wcas-st-title">
+                      <strong
+                        >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</strong
+                      ></span
+                    >
+                  </div>
+                  <div class="dgwt-wcas-meta">
+                    <span class="dgwt-wcas-sp"
+                      ><del aria-hidden="true"
+                        ><span class="woocommerce-Price-amount amount">
+                          <bdi
+                            ><span class="woocommerce-Price-currencySymbol"
+                              >$</span
+                            >699.99</bdi
+                          ></span
+                        ></del
+                      >
+                      <ins
+                        ><span class="woocommerce-Price-amount amount">
+                          <bdi
+                            ><span class="woocommerce-Price-currencySymbol"
+                              >$</span
+                            >629.99</bdi
+                          ></span
+                        ></ins
+                      ></span
+                    >
+                  </div>
+                </div></a
+              >
             </div>
             <!-- site-search -->
 
@@ -965,7 +1030,7 @@
                       class="sub-menu"
                       style="
                         background-image: url(/../src/assets/img/category-menu-3.png);
-                        width: 580px;
+                        width: 1000px;
                       "
                     >
                       <div class="container">
@@ -2202,7 +2267,7 @@
                     menu-item-object-page menu-item-has-children
                   "
                 >
-                  <router-link :to="'/' + langCode + '/brands' "
+                  <router-link :to="'/' + langCode + '/brands'"
                     >Top Brands
                   </router-link>
                   <ul class="sub-menu">
@@ -2496,7 +2561,7 @@
                     menu-item-object-product_cat
                   "
                 >
-                  <router-link :to="'/' + langCode + '/category' "
+                  <router-link :to="'/' + langCode + '/category'"
                     ><i class="klbth-icon-home"></i> Home And
                     Living</router-link
                   >
@@ -2509,7 +2574,9 @@
                     menu-item-object-page
                   "
                 >
-                  <router-link :to="'/' + langCode + '/blog' ">Blogs </router-link>
+                  <router-link :to="'/' + langCode + '/blog'"
+                    >Blogs
+                  </router-link>
                 </li>
                 <li
                   class="
@@ -2518,7 +2585,7 @@
                     menu-item-object-page
                   "
                 >
-                  <router-link :to="'/' + langCode + '/contact-us' "
+                  <router-link :to="'/' + langCode + '/contact-us'"
                     >Contact
                   </router-link>
                 </li>
@@ -2729,6 +2796,23 @@ export default {
         this.isChecked = false;
         localStorage.setItem("lang", "en");
         window.location.reload();
+      }
+    },
+    onchangesearch: function (event) {
+      if (event.target.value) {
+        var preloader = document.querySelector(".dgwt-wcas-preloader");
+        var search = document.querySelector(".pre-suggestions");
+        var searchsugget = document.querySelector(".js-dgwt-wcas-initialized");
+        preloader.style = "dgwt-wcas-close";
+        search.style = "dgwt-wcas-search-filled";
+        searchsugget.style.display = "block";
+      } else {
+        var preloader = document.querySelector(".dgwt-wcas-preloader");
+        var search = document.querySelector(".pre-suggestions");
+        var searchsugget = document.querySelector(".js-dgwt-wcas-initialized");
+        preloader.style = "dgwt-wcas-close";
+        search.style = "dgwt-wcas-search-filled";
+        searchsugget.style.display = "none";
       }
     },
   },
