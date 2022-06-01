@@ -958,7 +958,7 @@
                         <bdi
                           ><span class="woocommerce-Price-currencySymbol"
                             >QAR </span
-                          >1,218.99</bdi
+                          >{{ cartStore.total }}</bdi
                         >
                       </span>
                     </p>
