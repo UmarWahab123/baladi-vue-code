@@ -142,7 +142,7 @@
                                     ></div>
                                   </div>
                                   <img
-                                    :src="this.url + item.images[0].photo"
+                                    :src="url + item.images[0].photo"
                                     class="hover-slider-init"
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />

@@ -315,7 +315,9 @@
               <router-link :to="'/' + langCode + '/cart'">
                 <div class="header-addons-icon">
                   <i class="far fa-bell"></i>
-                  <div class="button-count cart-count">2</div>
+                  <div class="button-count cart-count">
+                    {{ cartStore.count }}
+                  </div>
                 </div>
                 <!-- header-addons-icon -->
 
@@ -715,7 +717,9 @@
               <a href="#cart/">
                 <div class="header-addons-icon">
                   <i class="klbth-icon-simple-cart"></i>
-                  <div class="button-count cart-count">2</div>
+                  <div class="button-count cart-count">
+                    {{ cartStore.count }}
+                  </div>
                 </div>
                 <!-- header-addons-icon -->
                 <div class="header-addons-text hide-mobile">
@@ -725,7 +729,7 @@
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >1,218.99</bdi
+                        >{{ cartStore.total }}</bdi
                       >
                     </span>
                   </div>
@@ -734,7 +738,7 @@
               </a>
               <div class="cart-dropdown hide">
                 <div class="cart-dropdown-wrapper">
-                  <div class="fl-mini-cart-content">
+                  <div class="fl-mini-cart-content" v-if="!cartStore.isEmpty">
                     <div
                       class="
                         products
@@ -832,7 +836,7 @@
                             role="group"
                             aria-label="2 / 2"
                             style="height: 90px"
-                            v-for="n in 4"
+                            v-for="(item, name) in cartStore.grouped"
                           >
                             <div
                               class="
@@ -850,13 +854,13 @@
                                       <img
                                         width="90"
                                         height="90"
-                                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
+                                        :src="
+                                          'http://baladiweb.bteamwebs.com/storage/' +
+                                          item[0].images[0].photo
+                                        "
                                         class="
                                           attachment-woocommerce_thumbnail
                                           size-woocommerce_thumbnail
-                                        "
-                                        srcset="
-                                          https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg
                                         "
                                         alt=""
                                       />
@@ -865,15 +869,13 @@
                                   <!-- thumbnail-wrapper -->
                                   <div class="content-wrapper">
                                     <h3 class="product-title">
-                                      <a
-                                        href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
-                                        >Apple 11-inch iPad Pro (2021) Wi-Fi
-                                        128GB</a
-                                      >
+                                      <a href="javascript:void(0)">{{
+                                        item[0].name
+                                      }}</a>
                                     </h3>
                                     <div class="entry-price">
                                       <span class="quantity"
-                                        >1 ×
+                                        >{{ item.length }} ×
                                         <span
                                           class="
                                             woocommerce-Price-amount
@@ -886,18 +888,22 @@
                                                 woocommerce-Price-currencySymbol
                                               "
                                               >QAR </span
-                                            >749.00</bdi
+                                            >{{
+                                              cartStore.groupedCount(name) *
+                                              item[0].sale_price
+                                            }}</bdi
                                           >
                                         </span></span
                                       >
                                     </div>
                                     <a
-                                      href="#cart/?remove_item=f3f27a324736617f20abbf2ffd806f6d&amp;_wpnonce=acc831cf67"
+                                      href="javascript:void(0)"
                                       class="remove remove_from_cart_button"
                                       aria-label="Remove this item"
                                       data-product_id="516"
                                       data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
                                       data-product_sku="SR4JK74"
+                                      @click="cartStore.clearItem(name)"
                                       ><i class="klbth-icon-cancel"></i
                                     ></a>
                                   </div>
@@ -971,6 +977,9 @@
                       </router-link>
                     </p>
                   </div>
+                  <div v-else>
+                    <h3 class="p-2">Cart is Empty</h3>
+                  </div>
 
                   <!-- cart-noticy -->
                 </div>
@@ -998,7 +1007,7 @@
                   <div class="departments-icon">
                     <i class="klbth-icon-menu"></i>
                   </div>
-                  <div class="departments-text">All Departments</div>
+                  <div class="departments-text">{{ $t("language") }}</div>
                   <div class="departments-arrow">
                     <i class="klbth-icon-nav-arrow-down"></i>
                   </div>
@@ -2707,7 +2716,17 @@
     <!-- header-nav -->
   </div>
 </template>
+<script setup >
+import { computed } from "vue";
+import { useCartStore } from "../../stores/CartStore";
 
+// import { useCartStore } from "../../stores/cart";
+
+const cartStore = useCartStore();
+const count = computed(() => cartStore.count);
+
+// console.log(count);
+</script>
 <script>
 export default {
   data: () => ({

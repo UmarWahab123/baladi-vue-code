@@ -26,43 +26,32 @@
       <tbody>
         <tr
           class="woocommerce-cart-form__cart-item cart_item"
-          v-for="(item, indextr) in results"
+          v-for="(item, name, indextr) in cartStore.grouped"
         >
           <td class="product-thumbnail">
             <a href="javascript:void(0)"
               ><img
                 width="90"
                 height="90"
-                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-90x90.jpg"
+                :src="this.url + item[0].images[0].photo"
                 class="
                   attachment-woocommerce_thumbnail
                   size-woocommerce_thumbnail
                 "
                 alt=""
                 loading="lazy"
-                srcset="
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-90x90.jpg    90w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-54x54.jpg    54w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-600x600.jpg 600w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-64x64.jpg    64w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-300x300.jpg 300w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-150x150.jpg 150w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-450x450.jpg 450w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg    96w,
-                  https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg         760w
-                "
                 sizes="(max-width: 90px) 100vw, 90px"
             /></a>
           </td>
           <td class="product-name" data-title="Product">
-            <a href="javascript:void(0)"> {{ item.product }}</a>
+            <a href="javascript:void(0)"> {{ item[0].name }}</a>
           </td>
 
           <td class="product-price" data-title="Price">
             <span class="woocommerce-Price-amount amount"
               ><bdi
-                ><span class="woocommerce-Price-currencySymbol">QAR </span
-                >{{ item.price }}</bdi
+                ><span class="woocommerce-Price-currencySymbol">$</span
+                >{{ item[0].sale_price }}</bdi
               ></span
             >
           </td>
@@ -74,8 +63,9 @@
               >
               <div
                 class="quantity-button minus"
-                @click="decrement"
+                @click="cartStore.setItemCount(item[0], 1)"
                 v-bind:input_Index="indextr"
+                v-bind:count="cartStore.groupedCount(name)"
               ></div>
               <input
                 type="text"
@@ -85,16 +75,18 @@
                 min="0"
                 max="10"
                 name="cart[07563a3fe3bbe7e3ba84431ad9d055af][qty]"
-                :value="item.quantity"
+                :value="cartStore.groupedCount(name)"
+                v-bind:count="cartStore.groupedCount(name)"
                 title="Qty"
                 size="4"
                 placeholder=""
                 inputmode="numeric"
+                my-attr="12"
               />
               <div
                 class="quantity-button plus"
-                @click="increment"
                 v-bind:input_Index="indextr"
+                @click="cartStore.setItemCount(item[0], 2)"
               ></div>
             </div>
           </td>
@@ -102,19 +94,20 @@
           <td class="product-subtotal" data-title="Subtotal">
             <span class="woocommerce-Price-amount amount"
               ><bdi
-                ><span class="woocommerce-Price-currencySymbol">QAR </span
-                >{{ item.subtotal }}</bdi
+                ><span class="woocommerce-Price-currencySymbol">$</span
+                >{{ cartStore.groupedCount(name) * item[0].sale_price }}</bdi
               ></span
             >
           </td>
 
           <td class="product-remove">
             <a
-              href="https://klbtheme.com/machic/cart/?remove_item=07563a3fe3bbe7e3ba84431ad9d055af&amp;_wpnonce=6d4198d000"
+              href="javascript:void(0)"
               class="remove"
               aria-label="Remove this item"
               data-product_id="521"
               data-product_sku="BE45VGRT"
+              @click="cartStore.clearItem(name)"
               >×</a
             >
           </td>
@@ -171,6 +164,10 @@
     </table>
   </form>
 </template>
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
+</script>
 <script>
 export default {
   data: () => ({

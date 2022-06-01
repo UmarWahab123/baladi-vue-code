@@ -31,10 +31,11 @@
         data-id="393b840"
         data-element_type="column"
         style="
-          position: relative;
+          position: sticky;
           overflow: visible;
           box-sizing: border-box;
           min-height: 1px;
+          top: 10px;
         "
       >
         <div
@@ -574,7 +575,7 @@
                               <span class="badge onsale">11%</span>
                             </div>
                             <router-link
-                              :to=" '/' + langCode + '/product-detail'+ best.id "
+                              :to="'/' + langCode + '/product-detail' + best.id"
                             >
                               <div
                                 class="product-card"
@@ -1298,7 +1299,9 @@
                               <span class="badge super">Super Price</span>
                             </div>
                             <router-link
-                              :to="'/' + langCode + '/product-detail'+items.id "
+                              :to="
+                                '/' + langCode + '/product-detail' + items.id
+                              "
                             >
                               <div
                                 class="product-card"

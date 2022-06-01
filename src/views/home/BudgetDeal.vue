@@ -1580,10 +1580,19 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
+</script>
 <script>
 import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useProductStore } from "../../stores/ProductStore";
+
 export default {
   components: { Splide, SplideSlide },
   data: () => ({

@@ -11,16 +11,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="cart_item">
+          <tr class="cart_item" v-for="(item, name) in cartStore.grouped">
             <td class="product-name">
-              Apple MWP22AM/A AirPods Pro&nbsp;
-              <strong class="product-quantity">×&nbsp;5</strong>
+              {{ item[0].name }}
+              <strong class="product-quantity"
+                >×&nbsp;{{ cartStore.groupedCount(name) }}</strong
+              >
             </td>
             <td class="product-total">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">$</span
-                  >749.90</bdi
+                  >{{ cartStore.groupedCount(name) * item[0].sale_price }}</bdi
                 ></span
               >
             </td>
@@ -97,7 +99,7 @@
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
                     ><span class="woocommerce-Price-currencySymbol">$</span
-                    >754.90</bdi
+                    >{{ cartStore.total }}</bdi
                   ></span
                 ></strong
               >
@@ -477,7 +479,10 @@
     </div>
   </div>
 </template>
-
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
+</script>
 <script>
 export default {
   data: () => ({

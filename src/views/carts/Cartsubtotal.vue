@@ -11,7 +11,7 @@
               <span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">QAR </span
-                  >1,068.66</bdi
+                  >{{ cartStore.total }}</bdi
                 ></span
               >
             </td>
@@ -529,6 +529,10 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
+</script>
 <script>
 export default {
   data: () => ({

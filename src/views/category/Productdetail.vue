@@ -258,6 +258,9 @@
                               button
                               alt
                             "
+                            @click="
+                              cartStore.addItems(this.quantity, this.results)
+                            "
                           >
                             <span>Add to cart</span>
                           </button>
@@ -2401,6 +2404,8 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
@@ -2449,6 +2454,17 @@ export default {
     //Every 10ms decrease the timeLeft
     countdownInterval: 10,
     langCode: "en",
+    results: {
+      name: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
+      price: 233,
+      images: [
+        {
+          photo:
+            "images/products/jacobs-kronung-instant-coffee-100-gm/760x760-1649745536648.jpg",
+        },
+      ],
+      sale_price: 233,
+    },
     images: {
       0: {
         thumb:

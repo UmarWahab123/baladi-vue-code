@@ -70,7 +70,7 @@
                       class="product custom-hover"
                       :data="item"
                       :key="indextr"
-                      v-for="(item, indextr) in results"
+                      v-for="(item, indextr) in productStore.products"
                     >
                       <div class="product-wrapper product-type-3">
                         <div class="product-content">
@@ -89,7 +89,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      :src="this.url + item.images[0].photo"
+                                      :src="url + item.images[0].photo"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -106,9 +106,7 @@
                                     </div>
                                   </div>
                                   <div class="slidingSection">
-                                    <img
-                                      :src="this.url + item.images[0].photo"
-                                    />
+                                    <img :src="url + item.images[0].photo" />
                                     <div class="hover-slider-indicator">
                                       <div
                                         data-hover-slider-i="45"
@@ -254,6 +252,7 @@
                                 add_to_cart_button
                                 ajax_add_to_cart
                               "
+                              @click="$emit(cartStore.items.push(item))"
                               ><i class="klbth-icon-shop-1"></i> Add to cart</a
                             >
                           </div>
@@ -1510,10 +1509,17 @@ img {
   box-shadow: 0 1px 0 hsla(0, 0, 25, 0.4);
 }
 </style>
-
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
+</script>
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useProductStore } from "../../stores/ProductStore";
 
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
@@ -1579,6 +1585,8 @@ export default {
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);
+        const productStore = useProductStore();
+        productStore.testData(this.results);
       })
       .catch((error) => {});
 
