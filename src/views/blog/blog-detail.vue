@@ -15,7 +15,17 @@
               <div class="single-post">
                 <article
                   id="post-2117"
-                  class="klb-article post-2117 post type-post status-publish format-standard has-post-thumbnail hentry category-watches tag-klbtheme tag-themeforest"
+                  class="
+                    klb-article
+                    post-2117 post
+                    type-post
+                    status-publish
+                    format-standard
+                    has-post-thumbnail
+                    hentry
+                    category-watches
+                    tag-klbtheme tag-themeforest
+                  "
                 >
                   <div class="entry-post-header">
                     <h2 class="entry-title">
@@ -27,34 +37,32 @@
                         <span class="meta-item entry-published"
                           ><a href="#"
                             ><i class="klbth-icon-clock-outline"></i>
-                            {{ item.created_at }}</a
+                            {{
+                              moment(String(item.created_at)).format(
+                                "MM-DD-YYYY hh:mm"
+                              )
+                            }}</a
                           ></span
                         >
-                        <span class="meta-item category"
+                        <span class="meta-item category" style="display: none">
                           ><i class="klbth-icon-bookmark-empty"></i>
                           <a href="#" rel="category tag">Watches</a></span
                         >
-                        <span class="meta-item entry-tags"
-                          ><i class="klbth-icon-cinema"></i
-                          ><a href="#" rel="tag">klbtheme</a>,
-                          <a href="#" rel="tag">themeforest</a>
-                        </span>
                       </div>
                     </div>
                   </div>
                   <figure class="entry-media">
-                    <a href="#"
-                      >
+                    <a href="#">
                       <!--
                       <img
                         :src="url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
                     /> -->
-                     <img
+                      <img
                         src="http://baladiweb.bteamwebs.com/storage/images/blogs/1650282422_product-3-400x400.webp"
                         alt="But I must explain to you how all this mistaken idea"
-                    />
-                    </a> 
+                      />
+                    </a>
                   </figure>
                   <div class="entry-content">
                     <div class="klb-post">
@@ -74,16 +82,21 @@
                   </h5>
                   <ol class="comment-list">
                     <li
-                      class="comment byuser comment-author-sinan bypostauthor even thread-even depth-1"
+                      class="
+                        comment
+                        byuser
+                        comment-author-sinan
+                        bypostauthor
+                        even
+                        thread-even
+                        depth-1
+                      "
                       id="comment-5"
+                      :data="comment"
+                      :key="indcomments"
+                      v-for="(comment, indcomments) in item.comments"
                     >
-                      <div
-                        :data="comment"
-                        :key="indcomments"
-                        v-for="(comment, indcomments) in item.comments"
-                        id="div-comment-5"
-                        class="comment-body"
-                      >
+                      <div id="div-comment-5" class="comment-body">
                         <div class="comment-avatar">
                           <div class="comment-author vcard">
                             <img
@@ -96,9 +109,15 @@
 
                         <div class="comment-content">
                           <div class="comment-meta">
-                            <b class="fn"><a class="url">admin</a></b>
+                            <b class="fn"
+                              ><a class="url">{{ comment.customer.name }}</a></b
+                            >
                             <div class="comment-metadata">
-                              <time>October 11, 2021</time>
+                              <time>{{
+                                moment(String(comment.created_at)).format(
+                                  "MM-DD-YYYY hh:mm"
+                                )
+                              }}</time>
                             </div>
                           </div>
 
@@ -112,10 +131,9 @@
                             <a
                               rel="nofollow"
                               class="comment-reply-link reply-btn"
-                              href="#?replytocom=5#respond"
                               data-commentid="5"
                               data-postid="2117"
-                              @click="isShow = !isShow"
+                              @click="isShowReply(indcomments)"
                               data-belowelement="comment-5"
                               data-respondelement="respond"
                               data-replyto="Reply to admin"
@@ -125,98 +143,116 @@
                           </div>
                         </div>
                       </div>
-                    </li>
-                    <input type="hidden" value="1" v-bind="formdata1.blog_id" />
-                    <input
-                      type="hidden"
-                      value="1"
-                      v-bind="formdata1.comment_id"
-                    />
-                    <p
-                      :class="{ hide: !isShow }"
-                      class="comment-form-comment reply-comment"
-                    >
-                      <label for="comment"
-                        >Reply
-                        <span class="required" aria-hidden="true"
-                          >*</span
-                        ></label
+                      <ul
+                        class="children"
+                        v-for="(reply, indextr) in comment.replies"
                       >
-                      <textarea
-                        id="comment"
-                        v-model="formdata1.comment"
-                        cols="45"
-                        rows="4"
-                        maxlength="65525"
-                        required="required"
-                      ></textarea>
-                    </p>
-                    <p
-                      v-if="errors"
-                      class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
-                    >
-                      {{ errors }}
-                    </p>
-                    <p class="form-submit">
-                      <input
-                        @click="PostReply()"
-                        name="submit"
-                        type="submit"
-                        class="submit"
-                        value="Post Reply"
-                      />
-                    </p>
-                    <ul class="children">
-                      <li class="comment odd alt depth-2" id="comment-6">
-                        <div id="div-comment-6" class="comment-body">
-                          <div class="comment-avatar">
-                            <div class="comment-author vcard">
-                              <img
-                                src="https://secure.gravatar.com/avatar/b9d9bd0532ed8921f164c89995783e78?s=96&amp;d=mm&amp;r=g"
-                                alt="Elliot Alderson"
-                                class="avatar"
-                              />
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <div class="comment-meta">
-                              <b class="fn"
-                                ><a class="url">Elliot Alderson</a></b
-                              >
-                              <div class="comment-metadata">
-                                <time>October 11, 2021</time>
+                        <li class="comment odd alt depth-2" id="comment-6">
+                          <div id="div-comment-6" class="comment-body">
+                            <div class="comment-avatar">
+                              <div class="comment-author vcard">
+                                <img
+                                  src="https://secure.gravatar.com/avatar/b9d9bd0532ed8921f164c89995783e78?s=96&amp;d=mm&amp;r=g"
+                                  alt="Elliot Alderson"
+                                  class="avatar"
+                                />
                               </div>
                             </div>
-                            <div class="klb-post">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                                Quis ipsum suspendisse ultrices gravida. Risus
-                                commodo viverra maecenas accumsan lacus vel
-                                facilisis.
-                              </p>
-                            </div>
-                            <div class="reply">
-                              <a
-                                rel="nofollow"
-                                class="comment-reply-link"
-                                href="#?replytocom=6#respond"
-                                data-commentid="6"
-                                data-postid="2117"
-                                data-belowelement="comment-6"
-                                data-respondelement="respond"
-                                data-replyto="Reply to Elliot Alderson"
-                                aria-label="Reply to Elliot Alderson"
-                                >Reply</a
-                              >
+                            <div class="comment-content">
+                              <div class="comment-meta">
+                                <b class="fn"
+                                  ><a class="url">{{
+                                    reply.customer.name
+                                  }}</a></b
+                                >
+                                <div class="comment-metadata">
+                                  <time>{{
+                                    moment(String(reply.created_at)).format(
+                                      "MM-DD-YYYY hh:mm"
+                                    )
+                                  }}</time>
+                                </div>
+                              </div>
+                              <div class="klb-post">
+                                <p>
+                                  {{ reply.comment }}
+                                </p>
+                              </div>
+                              <div class="reply">
+                                <a
+                                  rel="nofollow"
+                                  class="comment-reply-link"
+                                  href="#?replytocom=6#respond"
+                                  data-commentid="6"
+                                  data-postid="2117"
+                                  data-belowelement="comment-6"
+                                  data-respondelement="respond"
+                                  data-replyto="Reply to Elliot Alderson"
+                                  aria-label="Reply to Elliot Alderson"
+                                  >Reply</a
+                                >
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                      <div
+                        id="respond"
+                        v-if="comment.reply"
+                        class="comment-respond mt-3"
+                        :style="showReplyInput"
+                      >
+                        <input
+                          type="hidden"
+                          value="1"
+                          v-bind="formdata1.comment_id"
+                        />
+                        <h3 id="reply-title" class="comment-reply-title">
+                          Leave a Reply
+                          <small
+                            ><a
+                              rel="nofollow"
+                              id="cancel-comment-reply-link "
+                              @click="hideReplyText(indcomments)"
+                              >Cancel reply</a
+                            ></small
+                          >
+                        </h3>
+                        <p class="comment-form-comment reply-comment">
+                          <textarea
+                            id="comment"
+                            v-model="formdata1.comment"
+                            cols="45"
+                            rows="4"
+                            maxlength="65525"
+                            required="required"
+                          ></textarea>
+                        </p>
+                        <p
+                          v-if="errors"
+                          class="
+                            alert alert-danger alert-dismissible
+                            fade
+                            show
+                            col-md-6 col-6
+                          "
+                        >
+                          {{ errors }}
+                        </p>
+                        <p class="form-submit">
+                          <input
+                            @click="PostReply(comment.id)"
+                            name="submit"
+                            type="submit"
+                            class="submit"
+                            value="Post Reply"
+                          />
+                        </p>
+                      </div>
+                    </li>
+                    <input type="hidden" value="1" v-bind="formdata1.blog_id" />
                   </ol>
-                  <div class="post-comments-form">
+                  <div class="post-comments-form" v-if="userLogin">
                     <div id="respond" class="comment-respond">
                       <h3 id="reply-title" class="comment-reply-title">
                         Leave a Reply
@@ -244,7 +280,7 @@
                       </p>
                       <input
                         type="hidden"
-                        value="1"
+                        :value="item.id"
                         v-bind="formdata.blog_id"
                       />
                       <input
@@ -271,7 +307,12 @@
                       </p>
                       <p
                         v-if="errors"
-                        class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+                        class="
+                          alert alert-danger alert-dismissible
+                          fade
+                          show
+                          col-md-6 col-6
+                        "
                       >
                         {{ errors }}
                       </p>
@@ -488,53 +529,90 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
+import moment from "moment";
 import axios from "axios";
 export default {
   data: () => ({
     url: "http://baladiweb.bteamwebs.com/storage/",
     results: [],
     formdata: {
-      blog_id: 1,
-      customer_id: 1,
+      blog_id: "",
+      customer_id: "",
       comment: null,
     },
     errors: "",
     formdata1: {
-      blog_id: 1,
+      blog_id: "",
       comment_id: 1,
       comment: null,
     },
     errors: "",
+    showReplyInput: "",
   }),
   mounted() {
-    var id = this.$route.params.id;
-    axios
-      .get("http://baladiweb.bteamwebs.com/api/web/blogdetails/" + id)
-      .then((response) => {
-        this.results = response.data.data;
-        console.log(this.results);
-      })
-      .catch((error) => {});
+    if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.formdata.customer_id = userInfo.id;
+      this.userLogin = true;
+    }
+    this.postDetail();
   },
   methods: {
     PostComment() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/web/addblogcomment",
+          "http://baladi-v1.bteamwebs.com/api/web/addblogcomment",
           this.formdata
         )
         .then((response) => {
-          if (response.data.status == 400) {
-            this.errors = response.data.message;
+          if (response.data.status == 400 || response.data.status == 500) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
+            this.formdata.comment = "";
+            this.postDetail();
           }
         });
     },
-    PostReply() {
+    PostReply(id) {
+      console.log(id);
+      this.formdata1.comment_id = id;
+      console.log(this.formdata1);
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/web/addcommentreply",
+          "http://baladi-v1.bteamwebs.com/api/web/addcommentreply",
           this.formdata1
         )
         .then((response) => {
@@ -542,9 +620,45 @@ export default {
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
+            this.formdata1.comment = "";
+            this.postDetail();
           }
         });
+    },
+    isShowReply(indcomments) {
+      // console.log(this.results[0].comments);
+      this.results[0].comments[indcomments].reply = true;
+      // this.showReplyInput = "display:block";
+    },
+    hideReplyText(indcomments) {
+      this.results[0].comments[indcomments].reply = false;
+    },
+    postDetail() {
+      var id = this.$route.params.id;
+      axios
+        .get("http://baladi-v1.bteamwebs.com/api/web/blogdetails/" + id)
+        .then((response) => {
+          this.results = response.data.data;
+          console.log(this.results);
+          this.formdata.blog_id = this.results[0].id;
+          this.formdata1.blog_id = this.results[0].id;
+        })
+        .catch((error) => {});
     },
   },
 };

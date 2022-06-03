@@ -164,6 +164,8 @@ export default {
         email: null,
         phone: null,
         password: null,
+        fcm_token: null,
+        device: "web",
       },
       errors: "",
       langCode: "en",
@@ -195,16 +197,15 @@ export default {
 
   methods: {
     async register() {
+      this.formdata.fcm_token = this.formdata.name;
       const result = await this.v$.$validate();
       // alert(result);
       if (!result) {
         return;
       }
+      console.log(this.formdata);
       axios
-        .post(
-          import.meta.env.VITE_API_URL + "/api/auth/register",
-          this.formdata
-        )
+        .post("http://baladi-v1.bteamwebs.com/api/auth/register", this.formdata)
         .then((response) => {
           // console.log(response);
 

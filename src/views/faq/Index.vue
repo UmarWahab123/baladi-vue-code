@@ -14,19 +14,21 @@
               </div>
 
               <div class="row mt-60">
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="col-md-6 col-lg-4 mb-4"
+                  v-for="(item, index) in results"
+                >
                   <h6 class="mb-3">
-                    <i class="far fa-paper-plane text-success pe-2"></i> A Where
-                    can I find the opening hours of my local store?
+                    <i class="far fa-paper-plane text-success pe-2"></i>
+                    {{ item.question }}
                   </h6>
                   <p>
-                    <strong><u></u></strong> We have a dedicated section with
-                    all of the opening hours for all of our stores. Please visit
-                    our Store Locator page to learn more.
+                    <strong><u></u></strong>
+                    <span class="content-color" v-html="item.answer"></span>
                   </p>
                 </div>
 
-                <div class="col-md-6 col-lg-4 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 mb-4">
                   <h6 class="mb-3">
                     <i class="fas fa-pen-alt text-success pe-2"></i> Where's my
                     nearest store?
@@ -84,7 +86,7 @@
                     Please consult our customer service desk or reach our
                     customer service on 80073.
                   </p>
-                </div>
+                </div> -->
               </div>
             </section>
           </div>
@@ -101,19 +103,38 @@
       >
         <div class="elementor-section-wrap">
           <section
-            class="elementor-section elementor-top-section elementor-element elementor-element-677addc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            class="
+              elementor-section
+              elementor-top-section
+              elementor-element
+              elementor-element-677addc
+              elementor-section-boxed
+              elementor-section-height-default
+              elementor-section-height-default
+            "
             data-id="677addc"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-45b25de"
+                class="
+                  elementor-column
+                  elementor-col-100
+                  elementor-top-column
+                  elementor-element
+                  elementor-element-45b25de
+                "
                 data-id="45b25de"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="elementor-element elementor-element-58f7dcf elementor-widget elementor-widget-machic-custom-title"
+                    class="
+                      elementor-element
+                      elementor-element-58f7dcf
+                      elementor-widget
+                      elementor-widget-machic-custom-title
+                    "
                     data-id="58f7dcf"
                     data-element_type="widget"
                     data-widget_type="machic-custom-title.default"
@@ -132,19 +153,38 @@
           </section>
 
           <section
-            class="elementor-section elementor-top-section elementor-element elementor-element-187d03f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            class="
+              elementor-section
+              elementor-top-section
+              elementor-element
+              elementor-element-187d03f
+              elementor-section-boxed
+              elementor-section-height-default
+              elementor-section-height-default
+            "
             data-id="187d03f"
             data-element_type="section"
           >
             <div class="elementor-container elementor-column-gap-extended">
               <div
-                class="elementor-column elementor-col-43 elementor-top-column elementor-element elementor-element-fa6036d"
+                class="
+                  elementor-column
+                  elementor-col-43
+                  elementor-top-column
+                  elementor-element
+                  elementor-element-fa6036d
+                "
                 data-id="fa6036d"
                 data-element_type="column"
               >
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
-                    class="elementor-element elementor-element-4178a16 elementor-widget elementor-widget-machic-contact-form-7"
+                    class="
+                      elementor-element
+                      elementor-element-4178a16
+                      elementor-widget
+                      elementor-widget-machic-contact-form-7
+                    "
                     data-id="4178a16"
                     data-element_type="widget"
                     data-widget_type="machic-contact-form-7.default"
@@ -215,7 +255,11 @@
                                     name="your-name"
                                     value=""
                                     size="40"
-                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                    class="
+                                      wpcf7-form-control
+                                      wpcf7-text
+                                      wpcf7-validates-as-required
+                                    "
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -228,7 +272,13 @@
                                     name="your-email"
                                     value=""
                                     size="40"
-                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                    class="
+                                      wpcf7-form-control
+                                      wpcf7-text
+                                      wpcf7-email
+                                      wpcf7-validates-as-required
+                                      wpcf7-validates-as-email
+                                    "
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -242,7 +292,11 @@
                                     name="your-subject"
                                     value=""
                                     size="40"
-                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                    class="
+                                      wpcf7-form-control
+                                      wpcf7-text
+                                      wpcf7-validates-as-required
+                                    "
                                     aria-required="true"
                                     aria-invalid="false"
                                 /></span>
@@ -265,7 +319,11 @@
                                 <input
                                   type="submit"
                                   value="Send Message"
-                                  class="wpcf7-form-control has-spinner wpcf7-submit"
+                                  class="
+                                    wpcf7-form-control
+                                    has-spinner
+                                    wpcf7-submit
+                                  "
                                 /><span class="wpcf7-spinner"></span>
                               </div>
                             </div>
@@ -297,14 +355,23 @@ import Footer from "../layout/Footer.vue";
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
+
 export default {
   components: { TheLoader },
   data() {
     return {
       isloading: true,
+      results: [],
     };
   },
   mounted() {
+    axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/faqs?locale=en")
+      .then((response) => {
+        this.results = response.data.data;
+      })
+      .catch((error) => {});
     setTimeout(() => (this.isloading = false), 1000);
   },
 };

@@ -18,7 +18,7 @@
           product-type-simple
           custom-hover
         "
-        v-for="n in 15"
+        v-for="(item, index) in results"
       >
         <div class="product-wrapper product-type-1">
           <div class="product-content">
@@ -152,9 +152,7 @@
             </div>
             <div class="content-wrapper">
               <h3 class="product-title">
-                <a href="javascript:void(0)"
-                  >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
-                >
+                <a href="javascript:void(0)">{{ item.product_name }}</a>
               </h3>
               <div class="product-rating">
                 <div
@@ -167,7 +165,8 @@
                   >
                 </div>
                 <div class="count-rating">
-                  1 <span class="rating-text">Ratings</span>
+                  {{ item.review_count
+                  }}<span class="rating-text">Ratings</span>
                 </div>
               </div>
               <div class="product-price-cart">
@@ -177,7 +176,7 @@
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >699.99</bdi
+                        >{{ item.previous_price }}</bdi
                       >
                     </span></del
                   >
@@ -189,7 +188,7 @@
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >629.99</bdi
+                        >{{ item.regular_price }}</bdi
                       >
                     </span></ins
                   ></span
@@ -1418,6 +1417,7 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 import.meta.env.VITE_API_KEY;
 
 export default {
@@ -1458,6 +1458,7 @@ export default {
       },
     },
     langCode: "en",
+    results: [],
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -1474,8 +1475,21 @@ export default {
     },
   },
   mounted() {
+    var id = this.$route.params.id;
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+    // alert(id);
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/mobile/product/categoryproducts/" +
+          id +
+          "?locale=en"
+      )
+      .then((response) => {
+        this.results = response.data.data.data;
+        // console.log("response.data.data", response.data.data.data);
+      })
+      .catch((error) => {});
   },
   methods: {
     clickmodal(index) {

@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 #loader {
-  background: #fcfcfd url(/../src/assets/img/loading.gif) center center
+  background: #fcfcfd url("http://bteamwebs.com/loading.gif") center center
     no-repeat;
   background-size: 6%;
   height: 100vh;

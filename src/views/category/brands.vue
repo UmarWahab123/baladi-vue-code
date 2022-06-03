@@ -152,7 +152,7 @@
                           <div class="square-holder shadow">
                             <router-link
                               class=""
-                              :to="'/' + langCode + '/brandsProduct' + item.id"
+                              :to="'/' + langCode + '/brandsProduct/' + item.id"
                               ><img alt="" :src="url + item.photo" />
                             </router-link>
                           </div>

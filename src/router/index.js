@@ -6,8 +6,12 @@ var main_url = document.location.href;
 let text = document.location.pathname.split("/");
 var langCode = localStorage.getItem("lang");
 var url = main_url.replace(text[1], langCode);
-if (langCode !== params) {
-  location.href = url;
+if (langCode != null) {
+  if (langCode !== params) {
+    location.href = url;
+  }
+} else {
+  langCode = "en";
 }
 // var params = url.split("/")[3];
 // var params = localStorage.getItem("lang");
@@ -19,7 +23,7 @@ const routes = [
   },
   {
     name: "category",
-    path: "/" + langCode + "/category",
+    path: "/" + langCode + "/category/:id?",
     component: () => import("@/views/category/Index.vue"),
   },
   {
@@ -220,7 +224,7 @@ const routes = [
   },
   {
     name: "all_categories",
-    path: "/" + langCode + "/all_categories",
+    path: "/" + langCode + "/all_categories/:id?",
     component: () => import("@/views/category/all_categories.vue"),
   },
   {
@@ -230,7 +234,8 @@ const routes = [
   },
   {
     name: "brandsProduct",
-    path: "/" + langCode + "/brandsproduct/ :id?",
+    path: "/" + langCode + "/brandsProduct/:id?",
+
     component: () => import("@/views/category/brandsProduct.vue"),
   },
   {

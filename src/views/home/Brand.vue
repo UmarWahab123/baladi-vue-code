@@ -81,15 +81,16 @@ import axios from "axios";
 export default {
   components: { Splide, SplideSlide },
   data: () => ({
-    url: "http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     results: [],
     langCode: "en",
   }),
   mounted() {
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands")
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/getBrands")
       .then((response) => {
-        this.results = response.data.data;
+        this.results = response.data.data.data;
+        console.log("brand", this.results);
       })
       .catch((error) => {});
 

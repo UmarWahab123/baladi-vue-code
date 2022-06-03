@@ -119,12 +119,12 @@
 
                   <div class="col col-12 col-lg-6">
                     <h1 class="product_title entry-title">
-                      {{ productDetails.name }}
+                      {{ results.product_name }}
                     </h1>
                     <div class="product-meta">
                       <div class="product-model">
                         <span>weight:</span>
-                        {{ productDetails.weight }}
+                        {{ results.weight }}
                       </div>
                       <!-- product-model -->
                       <div class="sku-wrapper"></div>
@@ -151,7 +151,7 @@
                             class="woocommerce-review-link"
                             rel="nofollow"
                             ><span class="count">{{
-                              productDetails.allow_reviews
+                              results.allow_reviews
                             }}</span>
                             review</a
                           >
@@ -169,7 +169,7 @@
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
                                 >QAR </span
-                              >2.00</bdi
+                              >{{ sub_products.previous_price }}</bdi
                             ></span
                           ></del
                         >
@@ -178,7 +178,7 @@
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
                                 >QAR </span
-                              >1.00</bdi
+                              >{{ sub_products.regular_price }}</bdi
                             ></span
                           ></ins
                         ></span
@@ -495,10 +495,10 @@
                 >
                   <h2>Description</h2>
 
-                  <h6>{{ productDetails.short_description }}</h6>
+                  <h6>{{ results.short_description }}</h6>
 
-                  <p>Fresh laban botel with minimum price available</p>
-                  <p>Key Features:</p>
+                  <p>{{ results.description }}</p>
+                  <!-- <p>Key Features:</p>
                   <ul>
                     <li>slim body with metal cover</li>
                     <li>
@@ -508,7 +508,7 @@
                     <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
                     <li>NVIDIA GeForce MX350 2GB GDDR5 graphics card</li>
                     <li>backlit keyboard, touchpad with gesture support</li>
-                  </ul>
+                  </ul> -->
                   <!-- <p>Key Features:</p> -->
                   <!-- <ul>
                                     <li>slim body with metal cover</li>
@@ -2434,12 +2434,7 @@ export default {
     isloading: true,
     quantity: 1,
     url: "http://baladiweb.bteamwebs.com/storage/",
-    productDetails: {
-      name: "",
-      allow_reviews: "",
-      weight: "",
-      short_description: "",
-    },
+
     errors: "",
     //Index of the active image
     activeImage: 0,
@@ -2454,6 +2449,7 @@ export default {
     //Every 10ms decrease the timeLeft
     countdownInterval: 10,
     langCode: "en",
+    sub_products: [],
     results: {
       name: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
       price: 233,
@@ -2510,14 +2506,13 @@ export default {
     var id = this.$route.params.id;
     axios
       .get(
-        "http://baladiweb.bteamwebs.com/api/mobile/product/getProducts/" + id
+        "http://baladi-v1.bteamwebs.com/api/mobile/product/getProducts/" + id
       )
       .then((response) => {
-        this.productDetails.name = response.data.data[0].name;
-        this.productDetails.allow_reviews = response.data.data[0].allow_reviews;
-        this.productDetails.weight = response.data.data[0].weight;
-        this.productDetails.short_description =
-          response.data.data[0].short_description;
+        console.log(response.data);
+        this.results = response.data.data[0];
+        this.sub_products = response.data.data[0].uom_products[0];
+        console.log("this results", this.sub_products.previous_price);
       })
       .catch((error) => {});
     var lang = localStorage.getItem("lang");

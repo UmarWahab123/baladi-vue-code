@@ -101,19 +101,38 @@
       <!-- row -->
     </div>
     <section
-      class="elementor-section elementor-top-section elementor-element elementor-element-52524a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      class="
+        elementor-section
+        elementor-top-section
+        elementor-element
+        elementor-element-52524a1
+        elementor-section-boxed
+        elementor-section-height-default
+        elementor-section-height-default
+      "
       data-id="52524a1"
       data-element_type="section"
     >
       <div class="elementor-container elementor-column-gap-extended">
         <div
-          class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6cf7656"
+          class="
+            elementor-column
+            elementor-col-100
+            elementor-top-column
+            elementor-element
+            elementor-element-6cf7656
+          "
           data-id="6cf7656"
           data-element_type="column"
         >
           <div class="elementor-widget-wrap elementor-element-populated">
             <div
-              class="elementor-element elementor-element-d96753c elementor-widget elementor-widget-machic-product-categories"
+              class="
+                elementor-element
+                elementor-element-d96753c
+                elementor-widget
+                elementor-widget-machic-product-categories
+              "
               data-id="d96753c"
               data-element_type="widget"
               data-widget_type="machic-product-categories.default"
@@ -128,9 +147,20 @@
                   >
                     <div class="site-module module-category-list style-1">
                       <div class="category-image">
-                        <a href=""
-                          ><img :src="url + item.photo" alt="Cell Phones"
-                        /></a>
+                        <router-link
+                          class=""
+                          :to="{
+                            name: 'category',
+                            params: { type: 'maincat', id: item.id },
+                          }"
+                        >
+                          <img
+                            :src="
+                              'http://baladi-v1.bteamwebs.com/storage/' +
+                              item.photo
+                            "
+                            alt="Cell Phones"
+                        /></router-link>
                       </div>
                       <div class="category-detail">
                         <h3 class="category-name">
@@ -177,9 +207,9 @@ export default {
   }),
   mounted() {
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/header/categories")
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=en")
       .then((response) => {
-        this.results = response.data.data;
+        this.results = response.data.data.data;
         console.log(this.results);
       })
       .catch((error) => {});

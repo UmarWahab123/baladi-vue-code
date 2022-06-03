@@ -177,10 +177,11 @@ export default {
   data() {
     return {
       formdata: {
-        email: "imwa5i7@gmail.com",
-        password: "imwasil",
+        email: "salman@gmail.com",
+        password: "11223344",
         device: "mobile",
         responseData: "null",
+        fcm_token: "adsfasda",
       },
       errors: "",
       langCode: "en",
@@ -210,7 +211,7 @@ export default {
         return;
       }
       axios
-        .post(import.meta.env.VITE_API_URL + "/api/auth/login", this.formdata)
+        .post("http://baladi-v1.bteamwebs.com/api/auth/login", this.formdata)
         .then((response) => {
           if (response.data.status == 200) {
             localStorage.setItem(
@@ -227,7 +228,24 @@ export default {
             // console.log(userInfo);
             this.$router.push("/" + lang + "/userdashboard");
           } else {
-            this.errors = response.data.message;
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
           }
         });
     },

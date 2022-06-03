@@ -75,24 +75,6 @@
                     </div>
                   </div>
                 </article>
-
-                <div class="col col-12">
-                  <div class="site-pagination">
-                    <ul class="page-numbers">
-                      <li>
-                        <span aria-current="page" class="page-numbers current"
-                          >1</span
-                        >
-                      </li>
-                      <li><a class="page-numbers" href="#">2</a></li>
-                      <li>
-                        <a class="next page-numbers" href="#"
-                          ><i class="klbth-icon-nav-arrow-right"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div
@@ -279,14 +261,14 @@ import Footer from "../layout/Footer.vue";
 import axios from "axios";
 export default {
   data: () => ({
-    url: "http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     results: [],
     langCode: "en",
   }),
   mounted() {
     axios
       // .get(import.meta.env.VITE_API_URL + "/api/web/blog")
-      .get("http://baladiweb.bteamwebs.com/api/web/blog")
+      .get("http://baladi-v1.bteamwebs.com/api/web/blog")
       .then((response) => {
         this.results = response.data.data;
       })

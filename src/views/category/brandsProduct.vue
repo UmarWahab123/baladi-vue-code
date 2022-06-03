@@ -69,7 +69,7 @@
                             <a href="#">
                               <div class="product-card">
                                 <img
-                                  :src="url + item.images[0].photo"
+                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
                                   data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
                                 />
                               </div>
@@ -176,7 +176,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ item.sale_price }}</bdi
+                                      >{{ item.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -1485,19 +1485,21 @@ export default {
     showcomparemodalstyle: "",
     langCode: "en",
 
-
     errors: "",
   }),
   mounted() {
+    console.log("params", this.$route.params);
     var id = this.$route.params.id;
+    console.log(id);
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/header/brandProducts/" + id)
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/brandProducts/" + id)
       .then((response) => {
         this.results = response.data.data.data;
-        // console.log(this.results);
+        console.log("brand product", this.results);
       })
       .catch((error) => {});
-      var lang = localStorage.getItem("lang");
+
+    var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
   methods: {

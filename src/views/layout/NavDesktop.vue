@@ -1025,22 +1025,28 @@
                       has-image
                       column-1
                     "
+                    :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in results.slice(0, 11)"
                   >
                     <a href="#">
                       <div class="menu-icon">
                         <img
                           style="padding: 1px"
-                          src="@/assets/img/icon/fruits.jpg"
+                          :src="
+                            'http://baladi-v1.bteamwebs.com/storage/' +
+                            item.photo
+                          "
                         />
                       </div>
-                      Fresh
+                      {{ item.name }}
                     </a>
                     <ul
                       class="sub-menu"
-                      style="
-                        background-image: url(/../src/assets/img/category-menu-3.png);
-                        width: 1000px;
-                      "
+                      :style="{
+                        'background-image': `url( http://baladi-v1.bteamwebs.com/storage/${item.photo})`,
+                        width: '580px',
+                      }"
                     >
                       <div class="container">
                         <div class="row">
@@ -1064,8 +1070,21 @@
                                           menu-item
                                           menu-item-type-taxonomy
                                         "
+                                        :data="items"
+                                        :key="indextr"
+                                        v-for="(
+                                          items, indextr
+                                        ) in item.sub_categories.slice(0, 10)"
                                       >
-                                        <a href="#">Bakery</a>
+                                        <router-link
+                                          :to="
+                                            '/' +
+                                            langCode +
+                                            '/category/' +
+                                            items.id
+                                          "
+                                          >{{ items.name }}</router-link
+                                        >
 
                                         <ul style="width: 720px !important">
                                           <div class="row">
@@ -1087,534 +1106,31 @@
                                                       menu-item-type-taxonomy
                                                       list-sign
                                                     "
+                                                    :data="subitems"
+                                                    :key="indextr"
+                                                    v-for="(
+                                                      subitems, indextr
+                                                    ) in items.sub_categories"
                                                   >
-                                                    <a href="#"
-                                                      >Baladi brown bread</a
+                                                    <router-link
+                                                      :dataid="subitems.id"
+                                                      :to="
+                                                        '/' +
+                                                        langCode +
+                                                        '/category/' +
+                                                        subitems.id
+                                                      "
+                                                      >{{
+                                                        subitems.name
+                                                      }}</router-link
                                                     >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi burger bun
-                                                      1x6pcs</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi burger bun
-                                                      260gz</a
-                                                    >
-                                                  </li>
-                                                  <li class="">
-                                                    <a class="link" href="#"
-                                                      >shop more<img
-                                                        src="@/assets/style/icons/arrow-right-short.svg"
-                                                    /></a>
-                                                  </li>
-                                                </ul>
-                                              </li>
-                                            </div>
-                                            <div class="col">
-                                              <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
-                                              >
-                                                <a href="#">Cakes Items</a>
-                                                <ul class="sub-menu">
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi heart cake</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi assorted
-                                                      pasteries</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi baklava
-                                                      pistachio</a
-                                                    >
-                                                  </li>
-                                                  <li>
-                                                    <a class="link" href="#"
-                                                      >shop more<img
-                                                        src="@/assets/style/icons/arrow-right-short.svg"
-                                                    /></a>
-                                                  </li>
-                                                </ul>
-                                              </li>
-                                            </div>
-                                            <div class="col">
-                                              <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
-                                              >
-                                                <a href="#"
-                                                  >Croissant and fatayer</a
-                                                >
-                                                <ul class="sub-menu">
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi cheese croissant
-                                                    </a>
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi cheese fathayer</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi chicken
-                                                      fathayer</a
-                                                    >
-                                                  </li>
-                                                  <li>
-                                                    <a class="link" href="#"
-                                                      >shop more<img
-                                                        src="@/assets/style/icons/arrow-right-short.svg"
-                                                    /></a>
                                                   </li>
                                                 </ul>
                                               </li>
                                             </div>
                                           </div>
-                                          <div class="row">
-                                            <div class="col">
-                                              <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
-                                              >
-                                                <a href="#">Sweets</a>
-                                                <ul class="sub-menu">
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi mamoul tamar</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi almond biscuit</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      list-sign
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Baladi baklava daimond
-                                                      kg</a
-                                                    >
-                                                  </li>
-                                                  <li>
-                                                    <a class="link" href="#"
-                                                      >shop more<img
-                                                        src="@/assets/style/icons/arrow-right-short.svg"
-                                                    /></a>
-                                                  </li>
-                                                </ul>
-                                              </li>
-                                            </div>
-                                            <!-- <div class="col">
-                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
-                                                  <a href="#">Bread Items</a>
-                                                  <ul class="sub-menu">
-                                                    <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                        href="#">Baladi brown bread</a></li>
-                                                        <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                          href="#">Baladi burger bun 1x6pcs</a></li>
-                                                          <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                            href="#">Baladi burger bun 260gz</a></li>
-    
-                                                  </ul>
-                                                  </li>
-                                              </div>
-                                              <div class="col">
-                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children column-1">
-                                                  <a href="#">Bread Items</a>
-                                                  <ul class="sub-menu">
-                                                    <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                        href="#">Baladi brown bread</a></li>
-                                                        <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                          href="#">Baladi burger bun 1x6pcs</a></li>
-                                                          <li class=" menu-item menu-item-type-taxonomy list-sign"><a
-                                                            href="#">Baladi burger bun 260gz</a></li>
-    
-                                                  </ul>
-                                                  </li>
-                                              </div> -->
-                                          </div>
                                         </ul>
                                       </li>
-                                      <li class="menu-item">
-                                        <a href="#">Diary products & egg</a>
-                                        <ul>
-                                          <li class="menu-item">
-                                            <a href="#">Egg</a>
-                                          </li>
-                                          <li class="menu-item">
-                                            <a href="#">Milk</a>
-                                          </li>
-                                          <li class="menu-item">
-                                            <a href="#">Cakes</a>
-                                          </li>
-                                          <li class="menu-item">
-                                            <a href="#">Sweets</a>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li class="menu-item">
-                                        <a href="#">Sweets</a>
-                                        <ul style="top: -96px !important">
-                                          <li
-                                            class="
-                                              menu-item menu-item-type-taxonomy
-                                              menu-item-object-product_cat
-                                              menu-item-has-children
-                                              column-1
-                                            "
-                                          >
-                                            <a href="#">Sweet Items</a>
-                                            <ul class="sub-menu">
-                                              <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  list-sign
-                                                "
-                                              >
-                                                <a href="#">Cheez</a>
-                                                <ul>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                      menu-item-has-children
-                                                      column-1
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Milk &amp; Products</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >HD DVD Players</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >Projection Screens</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >Projectors</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >Television
-                                                          Accessories</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >Televisions</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >TV-DVD Combos</a
-                                                        >
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#">VCRs</a>
-                                                      </li>
-                                                      <li
-                                                        class="
-                                                          menu-item
-                                                          menu-item-type-taxonomy
-                                                          menu-item-object-product_cat
-                                                        "
-                                                      >
-                                                        <a href="#"
-                                                          >Video Glasses</a
-                                                        >
-                                                      </li>
-                                                    </ul>
-                                                  </li>
-                                                </ul>
-                                              </li>
-                                            </ul>
-                                          </li>
-                                          <li
-                                            class="
-                                              menu-item menu-item-type-taxonomy
-                                              list-sign
-                                            "
-                                          >
-                                            <a href="#">Bread</a>
-                                            <ul>
-                                              <li
-                                                class="
-                                                  menu-item
-                                                  menu-item-type-taxonomy
-                                                  menu-item-object-product_cat
-                                                  menu-item-has-children
-                                                  column-1
-                                                "
-                                              >
-                                                <a href="#"
-                                                  >Milk &amp; Products</a
-                                                >
-                                                <ul class="sub-menu">
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >HD DVD Players</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Projection Screens</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#">Projectors</a>
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Television Accessories</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#">Televisions</a>
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >TV-DVD Combos</a
-                                                    >
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#">VCRs</a>
-                                                  </li>
-                                                  <li
-                                                    class="
-                                                      menu-item
-                                                      menu-item-type-taxonomy
-                                                      menu-item-object-product_cat
-                                                    "
-                                                  >
-                                                    <a href="#"
-                                                      >Video Glasses</a
-                                                    >
-                                                  </li>
-                                                </ul>
-                                              </li>
-                                            </ul>
-                                          </li>
-                                          <li class="menu-item">
-                                            <a href="#">Cakes</a>
-                                            <ul>
-                                              <li class="menu-item">
-                                                <a href="#">Long life milk</a>
-                                              </li>
-                                              <li class="menu-item">
-                                                <a href="#">Fresh Milk</a>
-                                              </li>
-                                              <li class="menu-item">
-                                                <a href="#">Powder Milk</a>
-                                              </li>
-                                            </ul>
-                                          </li>
-                                          <li class="menu-item">
-                                            <a href="#"
-                                              >Croissant And Fatayer</a
-                                            >
-                                            <ul>
-                                              <li class="menu-item">
-                                                <a href="#">Long life milk</a>
-                                              </li>
-                                              <li class="menu-item">
-                                                <a href="#">Fresh Milk</a>
-                                              </li>
-                                              <li class="menu-item">
-                                                <a href="#">Powder Milk</a>
-                                              </li>
-                                            </ul>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li><a href="#">Fish & seafood</a></li>
-                                      <li>
-                                        <a href="#">Fruits & Vegitables</a>
-                                      </li>
-                                      <li><a href="#">Meat & Poultry</a></li>
                                     </ul>
                                   </nav>
                                 </li>
@@ -1721,494 +1237,6 @@
                         </div>
                       </div>
                     </ul>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      has-image
-                      column-1
-                    "
-                  >
-                    <a href="#product-category/computers-accessories/">
-                      <div class="menu-icon">
-                        <img
-                          style="padding: 3px"
-                          src="@/assets/img/icon/grocery.jpg"
-                        />
-                      </div>
-                      Groceries &amp; Food
-                    </a>
-                    <ul
-                      class="sub-menu"
-                      style="
-                        background-image: url('#wp-content/uploads/2021/10/computer-2.png');
-                        width: 485px;
-                      "
-                    >
-                      <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
-                      >
-                        <a href="#product-category/computers-accessories/"
-                          >Computers &amp; Accessories</a
-                        >
-                        <ul class="sub-menu">
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/computer-components/"
-                              >Computer Components</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/computer-accessories/"
-                              >Computer Accessories</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/desktops/"
-                              >Desktops</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/laptops/"
-                              >Laptops</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/monitors/"
-                              >Monitors</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/networking/"
-                              >Networking</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/pc-gaming/"
-                              >PC Gaming</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/computers-accessories/tablets/"
-                              >Tablets</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      column-1
-                    "
-                  >
-                    <a href="#product-category/television-video/">
-                      <div class="menu-icon">
-                        <img
-                          style="padding: 0px"
-                          src="@/assets/img/icon/beg.jpg"
-                        />
-                      </div>
-                      Groceries Non Food
-                    </a>
-                    <ul class="sub-menu">
-                      <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
-                      >
-                        <a href="#product-category/television-video/"
-                          >Television &amp; Video</a
-                        >
-                        <ul class="sub-menu">
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/hd-dvd-players/"
-                              >HD DVD Players</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/projection-screens/"
-                              >Projection Screens</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/projectors/"
-                              >Projectors</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/television-accessories/"
-                              >Television Accessories</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/televisions/"
-                              >Televisions</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/tv-dvd-combos/"
-                              >TV-DVD Combos</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a href="#product-category/television-video/vcrs/"
-                              >VCRs</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/television-video/video-glasses/"
-                              >Video Glasses</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                      menu-item-has-children
-                      has-image
-                      column-1
-                    "
-                  >
-                    <a href="#product-category/smartwatches/">
-                      <div class="menu-icon">
-                        <img
-                          style="padding: 0px"
-                          src="@/assets/img/icon/beauty.png"
-                        />
-                      </div>
-                      Health & Beauty
-                    </a>
-                    <ul
-                      class="sub-menu"
-                      style="
-                        background-image: url('/../src/assets/img/category-menu-3.png');
-                        width: 485px;
-                      "
-                    >
-                      <li
-                        class="
-                          menu-item menu-item-type-taxonomy
-                          menu-item-object-product_cat
-                          menu-item-has-children
-                          column-1
-                        "
-                      >
-                        <a href="#product-category/smartwatches/"
-                          >Smartwatches</a
-                        >
-                        <ul class="sub-menu">
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a href="#">Casio Watches</a>
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a href="#">Chronograph Watches</a>
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/kids-watches/"
-                              >Kids Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/luxury-watches/"
-                              >Luxury Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a href="#product-category/smartwatches/men/"
-                              >Men Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/rolex-watches/"
-                              >Rolex Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/women-watches/"
-                              >Women Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/watch-brands/"
-                              >Watch Brands</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/timex-watches/"
-                              >Timex Watches</a
-                            >
-                          </li>
-                          <li
-                            class="
-                              menu-item menu-item-type-taxonomy
-                              menu-item-object-product_cat
-                            "
-                          >
-                            <a
-                              href="#product-category/smartwatches/sport-watches/"
-                              >Sport Watches</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
-                  >
-                    <a href="#product-category/headphones/">
-                      <div class="menu-icon">
-                        <img
-                          src="@/assets/img/icon/headphones.jpg"
-                          alt="camera"
-                        />
-                      </div>
-                      Headphones
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
-                  >
-                    <a href="#product-category/camera-photo/">
-                      <div class="menu-icon">
-                        <img src="@/assets/img/icon/camera.jpg" alt="camera" />
-                      </div>
-                      Camera &amp; Photo
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
-                  >
-                    <a href="#product-category/video-games/">
-                      <div class="menu-icon">
-                        <img src="@/assets/img/icon/games.jpg" alt="camera" />
-                      </div>
-                      Video Games
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-taxonomy
-                      menu-item-object-product_cat
-                    "
-                  >
-                    <a href="#product-category/sports-outdoors/">
-                      <div class="menu-icon">
-                        <img src="@/assets/img/icon/sports.jpg" alt="camera" />
-                      </div>
-                      Sports &amp; Outdoors
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
-                  >
-                    <a href="#?orderby=popularity">
-                      <div class="menu-icon">
-                        <img src="@/assets/img/icon/graph.jpg" alt="camera" />
-                      </div>
-                      Best Sellers<span class="label danger">Save %25</span>
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
-                  >
-                    <a href="#">
-                      <div class="menu-icon">
-                        <img
-                          src="@/assets/img/icon/discount.jpg"
-                          alt="camera"
-                        />
-                      </div>
-                      Top 100 Offers
-                    </a>
-                  </li>
-                  <li
-                    class="
-                      menu-item menu-item-type-custom menu-item-object-custom
-                    "
-                  >
-                    <a href="#">
-                      <div class="menu-icon">
-                        <img src="@/assets/img/icon/trolley.jpg" alt="camera" />
-                      </div>
-                      New Arrivals
-                    </a>
                   </li>
                 </ul>
               </div>
@@ -2728,6 +1756,8 @@ const count = computed(() => cartStore.count);
 // console.log(count);
 </script>
 <script>
+import axios from "axios";
+
 export default {
   data: () => ({
     userdata: { name: "" },
@@ -2740,6 +1770,13 @@ export default {
     langCode: "en",
   }),
   mounted() {
+    axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=en")
+      .then((response) => {
+        this.results = response.data.data.data;
+      })
+      .catch((error) => {});
+
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.userdata.name = userInfo.name;
