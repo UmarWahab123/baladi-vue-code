@@ -198,7 +198,6 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
-import.meta.env.VITE_API_KEY;
 import axios from "axios";
 export default {
   data: () => ({

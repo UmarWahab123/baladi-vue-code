@@ -90,7 +90,7 @@ export default {
       .get("http://baladi-v1.bteamwebs.com/api/web/header/getBrands")
       .then((response) => {
         this.results = response.data.data.data;
-        console.log("brand", this.results);
+        // console.log("brand", this.results);
       })
       .catch((error) => {});
 

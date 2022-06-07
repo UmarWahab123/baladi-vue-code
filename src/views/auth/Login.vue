@@ -114,14 +114,14 @@
           name="_wp_http_referer"
           value="/machic/my-account/?d=rtl"
         />
-        <router-link
-          :to="'/' + langCode"
+        <a
           class="woocommerce-button button2 woocommerce-form-login__submit"
           name="login"
           value="Log in"
+          @click="submitguestData()"
         >
           Continue as Guest
-        </router-link></a
+        </a></a
       >
       <p class="mt-3">Or Connect with</p>
       <div class="social-share site-social colored">
@@ -223,6 +223,49 @@ export default {
             userInfo.token = response.data.data.token;
             localStorage.setItem("userInfo", JSON.stringify(userInfo));
             var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            var lang = localStorage.getItem("lang");
+
+            // console.log(userInfo);
+            this.$router.push("/" + lang + "/userdashboard");
+          } else {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+          }
+        });
+    },
+    submitguestData: function () {
+      axios
+        .post("http://baladi-v1.bteamwebs.com/api/auth/guestLogin")
+        .then((response) => {
+          if (response.data.status == 200) {
+            console.log(response);
+            localStorage.setItem(
+              "userInfo",
+              JSON.stringify(response.data.data)
+            );
+            // console.log(response);
+            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            console.log(userInfo);
+
+            // userInfo.token = response.data.data.token;
+            // localStorage.setItem("userInfo", JSON.stringify(userInfo));
+            // var userInfo = JSON.parse(localStorage.getItem("userInfo"));
             var lang = localStorage.getItem("lang");
 
             // console.log(userInfo);

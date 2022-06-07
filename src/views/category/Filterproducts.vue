@@ -152,7 +152,7 @@
             </div>
             <div class="content-wrapper">
               <h3 class="product-title">
-                <a href="javascript:void(0)">{{ item.product_name }}</a>
+                <a href="javascript:void(0)">{{ item?.product_name }}</a>
               </h3>
               <div class="product-rating">
                 <div
@@ -165,7 +165,7 @@
                   >
                 </div>
                 <div class="count-rating">
-                  {{ item.review_count
+                  {{ item?.review_count
                   }}<span class="rating-text">Ratings</span>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >{{ item.previous_price }}</bdi
+                        >{{ item?.previous_price }}</bdi
                       >
                     </span></del
                   >
@@ -188,7 +188,7 @@
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >{{ item.regular_price }}</bdi
+                        >{{ item?.regular_price }}</bdi
                       >
                     </span></ins
                   ></span
@@ -1486,8 +1486,8 @@ export default {
           "?locale=en"
       )
       .then((response) => {
-        this.results = response.data.data.data;
-        // console.log("response.data.data", response.data.data.data);
+        this.results = response.data.data.data.data;
+        console.log("response.data.data", response.data.data.data.data);
       })
       .catch((error) => {});
   },

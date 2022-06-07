@@ -182,7 +182,8 @@
                                 data-id="521"
                                 >Compare</a
                               ><span
-                                :onclick="clickbigmodal"
+                                @click="clickbigmodal"
+                                v-bind:topSeller_id="item.id"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
                               ></span>
@@ -499,7 +500,7 @@
                 <!-- col -->
                 <div class="col col-12 col-lg-6">
                   <h1 class="product_title entry-title">
-                    Cubitt Smart Watch CT2S Waterproof Fitness Tracker
+                    {{ singleProduct.product_name }}
                   </h1>
                   <div class="product-meta">
                     <div class="product-model">
@@ -549,7 +550,7 @@
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >95.00</bdi
+                            >{{ sub_products.previous_price }}</bdi
                           ></span
                         ></del
                       >
@@ -558,7 +559,7 @@
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >65.00</bdi
+                            >{{ singleProduct.variant_base_price }}</bdi
                           ></span
                         ></ins
                       ></span
@@ -608,7 +609,12 @@
                         <button
                           type="submit"
                           name="add-to-cart"
-                          value="408"
+                          @click="
+                            cartStore.addItems(
+                              this.quantity,
+                              this.singleProduct
+                            )
+                          "
                           class="
                             button button-primary
                             add_to_cart_button
@@ -1534,7 +1540,7 @@ export default {
     showcomparemodal: "",
     showcomparemodalstyle: "",
     results: [],
-    quantity: 0,
+    quantity: 1,
     activeImage: 0,
     //Hold the timeout, so we can clear it when it is needed
     autoSlideTimeout: null,
@@ -1564,6 +1570,8 @@ export default {
         length: 1,
       },
     },
+    singleProduct: [],
+    sub_products: [],
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -1602,7 +1610,20 @@ export default {
       this.showmodal = "";
       this.showmodalstyle = "";
     },
-    clickbigmodal(index) {
+    clickbigmodal(event) {
+      const topseller_id = event.currentTarget.getAttribute("topseller_id");
+      // alert(topseller_id);
+      axios
+        .get(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/getProducts/" +
+            topseller_id
+        )
+        .then((response) => {
+          this.singleProduct = response.data.data[0];
+          this.sub_products = response.data.data[0].uom_products[0];
+          console.log("response.data.data", this.singleProduct);
+        })
+        .catch((error) => {});
       this.showbigmodal = "show";
       this.showbigmodalstyle = "display:block";
     },

@@ -12,7 +12,7 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <!-- <legend>Basic Info change</legend> -->
-                    <input type="hidden" value="6" v-bind="formdata.id" />
+                    <!-- <input type="hidden" v-bind="formdata.id" /> -->
 
                     <p
                       class="
@@ -42,38 +42,6 @@
                     </p>
                     <div class="clear"></div>
 
-                    <p
-                      class="
-                        woocommerce-form-row woocommerce-form-row--wide
-                        form-row form-row-wide
-                      "
-                    >
-                      <label for="account_display_name"
-                        >Display name&nbsp;<span class="required"
-                          >*</span
-                        ></label
-                      >
-                      <input
-                        type="text"
-                        class="
-                          woocommerce-Input woocommerce-Input--text
-                          input-text
-                        "
-                        id="account_display_name"
-                      />
-                      <label for="account_display_name"
-                        >Phone&nbsp;<span class="required">*</span></label
-                      >
-                      <input
-                        v-model="formdata.phone"
-                        type="text"
-                        class="
-                          woocommerce-Input woocommerce-Input--text
-                          input-text
-                        "
-                        id="phone"
-                      />
-                    </p>
                     <div class="clear"></div>
 
                     <p
@@ -98,31 +66,43 @@
                         autocomplete="email"
                       />
                     </p>
-                    <p>
-                      <label for="account_email"
-                        >DOB&nbsp;<span class="required">*</span></label
+                    <p
+                      class="
+                        woocommerce-form-row woocommerce-form-row--last
+                        form-row form-row-last
+                      "
+                    >
+                      <label for="account_last_name"
+                        >Phone&nbsp;<span class="">*</span></label
                       >
                       <input
+                        v-model="formdata.phone"
                         type="text"
                         class="
-                          woocommerce-Input woocommerce-Input--email
+                          woocommerce-Input woocommerce-Input--text
                           input-text
                         "
-                        id="account_email"
-                        autocomplete=""
+                        id="account_last_name"
+                        autocomplete="phone"
                       />
+                      <span
+                        ><em
+                          >This will be how your name will be displayed in the
+                          account section and in reviews</em
+                        ></span
+                      >
                     </p>
-                    <!-- <button
+                    <button
                       @click="updateprofile()"
                       type="submit"
-                      class="woocommerce-Button button"
+                      class="woocommerce-Button button mb-3"
                       name="save_account_details"
                       value="Save changes"
                     >
                       Save changes
-                    </button> -->
+                    </button>
 
-                    <fieldset>
+                    <fieldset class="mt-20">
                       <legend>Password change</legend>
                       <input
                         type="hidden"
@@ -251,22 +231,17 @@ import Sidebar from "./Sidebar.vue";
 </script>
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {
       isloading: true,
-      userdata: { name: "", email: "" },
-
       formdata: {
-        id: 6,
-        phone: null,
+        phone: "",
         name: "",
         email: "",
-        dob: "",
       },
       errors: "",
-
+      token: "",
       passdata: {
         customer_id: 1,
         current_password: null,
@@ -279,8 +254,19 @@ export default {
     //session
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.formdata.name = userInfo.name;
-      this.formdata.email = userInfo.email;
+      this.token = userInfo.token;
+      axios
+        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile", {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        })
+        .then((response) => {
+          this.formdata.name = response.data.data.name;
+          this.formdata.email = response.data.data.email;
+          this.formdata.phone = response.data.data.phone;
+        })
+        .catch((error) => {});
 
       // console.log(userInfo);
     } else {
@@ -291,11 +277,16 @@ export default {
     updateprofile() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/auth/updateProfile",
-          this.formdata
+          "http://baladi-v1.bteamwebs.com/api/auth/updateProfile",
+          this.formdata,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
         )
         .then((response) => {
-          // console.log(response);
+          console.log(response);
           if (response.data.status == 400 || response.data.status === 401) {
             const Toast = this.$swal.mixin({
               toast: true,
@@ -329,7 +320,7 @@ export default {
             });
 
             Toast.fire({
-              icon: "error",
+              icon: "success",
               title: response.data.data[0]
                 ? response.data.data[0]
                 : response.data.message,
@@ -340,8 +331,13 @@ export default {
     updatepassword() {
       axios
         .post(
-          "http://baladiweb.bteamwebs.com/api/auth/resetPassword",
-          this.passdata
+          "http://baladi-v1.bteamwebs.com/api/auth/resetPassword",
+          this.passdata,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
         )
         .then((response) => {
           // console.log(response);
@@ -378,7 +374,7 @@ export default {
             });
 
             Toast.fire({
-              icon: "error",
+              icon: "success",
               title: response.data.data[0]
                 ? response.data.data[0]
                 : response.data.message,

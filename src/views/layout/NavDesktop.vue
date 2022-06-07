@@ -856,7 +856,10 @@
                                         height="90"
                                         :src="
                                           'http://baladiweb.bteamwebs.com/storage/' +
-                                          item[0].images[0].photo
+                                            item[0].images.length >
+                                          0
+                                            ? item[0].images[0].photo
+                                            : ''
                                         "
                                         class="
                                           attachment-woocommerce_thumbnail
@@ -890,7 +893,7 @@
                                               >QAR </span
                                             >{{
                                               cartStore.groupedCount(name) *
-                                              item[0].sale_price
+                                              item[0].variant_base_price
                                             }}</bdi
                                           >
                                         </span></span
@@ -1779,7 +1782,12 @@ export default {
 
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.userdata.name = userInfo.name;
+      // alert(userInfo);
+      if (userInfo.name != null) {
+        this.userdata.name = userInfo.name;
+      } else if (userInfo.token != null) {
+        this.userdata.name = "Guest";
+      }
     }
     if (this.$route.name == "Home") {
       this.showmenu = "show";

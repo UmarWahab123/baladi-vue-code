@@ -13,13 +13,21 @@
             <div class="row ml-10 mt-10">
               <p
                 v-if="errors"
-                class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
+                class="
+                  alert alert-danger alert-dismissible
+                  fade
+                  show
+                  col-md-6 col-6
+                "
               >
                 {{ errors }}
               </p>
             </div>
             <p
-              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
+              class="
+                woocommerce-form-row woocommerce-form-row--first
+                form-row form-row-first
+              "
             >
               <label for="user_login">Email</label>
               <input
@@ -30,7 +38,10 @@
               />
             </p>
             <p
-              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
+              class="
+                woocommerce-form-row woocommerce-form-row--first
+                form-row form-row-first
+              "
             >
               <label for="user_login">Enter Code</label>
               <input
@@ -88,7 +99,7 @@ export default {
     submit() {
       axios
         .post(
-          import.meta.env.VITE_API_URL + "/api/auth/verifyCode",
+          "http://baladi-v1.bteamwebs.com/api/auth/verifyCode",
           this.formdata
         )
         .then((response) => {
@@ -96,7 +107,27 @@ export default {
           if (response.data.status == 400) {
             this.errors = response.data.message;
           } else {
-            this.$router.push("/updatepassword");
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "success",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+            var lang = localStorage.getItem("lang");
+
+            this.$router.push("/" + lang + "/updatepassword");
           }
         });
     },

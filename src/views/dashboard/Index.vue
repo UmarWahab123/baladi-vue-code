@@ -57,6 +57,7 @@ import Sidebar from "./Sidebar.vue";
 </script>
 
 <script>
+import axios from "axios";
 import TheLoader from "../Loader/TheLoader.vue";
 export default {
   components: { TheLoader },
@@ -70,8 +71,19 @@ export default {
   mounted() {
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.userdata.name = userInfo.name;
+      // this.userdata.name = userInfo.name;
       // console.log(this.userdata);
+      axios
+        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile", {
+          headers: {
+            Authorization: "Bearer " + userInfo.token,
+          },
+        })
+        .then((response) => {
+          console.log(response.data.data);
+          this.userdata.name = response.data.data.name;
+        })
+        .catch((error) => {});
     } else {
       this.$router.push("myaccount");
     }

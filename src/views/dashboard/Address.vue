@@ -17,7 +17,23 @@
                       The following addresses will be used on the checkout page
                       by default.</strong
                     >
-
+                    <router-link
+                      to="shipping"
+                      class="woocommerce-button button view ml-180"
+                    >
+                      <button
+                        type="submit"
+                        class="
+                          woocommerce-Button woocommerce-button
+                          button
+                          woocommerce-form-register__submit
+                        "
+                        name="register"
+                        value="Register"
+                      >
+                        Add Address
+                      </button>
+                    </router-link>
                     <table
                       class="
                         woocommerce-orders-table
@@ -96,6 +112,7 @@
                             class="
                               woocommerce-orders-table__cell
                               woocommerce-orders-table__cell-order-actions
+                              text-center
                             "
                             data-title="Actions"
                           >
@@ -103,6 +120,12 @@
                               :to="'/' + langCode + '/shipping'"
                               class="woocommerce-button button view"
                               >Edit
+                            </router-link>
+                            <router-link
+                              to=""
+                              style="margin-left: 5px; background-color: red"
+                              class="woocommerce-button button view"
+                              >Delete
                             </router-link>
                           </td>
                         </tr>
@@ -142,13 +165,20 @@
                             class="
                               woocommerce-orders-table__cell
                               woocommerce-orders-table__cell-order-actions
+                              text-center
                             "
                             data-title="Actions"
                           >
                             <router-link
-                              :to="'/' + langCode + '/shipping'"
+                              to="shipping"
                               class="woocommerce-button button view"
                               >Edit
+                            </router-link>
+                            <router-link
+                              to=""
+                              style="margin-left: 5px; background-color: red"
+                              class="woocommerce-button button view"
+                              >Delete
                             </router-link>
                           </td>
                         </tr>

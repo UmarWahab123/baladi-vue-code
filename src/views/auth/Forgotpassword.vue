@@ -115,7 +115,8 @@ export default {
                 : response.data.message,
             });
           } else {
-            this.$router.push("/verifycode");
+            var lang = localStorage.getItem("lang");
+            this.$router.push("/" + lang + "/verifycode");
           }
         });
     },

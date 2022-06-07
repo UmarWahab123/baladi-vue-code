@@ -14,7 +14,7 @@ export const useCartStore = defineStore("CartStore", {
       return this.count === 0;
     },
     grouped: (state) => {
-      const grouped = groupBy(state.items, (item) => item.name);
+      const grouped = groupBy(state.items, (item) => item.product_name);
       const sorted = Object.keys(grouped).sort();
       let inOrder = {};
       sorted.forEach((key) => (inOrder[key] = grouped[key]));
@@ -22,7 +22,7 @@ export const useCartStore = defineStore("CartStore", {
     },
     groupedCount: (state) => (name) => state.grouped[name].length,
     total: (state) =>
-      state.items.reduce((p, c) => p + parseInt(c.sale_price), 0),
+      state.items.reduce((p, c) => p + parseInt(c.variant_base_price), 0),
   },
   actions: {
     addItems(count, item) {
@@ -32,7 +32,7 @@ export const useCartStore = defineStore("CartStore", {
       }
     },
     clearItem(itemName) {
-      this.items = this.items.filter((item) => item.name !== itemName);
+      this.items = this.items.filter((item) => item.product_name !== itemName);
     },
     setItemCount(item, count) {
       let qty = this.groupedCount(item.name);
