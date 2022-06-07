@@ -81,7 +81,7 @@
 
                             <router-link
                               :to="
-                                '/' + langCode + '/product-detail/' + item.id
+                                '/' + langCode + '/product-detail/' + item.product.id
                               "
                             >
                               <div class="product-card">
@@ -89,7 +89,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      :src="url + item.images[0].photo"
+                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -106,7 +106,7 @@
                                     </div>
                                   </div>
                                   <div class="slidingSection">
-                                    <img :src="url + item.images[0].photo" />
+                                    <img src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg" />
                                     <div class="hover-slider-indicator">
                                       <div
                                         data-hover-slider-i="45"
@@ -183,7 +183,7 @@
                                 >Compare</a
                               ><span
                                 @click="clickbigmodal"
-                                v-bind:topSeller_id="item.id"
+                                v-bind:topSeller_id="item.product.id"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
                               ></span>
@@ -193,7 +193,7 @@
                           <!-- thumbnail-wrapper -->
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href="javascript:void(0)">{{ item.name }}</a>
+                              <a href="javascript:void(0)">{{ item.product.product_name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -204,13 +204,15 @@
                                 <span style="width: 100%"
                                   >Rated
                                   <strong class="rating">{{
-                                    item.rating
+                                    item.product.rating
                                   }}</strong>
                                   out of 5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1
+                                {{
+                                    item.product.review_count
+                                  }}
                                 <span class="rating-text">Ratings </span>
                               </div>
                             </div>
@@ -220,8 +222,8 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >$</span
-                                    >{{ item.previous_price }}</bdi
+                                      >QAR </span
+                                    >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                   ></span
                                 ></del
                               >
@@ -230,8 +232,8 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >$</span
-                                    >{{ item.sale_price }}</bdi
+                                      >QAR </span
+                                    >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                   ></span
                                 ></ins
                               ></span
@@ -1533,7 +1535,7 @@ export default {
   components: { Splide, SplideSlide },
   data: () => ({
     showmodal: "",
-    url: import.meta.env.VITE_API_URL + "/storage/",
+    url:"http://baladi-v1.bteamwebs.com/storage/",
     showmodalstyle: "",
     showbigmodal: "",
     showbigmodalstyle: "",
@@ -1589,9 +1591,9 @@ export default {
   },
   mounted() {
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/topsellers")
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=top-seller")
       .then((response) => {
-        this.results = response.data.data;
+        this.results = response.data.data[0].products;
         // console.log(this.results);
         const productStore = useProductStore();
         productStore.testData(this.results);

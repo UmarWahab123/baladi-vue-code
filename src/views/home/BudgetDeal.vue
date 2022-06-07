@@ -159,19 +159,19 @@
                             aria-label="Rated 5.00 out of 5"
                           >
                             <span style="width: 100%"
-                              >Rated <strong class="rating">5.00</strong> out of
+                              >Rated <strong class="rating">{{specialoffer?.product?.rating}}</strong> out of
                               5</span
                             >
                           </div>
                           <div class="count-rating">
-                            1 <span class="rating-text">Ratings</span>
+                            {{specialoffer?.product?.review_count}} <span class="rating-text">Ratings</span>
                           </div>
                         </div>
                         <h3 class="product-title">
                           <a
-                            href=""
+                            href="javascript::void(0)"
                             title="Dragon Touch Max10 Tablet Android 10.0 OS"
-                            >Coca Cola pack with 6</a
+                            >{{specialoffer?.product?.product_name}}</a
                           >
                         </h3>
                         <span class="price"
@@ -180,7 +180,7 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >13.99</bdi
+                                >{{specialoffer?.product?.uom_products[0]?.previous_price}}</bdi
                               ></span
                             ></del
                           >
@@ -189,7 +189,7 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >12.99</bdi
+                                >{{specialoffer?.product?.uom_products[0]?.regular_price}}</bdi
                               ></span
                             ></ins
                           ></span
@@ -249,7 +249,10 @@
               <div class="site-module products-module">
                 <div class="module-wrapper">
                   <div class="products column-4 mobile-2 total-8">
-                    <div class="product custom-hover" v-for="n in 8">
+                    <div class="product custom-hover"  
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in results">
                       <div class="product-wrapper product-type-1">
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
@@ -258,10 +261,43 @@
                             </div>
                             <a href="#">
                               <div class="product-card">
-                                <img
-                                  src="http://english-template.bteamwebs.com/src/img/products/Tea/ahmad%20tea%20english%20breakfast%20100%20bags_.jpg"
-                                  data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
-                                />
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg" />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </a>
                             <div class="product-buttons">
@@ -333,7 +369,7 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href="">Ahmed Tea</a>
+                              <a href="javascript:void(0)">{{ item.product.product_name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -343,12 +379,16 @@
                               >
                                 <span style="width: 100%"
                                   >Rated
-                                  <strong class="rating">5.00</strong> out of
+                                  <strong class="rating">{{
+                                    item.product.rating
+                                  }}</strong> out of
                                   5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                              {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <div class="product-price-cart">
@@ -359,7 +399,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >16.99</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -371,7 +411,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >12.99</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -1580,12 +1620,59 @@
     </div>
   </div>
 </template>
+<style scoped>
+#slidingWindow {
+  display: flex;
+  /* margin: 1em 4em; */
+  overflow: hidden;
+  width: 210px;
+  height: 250px;
+  border: 1px solid hsl(44, 25, 50);
+  @include background-image(
+    linear-gradient(to bottom, hsl(50, 60, 60), hsl(50, 40, 50))
+  );
+  box-shadow: 0 2px 3px hsla(0, 0, 12, 0.8);
+}
 
+#slidingWindow,
+.slidingSection,
+img {
+  border-radius: 2px;
+}
+.slidingSection {
+  margin: 4px;
+  @include background-image(
+    linear-gradient(to bottom, hsl(62, 52, 75) 60%, hsl(82, 45, 35))
+  );
+  width: 200px;
+  min-width: 200px;
+  height: 240px;
+  text-align: center;
+  border: 1px solid hsl(32, 25, 55);
+  transform: translate3d(0, 0, 0);
+  transition: transform 450ms linear;
+}
+
+#slidingWindow:hover > .slidingSection {
+  transform: translate3d(-210px, 0, 0);
+  transition: transform 450ms linear;
+}
+
+.img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 hsla(0, 0, 25, 0.4);
+}
+</style>
 <script>
 import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-
+import axios from "axios";
 export default {
   components: { Splide, SplideSlide },
   data: () => ({
@@ -1597,6 +1684,7 @@ export default {
     showcomparemodal: "",
     showcomparemodalstyle: "",
     results: [],
+    specialoffer: [],
     quantity: 0,
 
     activeImage: 0,
@@ -1644,6 +1732,26 @@ export default {
     },
   },
   mounted() {
+     axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=budget-deals")
+      .then((response) => {
+        this.results = response.data.data[0].products;
+        // console.log(this.results);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+       axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=special-offer")
+      .then((response) => {
+        this.specialoffer = response.data.data[0].products[0];
+        console.log(this.specialoffer.product.product_name);
+        console.log('response',response);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },

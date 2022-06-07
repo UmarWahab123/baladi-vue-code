@@ -142,7 +142,7 @@
                                     ></div>
                                   </div>
                                   <img
-                                    :src="url + item.images[0].photo"
+                                    src="http://baladiweb.bteamwebs.com/storage/images/products/dettol/760x760-16503664651158.jpg"
                                     class="hover-slider-init"
                                     data-options='{"touch":"end","preloadImages": true }'
                                   />
@@ -220,7 +220,7 @@
                               <h3 class="product-title">
                                 <a
                                   href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                  >{{ item.name }}</a
+                                  >{{ item.product.product_name }}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -232,13 +232,15 @@
                                   <span style="width: 100%"
                                     >Rated
                                     <strong class="rating">{{
-                                      item.rating
-                                    }}</strong>
+                                    item.product.rating
+                                  }}</strong>
                                     out of 5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                  1 <span class="rating-text">Ratings</span>
+                                  {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <span class="price"
@@ -248,7 +250,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ item.previous_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -258,7 +260,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ item.sale_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -400,7 +402,11 @@
                 <div class="site-module products-module">
                   <div class="module-wrapper">
                     <div class="products column-4 mobile-2 total-8">
-                      <div class="product custom-hover" v-for="n in 8">
+                      <div class="product custom-hover"
+                       :data="item"
+                        :key="indextr"
+                        v-for="(item, indextr) in latestseller"
+                        >
                         <div class="product-wrapper product-type-1">
                           <div class="product-content">
                             <div class="thumbnail-wrapper">
@@ -408,77 +414,45 @@
                                 <span class="badge onsale">11%</span>
                               </div>
                               <a href="#">
-                                <div
-                                  class="product-card"
-                                  style="position: relative"
-                                >
-                                  <div
-                                    class="hover-slider-images-toggler"
-                                    style="
-                                      position: absolute;
-                                      inset: 0px;
-                                      display: flex;
-                                    "
-                                  >
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="60"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="61"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="62"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="63"
-                                      style="flex-grow: 1"
-                                    ></div>
-                                    <div
-                                      class="hover-slider-toggle-pane"
-                                      data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                      data-hover-slider-i="64"
-                                      style="flex-grow: 1"
-                                    ></div>
+                                 <div class="product-card">
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-3-400x400.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
                                   </div>
-                                  <div class="hover-slider-indicator">
-                                    <div
-                                      data-hover-slider-i="60"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="61"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="62"
-                                      class="hover-slider-indicator-dot active"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="63"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
-                                    <div
-                                      data-hover-slider-i="64"
-                                      class="hover-slider-indicator-dot"
-                                    ></div>
+                                  <div class="slidingSection">
+                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-3-400x400.jpg" />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                    </div>
                                   </div>
-                                  <img
-                                    src="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                    class="hover-slider-init"
-                                    data-options='{"touch":"end","preloadImages": true }'
-                                  />
                                 </div>
+                              </div>
                               </a>
                               <div class="product-buttons">
                                 <div
@@ -549,9 +523,8 @@
                             </div>
                             <div class="content-wrapper">
                               <h3 class="product-title">
-                                <a href="#"
-                                  >Apple 10.9-inch iPad Air Wi-Fi Cellular
-                                  64GB</a
+                                <a href="javascript:void(0)"
+                                  >{{ item.product.product_name }}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -562,12 +535,16 @@
                                 >
                                   <span style="width: 100%"
                                     >Rated
-                                    <strong class="rating">5.00</strong> out of
+                                    <strong class="rating">{{
+                                    item.product.rating
+                                  }}</strong> out of
                                     5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                  1 <span class="rating-text">Ratings</span>
+                                  {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <div class="product-price-cart">
@@ -581,7 +558,7 @@
                                             woocommerce-Price-currencySymbol
                                           "
                                           >QAR </span
-                                        >699.99</bdi
+                                        >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                       ></span
                                     ></del
                                   >
@@ -595,7 +572,7 @@
                                             woocommerce-Price-currencySymbol
                                           "
                                           >QAR </span
-                                        >629.99</bdi
+                                        >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                       ></span
                                     ></ins
                                   ></span
@@ -1879,8 +1856,9 @@ export default {
       showmodal: "",
 
       isloading: true,
-      url: import.meta.env.VITE_API_URL + "/storage/",
+      url: "http://baladi-v1.bteamwebs.com/storage/",
       results: [],
+      latestseller: [],
       showmodalstyle: "",
       showbigmodal: "",
       showbigmodalstyle: "",
@@ -1935,13 +1913,24 @@ export default {
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/hotdeals")
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=hot-deals")
       .then((response) => {
-        this.results = response.data.data;
+        this.results = response.data.data[0].products;
         // console.log(this.results);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
       })
       .catch((error) => {});
 
+    axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=latest-seller")
+      .then((response) => {
+        this.latestseller = response.data.data[0].products;
+        // console.log(this.latestseller);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },

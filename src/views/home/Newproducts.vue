@@ -242,8 +242,8 @@
                               <h3 class="product-title">
                                 <a
                                   href="#bose-noise-cancelling-wireless-bluetooth/"
-                                  title="Bose Noise Cancelling Wireless Bluetooth"
-                                  >Bose Noise Cancelling Wireless Bluetooth</a
+                                  title="javascript::void(0)"
+                                  >{{dealsoftheweek?.product?.product_name}}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -254,12 +254,12 @@
                                 >
                                   <span style="width: 80%"
                                     >Rated
-                                    <strong class="rating">4.00</strong> out of
+                                    <strong class="rating">{{dealsoftheweek?.product?.rating}}</strong> out of
                                     5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                  1 <span class="rating-text">Ratings</span>
+                                   {{dealsoftheweek?.product?.review_count}}<span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <span class="price"
@@ -269,7 +269,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >479.00</bdi
+                                      >{{dealsoftheweek?.product?.uom_products[0]?.previous_price}}</bdi
                                     ></span
                                   ></del
                                 >
@@ -279,7 +279,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >439.00</bdi
+                                      >{{dealsoftheweek?.product?.uom_products[0]?.regular_price}}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -330,29 +330,29 @@
                     <div class="products column-1 mobile-1">
                       <div
                         class="product"
-                        :data="trend"
+                        :data="item"
                         :key="indextr"
-                        v-for="(trend, indextr) in trends"
+                        v-for="(item, indextr) in trends"
                       >
                         <div class="product-wrapper">
                           <div class="product-content">
                             <div class="thumbnail-wrapper">
                               <router-link
                                 :to="
-                                  '/' + langCode + '/product-detail' + trend.id
+                                  '/' + langCode + '/product-detail' + item.product.id
                                 "
                               >
                                 <img
-                                  :src="this.url + trend.images[0].photo"
+                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
                                   alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
                               /></router-link>
                             </div>
                             <div class="content-wrapper">
                               <h3 class="product-title">
                                 <a
-                                  href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                                  href="javascript::void(0)"
                                   title="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
-                                  >{{ trend.name }}</a
+                                  >{{ item.product.product_name }}</a
                                 >
                               </h3>
                               <span class="price"
@@ -362,7 +362,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR <br /></span
-                                      >{{ trend.previous_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -372,7 +372,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR <br /></span
-                                      >{{ trend.sale_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -564,9 +564,9 @@
                   <div class="products column-4 mobile-2 total-4">
                     <div
                       class="product custom-hover"
-                      :data="best"
+                      :data="item"
                       :key="indextr"
-                      v-for="(best, indextr) in bestresults"
+                      v-for="(item, indextr) in bestresults"
                     >
                       <div class="product-wrapper product-type-1">
                         <div class="product-content">
@@ -575,7 +575,7 @@
                               <span class="badge onsale">11%</span>
                             </div>
                             <router-link
-                              :to="'/' + langCode + '/product-detail' + best.id"
+                              :to="'/' + langCode + '/product-detail' + item.product.id"
                             >
                               <div
                                 class="product-card"
@@ -642,24 +642,45 @@
                                     class="hover-slider-indicator-dot"
                                   ></div>
                                 </div>
-                                <div class="product-card">
-                                  <div id="slidingWindow" ontouchstart="">
-                                    <div class="slidingSection">
-                                      <img
-                                        :src="this.url + best.images[0].photo"
-                                        class="hover-slider-init"
-                                        data-options='{"touch":"end","preloadImages": true }'
-                                      />
+                                 <div class="product-card">
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/series1.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
                                     </div>
-                                    <div class="slidingSection">
-                                      <img
-                                        :src="this.url + best.images[0].photo"
-                                        class="hover-slider-init"
-                                        data-options='{"touch":"end","preloadImages": true }'
-                                      />
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/series1.jpgurt-mango 110 g .jpg" />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
                                     </div>
                                   </div>
                                 </div>
+                              </div>
                               </div>
                             </router-link>
                             <div class="product-buttons">
@@ -727,8 +748,8 @@
                           <div class="content-wrapper">
                             <h3 class="product-title">
                               <a
-                                href="#apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
-                                >{{ best.name }}</a
+                                href="javascript"
+                                >{{ item.product.product_name }}</a
                               >
                             </h3>
                             <div class="product-rating">
@@ -740,13 +761,15 @@
                                 <span style="width: 100%"
                                   >Rated
                                   <strong class="rating">{{
-                                    best.rating
+                                    item.product.rating
                                   }}</strong>
                                   out of 5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                               {{
+                                    item.product.review_count
+                                  }}<span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <div class="product-price-cart">
@@ -757,7 +780,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ best.previous_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -769,7 +792,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ best.sale_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -882,7 +905,10 @@
                 </div>
                 <div class="module-wrapper">
                   <div class="products list-style row">
-                    <div class="col col-12 col-lg-6" v-for="n in 2">
+                    <div class="col col-12 col-lg-6" 
+                        :data="item"
+                        :key="indextr"
+                        v-for="(item, indextr) in megadeals">
                       <div class="product">
                         <div class="product-wrapper">
                           <div class="product-content">
@@ -901,8 +927,8 @@
                             <div class="content-wrapper">
                               <h3 class="product-title">
                                 <a
-                                  href="#dragon-touch-max10-tablet-android-10-0-os/"
-                                  >Dragon Touch Max10 Tablet Android 10.0 OS</a
+                                  href="javascript:void(0)"
+                                  >{{ item.product.product_name }}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -913,12 +939,16 @@
                                 >
                                   <span style="width: 100%"
                                     >Rated
-                                    <strong class="rating">5.00</strong> out of
+                                    <strong class="rating">{{
+                                    item.product.rating
+                                  }}</strong> out of
                                     5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                  1 <span class="rating-text">Ratings</span>
+                                  {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <span class="price"
@@ -928,7 +958,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >189.99</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -938,7 +968,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >129.99</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -1013,7 +1043,10 @@
               </div>
               <div class="module-wrapper">
                 <div class="products column-4 mobile-2 total-4">
-                  <div class="product custom-hover" v-for="n in 4">
+                  <div class="product custom-hover" 
+                   :data="item"
+                   :key="indextr"
+                   v-for="(item, indextr) in smartphone">
                     <div class="product-wrapper product-type-1">
                       <div class="product-content">
                         <div class="thumbnail-wrapper">
@@ -1140,7 +1173,7 @@
                         <div class="content-wrapper">
                           <h3 class="product-title">
                             <a href="javascript:void(0)"
-                              >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
+                              >{{ item.product.product_name }}</a
                             >
                           </h3>
                           <div class="product-rating">
@@ -1150,12 +1183,16 @@
                               aria-label="Rated 5.00 out of 5"
                             >
                               <span style="width: 100%"
-                                >Rated <strong class="rating">5.00</strong> out
+                                >Rated <strong class="rating">{{
+                                    item.product.rating
+                                  }}</strong> out
                                 of 5</span
                               >
                             </div>
                             <div class="count-rating">
-                              1 <span class="rating-text">Ratings</span>
+                              {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                             </div>
                           </div>
                           <div class="product-price-cart">
@@ -1166,7 +1203,7 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >699.99</bdi
+                                    >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                   ></span
                                 ></del
                               >
@@ -1178,7 +1215,7 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >629.99</bdi
+                                    >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                   ></span
                                 ></ins
                               ></span
@@ -1290,7 +1327,7 @@
                       class="product custom-hover"
                       :data="item"
                       :key="indextr"
-                      v-for="(items, indextr) in arrival"
+                      v-for="(item, indextr) in arrivel"
                     >
                       <div class="product-wrapper product-type-1">
                         <div class="product-content">
@@ -1300,7 +1337,7 @@
                             </div>
                             <router-link
                               :to="
-                                '/' + langCode + '/product-detail' + items.id
+                                '/' + langCode + '/product-detail' + item.product.id
                               "
                             >
                               <div
@@ -1358,24 +1395,45 @@
                                     class="hover-slider-indicator-dot"
                                   ></div>
                                 </div>
-                                <div class="product-card">
-                                  <div id="slidingWindow" ontouchstart="">
-                                    <div class="slidingSection">
-                                      <img
-                                        :src="this.url + items.images[0].photo"
-                                        class="hover-slider-init"
-                                        data-options='{"touch":"end","preloadImages": true }'
-                                      />
+                               <div class="product-card">
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
                                     </div>
-                                    <div class="slidingSection">
-                                      <img
-                                        :src="this.url + items.images[0].photo"
-                                        class="hover-slider-init"
-                                        data-options='{"touch":"end","preloadImages": true }'
-                                      />
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg" />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
                                     </div>
                                   </div>
                                 </div>
+                              </div>
                               </div>
                             </router-link>
 
@@ -1429,7 +1487,7 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href="javascript:void(0)">{{ items.name }}</a>
+                              <a href="javascript:void(0)">{{ item.product.product_name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -1440,13 +1498,15 @@
                                 <span style="width: 100%"
                                   >Rated
                                   <strong class="rating">{{
-                                    items.rating
+                                    item.product.rating
                                   }}</strong>
                                   out of 5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                                {{
+                                    item.product.review_count
+                                  }} <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <div class="product-price-cart">
@@ -1457,7 +1517,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ items.previous_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -1469,7 +1529,7 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ items.sale_price }}</bdi
+                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -2744,10 +2804,13 @@ export default {
     return {
       showmodal: "",
       isloading: true,
-      url: import.meta.env.VITE_API_URL + "/storage/",
-      arrival: [],
+      url: "http://baladi-v1.bteamwebs.com/storage/",
+      arrivel: [],
       trends: [],
       bestresults: [],
+      smartphone: [],
+      megadeals: [],
+      dealsoftheweek: [],
       showmodalstyle: "",
       showbigmodal: "",
       showbigmodalstyle: "",
@@ -2801,25 +2864,59 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
-    axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/trendingproducts")
+     axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=best-sellers")
       .then((response) => {
-        this.trends = response.data.data;
-        // console.log(this.trends);
-      })
-      .catch((error) => {});
-    axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/bestsellers")
-      .then((response) => {
-        this.bestresults = response.data.data;
+        this.bestresults = response.data.data[0].products;
         // console.log(this.bestresults);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
       })
       .catch((error) => {});
-    axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/newarrivals")
+     axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products")
       .then((response) => {
-        this.arrival = response.data.data;
-        // console.log(this.arrival);
+        this.arrivel = response.data.data[0].products;
+        // console.log(this.arrivel);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+     
+    axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=new-arrivel")
+      .then((response) => {
+        this.trends = response.data.data[0].products;
+        // console.log(this.trends);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+     axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=smart-phone-accesseries")
+      .then((response) => {
+        this.smartphone = response.data.data[0].products;
+        // console.log(this.smartphone);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+       axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=mega-deals")
+      .then((response) => {
+        this.megadeals = response.data.data[0].products;
+        // console.log(this.megadeals);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+       axios
+      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=deals-of-the-week")
+      .then((response) => {
+        this.dealsoftheweek = response.data.data[0].products[0];
+        // console.log(this.dealsoftheweek);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
       })
       .catch((error) => {});
     var lang = localStorage.getItem("lang");
