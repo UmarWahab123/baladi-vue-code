@@ -1,5 +1,24 @@
 {
   "message": "hello i18n !!",
-  "language": "All Departments "
+  "language": "All Departments ",
+  "orders_tracking":"Orders Tracking", 
+  "location_job": "Locations",
+  "returns_replacements":"Returns & Replacements",
+  "about_us": "About Us",
+  "help:": "Help",
+  "feature_product": "Featured Products",
+  "serach_product": "Search for products",
+  "search": "Search",
+  "Account": "Account",
+  "total": "Total",
+  "QAR": "QAR",
+  "top_category": "Top Categories",
+  "top_brands": "Top Brands",
+  "home_and_living": "Home And Living",
+  "blogs": "Blogs",
+  "Contact": "Contact",
+  "Super_discount": "Super Discount",
+  "this_weeK":"Only this weekend"
+  
 
 }

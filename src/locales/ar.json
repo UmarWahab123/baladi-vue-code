@@ -1,4 +1,27 @@
 {
   "message": "مرحبًا !!",
-  "language":"جميع الإدارات"
+  "language":"جميع الإدارات",
+  "orders_tracking": "تتبع الطلب",
+  "location_job": "موقع",
+  "returns_replacements":"الإرجاع والاستبدال",
+  "about_us": "يتعلق بنا",
+  "help":"مساعدة",
+  "feature_product": "منتجات مميزة",
+  "serach_product":"ابحث عن المنتجات",
+  "search": "يبحث",
+  "Account": "الحساب",
+  "total": "المجموع",
+  "QAR":"ريالاً قطرياً",
+  "top_category": "أعلى الفئات",
+  "top_brands": "ارقى الماركات",
+  "home_and_living":"المنزل والمعيشة",
+  "blogs":"المدونات",
+  "Contact": "اتصال",
+  "Super_discount": "خصم سوبر",
+  "this_weeK":"فقط في نهاية هذا الأسبوع"
+
+
+
+
+
 }

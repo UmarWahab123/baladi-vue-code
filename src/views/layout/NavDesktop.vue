@@ -17,7 +17,7 @@
                   <router-link
                     class="nav-link"
                     :to="'/' + langCode + '/aboutus'"
-                    >About Us
+                    >{{ $t("about_us") }}
                   </router-link>
                 </li>
                 <li
@@ -30,7 +30,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    >Featured Products
+                    >{{ $t("feature_product") }}
                   </router-link>
                 </li>
                 <li
@@ -42,7 +42,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/helpcenter'"
-                    >Help
+                    >{{ $t("help") }}
                   </router-link>
                 </li>
 
@@ -54,8 +54,8 @@
                     menu-item-object-page menu-item-2230
                   "
                 >
-                  <router-link :to="'/' + langCode + '/replacement'"
-                    >Returns &amp; Replacements</router-link
+                  <router-link :to="'/' + langCode + '/replacement'">
+                    {{ $t("returns_replacements") }}</router-link
                   >
                 </li>
               </ul>
@@ -76,7 +76,7 @@
                 >
                   <router-link to=""
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
-                    &nbsp; Location
+                    &nbsp; {{ $t("location_job") }}
                   </router-link>
                 </li>
                 <li
@@ -87,7 +87,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/order-tracking'"
-                    >Order Tracking
+                    >{{ $t("orders_tracking") }}
                   </router-link>
                 </li>
 
@@ -175,7 +175,7 @@
                       class="dgwt-wcas-search-input"
                       name="s"
                       value=""
-                      placeholder="Search for products..."
+                      :placeholder="$t('serach_product') + '...'"
                       autocomplete="off"
                       @keyup="onchangesearch($event)"
                     />
@@ -189,7 +189,7 @@
                       class="dgwt-wcas-search-submit"
                       @click="searchproducts"
                     >
-                      Search
+                      {{ $t("search") }}
                     </button>
                     <input type="hidden" name="post_type" value="product" />
                     <input type="hidden" name="dgwt_wcas" value="1" />
@@ -298,14 +298,14 @@
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                  Account
+                  {{ $t("Account") }}
                 </router-link>
                 <router-link
                   v-else
                   class="primary-text"
                   :to="'/' + langCode + '/myaccount'"
                 >
-                  Account
+                  {{ $t("Account") }}
                 </router-link>
               </div>
               <!-- header-addons-text -->
@@ -723,13 +723,14 @@
                 </div>
                 <!-- header-addons-icon -->
                 <div class="header-addons-text hide-mobile">
-                  <div class="sub-text">Total</div>
+                  <div class="sub-text">{{ $t("total") }}</div>
                   <div class="primary-text cart-subtotal">
                     <span class="woocommerce-Price-amount amount">
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
-                        >{{ cartStore.total }}</bdi
+                          >{{ $t("QAR") }}
+                        </span>
+                        {{ cartStore.total }}</bdi
                       >
                     </span>
                   </div>
@@ -1257,7 +1258,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/all_categories'"
-                    >Top Categories
+                    >{{ $t("top_category") }}
                   </router-link>
 
                   <ul class="sub-menu">
@@ -1308,7 +1309,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/brands'"
-                    >Top Brands
+                    >{{ $t("top_brands") }}
                   </router-link>
                   <ul class="sub-menu">
                     <li
@@ -1602,8 +1603,8 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    ><i class="klbth-icon-home"></i> Home And
-                    Living</router-link
+                    ><i class="klbth-icon-home"></i
+                    >{{ $t("home_and_living") }}</router-link
                   >
                 </li>
 
@@ -1615,7 +1616,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/blog'"
-                    >Blogs
+                    >{{ $t("blogs") }}
                   </router-link>
                 </li>
                 <li
@@ -1626,7 +1627,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/contact-us'"
-                    >Contact
+                    >{{ $t("Contact") }}
                   </router-link>
                 </li>
               </ul>
@@ -1643,8 +1644,8 @@
                     <i class="klbth-icon-discount-black"></i>
                   </div>
                   <div class="discount-banner-text">
-                    <div class="small-text">Only this weekend</div>
-                    <div class="main-text">Super Discount</div>
+                    <div class="small-text">{{ $t("this_weeK") }}</div>
+                    <div class="main-text">{{ $t("Super_discount") }}</div>
                   </div>
                   <!-- discount-banner-text -->
                   <div class="discount-banner-arrow">
