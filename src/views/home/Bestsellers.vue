@@ -40,7 +40,7 @@
             <div class="elementor-widget-container">
               <div class="site-module products-module">
                 <div class="module-header">
-                  <h4 class="entry-title">Top Sellers</h4>
+                  <h4 class="entry-title">{{$t('Top_sellers')}}</h4>
                   <div class="product-countdown">
                     <div
                       class="countdown"
@@ -57,11 +57,11 @@
                     </div>
                     <!-- countdown -->
                     <div class="countdown-text">
-                      Remains until the end of the offer
+                      {{$t('Remains_until_offer')}}
                     </div>
                   </div>
-                  <a href="" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
+                  <a href="javascript:void(0)" class="btn link"
+                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">

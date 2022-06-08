@@ -43,15 +43,15 @@
                     <div class="coupon-detail">
                       <div class="text">
                         <h4 class="entry-title">
-                          Super discount for your first purchase
+                          {{$t('Super_discount_first_purchase')}}
                         </h4>
                         <div class="entry-description">
-                          Use discount code in checkout page.
+                          {{$t('Use_discount_code')}}
                         </div>
                       </div>
                       <div class="entry-coupon">
                         <i class="klbth-icon-ticket"></i>
-                        <strong>FREE256MAC</strong>
+                        <strong>{{$t('FREE256MAC')}}</strong>
                       </div>
                     </div>
                     <a href="javascript::void(0)" class="overlay-link"></a>

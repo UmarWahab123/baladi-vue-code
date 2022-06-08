@@ -55,7 +55,7 @@
                 elementor-element
                 elementor-element-af97ba9
                 elementor-widget
-                elementor-widget-machic-icon-list
+                elementor-widget-machic-con-list
               "
               data-id="af97ba9"
               data-element_type="widget"
@@ -68,9 +68,9 @@
                       <div class="item">
                         <div class="icon"><i class="klbth-icon-box-1"></i></div>
                         <div class="text">
-                          <h5 class="entry-title">International Shipment</h5>
+                          <h5 class="entry-title">{{$t('International_shipment')}}</h5>
                           <p>
-                            Your orders are shipped seamlessly between countries
+                            {{$t('Your_between_countries')}}
                           </p>
                         </div>
                       </div>
@@ -79,10 +79,9 @@
                           <i class="klbth-icon-delivery-return"></i>
                         </div>
                         <div class="text">
-                          <h5 class="entry-title">Extended 45 day returns</h5>
+                          <h5 class="entry-title">{{$t('Extended_day_returns')}}</h5>
                           <p>
-                            You have the right to return your orders within 45
-                            days.
+                            {{$t('your_orders_within_days')}}
                           </p>
                         </div>
                       </div>
@@ -91,10 +90,9 @@
                           <i class="klbth-icon-payment-security"></i>
                         </div>
                         <div class="text">
-                          <h5 class="entry-title">Secure Payment</h5>
+                          <h5 class="entry-title">{{$t('Secure_payment')}}</h5>
                           <p>
-                            Your payments are secure with our private security
-                            network.
+                            {{$t('Your_our_privat_network')}}
                           </p>
                         </div>
                       </div>
@@ -120,14 +118,14 @@
                     <div class="banner dark align-top medium vertical">
                       <div class="banner-content">
                         <div class="banner-content-wrapper">
-                          <h6 class="entry-subtitle style-2">Super Discount</h6>
-                          <h3 class="entry-title">New Phone 11</h3>
+                          <h6 class="entry-subtitle style-2">{{$t('Super_discount')}}</h6>
+                          <h3 class="entry-title">{{$t('New_phone')}}</h3>
                           <div class="entry-description">
-                            <p>Don't miss the last opportunity.</p>
+                            <p>{{$t('miss_the_last_opportunity')}}</p>
                           </div>
                           <div class="entry-button">
                             <a href="" class="btn small rounded link-color"
-                              >Shop Now</a
+                              >{{$t('Shop_now')}}</a
                             >
                           </div>
                         </div>
@@ -157,7 +155,7 @@
             >
               <div class="elementor-widget-container">
                 <div class="widget widget_klb_counter_product">
-                  <h4 class="widget-title">Deals of the week!</h4>
+                  <h4 class="widget-title">{{$t('Deals_of_the_week')}}</h4>
                   <div class="widget-body">
                     <div class="products align-center">
                       <div class="product">
@@ -325,7 +323,7 @@
             >
               <div class="elementor-widget-container">
                 <div class="widget widget_klb_products_list">
-                  <h4 class="widget-title">Trending Products</h4>
+                  <h4 class="widget-title">{{$t('Trending_products')}}</h4>
                   <div class="widget-body">
                     <div class="products column-1 mobile-1">
                       <div
@@ -445,17 +443,17 @@
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
                                 <h6 class="entry-subtitle style-2">
-                                  Weekend Discount
+                                 {{$t('Weekend_discount')}}
                                 </h6>
-                                <h3 class="entry-title">Home Speaker</h3>
+                                <h3 class="entry-title">{{$t('Home_speaker')}}</h3>
                                 <div class="entry-description">
-                                  <p>Don't miss the last opportunity.</p>
+                                  <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
                                   <a
                                     href="#echo-dot-4th-gen-2020-release-smart-speaker/"
                                     class="btn small rounded link-color"
-                                    >Shop Now</a
+                                    >{{$t('Shop_now')}}</a
                                   >
                                 </div>
                               </div>
@@ -507,17 +505,17 @@
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
                                 <h6 class="entry-subtitle style-2">
-                                  Weekend Discount
+                                   {{$t('Weekend_discount')}}
                                 </h6>
-                                <h3 class="entry-title">New Smartphones</h3>
+                                <h3 class="entry-title">{{$t('New_smartphones')}}</h3>
                                 <div class="entry-description">
-                                  <p>Don't miss the last opportunity.</p>
+                                  <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
                                   <a
                                     href="#oneplus-8-pro-onyx-black-android-smartphone/"
                                     class="btn small rounded link-color"
-                                    >Shop Now</a
+                                    >{{$t('Shop_now')}}</a
                                   >
                                 </div>
                               </div>
@@ -555,9 +553,9 @@
             <div class="elementor-widget-container">
               <div class="site-module products-module">
                 <div class="module-header">
-                  <h4 class="entry-title">Best Sellers</h4>
+                  <h4 class="entry-title">{{$t('Best_seller')}}</h4>
                   <a href="#?orderby=popularity&amp;paged=1" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
+                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">
@@ -832,16 +830,16 @@
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
                       <div class="banner-content-wrapper">
-                        <h6 class="entry-subtitle style-2">Weekend Discount</h6>
-                        <h3 class="entry-title">Momentum 3 Headphone</h3>
+                        <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
+                        <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">
-                          <p>Don't miss the last opportunity.</p>
+                          <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
                           <a
                             href="#beats-studio3-wireless-headphones-matte-black/"
                             class="btn small rounded link-color"
-                            >Shop Now</a
+                            >{{$t('Shop_now')}}</a
                           >
                         </div>
                       </div>
@@ -875,9 +873,9 @@
             <div class="elementor-widget-container">
               <div class="site-module product-deals-module">
                 <div class="module-header no-border">
-                  <h4 class="entry-title">Mega Deals</h4>
+                  <h4 class="entry-title">{{$t('Mega_deals')}}</h4> 
                   <a href="" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
+                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">
@@ -986,15 +984,15 @@
                     <div class="coupon-detail">
                       <div class="text">
                         <h4 class="entry-title">
-                          Super discount for your first purchase
+                          {{$t('Super_discount_first_purchase')}}
                         </h4>
                         <div class="entry-description">
-                          Use discount code in checkout page.
+                          {{$t('Use_discount_code')}}
                         </div>
                       </div>
                       <div class="entry-coupon">
                         <i class="klbth-icon-ticket"></i>
-                        <strong>FREE256MAC</strong>
+                        <strong>{{$t('FREE256MAC')}}</strong>
                       </div>
                     </div>
                     <a href="#" class="overlay-link"></a>
@@ -1006,9 +1004,9 @@
           <div class="elementor-widget-container my-5">
             <div class="site-module products-module">
               <div class="module-header">
-                <h4 class="entry-title">Smart Phone &amp; Accesseries</h4>
+                <h4 class="entry-title">{{$t('Smart_phone')}} &amp; {{$t('accesseries')}}</h4>
                 <a href="#" class="btn link"
-                  >View All <i class="klbth-icon-right-arrow"></i
+                  >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                 ></a>
               </div>
               <div class="module-wrapper">
@@ -1239,16 +1237,16 @@
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
                       <div class="banner-content-wrapper">
-                        <h6 class="entry-subtitle style-2">Weekend Discount</h6>
-                        <h3 class="entry-title">Momentum 3 Headphone</h3>
+                        <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
+                        <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">
-                          <p>Don't miss the last opportunity.</p>
+                          <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
                           <a
                             href="javascript:void(0)"
                             class="btn small rounded link-color"
-                            >Shop Now</a
+                            >{{$t('Shop_now')}}</a
                           >
                         </div>
                       </div>
@@ -1279,9 +1277,9 @@
             <div class="elementor-widget-container">
               <div class="site-module products-module">
                 <div class="module-header">
-                  <h4 class="entry-title">New Arrivel</h4>
+                  <h4 class="entry-title">{{$t('New_arrivel')}}</h4>
                   <a href="#" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
+                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">

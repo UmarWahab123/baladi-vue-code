@@ -52,9 +52,9 @@
               <div class="elementor-widget-container">
                 <div class="site-module list-products">
                   <div class="module-header">
-                    <h4 class="entry-title">Hot Deals</h4>
+                    <h4 class="entry-title">{{$t('Hot_deals')}}</h4>
                     <a href="" class="btn link"
-                      >View All <i class="klbth-icon-right-arrow"></i
+                      >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                     ></a>
                   </div>
                   <div class="module-wrapper">
@@ -344,19 +344,19 @@
                     <div class="banner dark align-top">
                       <div class="banner-content">
                         <div class="banner-content-wrapper">
-                          <h6 class="entry-subtitle style-2">Best Seller</h6>
+                          <h6 class="entry-subtitle style-2">{{$t('Best_seller')}}</h6>
                           <h3 class="entry-title thin">
-                            Buy The Latest
+                            {{$t('Buy_the_latest')}}
                             <strong>iPhone XS Pro</strong>
                           </h3>
                           <div class="entry-description">
                             <p>
-                              Pellentesque habitant morbi tristique senectus.
+                              {{$t('Pellentesque_habitant_morbi')}}
                             </p>
                           </div>
                           <div class="entry-button">
                             <a href="#" class="btn small rounded link-color"
-                              >Shop Now</a
+                              >{{$t('Shop_now')}}</a
                             >
                           </div>
                         </div>

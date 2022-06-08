@@ -1,24 +1,93 @@
 {
-  "message": "مرحبًا !!",
-  "language":"جميع الإدارات",
-  "orders_tracking": "تتبع الطلب",
-  "location_job": "موقع",
-  "returns_replacements":"الإرجاع والاستبدال",
-  "about_us": "يتعلق بنا",
-  "help":"مساعدة",
-  "feature_product": "منتجات مميزة",
-  "serach_product":"ابحث عن المنتجات",
-  "search": "يبحث",
-  "Account": "الحساب",
-  "total": "المجموع",
-  "QAR":"ريالاً قطرياً",
-  "top_category": "أعلى الفئات",
-  "top_brands": "ارقى الماركات",
-  "home_and_living":"المنزل والمعيشة",
-  "blogs":"المدونات",
-  "Contact": "اتصال",
-  "Super_discount": "خصم سوبر",
-  "this_weeK":"فقط في نهاية هذا الأسبوع"
+    "message": "مرحبًا !!",
+    "language": "جميع الإدارات",
+    "orders_tracking": "تتبع الطلب",
+    "location_job": "موقع",
+    "returns_replacements": "الإرجاع والاستبدال",
+    "about_us": "يتعلق بنا",
+    "help": "مساعدة",
+    "feature_product": "منتجات مميزة",
+    "serach_product": "ابحث عن المنتجات",
+    "search": "يبحث",
+    "Account": "الحساب",
+    "total": "المجموع",
+    "QAR": "ريالاً قطرياً",
+    "top_category": "أعلى الفئات",
+    "top_brands": "ارقى الماركات",
+    "home_and_living": "المنزل والمعيشة",
+    "blogs": "المدونات",
+    "Contact": "اتصال",
+    "Super_discount": "خصم سوبر",
+    "this_weeK": "فقط في نهاية هذا الأسبوع",
+    "Free_Delivery": "توصيل مجاني",
+    "Free_shipping": "شحن مجاني لكل الطلبات",
+    "Online_Support": "دعم عبر الإنترنت 24/7",
+    "Support_online_hours": "دعم على الإنترنت 24 ساعة في اليوم",
+    "Money_Return": "عودة الأموال",
+    "Back_guarantee": "ضمان عودة أقل من 7 أيام",
+    "Member_discount": "خصم لأعضاء",
+    "Onevery_order": "كل طلب يزيد عن 120.00 ريال قطري",
+    "Top_sellers": "أفضل البائعين",
+    "Remains_until_offer": "يبقى حتى نهاية العرض",
+    "View_all": "مشاهدة الكل",
+    "Super_discount_first_purchase": "خصم رائع على أول عملية شراء",
+    "Use_discount_code": "استخدم كود الخصم في صفحة الخروج",
+    "FREE256MAC": "مجاني",
+    "Budget_deals": "العروض الميزانية",
+    "Special_offer": "عرض خاص",
+    "Coca_cola_spacial": "Coca Cola عرض خاص",
+    "Shop_and": "تسوق و",
+    "Save_on_Hottest": "وفر الكثير على سخونة",
+    "Products": "منتجات",
+    "from": "من",
+    "Donot_miss_opportunity": "لا تفوت هذه الفرصة الخاصة اليوم.",
+    "Shop_now": "تسوق الآن",
+    "Hot_deals": "صفقات ساخنة",
+    "Best_seller": "الأكثر مبيعًا",
+    "Buy_the_latest": "شراء أحدث",
+    "Pellentesque_habitant_morbi": "مستوطن موربي tristique senectus.",
+    "International_shipment": "الشحن الدولي",
+    "Your_between_countries": "يتم شحن طلباتك بسلاسة بين البلدان",
+    "Extended_day_returns": "إرجاع ممتد لمدة 45 يومًا",
+    "your_orders_within_days": ".لديك الحق في إرجاع طلباتك في غضون 45 يومًا",
+    "Secure_payment": "دفع امن",
+    "Your_our_privat_network": "مدفوعاتك آمنة مع شبكتنا الأمنية الخاصة.",
+    "New_phone": "هاتف جديد 11",
+    "miss_the_last_opportunity": "لا تفوت الفرصة الأخيرة.",
+    "Deals_of_the_week": "صفقات الأسبوع!",
+    "Weekend_discount": "خصم عطلة نهاية الاسبوع",
+    "Momentum_headphones": "سماعة الزخم 3",
+    "New_arrivel": "قادم جديد",
+    "Trending_products": "تتجه المنتجات",
+    "Home_speaker": "رئيس المنزل",
+    "New_smartphones": "الهواتف الذكية الجديدة",
+    "Mega_deals": "صفقات ضخمة",
+    "Smart_phone": "هاتف ذكي",
+    "accesseries": "مُكَمِّلات"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
