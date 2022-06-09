@@ -39,7 +39,7 @@
                           v-for="(item, name, indextr) in cartStore.grouped"
                         >
                           <td class="product-thumbnail">
-                            <a href="javascript:void(0)"
+                            <!-- <a href="javascript:void(0)"
                               ><img
                                 width="90"
                                 height="90"
@@ -51,19 +51,23 @@
                                 alt=""
                                 loading="lazy"
                                 sizes="(max-width: 90px) 100vw, 90px"
-                            /></a>
+                            />
+                            </a> -->
                           </td>
                           <td class="product-name" data-title="Product">
-                            <a href="javascript:void(0)"> {{ item[0].name }}</a>
+                            <a href="javascript:void(0)">
+                              {{ item[0].product.product_name }}</a
+                            >
                           </td>
 
                           <td class="product-price" data-title="Price">
-                            <span class="woocommerce-Price-amount amount"
-                              ><bdi
+                            <span class="woocommerce-Price-amount amount">
+                              <bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >$</span
-                                >{{ item[0].sale_price }}</bdi
-                              ></span
+                                >
+                                {{ item[0].product.variant_base_price }}
+                              </bdi></span
                             >
                           </td>
 
@@ -108,13 +112,14 @@
                           </td>
 
                           <td class="product-subtotal" data-title="Subtotal">
-                            <span class="woocommerce-Price-amount amount"
-                              ><bdi
+                            <span class="woocommerce-Price-amount amount">
+                              <bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >$</span
-                                >{{
+                                >
+                                {{
                                   cartStore.groupedCount(name) *
-                                  item[0].sale_price
+                                  item[0].product.variant_base_price
                                 }}</bdi
                               ></span
                             >

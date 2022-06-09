@@ -216,10 +216,11 @@
               "
             >
               <a
-                href="https://klbtheme.com/machic/product/apple-10-9-inch-ipad-air-wi-fi-cellular-64gb/"
+                href="javascript::void(0)"
                 class="dgwt-wcas-suggestion dgwt-wcas-suggestion-product"
                 data-index="0"
                 data-post-id="521"
+                v-for="(searchItem, index) in searchResults"
                 ><span class="dgwt-wcas-si"
                   ><img
                     src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-64x64.jpg"
@@ -230,7 +231,15 @@
                   <div class="dgwt-wcas-st">
                     <span class="dgwt-wcas-st-title">
                       <strong
-                        >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</strong
+                        ><router-link
+                          :to="
+                            '/' +
+                            langCode +
+                            '/product-detail/' +
+                            searchItem.slug
+                          "
+                          >{{ searchItem.name }}</router-link
+                        ></strong
                       ></span
                     >
                   </div>
@@ -241,7 +250,7 @@
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >699.99</bdi
+                            >{{ searchItem.previous_price }}</bdi
                           ></span
                         ></del
                       >
@@ -250,7 +259,7 @@
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >629.99</bdi
+                            >{{ searchItem.variant_base_price }}</bdi
                           ></span
                         ></ins
                       ></span
@@ -705,7 +714,7 @@
                     <span class="wishlist_products_counter_text"
                       >Wishlist -</span
                     >
-                    <span class="wishlist_products_counter_number">1</span>
+                    <span class="wishlist_products_counter_number">{{productStore.wishlistcount}}</span>
                   </a>
                 </div>
               </div>
@@ -851,7 +860,7 @@
                                     <a
                                       href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
                                     >
-                                      <img
+                                      <!-- <img
                                         width="90"
                                         height="90"
                                         :src="
@@ -866,19 +875,20 @@
                                           size-woocommerce_thumbnail
                                         "
                                         alt=""
-                                      />
+                                      /> -->
                                     </a>
                                   </div>
                                   <!-- thumbnail-wrapper -->
                                   <div class="content-wrapper">
                                     <h3 class="product-title">
                                       <a href="javascript:void(0)">{{
-                                        item[0].name
+                                        item[0].product.product_name
                                       }}</a>
                                     </h3>
                                     <div class="entry-price">
-                                      <span class="quantity"
-                                        >{{ item.length }} ×
+                                      <span class="quantity">
+                                        {{ item.length }}
+                                        ×
                                         <span
                                           class="
                                             woocommerce-Price-amount
@@ -890,12 +900,13 @@
                                               class="
                                                 woocommerce-Price-currencySymbol
                                               "
-                                              >QAR </span
-                                            >{{
+                                              >QAR
+                                            </span>
+                                            {{
                                               cartStore.groupedCount(name) *
-                                              item[0].variant_base_price
-                                            }}</bdi
-                                          >
+                                              item[0].product.variant_base_price
+                                            }}
+                                          </bdi>
                                         </span></span
                                       >
                                     </div>
@@ -1750,13 +1761,14 @@
 <script setup >
 import { computed } from "vue";
 import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
 
 // import { useCartStore } from "../../stores/cart";
-
+const productStore = useProductStore();
 const cartStore = useCartStore();
 const count = computed(() => cartStore.count);
 
-// console.log(count);
+// console.log(" cartStore.grouped", cartStore.grouped);
 </script>
 <script>
 import axios from "axios";
@@ -1771,6 +1783,7 @@ export default {
     notificationheight: 0,
     isChecked: false,
     langCode: "en",
+    searchResults: [],
   }),
   mounted() {
     axios
@@ -1864,12 +1877,30 @@ export default {
     },
     onchangesearch: function (event) {
       if (event.target.value) {
+        const inputsearch = event.target.value;
+        const payload = {
+          category_id: "",
+          search: inputsearch,
+          locale: "en",
+        };
+        // console.log(payload);
         var preloader = document.querySelector(".dgwt-wcas-preloader");
         var search = document.querySelector(".pre-suggestions");
         var searchsugget = document.querySelector(".js-dgwt-wcas-initialized");
         preloader.style = "dgwt-wcas-close";
         search.style = "dgwt-wcas-search-filled";
         searchsugget.style.display = "block";
+        axios
+          .post(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/searchProducts",
+            payload
+          )
+          .then((response) => {
+            // console.log(response.data.data.searchresults.data);
+            this.searchResults = response.data.data.searchresults.data;
+          })
+          .catch((error) => {});
+        // window.location.reload();
       } else {
         var preloader = document.querySelector(".dgwt-wcas-preloader");
         var search = document.querySelector(".pre-suggestions");

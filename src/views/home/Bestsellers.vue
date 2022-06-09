@@ -81,7 +81,10 @@
 
                             <router-link
                               :to="
-                                '/' + langCode + '/product-detail/' + item.product.id
+                                '/' +
+                                langCode +
+                                '/product-detail/' +
+                                item.product.slug
                               "
                             >
                               <div class="product-card">
@@ -106,7 +109,9 @@
                                     </div>
                                   </div>
                                   <div class="slidingSection">
-                                    <img src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg" />
+                                    <img
+                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
+                                    />
                                     <div class="hover-slider-indicator">
                                       <div
                                         data-hover-slider-i="45"
@@ -138,6 +143,7 @@
                                 <div class="tinv-wishlist-clear"></div>
                                 <a
                                   :onclick="clickmodal"
+                                  v-bind:wishlist_id="item.product.id"
                                   role="button"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
@@ -154,7 +160,8 @@
                                 >
                                 <a
                                   :onclick="clickmodal"
-                                  href="javascript::void(0)"
+                                  v-bind:wishlist_id="item.product.id"
+                                  href="javascript:void(0)"
                                   ><i class="fa fa-heart" aria-hidden="true"></i
                                   ><span class="tinvwl_add_to_wishlist-text"
                                     >Add to Wishlist</span
@@ -183,7 +190,7 @@
                                 >Compare</a
                               ><span
                                 @click="clickbigmodal"
-                                v-bind:topSeller_id="item.product.id"
+                                v-bind:topSeller_id="item.product.slug"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
                               ></span>
@@ -193,7 +200,15 @@
                           <!-- thumbnail-wrapper -->
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href="javascript:void(0)">{{ item.product.product_name }}</a>
+                              <router-link
+                                :to="
+                                  '/' +
+                                  langCode +
+                                  '/product-detail/' +
+                                  item.product.slug
+                                "
+                                >{{ item.product.product_name }}</router-link
+                              >
                             </h3>
                             <div class="product-rating">
                               <div
@@ -210,9 +225,7 @@
                                 >
                               </div>
                               <div class="count-rating">
-                                {{
-                                    item.product.review_count
-                                  }}
+                                {{ item.product.review_count }}
                                 <span class="rating-text">Ratings </span>
                               </div>
                             </div>
@@ -223,7 +236,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >{{ item.product?.uom_products[0]?.previous_price }}</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.previous_price
+                                    }}</bdi
                                   ></span
                                 ></del
                               >
@@ -233,7 +249,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >{{ item.product?.uom_products[0]?.regular_price }}</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.regular_price
+                                    }}</bdi
                                   ></span
                                 ></ins
                               ></span
@@ -304,7 +323,7 @@
           <div class="tinv-modal-inner">
             <i class="icon_big_heart_check"></i>
             <div class="tinv-txt">
-              Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
+              {{ showmessage }}
             </div>
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
@@ -657,8 +676,11 @@
                       </form>
 
                       <div class="product-actions">
-                        <div class="custom-wish-style">
-                          <a :onclick="clickmodal" href="javascript::void(0)"
+                        <div class="custom-wish-style" :onclick="clickmodal"
+                            v-bind:wishlist_id="singleProduct.id">
+                          <a
+                            
+                            href="javascript::void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
                             ><span class="tinvwl_add_to_wishlist-text"
                               >Add to Wishlist</span
@@ -1534,8 +1556,10 @@ import axios from "axios";
 export default {
   components: { Splide, SplideSlide },
   data: () => ({
+    showmessage: "Loading...",
+
     showmodal: "",
-    url:"http://baladi-v1.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     showmodalstyle: "",
     showbigmodal: "",
     showbigmodalstyle: "",
@@ -1574,14 +1598,12 @@ export default {
     },
     singleProduct: [],
     sub_products: [],
+    token: "",
   }),
   computed: {
-    // currentImage gets called whenever activeImage changes
-    // and is the reason why we don't have to worry about the
-    // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
+      // console.log(this.images[this.activeImage]);
       return this.images[this.activeImage].thumb;
     },
     progressBar() {
@@ -1591,7 +1613,9 @@ export default {
   },
   mounted() {
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=top-seller")
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=top-selling-products"
+      )
       .then((response) => {
         this.results = response.data.data[0].products;
         // console.log(this.results);
@@ -1600,15 +1624,64 @@ export default {
       })
       .catch((error) => {});
 
+    if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.token = userInfo.token;
+    }
+
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
   methods: {
-    clickmodal(index) {
+    clickmodal(event) {
+      const wishlistid = event.currentTarget.getAttribute("wishlist_id");
+      const payload = {
+        product_id: wishlistid,
+      };
+      axios
+        .post(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/addWishlist",
+          payload,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          this.showmessage = response.data.message;
+          // console.log(this.showmessage);
+          this.getWishList();
+        })
+        .catch((error) => {});
+
       this.showmodal = "show";
       this.showmodalstyle = "display:block";
     },
+    getWishList() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            const productStore = useProductStore();
+            productStore.wishListData(this.results);
+            console.log(this.results);
+          })
+          .catch((error) => {});
+      }
+    },
     closemodal() {
+      this.showmessage = "Loading...";
       this.showmodal = "";
       this.showmodalstyle = "";
     },
@@ -1617,7 +1690,7 @@ export default {
       // alert(topseller_id);
       axios
         .get(
-          "http://baladi-v1.bteamwebs.com/api/mobile/product/getProducts/" +
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
             topseller_id
         )
         .then((response) => {

@@ -243,7 +243,9 @@
                                 <a
                                   href="#bose-noise-cancelling-wireless-bluetooth/"
                                   title="javascript::void(0)"
-                                  >{{dealsoftheweek?.product?.product_name}}</a
+                                  >{{
+                                    dealsoftheweek?.product?.product_name
+                                  }}</a
                                 >
                               </h3>
                               <div class="product-rating">
@@ -254,12 +256,15 @@
                                 >
                                   <span style="width: 80%"
                                     >Rated
-                                    <strong class="rating">{{dealsoftheweek?.product?.rating}}</strong> out of
-                                    5</span
+                                    <strong class="rating">{{
+                                      dealsoftheweek?.product?.rating
+                                    }}</strong>
+                                    out of 5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                   {{dealsoftheweek?.product?.review_count}}<span class="rating-text">Ratings</span>
+                                  {{ dealsoftheweek?.product?.review_count
+                                  }}<span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <span class="price"
@@ -269,7 +274,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{dealsoftheweek?.product?.uom_products[0]?.previous_price}}</bdi
+                                      >{{
+                                        dealsoftheweek?.product?.uom_products[0]
+                                          ?.previous_price
+                                      }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -279,7 +287,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{dealsoftheweek?.product?.uom_products[0]?.regular_price}}</bdi
+                                      >{{
+                                        dealsoftheweek?.product?.uom_products[0]
+                                          ?.regular_price
+                                      }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -339,7 +350,10 @@
                             <div class="thumbnail-wrapper">
                               <router-link
                                 :to="
-                                  '/' + langCode + '/product-detail' + item.product.id
+                                  '/' +
+                                  langCode +
+                                  '/product-detail' +
+                                  item.product.id
                                 "
                               >
                                 <img
@@ -362,7 +376,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR <br /></span
-                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.previous_price
+                                      }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -372,7 +389,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR <br /></span
-                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.regular_price
+                                      }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -541,303 +561,9 @@
               </div>
             </div>
           </section>
-          <div
-            class="
-              elementor-element
-              elementor-element-13ab871
-              elementor-widget
-              elementor-widget-machic-product-grid
-            "
-            data-id="13ab871"
-            data-element_type="widget"
-            data-widget_type="machic-product-grid.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module products-module">
-                <div class="module-header">
-                  <h4 class="entry-title">Best Sellers</h4>
-                  <a href="#?orderby=popularity&amp;paged=1" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
-                  ></a>
-                </div>
-                <div class="module-wrapper">
-                  <div class="products column-4 mobile-2 total-4">
-                    <div
-                      class="product custom-hover"
-                      :data="item"
-                      :key="indextr"
-                      v-for="(item, indextr) in bestresults"
-                    >
-                      <div class="product-wrapper product-type-1">
-                        <div class="product-content">
-                          <div class="thumbnail-wrapper">
-                            <div class="product-badges">
-                              <span class="badge onsale">11%</span>
-                            </div>
-                            <router-link
-                              :to="'/' + langCode + '/product-detail' + item.product.id"
-                            >
-                              <div
-                                class="product-card"
-                                style="position: relative"
-                              >
-                                <div
-                                  class="hover-slider-images-toggler"
-                                  style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    display: flex;
-                                  "
-                                >
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
-                                    data-hover-slider-i="1"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                                    data-hover-slider-i="2"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
-                                    data-hover-slider-i="3"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
-                                    data-hover-slider-i="4"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                    data-hover-slider-i="5"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                </div>
-                                <div class="hover-slider-indicator">
-                                  <div
-                                    data-hover-slider-i="1"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="2"
-                                    class="hover-slider-indicator-dot active"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="3"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="4"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="5"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                </div>
-                                 <div class="product-card">
-                                <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/series1.jpg"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                  <div class="slidingSection">
-                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/series1.jpgurt-mango 110 g .jpg" />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                            </router-link>
-                            <div class="product-buttons">
-                              <div
-                                class="
-                                  tinv-wraper
-                                  woocommerce
-                                  tinv-wishlist
-                                  tinvwl-shortcode-add-to-cart
-                                "
-                                data-product_id="521"
-                              >
-                                <div class="tinv-wishlist-clear"></div>
-                                <a
-                                  :onclick="clickmodal"
-                                  role="button"
-                                  tabindex="0"
-                                  aria-label="Add to Wishlist"
-                                  class="
-                                    tinvwl_add_to_wishlist_button
-                                    d-none
-                                    tinvwl-icon-heart tinvwl-position-after
-                                  "
-                                  data-tinv-wl-list="[]"
-                                  data-tinv-wl-product="521"
-                                  data-tinv-wl-productvariation="0"
-                                  data-tinv-wl-productvariations="[0]"
-                                  data-tinv-wl-producttype="simple"
-                                  data-tinv-wl-action="add"
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
-                                <a
-                                  :onclick="clickmodal"
-                                  href="javascript::void(0)"
-                                  ><i class="fa fa-heart" aria-hidden="true"></i
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
 
-                                <div class="tinv-wishlist-clear"></div>
-                                <div class="tinvwl-tooltip">
-                                  Add to Wishlist
-                                </div>
-                              </div>
-                              <a href="#?featured=yes" class="most-comments"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                  alt="featured" /></a
-                              ><a
-                                href="javascript::void(0)"
-                                class="woosc-btn woosc-btn-521"
-                                :onclick="clickcomparemodal"
-                                data-id="521"
-                                >Compare</a
-                              ><span
-                                :onclick="clickbigmodal"
-                                class="detail-bnt quickview animated"
-                                ><i class="klbth-icon-eye-empty"></i
-                              ></span>
-                            </div>
-                          </div>
-                          <div class="content-wrapper">
-                            <h3 class="product-title">
-                              <a
-                                href="javascript"
-                                >{{ item.product.product_name }}</a
-                              >
-                            </h3>
-                            <div class="product-rating">
-                              <div
-                                class="star-rating"
-                                role="img"
-                                aria-label="Rated 5.00 out of 5"
-                              >
-                                <span style="width: 100%"
-                                  >Rated
-                                  <strong class="rating">{{
-                                    item.product.rating
-                                  }}</strong>
-                                  out of 5</span
-                                >
-                              </div>
-                              <div class="count-rating">
-                               {{
-                                    item.product.review_count
-                                  }}<span class="rating-text">Ratings</span>
-                              </div>
-                            </div>
-                            <div class="product-price-cart">
-                              <span class="price"
-                                ><del aria-hidden="true"
-                                  ><span class="woocommerce-Price-amount amount"
-                                    ><bdi
-                                      ><span
-                                        class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
-                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
-                                    ></span
-                                  ></del
-                                >
-                                <ins
-                                  ><span
-                                    class="woocommerce-Price-amount amount"
-                                    style="margin: 4px"
-                                    ><bdi
-                                      ><span
-                                        class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
-                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
-                                    ></span
-                                  ></ins
-                                ></span
-                              ><a
-                                href=""
-                                data-quantity="1"
-                                class="
-                                  button
-                                  product_type_simple
-                                  add_to_cart_button
-                                  ajax_add_to_cart
-                                "
-                                data-product_id="521"
-                                data-product_sku="BE45VGRT"
-                                aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                                rel="nofollow"
-                                ><i class="klbth-icon-shop-1"></i> Add to
-                                cart</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="product-footer">
-                          <div class="product-footer-details">
-                            <ul>
-                              <li class="SpecHighlights-list-label">
-                                Screen Size 10.9 in
-                              </li>
-                              <li>Operating System Apple iOS</li>
-                              <li>Product Length 9.74 in</li>
-                            </ul>
-                            &nbsp;
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="product-content-fade"
-                        style="margin-bottom: -109px"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Best Seller -->
+          <Bestsell />
           <div
             class="
               elementor-element
@@ -905,10 +631,12 @@
                 </div>
                 <div class="module-wrapper">
                   <div class="products list-style row">
-                    <div class="col col-12 col-lg-6" 
-                        :data="item"
-                        :key="indextr"
-                        v-for="(item, indextr) in megadeals">
+                    <div
+                      class="col col-12 col-lg-6"
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in megadeals"
+                    >
                       <div class="product">
                         <div class="product-wrapper">
                           <div class="product-content">
@@ -926,9 +654,14 @@
                             </div>
                             <div class="content-wrapper">
                               <h3 class="product-title">
-                                <a
-                                  href="javascript:void(0)"
-                                  >{{ item.product.product_name }}</a
+                                <router-link
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/product-detail/' +
+                                    item.product.slug
+                                  "
+                                  >{{ item.product.product_name }}</router-link
                                 >
                               </h3>
                               <div class="product-rating">
@@ -940,15 +673,14 @@
                                   <span style="width: 100%"
                                     >Rated
                                     <strong class="rating">{{
-                                    item.product.rating
-                                  }}</strong> out of
-                                    5</span
+                                      item.product.rating
+                                    }}</strong>
+                                    out of 5</span
                                   >
                                 </div>
                                 <div class="count-rating">
-                                  {{
-                                    item.product.review_count
-                                  }} <span class="rating-text">Ratings</span>
+                                  {{ item.product.review_count }}
+                                  <span class="rating-text">Ratings</span>
                                 </div>
                               </div>
                               <span class="price"
@@ -958,7 +690,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.previous_price
+                                      }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -968,7 +703,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.regular_price
+                                      }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -1033,232 +771,8 @@
               </div>
             </div>
           </div>
-          <div class="elementor-widget-container my-5">
-            <div class="site-module products-module">
-              <div class="module-header">
-                <h4 class="entry-title">Smart Phone &amp; Accesseries</h4>
-                <a href="#" class="btn link"
-                  >View All <i class="klbth-icon-right-arrow"></i
-                ></a>
-              </div>
-              <div class="module-wrapper">
-                <div class="products column-4 mobile-2 total-4">
-                  <div class="product custom-hover" 
-                   :data="item"
-                   :key="indextr"
-                   v-for="(item, indextr) in smartphone">
-                    <div class="product-wrapper product-type-1">
-                      <div class="product-content">
-                        <div class="thumbnail-wrapper">
-                          <div class="product-badges">
-                            <span class="badge onsale">11%</span>
-                          </div>
-                          <a href="javascript:void(0)">
-                            <div
-                              class="product-card"
-                              style="position: relative"
-                            >
-                              <div
-                                class="hover-slider-images-toggler"
-                                style="
-                                  position: absolute;
-                                  inset: 0px;
-                                  display: flex;
-                                "
-                              >
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-400x400.jpg"
-                                  data-hover-slider-i="1"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                                  data-hover-slider-i="2"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
-                                  data-hover-slider-i="3"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
-                                  data-hover-slider-i="4"
-                                  style="flex-grow: 1"
-                                ></div>
-                                <div
-                                  class="hover-slider-toggle-pane"
-                                  data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                                  data-hover-slider-i="5"
-                                  style="flex-grow: 1"
-                                ></div>
-                              </div>
-                              <div class="hover-slider-indicator">
-                                <div
-                                  data-hover-slider-i="1"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="2"
-                                  class="hover-slider-indicator-dot active"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="3"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="4"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="5"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                              </div>
-                              <img
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                                class="hover-slider-init"
-                                data-options='{"touch":"end","preloadImages": true }'
-                              />
-                            </div>
-                          </a>
-                          <div class="product-buttons">
-                            <div
-                              class="
-                                tinv-wraper
-                                woocommerce
-                                tinv-wishlist
-                                tinvwl-shortcode-add-to-cart
-                              "
-                              data-product_id="521"
-                            >
-                              <div class="tinv-wishlist-clear"></div>
-                              <a href="javascript::void(0)" data-v-9705c064=""
-                                ><i
-                                  class="fa fa-heart"
-                                  aria-hidden="true"
-                                  data-v-9705c064=""
-                                ></i
-                                ><span
-                                  class="tinvwl_add_to_wishlist-text"
-                                  data-v-9705c064=""
-                                  >Add to Wishlist</span
-                                ></a
-                              >
-
-                              <div class="tinv-wishlist-clear"></div>
-                              <div class="tinvwl-tooltip">Add to Wishlist</div>
-                            </div>
-                            <a href="javascript:void(0)" class="most-comments"
-                              ><img
-                                src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                alt="featured" /></a
-                            ><a
-                              :onclick="clickcomparemodal"
-                              class="woosc-btn woosc-btn-521"
-                              data-id="521"
-                              href="javascript::void(0)"
-                              >Compare</a
-                            ><a
-                              :onclick="clickbigmodal"
-                              class="detail-bnt quickview animated"
-                              ><i class="klbth-icon-eye-empty"></i
-                            ></a>
-                          </div>
-                        </div>
-                        <div class="content-wrapper">
-                          <h3 class="product-title">
-                            <a href="javascript:void(0)"
-                              >{{ item.product.product_name }}</a
-                            >
-                          </h3>
-                          <div class="product-rating">
-                            <div
-                              class="star-rating"
-                              role="img"
-                              aria-label="Rated 5.00 out of 5"
-                            >
-                              <span style="width: 100%"
-                                >Rated <strong class="rating">{{
-                                    item.product.rating
-                                  }}</strong> out
-                                of 5</span
-                              >
-                            </div>
-                            <div class="count-rating">
-                              {{
-                                    item.product.review_count
-                                  }} <span class="rating-text">Ratings</span>
-                            </div>
-                          </div>
-                          <div class="product-price-cart">
-                            <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >{{ item.product?.uom_products[0]?.previous_price }}</bdi
-                                  ></span
-                                ></del
-                              >
-                              <ins
-                                ><span
-                                  class="woocommerce-Price-amount amount"
-                                  style="margin: 4px"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >{{ item.product?.uom_products[0]?.regular_price }}</bdi
-                                  ></span
-                                ></ins
-                              ></span
-                            ><a
-                              href="javascript:void(0)"
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              data-product_id="521"
-                              data-product_sku="BE45VGRT"
-                              aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                              rel="nofollow"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="product-footer">
-                        <div class="product-footer-details">
-                          <ul>
-                            <li class="SpecHighlights-list-label">
-                              Screen Size 10.9 in
-                            </li>
-                            <li>Operating System Apple iOS</li>
-                            <li>Product Length 9.74 in</li>
-                          </ul>
-                          &nbsp;
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="product-content-fade"
-                      style="margin-bottom: -109px"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- smart phont accessrioes -->
+          <SmartphoneVue />
           <div
             class="
               elementor-element
@@ -1302,282 +816,8 @@
               </div>
             </div>
           </div>
-          <div
-            class="
-              elementor-element
-              elementor-element-ce97da5
-              elementor-widget
-              elementor-widget-machic-product-grid
-            "
-            data-id="ce97da5"
-            data-element_type="widget"
-            data-widget_type="machic-product-grid.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module products-module">
-                <div class="module-header">
-                  <h4 class="entry-title">New Arrivel</h4>
-                  <a href="#" class="btn link"
-                    >View All <i class="klbth-icon-right-arrow"></i
-                  ></a>
-                </div>
-                <div class="module-wrapper">
-                  <div class="products column-4 mobile-2 total-4">
-                    <div
-                      class="product custom-hover"
-                      :data="item"
-                      :key="indextr"
-                      v-for="(item, indextr) in arrivel"
-                    >
-                      <div class="product-wrapper product-type-1">
-                        <div class="product-content">
-                          <div class="thumbnail-wrapper">
-                            <div class="product-badges">
-                              <span class="badge super">Super Price</span>
-                            </div>
-                            <router-link
-                              :to="
-                                '/' + langCode + '/product-detail' + item.product.id
-                              "
-                            >
-                              <div
-                                class="product-card"
-                                style="position: relative"
-                              >
-                                <div
-                                  class="hover-slider-images-toggler"
-                                  style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    display: flex;
-                                  "
-                                >
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
-                                    data-hover-slider-i="37"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad2-400x400.jpg"
-                                    data-hover-slider-i="38"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad3-400x400.jpg"
-                                    data-hover-slider-i="39"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                  <div
-                                    class="hover-slider-toggle-pane"
-                                    data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad4-400x400.jpg"
-                                    data-hover-slider-i="40"
-                                    style="flex-grow: 1"
-                                  ></div>
-                                </div>
-                                <div class="hover-slider-indicator">
-                                  <div
-                                    data-hover-slider-i="37"
-                                    class="hover-slider-indicator-dot active"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="38"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="39"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                  <div
-                                    data-hover-slider-i="40"
-                                    class="hover-slider-indicator-dot"
-                                  ></div>
-                                </div>
-                               <div class="product-card">
-                                <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                  <div class="slidingSection">
-                                    <img src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg" />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                            </router-link>
-
-                            <div class="product-buttons">
-                              <div
-                                class="
-                                  tinv-wraper
-                                  woocommerce
-                                  tinv-wishlist
-                                  tinvwl-shortcode-add-to-cart
-                                "
-                                data-product_id="478"
-                              >
-                                <div class="tinv-wishlist-clear"></div>
-
-                                <a
-                                  :onclick="clickmodal"
-                                  href="javascript::void(0)"
-                                  ><i class="fa fa-heart" aria-hidden="true"></i
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
-
-                                <div class="tinv-wishlist-clear"></div>
-                                <div class="tinvwl-tooltip">
-                                  Add to Wishlist
-                                </div>
-                              </div>
-                              <a href="javascript:void(0)" class="most-comments"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                  alt="featured" /></a
-                              ><a
-                                href="javascript::void(0)"
-                                class="
-                                  woosc-btn
-                                  woosc-btn-521
-                                  woosc-btn-added
-                                  woosc-added
-                                "
-                                :onclick="clickcomparemodal"
-                                data-id="521"
-                                >Compare</a
-                              ><span
-                                :onclick="clickbigmodal"
-                                class="detail-bnt quickview animated"
-                                ><i class="klbth-icon-eye-empty"></i
-                              ></span>
-                            </div>
-                          </div>
-                          <div class="content-wrapper">
-                            <h3 class="product-title">
-                              <a href="javascript:void(0)">{{ item.product.product_name }}</a>
-                            </h3>
-                            <div class="product-rating">
-                              <div
-                                class="star-rating"
-                                role="img"
-                                aria-label="Rated 5.00 out of 5"
-                              >
-                                <span style="width: 100%"
-                                  >Rated
-                                  <strong class="rating">{{
-                                    item.product.rating
-                                  }}</strong>
-                                  out of 5</span
-                                >
-                              </div>
-                              <div class="count-rating">
-                                {{
-                                    item.product.review_count
-                                  }} <span class="rating-text">Ratings</span>
-                              </div>
-                            </div>
-                            <div class="product-price-cart">
-                              <span class="price"
-                                ><del aria-hidden="true"
-                                  ><span class="woocommerce-Price-amount amount"
-                                    ><bdi
-                                      ><span
-                                        class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
-                                      >{{ item.product?.uom_products[0]?.previous_price }}</bdi
-                                    ></span
-                                  ></del
-                                >
-                                <ins
-                                  ><span
-                                    class="woocommerce-Price-amount amount"
-                                    style="margin: 4px"
-                                    ><bdi
-                                      ><span
-                                        class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
-                                      >{{ item.product?.uom_products[0]?.regular_price }}</bdi
-                                    ></span
-                                  ></ins
-                                ></span
-                              ><a
-                                href="javascript:void(0)"
-                                data-quantity="1"
-                                class="
-                                  button
-                                  product_type_simple
-                                  add_to_cart_button
-                                  ajax_add_to_cart
-                                "
-                                data-product_id="516"
-                                data-product_sku="SR4JK74"
-                                aria-label="Add “Apple 11-inch iPad Pro (2021) Wi-Fi 128GB” to your cart"
-                                rel="nofollow"
-                                ><i class="klbth-icon-shop-1"></i> Add to
-                                cart</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="product-footer">
-                          <div class="product-footer-details">
-                            <ul>
-                              <li class="SpecHighlights-list-label">
-                                Screen Size 11 in
-                              </li>
-                              <li>Operating SystemApple iOS</li>
-                              <li>
-                                <div class="SpecHighlights-list-label">
-                                  RAM Memory 8 GB
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="product-content-fade"
-                        style="margin-bottom: -91px"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- New Arrivals -->
+          <Newarrival />
         </div>
       </div>
     </div>
@@ -2792,6 +2032,16 @@ img {
   box-shadow: 0 1px 0 hsla(0, 0, 25, 0.4);
 }
 </style>
+<script setup>
+import Bestsell from "./Bestsell.vue";
+import Newarrival from "./Newarrival.vue";
+import SmartphoneVue from "./Smartphone.vue";
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
+</script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
@@ -2864,45 +2114,21 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
-     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=best-sellers")
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products"
+      )
       .then((response) => {
-        this.bestresults = response.data.data[0].products;
-        // console.log(this.bestresults);
-        // const productStore = useProductStore();
-        // productStore.testData(this.results);
-      })
-      .catch((error) => {});
-     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products")
-      .then((response) => {
-        this.arrivel = response.data.data[0].products;
+        this.trends = response.data.data[0].products;
         // console.log(this.arrivel);
         // const productStore = useProductStore();
         // productStore.testData(this.results);
       })
       .catch((error) => {});
-     
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=new-arrivel")
-      .then((response) => {
-        this.trends = response.data.data[0].products;
-        // console.log(this.trends);
-        // const productStore = useProductStore();
-        // productStore.testData(this.results);
-      })
-      .catch((error) => {});
-     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=smart-phone-accesseries")
-      .then((response) => {
-        this.smartphone = response.data.data[0].products;
-        // console.log(this.smartphone);
-        // const productStore = useProductStore();
-        // productStore.testData(this.results);
-      })
-      .catch((error) => {});
-       axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=mega-deals")
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=mega-deals"
+      )
       .then((response) => {
         this.megadeals = response.data.data[0].products;
         // console.log(this.megadeals);
@@ -2910,8 +2136,10 @@ export default {
         // productStore.testData(this.results);
       })
       .catch((error) => {});
-       axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=deals-of-the-week")
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=deals-of-the-week"
+      )
       .then((response) => {
         this.dealsoftheweek = response.data.data[0].products[0];
         // console.log(this.dealsoftheweek);

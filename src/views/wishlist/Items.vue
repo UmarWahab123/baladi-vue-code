@@ -39,6 +39,7 @@
               name="tinvwl-remove"
               value="605"
               title="Remove"
+              @click="remove(item.product_id)"
             >
               <i class="ftinvwl ftinvwl-times"></i>
             </button>
@@ -70,30 +71,29 @@
             /></a>
           </td>
           <td class="product-name">
-            <a href="javascript:void(0)">{{ item.product }}</a>
+            <a href="javascript:void(0)">{{ item?.product?.product_name }}</a>
           </td>
           <td class="product-price">
             <del aria-hidden="true"
               ><span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">$</span
-                  >699.99</bdi
+                  >{{ item?.product?.uom_products[0]?.previous_price }}</bdi
                 ></span
               ></del
             >
             <ins
               ><span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
-                  >{{ item.price }}</bdi
+                  ><span class="woocommerce-Price-currencySymbol"> $</span
+                  >{{ item?.product?.variant_base_price }}</bdi
                 ></span
               ></ins
             >
           </td>
           <td class="product-date">
-            <time class="entry-date" datetime="2022-02-15 04:54:29"
-              >February 15, 2022</time
-            >
+            <time class="entry-date" :datetime="item.created_at"></time>
+            {{ moment(item.created_at).format("MMMM , DD YYYY ") }}
           </td>
           <td class="product-stock">
             <p class="stock in-stock">
@@ -109,7 +109,11 @@
               title="Add to Cart"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt">Add to Cart</span>
+              ><span
+                class="tinvwl-txt"
+                @click="$emit(cartStore.items.push(item))"
+                >Add to Cart</span
+              >
             </button>
           </td>
         </tr>
@@ -150,6 +154,7 @@
                 name="tinvwl-action"
                 value="product_selected"
                 title="Add Selected to Cart"
+                @click="AddSelected"
               >
                 Add Selected to Cart
               </button>
@@ -157,8 +162,8 @@
               <button
                 class="btn"
                 name="tinvwl-action"
-                value="product_all"
                 title="Add All to Cart"
+                @click="AddAll"
               >
                 Add All to Cart
               </button>
@@ -179,39 +184,121 @@
     </table>
   </form>
 </template>
-
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
+</script>
 <script>
+import moment from "moment";
+import axios from "axios";
+import { useProductStore } from "../../stores/ProductStore";
+const cartStore = useCartStore();
 export default {
   data: () => ({
     select_all: false,
     selected: [],
-    results: [
-      {
-        id: 1,
-        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 1",
-        price: 233,
-        quantity: 1,
-        subtotal: 233,
-      },
-      {
-        id: 2,
-        product: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB 2",
-        price: 253,
-        quantity: 1,
-        subtotal: 253,
-      },
-    ],
+    results: [],
+    token: "",
+    moment: moment,
+    items: [],
   }),
   mounted() {
-    console.log(this.selected);
+    this.getWishList();
   },
   methods: {
     select() {
       this.selected = [];
+      this.items = [];
       if (!this.select_all) {
         for (let i in this.results) {
           this.selected.push(this.results[i].id);
         }
+        for (let i in this.results) {
+          this.items.push(this.results);
+        }
+      }
+      console.log("selected", this.items);
+    },
+    remove(id) {
+      // alert(id);
+      axios
+        .delete(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/removeWishlist?product_id=" +
+            id,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          const Toast = this.$swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "success",
+            title: response.data.data[0]
+              ? response.data.data[0]
+              : response.data.message,
+          });
+
+          this.getWishList();
+        })
+        .catch((error) => {});
+    },
+    getWishList() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            const productStore = useProductStore();
+            productStore.wishListData(this.results);
+            console.log(this.results);
+          })
+          .catch((error) => {});
+      }
+    },
+    AddSelected() {
+      this.results.forEach((item, indextr) => {
+        if (this.selected.includes(item.id)) {
+          console.log("item", item);
+          cartStore.items.push(item);
+        }
+      });
+      return false;
+    },
+    AddAll() {
+      // alert("add all to cart");
+      console.log(this.items);
+      if (this.items.length > 0) {
+        this.items.forEach((item, indextr) => {
+          // this.addToCart(item);
+          console.log("indextr", indextr, "item", item[indextr]);
+          cartStore.items.push(item[indextr]);
+        });
+        // this.selected = [];
+      } else {
+        alert("Please select All item");
       }
     },
   },
