@@ -4,7 +4,7 @@
       <div class="col">
         <section class="site-module recently-viewed mt-30 d-mt-40">
           <div class="module-header">
-            <h4 class="entry-title">Recently Viewed Products</h4>
+            <h4 class="entry-title">{{$t('Recently_Viewed_Products')}}</h4>
           </div>
           <div class="products column-6 mobile-2">
             <div

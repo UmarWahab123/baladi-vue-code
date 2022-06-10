@@ -51,7 +51,7 @@
                       <div class="elementor-shortcode">
                         <div class="woocommerce mt-4 row">
                           <div class="col-md-8 mx-auto text-center">
-                            <h3>Track Your Order</h3>
+                            <h3>{{$t('Track_Your_Order')}}</h3>
                           </div>
                           <div class="col-sm-6 col-md-5 mx-auto shadow p-4">
                             <form
@@ -63,7 +63,7 @@
                               "
                             >
                               <p class="form-row form-row-first">
-                                <label for="orderid">Order ID</label>
+                                <label for="orderid">{{$t('Order_ID')}}</label>
                                 <input
                                   class="input-text"
                                   type="text"
@@ -86,7 +86,7 @@
                                     name="track"
                                     value="Track"
                                   >
-                                    Track
+                                    {{$t('Track')}}
                                   </button>
                                 </router-link>
                               </p>

@@ -14,7 +14,7 @@
                     style="padding: 0px"
                   >
                     <div class="col-md-12">
-                      <h3 class="align-items-center p-3">Baladi Wallet</h3>
+                      <h3 class="align-items-center p-3">{{$t('baladi_wallet')}}</h3>
 
                       <div class="col-xl-12 p-3 col-lg-12">
                         <div class="card l-bg-orange-dark">
@@ -57,8 +57,8 @@
                             <i class="fa fa-credit-card text-success"></i>
                           </div>
                           <div>
-                            <h2>Payments</h2>
-                            <p>Make convenient one-click payments</p>
+                            <h2>{{$t('payments')}}</h2>
+                            <p>{{$t('one_click_payments')}}</p>
                           </div>
                         </div>
                         <div class="col d-flex align-items-start">
@@ -75,8 +75,8 @@
                             <i class="fa fa-bullhorn text-success"></i>
                           </div>
                           <div>
-                            <h2>Bonus</h2>
-                            <p>Earn bonus on your purchases</p>
+                            <h2>{{$t('bonus')}}</h2>
+                            <p>{{$t('earn_bonus')}}</p>
                           </div>
                         </div>
                         <div class="col d-flex align-items-start">
@@ -93,8 +93,8 @@
                             <i class="fa fa fa-credit-card text-success"></i>
                           </div>
                           <div>
-                            <h2>Get Bonus</h2>
-                            <p>Get bonus from Baladi Express</p>
+                            <h2>{{$t('get_bonus')}}</h2>
+                            <p>{{$t('bonus_from_baladi')}}</p>
                           </div>
                         </div>
                       </div>
@@ -108,7 +108,7 @@
                             data-target="#staticBackdrop"
                             style="color: white"
                           >
-                            Activate My Wallet
+                            {{$t('activate_wallet')}}
                           </a>
                         </div>
                       </div>

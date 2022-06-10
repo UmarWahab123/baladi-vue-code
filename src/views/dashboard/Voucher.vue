@@ -11,7 +11,7 @@
                   <Sidebar />
 
                   <div class="col-md-8">
-                    <h3 class="align-items-center p-3">Voucher Coupon</h3>
+                    <h3 class="align-items-center p-3"> {{$t('coupon')}}</h3>
                     <section class="row p-1" id="labels">
                       <div class="col-md-12 my-2">
                         <div class="coupon p-3 bg-coupon-1 text-white">
@@ -23,8 +23,8 @@
                                 <img
                                   class="img-coupon rounded-circle shadow"
                                   src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
-                                /><span class="d-block">I phone 12</span
-                                ><span class="text-white fw-bold">Watch</span>
+                                /><span class="d-block">{{$t('iPhone')}}</span
+                                ><span class="text-white fw-bold">{{$t('watch')}}</span>
                               </div>
                             </div>
                             <div class="col-md-8">
@@ -33,16 +33,16 @@
                                   class="d-flex flex-row justify-content-end off"
                                 >
                                   <h1>50%</h1>
-                                  <span>OFF</span>
+                                  <span>{{$t('off')}}</span>
                                 </div>
                                 <div
                                   class="d-flex flex-row justify-content-between off px-3 p-2"
                                 >
-                                  <span>Promo code:</span
+                                  <span>{{$t('promo_code')}}</span
                                   ><span class="btn-sm bg-danger px-5 code"
                                     >BBB50</span
                                   >
-                                  <small>Expiration Date : 3 March</small>
+                                  <small>{{$t('expiration_date')}}</small>
                                 </div>
                               </div>
                             </div>
@@ -60,8 +60,8 @@
                                 <img
                                   class="img-coupon rounded-circle shadow"
                                   src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-23.jpg"
-                                /><span class="d-block">I phone 12</span
-                                ><span class="text-white fw-bold">Watch</span>
+                                /><span class="d-block">{{$t('iPhone')}}</span
+                                ><span class="text-white fw-bold">{{$t('watch')}}</span>
                               </div>
                             </div>
                             <div class="col-md-8">
@@ -70,16 +70,16 @@
                                   class="d-flex flex-row justify-content-end off"
                                 >
                                   <h1>50%</h1>
-                                  <span>OFF</span>
+                                  <span>{{$t('off')}}</span>
                                 </div>
                                 <div
                                   class="d-flex flex-row justify-content-between off px-3 p-2"
                                 >
-                                  <span>Promo code:</span
+                                  <span>{{$t('promo_code')}}</span
                                   ><span class="btn-sm bg-danger px-5 code"
                                     >BBB50</span
                                   >
-                                  <small>Expiration Date : 3 March</small>
+                                  <small>{{$t('expiration_date')}}</small>
                                 </div>
                               </div>
                             </div>
@@ -97,8 +97,8 @@
                                 <img
                                   class="img-coupon rounded-circle shadow"
                                   src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2.jpg"
-                                /><span class="d-block">I phone 12</span
-                                ><span class="text-white fw-bold">Watch</span>
+                                /><span class="d-block">{{$t('iPhone')}}</span
+                                ><span class="text-white fw-bold">{{$t('watch')}}</span>
                               </div>
                             </div>
                             <div class="col-md-8">
@@ -107,16 +107,16 @@
                                   class="d-flex flex-row justify-content-end off"
                                 >
                                   <h1>50%</h1>
-                                  <span>OFF</span>
+                                  <span>{{$t('off')}}</span>
                                 </div>
                                 <div
                                   class="d-flex flex-row justify-content-between off px-3 p-2"
                                 >
-                                  <span>Promo code:</span
+                                  <span>{{$t('promo_code')}}</span
                                   ><span class="btn-sm bg-danger px-5 code"
                                     >BBB50</span
                                   >
-                                  <small>Expiration Date : 3 March</small>
+                                  <small>{{$t('expiration_date')}}</small>
                                 </div>
                               </div>
                             </div>

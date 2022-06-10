@@ -24,7 +24,7 @@
               <div class="col col-12 col-lg-9 content-column">
                 <div class="filter-button">
                   <a href="#">
-                    <i class="klbth-icon-filter"></i> Filter Products
+                    <i class="klbth-icon-filter"></i> {{$t('Filter_Products')}}
                   </a>
                 </div>
                 <div class="filter-wrapper">
@@ -44,20 +44,20 @@
                         tabindex="-1"
                         aria-hidden="true"
                       >
-                        <option value="popularity">Sort by popularity</option>
-                        <option value="rating">Sort by average rating</option>
+                        <option value="popularity">{{$t('Sort_by_popularity')}}</option>
+                        <option value="rating">{{$t('Sort_by_average_rating')}}</option>
                         <option
                           value="date"
                           selected="selected"
                           data-select2-id="3"
                         >
-                          Sort by latest
+                          {{$t('Sort_by_latest')}}
                         </option>
                         <option value="price">
-                          Sort by price: low to high
+                          {{$t('Sort_by_price')}}
                         </option>
                         <option value="price-desc">
-                          Sort by price: high to low
+                          {{$t('Sort_by_high_to_low')}}
                         </option>
                       </select>
 
@@ -67,7 +67,7 @@
 
                   <!-- For perpage option-->
                   <div class="sorting-product hide-mobile">
-                    <span>Show:</span>
+                    <span>{{$t('Show')}}:</span>
                     <form
                       class="
                         woocommerce-ordering
@@ -84,10 +84,10 @@
                         tabindex="-1"
                         aria-hidden="true"
                       >
-                        <option value="16" data-select2-id="6">16 Items</option>
-                        <option value="32">32 Items</option>
-                        <option value="48">48 Items</option>
-                        <option value="64">64 Items</option>
+                        <option value="16" data-select2-id="6">{{$t('Items')}}</option>
+                        <option value="32">{{$t('Itemss')}}</option>
+                        <option value="48">{{$t('Itemsss')}}</option>
+                        <option value="64">{{$t('Itemssss')}}</option>
                       </select>
                     </form>
                   </div>
@@ -119,7 +119,7 @@
               </div>
               <!-- col -->
               <div class="col col-12 col-lg-3 sidebar-column hide-mobile">
-                <p class="woocommerce-result-count">Showing all 15 results</p>
+                <p class="woocommerce-result-count">{{$t('Showing_all_results')}}</p>
               </div>
               <!-- col -->
             </div>

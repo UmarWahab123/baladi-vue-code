@@ -21,7 +21,7 @@
                       "
                     >
                       <label for="account_last_name"
-                        >Name&nbsp;<span class="">*</span></label
+                        >{{$t('name')}}&nbsp;<span class="">*</span></label
                       >
                       <input
                         v-model="formdata.name"
@@ -35,8 +35,7 @@
                       />
                       <span
                         ><em
-                          >This will be how your name will be displayed in the
-                          account section and in reviews</em
+                          >  {{$t('name_will_be_displayed')}}</em
                         ></span
                       >
                     </p>
@@ -51,7 +50,7 @@
                       "
                     >
                       <label for="account_email"
-                        >Email address&nbsp;<span class="required"
+                        >{{$t('email')}}&nbsp;<span class="required"
                           >*</span
                         ></label
                       >
@@ -73,7 +72,7 @@
                       "
                     >
                       <label for="account_last_name"
-                        >Phone&nbsp;<span class="">*</span></label
+                        >{{$t('phone')}}&nbsp;<span class="">*</span></label
                       >
                       <input
                         v-model="formdata.phone"
@@ -87,8 +86,7 @@
                       />
                       <span
                         ><em
-                          >This will be how your name will be displayed in the
-                          account section and in reviews</em
+                          >{{$t('name_will_be_displayed')}}</em
                         ></span
                       >
                     </p>
@@ -99,11 +97,11 @@
                       name="save_account_details"
                       value="Save changes"
                     >
-                      Save changes
+                    {{$t('save_changes')}}
                     </button>
 
                     <fieldset class="mt-20">
-                      <legend>Password change</legend>
+                      <legend>{{$t('pass_change')}}</legend>
                       <input
                         type="hidden"
                         value="1"
@@ -117,8 +115,7 @@
                         "
                       >
                         <label for="password_current"
-                          >Current password (leave blank to leave
-                          unchanged)</label
+                          >{{$t('current_pass')}}</label
                         >
                         <span class="password-input"
                           ><input
@@ -141,7 +138,7 @@
                         "
                       >
                         <label for="password_1"
-                          >New password (leave blank to leave unchanged)</label
+                          >{{$t('new_pass')}}</label
                         >
                         <span class="password-input"
                           ><input
@@ -163,7 +160,7 @@
                           form-row form-row-wide
                         "
                       >
-                        <label for="password_2">Confirm new password</label>
+                        <label for="password_2">{{$t('confirm_new_pass')}}</label>
                         <span class="password-input"
                           ><input
                             type="password"
@@ -199,7 +196,7 @@
                         name="save_account_details"
                         value="Save changes"
                       >
-                        Save changes
+                        {{$t('save_changes')}}
                       </button>
                       <input
                         type="hidden"

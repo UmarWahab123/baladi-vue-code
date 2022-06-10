@@ -14,8 +14,7 @@
                     <div class="woocommerce-notices-wrapper"></div>
 
                     <strong class="">
-                      The following addresses will be used on the checkout page
-                      by default.</strong
+                      {{$t('addresses_on_checkout_page')}}</strong
                     >
                     <router-link
                       to="shipping"
@@ -31,7 +30,7 @@
                         name="register"
                         value="Register"
                       >
-                        Add Address
+                        {{$t('add_address')}} 
                       </button>
                     </router-link>
                     <table
@@ -53,7 +52,7 @@
                               woocommerce-orders-table__header-order-number
                             "
                           >
-                            <span class="nobr">Address</span>
+                            <span class="nobr">{{$t('address')}} </span>
                           </th>
 
                           <th
@@ -62,7 +61,7 @@
                               woocommerce-orders-table__header-order-total
                             "
                           >
-                            <span class="nobr">Total</span>
+                            <span class="nobr">{{$t('total')}}</span>
                           </th>
                           <th
                             class="
@@ -70,7 +69,7 @@
                               woocommerce-orders-table__header-order-actions
                             "
                           >
-                            <span class="nobr">Actions</span>
+                            <span class="nobr">{{$t('action')}}</span>
                           </th>
                         </tr>
                       </thead>
@@ -119,13 +118,13 @@
                             <router-link
                               :to="'/' + langCode + '/shipping'"
                               class="woocommerce-button button view"
-                              >Edit
+                              >{{$t('edit')}}
                             </router-link>
                             <router-link
                               to=""
                               style="margin-left: 5px; background-color: red"
                               class="woocommerce-button button view"
-                              >Delete
+                              >{{$t('delete')}}
                             </router-link>
                           </td>
                         </tr>
@@ -172,13 +171,13 @@
                             <router-link
                               to="shipping"
                               class="woocommerce-button button view"
-                              >Edit
+                              >{{$t('edit')}}
                             </router-link>
                             <router-link
                               to=""
                               style="margin-left: 5px; background-color: red"
                               class="woocommerce-button button view"
-                              >Delete
+                              >{{$t('delete')}}
                             </router-link>
                           </td>
                         </tr>

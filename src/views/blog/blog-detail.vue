@@ -77,8 +77,7 @@
                 </article>
                 <div class="post-comments">
                   <h5 class="entry-title">
-                    2 thoughts on “But I must explain to you how all this
-                    mistaken idea”
+                    {{$t('mistaken_idea')}}
                   </h5>
                   <ol class="comment-list">
                     <li
@@ -138,7 +137,7 @@
                               data-respondelement="respond"
                               data-replyto="Reply to admin"
                               aria-label="Reply to admin"
-                              >Reply</a
+                              >{{$t('Reply')}}</a
                             >
                           </div>
                         </div>
@@ -189,7 +188,7 @@
                                   data-respondelement="respond"
                                   data-replyto="Reply to Elliot Alderson"
                                   aria-label="Reply to Elliot Alderson"
-                                  >Reply</a
+                                  >{{$t('Reply')}}</a
                                 >
                               </div>
                             </div>
@@ -208,13 +207,13 @@
                           v-bind="formdata1.comment_id"
                         />
                         <h3 id="reply-title" class="comment-reply-title">
-                          Leave a Reply
+                         {{$t("Leave_a_Reply")}}
                           <small
                             ><a
                               rel="nofollow"
                               id="cancel-comment-reply-link "
                               @click="hideReplyText(indcomments)"
-                              >Cancel reply</a
+                              >{{$t('Cancel_reply')}}</a
                             ></small
                           >
                         </h3>
@@ -255,24 +254,24 @@
                   <div class="post-comments-form" v-if="userLogin">
                     <div id="respond" class="comment-respond">
                       <h3 id="reply-title" class="comment-reply-title">
-                        Leave a Reply
+                        {{$t("Leave_a_Reply")}}
                         <small
                           ><a
                             rel="nofollow"
                             id="cancel-comment-reply-link"
                             href="/machic/blog/but-i-must-explain-to-you-how-all-this-mistaken-idea/#respond"
                             style="display: none"
-                            >Cancel reply</a
+                            >{{$t('Cancel_reply')}}</a
                           ></small
                         >
                       </h3>
 
                       <p class="comment-notes">
                         <span id="email-notes"
-                          >Your email address will not be published.</span
+                          >{{$t('email_address_will_not_be_published')}}</span
                         >
                         <span class="required-field-message" aria-hidden="true"
-                          >Required fields are marked
+                          >{{$t('Required_fields_are_marked')}}
                           <span class="required" aria-hidden="true"
                             >*</span
                           ></span
@@ -291,7 +290,7 @@
 
                       <p class="comment-form-comment">
                         <label for="comment"
-                          >Comment
+                          >{{$t('Comment')}}
                           <span class="required" aria-hidden="true"
                             >*</span
                           ></label
@@ -322,7 +321,7 @@
                           name="submit"
                           type="submit"
                           class="submit"
-                          value="Post Comment"
+                          :value="$t('Post_Comment')"
                         />
                       </p>
                     </div>
@@ -356,7 +355,7 @@
                 </div>
               </div>
               <div class="widget widget_categories">
-                <h4 class="widget-title">Categories</h4>
+                <h4 class="widget-title">{{$t('categories')}}</h4>
                 <ul>
                   <li class="cat-item cat-item-16"><a href="#">Camera</a></li>
                   <li class="cat-item cat-item-17">
@@ -367,7 +366,7 @@
                 </ul>
               </div>
               <div class="widget widget_tag_cloud">
-                <h4 class="widget-title">Tags</h4>
+                <h4 class="widget-title">{{$t('tags')}}</h4>
                 <div class="tagcloud">
                   <a
                     href="#"
@@ -428,7 +427,7 @@
                 </div>
               </div>
               <div class="widget widget_popular_posts">
-                <h4 class="widget-title">Popular Posts</h4>
+                <h4 class="widget-title">{{$t('Popular_Posts')}}</h4>
                 <div class="widget-body">
                   <ul class="posts-widget">
                     <li class="post">

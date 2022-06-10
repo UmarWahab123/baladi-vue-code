@@ -41,7 +41,7 @@
                                     data-widget_type="machic-contact-form-7.default">
                                     <div class="elementor-widget-container">
                                         <div class="contact-form">
-                                            <h3 class="entry-title">Get in Touch</h3>
+                                            <h3 class="entry-title">{{$t('Get_in_Touch')}}</h3>
                                             <p>Quisque mattis tortor eu tristique sodales. Aenean sit amet justo nec sem
                                                 vestibulum.</p>
                                             <div role="form" class="wpcf7" id="wpcf7-f2012-p1985-o1" lang="en-US"
@@ -63,35 +63,35 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6">
-                                                            <label> Your name * </label><br>
+                                                            <label> {{$t('Your_name')}} * </label><br>
                                                             <span class="wpcf7-form-control-wrap your-name"><input
                                                                     type="text" name="your-name" value="" size="40"
                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                     aria-required="true" aria-invalid="false"></span>
                                                         </div>
                                                         <div class="col-12 col-lg-6">
-                                                            <label> Your email *</label><br>
+                                                            <label> {{$t('Your_email')}} *</label><br>
                                                             <span class="wpcf7-form-control-wrap your-email"><input
                                                                     type="email" name="your-email" value="" size="40"
                                                                     class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                                                                     aria-required="true" aria-invalid="false"></span>
                                                         </div>
                                                         <div class="col-12 col-lg-12">
-                                                            <label> Subject * </label><br>
+                                                            <label> {{$t('Subject')}} * </label><br>
                                                             <span class="wpcf7-form-control-wrap your-subject"><input
                                                                     type="text" name="your-subject" value="" size="40"
                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                     aria-required="true" aria-invalid="false"></span>
                                                         </div>
                                                         <div class="col-12 col-lg-12">
-                                                            <label> Your message </label><br>
+                                                            <label> {{$t('Your_message')}} </label><br>
                                                             <span class="wpcf7-form-control-wrap your-message"><textarea
                                                                     name="your-message" cols="40" rows="10"
                                                                     class="wpcf7-form-control wpcf7-textarea"
                                                                     aria-invalid="false"></textarea></span>
                                                         </div>
                                                         <div class="col-12 col-lg-12">
-                                                            <input type="submit" value="Send Message"
+                                                         <input type="submit" :value="$t('Send_Message')"
                                                                 class="wpcf7-form-control has-spinner wpcf7-submit"><span
                                                                 class="wpcf7-spinner"></span>
                                                         </div>

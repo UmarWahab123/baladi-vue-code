@@ -11,7 +11,7 @@
                   <sidebar />
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
-                    <p>Hello This is Baladi Express</p>
+                    <p>{{$t('hello_baladi_express')}}</p>
 
                     <section
                       class="
@@ -61,16 +61,7 @@
                                     elementor-size-default
                                   "
                                 >
-                                  We are pleased to announce the launch of Souq
-                                  Albaladi Online Hypermarket, your number one
-                                  source for all food and household goods. Our
-                                  goal is to deliver to your door the freshest
-                                  food and groceries possible, with a focus on
-                                  fresh and clean food, quick delivery, and the
-                                  availability of everything in stock.
-                                  Furthermore, we assure you that all of our
-                                  products are always available at the best
-                                  prices in Qatar.
+                                 {{$t('souq_albaladi_online_hypermarket')}}
                                 </p>
                               </div>
                             </div>

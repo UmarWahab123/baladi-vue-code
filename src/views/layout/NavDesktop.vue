@@ -1655,10 +1655,9 @@
                 <!-- discount-banner -->
                 <div class="discount-items">
                   <div class="discount-products-header">
-                    <h4 class="entry-title">Items on sale this week</h4>
+                    <h4 class="entry-title">{{$t('Items_on_sale_this_week')}}</h4>
                     <p>
-                      Top picks this week. Up to 50% off the best selling
-                      products.
+                      {{$t('Top_the_best_selling_products')}}
                     </p>
                   </div>
                   <!-- discount-products-header -->

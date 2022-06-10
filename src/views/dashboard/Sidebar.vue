@@ -30,7 +30,7 @@
           :class="activeClass"
         >
           <router-link :to="'/' + langCode + '/userdashboard'"
-            >Dashboard
+            >{{$t('dashboard')}}
           </router-link>
         </li>
         <li
@@ -40,7 +40,7 @@
           "
           :class="orders"
         >
-          <router-link :to="'/' + langCode + '/orders'">Orders </router-link>
+          <router-link :to="'/' + langCode + '/orders'">{{$t('orders')}} </router-link>
         </li>
         <li
           class="
@@ -50,7 +50,7 @@
           :class="mywallet"
         >
           <router-link :to="'/' + langCode + '/my-wallet'"
-            >My Wallet
+            >{{$t('my_wallet')}} 
           </router-link>
         </li>
         <li
@@ -60,7 +60,7 @@
           "
           :class="voucher"
         >
-          <router-link :to="'/' + langCode + '/voucher'">Voucher </router-link>
+          <router-link :to="'/' + langCode + '/voucher'">{{$t('voucher')}}  </router-link>
         </li>
         <li
           class="
@@ -70,7 +70,7 @@
           :class="rewardpoints"
         >
           <router-link :to="'/' + langCode + '/reward-points'"
-            >Reward Points
+            >{{$t('reward_points')}}
           </router-link>
         </li>
 
@@ -82,7 +82,7 @@
           :class="editaddress"
         >
           <router-link :to="'/' + langCode + '/edit-address'"
-            >Addresses
+            >{{$t('addresses')}}
           </router-link>
         </li>
         <li
@@ -93,7 +93,7 @@
           :class="account"
         >
           <router-link :to="'/' + langCode + '/account'"
-            >Account Details
+            >{{$t('account_detail')}}
           </router-link>
         </li>
         <li
@@ -103,7 +103,7 @@
           "
         >
           <router-link :to="'/' + langCode + '/wishlist'"
-            >Wishlist
+            >{{$t('wish_list')}}
           </router-link>
         </li>
         <li
@@ -112,7 +112,7 @@
             woocommerce-MyAccount-navigation-link--customer-logout
           "
         >
-          <a @click="logout()" href="javascript:void(0);">Logout</a>
+          <a @click="logout()" href="javascript:void(0);">{{$t('logout')}}</a>
         </li>
       </ul>
     </nav>
