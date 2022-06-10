@@ -45,8 +45,8 @@
                 </div>
                 <!-- icon -->
                 <div class="content">
-                  <h4 class="entry-title">Free Delivery</h4>
-                  <p>Free shipping on all order</p>
+                  <h4 class="entry-title">{{ $t("Free_Delivery") }}</h4>
+                  <p>{{$t("Free_shipping")}}</p>
                 </div>
                 <!-- content -->
               </div>
@@ -87,8 +87,8 @@
                 </div>
                 <!-- icon -->
                 <div class="content">
-                  <h4 class="entry-title">Online Support 24/7</h4>
-                  <p>Support online 24 hours a day</p>
+                  <h4 class="entry-title">{{$t('Online_Support')}}</h4>
+                  <p>{{$t('Support_online_hours')}}</p>
                 </div>
                 <!-- content -->
               </div>
@@ -128,8 +128,8 @@
                 </div>
                 <!-- icon -->
                 <div class="content">
-                  <h4 class="entry-title">Money Return</h4>
-                  <p>Back guarantee under 7 days</p>
+                  <h4 class="entry-title">{{$t('Money_Return')}}</h4>
+                  <p>{{$t('Back_guarantee')}}</p>
                 </div>
                 <!-- content -->
               </div>
@@ -165,8 +165,8 @@
                 <div class="icon"><i class="klbth-icon-discount34"></i></div>
                 <!-- icon -->
                 <div class="content">
-                  <h4 class="entry-title">Member Discount</h4>
-                  <p>Onevery order over QAR 120.00</p>
+                  <h4 class="entry-title">{{$t('Member_discount')}}</h4>
+                  <p>{{$t('Onevery_order')}}</p>
                 </div>
                 <!-- content -->
               </div>

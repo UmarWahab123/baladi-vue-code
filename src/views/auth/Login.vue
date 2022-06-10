@@ -1,6 +1,6 @@
 <template>
   <div class="u-column1 col-md-6">
-    <h2>Login</h2>
+    <h2>{{$t('login')}}</h2>
     <div
       class="
         woocommerce-form woocommerce-form-login
@@ -19,7 +19,7 @@
         "
       >
         <label for="username"
-          >Username or email address&nbsp;<span class="required">*</span></label
+          >{{$t('uName_email')}}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.email"
@@ -39,7 +39,7 @@
         "
       >
         <label for="password"
-          >Password&nbsp;<span class="required">*</span></label
+          >{{$t('password')}}&nbsp;<span class="required">*</span></label
         >
         <span class="password-input"
           ><span class="password-input"
@@ -86,11 +86,11 @@
             id="rememberme"
             value="forever"
           />
-          <span>Remember me</span>
+          <span>{{$t('remember_me')}}</span>
         </label>
         <p class="woocommerce-LostPassword lost_password">
           <router-link :to="'/' + langCode + '/forgot-password'"
-            >Lost your password?</router-link
+            >{{$t('lost_password')}}</router-link
           >
         </p>
       </div>
@@ -101,7 +101,7 @@
         value="Log in"
         @click="submitdata()"
       >
-        Log in
+        {{$t('login')}}
       </button>
       <a to="/" class="ml-5">
         <input
@@ -120,10 +120,12 @@
           value="Log in"
           @click="submitguestData()"
         >
-          Continue as Guest
+          {{$t('continue_as_guest')}}
         </a></a
       >
-      <p class="mt-3">Or Connect with</p>
+      <p class="mt-3"> {{$t('connect_with')}}  
+        
+      </p>
       <div class="social-share site-social colored">
         <ul class="social-container">
           <li>

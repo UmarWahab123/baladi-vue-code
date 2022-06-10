@@ -2,9 +2,9 @@
   <div class="elementor-widget-container my-5">
     <div class="site-module products-module">
       <div class="module-header">
-        <h4 class="entry-title">Smart Phone &amp; Accesseries</h4>
+        <h4 class="entry-title">{{$t('Smart_phone')}} &amp; {{$t('accesseries')}}</h4>
         <a href="#" class="btn link"
-          >View All <i class="klbth-icon-right-arrow"></i
+          >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
         ></a>
       </div>
       <div class="module-wrapper">

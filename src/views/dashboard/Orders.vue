@@ -32,7 +32,7 @@
                                 woocommerce-orders-table__header-order-number
                               "
                             >
-                              <span class="nobr">Order</span>
+                              <span class="nobr">{{$t('orders')}}</span>
                             </th>
                             <th
                               class="
@@ -40,7 +40,7 @@
                                 woocommerce-orders-table__header-order-date
                               "
                             >
-                              <span class="nobr">Date</span>
+                              <span class="nobr">{{$t('Date')}}</span>
                             </th>
                             <th
                               class="
@@ -48,7 +48,7 @@
                                 woocommerce-orders-table__header-order-status
                               "
                             >
-                              <span class="nobr">Status</span>
+                              <span class="nobr">{{$t('status')}}</span>
                             </th>
                             <th
                               class="
@@ -56,7 +56,7 @@
                                 woocommerce-orders-table__header-order-total
                               "
                             >
-                              <span class="nobr">Total</span>
+                              <span class="nobr">{{$t('total')}}</span>
                             </th>
                             <th
                               class="
@@ -64,7 +64,7 @@
                                 woocommerce-orders-table__header-order-actions
                               "
                             >
-                              <span class="nobr">Actions</span>
+                              <span class="nobr"> {{$t('action')}} </span>
                             </th>
                           </tr>
                         </thead>

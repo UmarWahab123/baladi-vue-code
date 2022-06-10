@@ -13,9 +13,9 @@
     <div class="elementor-widget-container">
       <div class="site-module products-module">
         <div class="module-header">
-          <h4 class="entry-title">New Arrivel</h4>
+          <h4 class="entry-title">{{$t('New_arrivel')}}</h4>
           <a href="#" class="btn link"
-            >View All <i class="klbth-icon-right-arrow"></i
+            >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
           ></a>
         </div>
         <div class="module-wrapper">

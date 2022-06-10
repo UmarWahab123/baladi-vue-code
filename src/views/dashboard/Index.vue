@@ -13,22 +13,24 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <p>
-                      Hello <strong>{{ userdata.name }}</strong> (not
+                      {{$t('hello')}} <strong>{{ userdata.name }}</strong> ( {{$t('Not')}}
                       <strong>{{ userdata.name }}</strong
-                      >? <a href="#">Log out</a>)
+                      >? <a href="#">{{$t('logout')}}</a>)
                     </p>
 
                     <p>
-                      From your account dashboard you can view your
+                      {{$t('From_account_dashboard')}} 
+                    
 
                       <router-link :to="'/' + langCode + '/orders'"
-                        >recent orders</router-link
-                      >, manage your
+                        > {{$t('recent_order')}}</router-link
+                      >, {{$t('Manage')}}
                       <router-link :to="'/' + langCode + '/edit-address'"
-                        >shipping and billing addresses</router-link
-                      >, and
+                        >{{$t('ship_and_bill_address')}}
+                        </router-link
+                      >, {{$t('And')}}
                       <router-link :to="'/' + langCode + '/account'"
-                        >edit your password and account details</router-link
+                        >{{$t('edit_password_account_details')}}</router-link
                       >.
                     </p>
                   </div>

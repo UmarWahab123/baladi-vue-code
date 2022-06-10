@@ -7,7 +7,7 @@
           <div class="filter-button hide-desktop">
             <a href="#">
               <i class="klbth-icon-filter"></i>
-              Filter Products
+              {{$t('Filter_Products')}}
             </a>
           </div>
           <div class="filter-wrapper" data-select2-id="16">
@@ -29,19 +29,19 @@
                   aria-hidden="true"
                 >
                   <option value="popularity" data-select2-id="29">
-                    Sort by popularity
+                     {{$t('Sort_by_popularity')}}
                   </option>
                   <option value="rating" data-select2-id="30">
-                    Sort by average rating
+                    {{$t('Sort_by_average_rating')}}
                   </option>
                   <option value="date" selected="selected" data-select2-id="9">
-                    Sort by latest
+                    {{$t('Sort_by_latest')}}
                   </option>
                   <option value="price" data-select2-id="31">
-                    Sort by price: low to high
+                    {{$t('Sort_by_price')}}
                   </option>
                   <option value="price-desc" data-select2-id="32">
-                    Sort by price: high to low
+                    {{$t('Sort_by_high_to_low')}}
                   </option>
                 </select>
                 <input type="hidden" name="paged" value="1" />
@@ -59,7 +59,7 @@
 
             <!-- For perpage option-->
             <div class="sorting-product hide-mobile" data-select2-id="15">
-              <span>Show:</span>
+              <span>{{$t('Show')}}:</span>
               <form
                 class="woocommerce-ordering product-filter products-per-page"
                 method="get"
@@ -94,7 +94,7 @@
         </div>
         <!-- col -->
         <div class="col col-12 col-lg-3 sidebar-column hide-mobile">
-          <p class="woocommerce-result-count fw-bold">All Categories</p>
+          <p class="woocommerce-result-count fw-bold">{{$t('All_Categories')}}</p>
         </div>
         <!-- col -->
       </div>

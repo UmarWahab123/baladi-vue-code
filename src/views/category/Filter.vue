@@ -6,12 +6,12 @@
     <div class="site-scroll ps">
       <div class="sidebar-inner">
         <div class="sidebar-mobile-header">
-          <h3 class="entry-title">Filter Products</h3>
+          <h3 class="entry-title">{{$t('Filter_Products')}}</h3>
           <div class="close-sidebar"><i class="klbth-icon-cancel"></i></div>
         </div>
 
         <div class="widget widget_klb_product_categories">
-          <h4 class="widget-title">Product Categories</h4>
+          <h4 class="widget-title">{{$t('product_categories')}}</h4>
           <div class="widget-checkbox-list">
             <ul>
               <li
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="woocommerce widget_price_filter">
-          <h4 class="widget-title">Filter by price</h4>
+          <h4 class="widget-title">{{$t('Filter_by_price')}}</h4>
           <form method="get" action="/product-category/apple/">
             <div class="price_slider_wrapper slider">
               <div class="wrapper mt-5">
@@ -78,10 +78,10 @@
                   style="display: none"
                 />
                 <button type="submit" class="button" style="margin-right: 14px">
-                  Filter
+                  {{$t('Filter')}}
                 </button>
                 <div class="price_label values">
-                  Price: <span id="range1" class="from">27</span> —
+                  {{$t('Price')}}: <span id="range1" class="from">27</span> —
                   <span id="range2" class="to">77</span>
                 </div>
                 <div class="clear"></div>
@@ -97,7 +97,7 @@
             woocommerce-widget-layered-nav
           "
         >
-          <h4 class="widget-title">Filter by Color</h4>
+          <h4 class="widget-title">{{$t('Filter_by_Color')}}</h4>
           <ul class="woocommerce-widget-layered-nav-list">
             <li
               class="
@@ -134,7 +134,7 @@
           </ul>
         </div>
         <div class="widget widget_product_status">
-          <h4 class="widget-title">Product Status</h4>
+          <h4 class="widget-title">{{$t('Product_Status')}}</h4>
           <div class="widget-checkbox-list">
             <ul>
               <li>
@@ -145,7 +145,7 @@
                     id="instock"
                     type="checkbox"
                   />
-                  <label><span></span>In Stock</label>
+                  <label><span></span>{{$t('in_stock')}}</label>
                 </a>
               </li>
               <li>
@@ -156,7 +156,7 @@
                     id="onsale"
                     type="checkbox"
                   />
-                  <label><span></span>On Sale</label>
+                  <label><span></span>{{$t('On_Sale')}}</label>
                 </a>
               </li>
             </ul>
@@ -170,7 +170,7 @@
             woocommerce-widget-layered-nav
           "
         >
-          <h4 class="widget-title">Brands</h4>
+          <h4 class="widget-title">{{$t('brands')}}</h4>
           <ul
             :data="brand"
             :key="indextr"

@@ -22,21 +22,21 @@
                 <div class="banner-wrapper" style="background-color: #f5f5f7">
                   <div class="banner-inner">
                     <h4 class="entry-title">
-                      Shop and <strong>Save Big on Hottest</strong> Products
+                       {{$t('Shop_and')}} <strong>{{$t('Save_on_Hottest')}}</strong> {{$t('Products')}}
                     </h4>
                     <div class="banner-details">
                       <div class="banner-price">
-                        from <span>QAR 79.00</span>
+                        {{$t('from')}} <span>{{$t('QAR')}} 79.00</span>
                       </div>
                       <!-- banner-price -->
-                      <p>Don't miss this special opportunity today.</p>
+                      <p>{{$t('Donot_miss_opportunity')}}</p>
                     </div>
                     <!-- banner-details -->
                     <div class="banner-button">
                       <a
                         href="javascript::void(0)"
                         class="btn small rounded link-color"
-                        >Shop Now</a
+                        >{{$t('Shop_now')}}</a
                       >
                     </div>
                   </div>

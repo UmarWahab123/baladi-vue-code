@@ -31,7 +31,7 @@
           :class="about"
         >
           <router-link :to="'/' + langCode + '/helpcenter'"
-            >About Baladi</router-link
+            >{{$t('about_baladi')}}</router-link
           >
         </li>
         <li
@@ -43,7 +43,7 @@
           :class="replacement"
         >
           <router-link :to="'/' + langCode + '/replacement'"
-            >Returns & Replacements</router-link
+            >{{$t('returns_replacements')}}</router-link
           >
         </li>
         <li
@@ -55,7 +55,7 @@
           :class="shipping"
         >
           <router-link :to="'/' + langCode + '/shoppingrates'"
-            >Shipping Rates & Policies</router-link
+            >{{$t('shipping_rates_policies')}}</router-link
           >
         </li>
         <li
@@ -67,7 +67,7 @@
           :class="refund"
         >
           <router-link :to="'/' + langCode + '/refund'"
-            >Refund and Returns Policy</router-link
+            >{{$t('refund_and_Returns_Policy')}}</router-link
           >
         </li>
         <li
@@ -79,7 +79,7 @@
           :class="privacy"
         >
           <router-link :to="'/' + langCode + '/privacypolicy'"
-            >Privacy Policy</router-link
+            >{{$t('privacy_policy')}}</router-link
           >
         </li>
         <li
@@ -91,7 +91,7 @@
           :class="terms"
         >
           <router-link :to="'/' + langCode + '/termscondition'"
-            >Terms and Conditions</router-link
+            >{{$t('terms_and_condition')}}</router-link
           >
         </li>
         <li
@@ -103,7 +103,7 @@
           :class="covid"
         >
           <router-link :to="'/' + langCode + '/covidhelp'"
-            >Covid-19</router-link
+            >{{$t('covid_19')}}</router-link
           >
         </li>
       </ul>

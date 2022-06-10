@@ -47,10 +47,10 @@
                                 <h2
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  About Baladi Express
+                                 {{$t('About_baladi_express')}}
                                 </h2>
                                 <h5>
-                                  We belive the best experience always wins
+                                  {{$t('We_belive_the_best_experience')}}
                                 </h5>
                               </div>
                             </div>
@@ -82,16 +82,7 @@
                                 <p
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  We are pleased to announce the launch of Souq
-                                  Albaladi Online Hypermarket, your number one
-                                  source for all food and household goods. Our
-                                  goal is to deliver to your door the freshest
-                                  food and groceries possible, with a focus on
-                                  fresh and clean food, quick delivery, and the
-                                  availability of everything in stock.
-                                  Furthermore, we assure you that all of our
-                                  products are always available at the best
-                                  prices in Qatar.
+                                  {{$t('We_are_pleased_to_announce_the_launch')}}
                                 </p>
                               </div>
                             </div>
@@ -171,7 +162,7 @@
                               <div class="elementor-widget-container mb-0">
                                 <span
                                   class="elementor-heading-title mb-0 elementor-size-default"
-                                  >Souq Albaladi</span
+                                  >{{$t('souq_albaladi')}}</span
                                 >
                               </div>
                             </div>
@@ -185,7 +176,7 @@
                                 <h3
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  Low Prices And So Much More
+                                  {{$t('Low_prices_and_so')}}
                                 </h3>
                               </div>
                             </div>
@@ -200,23 +191,7 @@
                                 <p
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  Souq Albaladi, founded in 1991, had grown
-                                  considerably since it first opened in Doha.
-                                  Our passion for fresh and diverse products
-                                  worldwide drove us to launch the business in
-                                  order to cater to our customers' needs. In
-                                  Doha, Souq Al Baladi has been a leading
-                                  consumer for all fresh food products and
-                                  groceries Online Hypermarket for nearly three
-                                  decades. It is the sole distributor in Doha
-                                  for many brands like Active guard, Adeera,
-                                  Agrico, Ahlia, Ahmed, Airport mop, Ajwa,
-                                  Akawi, Al ahlam, Al ameer, Al rifai, Al riyan,
-                                  Al sadara, Al samariya, Al seedawi, American
-                                  garden, California garden, Camay, Canola,
-                                  carefree, Chandrika, Cheddar, Cheetos, Chef
-                                  Gourmet chefs, Chings, Chocitos, Crisco,
-                                  Crystal and many more.
+                                 {{$t('fresh_food_products_and_groceries_Online_Hypermarket')}} {{$t('Souq_Al_Baladi_has_been_leading_consumer')}}
                                 </p>
                               </div>
                             </div>
@@ -249,18 +224,11 @@
                               data-widget_type="heading.default"
                             >
                               <div class="elementor-widget-container">
-                                <h5>Our Mission</h5>
+                                <h5>{{$t('Our_Mission')}}</h5>
                                 <p
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  We ensure that our fresh food products have
-                                  the best quality and most diverse selection
-                                  possible in Doha. Multi-ethnic employees are a
-                                  vital part of our business, and we strive to
-                                  be the most preferred employer for them. If
-                                  you have any questions or comments, please
-                                  don't hesitate to contact us at
-                                  info@albaladi-qatar.com.
+                                  {{$t('We_ensure_that_our_fresh_food_products')}}
                                 </p>
                               </div>
                             </div>
@@ -293,13 +261,11 @@
                       data-widget_type="heading.default"
                     >
                       <div class="elementor-widget-container">
-                        <h5>Free Delivery Service</h5>
+                        <h5>{{$t('free_delivery_service')}}</h5>
                         <p
                           class="elementor-heading-title elementor-size-default"
                         >
-                          Whatever time you place your order, we guarantee that
-                          the product will reach you within 24 hours at no
-                          additional cost.
+                          {{$t('Whatever_time_you_place_your_order')}}
                         </p>
                       </div>
                     </div>

@@ -69,7 +69,7 @@
                         <router-link
                           class="btn read-more"
                           :to="'/' + langCode + '/blog-detail/' + item.id"
-                          >Read More
+                          >{{$t('read_more')}}
                         </router-link>
                       </div>
                     </div>
@@ -103,7 +103,7 @@
                 </div>
               </div>
               <div class="widget widget_categories">
-                <h4 class="widget-title">Categories</h4>
+                <h4 class="widget-title">{{$t('categories')}}</h4>
                 <ul>
                   <li class="cat-item cat-item-16"><a href="#/">Camera</a></li>
                   <li class="cat-item cat-item-17">
@@ -114,7 +114,7 @@
                 </ul>
               </div>
               <div class="widget widget_tag_cloud">
-                <h4 class="widget-title">Tags</h4>
+                <h4 class="widget-title">{{$t('tags')}}</h4>
                 <div class="tagcloud">
                   <a
                     href="#"
@@ -175,7 +175,7 @@
                 </div>
               </div>
               <div class="widget widget_popular_posts">
-                <h4 class="widget-title">Popular Posts</h4>
+                <h4 class="widget-title">{{$t('Popular_Posts')}}</h4>
                 <div class="widget-body">
                   <ul class="posts-widget">
                     <li class="post">

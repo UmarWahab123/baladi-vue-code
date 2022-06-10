@@ -238,7 +238,7 @@
                             '/product-detail/' +
                             searchItem.slug
                           "
-                          >{{ searchItem.name }}</router-link
+                          >{{ searchItem.product_name }}</router-link
                         ></strong
                       ></span
                     >
@@ -250,7 +250,7 @@
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >{{ searchItem.previous_price }}</bdi
+                            >{{ searchItem?.uom_products[0]?.previous_price }}</bdi
                           ></span
                         ></del
                       >
@@ -301,20 +301,20 @@
                   </div>
                 </router-link>
 
-                <div v-else class="sub-text">Sign In</div>
+                <div v-else class="sub-text">{{$t('Sign_In')}}</div>
                 <router-link
                   v-if="userdata.name"
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                  Account
+                  {{$t('Account')}}
                 </router-link>
                 <router-link
                   v-else
                   class="primary-text"
                   :to="'/' + langCode + '/myaccount'"
                 >
-                  Account
+                  {{$t('Account')}}
                 </router-link>
               </div>
               <!-- header-addons-text -->
@@ -1268,7 +1268,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/all_categories'"
-                    >Top Categories
+                    >{{ $t("top_category") }}
                   </router-link>
 
                   <ul class="sub-menu">
@@ -1319,7 +1319,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/brands'"
-                    >Top Brands
+                    >{{ $t("top_brands") }}
                   </router-link>
                   <ul class="sub-menu">
                     <li
@@ -1613,8 +1613,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    ><i class="klbth-icon-home"></i> Home And
-                    Living</router-link
+                    ><i class="klbth-icon-home"></i> {{ $t("home_and_living") }}</router-link
                   >
                 </li>
 
@@ -1626,7 +1625,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/blog'"
-                    >Blogs
+                    >{{ $t("blogs") }}
                   </router-link>
                 </li>
                 <li
@@ -1637,7 +1636,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/contact-us'"
-                    >Contact
+                    >{{ $t("Contact") }}
                   </router-link>
                 </li>
               </ul>
@@ -1654,8 +1653,8 @@
                     <i class="klbth-icon-discount-black"></i>
                   </div>
                   <div class="discount-banner-text">
-                    <div class="small-text">Only this weekend</div>
-                    <div class="main-text">Super Discount</div>
+                    <div class="small-text">{{ $t("this_weeK") }}</div>
+                    <div class="main-text">{{ $t("Super_discount") }}</div>
                   </div>
                   <!-- discount-banner-text -->
                   <div class="discount-banner-arrow">
@@ -1665,10 +1664,9 @@
                 <!-- discount-banner -->
                 <div class="discount-items">
                   <div class="discount-products-header">
-                    <h4 class="entry-title">Items on sale this week</h4>
+                    <h4 class="entry-title">{{$t('Items_on_sale_this_week')}}</h4>
                     <p>
-                      Top picks this week. Up to 50% off the best selling
-                      products.
+                      {{$t('Top_the_best_selling_products')}}
                     </p>
                   </div>
                   <!-- discount-products-header -->
@@ -1787,7 +1785,7 @@ export default {
   }),
   mounted() {
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=en")
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=ar")
       .then((response) => {
         this.results = response.data.data.data;
       })
@@ -1897,7 +1895,7 @@ export default {
           )
           .then((response) => {
             // console.log(response.data.data.searchresults.data);
-            this.searchResults = response.data.data.searchresults.data;
+            this.searchResults = response.data.data.searchresults;
           })
           .catch((error) => {});
         // window.location.reload();

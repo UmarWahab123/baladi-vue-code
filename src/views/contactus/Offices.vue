@@ -11,10 +11,8 @@
                                     data-widget_type="machic-custom-title.default">
                                     <div class="elementor-widget-container">
                                         <div class="site-module module-title small">
-                                            <h4 class="entry-subtitle">You can ask us questions !</h4>
-                                            <h1 class="entry-title">Contact us for all your questions and opinions, or
-                                                you can solve your problems in a shorter time with our contact offices.
-                                            </h1>
+                                            <h4 class="entry-subtitle">{{$t('You_can_ask_us_questions')}}</h4>
+                                            <h1 class="entry-title">{{$t('all_your_questions_and_opinions')}}</h1>
                                         </div><!-- site-module -->
                                     </div>
                                 </div>

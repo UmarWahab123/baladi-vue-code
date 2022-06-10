@@ -52,7 +52,7 @@
                           class="tinv-wishlist woocommerce tinv-wishlist-clear"
                         >
                           <div class="tinv-header">
-                            <h2>Wishlist</h2>
+                            <h2>{{$t('Wishlist')}}</h2>
                           </div>
                           <items />
                           <Social />

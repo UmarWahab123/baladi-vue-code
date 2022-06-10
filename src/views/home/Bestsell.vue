@@ -13,9 +13,9 @@
     <div class="elementor-widget-container">
       <div class="site-module products-module">
         <div class="module-header">
-          <h4 class="entry-title">Best Sellers</h4>
+          <h4 class="entry-title">{{$t('Best_seller')}}</h4>
           <a href="#?orderby=popularity&amp;paged=1" class="btn link"
-            >View All <i class="klbth-icon-right-arrow"></i
+            >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
           ></a>
         </div>
         <div class="module-wrapper">

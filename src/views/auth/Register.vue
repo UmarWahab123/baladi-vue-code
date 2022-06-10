@@ -1,6 +1,6 @@
 <template>
   <div class="u-column2 col-md-6">
-    <h2>Register</h2>
+    <h2>{{$t('register')}}</h2>
     <div
       method="post"
       class="
@@ -21,7 +21,7 @@
       >
         <input type="hidden" value="1" v-bind="formdata.customer_type_id" />
         <label for="reg_username"
-          >Username&nbsp;<span class="required">*</span></label
+          >{{$t('username')}}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.name"
@@ -40,7 +40,7 @@
         "
       >
         <label for="reg_username"
-          >Phone&nbsp;<span class="required">*</span></label
+          >{{$t('phone')}}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.phone"
@@ -59,7 +59,7 @@
         "
       >
         <label for="reg_email"
-          >Email address&nbsp;<span class="required">*</span></label
+          >{{$t('email')}}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.email"
@@ -80,7 +80,7 @@
         "
       >
         <label for="reg_password"
-          >Password&nbsp;<span class="required">*</span></label
+          >{{$t('password')}}&nbsp;<span class="required">*</span></label
         >
         <span class="password-input"
           ><span class="password-input"
@@ -113,11 +113,9 @@
       </div>
       <div class="woocommerce-privacy-policy-text">
         <p>
-          Your personal data will be used to support your experience throughout
-          this website, to manage access to your account, and for other purposes
-          described in our
+         {{$t('personal_data')}} 
           <router-link :to="'/' + langCode + '/privacy-policy'"
-            >Privacy Policy </router-link
+            >{{$t('privacy_policy')}} </router-link
           >.
         </p>
       </div>
@@ -143,7 +141,7 @@
           value="Register"
           @click="register()"
         >
-          Register
+          {{$t('register')}}
         </button>
       </p>
     </div>

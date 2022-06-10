@@ -15,12 +15,12 @@
           <th class="product-remove"></th>
           <th class="product-thumbnail">&nbsp;</th>
           <th class="product-name">
-            <span class="tinvwl-full">Product Name</span
-            ><span class="tinvwl-mobile">Product</span>
+            <span class="tinvwl-full">{{$t('product_name')}}</span
+            ><span class="tinvwl-mobile">{{$t('Product')}}</span>
           </th>
-          <th class="product-price">Unit Price</th>
-          <th class="product-date">Date Added</th>
-          <th class="product-stock">Stock Status</th>
+          <th class="product-price">{{$t('Unit_Price')}}</th>
+          <th class="product-date">{{$t('Date_Added')}}</th>
+          <th class="product-stock">{{$t('stock_status')}}</th>
           <th class="product-action">&nbsp;</th>
         </tr>
       </thead>

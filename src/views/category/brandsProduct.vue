@@ -6,9 +6,9 @@
       <div class="col-md-12">
         <div class="site-module list-products">
           <div class="module-header">
-            <h4 class="entry-title mt-3">Brands Product</h4>
+            <h4 class="entry-title mt-3">{{$t('Brands_Products')}}</h4>
             <a href="" class="btn link"
-              >View All <i class="klbth-icon-right-arrow"></i
+              >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
             ></a>
           </div>
         </div>

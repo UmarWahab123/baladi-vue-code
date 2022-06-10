@@ -5,9 +5,9 @@
       <div class="col-md-12">
         <div class="site-module list-products">
           <div class="module-header">
-            <h4 class="entry-title">Budget Deals</h4>
+            <h4 class="entry-title">{{$t('Budget_deals')}}</h4>
             <a href="" class="btn link"
-              >View All <i class="klbth-icon-right-arrow"></i
+              >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
             ></a>
           </div>
         </div>
@@ -58,10 +58,10 @@
                   <div class="product-wrapper">
                     <div class="product-content">
                       <div class="special-counter">
-                        <h4 class="entry-title">Special Offer</h4>
+                        <h4 class="entry-title">{{$t('Special_offer')}}</h4>
                         <div class="product-countdown">
                           <div class="countdown-text">
-                            Coca Cola spacial offer
+                            {{$t('Coca_cola_spacial')}}
                           </div>
                           <div
                             class="countdown"

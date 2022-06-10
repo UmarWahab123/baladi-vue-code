@@ -67,268 +67,206 @@
                                 >
                                   <div class="elementor-widget-container">
                                     <!-- wp:paragraph -->
-                                    <p><b>This is a privacypolicy sample page.</b></p>
+                                    <p><b>{{$t('privacypolicy_sample_page')}}.</b></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
+                                    
+                                   <p></p>
+                                    <h3>{{$t('overview')}}</h3>
                                     <p></p>
-                                    <h3>Overview</h3>
-                                    <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Our refund and returns policy lasts 30
-                                      days. If 30 days have passed since your
-                                      purchase, we can’t offer you a full refund
-                                      or exchange.
+                                       {{$t('If_days_haveexchange')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      To be eligible for a return, your item
-                                      must be unused and in the same condition
-                                      that you received it. It must also be in
-                                      the original packaging.
+                                     {{$t('eligible_for_return_your_item')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Several types of goods are exempt from
-                                      being returned. Perishable goods such as
-                                      food, flowers, newspapers or magazines
-                                      cannot be returned. We also do not accept
-                                      products that are intimate or sanitary
-                                      goods, hazardous materials, or flammable
-                                      liquids or gases.
+                                        {{$t('Several_types_of_goods_are_exempt')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
-                                    <p>Additional non-returnable items:</p>
+                                    <p>{{$t('Additional_non_returnable_items')}}:</p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:list -->
                                     <ul>
-                                      <li>Gift cards</li>
-                                      <li>Downloadable software products</li>
+                                      <li>{{$t('gift_cards')}}</li>
+                                      <li>{{$t('downloadable_software_products')}}</li>
                                       <li>
-                                        Some health and personal care items
+                                        {{$t('some_health')}}
                                       </li>
                                     </ul>
                                     <!-- /wp:list -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      To complete your return, we require a
-                                      receipt or proof of purchase.
+                                      {{$t('complete_your_return')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Please do not send your purchase back to
-                                      the manufacturer.
+                                      {{$t('please_do_not_send_your_purchase')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      There are certain situations where only
-                                      partial refunds are granted:
+                                     {{$t('certain_situations')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:list -->
                                     <ul>
-                                      <li>Book with obvious signs of use</li>
+                                      <li>{{$t('book_with_obvious')}}</li>
                                       <li>
-                                        CD, DVD, VHS tape, software, video game,
-                                        cassette tape, or vinyl record that has
-                                        been opened.
+                                         {{$t('software_video_game')}}
                                       </li>
                                       <li>
-                                        Any item not in its original condition,
-                                        is damaged or missing parts for reasons
-                                        not due to our error.
+                                       {{$t('any_item_not_in_its_original')}}
                                       </li>
                                       <li>
-                                        Any item that is returned more than 30
-                                        days after delivery
+                                         {{$t('item_that_is_returned')}}
                                       </li>
                                     </ul>
                                     <!-- /wp:list -->
 
                                     <!-- wp:paragraph -->
                                     <p></p>
-                                    <h2>Refunds</h2>
+                                    <h2>{{$t('refunds')}}</h2>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Once your return is received and
-                                      inspected, we will send you an email to
-                                      notify you that we have received your
-                                      returned item. We will also notify you of
-                                      the approval or rejection of your refund.
+                                      {{$t('received_and_inspected')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If you are approved, then your refund will
-                                      be processed, and a credit will
-                                      automatically be applied to your credit
-                                      card or original method of payment, within
-                                      a certain amount of days.
+                                       {{$t('refund_will_be_processed')}}.
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
-                                    <p><b>Late or missing refunds</b></p>
+                                    <p><b>{{$t('late_or_missing_refunds')}}</b></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If you haven’t received a refund yet,
-                                      first check your bank account again.
+                                       {{$t('received_a_refund')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Then contact your credit card company, it
-                                      may take some time before your refund is
-                                      officially posted.
+                                      {{$t('credit_card_company')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Next contact your bank. There is often
-                                      some processing time before a refund is
-                                      posted.
+                                        {{$t('next_contact_your_bank')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If you’ve done all of this and you still
-                                      have not received your refund yet, please
-                                      contact us at {email address}.
+                                      {{$t('not_received_your_refund_yet')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
-                                    <p><b>Sale items</b></p>
+                                    <p><b>{{$t('sale_items')}}</b></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Only regular priced items may be refunded.
-                                      Sale items cannot be refunded.
+                                      {{$t('regular_priced_items')}}.
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p></p>
-                                    <h2>Exchanges</h2>
+                                    <h2>{{$t('exchanges')}}</h2>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      We only replace items if they are
-                                      defective or damaged. If you need to
-                                      exchange it for the same item, send us an
-                                      email at {email address} and send your
-                                      item to: {physical address}.
+                                       {{$t('defective_or_damaged')}}.
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p></p>
-                                    <h2>Gifts</h2>
+                                    <h2>{{$t('gifts')}}</h2>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If the item was marked as a gift when
-                                      purchased and shipped directly to you,
-                                      you’ll receive a gift credit for the value
-                                      of your return. Once the returned item is
-                                      received, a gift certificate will be
-                                      mailed to you.
+                                      {{$t('marked_as_a_gift')}}.
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If the item wasn’t marked as a gift when
-                                      purchased, or the gift giver had the order
-                                      shipped to themselves to give to you
-                                      later, we will send a refund to the gift
-                                      giver and they will find out about your
-                                      return.
+                                       {{$t('item_was_not_marked_as_a_gift')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p></p>
-                                    <h2>Shipping returns</h2>
+                                    <h2>{{$t('shipping_returns')}}</h2>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      To return your product, you should mail
-                                      your product to: {physical address}.
+                                      {{$t('return_your_product')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      You will be responsible for paying for
-                                      your own shipping costs for returning your
-                                      item. Shipping costs are non-refundable.
-                                      If you receive a refund, the cost of
-                                      return shipping will be deducted from your
-                                      refund.
+                                       {{$t('deducted_from_your_refund')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Depending on where you live, the time it
-                                      may take for your exchanged product to
-                                      reach you may vary.
+                                       {{$t('depending_on_where_you_live')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      If you are returning more expensive items,
-                                      you may consider using a trackable
-                                      shipping service or purchasing shipping
-                                      insurance. We don’t guarantee that we will
-                                      receive your returned item.
+                                      {{$t('trackable_shipping_service')}}
                                     </p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p></p>
-                                    <h2>Need help?</h2>
+                                    <h2>{{$t('need_help')}}</h2>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 
                                     <!-- wp:paragraph -->
                                     <p>
-                                      Contact us at {email} for questions
-                                      related to refunds and returns.
+                                       {{$t('contact_us_at_email')}}
                                     </p>
                                     <!-- /wp:paragraph -->
                                   </div>

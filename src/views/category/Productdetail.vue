@@ -7,9 +7,9 @@
           <div class="single-product-wrapper">
             <nav class="woocommerce-breadcrumb">
               <ul>
-                <li><a href="javascript:void(0)">Home</a></li>
-                <li><a href="">Vegetables</a></li>
-                <li>Organic Food with fresh quality</li>
+                <li><a href="javascript:void(0)">{{$t('Home')}}</a></li>
+                <li><a href="">{{$t('Vegetables')}}</a></li>
+                <li>{{$t('Organic_Food_with_fresh_quality')}}</li>
               </ul>
             </nav>
 
@@ -123,7 +123,7 @@
                     </h1>
                     <div class="product-meta">
                       <div class="product-model">
-                        <span>weight:</span>
+                        <span>{{$t('weight')}}:</span>
                         {{ results.weight }}
                       </div>
                       <!-- product-model -->
@@ -140,9 +140,8 @@
                           aria-label="Rated 5.00 out of 5"
                         >
                           <span style="width: 100%"
-                            >Rated <strong class="rating">5.00</strong> out of 5
-                            based on <span class="rating">1</span> customer
-                            rating</span
+                            >{{$t('Rated')}} <strong class="rating">5.00</strong> {{$t('out_of_5_based_on')}} <span class="rating">1</span> customer
+                            {{$t('rating')}}</span
                           >
                         </div>
                         <div class="count-rating">
@@ -153,14 +152,14 @@
                             ><span class="count">{{
                               results.allow_reviews
                             }}</span>
-                            review</a
+                            {{$t('review')}}</a
                           >
                         </div>
                       </div>
                     </div>
 
                     <div class="klb-single-stock">
-                      <div class="product-stock in-stock">In Stock</div>
+                      <div class="product-stock in-stock">{{$t('in_stock')}}</div>
                     </div>
                     <div class="product-price">
                       <span class="price"
@@ -168,7 +167,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >QAR </span
+                                >{{$t('QAR')}} </span
                               >{{ sub_products.previous_price }}</bdi
                             ></span
                           ></del
@@ -177,7 +176,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >QAR </span
+                                >{{$t('QAR')}} </span
                               >{{ sub_products.regular_price }}</bdi
                             ></span
                           ></ins
@@ -195,7 +194,7 @@
                           autocomplete="off"
                         />
                         <label class="button2 btn-outline-dark" for="radio1"
-                          >PCS</label
+                          >{{$t('PCS')}}</label
                         >
                         <input
                           type="radio"
@@ -207,11 +206,11 @@
                         <label
                           class="button2 btn-outline-dark gaf-btton"
                           for="radio3"
-                          >CTN</label
+                          >{{$t('CTN')}}</label
                         >
                       </div>
                     </div>
-                    <div class="product-stock in-stock">In Stock</div>
+                    <div class="product-stock in-stock">{{$t('in_stock')}}</div>
 
                     <div class="product-info">
                       <div style="width: max-content" class="product-info-top">
@@ -223,7 +222,7 @@
                             <label
                               class="screen-reader-text"
                               for="quantity_61f3794abda55"
-                              >Fresh Vegetables</label
+                              >{{$t('Fresh_Vegetables')}}</label
                             >
                             <div
                               class="quantity-button minus"
@@ -262,7 +261,7 @@
                               cartStore.addItems(this.quantity, this.results)
                             "
                           >
-                            <span>Add to cart</span>
+                            <span>{{$t('Add_to_cart')}}</span>
                           </button>
                           <router-link
                             :to="'/' + langCode + '/checkout'"
@@ -275,7 +274,7 @@
                               alt
                             "
                           >
-                            <span>Buy Now</span>
+                            <span>{{$t('Buy_Now')}}</span>
                           </router-link>
 
                           <!-- <div
@@ -306,12 +305,12 @@
                           <a :onclick="clickmodal" href="javascript::void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
                             ><span class="tinvwl_add_to_wishlist-text"
-                              >Add to Wishlist</span
+                              >{{$t('Add_to_Wishlist')}}</span
                             ></a
                           >
                           <div class="tinv-wishlist-clear"></div>
                           <div class="tinvwl-tooltip-custom">
-                            Add to Wishlist
+                            {{$t('Add_to_Wishlist')}}
                           </div>
                         </div>
                         <div class="product-actions">
@@ -341,11 +340,11 @@
                               data-tinv-wl-producttype="simple"
                               data-tinv-wl-action="add"
                               ><span class="tinvwl_add_to_wishlist-text"
-                                >Add to Wishlist</span
+                                >{{$t('Add_to_Wishlist')}}</span
                               ></a
                             >
                             <div class="tinv-wishlist-clear"></div>
-                            <div class="tinvwl-tooltip">Add to Wishlist</div>
+                            <div class="tinvwl-tooltip">{{$t('Add_to_Wishlist')}}</div>
                           </div>
                           <!-- <a href="#" class="woosc-btn woosc-btn-521" data-id="521">Compare</a> -->
                         </div>
@@ -353,8 +352,8 @@
                     </div>
                     <div class="people-have product-message warning">
                       <i class="klbth-icon-shopping-bag-3"></i
-                      ><strong>Other people want this. </strong>29 people have
-                      this in their carts right now.
+                      ><strong>{{$t('Other_people_want_this')}} </strong>{{$t('Other_people_want_this')}}
+                  
                     </div>
                     <div class="product_meta product-categories">
                       <span class="sku_wrapper"
@@ -362,7 +361,7 @@
                       >
 
                       <span class="posted_in"
-                        >Categories: <a href="#" rel="tag">Vegetables</a>,
+                        >{{$t('categories')}}: <a href="#" rel="tag">{{$t('Vegetables')}}</a>,
                         <a href="#" rel="tag">Fruits</a></span
                       >
                     </div>
@@ -442,7 +441,7 @@
                       @click="clickdescription"
                       data-bs-toggle="tab"
                     >
-                      Description
+                      {{$t('Description')}}
                     </a>
                   </li>
                   <li
@@ -458,7 +457,7 @@
                       @click="clickspecification"
                       data-bs-toggle="tab"
                     >
-                      Specification
+                      {{$t('Specification')}}
                     </a>
                   </li>
                   <li
@@ -474,7 +473,7 @@
                       @click="clickreviews"
                       data-bs-toggle="tab"
                     >
-                      Reviews (1)
+                      {{$t('Reviews')}} (1)
                     </a>
                   </li>
                 </ul>

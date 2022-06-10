@@ -4,11 +4,10 @@
       <div class="newsletter_content">
         <hr class="container newsletter_content-divider" />
         <h4 class="container newsletter_content-head">
-          Subscribe to Our Newsletter
+          {{$t('our_newsletter')}}
         </h4>
         <p class="container newsletter_content-p">
-          Sign up to our newsletter and be the first to know about the latest
-          company news, special offers, events, and discounts.
+         {{$t('sign_up_to_our_newsletter')}}
         </p>
         <div class="">
           <div class="container">
@@ -34,10 +33,10 @@
                             placeholder="Your email address"
                             required=""
                           />
-                          <button class="sub-btn" type="submit">Sign Up</button>
+                          <button class="sub-btn" type="submit">{{$t('sign_up')}}</button>
                         </div>
                         <label style="display: none !important"
-                          >Leave this field empty if you're human:
+                          >{{$t('leave_this_field')}}:
                           <input
                             type="text"
                             name="_mc4wp_honeypot"
@@ -95,10 +94,7 @@
               </div>
               <div class="menu-make-money-with-us-container py-2">
                 <p class="">
-                  Souq Albaladi, founded in 1991, had grown considerably since
-                  it first opened in Doha. Our passion for fresh and diverse
-                  products worldwide drove us to launch the business in order to
-                  cater to our customers' needs.
+                 {{$t('souq_albaladi_founded')}}
                 </p>
 
                 <strong class="text-dark"
@@ -146,7 +142,7 @@
                 widget_product_categories
               "
             >
-              <h4 class="widget-title">Product Categories</h4>
+              <h4 class="widget-title">{{$t('product_categories')}}</h4>
               <ul class="product-categories">
                 <li class="cat-item cat-item-29"><a href="#">Apple</a></li>
                 <li class="cat-item cat-item-40">
@@ -177,7 +173,7 @@
           <!-- col -->
           <div class="col col-12 col-lg-2">
             <div class="klbfooterwidget widget widget_nav_menu">
-              <h4 class="widget-title">Let Us Help You</h4>
+              <h4 class="widget-title">{{$t('let_us')}}</h4>
               <div class="menu-let-us-help-you-container">
                 <ul id="menu-let-us-help-you" class="menu">
                   <li
@@ -189,7 +185,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/replacement'"
-                      >Returns &amp; Replacements</router-link
+                      >{{$t('returns')}} &amp; {{$t('replacements')}}</router-link
                     >
                   </li>
                   <li
@@ -201,7 +197,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/shoppingrates'"
-                      >Shipping Rates &amp; Policies</router-link
+                      >{{$t('shipping_rates')}} &amp; {{$t('policies')}}</router-link
                     >
                   </li>
                   <li
@@ -213,7 +209,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/refund'"
-                      >Refund and Returns Policy</router-link
+                      >{{$t('refund_and_Returns_Policy')}}</router-link
                     >
                   </li>
                   <li
@@ -240,7 +236,7 @@
                   >
                     <!-- <a href="/termscondition"></a> -->
                     <router-link :to="'/' + langCode + '/terms'"
-                      >Terms and Conditions
+                      >{{$t('terms_and_condition')}}
                     </router-link>
                   </li>
                   <li
@@ -253,7 +249,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/helpcenter'"
-                      >Help Center</router-link
+                      >{{$t('help_center')}}</router-link
                     >
                   </li>
                   <li
@@ -265,7 +261,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/covid-19'"
-                      >Covid-19</router-link
+                      >{{$t('covid_19')}}</router-link
                     >
                   </li>
                 </ul>
@@ -275,7 +271,7 @@
           <!-- col -->
           <div class="col col-12 col-lg-2">
             <div class="klbfooterwidget widget widget_nav_menu">
-              <h4 class="widget-title">Get to Know Us</h4>
+              <h4 class="widget-title">{{$t('know_us')}}</h4>
               <div class="menu-get-to-know-us-container">
                 <ul id="menu-get-to-know-us" class="menu">
                   <li
@@ -298,22 +294,10 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/aboutus'"
-                      >About Us</router-link
+                      >{{$t('about_us')}}</router-link
                     >
                   </li>
-                  <li
-                    id="menu-item-2190"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2190
-                    "
-                  >
-                    <router-link :to="'/' + langCode + '/review'"
-                      >Customer-review</router-link
-                    >
-                  </li>
+                
                   <li
                     id="menu-item-2513"
                     class="
@@ -325,7 +309,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/privacy-policy'"
-                      >Privacy Policy
+                      >{{$t('privacy_policy')}}
                     </router-link>
                   </li>
                   <li
@@ -337,7 +321,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/contact-us'"
-                      >Contact Us</router-link
+                      >{{$t('contact_us')}}</router-link
                     >
                   </li>
                   <li
@@ -349,7 +333,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/faq'"
-                      >FAQs</router-link
+                      >{{$t('faqs')}}</router-link
                     >
                   </li>
                 </ul>
@@ -361,11 +345,11 @@
 
           <div class="col col-12 col-lg-3">
             <div class="klbfooterwidget widget widget_nav_menu">
-              <h4 class="widget-title text-success">Install App</h4>
+              <h4 class="widget-title text-success">{{$t('install_app')}}</h4>
               <div class="site-mobile-app mb-1">
                 <div class="app-content d-grid">
                   <strong class="text-dark"
-                    >Scan QR Code To Download Our App</strong
+                    >{{$t('scan_code')}}</strong
                   >
                 </div>
                 <div class="d-flex">

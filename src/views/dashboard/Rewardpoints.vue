@@ -11,7 +11,7 @@
                   <Sidebar />
                   <div class="woocommerce-MyAccount-content">
                     <div class="col-md-12">
-                      <h2 class="p-2">Rewards</h2>
+                      <h2 class="p-2">{{$t('reward_text')}}</h2>
 
                       <div class="p-3 pt-0">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab">
@@ -22,7 +22,7 @@
                               :class="home"
                               @click="clickhome"
                               data-bs-toggle="tab"
-                              >Redeem Points</a
+                              >{{$t('redeem_point')}}</a
                             >
                           </li>
                           <li class="nav-item">
@@ -32,7 +32,7 @@
                               :class="profile"
                               @click="clickprofile"
                               data-bs-toggle="tab"
-                              >Redeem History</a
+                              >{{$t('redeem_history')}}</a
                             >
                           </li>
                         </ul>
@@ -77,9 +77,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earn Points On purchase above 100 QAR
+                                        {{$t('earn_points')}}
                                       </p>
                                     </div>
                                     <div class="align-self-baseline">
@@ -97,9 +97,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
-                                      <h6 class="">Expiration</h6>
+                                      <h6 class="">{{$t('expire')}}</h6>
                                       <div class="d-flex">
-                                        <p class="grey mt-1">3rd March 2022</p>
+                                        <p class="grey mt-1">{{$t('March')}}</p>
                                       </div>
                                     </div>
                                   </div>
@@ -108,7 +108,7 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
-                                    <div>Redeem 100 Points</div>
+                                    <div>{{$t('100_points')}}</div>
                                     <div class=""></div>
                                   </div>
                                 </div>
@@ -121,9 +121,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earn Points On purchase above 100 QAR
+                                        {{$t('earn_points')}}
                                       </p>
                                     </div>
                                     <div class="align-self-baseline">
@@ -141,9 +141,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
-                                      <h6 class="">Expiration</h6>
+                                      <h6 class="">{{$t('expire')}}</h6>
                                       <div class="d-flex">
-                                        <p class="grey mt-1">3rd March 2022</p>
+                                        <p class="grey mt-1">{{$t('March')}}</p>
                                       </div>
                                     </div>
                                   </div>
@@ -152,7 +152,7 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
-                                    <div>Redeem 100 Points</div>
+                                    <div>{{$t('100_points')}}</div>
                                     <div class=""></div>
                                   </div>
                                 </div>
@@ -165,9 +165,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earn Points On purchase above 100 QAR
+                                       {{$t('earn_points')}}
                                       </p>
                                     </div>
                                     <div class="align-self-baseline">
@@ -185,9 +185,9 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                   >
                                     <div class="">
-                                      <h6 class="">Expiration</h6>
+                                      <h6 class="">{{$t('expire')}}</h6>
                                       <div class="d-flex">
-                                        <p class="grey mt-1">3rd March 2022</p>
+                                        <p class="grey mt-1">{{$t('March')}}</p>
                                       </div>
                                     </div>
                                   </div>
@@ -196,7 +196,7 @@
                                     class="d-flex justify-content-between mx-3 mx-md-4 btn text-white"
                                   >
                                     <div></div>
-                                    <div>Redeem 100 Points</div>
+                                    <div>{{$t('100_points')}}</div>
                                     <div class=""></div>
                                   </div>
                                 </div>
@@ -217,29 +217,26 @@
                                     class="d-flex justify-content-between align-item-center mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earned 200 Points On purchase above 100
-                                        QAR
+                                        {{$t('200_points')}}
                                       </p>
                                     </div>
                                     <div
                                       class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                     >
                                       <div class="">
-                                        <h6 class="">Date</h6>
+                                        <h6 class="">{{$t('Date')}}</h6>
                                         <div class="d-flex">
                                           <p class="grey mt-1">
-                                            3rd March 2022
+                                            {{$t('March')}}
                                           </p>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="align-self-baseline">
                                       <img
-                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg"
-                                        height="100px"
-                                        width="100px"
+                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg" style = "width:100px !important"
                                         alt=""
                                         class="rounded-circle"
                                       />
@@ -255,29 +252,27 @@
                                     class="d-flex justify-content-between align-item-center mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earned 200 Points On purchase above 100
-                                        QAR
+                                        {{$t('200_points')}}
                                       </p>
                                     </div>
                                     <div
                                       class="d-flex justify-content-between mx-3 mx-md-4 div2"
                                     >
                                       <div class="">
-                                        <h6 class="">Date</h6>
+                                        <h6 class="">{{$t('Date')}}</h6>
                                         <div class="d-flex">
                                           <p class="grey mt-1">
-                                            3rd March 2022
+                                            {{$t('March')}}
                                           </p>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="align-self-baseline">
                                       <img
-                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg"
-                                        height="100px"
-                                        width="100px"
+                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg" style = "width:100px !important"
+                                        
                                         alt=""
                                         class="rounded-circle"
                                       />
@@ -293,29 +288,25 @@
                                     class="d-flex justify-content-between align-item-center mx-3 mx-md-4"
                                   >
                                     <div>
-                                      <h6 class="">20% off on next order</h6>
+                                      <h6 class="">{{$t('off_on_next_order')}}</h6>
                                       <p class="grey">
-                                        Earned 200 Points On purchase above 100
-                                        QAR
+                                        {{$t('200_points')}}
                                       </p>
                                     </div>
                                     <div
-                                      class="d-flex justify-content-between mx-3 mx-md-4 div2"
-                                    >
+                                      class="d-flex justify-content-between mx-3 mx-md-4 div2">
                                       <div class="">
-                                        <h6 class="">Date</h6>
+                                        <h6 class="">{{$t('Date')}}</h6>
                                         <div class="d-flex">
                                           <p class="grey mt-1">
-                                            3rd March 2022
+                                            {{$t('March')}}
                                           </p>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="align-self-baseline">
                                       <img
-                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg"
-                                        height="100px"
-                                        width="100px"
+                                        src="https://thumbs.dreamstime.com/z/super-discount-symbol-sale-sign-vector-tag-advertising-discounts-shopping-banner-market-offer-147538659.jpg" style = "width:100px !important"
                                         alt=""
                                         class="rounded-circle"
                                       />
