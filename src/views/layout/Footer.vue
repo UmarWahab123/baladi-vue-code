@@ -223,7 +223,7 @@
                     "
                   >
                     <router-link :to="'/' + langCode + '/privacy-policy'"
-                      >Privacy Policy
+                      >{{$t('privacy_policy')}}
                     </router-link>
                   </li>
                   <li

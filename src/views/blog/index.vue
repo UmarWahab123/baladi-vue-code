@@ -40,12 +40,12 @@
                         >
                         <span class="meta-item category"
                           ><i class="klbth-icon-bookmark-empty"></i>
-                          <a href="#" rel="category tag">Watches</a></span
+                          <a href="#" rel="category tag">{{$t('Watches')}}</a></span
                         >
                         <span class="meta-item entry-tags"
                           ><i class="klbth-icon-cinema"></i
                           ><a href="#" rel="tag">klbtheme</a>,
-                          <a href="#" rel="tag">themeforest</a>
+                          <a href="#" rel="tag">{{$t('themeforest')}}</a>
                         </span>
                       </div>
                     </div>

@@ -10,7 +10,7 @@
                                     data-id="b52ce40" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
 
-                                        <h3 class="elementor-heading-title elementor-size-default">Who we are</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('Who_we_are')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -27,8 +27,8 @@
                                 <div class="elementor-element elementor-element-18729f6 elementor-widget elementor-widget-heading"
                                     data-id="18729f6" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">Our website address
-                                            is:www.baladiexpress.com.</p>
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('website_address')}}
+                                            :www.baladiexpress.com.</p>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                 <div class="elementor-element elementor-element-eddf3ee elementor-widget elementor-widget-heading"
                                     data-id="eddf3ee" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Comments</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('Comments')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -62,16 +62,9 @@
                                 <div class="elementor-element elementor-element-a2a03ac elementor-widget elementor-widget-heading"
                                     data-id="a2a03ac" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">When visitors leave
-                                            comments on the site we collect the data shown in the comments form, and
-                                            also the visitor’s IP address and browser user agent string to help spam
-                                            detection.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('visitors_leave')}}
 
-                                            An anonymized string created from your email address (also called a hash)
-                                            may be provided to the Gravatar service to see if you are using it. The
-                                            Gravatar service privacy policy is available here:
-                                            https://automattic.com/privacy/. After approval of your comment, your
-                                            profile picture is visible to the public in the context of your comment.</p>
+                                           {{$t('anonymized')}}.</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +81,7 @@
                                 <div class="elementor-element elementor-element-3f8eeef elementor-widget elementor-widget-heading"
                                     data-id="3f8eeef" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Media</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('Media')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -105,10 +98,7 @@
                                 <div class="elementor-element elementor-element-f6c057c elementor-widget elementor-widget-heading"
                                     data-id="f6c057c" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">If you upload images
-                                            to the website, you should avoid uploading images with embedded location
-                                            data (EXIF GPS) included. Visitors to the website can download and extract
-                                            any location data from images on the website.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('upload_images')}}
 
                                         </p>
                                     </div>
@@ -127,7 +117,7 @@
                                 <div class="elementor-element elementor-element-4cc0b95 elementor-widget elementor-widget-heading"
                                     data-id="4cc0b95" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Cookies</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('Cookies')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -144,25 +134,13 @@
                                 <div class="elementor-element elementor-element-a7a74ba elementor-widget elementor-widget-heading"
                                     data-id="a7a74ba" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">If you leave a comment
-                                            on our site you may opt-in to saving your name, email address and website in
-                                            cookies. These are for your convenience so that you do not have to fill in
-                                            your details again when you leave another comment. These cookies will last
-                                            for one year.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('leave_commenton')}}
 
-                                            If you visit our login page, we will set a temporary cookie to determine if
-                                            your browser accepts cookies. This cookie contains no personal data and is
-                                            discarded when you close your browser.
+                                          {{$t('visit')}}
 
-                                            When you log in, we will also set up several cookies to save your login
-                                            information and your screen display choices. Login cookies last for two
-                                            days, and screen options cookies last for a year. If you select “Remember
-                                            Me”, your login will persist for two weeks. If you log out of your account,
-                                            the login cookies will be removed.
+                                            {{$t('you_log_in')}}
 
-                                            If you edit or publish an article, an additional cookie will be saved in
-                                            your browser. This cookie includes no personal data and simply indicates the
-                                            post ID of the article you just edited. It expires after 1 day.</p>
+                                           {{$t('publish')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -179,8 +157,7 @@
                                 <div class="elementor-element elementor-element-30edfb7 elementor-widget elementor-widget-heading"
                                     data-id="30edfb7" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Embedded content from
-                                            other websites</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('Embedded')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -197,20 +174,11 @@
                                 <div class="elementor-element elementor-element-35ca557 elementor-widget elementor-widget-heading"
                                     data-id="35ca557" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">When visitors leave
-                                            comments on the site we collect the data shown in the comments form, and
-                                            also the visitor’s IP address and browser user agent string to help spam
-                                            detection.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('visitors_leave')}}
 
-                                            Suggested text: Articles on this site may include embedded content (e.g.
-                                            videos, images, articles, etc.). Embedded content from other websites
-                                            behaves in the exact same way as if the visitor has visited the other
-                                            website.
+                                            {{$t('suggested_text')}}
 
-                                            These websites may collect data about you, use cookies, embed additional
-                                            third-party tracking, and monitor your interaction with that embedded
-                                            content, including tracking your interaction with the embedded content if
-                                            you have an account and are logged in to that website.</p>
+                                            {{$t('collect_data')}}.</p>
                                     </div>
                                 </div>
                             </div>

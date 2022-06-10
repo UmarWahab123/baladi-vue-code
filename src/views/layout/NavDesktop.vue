@@ -17,7 +17,7 @@
                   <router-link
                     class="nav-link"
                     :to="'/' + langCode + '/aboutus'"
-                    >About Us
+                    >{{$t('about_us')}}
                   </router-link>
                 </li>
                 <li
@@ -30,7 +30,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    >Featured Products
+                    >{{$t('feature_product')}}
                   </router-link>
                 </li>
                 <li
@@ -42,7 +42,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/helpcenter'"
-                    >Help
+                    >{{$t('help')}}
                   </router-link>
                 </li>
 
@@ -55,7 +55,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/replacement'"
-                    >Returns &amp; Replacements</router-link
+                    >{{$t('returns_replacements')}}</router-link
                   >
                 </li>
               </ul>
@@ -76,7 +76,7 @@
                 >
                   <router-link to=""
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
-                    &nbsp; Location
+                    &nbsp; {{$t('Location')}}
                   </router-link>
                 </li>
                 <li
@@ -87,7 +87,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/order-tracking'"
-                    >Order Tracking
+                    >{{$t('Order_Tracking')}}
                   </router-link>
                 </li>
 
@@ -167,7 +167,7 @@
                     <label
                       class="screen-reader-text"
                       for="dgwt-wcas-search-input-1"
-                      >Products search</label
+                      >{{$t('Products_search')}}</label
                     >
                     <input
                       id="dgwt-wcas-search-input-1"
@@ -189,7 +189,7 @@
                       class="dgwt-wcas-search-submit"
                       @click="searchproducts"
                     >
-                      Search
+                      {{$t('search')}}
                     </button>
                     <input type="hidden" name="post_type" value="product" />
                     <input type="hidden" name="dgwt_wcas" value="1" />

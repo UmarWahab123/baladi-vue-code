@@ -4,12 +4,12 @@
     <div class="site-content">
       <div class="shop-content my-account-page mt-60">
         <div class="container">
-          <h3 class="text-center mb-4 pb-2 text-success fw-bold">FAQ's</h3>
+          <h3 class="text-center mb-4 pb-2 text-success fw-bold">{{$t('FAQs')}}</h3>
           <div class="row">
             <section>
               <div class="site-module module-title small">
                 <p class="text-center entry-subtitle mb-5">
-                  Find the answers for the most frequently asked questions below
+                  {{$t('Find_the_answers_for_below')}}
                 </p>
               </div>
 
@@ -142,7 +142,7 @@
                     <div class="elementor-widget-container">
                       <div class="site-module module-title small">
                         <h4 class="entry-subtitle">
-                          You can ask us questions !
+                          {{$t('You_can_ask_us_questions')}}
                         </h4>
                       </div>
                     </div>
@@ -191,7 +191,7 @@
                   >
                     <div class="elementor-widget-container">
                       <div class="contact-form">
-                        <h3 class="entry-title">Get in Touch</h3>
+                        <h3 class="entry-title">{{$t('Get_in_Touch')}}</h3>
                         <p>
                           Quisque mattis tortor eu tristique sodales. Aenean sit
                           amet justo nec sem vestibulum.
@@ -248,7 +248,7 @@
                             </div>
                             <div class="row">
                               <div class="col-12 col-lg-6">
-                                <label> Your name * </label><br />
+                                <label> {{$t('Your_name')}} * </label><br />
                                 <span class="wpcf7-form-control-wrap your-name"
                                   ><input
                                     type="text"
@@ -265,7 +265,7 @@
                                 /></span>
                               </div>
                               <div class="col-12 col-lg-6">
-                                <label> Your email *</label><br />
+                                <label> {{$t('Your_email')}} *</label><br />
                                 <span class="wpcf7-form-control-wrap your-email"
                                   ><input
                                     type="email"
@@ -284,7 +284,7 @@
                                 /></span>
                               </div>
                               <div class="col-12 col-lg-12">
-                                <label> Subject * </label><br />
+                                <label> {{$t('Subject')}} * </label><br />
                                 <span
                                   class="wpcf7-form-control-wrap your-subject"
                                   ><input
@@ -302,7 +302,7 @@
                                 /></span>
                               </div>
                               <div class="col-12 col-lg-12">
-                                <label> Your question </label><br />
+                                <label> {{$t('Your_question')}} </label><br />
                                 <span
                                   class="wpcf7-form-control-wrap your-message"
                                 >
@@ -318,7 +318,7 @@
                               <div class="col-12 col-lg-12">
                                 <input
                                   type="submit"
-                                  value="Send Message"
+                                  :value="$t('Send_Message')"
                                   class="
                                     wpcf7-form-control
                                     has-spinner

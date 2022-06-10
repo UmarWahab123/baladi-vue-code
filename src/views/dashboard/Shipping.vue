@@ -13,7 +13,7 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
 
-                    <h3>Shipping address</h3>
+                    <h3>{{$t('Shipping_address')}}</h3>
                     <div class="woocommerce-address-fields">
                       <div class="woocommerce-address-fields__field-wrapper">
                         <!-- <input type="hidden" v-bind="formdata.id" /> -->
@@ -23,7 +23,7 @@
                           data-priority="10"
                         >
                           <label for="shipping_first_name" class=""
-                            >First name&nbsp;<abbr
+                            >{{$t('first_name')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -47,7 +47,7 @@
                           data-priority="20"
                         >
                           <label for="shipping_last_name" class=""
-                            >Last name&nbsp;<abbr
+                            >{{$t('last_name')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -71,7 +71,7 @@
                           data-priority="30"
                         >
                           <label for="shipping_company" class=""
-                            >Zone&nbsp;<span class="optional"></span></label
+                            >{{$t('Zone')}}&nbsp;<span class="optional"></span></label
                           ><span class="woocommerce-input-wrapper"
                             ><input
                               type="text"
@@ -88,7 +88,7 @@
                           data-priority="30"
                         >
                           <label for="shipping_company" class=""
-                            >Contact&nbsp;<span class="optional"></span></label
+                            >{{$t('Contact')}}&nbsp;<span class="optional"></span></label
                           ><span class="woocommerce-input-wrapper"
                             ><input
                               type="text"
@@ -110,7 +110,7 @@
                           data-priority="50"
                         >
                           <label for="shipping_address_1" class=""
-                            >Address Line 1&nbsp;<abbr
+                            >{{$t('Address_Line')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -140,7 +140,7 @@
                           data-priority="50"
                         >
                           <label for="shipping_address_1" class=""
-                            >Address Line 2&nbsp;<abbr
+                            >{{$t('Address_Line2')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -171,7 +171,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required"
                         >
                           <label for="shipping_city" class=""
-                            >Town / City&nbsp;<abbr
+                            >{{$t('town_city')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -186,7 +186,7 @@
                               autocomplete="address-level2"
                             >
                               <option value="" selected>
-                                Select an option…
+                                {{$t('Select_an_option')}}
                               </option>
                               <option
                                 :data="item"
@@ -214,7 +214,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Postcode / ZIP&nbsp;<abbr
+                            >{{$t('Postcode_ZIP')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -241,7 +241,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Latitude&nbsp;<abbr
+                            >{{$t('Latitude')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -271,7 +271,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Longitude&nbsp;<abbr
+                            >{{$t('Longitude')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -301,7 +301,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Shipping&nbsp;<abbr
+                            >{{$t('shipping')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -325,7 +325,7 @@
                           value="Save address"
                           @click="saveaddress()"
                         >
-                          Save address
+                          {{$t("Save_address")}}
                         </button>
                         <input
                           type="hidden"
