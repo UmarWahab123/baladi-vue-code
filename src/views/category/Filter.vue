@@ -78,7 +78,7 @@
                   style="display: none"
                 />
                 <button type="submit" class="button" style="margin-right: 14px">
-                  {{$t('Filter')}}
+                 {{$t('Filter')}}
                 </button>
                 <div class="price_label values">
                   {{$t('Price')}}: <span id="range1" class="from">27</span> —

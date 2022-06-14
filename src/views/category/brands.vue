@@ -29,19 +29,19 @@
                   aria-hidden="true"
                 >
                   <option value="popularity" data-select2-id="29">
-                    {{$t('Sort_by_popularity')}}
+                   {{$t('Sort_by_popularity')}}
                   </option>
                   <option value="rating" data-select2-id="30">
-                    {{$t('Sort_by_average_rating')}}
+                   {{$t('Sort_by_average_rating')}}
                   </option>
                   <option value="date" selected="selected" data-select2-id="9">
                     {{$t('Sort_by_latest')}}
                   </option>
                   <option value="price" data-select2-id="31">
-                    {{$t('Sort_by_price')}}
+                     {{$t('Sort_by_price')}}
                   </option>
                   <option value="price-desc" data-select2-id="32">
-                    {{$t('Sort_by_high_to_low')}}
+                   {{$t('Sort_by_high_to_low')}}
                   </option>
                 </select>
                 <input type="hidden" name="paged" value="1" />

@@ -7,24 +7,35 @@
           <div class="woocommerce">
             <div class="woocommerce-order">
               <p
-                class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"
+                class="
+                  woocommerce-notice woocommerce-notice--success
+                  woocommerce-thankyou-order-received
+                "
               >
                 Thank you. Your order has been received.
               </p>
 
               <ul
-                class="woocommerce-order-overview woocommerce-thankyou-order-details order_details"
+                class="
+                  woocommerce-order-overview woocommerce-thankyou-order-details
+                  order_details
+                "
               >
                 <li class="woocommerce-order-overview__order order">
-                  Order number: <strong>2864</strong>
+                  Order number: <strong>{{ results?.id }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__date date">
-                  Date: <strong>February 15, 2022</strong>
+                  Date:
+                  <strong>
+                    {{
+                      moment(results?.created_at).format("MMMM , DD YYYY ")
+                    }}</strong
+                  >
                 </li>
 
                 <li class="woocommerce-order-overview__email email">
-                  Email: <strong>sajidq046@gmail.com</strong>
+                  Email: <strong>{{ results?.customer?.email }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__total total">
@@ -34,7 +45,7 @@
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol"
                           >QAR </span
-                        >130.00</bdi
+                        >{{ results?.net_amount }}</bdi
                       ></span
                     ></strong
                   >
@@ -49,7 +60,11 @@
                 <h2 class="woocommerce-order-details__title">Order details</h2>
 
                 <table
-                  class="woocommerce-table woocommerce-table--order-details shop_table order_details"
+                  class="
+                    woocommerce-table woocommerce-table--order-details
+                    shop_table
+                    order_details
+                  "
                 >
                   <thead>
                     <tr>
@@ -65,13 +80,18 @@
                   </thead>
 
                   <tbody>
-                    <tr class="woocommerce-table__line-item order_item">
+                    <tr
+                      class="woocommerce-table__line-item order_item"
+                      v-for="(item, index) in results?.cart"
+                    >
                       <td class="woocommerce-table__product-name product-name">
                         <a
                           href="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
-                          >Cubitt Smart Watch CT2S Waterproof Fitness Tracker</a
+                          >{{ item?.uom_product?.product?.product_name }}</a
                         >
-                        <strong class="product-quantity">×&nbsp;2</strong>
+                        <strong class="product-quantity"
+                          >×&nbsp;{{ item.quantity }}</strong
+                        >
                       </td>
 
                       <td
@@ -81,7 +101,7 @@
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >QAR </span
-                            >130.00</bdi
+                            >{{ item?.net_product_amount }}</bdi
                           ></span
                         >
                       </td>
@@ -95,9 +115,13 @@
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
                             >QAR </span
-                          >130.00</span
+                          >{{ results.net_amount }}</span
                         >
                       </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Discount:</th>
+                      <td>QAR {{ results.order_discount }}</td>
                     </tr>
                     <tr>
                       <th scope="row">Shipping:</th>
@@ -113,13 +137,13 @@
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
                             >QAR </span
-                          >130.00</span
+                          >{{ results?.sale_amount }}</span
                         >
                       </td>
                     </tr>
                     <tr>
                       <th>Note:</th>
-                      <td>Quis dolor libero vo</td>
+                      <td>{{ results?.delivery_note }}</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -127,10 +151,21 @@
 
               <section class="woocommerce-customer-details">
                 <section
-                  class="woocommerce-columns woocommerce-columns--2 woocommerce-columns--addresses col2-set addresses"
+                  class="
+                    woocommerce-columns
+                    woocommerce-columns--2
+                    woocommerce-columns--addresses
+                    col2-set
+                    addresses
+                  "
                 >
                   <div
-                    class="woocommerce-column woocommerce-column--1 woocommerce-column--billing-address col-1"
+                    class="
+                      woocommerce-column
+                      woocommerce-column--1
+                      woocommerce-column--billing-address
+                      col-1
+                    "
                   >
                     <h2 class="woocommerce-column__title">Billing address</h2>
 
@@ -149,7 +184,12 @@
                   <!-- /.col-1 -->
 
                   <div
-                    class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2"
+                    class="
+                      woocommerce-column
+                      woocommerce-column--2
+                      woocommerce-column--shipping-address
+                      col-2
+                    "
                   >
                     <h2 class="woocommerce-column__title">Shipping address</h2>
                     <address>
@@ -174,4 +214,39 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+
+<script>
+import axios from "axios";
+import moment from "moment";
+
+export default {
+  data() {
+    return {
+      results: [],
+      moment: moment,
+    };
+  },
+  mounted() {
+    var id = this.$route.params.id;
+    console.log(id);
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    this.token = userInfo.token;
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/mobile/driver/orderdetails?order_id=" +
+          id,
+        {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        }
+      )
+      .then((response) => {
+        this.results = response.data.data[0];
+        console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
 </script>

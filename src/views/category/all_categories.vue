@@ -29,7 +29,7 @@
                   aria-hidden="true"
                 >
                   <option value="popularity" data-select2-id="29">
-                     {{$t('Sort_by_popularity')}}
+                    {{$t('Sort_by_popularity')}}
                   </option>
                   <option value="rating" data-select2-id="30">
                     {{$t('Sort_by_average_rating')}}

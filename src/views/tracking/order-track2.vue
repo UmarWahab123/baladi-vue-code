@@ -72,10 +72,16 @@
                       <div class="elementor-shortcode">
                         <div class="woocommerce">
                           <p class="order-info">
-                            Order #<mark class="order-number">2994</mark> was
-                            placed on
-                            <mark class="order-date">March 29, 2022</mark> and
-                            is currently
+                            Order #<mark class="order-number">{{
+                              results?.id
+                            }}</mark>
+                            was placed on
+                            <mark class="order-date">{{
+                              moment(results?.created_at).format(
+                                "MMMM , DD YYYY "
+                              )
+                            }}</mark>
+                            and is currently
                             <mark class="order-status badge bg-success"
                               >Processing</mark
                             >.
@@ -121,6 +127,7 @@
                                     woocommerce-table__line-item
                                     order_item
                                   "
+                                  v-for="(item, index) in results?.cart"
                                 >
                                   <td
                                     class="
@@ -128,12 +135,14 @@
                                       product-name
                                     "
                                   >
-                                    <a href="javascript:void(0)"
-                                      >Apple 10.9-inch iPad Air Wi-Fi Cellular
-                                      64GB</a
+                                    <a
+                                      href="https://klbtheme.com/machic/product/cubitt-smart-watch-ct2s-waterproof-fitness-tracker/"
+                                      >{{
+                                        item?.uom_product?.product?.product_name
+                                      }}</a
                                     >
                                     <strong class="product-quantity"
-                                      >×&nbsp;1</strong
+                                      >×&nbsp;{{ item.quantity }}</strong
                                     >
                                   </td>
 
@@ -151,7 +160,7 @@
                                             woocommerce-Price-currencySymbol
                                           "
                                           >QAR </span
-                                        >629.99</bdi
+                                        >{{ item?.net_product_amount }}</bdi
                                       ></span
                                     >
                                   </td>
@@ -167,23 +176,13 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >629.99</span
+                                      >{{ results.net_amount }}</span
                                     >
                                   </td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Shipping:</th>
-                                  <td>
-                                    <span
-                                      class="woocommerce-Price-amount amount"
-                                      ><span
-                                        class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
-                                      >15.00</span
-                                    >&nbsp;<small class="shipped_via"
-                                      >via Flat rate</small
-                                    >
-                                  </td>
+                                  <td>Free shipping</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Payment method:</th>
@@ -197,13 +196,13 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >644.99</span
+                                      >{{ results?.sale_amount }}</span
                                     >
                                   </td>
                                 </tr>
                                 <tr>
                                   <th>Note:</th>
-                                  <td>zzasdadas</td>
+                                  <td>{{ results?.delivery_note }}</td>
                                 </tr>
                               </tfoot>
                             </table>
@@ -399,4 +398,40 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+
+
+<script>
+import axios from "axios";
+import moment from "moment";
+
+export default {
+  data() {
+    return {
+      results: [],
+      moment: moment,
+    };
+  },
+  mounted() {
+    var id = this.$route.params.id;
+    console.log(id);
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    this.token = userInfo.token;
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/mobile/driver/orderdetails?order_id=" +
+          id,
+        {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        }
+      )
+      .then((response) => {
+        this.results = response.data.data[0];
+        console.log(this.results);
+      })
+      .catch((error) => {});
+  },
+};
 </script>

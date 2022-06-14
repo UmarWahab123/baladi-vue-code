@@ -1,313 +1,252 @@
 <template>
-  <!-- 3rd section  -->
-  <section
+  <div
     class="
-      elementor-section
-      elementor-top-section
       elementor-element
-      elementor-element-55ef817
-      elementor-section-boxed
-      elementor-section-height-default
-      elementor-section-height-default
+      elementor-element-ce97da5
+      elementor-widget
+      elementor-widget-machic-product-grid
     "
-    data-id="55ef817"
-    data-element_type="section"
+    data-id="ce97da5"
+    data-element_type="widget"
+    data-widget_type="machic-product-grid.default"
   >
-    <div class="elementor-container elementor-column-gap-extended">
-      <div
-        class="
-          elementor-column
-          elementor-col-100
-          elementor-top-column
-          elementor-element
-          elementor-element-64c48a6
-        "
-        data-id="64c48a6"
-        data-element_type="column"
-      >
-        <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="
-              elementor-element
-              elementor-element-57bc36c
-              elementor-widget
-              elementor-widget-machic-product-grid
-            "
-            data-id="57bc36c"
-            data-element_type="widget"
-            data-widget_type="machic-product-grid.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="site-module products-module">
-                <div class="module-header">
-                  <h4 class="entry-title">{{$t('Top_sellers')}}</h4>
-                  <div class="product-countdown">
-                    <div
-                      class="countdown"
-                      data-date="2022/04/15"
-                      data-text="Expired"
-                    >
-                      <div class="count-item days">51</div>
-                      <span>:</span>
-                      <div class="count-item hours">13</div>
-                      <span>:</span>
-                      <div class="count-item minutes">11</div>
-                      <span>:</span>
-                      <div class="count-item second">51</div>
+    <div class="elementor-widget-container">
+      <div class="site-module products-module">
+        <div class="module-header">
+          <h4 class="entry-title">{{$t('New_arrivel')}}</h4>
+          <a href="#" class="btn link"
+            >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+          ></a>
+        </div>
+        <div class="module-wrapper">
+          <div class="products column-4 mobile-2 total-4">
+            <div
+              class="product custom-hover"
+              :data="item"
+              :key="indextr"
+              v-for="(item, indextr) in productStore.NewarrivalProducts"
+            >
+              <div class="product-wrapper product-type-1">
+                <div class="product-content">
+                  <div class="thumbnail-wrapper">
+                    <div class="product-badges">
+                      <span class="badge super">Super Price</span>
                     </div>
-                    <!-- countdown -->
-                    <div class="countdown-text">
-                     {{$t('Remains_until_offer')}}
+                    <router-link
+                      :to="'/' + langCode + '/product-detail' + item.product.id"
+                    >
+                      <div class="product-card" style="position: relative">
+                        <div
+                          class="hover-slider-images-toggler"
+                          style="position: absolute; inset: 0px; display: flex"
+                        >
+                          <div
+                            class="hover-slider-toggle-pane"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
+                            data-hover-slider-i="37"
+                            style="flex-grow: 1"
+                          ></div>
+                          <div
+                            class="hover-slider-toggle-pane"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad2-400x400.jpg"
+                            data-hover-slider-i="38"
+                            style="flex-grow: 1"
+                          ></div>
+                          <div
+                            class="hover-slider-toggle-pane"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad3-400x400.jpg"
+                            data-hover-slider-i="39"
+                            style="flex-grow: 1"
+                          ></div>
+                          <div
+                            class="hover-slider-toggle-pane"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad4-400x400.jpg"
+                            data-hover-slider-i="40"
+                            style="flex-grow: 1"
+                          ></div>
+                        </div>
+
+                        <div class="product-card">
+                          <div id="slidingWindow" ontouchstart="">
+                            <div class="slidingSection">
+                              <img
+                                class="img"
+                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                              </div>
+                            </div>
+                            <div class="slidingSection">
+                              <img
+                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/cubitt2-400x400.jpg"
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </router-link>
+
+                    <div class="product-buttons">
+                      <div
+                        class="
+                          tinv-wraper
+                          woocommerce
+                          tinv-wishlist
+                          tinvwl-shortcode-add-to-cart
+                        "
+                        data-product_id="478"
+                      >
+                        <div class="tinv-wishlist-clear"></div>
+
+                        <a
+                          :onclick="clickmodal"
+                          v-bind:wishlist_id="item.product.id"
+                          href="javascript:void(0)"
+                          ><i class="fa fa-heart" aria-hidden="true"></i
+                          ><span class="tinvwl_add_to_wishlist-text"
+                            >Add to Wishlist</span
+                          ></a
+                        >
+
+                        <div class="tinv-wishlist-clear"></div>
+                        <div class="tinvwl-tooltip">Add to Wishlist</div>
+                      </div>
+                      <a href="javascript:void(0)" class="most-comments"
+                        ><img
+                          src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
+                          alt="featured" /></a
+                      ><a
+                        href="javascript::void(0)"
+                        class="
+                          woosc-btn woosc-btn-521 woosc-btn-added woosc-added
+                        "
+                        :onclick="clickcomparemodal"
+                        data-id="521"
+                        >Compare</a
+                      ><span
+                        :onclick="clickbigmodal"
+                        v-bind:topSeller_id="item.product.slug"
+                        class="detail-bnt quickview animated"
+                        ><i class="klbth-icon-eye-empty"></i
+                      ></span>
                     </div>
                   </div>
-                  <a href="" class="btn link"
-                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
-                  ></a>
-                </div>
-                <div class="module-wrapper">
-                  <div class="products column-5 mobile-2 total-5">
-                    <div
-                      class="product custom-hover"
-                      :data="item"
-                      :key="indextr"
-                      v-for="(item, indextr) in productStore.products"
-                    >
-                      <div class="product-wrapper product-type-3">
-                        <div class="product-content">
-                          <div class="thumbnail-wrapper">
-                            <div class="product-badges">
-                              <span class="badge onsale">11%</span>
-                            </div>
-
-                            <router-link
-                              :to="
-                                '/' +
-                                langCode +
-                                '/product-detail/' +
-                                item.product.slug
-                              "
-                            >
-                              <div class="product-card">
-                                <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                  <div class="slidingSection">
-                                    <img
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </router-link>
-
-                            <div class="product-buttons">
-                              <div
-                                class="
-                                  tinv-wraper
-                                  woocommerce
-                                  tinv-wishlist
-                                  tinvwl-shortcode-add-to-cart
-                                "
-                                data-product_id="478"
-                              >
-                                <div class="tinv-wishlist-clear"></div>
-                                <a
-                                  :onclick="clickmodal"
-                                  v-bind:wishlist_id="item.product.id"
-                                  role="button"
-                                  tabindex="0"
-                                  aria-label="Add to Wishlist"
-                                  class="d-none tinvwl-position-after"
-                                  data-tinv-wl-list="[]"
-                                  data-tinv-wl-product="478"
-                                  data-tinv-wl-productvariation="0"
-                                  data-tinv-wl-productvariations="[0]"
-                                  data-tinv-wl-producttype="simple"
-                                  data-tinv-wl-action="add"
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
-                                <a
-                                  :onclick="clickmodal"
-                                  v-bind:wishlist_id="item.product.id"
-                                  href="javascript:void(0)"
-                                  ><i class="fa fa-heart" aria-hidden="true"></i
-                                  ><span class="tinvwl_add_to_wishlist-text"
-                                    >Add to Wishlist</span
-                                  ></a
-                                >
-
-                                <div class="tinv-wishlist-clear"></div>
-                                <div class="tinvwl-tooltip">
-                                  Add to Wishlist
-                                </div>
-                              </div>
-                              <a href="#?featured=yes" class="most-comments"
-                                ><img
-                                  src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
-                                  alt="featured" /></a
-                              ><a
-                                href="javascript::void(0)"
-                                class="
-                                  woosc-btn
-                                  woosc-btn-521
-                                  woosc-btn-added
-                                  woosc-added
-                                "
-                                :onclick="clickcomparemodal"
-                                data-id="521"
-                                >Compare</a
-                              ><span
-                                @click="clickbigmodal"
-                                v-bind:topSeller_id="item.product.slug"
-                                class="detail-bnt quickview animated"
-                                ><i class="klbth-icon-eye-empty"></i
-                              ></span>
-                            </div>
-                            <!-- product-buttons -->
-                          </div>
-                          <!-- thumbnail-wrapper -->
-                          <div class="content-wrapper">
-                            <h3 class="product-title">
-                              <router-link
-                                :to="
-                                  '/' +
-                                  langCode +
-                                  '/product-detail/' +
-                                  item.product.slug
-                                "
-                                >{{ item.product.product_name }}</router-link
-                              >
-                            </h3>
-                            <div class="product-rating">
-                              <div
-                                class="star-rating"
-                                role="img"
-                                aria-label="Rated 5.00 out of 5"
-                              >
-                                <span style="width: 100%"
-                                  >Rated
-                                  <strong class="rating">{{
-                                    item.product.rating
-                                  }}</strong>
-                                  out of 5</span
-                                >
-                              </div>
-                              <div class="count-rating">
-                                {{ item.product.review_count }}
-                                <span class="rating-text">Ratings </span>
-                              </div>
-                            </div>
-                            <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >{{
-                                      item.product?.uom_products[0]
-                                        ?.previous_price
-                                    }}</bdi
-                                  ></span
-                                ></del
-                              >
-                              <ins
-                                ><span class="woocommerce-Price-amount amount"
-                                  ><bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >{{
-                                      item.product?.uom_products[0]
-                                        ?.regular_price
-                                    }}</bdi
-                                  ></span
-                                ></ins
-                              ></span
-                            >
-                            <!-- price -->
-
-                            <!-- product-meta -->
-                          </div>
-                          <!-- content-wrapper -->
-                        </div>
-                        <!-- product-content -->
-                        <div class="product-footer">
-                          <div class="product-footer-buttons">
-                            <a
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              @click="$emit(cartStore.items.push(item))"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
-                          </div>
-
-                          <!-- product-footer-buttons -->
-                          <div class="product-footer-details">
-                            <ul>
-                              <li class="SpecHighlights-list-label">laban</li>
-                              <li>Fresh</li>
-                              <li>2 kg</li>
-                            </ul>
-                            &nbsp;
-                          </div>
-                        </div>
-                        <!-- product-footer -->
-                      </div>
-                      <!-- product-wrapper -->
+                  <div class="content-wrapper">
+                    <h3 class="product-title">
+                      <router-link
+                        :to="
+                          '/' +
+                          langCode +
+                          '/product-detail/' +
+                          item.product.slug
+                        "
+                        >{{ item.product.product_name }}</router-link
+                      >
+                    </h3>
+                    <div class="product-rating">
                       <div
-                        class="product-content-fade"
-                        style="margin-bottom: -177px"
-                      ></div>
+                        class="star-rating"
+                        role="img"
+                        aria-label="Rated 5.00 out of 5"
+                      >
+                        <span style="width: 100%"
+                          >Rated
+                          <strong class="rating">{{
+                            item.product.rating
+                          }}</strong>
+                          out of 5</span
+                        >
+                      </div>
+                      <div class="count-rating">
+                        {{ item.product.review_count }}
+                        <span class="rating-text">Ratings</span>
+                      </div>
                     </div>
+                    <div class="product-price-cart">
+                      <span class="price"
+                        ><del aria-hidden="true"
+                          ><span class="woocommerce-Price-amount amount"
+                            ><bdi
+                              ><span class="woocommerce-Price-currencySymbol"
+                                >QAR </span
+                              >{{
+                                item.product?.uom_products[0]?.previous_price
+                              }}</bdi
+                            ></span
+                          ></del
+                        >
+                        <ins
+                          ><span
+                            class="woocommerce-Price-amount amount"
+                            style="margin: 4px"
+                            ><bdi
+                              ><span class="woocommerce-Price-currencySymbol"
+                                >QAR </span
+                              >{{
+                                item.product?.uom_products[0]?.regular_price
+                              }}</bdi
+                            ></span
+                          ></ins
+                        ></span
+                      ><a
+                        href="javascript:void(0)"
+                        data-quantity="1"
+                        class="
+                          button
+                          product_type_simple
+                          add_to_cart_button
+                          ajax_add_to_cart
+                        "
+                        @click="$emit(cartStore.items.push(item))"
+                        ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div class="product-footer-details">
+                    <ul>
+                      <li class="SpecHighlights-list-label">
+                        Screen Size 11 in
+                      </li>
+                      <li>Operating SystemApple iOS</li>
+                      <li>
+                        <div class="SpecHighlights-list-label">
+                          RAM Memory 8 GB
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
+              <div
+                class="product-content-fade"
+                style="margin-bottom: -91px"
+              ></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- logo slider  -->
+  </div>
 
   <div
     id="wishlist"
@@ -681,7 +620,7 @@
                           :onclick="clickmodal"
                           v-bind:wishlist_id="singleProduct.id"
                         >
-                          <a href="javascript::void(0)"
+                          <a href="javascript:void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
                             ><span class="tinvwl_add_to_wishlist-text"
                               >Add to Wishlist</span
@@ -839,9 +778,7 @@
                       top: 0px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       >Dragon Touch Max10 Tablet Android 10.0 OS</a
                     >
                   </th>
@@ -864,9 +801,7 @@
                       padding: 15px;
                     "
                   >
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                      draggable="false"
+                    <a href="javascript:void(0)"
                       >Apple iPhone 11 64GB Yellow Fully Unlocked</a
                     >
                   </th>
@@ -885,9 +820,7 @@
                     Image
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/dragon-touch-max10-tablet-android-10-0-os/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"
@@ -937,9 +870,7 @@
                     /></a>
                   </td>
                   <td>
-                    <a
-                      href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                      draggable="false"
+                    <a href="javascript:void(0)" draggable="false"
                       ><img
                         width="600"
                         height="600"
@@ -1044,7 +975,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1053,7 +984,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1064,7 +995,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1073,7 +1004,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1084,7 +1015,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1093,7 +1024,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >$</span
+                            >QAR </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1492,6 +1423,8 @@
     </div>
   </div>
 </template>
+
+
 <style scoped>
 #slidingWindow {
   display: flex;
@@ -1548,63 +1481,73 @@ const cartStore = useCartStore();
 defineEmits(["addToCart"]);
 </script>
 <script>
+import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
+import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { useProductStore } from "../../stores/ProductStore";
-
-import.meta.env.VITE_API_KEY;
-import axios from "axios";
 export default {
-  components: { Splide, SplideSlide },
-  data: () => ({
-    showmessage: "Loading...",
-
-    showmodal: "",
-    url: "http://baladi-v1.bteamwebs.com/storage/",
-    showmodalstyle: "",
-    showbigmodal: "",
-    showbigmodalstyle: "",
-    showcomparemodal: "",
-    showcomparemodalstyle: "",
-    results: [],
-    quantity: 1,
-    activeImage: 0,
-    //Hold the timeout, so we can clear it when it is needed
-    autoSlideTimeout: null,
-    //If the timer is stopped e.g. when hovering over the carousel
-    stopSlider: false,
-    //Hold the time left until changing to the next image
-    timeLeft: 0,
-    //Hold the interval so we can clear it when needed
-    timerInterval: null,
-    //Every 10ms decrease the timeLeft
-    countdownInterval: 10,
-    langCode: "en",
-    images: {
-      0: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
+  components: { TheLoader, Splide, SplideSlide },
+  data() {
+    return {
+      showmessage: "Loading...",
+      showmodal: "",
+      isloading: true,
+      url: "http://baladi-v1.bteamwebs.com/storage/",
+      arrivel: [],
+      trends: [],
+      bestresults: [],
+      smartphone: [],
+      megadeals: [],
+      dealsoftheweek: [],
+      showmodalstyle: "",
+      showbigmodal: "",
+      showbigmodalstyle: "",
+      showcomparemodal: "",
+      showcomparemodalstyle: "",
+      quantity: 1,
+      activeImage: 0,
+      //Hold the timeout, so we can clear it when it is needed
+      autoSlideTimeout: null,
+      //If the timer is stopped e.g. when hovering over the carousel
+      stopSlider: false,
+      //Hold the time left until changing to the next image
+      timeLeft: 0,
+      //Hold the interval so we can clear it when needed
+      timerInterval: null,
+      //Every 10ms decrease the timeLeft
+      countdownInterval: 10,
+      images: {
+        0: {
+          thumb:
+            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
+          length: 1,
+        },
+        1: {
+          thumb:
+            "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
+          length: 1,
+        },
+        2: {
+          thumb:
+            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
+          length: 1,
+        },
       },
-      1: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
-        length: 1,
-      },
-      2: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
-      },
-    },
-    singleProduct: [],
-    sub_products: [],
-    token: "",
-  }),
+      langCode: "en",
+      singleProduct: [],
+      sub_products: [],
+      wishlist: [],
+      token: "",
+    };
+  },
   computed: {
+    // currentImage gets called whenever activeImage changes
+    // and is the reason why we don't have to worry about the
+    // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      // console.log(this.images[this.activeImage]);
+      console.log(this.images[this.activeImage]);
       return this.images[this.activeImage].thumb;
     },
     progressBar() {
@@ -1613,15 +1556,29 @@ export default {
     },
   },
   mounted() {
+    setTimeout(() => (this.isloading = false), 1000);
+
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=top-selling-products"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products"
       )
       .then((response) => {
-        this.results = response.data.data[0].products;
-        // console.log(this.results);
+        this.arrivel = response.data.data[0].products;
+        // console.log(this.arrivel);
+        // const productStore = useProductStore();
+        // productStore.testData(this.results);
+      })
+      .catch((error) => {});
+
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=new-arrivel"
+      )
+      .then((response) => {
+        this.trends = response.data.data[0].products;
+        // console.log(this.trends);
         const productStore = useProductStore();
-        productStore.testData(this.results);
+        productStore.NewarrivalData(this.trends);
       })
       .catch((error) => {});
 
@@ -1629,8 +1586,6 @@ export default {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.token = userInfo.token;
     }
-    this.getWishList();
-
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
@@ -1674,10 +1629,9 @@ export default {
             }
           )
           .then((response) => {
-            this.results = response.data.data;
+            this.wishlist = response.data.data;
             const productStore = useProductStore();
-            productStore.wishListData(this.results);
-            console.log(this.results);
+            productStore.wishListData(this.wishlist);
           })
           .catch((error) => {});
       }
@@ -1698,7 +1652,7 @@ export default {
         .then((response) => {
           this.singleProduct = response.data.data[0];
           this.sub_products = response.data.data[0].uom_products[0];
-          console.log("response.data.data", this.singleProduct);
+          // console.log("response.data.data", this.singleProduct);
         })
         .catch((error) => {});
       this.showbigmodal = "show";
@@ -1804,6 +1758,7 @@ export default {
   props: ["startingImage", "autoSlideInterval", "showProgressBar"],
 };
 </script>
+
 
 
 <style scoped>

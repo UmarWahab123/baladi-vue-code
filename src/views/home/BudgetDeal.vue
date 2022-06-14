@@ -117,7 +117,10 @@
                                 >Add to Wishlist</span
                               ></a
                             >
-                            <a :onclick="clickmodal" href="javascript::void(0)"
+                            <a
+                              :onclick="clickmodal"
+                              v-bind:wishlist_id="specialoffer.id"
+                              href="javascript:void(0)"
                               ><i class="fa fa-heart" aria-hidden="true"></i
                               ><span class="tinvwl_add_to_wishlist-text"
                                 >Add to Wishlist</span
@@ -143,6 +146,7 @@
                             data-id="521"
                             >Compare</a
                           ><span
+                            v-bind:topSeller_id="specialoffer?.product?.slug"
                             :onclick="clickbigmodal"
                             class="detail-bnt quickview animated"
                             ><i class="klbth-icon-eye-empty"></i
@@ -159,19 +163,23 @@
                             aria-label="Rated 5.00 out of 5"
                           >
                             <span style="width: 100%"
-                              >Rated <strong class="rating">5.00</strong> out of
-                              5</span
+                              >Rated
+                              <strong class="rating">{{
+                                specialoffer?.product?.rating
+                              }}</strong>
+                              out of 5</span
                             >
                           </div>
                           <div class="count-rating">
-                            1 <span class="rating-text">Ratings</span>
+                            {{ specialoffer?.product?.review_count }}
+                            <span class="rating-text">Ratings</span>
                           </div>
                         </div>
                         <h3 class="product-title">
                           <a
-                            href=""
+                            href="javascript::void(0)"
                             title="Dragon Touch Max10 Tablet Android 10.0 OS"
-                            >Coca Cola pack with 6</a
+                            >{{ specialoffer?.product?.product_name }}</a
                           >
                         </h3>
                         <span class="price"
@@ -180,7 +188,10 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >13.99</bdi
+                                >{{
+                                  specialoffer?.product?.uom_products[0]
+                                    ?.previous_price
+                                }}</bdi
                               ></span
                             ></del
                           >
@@ -189,7 +200,10 @@
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >QAR </span
-                                >12.99</bdi
+                                >{{
+                                  specialoffer?.product?.uom_products[0]
+                                    ?.regular_price
+                                }}</bdi
                               ></span
                             ></ins
                           ></span
@@ -249,8 +263,16 @@
               <div class="site-module products-module">
                 <div class="module-wrapper">
                   <div class="products column-4 mobile-2 total-8">
-                    <div class="product custom-hover" v-for="n in 8">
-                      <div class="product-wrapper product-type-1">
+                    <div
+                      class="product custom-hover"
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in productStore.budgetDealProducts"
+                    >
+                      <div
+                        class="product-wrapper product-type-1"
+                        :key="indextr"
+                      >
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
                             <div class="product-badges">
@@ -258,10 +280,45 @@
                             </div>
                             <a href="#">
                               <div class="product-card">
-                                <img
-                                  src="http://english-template.bteamwebs.com/src/img/products/Tea/ahmad%20tea%20english%20breakfast%20100%20bags_.jpg"
-                                  data-hover-slides='["./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg ", "./src/img/products/Tea/ahmad tea english breakfast 100 bags_.jpg "]'
-                                />
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="slidingSection">
+                                    <img
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </a>
                             <div class="product-buttons">
@@ -277,6 +334,7 @@
                                 <div class="tinv-wishlist-clear"></div>
                                 <a
                                   role="button"
+                                  v-bind:wishlist_id="item.product.id"
                                   tabindex="0"
                                   aria-label="Add to Wishlist"
                                   class="
@@ -298,6 +356,7 @@
                                 >
                                 <a
                                   :onclick="clickmodal"
+                                  v-bind:wishlist_id="item.product.id"
                                   href="javascript::void(0)"
                                   ><i class="fa fa-heart" aria-hidden="true"></i
                                   ><span class="tinvwl_add_to_wishlist-text"
@@ -325,6 +384,7 @@
                                 data-id="521"
                                 >Compare</a
                               ><span
+                                v-bind:topSeller_id="item.product.slug"
                                 :onclick="clickbigmodal"
                                 class="detail-bnt quickview animated"
                                 ><i class="klbth-icon-eye-empty"></i
@@ -333,7 +393,15 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href="">Ahmed Tea</a>
+                              <router-link
+                                :to="
+                                  '/' +
+                                  langCode +
+                                  '/product-detail/' +
+                                  item.product.slug
+                                "
+                                >{{ item.product.product_name }}</router-link
+                              >
                             </h3>
                             <div class="product-rating">
                               <div
@@ -343,12 +411,15 @@
                               >
                                 <span style="width: 100%"
                                   >Rated
-                                  <strong class="rating">5.00</strong> out of
-                                  5</span
+                                  <strong class="rating">{{
+                                    item.product.rating
+                                  }}</strong>
+                                  out of 5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                                {{ item.product.review_count }}
+                                <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <div class="product-price-cart">
@@ -359,7 +430,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >16.99</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.previous_price
+                                      }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -371,7 +445,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >QAR </span
-                                      >12.99</bdi
+                                      >{{
+                                        item.product?.uom_products[0]
+                                          ?.regular_price
+                                      }}</bdi
                                     ></span
                                   ></ins
                                 ></span
@@ -384,10 +461,7 @@
                                   add_to_cart_button
                                   ajax_add_to_cart
                                 "
-                                data-product_id="521"
-                                data-product_sku="BE45VGRT"
-                                aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                                rel="nofollow"
+                                @click="$emit(cartStore.items.push(item))"
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
@@ -435,7 +509,7 @@
           <div class="tinv-modal-inner">
             <i class="icon_big_heart_check"></i>
             <div class="tinv-txt">
-              Apple iPhone 11 64GB Yellow Fully Unlocked added to Wishlist
+              {{ showmessage }}
             </div>
             <div class="tinvwl-buttons-group tinv-wishlist-clear">
               <button>
@@ -553,9 +627,12 @@
                               </div>
                             </div>
                           </div>
+                          <!-- swiper-wrapper -->
                         </div>
+
                         <!-- product-images -->
                       </div>
+
                       <!-- images-wrapper -->
                       <div class="thumbnails-wrapper">
                         <div
@@ -620,6 +697,7 @@
                         </div>
                         <!-- product-thumbnails -->
                       </div>
+
                       <!-- thumbnails-wrapper -->
                     </div>
                     <!-- woocommerce-product-gallery -->
@@ -629,7 +707,7 @@
                 <!-- col -->
                 <div class="col col-12 col-lg-6">
                   <h1 class="product_title entry-title">
-                    Cubitt Smart Watch CT2S Waterproof Fitness Tracker
+                    {{ singleProduct.product_name }}
                   </h1>
                   <div class="product-meta">
                     <div class="product-model">
@@ -679,7 +757,7 @@
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >95.00</bdi
+                            >{{ sub_products.previous_price }}</bdi
                           ></span
                         ></del
                       >
@@ -688,7 +766,7 @@
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >65.00</bdi
+                            >{{ singleProduct.variant_base_price }}</bdi
                           ></span
                         ></ins
                       ></span
@@ -738,7 +816,12 @@
                         <button
                           type="submit"
                           name="add-to-cart"
-                          value="408"
+                          @click="
+                            cartStore.addItems(
+                              this.quantity,
+                              this.singleProduct
+                            )
+                          "
                           class="
                             button button-primary
                             add_to_cart_button
@@ -779,8 +862,12 @@
                       </form>
 
                       <div class="product-actions">
-                        <div class="custom-wish-style">
-                          <a :onclick="clickmodal" href="javascript::void(0)"
+                        <div
+                          class="custom-wish-style"
+                          :onclick="clickmodal"
+                          v-bind:wishlist_id="singleProduct.id"
+                        >
+                          <a :onclick="clickmodal" href="javascript:void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
                             ><span class="tinvwl_add_to_wishlist-text"
                               >Add to Wishlist</span
@@ -855,7 +942,9 @@
 
                     <span class="posted_in"
                       >Category:
-                      <a href="javascript:void(0)" rel="tag"
+                      <a
+                        href="https://klbtheme.com/machic/product-category/smartwatches/"
+                        rel="tag"
                         >Smartwatches</a
                       ></span
                     >
@@ -1580,12 +1669,68 @@
     </div>
   </div>
 </template>
+<style scoped>
+#slidingWindow {
+  display: flex;
+  /* margin: 1em 4em; */
+  overflow: hidden;
+  width: 210px;
+  height: 250px;
+  border: 1px solid hsl(44, 25, 50);
+  @include background-image(
+    linear-gradient(to bottom, hsl(50, 60, 60), hsl(50, 40, 50))
+  );
+  box-shadow: 0 2px 3px hsla(0, 0, 12, 0.8);
+}
 
+#slidingWindow,
+.slidingSection,
+img {
+  border-radius: 2px;
+}
+.slidingSection {
+  margin: 4px;
+  @include background-image(
+    linear-gradient(to bottom, hsl(62, 52, 75) 60%, hsl(82, 45, 35))
+  );
+  width: 200px;
+  min-width: 200px;
+  height: 240px;
+  text-align: center;
+  border: 1px solid hsl(32, 25, 55);
+  transform: translate3d(0, 0, 0);
+  transition: transform 450ms linear;
+}
+
+#slidingWindow:hover > .slidingSection {
+  transform: translate3d(-210px, 0, 0);
+  transition: transform 450ms linear;
+}
+
+.img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 hsla(0, 0, 25, 0.4);
+}
+</style>
+<script setup>
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
+</script>
 <script>
 import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useProductStore } from "../../stores/ProductStore";
 
+import axios from "axios";
 export default {
   components: { Splide, SplideSlide },
   data: () => ({
@@ -1597,8 +1742,9 @@ export default {
     showcomparemodal: "",
     showcomparemodalstyle: "",
     results: [],
+    specialoffer: [],
     quantity: 0,
-
+    showmessage: "Loading...",
     activeImage: 0,
     //Hold the timeout, so we can clear it when it is needed
     autoSlideTimeout: null,
@@ -1628,6 +1774,10 @@ export default {
         length: 1,
       },
     },
+    singleProduct: [],
+    sub_products: [],
+    token: "",
+    wistlist: [],
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -1635,7 +1785,7 @@ export default {
     // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
+      // console.log(this.images[this.activeImage]);
       return this.images[this.activeImage].thumb;
     },
     progressBar() {
@@ -1644,19 +1794,97 @@ export default {
     },
   },
   mounted() {
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=budget-deals"
+      )
+      .then((response) => {
+        this.results = response.data.data[0].products;
+        // console.log(this.results);
+        const productStore = useProductStore();
+        productStore.BudgetDealData(this.results);
+      })
+      .catch((error) => {});
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=special-offer"
+      )
+      .then((response) => {
+        this.specialoffer = response.data.data[0].products[0];
+      })
+      .catch((error) => {});
+    if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.token = userInfo.token;
+    }
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
   methods: {
-    clickmodal(index) {
+    clickmodal(event) {
+      const wishlistid = event.currentTarget.getAttribute("wishlist_id");
+      const payload = {
+        product_id: wishlistid,
+      };
+      axios
+        .post(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/addWishlist",
+          payload,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          this.showmessage = response.data.message;
+          // console.log(this.showmessage);
+          this.getWishList();
+        })
+        .catch((error) => {});
       this.showmodal = "show";
       this.showmodalstyle = "display:block";
     },
     closemodal() {
+      this.showmessage = "Loading...";
       this.showmodal = "";
       this.showmodalstyle = "";
     },
-    clickbigmodal(index) {
+    getWishList() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.wistlist = response.data.data;
+            const productStore = useProductStore();
+            productStore.wishListData(this.wistlist);
+          })
+          .catch((error) => {});
+      }
+    },
+    clickbigmodal(event) {
+      const topseller_id = event.currentTarget.getAttribute("topseller_id");
+      // alert(topseller_id);
+      axios
+        .get(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
+            topseller_id
+        )
+        .then((response) => {
+          this.singleProduct = response.data.data[0];
+          this.sub_products = response.data.data[0].uom_products[0];
+          // console.log("response.data.data", this.singleProduct);
+        })
+        .catch((error) => {});
       this.showbigmodal = "show";
       this.showbigmodalstyle = "display:block";
     },

@@ -152,7 +152,10 @@
             </div>
             <div class="content-wrapper">
               <h3 class="product-title">
-                <a href="javascript:void(0)">{{ item?.product_name }}</a>
+                <router-link
+                  :to="'/' + langCode + '/product-detail/' + item?.slug"
+                  >{{ item?.product_name }}</router-link
+                >
               </h3>
               <div class="product-rating">
                 <div
@@ -1486,8 +1489,9 @@ export default {
           "?locale=en"
       )
       .then((response) => {
-        this.results = response.data.data.data.data;
-        console.log("response.data.data", response.data.data.data.data);
+        // console.log(response.data.data.data);
+        this.results = response.data.data.data;
+        console.log("response.data.data", response.data.data.data);
       })
       .catch((error) => {});
   },

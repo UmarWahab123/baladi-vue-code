@@ -51,7 +51,7 @@
                           selected="selected"
                           data-select2-id="3"
                         >
-                          {{$t('Sort_by_latest')}}
+                           {{$t('Sort_by_latest')}}
                         </option>
                         <option value="price">
                           {{$t('Sort_by_price')}}
@@ -84,7 +84,7 @@
                         tabindex="-1"
                         aria-hidden="true"
                       >
-                        <option value="16" data-select2-id="6">{{$t('Items')}}</option>
+                        <option value="16" data-select2-id="6">16 Items</option>
                         <option value="32">{{$t('Itemss')}}</option>
                         <option value="48">{{$t('Itemsss')}}</option>
                         <option value="64">{{$t('Itemssss')}}</option>

@@ -456,7 +456,7 @@
                       @click="clickspecification"
                       data-bs-toggle="tab"
                     >
-                      {{$t('Specification')}}
+                     {{$t('Specification')}}
                     </a>
                   </li>
                   <li
@@ -2502,15 +2502,17 @@ export default {
     this.showdescription = "active show";
     setTimeout(() => (this.isloading = false), 1000);
     var id = this.$route.params.id;
+    console.log(id);
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/mobile/product/getProducts/" + id
+        "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
+          id
       )
       .then((response) => {
         console.log(response.data);
         this.results = response.data.data[0];
         this.sub_products = response.data.data[0].uom_products[0];
-        console.log("this results", this.sub_products.previous_price);
+        console.log("this results", this.results);
       })
       .catch((error) => {});
     var lang = localStorage.getItem("lang");
