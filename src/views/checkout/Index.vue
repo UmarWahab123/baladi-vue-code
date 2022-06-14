@@ -8,10 +8,10 @@
             <div class="woocommerce-notices-wrapper"></div>
             <div class="woocommerce-form-coupon-toggle">
               <div class="woocommerce-info">
-                Have a coupon?
-                <a href="#" class="showcoupon" @click="Coupon"
-                  >Click here to enter your code</a
-                >
+                {{ $t("have_coupon") }}?
+                <a href="#" class="showcoupon" @click="Coupon">{{
+                  $t("Click_enter_your_code")
+                }}</a>
               </div>
             </div>
 
@@ -21,7 +21,7 @@
               action="javascript:void(0)"
               v-if="showCoupon"
             >
-              <p>If you have a coupon code, please apply it below.</p>
+              <p>{{ $t("coupon_code") }}</p>
 
               <p class="form-row form-row-first">
                 <input
@@ -41,7 +41,7 @@
                   value="Apply coupon"
                   @click="applyCoupon"
                 >
-                  Apply coupon
+                  {{ $t("apply_coupon") }}
                 </button>
               </p>
 
@@ -62,7 +62,7 @@
                     <div class="col2-set" id="customer_details">
                       <div class="col-1 shadow p-3 mb-4">
                         <div class="woocommerce-billing-fields">
-                          <h3>Billing details</h3>
+                          <h3>{{ $t("billing_details") }}</h3>
                           <div
                             class="woocommerce-billing-fields__field-wrapper"
                           >
@@ -72,7 +72,7 @@
                               data-priority="10"
                             >
                               <label for="billing_first_name" class=""
-                                >First name&nbsp;<abbr
+                                >{{ $t("first_name") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -94,7 +94,7 @@
                               data-priority="20"
                             >
                               <label for="billing_last_name" class=""
-                                >Last name&nbsp;<abbr
+                                >{{ $t("last_name") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -116,8 +116,9 @@
                               data-priority="30"
                             >
                               <label for="billing_company" class=""
-                                >Company name&nbsp;<span class="optional"
-                                  >(optional)</span
+                                >{{ $t("company_name") }}&nbsp;<span
+                                  class="optional"
+                                  >({{ $t("optional") }})</span
                                 ></label
                               ><span class="woocommerce-input-wrapper"
                                 ><input
@@ -138,7 +139,8 @@
                               data-priority="40"
                             >
                               <label for="billing_country" class=""
-                                >Country / Region&nbsp;<abbr
+                                >{{ $t("country") }} /
+                                {{ $t("region") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -164,7 +166,7 @@
                               data-priority="50"
                             >
                               <label for="billing_address_1" class=""
-                                >Street address&nbsp;<abbr
+                                >{{ $t("street_address") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -189,9 +191,9 @@
                               <label
                                 for="billing_address_2"
                                 class="screen-reader-text"
-                                >Apartment, suite, unit, etc.&nbsp;<span
+                                >{{ $t("apartment_etc") }}&nbsp;<span
                                   class="optional"
-                                  >(optional)</span
+                                  >({{ $t("optional") }})</span
                                 ></label
                               ><span class="woocommerce-input-wrapper"
                                 ><input
@@ -217,7 +219,7 @@
                               data-o_class="form-row form-row-wide address-field validate-required"
                             >
                               <label for="billing_city" class=""
-                                >Town / City&nbsp;<abbr
+                                >{{ $t("town_city") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -247,7 +249,7 @@
                               data-o_class="form-row form-row-wide address-field validate-required validate-state"
                             >
                               <label for="billing_state" class=""
-                                >Building No&nbsp;<abbr
+                                >{{ $t("BuildingNo") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -272,7 +274,7 @@
                               data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                             >
                               <label for="billing_postcode" class=""
-                                >ZIP Code&nbsp;<abbr
+                                >{{ $t("zip_code") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -297,7 +299,7 @@
                               data-priority="100"
                             >
                               <label for="billing_phone" class=""
-                                >Phone&nbsp;<abbr
+                                >{{ $t("phone") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -365,7 +367,7 @@
                                 name="createaccount"
                                 value="1"
                               />
-                              <span>Create an account?</span>
+                              <span>{{ $t("create_account") }}?</span>
                             </label>
                           </p>
 
@@ -376,7 +378,7 @@
                               data-priority=""
                             >
                               <label for="account_username" class=""
-                                >Account username&nbsp;<abbr
+                                >{{ $t("account_username") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -397,7 +399,7 @@
                               data-priority=""
                             >
                               <label for="account_password" class=""
-                                >Create account password&nbsp;<abbr
+                                >{{ $t("create_password") }}&nbsp;<abbr
                                   class="required"
                                   title="required"
                                   >*</abbr
@@ -442,7 +444,7 @@
                                 name="ship_to_different_address"
                                 value="1"
                               />
-                              <span>Ship to a different address?</span>
+                              <span>{{ $t("ship_different_address") }}</span>
                             </label>
                           </h3>
 
@@ -463,7 +465,7 @@
                                 data-priority="10"
                               >
                                 <label for="shipping_first_name" class=""
-                                  >First name&nbsp;<abbr
+                                  >{{ $t("first_name") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -485,7 +487,7 @@
                                 data-priority="20"
                               >
                                 <label for="shipping_last_name" class=""
-                                  >Last name&nbsp;<abbr
+                                  >{{ $t("last_name") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -507,8 +509,9 @@
                                 data-priority="30"
                               >
                                 <label for="shipping_company" class=""
-                                  >Company name&nbsp;<span class="optional"
-                                    >(optional)</span
+                                  >{{ $t("company_name") }}&nbsp;<span
+                                    class="optional"
+                                    >({{ $t("optional") }})</span
                                   ></label
                                 ><span class="woocommerce-input-wrapper"
                                   ><input
@@ -532,7 +535,8 @@
                                 data-priority="40"
                               >
                                 <label for="shipping_country" class=""
-                                  >Country / Region&nbsp;<abbr
+                                  >{{ $t("country") }} /
+                                  {{ $t("region") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -558,7 +562,7 @@
                                 data-priority="50"
                               >
                                 <label for="shipping_address_1" class=""
-                                  >Street address&nbsp;<abbr
+                                  >{{ $t("street_address") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -581,9 +585,9 @@
                                 <label
                                   for="shipping_address_2"
                                   class="screen-reader-text"
-                                  >Apartment, suite, unit, etc.&nbsp;<span
+                                  >{{ $t("apartment_etc") }}&nbsp;<span
                                     class="optional"
-                                    >(optional)</span
+                                    >({{ $t("optional") }})</span
                                   ></label
                                 ><span class="woocommerce-input-wrapper"
                                   ><input
@@ -607,7 +611,7 @@
                                 data-o_class="form-row form-row-wide address-field validate-required"
                               >
                                 <label for="shipping_city" class=""
-                                  >Town / City&nbsp;<abbr
+                                  >{{ $t("town_city") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -637,7 +641,7 @@
                                 data-o_class="form-row form-row-wide address-field validate-required validate-state"
                               >
                                 <label for="shipping_state" class=""
-                                  >Building no&nbsp;<abbr
+                                  >{{ $t("BuildingNo") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -666,7 +670,7 @@
                                 data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                               >
                                 <label for="shipping_postcode" class=""
-                                  >ZIP Code&nbsp;<abbr
+                                  >{{ $t("zip_code") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -691,7 +695,7 @@
                                 data-priority="100"
                               >
                                 <label for="billing_phone" class=""
-                                  >Phone&nbsp;<abbr
+                                  >{{ $t("phone") }}&nbsp;<abbr
                                     class="required"
                                     title="required"
                                     >*</abbr
@@ -718,8 +722,9 @@
                               data-priority=""
                             >
                               <label for="order_comments" class=""
-                                >Order notes&nbsp;<span class="optional"
-                                  >(optional)</span
+                                >{{ $t("order_notes") }}&nbsp;<span
+                                  class="optional"
+                                  >({{ $t("optional") }})</span
                                 ></label
                               ><span class="woocommerce-input-wrapper">
                                 <textarea

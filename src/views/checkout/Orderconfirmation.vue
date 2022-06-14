@@ -12,7 +12,7 @@
                   woocommerce-thankyou-order-received
                 "
               >
-                Thank you. Your order has been received.
+                {{ $t("Thank_been_received") }}
               </p>
 
               <ul
@@ -22,25 +22,26 @@
                 "
               >
                 <li class="woocommerce-order-overview__order order">
-                  Order number: <strong>{{ results?.id }}</strong>
+                  {{ $t("Order_number") }}: <strong>{{ results?.id }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__date date">
-                  Date:
+                  {{ $t("Date") }}:
                   <strong> {{ results?.created_at }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__email email">
-                  Email: <strong>{{ results?.customer?.email }}</strong>
+                  {{ $t("email") }}:
+                  <strong>{{ results?.customer?.email }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__total total">
-                  Total:
+                  {{ $t("total") }}:
                   <strong
                     ><span class="woocommerce-Price-amount amount"
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                          >{{ $t("QAR") }} </span
                         >{{ results?.net_amount }}</bdi
                       ></span
                     ></strong
@@ -48,12 +49,15 @@
                 </li>
 
                 <li class="woocommerce-order-overview__payment-method method">
-                  Payment method: <strong>Direct bank transfer</strong>
+                  {{ $t("Payment_method") }}:
+                  <strong>{{ $t("Direct_bank_transfer") }}</strong>
                 </li>
               </ul>
 
               <section class="woocommerce-order-details">
-                <h2 class="woocommerce-order-details__title">Order details</h2>
+                <h2 class="woocommerce-order-details__title">
+                  {{ $t("Order_details") }}
+                </h2>
 
                 <table
                   class="
@@ -65,12 +69,12 @@
                   <thead>
                     <tr>
                       <th class="woocommerce-table__product-name product-name">
-                        Product
+                        {{ $t("Product") }}
                       </th>
                       <th
                         class="woocommerce-table__product-table product-total"
                       >
-                        Total
+                        {{ $t("total") }}
                       </th>
                     </tr>
                   </thead>
@@ -96,7 +100,7 @@
                         <span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >QAR </span
+                              >{{ $t("QAR") }} </span
                             >{{ item?.net_product_amount }}</bdi
                           ></span
                         >
@@ -106,39 +110,39 @@
 
                   <tfoot>
                     <tr>
-                      <th scope="row">Subtotal:</th>
+                      <th scope="row">{{ $t("Subtotal") }}:</th>
                       <td>
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{ $t("QAR") }} </span
                           >{{ results.net_amount }}</span
                         >
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Discount:</th>
-                      <td>QAR {{ results.order_discount }}</td>
+                      <th scope="row">{{ $t("Discount") }}:</th>
+                      <td>{{ $t("QAR") }} {{ results.order_discount }}</td>
                     </tr>
                     <tr>
-                      <th scope="row">Shipping:</th>
+                      <th scope="row">{{ $t("Shipping") }}:</th>
                       <td>Free shipping</td>
                     </tr>
                     <tr>
-                      <th scope="row">Payment method:</th>
+                      <th scope="row">{{ $t("Payment_method") }}:</th>
                       <td>Direct bank transfer</td>
                     </tr>
                     <tr>
-                      <th scope="row">Total:</th>
+                      <th scope="row">{{ $t("total") }}:</th>
                       <td>
                         <span class="woocommerce-Price-amount amount"
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{ $t("QAR") }} </span
                           >{{ results?.sale_amount }}</span
                         >
                       </td>
                     </tr>
                     <tr>
-                      <th>Note:</th>
+                      <th>{{ $t("Note") }}:</th>
                       <td>{{ results?.delivery_note }}</td>
                     </tr>
                   </tfoot>
@@ -163,11 +167,12 @@
                       col-1
                     "
                   >
-                    <h2 class="woocommerce-column__title">Billing address</h2>
+                    <h2 class="woocommerce-column__title"></h2>
 
                     <address>
                       Sajid Qureshi<br />quinin<br />peshawr<br />Temporibus ex
-                      dolore<br />Peshawar<br />Islamabad Capital Territory<br />10001<br />Pakistan
+                      dolore<br />Peshawar<br />IsBilling addresslamabad Capital
+                      Territory<br />10001<br />Pakistan
                       <p class="woocommerce-customer-details--phone">
                         03028001920
                       </p>
@@ -187,7 +192,9 @@
                       col-2
                     "
                   >
-                    <h2 class="woocommerce-column__title">Shipping address</h2>
+                    <h2 class="woocommerce-column__title">
+                      {{ $t("Billing_address") }}
+                    </h2>
                     <address>
                       Amery Harrington<br />Darrel Bean<br />peshawr<br />Dolores
                       exercitation<br />Peshawar<br />Balochistan<br />41264<br />Pakistan
