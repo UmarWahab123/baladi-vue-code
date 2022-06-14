@@ -110,9 +110,7 @@
               @click="addtoCart(item)"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt" 
-                >Add to Cart</span
-              >
+              ><span class="tinvwl-txt">Add to Cart</span>
             </button>
           </td>
         </tr>
@@ -303,7 +301,8 @@ export default {
     addtoCart(item) {
       // cartStore.items.push(item);
       cartStore.addcartapi(item);
-      console.log("product_name", item.product.product_name);
+
+      // console.log("product_name", item.product.product_name);
       // console.log("item", item);
       // const quanitiy = cartStore.groupedCount(item.product.product_name);
       // const payload = {

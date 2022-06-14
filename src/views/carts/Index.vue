@@ -1624,12 +1624,9 @@
 </template>
 
 <script setup>
-import { useCartStore } from "../../stores/CartStore";
 setTimeout(function () {
   document.getElementById("menu-sidebar-menu-1").classList.remove("show");
 }, 500);
-
-const cartStore = useCartStore();
 </script>
 
 <script>
@@ -1645,8 +1642,6 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
-import { useCartStore } from "../../stores/CartStore";
-const cartStore = useCartStore();
 
 export default {
   components: { Splide, SplideSlide },

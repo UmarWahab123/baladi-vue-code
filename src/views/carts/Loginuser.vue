@@ -94,7 +94,8 @@
 
 <script>
 import axios from "axios";
-
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
 export default {
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
@@ -136,6 +137,7 @@ export default {
           .then((response) => {
             this.results = response.data.data;
             console.log("results", this.results);
+            productStore.cartListData(this.results);
             // this.results.map((item, index) => {
             //   for (var i = 1; i <= item.quantity; i++) {
             //     console.log("item", index, item);

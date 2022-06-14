@@ -7,9 +7,13 @@
           <div class="single-product-wrapper">
             <nav class="woocommerce-breadcrumb">
               <ul>
-                <li><a href="javascript:void(0)">{{$t('Home')}}</a></li>
-                <li><a href="">{{$t('Vegetables')}}</a></li>
-                <li>{{$t('Organic_Food_with_fresh_quality')}}</li>
+                <li>
+                  <a href="javascript:void(0)">{{ $t("Home") }}</a>
+                </li>
+                <li>
+                  <a href="">{{ $t("Vegetables") }}</a>
+                </li>
+                <li>{{ $t("Organic_Food_with_fresh_quality") }}</li>
               </ul>
             </nav>
 
@@ -123,7 +127,7 @@
                     </h1>
                     <div class="product-meta">
                       <div class="product-model">
-                        <span>{{$t('weight')}}:</span>
+                        <span>{{ $t("weight") }}:</span>
                         {{ results.weight }}
                       </div>
                       <!-- product-model -->
@@ -140,8 +144,11 @@
                           aria-label="Rated 5.00 out of 5"
                         >
                           <span style="width: 100%"
-                            >{{$t('Rated')}} <strong class="rating">5.00</strong> {{$t('out_of_5_based_on')}} <span class="rating">1</span> customer
-                            {{$t('تقييم')}}</span
+                            >{{ $t("Rated") }}
+                            <strong class="rating">5.00</strong>
+                            {{ $t("out_of_5_based_on") }}
+                            <span class="rating">1</span> customer
+                            {{ $t("تقييم") }}</span
                           >
                         </div>
                         <div class="count-rating">
@@ -152,14 +159,16 @@
                             ><span class="count">{{
                               results.allow_reviews
                             }}</span>
-                            {{$t('review')}}</a
+                            {{ $t("review") }}</a
                           >
                         </div>
                       </div>
                     </div>
 
                     <div class="klb-single-stock">
-                      <div class="product-stock in-stock">{{$t('in_stock')}}</div>
+                      <div class="product-stock in-stock">
+                        {{ $t("in_stock") }}
+                      </div>
                     </div>
                     <div class="product-price">
                       <span class="price"
@@ -167,7 +176,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{ sub_products.previous_price }}</bdi
                             ></span
                           ></del
@@ -176,7 +185,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{ sub_products.regular_price }}</bdi
                             ></span
                           ></ins
@@ -193,9 +202,9 @@
                           id="radio1"
                           autocomplete="off"
                         />
-                        <label class="button2 btn-outline-dark" for="radio1"
-                          >{{$t('PCS')}}</label
-                        >
+                        <label class="button2 btn-outline-dark" for="radio1">{{
+                          $t("PCS")
+                        }}</label>
                         <input
                           type="radio"
                           class="btn-check"
@@ -206,11 +215,13 @@
                         <label
                           class="button2 btn-outline-dark gaf-btton"
                           for="radio3"
-                          >{{$t('CTN')}}</label
+                          >{{ $t("CTN") }}</label
                         >
                       </div>
                     </div>
-                    <div class="product-stock in-stock">{{$t('in_stock')}}</div>
+                    <div class="product-stock in-stock">
+                      {{ $t("in_stock") }}
+                    </div>
 
                     <div class="product-info">
                       <div style="width: max-content" class="product-info-top">
@@ -222,7 +233,7 @@
                             <label
                               class="screen-reader-text"
                               for="quantity_61f3794abda55"
-                              >{{$t('Fresh_Vegetables')}}</label
+                              >{{ $t("Fresh_Vegetables") }}</label
                             >
                             <div
                               class="quantity-button minus"
@@ -258,10 +269,13 @@
                               alt
                             "
                             @click="
-                              cartStore.addItems(this.quantity, this.results)
+                              cartStore.addMultipleItems(
+                                this.results,
+                                this.quantity
+                              )
                             "
                           >
-                            <span>{{$t('Add_to_cart')}}</span>
+                            <span>{{ $t("Add_to_cart") }}</span>
                           </button>
                           <router-link
                             :to="'/' + langCode + '/checkout'"
@@ -274,7 +288,7 @@
                               alt
                             "
                           >
-                            <span>{{$t('Buy_Now')}}</span>
+                            <span>{{ $t("Buy_Now") }}</span>
                           </router-link>
 
                           <!-- <div
@@ -304,13 +318,13 @@
                         <div class="custom-wish-style">
                           <a :onclick="clickmodal" href="javascript::void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
-                            ><span class="tinvwl_add_to_wishlist-text"
-                              >{{$t('Add_to_Wishlist')}}</span
-                            ></a
+                            ><span class="tinvwl_add_to_wishlist-text">{{
+                              $t("Add_to_Wishlist")
+                            }}</span></a
                           >
                           <div class="tinv-wishlist-clear"></div>
                           <div class="tinvwl-tooltip-custom">
-                            {{$t('Add_to_Wishlist')}}
+                            {{ $t("Add_to_Wishlist") }}
                           </div>
                         </div>
                         <div class="product-actions">
@@ -339,12 +353,14 @@
                               data-tinv-wl-productvariations="[0]"
                               data-tinv-wl-producttype="simple"
                               data-tinv-wl-action="add"
-                              ><span class="tinvwl_add_to_wishlist-text"
-                                >{{$t('Add_to_Wishlist')}}</span
-                              ></a
+                              ><span class="tinvwl_add_to_wishlist-text">{{
+                                $t("Add_to_Wishlist")
+                              }}</span></a
                             >
                             <div class="tinv-wishlist-clear"></div>
-                            <div class="tinvwl-tooltip">{{$t('Add_to_Wishlist')}}</div>
+                            <div class="tinvwl-tooltip">
+                              {{ $t("Add_to_Wishlist") }}
+                            </div>
                           </div>
                           <!-- <a href="#" class="woosc-btn woosc-btn-521" data-id="521">Compare</a> -->
                         </div>
@@ -352,7 +368,8 @@
                     </div>
                     <div class="people-have product-message warning">
                       <i class="klbth-icon-shopping-bag-3"></i
-                      ><strong>{{$t('Other_people_want_this')}} </strong>{{$t('Other_people_want_this')}}
+                      ><strong>{{ $t("Other_people_want_this") }} </strong
+                      >{{ $t("Other_people_want_this") }}
                     </div>
                     <div class="product_meta product-categories">
                       <span class="sku_wrapper"
@@ -360,8 +377,9 @@
                       >
 
                       <span class="posted_in"
-                        >{{$t('categories')}}: <a href="#" rel="tag">{{$t('Vegetables')}}</a>,
-                        <a href="#" rel="tag">{{$t('Fruits')}}</a></span
+                        >{{ $t("categories") }}:
+                        <a href="#" rel="tag">{{ $t("Vegetables") }}</a
+                        >, <a href="#" rel="tag">{{ $t("Fruits") }}</a></span
                       >
                     </div>
                     <div class="social-share site-social colored">
@@ -440,7 +458,7 @@
                       @click="clickdescription"
                       data-bs-toggle="tab"
                     >
-                      {{$t('Description')}}
+                      {{ $t("Description") }}
                     </a>
                   </li>
                   <li
@@ -456,7 +474,7 @@
                       @click="clickspecification"
                       data-bs-toggle="tab"
                     >
-                     {{$t('Specification')}}
+                      {{ $t("Specification") }}
                     </a>
                   </li>
                   <li
@@ -472,7 +490,7 @@
                       @click="clickreviews"
                       data-bs-toggle="tab"
                     >
-                      {{$t('Reviews')}} (1)
+                      {{ $t("Reviews") }} (1)
                     </a>
                   </li>
                 </ul>

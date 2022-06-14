@@ -4,7 +4,7 @@
       <div class="header-addons-icon">
         <i class="klbth-icon-simple-cart"></i>
         <div class="button-count cart-count">
-          {{ results.length }}
+          {{ productStore?.cartcount }}
         </div>
       </div>
       <!-- header-addons-icon -->
@@ -14,7 +14,7 @@
           <span class="woocommerce-Price-amount amount">
             <bdi
               ><span class="woocommerce-Price-currencySymbol">QAR </span>
-              {{ cartTotal }}
+              {{ productStore.cartTotal }}
             </bdi>
           </span>
         </div>
@@ -23,7 +23,7 @@
     </a>
     <div class="cart-dropdown hide">
       <div class="cart-dropdown-wrapper">
-        <div class="fl-mini-cart-content" v-if="results.length > 0">
+        <div class="fl-mini-cart-content" v-if="productStore?.cartcount > 0">
           <div
             class="
               products
@@ -121,7 +121,7 @@
                   role="group"
                   aria-label="2 / 2"
                   style="height: 90px"
-                  v-for="(item, name) in results"
+                  v-for="item in productStore.cartList"
                 >
                   <div
                     class="product woocommerce-mini-cart-item mini_cart_item"
@@ -236,7 +236,7 @@
             <span class="woocommerce-Price-amount amount">
               <bdi
                 ><span class="woocommerce-Price-currencySymbol">QAR </span>
-                {{ cartTotal }}
+                {{ productStore.cartTotal }}
               </bdi>
             </span>
           </p>
@@ -267,9 +267,14 @@
   </div>
 </template>
 
+<script setup>
+import { useProductStore } from "../../stores/ProductStore";
 
+const productStore = useProductStore();
+</script>
 <script>
 import axios from "axios";
+import { useProductStore } from "../../stores/ProductStore";
 
 export default {
   data: () => ({
@@ -335,6 +340,8 @@ export default {
           .then((response) => {
             this.results = response.data.data;
             console.log("results", this.results);
+            const productStore = useProductStore();
+            productStore.cartListData(this.results);
             // this.results.map((item, index) => {
             //   for (var i = 1; i <= item.quantity; i++) {
             //     console.log("item", index, item);

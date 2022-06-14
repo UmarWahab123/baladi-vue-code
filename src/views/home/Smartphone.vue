@@ -2,9 +2,11 @@
   <div class="elementor-widget-container my-5">
     <div class="site-module products-module">
       <div class="module-header">
-        <h4 class="entry-title">{{$t('Smart_phone')}} &amp; {{$t('accesseries')}}</h4>
+        <h4 class="entry-title">
+          {{ $t("Smart_phone") }} &amp; {{ $t("accesseries") }}
+        </h4>
         <a href="#" class="btn link"
-          >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+          >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
         ></a>
       </div>
       <div class="module-wrapper">
@@ -199,7 +201,7 @@
                         add_to_cart_button
                         ajax_add_to_cart
                       "
-                      @click="$emit(cartStore.items.push(item))"
+                      @click="addtoCart(item)"
                       ><i class="klbth-icon-shop-1"></i> Add to cart</a
                     >
                   </div>
@@ -549,9 +551,9 @@
                           type="submit"
                           name="add-to-cart"
                           @click="
-                            cartStore.addItems(
-                              this.quantity,
-                              this.singleProduct
+                            cartStore.addMultipleItems(
+                              this.singleProduct,
+                              this.quantity
                             )
                           "
                           class="
@@ -1467,6 +1469,7 @@ import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { useProductStore } from "../../stores/ProductStore";
+import { useCartStore } from "../../stores/CartStore";
 
 export default {
   components: { TheLoader, Splide, SplideSlide },
@@ -1560,6 +1563,10 @@ export default {
     this.langCode = lang;
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
       const payload = {

@@ -77,9 +77,7 @@
                             }}</mark>
                             was placed on
                             <mark class="order-date">{{
-                              moment(results?.created_at).format(
-                                "MMMM , DD YYYY "
-                              )
+                              results?.created_at
                             }}</mark>
                             and is currently
                             <mark class="order-status badge bg-success"

@@ -27,11 +27,7 @@
 
                 <li class="woocommerce-order-overview__date date">
                   Date:
-                  <strong>
-                    {{
-                      moment(results?.created_at).format("MMMM , DD YYYY ")
-                    }}</strong
-                  >
+                  <strong> {{ results?.created_at }}</strong>
                 </li>
 
                 <li class="woocommerce-order-overview__email email">

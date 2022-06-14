@@ -196,7 +196,7 @@
                     </span></ins
                   ></span
                 ><a
-                  href="avascript::void(0)"
+                  href="javascript:void(0)"
                   data-quantity="1"
                   class="
                     button
@@ -204,10 +204,7 @@
                     add_to_cart_button
                     ajax_add_to_cart
                   "
-                  data-product_id="521"
-                  data-product_sku="BE45VGRT"
-                  aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                  rel="nofollow"
+                  @click="addtoCart(item)"
                   ><i class="klbth-icon-shop-1"></i> Add to cart</a
                 >
               </div>
@@ -1421,8 +1418,7 @@
 </template>
 <script>
 import axios from "axios";
-import.meta.env.VITE_API_KEY;
-
+import { useCartStore } from "../../stores/CartStore";
 export default {
   data: () => ({
     showmodal: "",
@@ -1496,6 +1492,10 @@ export default {
       .catch((error) => {});
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(index) {
       this.showmodal = "show";
       this.showmodalstyle = "display:block";

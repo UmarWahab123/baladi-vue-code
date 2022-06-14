@@ -258,7 +258,7 @@
                           add_to_cart_button
                           ajax_add_to_cart
                         "
-                        @click="$emit(cartStore.items.push(item))"
+                        @click="addtoCart(item)"
                         ><i class="klbth-icon-shop-1"></i> Add to cart</a
                       >
                     </div>
@@ -568,9 +568,9 @@
                           type="submit"
                           name="add-to-cart"
                           @click="
-                            cartStore.addItems(
-                              this.quantity,
-                              this.singleProduct
+                            cartStore.addMultipleItems(
+                              this.singleProduct,
+                              this.quantity
                             )
                           "
                           class="
@@ -1527,6 +1527,8 @@ import axios from "axios";
 import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useCartStore } from "../../stores/CartStore";
+
 export default {
   components: { TheLoader, Splide, SplideSlide },
   data() {
@@ -1619,6 +1621,10 @@ export default {
     this.langCode = lang;
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
       const payload = {

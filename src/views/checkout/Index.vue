@@ -30,12 +30,17 @@
                   class="input-text"
                   placeholder="Coupon code"
                   id="coupon_code"
-                  value=""
+                  v-model="coupon_Code"
                 />
               </p>
 
               <p class="form-row form-row-last">
-                <button class="button" name="apply_coupon" value="Apply coupon">
+                <button
+                  class="button"
+                  name="apply_coupon"
+                  value="Apply coupon"
+                  @click="applyCoupon"
+                >
                   Apply coupon
                 </button>
               </p>
@@ -765,6 +770,7 @@ export default {
     showCoupon: false,
     guestCheck: true,
     loginCheck: false,
+    coupon_Code: "",
     FormData: {
       billing_address_id: "",
       shipping_as_billing: "",
@@ -796,6 +802,7 @@ export default {
       contact_no: "",
     },
     cities: [],
+    token: "",
   }),
   mounted() {
     var acc = document.getElementsByClassName("input-radio");
@@ -815,6 +822,8 @@ export default {
     if (localStorage.userInfo != null) {
       this.guestCheck = false;
       this.loginCheck = true;
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.token = userInfo.token;
     }
     axios
       .get("http://baladi-v1.bteamwebs.com/api/customer/cities")
@@ -922,6 +931,41 @@ export default {
         })
         .catch((error) => {});
       console.log("clicked", payload);
+    },
+    applyCoupon() {
+      console.log(this.coupon_Code);
+      const payload = {
+        coupon_code: this.coupon_Code,
+      };
+      axios
+        .post("http://baladi-v1.bteamwebs.com/api/verify-coupon", payload, {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        })
+        .then((response) => {
+          const Toast = this.$swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: response.data.data[0]
+              ? response.data.data[0]
+              : response.data.message,
+          });
+          if (response.data.status == 200) {
+            this.FormData.coupon_code = this.coupon_Code;
+          }
+        })
+        .catch((error) => {});
     },
   },
 };

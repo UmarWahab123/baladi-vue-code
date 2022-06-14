@@ -54,9 +54,9 @@
                     menu-item-object-page menu-item-2230
                   "
                 >
-                  <router-link :to="'/' + langCode + '/replacement'"
-                    >{{ $t("returns_replacements") }}</router-link
-                  >
+                  <router-link :to="'/' + langCode + '/replacement'">{{
+                    $t("returns_replacements")
+                  }}</router-link>
                 </li>
               </ul>
             </nav>
@@ -175,7 +175,7 @@
                       class="dgwt-wcas-search-input"
                       name="s"
                       value=""
-                       :placeholder="$t('serach_product') + '...'"
+                      :placeholder="$t('serach_product') + '...'"
                       autocomplete="off"
                       @keyup="onchangesearch($event)"
                     />
@@ -309,7 +309,7 @@
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                   {{ $t("Account") }}
+                  {{ $t("Account") }}
                 </router-link>
                 <router-link
                   v-else
@@ -1341,7 +1341,8 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    ><i class="klbth-icon-home"></i> {{ $t("home_and_living") }}</router-link
+                    ><i class="klbth-icon-home"></i>
+                    {{ $t("home_and_living") }}</router-link
                   >
                 </li>
 
@@ -1392,9 +1393,11 @@
                 <!-- discount-banner -->
                 <div class="discount-items">
                   <div class="discount-products-header">
-                    <h4 class="entry-title">{{$t('Items_on_sale_this_week')}}</h4>
+                    <h4 class="entry-title">
+                      {{ $t("Items_on_sale_this_week") }}
+                    </h4>
                     <p>
-                      {{$t('Top_the_best_selling_products')}}
+                      {{ $t("Top_the_best_selling_products") }}
                     </p>
                   </div>
                   <!-- discount-products-header -->
@@ -1553,8 +1556,32 @@ export default {
         this.results = response.data.data.data;
       })
       .catch((error) => {});
+
+    this.getWishList();
   },
   methods: {
+    getWishList() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            const productStore = useProductStore();
+            productStore.wishListData(this.results);
+            console.log(this.results);
+          })
+          .catch((error) => {});
+      }
+    },
     menuchange: function (event) {
       if (this.showmenu == "show") {
         this.showmenu = "";
