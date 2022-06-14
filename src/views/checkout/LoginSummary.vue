@@ -1,13 +1,13 @@
 <template>
   <div class="order-review-wrapper">
-    <h3 id="order_review_heading">Your order</h3>
+    <h3 id="order_review_heading">{{$t('your_order')}}</h3>
 
     <div id="order_review" class="woocommerce-checkout-review-order">
       <table class="shop_table woocommerce-checkout-review-order-table">
         <thead>
           <tr>
-            <th class="product-name">Product</th>
-            <th class="product-total">Subtotal</th>
+            <th class="product-name">{{$t('Product')}}</th>
+            <th class="product-total">{{$t('Subtotal')}}</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
         </tbody>
         <tfoot>
           <tr class="cart-subtotal">
-            <th>Subtotal</th>
+            <th>{{$t('Subtotal')}}</th>
             <td>
               <span class="woocommerce-Price-amount amount"
                 ><bdi
@@ -44,7 +44,7 @@
           </tr>
 
           <tr class="woocommerce-shipping-totals shipping">
-            <th>Shipping</th>
+            <th>{{$t('shipping')}}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
                 <li>
@@ -57,7 +57,7 @@
                     class="shipping_method"
                     checked="checked"
                   /><label for="shipping_method_0_flat_rate1"
-                    >Flat rate:
+                    >{{$t('Flat_rate')}}:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol">$</span
@@ -75,7 +75,7 @@
                     value="free_shipping:2"
                     class="shipping_method"
                   /><label for="shipping_method_0_free_shipping2"
-                    >Free shipping</label
+                    >{{$t('Free_shippings')}}</label
                   >
                 </li>
                 <li>
@@ -87,7 +87,7 @@
                     value="local_pickup:3"
                     class="shipping_method"
                   /><label for="shipping_method_0_local_pickup3"
-                    >Local pickup</label
+                    >{{$t('Local_pickup')}}</label
                   >
                 </li>
               </ul>
@@ -95,7 +95,7 @@
           </tr>
 
           <tr class="order-total">
-            <th>Total</th>
+            <th>{{$t('total')}}</th>
             <td>
               <strong
                 ><span class="woocommerce-Price-amount amount"
@@ -123,7 +123,7 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_bacs">Add Credit and Debit Card </label>
+            <label for="payment_method_bacs">{{$t('credit_debit')}} </label>
             <div class="panel payment_box payment_method_bacs p-3">
               <button
                 type="button"
@@ -132,7 +132,7 @@
                 data-toggle="modal"
                 data-target="#staticBackdrop"
               >
-                <i class="fa fa-rocket"></i> &nbsp; Pay Now
+                <i class="fa fa-rocket"></i> &nbsp; {{$t('pay_now')}}
               </button>
             </div>
           </li>
@@ -151,15 +151,14 @@
             />
 
             <label for="payment_method_cheque" style="display: none">
-              Check payments
+              {{$t('Check_payments')}}
             </label>
             <div
               class="panel payment_box payment_method_cheque"
               style="display: none"
             >
               <p>
-                Please send a check to Store Name, Store Street, Store Town,
-                Store State / County, Store Postcode.
+                {{ $t("Please_send_a_check_to_Store") }}
               </p>
             </div>
           </li>
@@ -173,12 +172,12 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_cod"> Cash on delivery </label>
+            <label for="payment_method_cod"> {{$t('cash_delivery')}} </label>
             <div
               class="panel payment_box payment_method_cod"
               style="display: none"
             >
-              <p>Pay with cash upon delivery.</p>
+              <p>{{$t('Pay_with_cash_upon_delivery')}}</p>
             </div>
           </li>
         </ul>
@@ -194,21 +193,19 @@
               name="woocommerce_checkout_update_totals"
               value="Update totals"
             >
-              Update totals
+              {{$t('Updatetotals')}}
             </button>
           </noscript>
 
           <div class="woocommerce-terms-and-conditions-wrapper">
             <div class="woocommerce-privacy-policy-text">
               <p>
-                Your personal data will be used to process your order, support
-                your experience throughout this website, and for other purposes
-                described in our
+               {{$t('privacyinfo')}}
                 <a
                   href=""
                   class="woocommerce-privacy-policy-link"
                   target="_blank"
-                  >privacy policy</a
+                  >  {{$t('privacy_policy')}}</a
                 >.
               </p>
             </div>
@@ -335,12 +332,12 @@
                   id="terms"
                 />
                 <span class="woocommerce-terms-and-conditions-checkbox-text"
-                  >I have read and agree to the website
+                  >{{$t('read_and_agree')}}
                   <a
                     href=""
                     class="woocommerce-terms-and-conditions-link"
                     target="_blank"
-                    >terms and conditions</a
+                    >{{$t('terms_and_condition')}}</a
                   ></span
                 >&nbsp;<span class="required">*</span>
               </label>
@@ -355,7 +352,7 @@
             value="Place order"
             data-value="Place order"
             @click="onClickButton"
-            >Place order</a
+            >{{$t('place_order')}}</a
           >
 
           <input
@@ -418,7 +415,7 @@
               >
                 <div class="mt-4 mx-4">
                   <div class="text-center">
-                    <h5>Credit card</h5>
+                    <h5>{{ $t("credit_card") }}</h5>
                   </div>
                   <div class="form mt-3">
                     <div class="inputbox">
@@ -428,7 +425,7 @@
                         class="form-control"
                         required="required"
                       />
-                      <span>Cardholder Name</span>
+                      <span>{{ $t("cardholder_name") }}</span>
                     </div>
                     <div class="inputbox">
                       <input
@@ -439,7 +436,7 @@
                         class="form-control"
                         required="required"
                       />
-                      <span>Card Number</span>
+                      <span>{{ $t("card_number") }}</span>
                     </div>
                     <div class="d-flex flex-row">
                       <div class="inputbox">
@@ -451,7 +448,7 @@
                           class="form-control"
                           required="required"
                         />
-                        <span>Expiration Date</span>
+                        <span>{{ $t("expiration_date") }}</span>
                       </div>
                       <div class="inputbox">
                         <input
@@ -467,7 +464,7 @@
                     </div>
                     <div class="pay">
                       <button class="btn btn-success btn-block">
-                        Add card
+                        {{ $t("add_card") }}
                       </button>
                     </div>
                   </div>

@@ -195,16 +195,14 @@
           </noscript>
 
           <div class="woocommerce-terms-and-conditions-wrapper">
-            <div class="woocommerce-privacy-policy-text">
+               <div class="woocommerce-privacy-policy-text">
               <p>
-                Your personal data will be used to process your order, support
-                your experience throughout this website, and for other purposes
-                described in our
+               {{$t('privacyinfo')}}
                 <a
                   href=""
                   class="woocommerce-privacy-policy-link"
                   target="_blank"
-                  >privacy policy</a
+                  >  {{$t('privacy_policy')}}</a
                 >.
               </p>
             </div>
