@@ -107,9 +107,10 @@
               name="tinvwl-add-to-cart"
               value="605"
               title="Add to Cart"
+              @click="addtoCart(item)"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt" @click="addtoCart(item)"
+              ><span class="tinvwl-txt" 
                 >Add to Cart</span
               >
             </button>
