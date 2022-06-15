@@ -7,8 +7,7 @@
           <div class="woocommerce">
             <div class="woocommerce-notices-wrapper"></div>
             <p>
-              Please enter email and verify your password reset code. You will
-              receive a link to create a new password via email.
+             {{$t('Please_verify_code')}}
             </p>
             <div class="row ml-10 mt-10">
               <p
@@ -29,7 +28,7 @@
                 form-row form-row-first
               "
             >
-              <label for="user_login">Email</label>
+              <label for="user_login">{{$t('email')}}</label>
               <input
                 v-model="formdata.email"
                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -43,7 +42,7 @@
                 form-row form-row-first
               "
             >
-              <label for="user_login">Enter Code</label>
+              <label for="user_login">{{$t('Enter_Code')}}</label>
               <input
                 v-model="formdata.code"
                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -59,7 +58,7 @@
                 type="submit"
                 class="woocommerce-Button button"
               >
-                Submit
+                {{$t('Submit')}}
               </button>
             </p>
             <input

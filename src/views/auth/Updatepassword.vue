@@ -7,8 +7,7 @@
           <div class="woocommerce">
             <div class="woocommerce-notices-wrapper"></div>
             <p>
-              Lost your password? Please enter your email, password and confirm
-              the password to update your password.
+             {{$t('Lost_your_password')}}
             </p>
             <div class="row ml-10 mt-10">
               <p
@@ -29,7 +28,7 @@
                 form-row form-row-first
               "
             >
-              <label for="user_login">Email</label>
+              <label for="user_login">{{$t('email')}}</label>
               <input
                 v-model="formdata.email"
                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -43,7 +42,7 @@
                 form-row form-row-first
               "
             >
-              <label for="user_login">Password</label>
+              <label for="user_login">{{$t('password')}}</label>
               <input
                 v-model="formdata.password"
                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -57,7 +56,7 @@
                 form-row form-row-first
               "
             >
-              <label for="user_login">Confirm Password</label>
+              <label for="user_login">{{$t('Confirm_Password')}}</label>
               <input
                 v-model="formdata.confirm_password"
                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -73,7 +72,7 @@
                 type="submit"
                 class="woocommerce-Button button"
               >
-                Reset password
+                {{$t('Reset_password')}}
               </button>
             </p>
             <input

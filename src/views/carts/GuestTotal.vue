@@ -1,11 +1,11 @@
 <template>
   <div class="cart-collaterals border shadow">
     <div class="cart_totals">
-      <h2>Cart totals</h2>
+      <h2>{{$t('cart_totals')}}</h2>
       <table cellspacing="0" class="shop_table shop_table_responsive">
         <tbody>
           <tr class="cart-subtotal">
-            <th>Subtotal</th>
+            <th>{{$t('Subtotal')}}</th>
             <td data-title="Subtotal">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
@@ -16,7 +16,7 @@
             </td>
           </tr>
           <tr class="woocommerce-shipping-totals shipping">
-            <th>Shipping</th>
+            <th>{{$t('shipping')}}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
                 <li>
@@ -29,11 +29,11 @@
                     class="shipping_method"
                     checked="checked"
                   /><label for="shipping_method_0_flat_rate1"
-                    >Flat rate:
+                    >{{$t('Flat_rate')}}:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                          >{{$t('QAR')}} </span
                         >15.00</bdi
                       ></span
                     ></label
@@ -48,7 +48,7 @@
                     value="free_shipping:2"
                     class="shipping_method"
                   /><label for="shipping_method_0_free_shipping2"
-                    >Free shipping</label
+                    >{{$t('Free_shippings')}}</label
                   >
                 </li>
                 <li>
@@ -60,12 +60,12 @@
                     value="local_pickup:3"
                     class="shipping_method"
                   /><label for="shipping_method_0_local_pickup3"
-                    >Local pickup</label
+                    >{{$t('Local_pickup')}}</label
                   >
                 </li>
               </ul>
               <p class="woocommerce-shipping-destination">
-                Shipping to <strong>NY</strong>.
+                {{$t('Shipping_to')}} <strong>NY</strong>.
               </p>
 
               <form
@@ -77,7 +77,7 @@
                   href="javascript:void(0)"
                   @click="clickaddress"
                   class="shipping-calculator-button woocommerce"
-                  >Change address</a
+                  >{{$t('change_address')}}</a
                 >
                 <section
                   id="shipping-cart"
@@ -95,7 +95,7 @@
                       rel="calc_shipping_state"
                     >
                       <option value="default">
-                        Select a country / region…
+                       {{$t('Select_country_region')}}
                       </option>
                       <option value="AF">Afghanistan</option>
                       <option value="AX">Åland Islands</option>
@@ -376,7 +376,7 @@
                         data-placeholder="State"
                         placeholder="State"
                       >
-                        <option value="">Select an option…</option>
+                        <option value="">{{$t('Select_an_option')}}</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -448,7 +448,7 @@
                       type="text"
                       class="input-text"
                       value=""
-                      placeholder="Town / City"
+                      :placeholder="$t('town_city')"
                       name="calc_shipping_city"
                       id="calc_shipping_city"
                       data-placeholder="Town / City"
@@ -468,7 +468,7 @@
                       type="text"
                       class="input-text"
                       value=""
-                      placeholder="ZIP Code"
+                      :placeholder="$t('zip_code')"
                       name="calc_shipping_postcode"
                       id="calc_shipping_postcode"
                       data-placeholder="ZIP Code"
@@ -482,7 +482,7 @@
                       value="1"
                       class="button"
                     >
-                      Update
+                      {{$t('update')}}
                     </button>
                   </p>
                   <input
@@ -501,12 +501,12 @@
           </tr>
 
           <tr class="order-total">
-            <th>Total</th>
+            <th>{{$t('total')}}</th>
             <td data-title="Total">
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">QAR </span
+                    ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
                     >{{ cartStore.total }}</bdi
                   ></span
                 ></strong
@@ -520,7 +520,7 @@
         <router-link
           :to="'/' + langCode + '/checkout'"
           class="checkout-button button alt wc-forward"
-          >Proceed to checkout
+          >{{$t('proceed_checkout')}}
         </router-link>
       </div>
     </div>

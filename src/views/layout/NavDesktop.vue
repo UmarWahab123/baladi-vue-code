@@ -63,7 +63,7 @@
           </div>
           <!-- column -->
 
-          <div class="column align-center right">
+          <div class="column align-center right lang-bttons">
             <nav class="site-menu horizontal">
               <ul id="menu-top-right-1" class="menu">
                 <li

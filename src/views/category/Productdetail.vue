@@ -202,7 +202,7 @@
                           id="radio1"
                           autocomplete="off"
                         />
-                        <label class="button2 btn-outline-dark" for="radio1">{{
+                        <label class="button2 btn-outline-dark btngaf" for="radio1">{{
                           $t("PCS")
                         }}</label>
                         <input
@@ -265,8 +265,7 @@
                               button button-primary
                               add_to_cart_button
                               single_add_to_cart_button
-                              button
-                              alt
+                              button alt btn-align-setup
                             "
                             @click="
                               cartStore.addMultipleItems(
@@ -323,7 +322,7 @@
                             }}</span></a
                           >
                           <div class="tinv-wishlist-clear"></div>
-                          <div class="tinvwl-tooltip-custom">
+                          <div class="tinvwl-tooltip-custom test-margin">
                             {{ $t("Add_to_Wishlist") }}
                           </div>
                         </div>
@@ -549,7 +548,7 @@
                   aria-labelledby="tab-title-specification"
                 >
                   <div class="specification-content">
-                    <h2>General</h2>
+                    <h2>{{$t('General')}}</h2>
                     <!-- <table>
                                         <tbody>
                                             <tr>
@@ -586,7 +585,7 @@
                                             </tr>
                                         </tbody>
                                     </table> -->
-                    <h2>Display</h2>
+                    <h2>{{$t('Display')}}</h2>
                     <!-- <table>
                                         <tbody>
                                             <tr>
@@ -607,7 +606,7 @@
                                             </tr>
                                         </tbody>
                                     </table> -->
-                    <h2>Hardware</h2>
+                    <h2>{{$t('Hardware')}}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -632,7 +631,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h2>Camera</h2>
+                    <h2>{{$t('Camera')}}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -645,7 +644,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h2>Software</h2>
+                    <h2>{{$t('Software')}}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -673,7 +672,7 @@
                   <div id="reviews" class="woocommerce-Reviews">
                     <div id="comments">
                       <h2 class="woocommerce-Reviews-title">
-                        1 review for <span>Vegetables</span>
+                        {{$t('review_for')}} <span>{{$t('Vegetables')}}</span>
                       </h2>
 
                       <ol class="commentlist">
@@ -742,14 +741,14 @@
                       <div id="review_form">
                         <div id="respond" class="comment-respond">
                           <span id="reply-title" class="comment-reply-title"
-                            >Add a review
+                            >{{$t('Add_a_review')}}
                             <small
                               ><a
                                 rel="nofollow"
                                 id="cancel-comment-reply-link"
                                 href="#respond"
                                 style="display: none"
-                                >Cancel reply</a
+                                >{{$t('Cancel_reply')}}</a
                               ></small
                             ></span
                           >
@@ -761,14 +760,14 @@
                           >
                             <p class="comment-notes">
                               <span id="email-notes"
-                                >Your email address will not be published.</span
+                                >{{$t('email_address_will_not_be_published')}}</span
                               >
-                              Required fields are marked
+                              {{$t('Required_fields_are_marked')}}
                               <span class="required">*</span>
                             </p>
                             <div class="comment-form-rating">
                               <label for="rating"
-                                >Your rating&nbsp;<span class="required"
+                                >{{$t('Your_rating')}}&nbsp;<span class="required"
                                   >*</span
                                 ></label
                               >
@@ -797,7 +796,7 @@
                             </div>
                             <p class="comment-form-comment">
                               <label for="comment"
-                                >Your review&nbsp;<span class="required"
+                                >{{$t('Your_review')}}&nbsp;<span class="required"
                                   >*</span
                                 ></label
                               ><textarea
@@ -810,7 +809,7 @@
                             </p>
                             <p class="comment-form-author">
                               <label for="author"
-                                >Name&nbsp;<span class="required"
+                                >{{$t('name')}}&nbsp;<span class="required"
                                   >*</span
                                 ></label
                               ><input
@@ -824,7 +823,7 @@
                             </p>
                             <p class="comment-form-email">
                               <label for="email"
-                                >Email&nbsp;<span class="required"
+                                >{{$t('email')}}&nbsp;<span class="required"
                                   >*</span
                                 ></label
                               ><input
@@ -844,8 +843,7 @@
                                 value="yes"
                               />
                               <label for="wp-comment-cookies-consent"
-                                >Save my name, email, and website in this
-                                browser for the next time I comment.</label
+                                >{{$t('Save_my_name')}}</label
                               >
                             </p>
                             <p class="form-submit">
@@ -928,10 +926,10 @@
                             <div class="elementor-widget-container">
                               <div class="site-module products-module">
                                 <div class="module-header">
-                                  <h4 class="entry-title">Related Products</h4>
+                                  <h4 class="entry-title">{{$t('Related_Products')}}</h4>
                                   <div class="product-countdown"></div>
                                   <a href="" class="btn link"
-                                    >View All
+                                    >{{$t('View_all')}}
                                     <i class="klbth-icon-right-arrow"></i
                                   ></a>
                                 </div>

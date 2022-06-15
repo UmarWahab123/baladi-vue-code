@@ -15,12 +15,12 @@
           <th class="product-remove"></th>
           <th class="product-thumbnail">&nbsp;</th>
           <th class="product-name">
-            <span class="tinvwl-full">Product Name</span
-            ><span class="tinvwl-mobile">Product</span>
+            <span class="tinvwl-full">{{$t('product_name')}}</span
+            ><span class="tinvwl-mobile">{{$t('Product')}}</span>
           </th>
-          <th class="product-price">Unit Price</th>
-          <th class="product-date">Date Added</th>
-          <th class="product-stock">Stock Status</th>
+          <th class="product-price">{{$t('unit_price')}}</th>
+          <th class="product-date">{{$t('date_added')}}</th>
+          <th class="product-stock">{{$t('stock_status')}}</th>
           <th class="product-action">&nbsp;</th>
         </tr>
       </thead>
@@ -110,7 +110,7 @@
               @click="addtoCart(item)"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt">Add to Cart</span>
+              ><span class="tinvwl-txt">{{$t('add_to_cart')}}</span>
             </button>
           </td>
         </tr>
@@ -142,7 +142,7 @@
                     title="Apply Action"
                     style="display: none"
                   >
-                    Apply <span class="tinvwl-mobile">Action</span>
+                    {{$t('apply')}} <span class="tinvwl-mobile">{{$t('action')}}</span>
                   </button></span
                 >
               </div>
@@ -155,7 +155,7 @@
                 title="Add Selected to Cart"
                 @click="AddSelected"
               >
-                Add Selected to Cart
+               {{$t('Add_Selected_to_Cart')}}
               </button>
               &nbsp;
               <button
@@ -164,7 +164,7 @@
                 title="Add All to Cart"
                 @click="AddAll"
               >
-                Add All to Cart
+               {{$t('Add_All_to_Cart')}}
               </button>
             </div>
             <input

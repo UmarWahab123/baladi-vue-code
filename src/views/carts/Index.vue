@@ -26,10 +26,10 @@
                       <thead>
                         <tr>
                           <th class="product-thumbnail">&nbsp;</th>
-                          <th class="product-name">Product</th>
-                          <th class="product-price">Price</th>
-                          <th class="product-quantity">Quantity</th>
-                          <th class="product-subtotal">Subtotal</th>
+                          <th class="product-name">{{$t('Product')}}</th>
+                          <th class="product-price">{{$t('price')}}</th>
+                          <th class="product-quantity">{{$t('quantity')}}</th>
+                          <th class="product-subtotal">{{$t('Subtotal')}}</th>
                           <th class="product-remove">&nbsp;</th>
                         </tr>
                       </thead>
@@ -40,14 +40,14 @@
                           <td colspan="6" class="actions">
                             <div class="actions-wrapper">
                               <div class="coupon">
-                                <label for="coupon_code">Coupon:</label>
+                                <label for="coupon_code">{{$t('Coupon')}}:</label>
                                 <input
                                   type="text"
                                   name="coupon_code"
                                   class="input-text"
                                   id="coupon_code"
                                   value=""
-                                  placeholder="Coupon code"
+                                  :placeholder="$t('Coupon_code')"
                                 />
                                 <button
                                   type="submit"
@@ -55,7 +55,7 @@
                                   name="apply_coupon"
                                   value="Apply coupon"
                                 >
-                                  Apply coupon
+                                  {{$t('apply_coupon')}}
                                 </button>
                               </div>
 
@@ -67,7 +67,7 @@
                                 disabled=""
                                 aria-disabled="true"
                               >
-                                Update cart
+                                {{$t('Update_cart')}}
                               </button>
 
                               <input
@@ -98,7 +98,7 @@
               <div class="col">
                 <section class="site-module recently-viewed mt-30 d-mt-40">
                   <div class="module-header">
-                    <h4 class="entry-title">Suggested Products</h4>
+                    <h4 class="entry-title">{{$t('suggested_products')}}</h4>
                   </div>
                   <div class="products column-6 mobile-2">
                     <div

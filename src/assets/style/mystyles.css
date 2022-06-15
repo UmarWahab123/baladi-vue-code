@@ -1,10 +1,19 @@
 /* a.tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-position-after {
     display: none;
 } */
+
 span.tinvwl_add_to_wishlist-text {
     display: none;
 }
-ol.flex-control-thumbs .owl-item{
+
+ol.flex-control-thumbs .owl-item {
     display: inline-block;
 }
-.owl-nav {display: none;}
+
+.owl-nav {
+    display: none;
+}
+
+.rtl .cart-dropdown.hide {
+    margin-right: -300px;
+}

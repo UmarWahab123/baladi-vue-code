@@ -1,7 +1,7 @@
 <template>
   <div class="cart-collaterals border shadow">
     <div class="cart_totals">
-      <h2>Cart totals</h2>
+      <h2>{{$t('cart_totals')}}</h2>
 
       <table cellspacing="0" class="shop_table shop_table_responsive">
         <tbody>

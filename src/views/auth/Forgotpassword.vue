@@ -9,8 +9,7 @@
               <div class="woocommerce-notices-wrapper"></div>
 
               <p>
-                Lost your password? Please enter your username or email address.
-                You will receive a link to create a new password via email.
+                {{$t('Lost_your_password')}}
               </p>
               <div class="row ml-0 mt-10">
                 <p
@@ -31,7 +30,7 @@
                   form-row form-row-first
                 "
               >
-                <label for="user_login">Username or email</label>
+                <label for="user_login">{{$t('uName_email')}}</label>
                 <input
                   v-model="formdata.email"
                   class="woocommerce-Input woocommerce-Input--text input-text"
@@ -51,7 +50,7 @@
                   class="woocommerce-Button button"
                   value="Reset password"
                 >
-                  Reset password
+                  {{$t('Reset_password')}}
                 </button>
               </p>
               <input

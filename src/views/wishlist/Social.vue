@@ -1,6 +1,6 @@
 <template>
       <div class="social-buttons">
-                                                    <span>Share on</span>
+                                                    <span>{{$t('share_on')}}</span>
                                                     <ul>
                                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fklbtheme.com%2Fmachic%2Fwishlist%2Ff30715%2F"
                                                                 class="social social-facebook " title="Facebook"><i
