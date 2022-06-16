@@ -40,7 +40,7 @@
               <div class="site-module coupon-banner-module">
                 <div class="module-wrapper">
                   <div class="coupon-banner light">
-                    <div class="coupon-detail">
+                    <div class="coupon-detail move-to-left">
                       <div class="text">
                         <h4 class="entry-title">
                           {{$t('Super_discount_first_purchase')}}
@@ -49,7 +49,7 @@
                           {{$t('Use_discount_code')}}
                         </div>
                       </div>
-                      <div class="entry-coupon">
+                      <div class="entry-coupon move-to-left">
                         <i class="klbth-icon-ticket"></i>
                         <strong>{{$t('FREE256MAC')}}</strong>
                       </div>

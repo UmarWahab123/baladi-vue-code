@@ -17,3 +17,31 @@ ol.flex-control-thumbs .owl-item {
 .rtl .cart-dropdown.hide {
     margin-right: -300px;
 }
+
+.rtl .header-addons-icon.icons-style {
+    margin-left: 20px;
+}
+
+.rtl .header-addons-icon.heart-style-custom {
+    margin-left: 10px;
+}
+
+.rtl .header-addons.login-button.user-icons-style {
+    margin-right: 48px;
+}
+
+.rtl .sub-text.user-text-style {
+    margin-right: 10px;
+}
+
+.rtl .cart-button.custom-margin-style {
+    margin-right: 7px;
+}
+
+.rtl .btn.link.move-to-left {
+    margin-left: inherit;
+}
+
+.rtl .entry-coupon.move-to-left {
+    margin-left: inherit;
+}

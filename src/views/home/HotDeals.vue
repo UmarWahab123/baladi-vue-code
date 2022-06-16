@@ -227,7 +227,7 @@
                                 ><bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >{{
                                     item.product?.uom_products[0]
                                       ?.previous_price
@@ -240,7 +240,7 @@
                                 ><bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >{{
                                     item.product?.uom_products[0]?.regular_price
                                   }}</bdi
@@ -1025,7 +1025,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1034,7 +1034,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1045,7 +1045,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1054,7 +1054,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1065,7 +1065,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1074,7 +1074,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >438.67</bdi
                         ></span
                       ></ins

@@ -60,7 +60,7 @@
                       {{ $t("Remains_until_offer") }}
                     </div>
                   </div>
-                  <a href="" class="btn link"
+                  <a href="" class="btn link move-to-left"
                     >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
@@ -235,7 +235,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
+                                      >{{$t('QAR')}} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.previous_price
@@ -248,7 +248,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
+                                      >{{$t('QAR')}} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.regular_price

@@ -253,7 +253,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >479.00</bdi
                                 >
                               </span></del
@@ -263,7 +263,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >439.00</bdi
                                 >
                               </span></ins
@@ -351,7 +351,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >699.99</bdi
                                 >
                               </span></del
@@ -361,7 +361,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >629.99</bdi
                                 >
                               </span></ins
@@ -400,7 +400,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >478.67</bdi
                                 >
                               </span></del
@@ -410,7 +410,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >438.67</bdi
                                 >
                               </span></ins
@@ -449,7 +449,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >959.00</bdi
                                 >
                               </span></del
@@ -459,7 +459,7 @@
                                 <bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >QAR </span
+                                    >{{$t('QAR')}} </span
                                   >859.00</bdi
                                 >
                               </span></ins
@@ -495,7 +495,7 @@
                             ><span class="woocommerce-Price-amount amount">
                               <bdi
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >QAR </span
+                                  >{{$t('QAR')}} </span
                                 >65.00</bdi
                               >
                             </span>
@@ -503,7 +503,7 @@
                             <span class="woocommerce-Price-amount amount">
                               <bdi
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >QAR </span
+                                  >{{$t('QAR')}} </span
                                 >249.00</bdi
                               >
                             </span></span

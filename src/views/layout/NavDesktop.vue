@@ -272,7 +272,7 @@
             </div>
             <!-- site-search -->
 
-            <div class="header-addons login-button">
+            <div class="header-addons login-button user-icons-style">
               <router-link
                 v-if="userdata.name"
                 class="primary-text"
@@ -298,12 +298,12 @@
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                  <div v-if="userdata.name" class="sub-text">
+                  <div v-if="userdata.name" class="sub-text user-text-style">
                     {{ userdata.name }}
                   </div>
                 </router-link>
 
-                <div v-else class="sub-text">Sign In</div>
+                <div v-else class="sub-text user-text-style">{{$t('Sign_In')}}</div>
                 <router-link
                   v-if="userdata.name"
                   class="primary-text"
@@ -322,9 +322,9 @@
               <!-- header-addons-text -->
             </div>
             <!-- header-addons -->
-            <div class="header-addons cart-button">
+            <div class="header-addons cart-button custom-margin-style">
               <router-link :to="'/' + langCode + '/cart'">
-                <div class="header-addons-icon">
+                <div class="header-addons-icon heart-style-custom">
                   <i class="far fa-bell"></i>
                   <div class="button-count cart-count">
                     {{ cartStore.count }}
@@ -700,7 +700,7 @@
             </div>
 
             <div class="header-addons wishlist-button">
-              <div class="header-addons-icon">
+              <div class="header-addons-icon heart-style-custom">
                 <router-link :to="'/' + langCode + '/wishlist'"
                   ><i class="klbth-icon-heart"></i
                 ></router-link>

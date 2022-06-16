@@ -9,11 +9,11 @@
       </div>
       <!-- header-addons-icon -->
       <div class="header-addons-text hide-mobile">
-        <div class="sub-text">Total</div>
+        <div class="sub-text">{{$t('total')}}</div>
         <div class="primary-text cart-subtotal">
           <span class="woocommerce-Price-amount amount">
             <bdi
-              ><span class="woocommerce-Price-currencySymbol">QAR </span>
+              ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span>
               {{ productStore.cartTotal }}
             </bdi>
           </span>

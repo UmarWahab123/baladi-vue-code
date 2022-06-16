@@ -1,7 +1,7 @@
 <template>
   <div class="header-addons cart-button">
     <a href="#/cart/">
-      <div class="header-addons-icon">
+      <div class="header-addons-icon icons-style">
         <i class="klbth-icon-simple-cart"></i>
         <div class="button-count cart-count">
           {{ cartStore.count }}
@@ -9,11 +9,11 @@
       </div>
       <!-- header-addons-icon -->
       <div class="header-addons-text hide-mobile">
-        <div class="sub-text">Total</div>
+        <div class="sub-text">{{$t('total')}}</div>
         <div class="primary-text cart-subtotal">
           <span class="woocommerce-Price-amount amount">
             <bdi
-              ><span class="woocommerce-Price-currencySymbol">QAR </span
+              ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
               >{{ cartStore.total }}</bdi
             >
           </span>
