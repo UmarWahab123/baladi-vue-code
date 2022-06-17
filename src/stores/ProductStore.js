@@ -11,6 +11,7 @@ export const useProductStore = defineStore("ProductStore", {
       BestSellerProducts: [],
       SmartphoneProducts: [],
       wishListProduct: [],
+      cartList: [],
       ids: [],
     };
   },
@@ -18,6 +19,15 @@ export const useProductStore = defineStore("ProductStore", {
     wishlistcount() {
       return this.wishListProduct.length;
     },
+    cartcount() {
+      return this.cartList.length;
+    },
+    cartTotal: (state) =>
+      state.cartList.reduce(
+        (p, c) =>
+          p + c.quantity * parseInt(c.uom_product.product.variant_base_price),
+        0
+      ),
   },
   actions: {
     async testData(products) {
@@ -51,6 +61,10 @@ export const useProductStore = defineStore("ProductStore", {
     async wishListData(products) {
       // console.log("products store", products);
       this.wishListProduct = await products;
+    },
+    async cartListData(products) {
+      // console.log("products store", products);
+      this.cartList = await products;
     },
   },
 });

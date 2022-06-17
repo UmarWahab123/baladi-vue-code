@@ -178,7 +178,7 @@
                     ><span class="woocommerce-Price-amount amount">
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                          >{{$t('QAR')}} </span
                         >{{ item?.previous_price }}</bdi
                       >
                     </span></del
@@ -190,13 +190,13 @@
                     >
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                          >{{$t('QAR')}} </span
                         >{{ item?.regular_price }}</bdi
                       >
                     </span></ins
                   ></span
                 ><a
-                  href="avascript::void(0)"
+                  href="javascript:void(0)"
                   data-quantity="1"
                   class="
                     button
@@ -204,10 +204,7 @@
                     add_to_cart_button
                     ajax_add_to_cart
                   "
-                  data-product_id="521"
-                  data-product_sku="BE45VGRT"
-                  aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                  rel="nofollow"
+                  @click="addtoCart(item)"
                   ><i class="klbth-icon-shop-1"></i> Add to cart</a
                 >
               </div>
@@ -971,7 +968,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -980,7 +977,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -991,7 +988,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1000,7 +997,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1011,7 +1008,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1020,7 +1017,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1421,8 +1418,7 @@
 </template>
 <script>
 import axios from "axios";
-import.meta.env.VITE_API_KEY;
-
+import { useCartStore } from "../../stores/CartStore";
 export default {
   data: () => ({
     showmodal: "",
@@ -1496,6 +1492,10 @@ export default {
       .catch((error) => {});
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(index) {
       this.showmodal = "show";
       this.showmodalstyle = "display:block";

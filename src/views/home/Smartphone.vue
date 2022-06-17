@@ -2,9 +2,11 @@
   <div class="elementor-widget-container my-5">
     <div class="site-module products-module">
       <div class="module-header">
-        <h4 class="entry-title">{{$t('Smart_phone')}} &amp; {{$t('accesseries')}}</h4>
-        <a href="#" class="btn link"
-          >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+        <h4 class="entry-title">
+          {{ $t("Smart_phone") }} {{ $t("accesseries") }}
+        </h4>
+        <a href="#" class="btn link link move-to-left"
+          >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
         ></a>
       </div>
       <div class="module-wrapper">
@@ -170,7 +172,7 @@
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >QAR </span
+                              >{{$t('QAR')}} </span
                             >{{
                               item.product?.uom_products[0]?.previous_price
                             }}</bdi
@@ -183,7 +185,7 @@
                           style="margin: 4px"
                           ><bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >QAR </span
+                              >{{$t('QAR')}} </span
                             >{{
                               item.product?.uom_products[0]?.regular_price
                             }}</bdi
@@ -199,7 +201,7 @@
                         add_to_cart_button
                         ajax_add_to_cart
                       "
-                      @click="$emit(cartStore.items.push(item))"
+                      @click="addtoCart(item)"
                       ><i class="klbth-icon-shop-1"></i> Add to cart</a
                     >
                   </div>
@@ -549,9 +551,9 @@
                           type="submit"
                           name="add-to-cart"
                           @click="
-                            cartStore.addItems(
-                              this.quantity,
-                              this.singleProduct
+                            cartStore.addMultipleItems(
+                              this.singleProduct,
+                              this.quantity
                             )
                           "
                           class="
@@ -954,7 +956,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -963,7 +965,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -974,7 +976,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -983,7 +985,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -994,7 +996,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1003,7 +1005,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1467,6 +1469,7 @@ import.meta.env.VITE_API_KEY;
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { useProductStore } from "../../stores/ProductStore";
+import { useCartStore } from "../../stores/CartStore";
 
 export default {
   components: { TheLoader, Splide, SplideSlide },
@@ -1560,6 +1563,10 @@ export default {
     this.langCode = lang;
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
       const payload = {

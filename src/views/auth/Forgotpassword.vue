@@ -9,7 +9,7 @@
               <div class="woocommerce-notices-wrapper"></div>
 
               <p>
-                {{$t('Please_enter_your_username_or_email')}}
+                {{$t('Lost_your_password')}}
               </p>
               <div class="row ml-0 mt-10">
                 <p
@@ -30,7 +30,7 @@
                   form-row form-row-first
                 "
               >
-                <label for="user_login">{{$t('Username_or_email')}}</label>
+                <label for="user_login">{{$t('uName_email')}}</label>
                 <input
                   v-model="formdata.email"
                   class="woocommerce-Input woocommerce-Input--text input-text"

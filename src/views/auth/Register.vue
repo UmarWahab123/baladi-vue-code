@@ -59,7 +59,7 @@
         "
       >
         <label for="reg_email"
-          >{{$t('email')}}&nbsp;<span class="required">*</span></label
+          >{{$t('email_address')}}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.email"
@@ -113,7 +113,7 @@
       </div>
       <div class="woocommerce-privacy-policy-text">
         <p>
-         {{$t('personal_data')}} 
+          {{$t('personal_data')}}
           <router-link :to="'/' + langCode + '/privacy-policy'"
             >{{$t('privacy_policy')}} </router-link
           >.

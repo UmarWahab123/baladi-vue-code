@@ -55,7 +55,7 @@
                           </div>
                           <div class="col-sm-6 col-md-5 mx-auto shadow p-4">
                             <form
-                              action="https://klbtheme.com/machic/order-tracking/"
+                              action="javascript:void(0)"
                               method="post"
                               class="
                                 woocommerce-form woocommerce-form-track-order
@@ -69,7 +69,7 @@
                                   type="text"
                                   name="orderid"
                                   id="orderid"
-                                  value=""
+                                  v-model="trakingId"
                                   placeholder="Found in your order confirmation email."
                                 />
                               </p>
@@ -77,8 +77,9 @@
                               <div class="clear"></div>
 
                               <p class="form-row">
-                                <router-link
-                                  :to="'/' + langCode + '/order-track2'"
+                                <a
+                                  href="javascript:void(0)"
+                                  @click="trackOrder"
                                 >
                                   <button
                                     type="submit"
@@ -88,7 +89,7 @@
                                   >
                                     {{$t('Track')}}
                                   </button>
-                                </router-link>
+                                </a>
                               </p>
                               <input
                                 type="hidden"
@@ -121,4 +122,30 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      trakingId: "",
+      langCode: "en",
+    };
+  },
+  mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+  },
+  methods: {
+    trackOrder() {
+      if (this.trakingId == "") {
+        alert("Please enter order id");
+        return;
+      }
+      this.$router.push(
+        "/" + this.langCode + "/order-track2/" + this.trakingId
+      );
+    },
+  },
+};
 </script>

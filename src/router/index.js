@@ -46,7 +46,7 @@ const routes = [{
     },
     {
         name: "order-confirmation",
-        path: "/" + langCode + "/order-confirmation",
+        path: "/" + langCode + "/order-confirmation/:id?",
         component: () =>
             import ("@/views/checkout/Orderconfirmation.vue"),
     },
@@ -143,7 +143,7 @@ const routes = [{
     },
     {
         name: "order-detail",
-        path: "/" + langCode + "/order-detail",
+        path: "/" + langCode + "/order-detail/:id?",
         component: () =>
             import ("@/views/dashboard/OrderDetail.vue"),
     },
@@ -294,7 +294,7 @@ const routes = [{
     },
     {
         name: "order-track2",
-        path: "/" + langCode + "/order-track2",
+        path: "/" + langCode + "/order-track2/:id?",
         component: () =>
             import ("@/views/tracking/order-track2.vue"),
     },

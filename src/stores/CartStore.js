@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 import { groupBy } from "lodash";
+import axios from "axios";
+import { useProductStore } from "./ProductStore";
 export const useCartStore = defineStore("CartStore", {
   state: () => {
     return {
@@ -39,6 +41,7 @@ export const useCartStore = defineStore("CartStore", {
         };
         const fulldata = Object.assign(item, product);
       }
+
       // console.log(fulldata);
 
       count = parseInt(count);
@@ -67,6 +70,102 @@ export const useCartStore = defineStore("CartStore", {
     incrementCount(name) {
       var count = count + 1;
       console.log(count + 1, "count", count);
+    },
+    addcartapi(item) {
+      this.items.push(item);
+      this.cartApi(item, "add");
+    },
+    cartApi(item, type) {
+      if (localStorage.userInfo != null) {
+        let userInfo = JSON.parse(localStorage.userInfo);
+        let token = userInfo.token;
+        let url = "";
+        var product_id = "";
+        let payload = {};
+        console.log(item.product_id, type);
+        if (type == "add") {
+          if (item.product_id != null) {
+            product_id = item.product_id;
+          } else {
+            product_id = item.product.id;
+          }
+          payload = {
+            uom_product_id: product_id,
+            quantity: 1,
+          };
+          url = "http://baladi-v1.bteamwebs.com/api/mobile/product/addToCart";
+        } else if (type == "remove") {
+          payload = {
+            uom_product_id: item.product.id ? item.product.id : item.product_id,
+          };
+          url = "http://baladi-v1.bteamwebs.com/api/mobile/product/removeCart";
+        }
+
+        axios
+          .post(url, payload, {
+            headers: {
+              Authorization: "Bearer " + token,
+            },
+          })
+          .then((response) => {
+            console.log(response.data);
+            this.getCart();
+          })
+          .catch((error) => {});
+      }
+    },
+    addMultipleItems(item, quantity) {
+      console.log(item, quantity);
+      this.addItems(quantity, item);
+      if (localStorage.userInfo != null) {
+        let userInfo = JSON.parse(localStorage.userInfo);
+        let token = userInfo.token;
+        let url = "";
+        let payload = {};
+
+        payload = {
+          uom_product_id: item.product_id,
+          quantity: quantity,
+        };
+        url = "http://baladi-v1.bteamwebs.com/api/mobile/product/addToCart";
+
+        axios
+          .post(url, payload, {
+            headers: {
+              Authorization: "Bearer " + token,
+            },
+          })
+          .then((response) => {
+            this.getCart();
+          })
+          .catch((error) => {});
+      }
+    },
+    getCart() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getUserCart",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            const ProductStore = useProductStore();
+            ProductStore.cartListData(this.results);
+            // this.results.map((item) => {
+            //   this.cartTotal +=
+            //     item.quantity *
+            //     parseInt(item.uom_product.product.variant_base_price);
+            // });
+          })
+          .catch((error) => {});
+      }
     },
   },
 });

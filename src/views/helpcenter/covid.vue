@@ -72,7 +72,7 @@
 
                                     <!-- wp:paragraph -->
                                    <p></p>
-                                    <h3>{{$t('overview')}}2</h3>
+                                    <h3>{{$t('overview')}}</h3>
                                     <p></p>
                                     <!-- /wp:paragraph -->
 

@@ -70,7 +70,7 @@
                         <div class="text">
                           <h5 class="entry-title">{{$t('International_shipment')}}</h5>
                           <p>
-                            {{$t('Your_between_countries')}}
+                           {{$t('Your_between_countries')}}
                           </p>
                         </div>
                       </div>
@@ -81,7 +81,8 @@
                         <div class="text">
                           <h5 class="entry-title">{{$t('Extended_day_returns')}}</h5>
                           <p>
-                            {{$t('your_orders_within_days')}}
+                            You have the right to return your orders within 45
+                            days.
                           </p>
                         </div>
                       </div>
@@ -92,7 +93,7 @@
                         <div class="text">
                           <h5 class="entry-title">{{$t('Secure_payment')}}</h5>
                           <p>
-                           {{$t('Your_our_privat_network')}}
+                            {{$t('Your_our_privat_network')}}
                           </p>
                         </div>
                       </div>
@@ -118,8 +119,8 @@
                     <div class="banner dark align-top medium vertical">
                       <div class="banner-content">
                         <div class="banner-content-wrapper">
-                          <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
-                          <h3 class="entry-title">New Phone 11</h3>
+                          <h6 class="entry-subtitle style-2">{{$t('Super_discount')}}</h6>
+                          <h3 class="entry-title">{{$t('New_phone')}}</h3>
                           <div class="entry-description">
                             <p>{{$t('miss_the_last_opportunity')}}</p>
                           </div>
@@ -271,7 +272,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >{{
                                         dealsoftheweek?.product?.uom_products[0]
                                           ?.previous_price
@@ -284,7 +285,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >{{
                                         dealsoftheweek?.product?.uom_products[0]
                                           ?.regular_price
@@ -373,7 +374,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR <br /></span
+                                        >{{$t('QAR')}}  <br /></span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.previous_price
@@ -386,7 +387,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR <br /></span
+                                        >{{$t('QAR')}}  <br /></span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.regular_price
@@ -467,7 +468,7 @@
                                 </h6>
                                 <h3 class="entry-title">{{$t('Home_speaker')}}</h3>
                                 <div class="entry-description">
-                                  <p>{{$t('miss_the_last_opportunity')}}.</p>
+                                  <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
                                   <a
@@ -623,7 +624,7 @@
               <div class="site-module product-deals-module">
                 <div class="module-header no-border">
                   <h4 class="entry-title">{{$t('Mega_deals')}}</h4>
-                  <a href="" class="btn link"
+                  <a href="" class="btn link move-to-left"
                     >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
@@ -687,7 +688,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.previous_price
@@ -700,7 +701,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.regular_price
@@ -758,7 +759,7 @@
                           {{$t('Use_discount_code')}}
                         </div>
                       </div>
-                      <div class="entry-coupon">
+                      <div class="entry-coupon move-to-left">
                         <i class="klbth-icon-ticket"></i>
                         <strong>{{$t('FREE256MAC')}}</strong>
                       </div>
@@ -1534,7 +1535,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1543,7 +1544,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1554,7 +1555,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1563,7 +1564,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1574,7 +1575,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1583,7 +1584,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
+                            >{{$t('QAR')}} </span
                           >438.67</bdi
                         ></span
                       ></ins

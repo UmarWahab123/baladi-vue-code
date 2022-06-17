@@ -141,7 +141,7 @@
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
                                 <h6 class="entry-subtitle style-3">
-                                  {{$t('Weekend_discount')}}2
+                                  Weekend Discount2
                                 </h6>
                                 <h3 class="entry-title">
                                   {{ item.heading }}
@@ -149,7 +149,7 @@
                                 </h3>
                                 <div class="entry-description">
                                   <p>
-                                    {{$t('Last_call_for_up_to')}}
+                                   {{$t('Last_call_for_up_to')}}
                                     <strong>%20</strong>{{$t('off')}}
                                   </p>
                                 </div>

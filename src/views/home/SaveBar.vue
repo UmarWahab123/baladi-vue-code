@@ -42,11 +42,11 @@
                 <div class="banner-wrapper" style="background-color: #f5f5f7">
                   <div class="banner-inner">
                     <h4 class="entry-title">
-                     {{$t('Shop_and')}} <strong>{{$t('Save_on_Hottest')}}</strong> {{$t('Products')}}
+                      {{$t('Shop_and')}}<strong>{{$t('Save_on_Hottest')}}</strong> {{$t('Products')}}
                     </h4>
                     <div class="banner-details">
                       <div class="banner-price">
-                        {{$t('from')}} <span>{{$t('QAR')}} 79.00</span>
+                        {{$t('from')}} <span>{{$t('QAR')}}  79.00</span>
                       </div>
                       <!-- banner-price -->
                       <p>{{$t('Donot_miss_opportunity')}}</p>

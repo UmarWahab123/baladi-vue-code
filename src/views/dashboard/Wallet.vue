@@ -26,13 +26,13 @@
                             <div class="row align-items-center mb-2 d-flex">
                               <div class="col-12 mt-4">
                                 <h6 class="card-title mb-0">
-                                  Available Balance
+                                  {{$t('Available_Balance')}}
                                 </h6>
                                 <h2 class="d-flex align-items-center mt-2 mb-0">
-                                  QAR 11.61k
+                                  {{$t('QAR')}} 11.61k
                                 </h2>
                               </div>
-                              <small class="col-4 text-right">
+                              <small class="col-4 text-right date-align-setup">
                                 <span class="position-absolute side-text-date"
                                   >Friday 4 March 2022
                                 </span></small

@@ -207,7 +207,7 @@
                           v-bind="formdata1.comment_id"
                         />
                         <h3 id="reply-title" class="comment-reply-title">
-                          {{$t("Leave_a_Reply")}}
+                         {{$t("Leave_a_Reply")}}
                           <small
                             ><a
                               rel="nofollow"
@@ -321,7 +321,7 @@
                           name="submit"
                           type="submit"
                           class="submit"
-                           :value="$t('Post_Comment')"
+                          :value="$t('Post_Comment')"
                         />
                       </p>
                     </div>

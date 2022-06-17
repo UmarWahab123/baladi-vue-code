@@ -2,23 +2,21 @@
   <div class="cart-collaterals border shadow">
     <div class="cart_totals">
       <h2>{{$t('cart_totals')}}</h2>
-
       <table cellspacing="0" class="shop_table shop_table_responsive">
         <tbody>
           <tr class="cart-subtotal">
-            <th>Subtotal</th>
+            <th>{{$t('Subtotal')}}</th>
             <td data-title="Subtotal">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">QAR </span
-                  >{{ cartStore.total }}</bdi
+                  ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
+                  >{{ cartTotal }}</bdi
                 ></span
               >
             </td>
           </tr>
-
           <tr class="woocommerce-shipping-totals shipping">
-            <th>Shipping</th>
+            <th>{{$t('shipping')}}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
                 <li>
@@ -31,11 +29,11 @@
                     class="shipping_method"
                     checked="checked"
                   /><label for="shipping_method_0_flat_rate1"
-                    >Flat rate:
+                    >{{$t('Flat_rate')}}:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
+                          >{{$t('QAR')}} </span
                         >15.00</bdi
                       ></span
                     ></label
@@ -50,7 +48,7 @@
                     value="free_shipping:2"
                     class="shipping_method"
                   /><label for="shipping_method_0_free_shipping2"
-                    >Free shipping</label
+                    >{{$t('Free_shippings')}}</label
                   >
                 </li>
                 <li>
@@ -62,12 +60,12 @@
                     value="local_pickup:3"
                     class="shipping_method"
                   /><label for="shipping_method_0_local_pickup3"
-                    >Local pickup</label
+                    >{{$t('Local_pickup')}}</label
                   >
                 </li>
               </ul>
               <p class="woocommerce-shipping-destination">
-                Shipping to <strong>NY</strong>.
+                {{$t('Shipping_to')}} <strong>NY</strong>.
               </p>
 
               <form
@@ -76,15 +74,15 @@
                 method="post"
               >
                 <a
-                  href="#"
-                  class="shipping-calculator-button woocommerce"
+                  href="javascript:void(0)"
                   @click="clickaddress"
-                  >Change address</a
+                  class="shipping-calculator-button woocommerce"
+                  >{{$t('change_address')}}</a
                 >
                 <section
                   id="shipping-cart"
-                  v-if="changeaddress === 1"
                   class="shipping-calculator-form"
+                  v-if="changeaddress === 1"
                 >
                   <p
                     class="form-row form-row-wide"
@@ -97,7 +95,7 @@
                       rel="calc_shipping_state"
                     >
                       <option value="default">
-                        Select a country / region…
+                       {{$t('Select_country_region')}}
                       </option>
                       <option value="AF">Afghanistan</option>
                       <option value="AX">Åland Islands</option>
@@ -378,7 +376,7 @@
                         data-placeholder="State"
                         placeholder="State"
                       >
-                        <option value="">Select an option…</option>
+                        <option value="">{{$t('Select_an_option')}}</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -450,7 +448,7 @@
                       type="text"
                       class="input-text"
                       value=""
-                      placeholder="Town / City"
+                      :placeholder="$t('town_city')"
                       name="calc_shipping_city"
                       id="calc_shipping_city"
                       data-placeholder="Town / City"
@@ -470,7 +468,7 @@
                       type="text"
                       class="input-text"
                       value=""
-                      placeholder="ZIP Code"
+                      :placeholder="$t('zip_code')"
                       name="calc_shipping_postcode"
                       id="calc_shipping_postcode"
                       data-placeholder="ZIP Code"
@@ -484,7 +482,7 @@
                       value="1"
                       class="button"
                     >
-                      Update
+                      {{$t('update')}}
                     </button>
                   </p>
                   <input
@@ -503,13 +501,13 @@
           </tr>
 
           <tr class="order-total">
-            <th>Total</th>
+            <th>{{$t('total')}}</th>
             <td data-title="Total">
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">QAR </span
-                    >1,083.66</bdi
+                    ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
+                    >{{ cartTotal }}</bdi
                   ></span
                 ></strong
               >
@@ -520,37 +518,120 @@
 
       <div class="wc-proceed-to-checkout">
         <router-link
-          class="checkout-button button alt wc-forward"
           :to="'/' + langCode + '/checkout'"
-        >
-          Proceed to checkout
+          class="checkout-button button alt wc-forward"
+          >{{$t('proceed_checkout')}}
         </router-link>
       </div>
     </div>
   </div>
 </template>
+
 <script setup>
 import { useCartStore } from "../../stores/CartStore";
+setTimeout(function () {
+  document.getElementById("menu-sidebar-menu-1").classList.remove("show");
+}, 500);
+
 const cartStore = useCartStore();
 </script>
+
 <script>
+import Cartsubtotal from "./Cartsubtotal.vue";
+import axios from "axios";
+import { useCartStore } from "../../stores/CartStore";
+const cartStore = useCartStore();
+
 export default {
   data: () => ({
-    id: "",
+    showmodal: "",
+    url: import.meta.env.VITE_API_URL + "/storage/",
+    showmodalstyle: "",
+    showbigmodal: "",
+    showbigmodalstyle: "",
+    showcomparemodal: "",
     changeaddress: 0,
+    count: 0,
+    showcomparemodalstyle: "",
     results: [],
     langCode: "en",
+    guestCheck: true,
+    loginCheck: false,
+    cartTotal: 0,
   }),
   mounted() {
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+    this.getCart();
+    if (localStorage.userInfo != null) {
+      this.guestCheck = false;
+      this.loginCheck = true;
+    }
   },
   methods: {
+    incrementcount: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+      this.count = this.count + 1;
+    },
+    decrementcount: function () {
+      // const input_index = event.currentTarget.getAttribute("input_Index");
+
+      this.count = this.count - 1;
+    },
+    clickmodal(index) {
+      this.showmodal = "show";
+      this.showmodalstyle = "display:block";
+    },
+    closemodal() {
+      this.showmodal = "";
+      this.showmodalstyle = "";
+    },
+    clickbigmodal(index) {
+      this.showbigmodal = "show";
+      this.showbigmodalstyle = "display:block";
+    },
+    closebigmodal() {
+      this.showbigmodal = "";
+      this.showbigmodalstyle = "";
+    },
+    clickcomparemodal(index) {
+      this.showcomparemodal = "show";
+      this.showcomparemodalstyle = "display:block";
+    },
+    closecomparemodal() {
+      this.showcomparemodal = "";
+      this.showcomparemodalstyle = "";
+    },
+
     clickaddress: function (event) {
       if (this.changeaddress === 0) {
         this.changeaddress = 1;
       } else if (this.changeaddress === 1) {
         this.changeaddress = 0;
+      }
+    },
+    getCart() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getUserCart",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            this.results.map((item) => {
+              this.cartTotal +=
+                item.quantity *
+                parseInt(item.uom_product.product.variant_base_price);
+            });
+          })
+          .catch((error) => {});
       }
     },
   },

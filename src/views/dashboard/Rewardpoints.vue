@@ -46,22 +46,22 @@
                               <div class="card l-bg-orange-dark">
                                 <div class="card-statistic-3 p-4">
                                   <h5 class="card-icon card-icon-large">
-                                    Your Balance
+                                    {{$t('Your_Balance')}}
                                   </h5>
                                   <h6 class="">
                                     <span class="text-warning points fw-bold"
                                       >1580</span
                                     >
-                                    Points
+                                    {{$t('Points')}}
                                   </h6>
 
                                   <div
                                     class="row align-items-center mb-2 d-flex"
                                   >
-                                    <small class="col-4 text-right">
+                                    <small class="col-4 text-right date-align-setup">
                                       <span
                                         class="position-absolute side-text-date"
-                                        >100 points expires Friday 4 March 2022
+                                        >100 {{$t('points_expires')}} Friday 4 March 2022
                                       </span></small
                                     >
                                   </div>

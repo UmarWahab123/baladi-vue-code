@@ -17,7 +17,7 @@
                   <router-link
                     class="nav-link"
                     :to="'/' + langCode + '/aboutus'"
-                    >{{$t('about_us')}}
+                    >{{ $t("about_us") }}
                   </router-link>
                 </li>
                 <li
@@ -30,7 +30,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    >{{$t('feature_product')}}
+                    >{{ $t("feature_product") }}
                   </router-link>
                 </li>
                 <li
@@ -42,7 +42,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/helpcenter'"
-                    >{{$t('help')}}
+                    >{{ $t("help") }}
                   </router-link>
                 </li>
 
@@ -54,16 +54,16 @@
                     menu-item-object-page menu-item-2230
                   "
                 >
-                  <router-link :to="'/' + langCode + '/replacement'"
-                    >{{$t('returns_replacements')}}</router-link
-                  >
+                  <router-link :to="'/' + langCode + '/replacement'">{{
+                    $t("returns_replacements")
+                  }}</router-link>
                 </li>
               </ul>
             </nav>
           </div>
           <!-- column -->
 
-          <div class="column align-center right">
+          <div class="column align-center right lang-bttons">
             <nav class="site-menu horizontal">
               <ul id="menu-top-right-1" class="menu">
                 <li
@@ -76,7 +76,7 @@
                 >
                   <router-link to=""
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
-                    &nbsp; {{$t('Location')}}
+                    &nbsp; {{ $t("location_job") }}
                   </router-link>
                 </li>
                 <li
@@ -87,7 +87,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/order-tracking'"
-                    >{{$t('Order_Tracking')}}
+                    >{{ $t("orders_tracking") }}
                   </router-link>
                 </li>
 
@@ -167,7 +167,7 @@
                     <label
                       class="screen-reader-text"
                       for="dgwt-wcas-search-input-1"
-                      >{{$t('Products_search')}}</label
+                      >Products search</label
                     >
                     <input
                       id="dgwt-wcas-search-input-1"
@@ -175,7 +175,7 @@
                       class="dgwt-wcas-search-input"
                       name="s"
                       value=""
-                      placeholder="Search for products..."
+                      :placeholder="$t('serach_product') + '...'"
                       autocomplete="off"
                       @keyup="onchangesearch($event)"
                     />
@@ -189,7 +189,7 @@
                       class="dgwt-wcas-search-submit"
                       @click="searchproducts"
                     >
-                      {{$t('search')}}
+                      {{ $t("search") }}
                     </button>
                     <input type="hidden" name="post_type" value="product" />
                     <input type="hidden" name="dgwt_wcas" value="1" />
@@ -250,7 +250,9 @@
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
                               >$</span
-                            >{{ searchItem?.uom_products[0]?.previous_price }}</bdi
+                            >{{
+                              searchItem?.uom_products[0]?.previous_price
+                            }}</bdi
                           ></span
                         ></del
                       >
@@ -270,7 +272,7 @@
             </div>
             <!-- site-search -->
 
-            <div class="header-addons login-button">
+            <div class="header-addons login-button user-icons-style">
               <router-link
                 v-if="userdata.name"
                 class="primary-text"
@@ -296,33 +298,33 @@
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                  <div v-if="userdata.name" class="sub-text">
+                  <div v-if="userdata.name" class="sub-text user-text-style">
                     {{ userdata.name }}
                   </div>
                 </router-link>
 
-                <div v-else class="sub-text">{{$t('Sign_In')}}</div>
+                <div v-else class="sub-text user-text-style">{{$t('Sign_In')}}</div>
                 <router-link
                   v-if="userdata.name"
                   class="primary-text"
                   :to="'/' + langCode + '/userdashboard'"
                 >
-                  {{$t('Account')}}
+                  {{ $t("Account") }}
                 </router-link>
                 <router-link
                   v-else
                   class="primary-text"
                   :to="'/' + langCode + '/myaccount'"
                 >
-                  {{$t('Account')}}
+                  {{ $t("Account") }}
                 </router-link>
               </div>
               <!-- header-addons-text -->
             </div>
             <!-- header-addons -->
-            <div class="header-addons cart-button">
+            <div class="header-addons cart-button custom-margin-style">
               <router-link :to="'/' + langCode + '/cart'">
-                <div class="header-addons-icon">
+                <div class="header-addons-icon heart-style-custom">
                   <i class="far fa-bell"></i>
                   <div class="button-count cart-count">
                     {{ cartStore.count }}
@@ -698,7 +700,7 @@
             </div>
 
             <div class="header-addons wishlist-button">
-              <div class="header-addons-icon">
+              <div class="header-addons-icon heart-style-custom">
                 <router-link :to="'/' + langCode + '/wishlist'"
                   ><i class="klbth-icon-heart"></i
                 ></router-link>
@@ -714,7 +716,9 @@
                     <span class="wishlist_products_counter_text"
                       >Wishlist -</span
                     >
-                    <span class="wishlist_products_counter_number">{{productStore.wishlistcount}}</span>
+                    <span class="wishlist_products_counter_number">{{
+                      productStore.wishlistcount
+                    }}</span>
                   </a>
                 </div>
               </div>
@@ -722,285 +726,9 @@
             </div>
             <!-- header-addons -->
 
-            <div class="header-addons cart-button">
-              <a href="#cart/">
-                <div class="header-addons-icon">
-                  <i class="klbth-icon-simple-cart"></i>
-                  <div class="button-count cart-count">
-                    {{ cartStore.count }}
-                  </div>
-                </div>
-                <!-- header-addons-icon -->
-                <div class="header-addons-text hide-mobile">
-                  <div class="sub-text">Total</div>
-                  <div class="primary-text cart-subtotal">
-                    <span class="woocommerce-Price-amount amount">
-                      <bdi
-                        ><span class="woocommerce-Price-currencySymbol"
-                          >QAR </span
-                        >{{ cartStore.total }}</bdi
-                      >
-                    </span>
-                  </div>
-                </div>
-                <!-- header-addons-text -->
-              </a>
-              <div class="cart-dropdown hide">
-                <div class="cart-dropdown-wrapper">
-                  <div class="fl-mini-cart-content" v-if="!cartStore.isEmpty">
-                    <div
-                      class="
-                        products
-                        column-1
-                        mobile-1
-                        woocommerce-mini-cart
-                        cart_list
-                        product_list_widget
-                      "
-                    >
-                      <div
-                        class="
-                          cart-slider
-                          swiper-container
-                          klb-mini-cart
-                          swiper-container-initialized
-                          swiper-container-vertical
-                          swiper-container-pointer-events
-                          slider-loaded
-                        "
-                        data-effect="slide"
-                        data-direction="vertical"
-                        data-loop="false"
-                        data-speed="1000"
-                        data-spacebetween="0"
-                        data-autoplay="false"
-                        data-autospeed="300"
-                        data-items="2"
-                        data-mobileitems="2"
-                        data-tabletitems="2"
-                      >
-                        <div class="slider-loader">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="spinner"
-                            width="50"
-                            height="50"
-                            viewBox="0 0 44 44"
-                          >
-                            <circle
-                              class="spinner-path"
-                              cx="22"
-                              cy="22"
-                              r="20"
-                              fill="none"
-                              stroke-width="3"
-                            ></circle>
-                          </svg>
-                        </div>
-                        <div class="slider-loader">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="spinner"
-                            width="50"
-                            height="50"
-                            viewBox="0 0 44 44"
-                          >
-                            <circle
-                              class="spinner-path"
-                              cx="22"
-                              cy="22"
-                              r="20"
-                              fill="none"
-                              stroke-width="3"
-                            ></circle>
-                          </svg>
-                        </div>
-                        <div class="slider-loader">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="spinner"
-                            width="50"
-                            height="50"
-                            viewBox="0 0 44 44"
-                          >
-                            <circle
-                              class="spinner-path"
-                              cx="22"
-                              cy="22"
-                              r="20"
-                              fill="none"
-                              stroke-width="3"
-                            ></circle>
-                          </svg>
-                        </div>
-                        <div
-                          class="swiper-wrapper cart-scroll"
-                          id="swiper-wrapper-20bf436108c0df10df"
-                          aria-live="polite"
-                          style="height: 30vh; overflow: auto"
-                        >
-                          <!-- swiper-slide -->
-                          <div
-                            class="swiper-slide swiper-slide-next"
-                            role="group"
-                            aria-label="2 / 2"
-                            style="height: 90px"
-                            v-for="(item, name) in cartStore.grouped"
-                          >
-                            <div
-                              class="
-                                product
-                                woocommerce-mini-cart-item
-                                mini_cart_item
-                              "
-                            >
-                              <div class="product-wrapper">
-                                <div class="product-content">
-                                  <div class="thumbnail-wrapper">
-                                    <a
-                                      href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
-                                    >
-                                      <!-- <img
-                                        width="90"
-                                        height="90"
-                                        :src="
-                                          'http://baladiweb.bteamwebs.com/storage/' +
-                                            item[0].images.length >
-                                          0
-                                            ? item[0].images[0].photo
-                                            : ''
-                                        "
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
-                                        alt=""
-                                      /> -->
-                                    </a>
-                                  </div>
-                                  <!-- thumbnail-wrapper -->
-                                  <div class="content-wrapper">
-                                    <h3 class="product-title">
-                                      <a href="javascript:void(0)">{{
-                                        item[0].product.product_name
-                                      }}</a>
-                                    </h3>
-                                    <div class="entry-price">
-                                      <span class="quantity">
-                                        {{ item.length }}
-                                        ×
-                                        <span
-                                          class="
-                                            woocommerce-Price-amount
-                                            amount
-                                          "
-                                        >
-                                          <bdi
-                                            ><span
-                                              class="
-                                                woocommerce-Price-currencySymbol
-                                              "
-                                              >QAR
-                                            </span>
-                                            {{
-                                              cartStore.groupedCount(name) *
-                                              item[0].product.variant_base_price
-                                            }}
-                                          </bdi>
-                                        </span></span
-                                      >
-                                    </div>
-                                    <a
-                                      href="javascript:void(0)"
-                                      class="remove remove_from_cart_button"
-                                      aria-label="Remove this item"
-                                      data-product_id="516"
-                                      data-cart_item_key="f3f27a324736617f20abbf2ffd806f6d"
-                                      data-product_sku="SR4JK74"
-                                      @click="cartStore.clearItem(name)"
-                                      ><i class="klbth-icon-cancel"></i
-                                    ></a>
-                                  </div>
-                                  <!-- content-wrapper -->
-                                </div>
-                                <!-- product-content -->
-                              </div>
-                              <!-- product-wrapper -->
-                            </div>
-                            <!-- product -->
-                          </div>
-                          <!-- swiper-slide -->
-                        </div>
-                        <div
-                          class="swiper-button-prev swiper-button"
-                          tabindex="-1"
-                          role="button"
-                          aria-label="Previous slide"
-                          aria-controls="swiper-wrapper-20bf436108c0df10df"
-                          aria-disabled="true"
-                          @click="clickscrolldown"
-                        ></div>
-                        <div
-                          class="swiper-button-next swiper-button"
-                          tabindex="-1"
-                          role="button"
-                          aria-label="Next slide"
-                          aria-controls="swiper-wrapper-20bf436108c0df10df"
-                          aria-disabled="true"
-                          @click="clickscrollup"
-                        ></div>
-                        <span
-                          class="swiper-notification"
-                          aria-live="assertive"
-                          aria-atomic="true"
-                        ></span
-                        ><span
-                          class="swiper-notification"
-                          aria-live="assertive"
-                          aria-atomic="true"
-                        ></span
-                        ><span
-                          class="swiper-notification"
-                          aria-live="assertive"
-                          aria-atomic="true"
-                        ></span>
-                      </div>
-                    </div>
-                    <p class="woocommerce-mini-cart__total total">
-                      <strong>Subtotal:</strong>
-                      <span class="woocommerce-Price-amount amount">
-                        <bdi
-                          ><span class="woocommerce-Price-currencySymbol"
-                            >QAR </span
-                          >{{ cartStore.total }}</bdi
-                        >
-                      </span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                      <router-link
-                        class="button wc-forward"
-                        :to="'/' + langCode + '/cart'"
-                        >View cart
-                      </router-link>
+            <GuestCart v-if="guestCheck" />
+            <LoginCart v-if="loginCheck" />
 
-                      <router-link
-                        class="button checkout wc-forward"
-                        :to="'/' + langCode + '/checkout'"
-                      >
-                        Checkout
-                      </router-link>
-                    </p>
-                  </div>
-                  <div v-else>
-                    <h3 class="p-2">Cart is Empty</h3>
-                  </div>
-
-                  <!-- cart-noticy -->
-                </div>
-                <!-- cart-dropdown-wrapper -->
-              </div>
-              <!-- cart-dropdown -->
-            </div>
             <!-- header-addons -->
           </div>
           <!-- column -->
@@ -1613,7 +1341,8 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category'"
-                    ><i class="klbth-icon-home"></i> {{ $t("home_and_living") }}</router-link
+                    ><i class="klbth-icon-home"></i>
+                    {{ $t("home_and_living") }}</router-link
                   >
                 </li>
 
@@ -1664,9 +1393,11 @@
                 <!-- discount-banner -->
                 <div class="discount-items">
                   <div class="discount-products-header">
-                    <h4 class="entry-title">{{$t('Items_on_sale_this_week')}}</h4>
+                    <h4 class="entry-title">
+                      {{ $t("Items_on_sale_this_week") }}
+                    </h4>
                     <p>
-                      {{$t('Top_the_best_selling_products')}}
+                      {{ $t("Top_the_best_selling_products") }}
                     </p>
                   </div>
                   <!-- discount-products-header -->
@@ -1757,6 +1488,8 @@
   </div>
 </template>
 <script setup >
+import GuestCart from "./GuestCart.vue";
+import LoginCart from "./LoginCart.vue";
 import { computed } from "vue";
 import { useCartStore } from "../../stores/CartStore";
 import { useProductStore } from "../../stores/ProductStore";
@@ -1770,6 +1503,7 @@ const count = computed(() => cartStore.count);
 </script>
 <script>
 import axios from "axios";
+import { useProductStore } from "../../stores/ProductStore";
 
 export default {
   data: () => ({
@@ -1782,18 +1516,15 @@ export default {
     isChecked: false,
     langCode: "en",
     searchResults: [],
+    guestCheck: true,
+    loginCheck: false,
   }),
   mounted() {
-    axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=ar")
-      .then((response) => {
-        this.results = response.data.data.data;
-      })
-      .catch((error) => {});
-
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      // alert(userInfo);
+      this.guestCheck = false;
+      this.loginCheck = true;
+
       if (userInfo.name != null) {
         this.userdata.name = userInfo.name;
       } else if (userInfo.token != null) {
@@ -1815,8 +1546,42 @@ export default {
       this.isChecked = true;
     }
     this.langCode = lang;
+
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=" +
+          this.langCode
+      )
+      .then((response) => {
+        this.results = response.data.data.data;
+      })
+      .catch((error) => {});
+
+    this.getWishList();
   },
   methods: {
+    getWishList() {
+      if (localStorage.userInfo != null) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        this.token = userInfo.token;
+        axios
+          .get(
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            {
+              headers: {
+                Authorization: "Bearer " + this.token,
+              },
+            }
+          )
+          .then((response) => {
+            this.results = response.data.data;
+            const productStore = useProductStore();
+            productStore.wishListData(this.results);
+            console.log(this.results);
+          })
+          .catch((error) => {});
+      }
+    },
     menuchange: function (event) {
       if (this.showmenu == "show") {
         this.showmenu = "";
@@ -1873,6 +1638,7 @@ export default {
         window.location.reload();
       }
     },
+
     onchangesearch: function (event) {
       if (event.target.value) {
         const inputsearch = event.target.value;
@@ -1880,6 +1646,8 @@ export default {
           category_id: "",
           search: inputsearch,
           locale: "en",
+          price: "",
+          compaign_id: "",
         };
         // console.log(payload);
         var preloader = document.querySelector(".dgwt-wcas-preloader");
@@ -1894,8 +1662,11 @@ export default {
             payload
           )
           .then((response) => {
-            // console.log(response.data.data.searchresults.data);
             this.searchResults = response.data.data.searchresults;
+            // this.searchResults.map((item) => {
+            //   console.log("map", item);
+            // });
+            // console.log("Search", this.searchResults);
           })
           .catch((error) => {});
         // window.location.reload();

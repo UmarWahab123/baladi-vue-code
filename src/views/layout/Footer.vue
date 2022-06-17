@@ -297,7 +297,19 @@
                       >{{$t('about_us')}}</router-link
                     >
                   </li>
-                
+                  <li
+                    id="menu-item-2190"
+                    class="
+                      menu-item
+                      menu-item-type-custom
+                      menu-item-object-custom
+                      menu-item-2190
+                    "
+                  >
+                    <router-link :to="'/' + langCode + '/review'"
+                      >{{$t('customer_review')}}</router-link
+                    >
+                  </li>
                   <li
                     id="menu-item-2513"
                     class="

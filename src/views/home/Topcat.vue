@@ -47,30 +47,25 @@
                           <p>Maecenas non erat</p>
                         </div> -->
                         <!-- entry-description -->
-                        <h3 class="entry-title">{{ item.name }}</h3>
+                        <h3 class="entry-title">{{ item.heading }}</h3>
                         <div class="banner-price-content">
-                          <p>Weekend Discount</p>
-                          <span class="price"
-                            ><del aria-hidden="true"
-                              ><span class="woocommerce-Price-amount amount"
-                                ><bdi>QAR 399.00</bdi></span
-                              ></del
-                            ><ins
-                              ><span class="woocommerce-Price-amount amount"
-                                ><bdi>QAR 299.00</bdi></span
-                              ></ins
-                            ></span
-                          >
+                          <p>{{$t('Weekend_discount')}}</p>
+                          <span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>{{$t('QAR')}}
+                            29.00</bdi></span></del><ins><span class="woocommerce-Price-amount amount"><bdi>
+                            {{$t('QAR')}}
+                            19.00</bdi></span></ins>
+                          </span>
                           <!-- price -->
                         </div>
                         <!-- banner-price-content -->
                       </div>
                       <!-- banner-content-wrapper -->
                     </div>
+                    
                     <!-- banner-content -->
                     <div class="banner-image">
                       <img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/banner-7.jpg"
+                        :src="url + item.image_url"
                         alt="banner"
                       />
                     </div>
@@ -92,15 +87,19 @@ import axios from "axios";
 
 export default {
   data: () => ({
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     results: [],
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/header/topCategories?locale=en"
+        "http://baladi-v1.bteamwebs.com/api/web/sliders?slider_name=web-offers&locale=" +
+          langCode
       )
       .then((response) => {
-        this.results = response.data.data;
+        this.results = response.data.data.slider_slides;
+        console.log("slider data", this.results);
       })
       .catch((error) => {});
   },

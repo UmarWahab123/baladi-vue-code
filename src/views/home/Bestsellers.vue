@@ -40,7 +40,7 @@
             <div class="elementor-widget-container">
               <div class="site-module products-module">
                 <div class="module-header">
-                  <h4 class="entry-title">{{$t('Top_sellers')}}</h4>
+                  <h4 class="entry-title">{{ $t("Top_sellers") }}</h4>
                   <div class="product-countdown">
                     <div
                       class="countdown"
@@ -57,11 +57,11 @@
                     </div>
                     <!-- countdown -->
                     <div class="countdown-text">
-                      {{$t('Remains_until_offer')}}
+                      {{ $t("Remains_until_offer") }}
                     </div>
                   </div>
-                  <a href="" class="btn link"
-                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+                  <a href="" class="btn link move-to-left"
+                    >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">
@@ -235,7 +235,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
+                                      >{{$t('QAR')}} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.previous_price
@@ -248,7 +248,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
+                                      >{{$t('QAR')}} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.regular_price
@@ -274,7 +274,7 @@
                                 add_to_cart_button
                                 ajax_add_to_cart
                               "
-                              @click="$emit(cartStore.items.push(item))"
+                              @click="addtoCart(item)"
                               ><i class="klbth-icon-shop-1"></i> Add to cart</a
                             >
                           </div>
@@ -631,9 +631,9 @@
                           type="submit"
                           name="add-to-cart"
                           @click="
-                            cartStore.addItems(
-                              this.quantity,
-                              this.singleProduct
+                            cartStore.addMultipleItems(
+                              this.singleProduct,
+                              this.quantity
                             )
                           "
                           class="
@@ -676,11 +676,12 @@
                       </form>
 
                       <div class="product-actions">
-                        <div class="custom-wish-style" :onclick="clickmodal"
-                            v-bind:wishlist_id="singleProduct.id">
-                          <a
-                            
-                            href="javascript::void(0)"
+                        <div
+                          class="custom-wish-style"
+                          :onclick="clickmodal"
+                          v-bind:wishlist_id="singleProduct.id"
+                        >
+                          <a href="javascript::void(0)"
                             ><i class="fa fa-heart" aria-hidden="true"></i
                             ><span class="tinvwl_add_to_wishlist-text"
                               >Add to Wishlist</span
@@ -1550,6 +1551,7 @@ defineEmits(["addToCart"]);
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { useProductStore } from "../../stores/ProductStore";
+import { useCartStore } from "../../stores/CartStore";
 
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
@@ -1557,7 +1559,6 @@ export default {
   components: { Splide, SplideSlide },
   data: () => ({
     showmessage: "Loading...",
-
     showmodal: "",
     url: "http://baladi-v1.bteamwebs.com/storage/",
     showmodalstyle: "",
@@ -1628,11 +1629,16 @@ export default {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.token = userInfo.token;
     }
+    this.getWishList();
 
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
       const payload = {

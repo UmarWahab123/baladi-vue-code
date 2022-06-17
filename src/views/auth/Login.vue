@@ -90,7 +90,7 @@
         </label>
         <p class="woocommerce-LostPassword lost_password">
           <router-link :to="'/' + langCode + '/forgot-password'"
-            >{{$t('lost_password')}}</router-link
+            >{{$t('lost_password')}}?</router-link
           >
         </p>
       </div>
@@ -101,7 +101,7 @@
         value="Log in"
         @click="submitdata()"
       >
-        {{$t('login')}}
+        {{$t('Log_in')}}
       </button>
       <a to="/" class="ml-5">
         <input
@@ -123,9 +123,7 @@
           {{$t('continue_as_guest')}}
         </a></a
       >
-      <p class="mt-3"> {{$t('connect_with')}}  
-        
-      </p>
+      <p class="mt-3">{{$t('connect_with')}}</p>
       <div class="social-share site-social colored">
         <ul class="social-container">
           <li>

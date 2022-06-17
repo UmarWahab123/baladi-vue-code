@@ -18,8 +18,8 @@
             <span class="tinvwl-full">{{$t('product_name')}}</span
             ><span class="tinvwl-mobile">{{$t('Product')}}</span>
           </th>
-          <th class="product-price">{{$t('Unit_Price')}}</th>
-          <th class="product-date">{{$t('Date_Added')}}</th>
+          <th class="product-price">{{$t('unit_price')}}</th>
+          <th class="product-date">{{$t('date_added')}}</th>
           <th class="product-stock">{{$t('stock_status')}}</th>
           <th class="product-action">&nbsp;</th>
         </tr>
@@ -107,13 +107,10 @@
               name="tinvwl-add-to-cart"
               value="605"
               title="Add to Cart"
+              @click="addtoCart(item)"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span
-                class="tinvwl-txt"
-                @click="$emit(cartStore.items.push(item))"
-                >Add to Cart</span
-              >
+              ><span class="tinvwl-txt">{{$t('add_to_cart')}}</span>
             </button>
           </td>
         </tr>
@@ -132,6 +129,7 @@
                   name="product_actions"
                   id="tinvwl_product_actions"
                   class="tinvwl-break-input-filed form-control"
+                  style="display: none"
                 >
                   <option value="" selected="selected">Actions</option>
                   <option value="add_selected">Add to Cart</option>
@@ -142,8 +140,9 @@
                     name="tinvwl-action"
                     value="product_apply"
                     title="Apply Action"
+                    style="display: none"
                   >
-                    Apply <span class="tinvwl-mobile">Action</span>
+                    {{$t('apply')}} <span class="tinvwl-mobile">{{$t('action')}}</span>
                   </button></span
                 >
               </div>
@@ -156,7 +155,7 @@
                 title="Add Selected to Cart"
                 @click="AddSelected"
               >
-                Add Selected to Cart
+               {{$t('Add_Selected_to_Cart')}}
               </button>
               &nbsp;
               <button
@@ -165,7 +164,7 @@
                 title="Add All to Cart"
                 @click="AddAll"
               >
-                Add All to Cart
+               {{$t('Add_All_to_Cart')}}
               </button>
             </div>
             <input
@@ -281,7 +280,6 @@ export default {
     AddSelected() {
       this.results.forEach((item, indextr) => {
         if (this.selected.includes(item.id)) {
-          console.log("item", item);
           cartStore.items.push(item);
         }
       });
@@ -292,7 +290,6 @@ export default {
       console.log(this.items);
       if (this.items.length > 0) {
         this.items.forEach((item, indextr) => {
-          // this.addToCart(item);
           console.log("indextr", indextr, "item", item[indextr]);
           cartStore.items.push(item[indextr]);
         });
@@ -300,6 +297,32 @@ export default {
       } else {
         alert("Please select All item");
       }
+    },
+    addtoCart(item) {
+      // cartStore.items.push(item);
+      cartStore.addcartapi(item);
+
+      // console.log("product_name", item.product.product_name);
+      // console.log("item", item);
+      // const quanitiy = cartStore.groupedCount(item.product.product_name);
+      // const payload = {
+      //   uom_product_id: item.product.id,
+      //   quantity: quanitiy,
+      // };
+      // axios
+      //   .post(
+      //     "http://baladi-v1.bteamwebs.com/api/mobile/product/addToCart",
+      //     payload,
+      //     {
+      //       headers: {
+      //         Authorization: "Bearer " + this.token,
+      //       },
+      //     }
+      //   )
+      //   .then((response) => {
+      //     console.log(response.data);
+      //   })
+      //   .catch((error) => {});
     },
   },
 };

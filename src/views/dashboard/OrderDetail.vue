@@ -13,14 +13,17 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
                     <p>
-                      Order #<mark class="order-number">2931</mark> was placed
-                      on <mark class="order-date">February 28, 2022</mark> and
-                      is currently <mark class="order-status">On hold</mark>.
+                      {{$t('Order')}} #<mark class="order-number">{{
+                              results?.id
+                            }}</mark> {{$t('was_placed_on')}} <mark class="order-date">{{
+                              results?.created_at
+                            }}</mark> {{$t('and')}}
+                      {{$t('is_currently')}} <mark class="order-status badge bg-success">On hold</mark>.
                     </p>
 
                     <section class="woocommerce-order-details">
                       <h2 class="woocommerce-order-details__title">
-                        Order details
+                        {{$t('Order_details')}}
                       </h2>
 
                       <table
@@ -38,7 +41,7 @@
                                 product-name
                               "
                             >
-                              Product
+                               {{$t('Product')}}
                             </th>
                             <th
                               class="
@@ -46,13 +49,14 @@
                                 product-total
                               "
                             >
-                              Total
+                              {{$t('total')}}
                             </th>
                           </tr>
                         </thead>
 
                         <tbody>
-                          <tr class="woocommerce-table__line-item order_item">
+                          <tr class="woocommerce-table__line-item order_item"
+                            v-for="(item, index) in results?.cart">
                             <td
                               class="
                                 woocommerce-table__product-name
@@ -60,9 +64,10 @@
                               "
                             >
                               <a href="javascript:void(0)"
-                                >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
-                              >
-                              <strong class="product-quantity">×&nbsp;1</strong>
+                                >{{
+                                  item?.uom_product?.product?.product_name
+                                }}</a>
+                              <strong class="product-quantity">×&nbsp;{{ item.quantity }}</strong>
                             </td>
 
                             <td
@@ -75,39 +80,8 @@
                                 ><bdi
                                   ><span
                                     class="woocommerce-Price-currencySymbol"
-                                    >Q</span
-                                  >629.99</bdi
-                                ></span
-                              >
-                            </td>
-                          </tr>
-
-                          <tr class="woocommerce-table__line-item order_item">
-                            <td
-                              class="
-                                woocommerce-table__product-name
-                                product-name
-                              "
-                            >
-                              <a
-                                href="https://klbtheme.com/machic/product/apple-iphone-11-64gb-fully-unlocked-yellow/"
-                                >Apple iPhone 11 64GB Yellow Fully Unlocked</a
-                              >
-                              <strong class="product-quantity">×&nbsp;1</strong>
-                            </td>
-
-                            <td
-                              class="
-                                woocommerce-table__product-total
-                                product-total
-                              "
-                            >
-                              <span class="woocommerce-Price-amount amount"
-                                ><bdi
-                                  ><span
-                                    class="woocommerce-Price-currencySymbol"
-                                    >Q</span
-                                  >438.67</bdi
+                                    >{{$t('QAR')}} </span
+                                  >{{ item?.net_product_amount }}</bdi
                                 ></span
                               >
                             </td>
@@ -116,43 +90,43 @@
 
                         <tfoot>
                           <tr>
-                            <th scope="row">Subtotal:</th>
+                            <th scope="row">{{$t('Subtotal')}}:</th>
                             <td>
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >Q</span
-                                >1,068.66</span
+                                  >{{$t('QAR')}}</span
+                                >{{ results.net_amount }}</span
                               >
                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">Shipping:</th>
+                            <th scope="row">{{$t('Shipping')}}:</th>
                             <td>Local pickup</td>
                           </tr>
                           <tr>
-                            <th scope="row">Payment method:</th>
+                            <th scope="row">{{$t('Payment_method')}}:</th>
                             <td>Check payments</td>
                           </tr>
                           <tr>
-                            <th scope="row">Total:</th>
+                            <th scope="row">{{$t('total')}}:</th>
                             <td>
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >Q</span
-                                >1,068.66</span
+                                  >{{$t('QAR')}}</span
+                                >{{ results?.sale_amount }}</span
                               >
                             </td>
                           </tr>
                           <tr>
-                            <th>Note:</th>
-                            <td>Dolorem lorem libero</td>
+                            <th>{{$t('Note')}}:</th>
+                            <td>{{ results?.delivery_note }}</td>
                           </tr>
                         </tfoot>
                       </table>
                     </section>
 
                     <section class="woocommerce-customer-details">
-                      <h2 class="woocommerce-column__title">Billing address</h2>
+                      <h2 class="woocommerce-column__title">{{$t('Billing_address')}}</h2>
 
                       <address>
                         Jena Benjamin<br />Oneill Mcintyre Associates<br />128
@@ -190,6 +164,9 @@ import Footer from "../layout/Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>
 <script>
+import axios from "axios";
+import moment from "moment";
+
 import TheLoader from "../Loader/TheLoader.vue";
 export default {
   components: { TheLoader },
@@ -197,6 +174,8 @@ export default {
     return {
       userdata: { name: "" },
       isloading: true,
+      results: [],
+      moment: moment,
     };
   },
   mounted() {
@@ -204,6 +183,25 @@ export default {
     } else {
       this.$router.push("myaccount");
     }
+    var id = this.$route.params.id;
+    console.log(id);
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    this.token = userInfo.token;
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/mobile/driver/orderdetails?order_id=" +
+          id,
+        {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        }
+      )
+      .then((response) => {
+        this.results = response.data.data[0];
+        console.log("blog-details:",this.results);
+      })
+      .catch((error) => {});
   },
 };
 </script>

@@ -51,7 +51,7 @@
                       <h3
                         class="elementor-heading-title elementor-size-default"
                       >
-                        {{$t('our_Terms')}} &amp; {{$t('conditions')}}
+                        {{ $t("our_Terms") }} &amp; {{ $t("conditions") }}
                       </h3>
                     </div>
                   </div>
@@ -98,7 +98,7 @@
                   >
                     <div class="elementor-widget-container">
                       <p class="elementor-heading-title elementor-size-default">
-                      {{$t('long_established_fact')}}
+                        {{ $t("long_established_fact") }}
                       </p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@
                       <h3
                         class="elementor-heading-title elementor-size-default"
                       >
-                        {{$t('where_come_from')}}
+                        {{ $t("where_come_from") }}
                       </h3>
                     </div>
                   </div>
@@ -194,11 +194,13 @@
                   >
                     <div class="elementor-widget-container">
                       <p>
-                       {{$t('reader_established_fact')}}
+                        {{ $t("reader_established_fact") }}
                       </p>
                       <ol>
                         <li>
-                         {{$t('minima_veniam')}}
+                          Ut enim ad minima veniam, quis nostrum exercitationem
+                          ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                          ea commodi consequatur
                         </li>
                         <li>
                           Quis autem vel eum iure reprehenderit qui in ea
@@ -220,7 +222,7 @@
                         </li>
                       </ol>
                       <p>
-                      {{$t('many_variations')}}
+                        {{ $t("many_variations") }}
                       </p>
                     </div>
                   </div>
@@ -269,7 +271,7 @@
                       <h3
                         class="elementor-heading-title elementor-size-default"
                       >
-                        {{$t('why_do_use')}}
+                        {{ $t("why_do_use") }}
                       </h3>
                     </div>
                   </div>
@@ -316,10 +318,10 @@
                   >
                     <div class="elementor-widget-container">
                       <p>
-                        {{$t('contrary_popular_belief')}}
+                        {{ $t("contrary_popular_belief") }}
                       </p>
                       <p>
-                      {{$t('lorem_Ipsum')}}
+                        {{ $t("lorem_Ipsum") }}
                       </p>
                       <ul>
                         <li>
@@ -337,7 +339,10 @@
                           laborum.
                         </li>
                         <li>
-                       {{$t('one_rejects')}}.
+                          No one rejects, dislikes, or avoids pleasure itself,
+                          because it is pleasure, but because those who do not
+                          know how to pursue pleasure rationally encounter
+                          consequences that are extremely painful.
                         </li>
                       </ul>
                     </div>
