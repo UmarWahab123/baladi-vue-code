@@ -143,7 +143,7 @@ const routes = [{
     },
     {
         name: "order-detail",
-        path: "/" + langCode + "/order-detail",
+        path: "/" + langCode + "/order-detail/:id?",
         component: () =>
             import ("@/views/dashboard/OrderDetail.vue"),
     },

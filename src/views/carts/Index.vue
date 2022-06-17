@@ -277,7 +277,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >99.99</bdi
                                     >
                                   </span></del
@@ -289,7 +289,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >QAR </span
+                                        >{{$t('QAR')}} </span
                                       >49.99</bdi
                                     >
                                   </span></ins
@@ -307,8 +307,7 @@
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
                                 rel="nofollow"
-                                ><i class="klbth-icon-shop-1"></i> Add to
-                                cart</a
+                                ><i class="klbth-icon-shop-1"></i> {{$t('add_to_cart')}}</a
                               >
                             </div>
                           </div>

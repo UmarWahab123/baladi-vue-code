@@ -624,7 +624,7 @@
               <div class="site-module product-deals-module">
                 <div class="module-header no-border">
                   <h4 class="entry-title">{{$t('Mega_deals')}}</h4>
-                  <a href="" class="btn link"
+                  <a href="" class="btn link move-to-left"
                     >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
@@ -759,7 +759,7 @@
                           {{$t('Use_discount_code')}}
                         </div>
                       </div>
-                      <div class="entry-coupon">
+                      <div class="entry-coupon move-to-left">
                         <i class="klbth-icon-ticket"></i>
                         <strong>{{$t('FREE256MAC')}}</strong>
                       </div>

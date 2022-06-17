@@ -118,7 +118,7 @@
                             >
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >QAR </span
+                                  >{{$t('QAR')}} </span
                                 >{{ item.net_amount }}</span
                               >
                               for {{ item.total_products }} items
@@ -131,16 +131,16 @@
                               data-title="Actions"
                             >
                               <router-link
-                                :to="'/' + langCode + '/order-detail'"
+                                :to="'/' + langCode + '/order-detail/' + item.id"
                                 class="woocommerce-button button view"
                               >
-                                View</router-link
+                                {{$t('View')}}</router-link
                               >
                             </td>
                           </tr>
                         </tbody>
                       </table>
-                      <div class="order-list">
+                      <div class="order-list d-none">
                         <div class="order-item">
                           <div class="product-name">
                             <a href=""

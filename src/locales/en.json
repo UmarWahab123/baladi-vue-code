@@ -76,7 +76,6 @@
     "Mega_deals": "Mega Deals",
     "Smart_phone": "Smart Phone",
     "accesseries": "Accessories",
-
     "Last_call_for_up_to": "Last call for up to",
     "About_baladi_express": "About Baladi Express",
     "We_belive_the_best_experience": "We belive the best experience always wins",
@@ -444,8 +443,20 @@
     "privacyinfo": " Your personal data will be used to process your order, support your experience throughout this website,andfor other purposes described in our",
 
 
-    "Sign_In": "Sign In"
-
+    "Sign_In": "Sign In",
+    "Viewcart": "View cart",
+    "Checkout": "Checkout",
+    "Cart_is_Empty": "Cart is Empty",
+    "Available_Balance": "Available Balance",
+    "Your_Menu": "Your Menu",
+    "View": "View",
+    "Order": "Order",
+    "was_placed_on": "was placed on",
+    "and": "and",
+    "is_currently": "is currently",
+    "Your_Balance": "Your Balance",
+    "Points": "Points",
+    "points_expires": "points expires"
 
 
 

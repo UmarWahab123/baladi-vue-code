@@ -34,6 +34,10 @@ ol.flex-control-thumbs .owl-item {
     margin-right: 10px;
 }
 
+.rtl .header-addons-text.hide-mobile.header-setup-style {
+    margin-right: 20px;
+}
+
 .rtl .cart-button.custom-margin-style {
     margin-right: 7px;
 }
@@ -44,4 +48,22 @@ ol.flex-control-thumbs .owl-item {
 
 .rtl .entry-coupon.move-to-left {
     margin-left: inherit;
+}
+
+.rtl .my-account-navigation.remove-border-right {
+    border-right: none;
+}
+
+.rtl .card.l-bg-orange-dark {
+    color: #fff;
+    background-image: url('https://igtechservices.com/public/uploads/banners/1652945405-WhatsAppImage2022-03-31at12.56.24PM.jpeg');
+    background-position: center;
+}
+
+.rtl .col-4.text-right.date-align-setup {
+    text-align: end;
+}
+
+.rtl .woocommerce-MyAccount-navigation.terms-border-right {
+    border-right: none;
 }

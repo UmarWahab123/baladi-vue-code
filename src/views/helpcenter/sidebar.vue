@@ -1,5 +1,5 @@
 <template>
-  <div class="my-account-navigation">
+  <div class="my-account-navigation remove-border-right">
     <div class="account-toggle-menu">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@
         <line x1="2.3" y1="6" x2="21.8" y2="6"></line>
         <line x1="2.3" y1="18" x2="21.8" y2="18"></line>
       </svg>
-      Your Menu
+     {{$t('Your_Menu')}}
     </div>
     <!-- account-toggle-menu -->
 

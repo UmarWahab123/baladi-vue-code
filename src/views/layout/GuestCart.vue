@@ -8,7 +8,7 @@
         </div>
       </div>
       <!-- header-addons-icon -->
-      <div class="header-addons-text hide-mobile">
+      <div class="header-addons-text hide-mobile header-setup-style">
         <div class="sub-text">{{$t('total')}}</div>
         <div class="primary-text cart-subtotal">
           <span class="woocommerce-Price-amount amount">
@@ -244,19 +244,19 @@
             <router-link
               class="button wc-forward"
               :to="'/' + langCode + '/cart'"
-              >View cart
+              >{{$t('Viewcart')}}
             </router-link>
 
             <router-link
               class="button checkout wc-forward"
               :to="'/' + langCode + '/checkout'"
             >
-              Checkout
+              {{$t('Checkout')}}
             </router-link>
           </p>
         </div>
         <div v-else>
-          <h3 class="p-2">Cart is Empty</h3>
+          <h3 class="p-2">{{$t('Cart_is_Empty')}}</h3>
         </div>
 
         <!-- cart-noticy -->

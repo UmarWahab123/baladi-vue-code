@@ -9,7 +9,7 @@
             <td data-title="Subtotal">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">QAR </span
+                  ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
                   >{{ cartStore.total }}</bdi
                 ></span
               >

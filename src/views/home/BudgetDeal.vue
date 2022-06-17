@@ -6,7 +6,7 @@
         <div class="site-module list-products">
           <div class="module-header">
             <h4 class="entry-title">{{ $t("Budget_deals") }}</h4>
-            <a href="" class="btn link"
+            <a href="" class="btn link move-to-left"
               >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
             ></a>
           </div>

@@ -1148,7 +1148,7 @@
                                                       class="
                                                         woocommerce-Price-currencySymbol
                                                       "
-                                                      >QAR </span
+                                                      >{{$t('QAR')}} </span
                                                     >699.99</bdi
                                                   ></span
                                                 ></del
@@ -1164,7 +1164,7 @@
                                                       class="
                                                         woocommerce-Price-currencySymbol
                                                       "
-                                                      >QAR </span
+                                                      >{{$t('QAR')}} </span
                                                     >629.99</bdi
                                                   ></span
                                                 ></ins
