@@ -1559,14 +1559,17 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
+    var langCode = localStorage.getItem("lang");
+
 
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products&locale=" +
+          langCode
       )
       .then((response) => {
         this.arrivel = response.data.data[0].products;
-        // console.log(this.arrivel);
+        console.log('testing',this.arrivel);
         // const productStore = useProductStore();
         // productStore.testData(this.results);
       })
@@ -1574,7 +1577,8 @@ export default {
 
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=new-arrivel"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=new-arrivel&locale=" +
+          langCode
       )
       .then((response) => {
         this.trends = response.data.data[0].products;
@@ -1627,7 +1631,8 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+          langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1653,7 +1658,7 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id
+            topseller_id  + '&locale='+this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

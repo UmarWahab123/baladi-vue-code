@@ -189,7 +189,7 @@
     "know_us": "Get to Know Us",
     "customer_review": "Customer-review",
     "contact_us": "Contact-Us",
-    "faqs": "FAQs",
+    "faqs": "FAQ's",
     "install_app": "Install App",
     "scan_code": "Scan QR Code To Download Our App",
     "about_baladi": "About Baladi",
@@ -456,8 +456,9 @@
     "is_currently": "is currently",
     "Your_Balance": "Your Balance",
     "Points": "Points",
-    "points_expires": "points expires"
-
+    "points_expires": "points expires",
+    "frequently_asked_questions_below": "Find the answers for the most frequently asked questions below",
+    "Your_question": "Your question"
 
 
 

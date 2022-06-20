@@ -256,12 +256,6 @@ const routes = [{
             import ("@/views/covid/index.vue"),
     },
     {
-        name: "review",
-        path: "/" + langCode + "/review",
-        component: () =>
-            import ("@/views/review/index.vue"),
-    },
-    {
         name: "all_categories",
         path: "/" + langCode + "/all_categories/:id?",
         component: () =>

@@ -9,8 +9,7 @@
                                 <div class="elementor-element elementor-element-fdd26bd elementor-widget elementor-widget-heading"
                                     data-id="fdd26bd" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Who we share your
-                                            data with</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('share')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -27,8 +26,7 @@
                                 <div class="elementor-element elementor-element-b663cf1 elementor-widget elementor-widget-heading"
                                     data-id="b663cf1" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">If you request a
-                                            password reset, your IP address will be included in the reset email.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('password_reset')}}
 
                                         </p>
                                     </div>
@@ -47,8 +45,7 @@
                                 <div class="elementor-element elementor-element-5dcd2f5 elementor-widget elementor-widget-heading"
                                     data-id="5dcd2f5" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">How long we retain
-                                            your data
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('retain')}}
                                         </h3>
                                     </div>
                                 </div>
@@ -66,16 +63,9 @@
                                 <div class="elementor-element elementor-element-854434f elementor-widget elementor-widget-heading"
                                     data-id="854434f" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">If you leave a
-                                            comment, the comment and its metadata are retained indefinitely. This is so
-                                            we can recognize and approve any follow-up comments automatically instead of
-                                            holding them in a moderation queue.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('you_leave')}}
 
-                                            For users that register on our website (if any), we also store the personal
-                                            information they provide in their user profile. All users can see, edit, or
-                                            delete their personal information at any time (except they cannot change
-                                            their username). Website administrators can also see and edit that
-                                            information.</p>
+                                          {{$t('users_register')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -92,8 +82,7 @@
                                 <div class="elementor-element elementor-element-4b57b47 elementor-widget elementor-widget-heading"
                                     data-id="4b57b47" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">What rights you have
-                                            over your data</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('your_data')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -110,12 +99,7 @@
                                 <div class="elementor-element elementor-element-11f243a elementor-widget elementor-widget-heading"
                                     data-id="11f243a" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">If you have an account
-                                            on this site, or have left comments, you can request to receive an exported
-                                            file of the personal data we hold about you, including any data you have
-                                            provided to us. You can also request that we erase any personal data we hold
-                                            about you. This does not include any data we are obliged to keep for
-                                            administrative, legal, or security purposes.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('account_this_site')}}
 
                                         </p>
                                     </div>
@@ -134,8 +118,7 @@
                                 <div class="elementor-element elementor-element-b186463 elementor-widget elementor-widget-heading"
                                     data-id="b186463" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h3 class="elementor-heading-title elementor-size-default">Where we send your
-                                            data</h3>
+                                        <h3 class="elementor-heading-title elementor-size-default">{{$t('send_your_data')}}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -152,8 +135,7 @@
                                 <div class="elementor-element elementor-element-de48a34 elementor-widget elementor-widget-heading"
                                     data-id="de48a34" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <p class="elementor-heading-title elementor-size-default">Visitor comments may
-                                            be checked through an automated spam detection service.
+                                        <p class="elementor-heading-title elementor-size-default">{{$t('visitor_comments')}}
 
                                         </p>
                                     </div>

@@ -1541,10 +1541,12 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
+    var langCode = localStorage.getItem("lang");
 
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=smart-phone-accesseries"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=smart-phone-accesseries&locale=" +
+          langCode
       )
       .then((response) => {
         this.smartphone = response.data.data[0].products;
@@ -1598,7 +1600,8 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist",
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+          langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1624,7 +1627,7 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id
+            topseller_id  + '&locale='+this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

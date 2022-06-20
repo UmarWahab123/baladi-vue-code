@@ -1006,36 +1006,13 @@
                         current-menu-item current_page_item
                         menu-item-home
                       "
+                       :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in topcategory"
                     >
-                      <a href="#">Top Electronics</a>
+                      <a href="#">{{item.name}}</a>
                     </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="#home-2/">Top Baby Products</a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="index-2.html">Top Personal Care </a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="#home-4/">Top Groceries</a>
-                    </li>
+                   
                   </ul>
                 </li>
                 <li
@@ -1403,7 +1380,10 @@
                   <!-- discount-products-header -->
 
                   <div class="products column-6">
-                    <div class="product" v-for="n in 6">
+                    <div class="product"
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in dicount">
                       <div class="product-wrapper">
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
@@ -1417,7 +1397,7 @@
                           <div class="content-wrapper">
                             <h3 class="product-title">
                               <a href=""
-                                >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
+                                >{{item.product.product_name}}</a
                               >
                             </h3>
                             <div class="product-rating">
@@ -1433,7 +1413,7 @@
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                                 {{ item.product.review_count }} <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <span class="price"
@@ -1443,7 +1423,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >9.00</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.previous_price
+                                    }}</bdi
                                   >
                                 </span></del
                               >
@@ -1453,7 +1436,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >4.00</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.regular_price
+                                    }}</bdi
                                   >
                                 </span></ins
                               ></span
@@ -1509,6 +1495,7 @@ export default {
   data: () => ({
     userdata: { name: "" },
     id: "",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     showmenu: "",
     results: [],
     overflow: "",
@@ -1516,8 +1503,10 @@ export default {
     isChecked: false,
     langCode: "en",
     searchResults: [],
+    dicount:[],
     guestCheck: true,
     loginCheck: false,
+    topcategory: [],
   }),
   mounted() {
     if (localStorage.userInfo != null) {
@@ -1545,8 +1534,17 @@ export default {
     } else if (lang == "ar") {
       this.isChecked = true;
     }
+     axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=super_discount" 
+      )
+      .then((response) => {
+        this.dicount = response.data.data[0].products;
+        console.log("discount data", this.dicount);
+      })
+      .catch((error) => {});
     this.langCode = lang;
-
+ 
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=" +
@@ -1556,8 +1554,19 @@ export default {
         this.results = response.data.data.data;
       })
       .catch((error) => {});
-
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/header/topCategories?locale=" +
+          lang
+      )
+      .then((response) => {
+        this.topcategory = response.data.data;
+        // console.log('hsdg',this.topcategory);
+       
+      })
+      .catch((error) => {});
     this.getWishList();
+    
   },
   methods: {
     getWishList() {

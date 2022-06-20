@@ -2113,9 +2113,12 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
+    var langCode = localStorage.getItem("lang");
+
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products&locale=" +
+          langCode
       )
       .then((response) => {
         this.trends = response.data.data[0].products;
@@ -2126,7 +2129,8 @@ export default {
       .catch((error) => {});
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=mega-deals"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=mega-deals&locale=" +
+          langCode
       )
       .then((response) => {
         this.megadeals = response.data.data[0].products;
@@ -2137,7 +2141,8 @@ export default {
       .catch((error) => {});
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=deals-of-the-week"
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=deals-of-the-week&locale=" +
+          langCode
       )
       .then((response) => {
         this.dealsoftheweek = response.data.data[0].products[0];

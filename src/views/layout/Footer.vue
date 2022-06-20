@@ -144,29 +144,11 @@
             >
               <h4 class="widget-title">{{$t('product_categories')}}</h4>
               <ul class="product-categories">
-                <li class="cat-item cat-item-29"><a href="#">Apple</a></li>
-                <li class="cat-item cat-item-40">
-                  <a href="#">Camera &amp; Photo</a>
-                </li>
-                <li class="cat-item cat-item-42 cat-parent">
-                  <a href="#">Cell Phones</a>
-                </li>
-                <li class="cat-item cat-item-44 cat-parent">
-                  <a href="#">Computers &amp; Accessories</a>
-                </li>
-                <li class="cat-item cat-item-51"><a href="#">Headphones</a></li>
-                <li class="cat-item cat-item-90">
-                  <a href="#">Smartwatches</a>
-                </li>
-                <li class="cat-item cat-item-93">
-                  <a href="#">Sports &amp; Outdoors</a>
-                </li>
-                <li class="cat-item cat-item-96">
-                  <a href="#">Television &amp; Video</a>
-                </li>
-                <li class="cat-item cat-item-103">
-                  <a href="#">Video Games</a>
-                </li>
+            <li  :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in results" 
+                    class="cat-item cat-item-29"><a href="#">{{item.name}}</a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -295,19 +277,6 @@
                   >
                     <router-link :to="'/' + langCode + '/aboutus'"
                       >{{$t('about_us')}}</router-link
-                    >
-                  </li>
-                  <li
-                    id="menu-item-2190"
-                    class="
-                      menu-item
-                      menu-item-type-custom
-                      menu-item-object-custom
-                      menu-item-2190
-                    "
-                  >
-                    <router-link :to="'/' + langCode + '/review'"
-                      >{{$t('customer_review')}}</router-link
                     >
                   </li>
                   <li
@@ -603,6 +572,7 @@
 
 <script>
 // import * as myKey from '/../src/styles/app.css';
+import axios from "axios";
 
 export default {
   data() {
@@ -610,6 +580,9 @@ export default {
       scTimer: 0,
       scY: 0,
       langCode: "en",
+      url: "http://baladi-v1.bteamwebs.com/storage/",
+      results: [],
+
     };
   },
   mounted() {
@@ -619,8 +592,18 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/header/topCategories?locale=" +
+          lang
+      )
+      .then((response) => {
+        this.results = response.data.data;
+        // console.log('hsdg',this.results);
+       
+      })
+      .catch((error) => {});
   },
-
   methods: {
     handleScroll: function () {
       if (this.scTimer) return;

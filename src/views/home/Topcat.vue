@@ -99,7 +99,7 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data.slider_slides;
-        console.log("slider data", this.results);
+        // console.log("slider data", this.results);
       })
       .catch((error) => {});
   },
