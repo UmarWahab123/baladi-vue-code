@@ -235,15 +235,18 @@ export default {
     brands: [],
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/header/categories")
+      .get(import.meta.env.VITE_API_URL + "/api/web/header/categories?locale=" +
+          langCode)
       .then((response) => {
         this.results = response.data.data;
         // console.log(this.results);
       })
       .catch((error) => {});
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands")
+      .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands?locale=" +
+          langCode)
       .then((response) => {
         this.brands = response.data.data;
         // console.log(this.brands);

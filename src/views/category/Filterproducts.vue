@@ -1,6 +1,6 @@
 <template>
   <div class="col col-12 col-lg-9 content-primary">
-    <div class="products column-4 mobile-2">
+    <div class="products column-4 mobile-2" v-if="isCount">
       <div
         class="
           product
@@ -178,7 +178,7 @@
                     ><span class="woocommerce-Price-amount amount">
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >{{$t('QAR')}} </span
+                          >{{ $t("QAR") }} </span
                         >{{ item?.previous_price }}</bdi
                       >
                     </span></del
@@ -190,7 +190,7 @@
                     >
                       <bdi
                         ><span class="woocommerce-Price-currencySymbol"
-                          >{{$t('QAR')}} </span
+                          >{{ $t("QAR") }} </span
                         >{{ item?.regular_price }}</bdi
                       >
                     </span></ins
@@ -204,8 +204,16 @@
                     add_to_cart_button
                     ajax_add_to_cart
                   "
-                  @click="addtoCart(item)"
+                  v-if="ButtonCheck"
+                  @click="addtoCart(item, index)"
                   ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                >
+                <a
+                  v-if="item?.check"
+                  href="javascript:void(0)"
+                  class="added_to_cart wc-forward"
+                  title="View cart"
+                  >View cart</a
                 >
               </div>
             </div>
@@ -254,6 +262,9 @@
           <div class="tinvwl-tooltip">Add to Wishlist</div>
         </div>
       </div>
+    </div>
+    <div v-else>
+      <h1 class="text-center">No Result Found</h1>
     </div>
   </div>
 
@@ -968,7 +979,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -977,7 +988,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -988,7 +999,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -997,7 +1008,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1008,7 +1019,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1017,7 +1028,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1458,6 +1469,8 @@ export default {
     },
     langCode: "en",
     results: [],
+    isCount: false,
+    ButtonCheck: true,
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -1488,13 +1501,16 @@ export default {
         // console.log(response.data.data.data);
         this.results = response.data.data.data;
         console.log("response.data.data", response.data.data.data);
+        this.isCount = true;
       })
       .catch((error) => {});
   },
   methods: {
-    addtoCart(item) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
+      this.results[index].check = true;
+      this.results[index].ButtonCheck = false;
     },
     clickmodal(index) {
       this.showmodal = "show";

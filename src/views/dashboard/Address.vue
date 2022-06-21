@@ -117,7 +117,7 @@
                           >
                             <router-link
                               :to="'/' + langCode + '/shipping'"
-                              class="woocommerce-button button view"
+                              class="woocommerce-button button view buttonsalignment"
                               >{{$t('edit')}}
                             </router-link>
                             <router-link
@@ -170,7 +170,7 @@
                           >
                             <router-link
                               to="shipping"
-                              class="woocommerce-button button view"
+                              class="woocommerce-button button view buttonsalignment"
                               >{{$t('edit')}}
                             </router-link>
                             <router-link

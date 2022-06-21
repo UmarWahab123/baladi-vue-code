@@ -743,7 +743,7 @@
                       </div>
                     </div>
 
-                    <Summary v-if="guestCheck" />
+                    <Summary v-if="guestCheck" @guetClick="onClickGuest" />
                     <LoginSummary v-if="loginCheck" @clicked="onClickChild" />
                   </div>
                 </form>
@@ -971,6 +971,48 @@ export default {
           }
         })
         .catch((error) => {});
+    },
+    onClickGuest() {
+      alert("Guest");
+      const payload = {
+        billing_address_id: this.FormData.billing_address_id,
+        shipping_as_billing: this.FormData.shipping_as_billing,
+        delivery_note: this.FormData.delivery_note,
+        payment_method: this.FormData.payment_method,
+        coupon_code: this.FormData.coupon_code,
+        shipping_address_id: this.FormData.shipping_address_id,
+        billing_address: {
+          first_name: this.billing_address.first_name,
+          last_name: this.billing_address.last_name,
+          zone_no: this.billing_address.zone_no,
+          contact_no: this.billing_address.contact_no,
+          building_no: this.billing_address.building_no,
+          address_line_1: this.billing_address.address_line_1,
+          address_line_2: this.billing_address.address_line_2,
+          city_id: this.billing_address.city_id,
+          address_title: this.billing_address.address_title,
+        },
+        shipping_address: {
+          // first_name: this.shipping_address.first_name,
+          // last_name: this.shipping_address.last_name,
+          // zone_no: this.shipping_address.zone_no,
+          // building_no: this.shipping_address.building_no,
+          // address_line_1: this.shipping_address.address_line_1,
+          // address_line_2: this.shipping_address.address_line_2,
+          // city_id: this.shipping_address.city_id,
+          // address_title: this.shipping_address.address_title,
+          // contact_no: this.shipping_address.contact_no,
+          first_name: this.billing_address.first_name,
+          last_name: this.billing_address.last_name,
+          zone_no: this.billing_address.zone_no,
+          contact_no: this.billing_address.contact_no,
+          building_no: this.billing_address.building_no,
+          address_line_1: this.billing_address.address_line_1,
+          address_line_2: this.billing_address.address_line_2,
+          city_id: this.billing_address.city_id,
+          address_title: this.billing_address.address_title,
+        },
+      };
     },
   },
 };

@@ -205,8 +205,10 @@ export default {
     results: [],
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=en")
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=" +
+          langCode)
       .then((response) => {
         this.results = response.data.data.data;
         console.log(this.results);

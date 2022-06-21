@@ -1492,7 +1492,7 @@ export default {
     var id = this.$route.params.id;
     console.log(id);
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/brandProducts/" + id)
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/brandProducts/" + id +'&locale='+this.langCode)
       .then((response) => {
         this.results = response.data.data.data;
         console.log("brand product", this.results);

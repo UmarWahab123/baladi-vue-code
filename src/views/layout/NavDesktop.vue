@@ -769,7 +769,7 @@
                     "
                     :data="item"
                     :key="indextr"
-                    v-for="(item, indextr) in results.slice(0, 11)"
+                    v-for="(item, indextr) in results?.slice(0, 11)"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -816,7 +816,7 @@
                                         :key="indextr"
                                         v-for="(
                                           items, indextr
-                                        ) in item.sub_categories.slice(0, 10)"
+                                        ) in item.sub_categories?.slice(0, 10)"
                                       >
                                         <router-link
                                           :to="
@@ -1034,7 +1034,6 @@
                         menu-item-object-page menu-item-has-children
                       "
                     >
-                      <a href="#">Samsung</a>
                       <ul class="sub-menu">
                         <li
                           class="
@@ -1043,7 +1042,11 @@
                             menu-item-object-page
                           "
                         >
-                          <a href="#">Mobiles</a>
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[0]?.id"
+                              >{{brands[0]?.name}}
+                            </router-link>
                         </li>
                         <li
                           class="
@@ -1052,7 +1055,11 @@
                             menu-item-object-custom
                           "
                         >
-                          <a href="#?opt=right-sidebar">Waches</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[1]?.id"
+                              >{{brands[1]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
@@ -1061,43 +1068,11 @@
                             menu-item-object-custom
                           "
                         >
-                          <a href="#?column=5&amp;opt=wide">Laptops Pcs</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=5&amp;opt=full-width">Headphones</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?shop_view=list_view">Tv And Projectors</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?ft=load-more">Gadgets</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?ft=infinite">Small Appliences</a>
+                       <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[2]?.id"
+                              >{{brands[2]?.name}}
+                        </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1108,7 +1083,6 @@
                         menu-item-object-product menu-item-has-children
                       "
                     >
-                      <a href="">Nestle</a>
                       <ul class="sub-menu">
                         <li
                           class="
@@ -1117,7 +1091,11 @@
                             menu-item-object-product
                           "
                         >
-                          <a href="">Nestle Milk</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[3]?.id"
+                              >{{brands[3]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
@@ -1126,7 +1104,11 @@
                             menu-item-object-product
                           "
                         >
-                          <a href="#">Nestle Powdered Milk</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[4]?.id"
+                              >{{brands[4]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
@@ -1135,25 +1117,61 @@
                             menu-item-object-product
                           "
                         >
-                          <a href="#">Nestle Juices</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[5]?.id"
+                              >{{brands[5]?.name}}
+                        </router-link>
+                        </li>       
+                      </ul>
+                    </li>
+                    <li
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-has-children
+                      "
+                    >
+                      <ul class="sub-menu">
+                       <li
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
+                        >
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[6]?.id"
+                              >{{brands[6]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
                             menu-item
                             menu-item-type-post_type
-                            menu-item-object-product
+                            menu-item-object-page
                           "
                         >
-                          <a href="#">Nestle Coffee</a>
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[7]?.id"
+                              >{{brands[7]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
                             menu-item
                             menu-item-type-post_type
-                            menu-item-object-product
+                            menu-item-object-page
                           "
                         >
-                          <a href="#">Nestle Water</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[8]?.id"
+                              >{{brands[8]?.name}}
+                        </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1165,52 +1183,19 @@
                         menu-item-has-children
                       "
                     >
-                      <a href="#">Lays</a>
                       <ul class="sub-menu">
-                        <li
+                      <li
                           class="
                             menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
+                            menu-item-type-custom
+                            menu-item-object-custom
                           "
                         >
-                          <a href="#">Lays Dips</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Kettle Cooked </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Layers</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Poppibles</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Stakes</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[9]?.id"
+                              >{{brands[9]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
@@ -1219,7 +1204,11 @@
                             menu-item-object-custom
                           "
                         >
-                          <a href="#">Lays wavy</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[10]?.id"
+                              >{{brands[10]?.name}}
+                        </router-link>
                         </li>
                         <li
                           class="
@@ -1228,84 +1217,11 @@
                             menu-item-object-custom
                           "
                         >
-                          <a href="#">Lays Varaity Pack </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-has-children
-                      "
-                    >
-                      <a href="#">Baladi Products</a>
-                      <ul class="sub-menu">
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Fruits </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Vegetables </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Bakery</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=4">Eggs</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=4&amp;opt=wide">Milk And Laban</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=5&amp;opt=wide"
-                            >Fish And See Food</a
-                          >
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=6&amp;opt=wide">Yughurt</a>
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + brands[11]?.id"
+                              >{{brands[11]?.name}}
+                        </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1507,6 +1423,7 @@ export default {
     guestCheck: true,
     loginCheck: false,
     topcategory: [],
+    brands:[],
   }),
   mounted() {
     if (localStorage.userInfo != null) {
@@ -1565,6 +1482,16 @@ export default {
        
       })
       .catch((error) => {});
+     var langCode = localStorage.getItem("lang");
+    axios
+      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands?locale=" +
+          langCode)
+      .then((response) => {
+        this.brands = response.data.data;
+        console.log('allbrands',this.brands);
+      })
+      .catch((error) => {});
+   
     this.getWishList();
     
   },

@@ -4,10 +4,11 @@ import App from "@/App.vue";
 import router from "@/router";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 // import '@/styles/index.css'
 var langCode = localStorage.getItem("lang");
 if (langCode == "ar") {
-    document.getElementById("body").classList.add('rtl');
+    document.getElementById("body").classList.add("rtl");
 
     import ("@/assets/rtl/wc-blocks-style-rtl.css");
     import ("@/assets/rtl/styles-rtl.css");
@@ -33,10 +34,11 @@ if (langCode == "ar") {
 import axios from "axios";
 
 import i18n from "./i18n";
-
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
 createApp(App)
     .use(i18n)
     .use(router)
     .use(VueSweetalert2)
-    .use(createPinia())
+    .use(pinia)
     .mount("#app");

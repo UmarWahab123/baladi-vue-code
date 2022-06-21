@@ -366,8 +366,11 @@ export default {
     };
   },
   mounted() {
+    var langCode = localStorage.getItem("lang");
+
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/faqs?locale=en")
+      .get("http://baladi-v1.bteamwebs.com/api/web/faqs?locale="+
+          langCode)
       .then((response) => {
         this.results = response.data.data;
       })

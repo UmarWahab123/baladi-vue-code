@@ -4,30 +4,30 @@
     v-for="(item, name, indextr) in cartStore.grouped"
   >
     <td class="product-thumbnail">
-      <!-- <a href="javascript:void(0)"
-                              ><img
-                                width="90"
-                                height="90"
-                                :src="url + item[0].images[0].photo"
-                                class="
-                                  attachment-woocommerce_thumbnail
-                                  size-woocommerce_thumbnail
-                                "
-                                alt=""
-                                loading="lazy"
-                                sizes="(max-width: 90px) 100vw, 90px"
-                            />
-                            </a> -->
+      <a href="javascript:void(0)"
+        ><img
+          width="90"
+          height="90"
+          :src="
+            'http://baladi-v1.bteamwebs.com/storage/' +
+            item[0].product?.gallery?.gallery_images[0]?.image_sm
+          "
+          class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+          alt=""
+          loading="lazy"
+          sizes="(max-width: 90px) 100vw, 90px"
+        />
+      </a>
     </td>
     <td class="product-name" data-title="Product">
-      <a href="javascript:void(0)"> {{ item[0].product.product_name }}</a>
+      <a href="javascript:void(0)"> {{ item[0]?.product?.product_name }}</a>
     </td>
 
     <td class="product-price" data-title="Price">
       <span class="woocommerce-Price-amount amount">
         <bdi
           ><span class="woocommerce-Price-currencySymbol">$</span>
-          {{ item[0].product.variant_base_price }}
+          {{ item[0]?.product?.variant_base_price }}
         </bdi></span
       >
     </td>
@@ -72,7 +72,7 @@
         <bdi
           ><span class="woocommerce-Price-currencySymbol">$</span>
           {{
-            cartStore.groupedCount(name) * item[0].product.variant_base_price
+            cartStore.groupedCount(name) * item[0]?.product?.variant_base_price
           }}</bdi
         ></span
       >

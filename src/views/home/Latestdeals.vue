@@ -1745,6 +1745,7 @@ export default {
     clickbigmodal(event) {
       const topseller_id = event.currentTarget.getAttribute("topseller_id");
       // alert(topseller_id);
+      
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +

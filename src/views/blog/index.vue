@@ -266,9 +266,12 @@ export default {
     langCode: "en",
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
+
     axios
       // .get(import.meta.env.VITE_API_URL + "/api/web/blog")
-      .get("http://baladi-v1.bteamwebs.com/api/web/blog")
+      .get("http://baladi-v1.bteamwebs.com/api/web/blog?locale=" +
+          langCode)
       .then((response) => {
         this.results = response.data.data;
       })

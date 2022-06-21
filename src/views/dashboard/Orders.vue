@@ -207,6 +207,8 @@ export default {
     };
   },
   mounted() {
+    var langCode = localStorage.getItem("lang");
+
     if (localStorage.userInfo != null) {
       this.token = JSON.parse(localStorage.userInfo).token;
       //  console.log(this.token);
@@ -224,7 +226,8 @@ export default {
     this.langCode = lang;
     axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/mobile/product/getcustomerorders",
+        "http://baladi-v1.bteamwebs.com/api/mobile/product/getcustomerorders?locale=" +
+          langCode,
         {
           headers: {
             Authorization: "Bearer " + this.token,

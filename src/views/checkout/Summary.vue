@@ -13,7 +13,7 @@
         <tbody>
           <tr class="cart_item" v-for="(item, name) in cartStore.grouped">
             <td class="product-name">
-              {{ item[0].name }}
+              {{ item[0]?.product?.product_name }}
               <strong class="product-quantity"
                 >×&nbsp;{{ cartStore.groupedCount(name) }}</strong
               >
@@ -22,7 +22,10 @@
               <span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">$</span
-                  >{{ cartStore.groupedCount(name) * item[0].sale_price }}</bdi
+                  >{{
+                    cartStore.groupedCount(name) *
+                    item[0]?.product?.variant_base_price
+                  }}</bdi
                 ></span
               >
             </td>
@@ -35,7 +38,7 @@
               <span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">$</span
-                  >749.90</bdi
+                  >{{ cartStore.total }}</bdi
                 ></span
               >
             </td>
@@ -117,7 +120,6 @@
               class="input-radio"
               name="payment_method"
               value="bacs"
-              checked="checked"
               data-order_button_text=""
             />
 
@@ -167,6 +169,7 @@
               class="input-radio"
               name="payment_method"
               value="cod"
+              checked="checked"
               data-order_button_text=""
             />
 
@@ -195,14 +198,15 @@
           </noscript>
 
           <div class="woocommerce-terms-and-conditions-wrapper">
-               <div class="woocommerce-privacy-policy-text">
+            <div class="woocommerce-privacy-policy-text">
               <p>
-               {{$t('privacyinfo')}}
+                {{ $t("privacyinfo") }}
                 <a
                   href=""
                   class="woocommerce-privacy-policy-link"
                   target="_blank"
-                  >  {{$t('privacy_policy')}}</a
+                >
+                  {{ $t("privacy_policy") }}</a
                 >.
               </p>
             </div>
@@ -343,13 +347,14 @@
           </div>
 
           <a
-            href="/order-confirmation"
+            href="javascript:void(0)"
             type=""
             class="button alt"
             name=""
             id=""
             value="Place order"
             data-value="Place order"
+            @click="onClickButton"
             >{{ $t("place_order") }}</a
           >
 
@@ -513,6 +518,9 @@ export default {
       this.showpaypal = "";
       this.visa = "active";
       this.showvisa = "active show";
+    },
+    onClickButton() {
+      this.$emit("guetClick");
     },
   },
 };

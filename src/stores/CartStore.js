@@ -8,6 +8,7 @@ export const useCartStore = defineStore("CartStore", {
       items: [],
     };
   },
+  persist: true,
   getters: {
     count() {
       return this.items.length;
@@ -16,7 +17,10 @@ export const useCartStore = defineStore("CartStore", {
       return this.count === 0;
     },
     grouped: (state) => {
-      const grouped = groupBy(state.items, (item) => item.product.product_name);
+      const grouped = groupBy(
+        state.items,
+        (item) => item.product?.product_name
+      );
       const sorted = Object.keys(grouped).sort();
       let inOrder = {};
       sorted.forEach((key) => (inOrder[key] = grouped[key]));
@@ -25,7 +29,7 @@ export const useCartStore = defineStore("CartStore", {
     groupedCount: (state) => (name) => state.grouped[name].length,
     total: (state) =>
       state.items.reduce(
-        (p, c) => p + parseInt(c.product.variant_base_price),
+        (p, c) => p + parseInt(c.product?.variant_base_price),
         0
       ),
   },
@@ -35,8 +39,8 @@ export const useCartStore = defineStore("CartStore", {
       if (item.product == null) {
         const product = {
           product: {
-            variant_base_price: item.variant_base_price,
-            product_name: item.product_name,
+            variant_base_price: item?.variant_base_price,
+            product_name: item?.product_name,
           },
         };
         const fulldata = Object.assign(item, product);

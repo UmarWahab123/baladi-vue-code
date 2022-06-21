@@ -1806,6 +1806,7 @@ export default {
         // console.log(this.results);
         const productStore = useProductStore();
         productStore.BudgetDealData(this.results);
+      
       })
       .catch((error) => {});
     axios
