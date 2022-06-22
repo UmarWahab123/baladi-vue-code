@@ -187,10 +187,12 @@ export default {
     console.log(id);
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
     this.token = userInfo.token;
+    var langCode = localStorage.getItem("lang");
+
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/driver/orderdetails?order_id=" +
-          id,
+          id + '&locale='+this.langCode,
         {
           headers: {
             Authorization: "Bearer " + this.token,

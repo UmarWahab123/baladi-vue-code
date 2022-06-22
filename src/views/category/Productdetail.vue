@@ -2519,10 +2519,12 @@ export default {
     setTimeout(() => (this.isloading = false), 1000);
     var id = this.$route.params.id;
     console.log(id);
+    var langCode = localStorage.getItem("lang");
+
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-          id
+          id + '&locale='+this.langCode
       )
       .then((response) => {
         console.log(response.data);

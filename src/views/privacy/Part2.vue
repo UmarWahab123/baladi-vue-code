@@ -65,7 +65,7 @@
                                     <div class="elementor-widget-container">
                                         <p class="elementor-heading-title elementor-size-default">{{$t('you_leave')}}
 
-                                            {{$t('users_register')}}</p>
+                                          {{$t('users_register')}}</p>
                                     </div>
                                 </div>
                             </div>

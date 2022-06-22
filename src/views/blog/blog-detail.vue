@@ -648,9 +648,10 @@ export default {
       this.results[0].comments[indcomments].reply = false;
     },
     postDetail() {
+      var langCode = localStorage.getItem("lang");
       var id = this.$route.params.id;
       axios
-        .get("http://baladi-v1.bteamwebs.com/api/web/blogdetails/" + id)
+        .get("http://baladi-v1.bteamwebs.com/api/web/blogdetails/" + id + '&locale='+this.langCode)
         .then((response) => {
           this.results = response.data.data;
           console.log(this.results);

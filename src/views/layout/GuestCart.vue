@@ -9,11 +9,12 @@
       </div>
       <!-- header-addons-icon -->
       <div class="header-addons-text hide-mobile header-setup-style">
-        <div class="sub-text">{{$t('total')}}</div>
+        <div class="sub-text">{{ $t("total") }}</div>
         <div class="primary-text cart-subtotal">
           <span class="woocommerce-Price-amount amount">
             <bdi
-              ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
+              ><span class="woocommerce-Price-currencySymbol"
+                >{{ $t("QAR") }} </span
               >{{ cartStore.total }}</bdi
             >
           </span>
@@ -132,29 +133,27 @@
                           <a
                             href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
                           >
-                            <!-- <img
-                                        width="90"
-                                        height="90"
-                                        :src="
-                                          'http://baladiweb.bteamwebs.com/storage/' +
-                                            item[0].images.length >
-                                          0
-                                            ? item[0].images[0].photo
-                                            : ''
-                                        "
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
-                                        alt=""
-                                      /> -->
+                            <img
+                              width="90"
+                              height="90"
+                              :src="
+                                'http://baladi-v1.bteamwebs.com/storage/' +
+                                item[0].product?.gallery?.gallery_images[0]
+                                  ?.image_sm
+                              "
+                              class="
+                                attachment-woocommerce_thumbnail
+                                size-woocommerce_thumbnail
+                              "
+                              alt=""
+                            />
                           </a>
                         </div>
                         <!-- thumbnail-wrapper -->
                         <div class="content-wrapper">
                           <h3 class="product-title">
                             <a href="javascript:void(0)">{{
-                              item[0].product.product_name
+                              item[0]?.product?.product_name?item[0]?.product?.product_name:item[0]?.product_name
                             }}</a>
                           </h3>
                           <div class="entry-price">
@@ -169,7 +168,7 @@
                                   </span>
                                   {{
                                     cartStore.groupedCount(name) *
-                                    item[0].product.variant_base_price
+                                    item[0]?.product?.variant_base_price?item[0]?.product?.variant_base_price:item[0]?.variant_base_price
                                   }}
                                 </bdi>
                               </span></span
@@ -244,19 +243,19 @@
             <router-link
               class="button wc-forward"
               :to="'/' + langCode + '/cart'"
-              >{{$t('Viewcart')}}
+              >{{ $t("Viewcart") }}
             </router-link>
 
             <router-link
               class="button checkout wc-forward"
               :to="'/' + langCode + '/checkout'"
             >
-              {{$t('Checkout')}}
+              {{ $t("Checkout") }}
             </router-link>
           </p>
         </div>
         <div v-else>
-          <h3 class="p-2">{{$t('Cart_is_Empty')}}</h3>
+          <h3 class="p-2">{{ $t("Cart_is_Empty") }}</h3>
         </div>
 
         <!-- cart-noticy -->

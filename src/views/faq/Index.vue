@@ -4,12 +4,12 @@
     <div class="site-content">
       <div class="shop-content my-account-page mt-60">
         <div class="container">
-          <h3 class="text-center mb-4 pb-2 text-success fw-bold">{{$t('FAQs')}}</h3>
+          <h3 class="text-center mb-4 pb-2 text-success fw-bold">{{$t('faqs')}}</h3>
           <div class="row">
             <section>
               <div class="site-module module-title small">
                 <p class="text-center entry-subtitle mb-5">
-                  {{$t('Find_the_answers_for_below')}}
+                  {{$t('frequently_asked_questions_below')}}
                 </p>
               </div>
 
@@ -366,8 +366,11 @@ export default {
     };
   },
   mounted() {
+    var langCode = localStorage.getItem("lang");
+
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/faqs?locale=en")
+      .get("http://baladi-v1.bteamwebs.com/api/web/faqs?locale="+
+          langCode)
       .then((response) => {
         this.results = response.data.data;
       })

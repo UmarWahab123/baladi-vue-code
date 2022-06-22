@@ -1706,12 +1706,15 @@ export default {
       alert("ssd");
     },
     getCart() {
+    var langCode = localStorage.getItem("lang");
+
       if (localStorage.userInfo != null) {
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getUserCart",
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getUserCart?locale=" +
+          langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,

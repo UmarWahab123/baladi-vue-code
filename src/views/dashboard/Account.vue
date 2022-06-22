@@ -252,8 +252,10 @@ export default {
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.token = userInfo.token;
+      var langCode = localStorage.getItem("lang");
       axios
-        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile", {
+        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile?locale=" +
+          langCode, {
           headers: {
             Authorization: "Bearer " + this.token,
           },

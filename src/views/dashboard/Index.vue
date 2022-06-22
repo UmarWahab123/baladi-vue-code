@@ -71,12 +71,14 @@ export default {
     };
   },
   mounted() {
+    var langCode = localStorage.getItem("lang");
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       // this.userdata.name = userInfo.name;
       // console.log(this.userdata);
       axios
-        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile", {
+        .get("http://baladi-v1.bteamwebs.com/api/auth/getProfile?locale=" +
+          langCode, {
           headers: {
             Authorization: "Bearer " + userInfo.token,
           },

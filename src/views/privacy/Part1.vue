@@ -28,7 +28,7 @@
                                     data-id="18729f6" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <p class="elementor-heading-title elementor-size-default">{{$t('website_address')}}
-                                            :www.baladiexpress.com.</p>
+                                            is:www.baladiexpress.com.</p>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                     <div class="elementor-widget-container">
                                         <p class="elementor-heading-title elementor-size-default">{{$t('visitors_leave')}}
 
-                                           {{$t('anonymized')}}.</p>
+                                            {{$t('anonymized')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,11 +136,11 @@
                                     <div class="elementor-widget-container">
                                         <p class="elementor-heading-title elementor-size-default">{{$t('leave_commenton')}}
 
-                                          {{$t('visit')}}
+                                            {{$t('visit')}}
 
-                                            {{$t('you_log_in')}}
+                                          {{$t('you_log_in')}}
 
-                                           {{$t('publish')}}</p>
+                                            {{$t('publish')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -175,10 +175,9 @@
                                     data-id="35ca557" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <p class="elementor-heading-title elementor-size-default">{{$t('visitors_leave')}}
-
                                             {{$t('suggested_text')}}
 
-                                            {{$t('collect_data')}}.</p>
+                                            {{$t('collect_data')}}</p>
                                     </div>
                                 </div>
                             </div>

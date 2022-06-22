@@ -1,13 +1,13 @@
 <template>
   <div class="order-review-wrapper">
-    <h3 id="order_review_heading">{{$t('your_order')}}</h3>
+    <h3 id="order_review_heading">{{ $t("your_order") }}</h3>
 
     <div id="order_review" class="woocommerce-checkout-review-order">
       <table class="shop_table woocommerce-checkout-review-order-table">
         <thead>
           <tr>
-            <th class="product-name">{{$t('Product')}}</th>
-            <th class="product-total">{{$t('Subtotal')}}</th>
+            <th class="product-name">{{ $t("Product") }}</th>
+            <th class="product-total">{{ $t("Subtotal") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
         </tbody>
         <tfoot>
           <tr class="cart-subtotal">
-            <th>{{$t('Subtotal')}}</th>
+            <th>{{ $t("Subtotal") }}</th>
             <td>
               <span class="woocommerce-Price-amount amount"
                 ><bdi
@@ -44,7 +44,7 @@
           </tr>
 
           <tr class="woocommerce-shipping-totals shipping">
-            <th>{{$t('shipping')}}</th>
+            <th>{{ $t("shipping") }}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
                 <li>
@@ -57,7 +57,7 @@
                     class="shipping_method"
                     checked="checked"
                   /><label for="shipping_method_0_flat_rate1"
-                    >{{$t('Flat_rate')}}:
+                    >{{ $t("Flat_rate") }}:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
                         ><span class="woocommerce-Price-currencySymbol">$</span
@@ -74,9 +74,9 @@
                     id="shipping_method_0_free_shipping2"
                     value="free_shipping:2"
                     class="shipping_method"
-                  /><label for="shipping_method_0_free_shipping2"
-                    >{{$t('Free_shippings')}}</label
-                  >
+                  /><label for="shipping_method_0_free_shipping2">{{
+                    $t("Free_shippings")
+                  }}</label>
                 </li>
                 <li>
                   <input
@@ -86,16 +86,16 @@
                     id="shipping_method_0_local_pickup3"
                     value="local_pickup:3"
                     class="shipping_method"
-                  /><label for="shipping_method_0_local_pickup3"
-                    >{{$t('Local_pickup')}}</label
-                  >
+                  /><label for="shipping_method_0_local_pickup3">{{
+                    $t("Local_pickup")
+                  }}</label>
                 </li>
               </ul>
             </td>
           </tr>
 
           <tr class="order-total">
-            <th>{{$t('total')}}</th>
+            <th>{{ $t("total") }}</th>
             <td>
               <strong
                 ><span class="woocommerce-Price-amount amount"
@@ -123,7 +123,7 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_bacs">{{$t('credit_debit')}} </label>
+            <label for="payment_method_bacs">{{ $t("credit_debit") }} </label>
             <div class="panel payment_box payment_method_bacs p-3">
               <button
                 type="button"
@@ -132,7 +132,7 @@
                 data-toggle="modal"
                 data-target="#staticBackdrop"
               >
-                <i class="fa fa-rocket"></i> &nbsp; {{$t('pay_now')}}
+                <i class="fa fa-rocket"></i> &nbsp; {{ $t("pay_now") }}
               </button>
             </div>
           </li>
@@ -151,7 +151,7 @@
             />
 
             <label for="payment_method_cheque" style="display: none">
-              {{$t('Check_payments')}}
+              {{ $t("Check_payments") }}
             </label>
             <div
               class="panel payment_box payment_method_cheque"
@@ -172,12 +172,12 @@
               data-order_button_text=""
             />
 
-            <label for="payment_method_cod"> {{$t('cash_delivery')}} </label>
+            <label for="payment_method_cod"> {{ $t("cash_delivery") }} </label>
             <div
               class="panel payment_box payment_method_cod"
               style="display: none"
             >
-              <p>{{$t('Pay_with_cash_upon_delivery')}}</p>
+              <p>{{ $t("Pay_with_cash_upon_delivery") }}</p>
             </div>
           </li>
         </ul>
@@ -193,19 +193,20 @@
               name="woocommerce_checkout_update_totals"
               value="Update totals"
             >
-              {{$t('Updatetotals')}}
+              {{ $t("Updatetotals") }}
             </button>
           </noscript>
 
           <div class="woocommerce-terms-and-conditions-wrapper">
             <div class="woocommerce-privacy-policy-text">
               <p>
-               {{$t('privacyinfo')}}
+                {{ $t("privacyinfo") }}
                 <a
                   href=""
                   class="woocommerce-privacy-policy-link"
                   target="_blank"
-                  >  {{$t('privacy_policy')}}</a
+                >
+                  {{ $t("privacy_policy") }}</a
                 >.
               </p>
             </div>
@@ -332,12 +333,12 @@
                   id="terms"
                 />
                 <span class="woocommerce-terms-and-conditions-checkbox-text"
-                  >{{$t('read_and_agree')}}
+                  >{{ $t("read_and_agree") }}
                   <a
                     href=""
                     class="woocommerce-terms-and-conditions-link"
                     target="_blank"
-                    >{{$t('terms_and_condition')}}</a
+                    >{{ $t("terms_and_condition") }}</a
                   ></span
                 >&nbsp;<span class="required">*</span>
               </label>
@@ -352,7 +353,7 @@
             value="Place order"
             data-value="Place order"
             @click="onClickButton"
-            >{{$t('place_order')}}</a
+            >{{ $t("place_order") }}</a
           >
 
           <input

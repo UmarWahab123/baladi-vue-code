@@ -769,7 +769,7 @@
                     "
                     :data="item"
                     :key="indextr"
-                    v-for="(item, indextr) in results.slice(0, 11)"
+                    v-for="(item, indextr) in results?.slice(0, 11)"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -816,7 +816,7 @@
                                         :key="indextr"
                                         v-for="(
                                           items, indextr
-                                        ) in item.sub_categories.slice(0, 10)"
+                                        ) in item.sub_categories?.slice(0, 10)"
                                       >
                                         <router-link
                                           :to="
@@ -1006,36 +1006,13 @@
                         current-menu-item current_page_item
                         menu-item-home
                       "
+                       :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in topcategory"
                     >
-                      <a href="#">Top Electronics</a>
+                      <a href="#">{{item.name}}</a>
                     </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="#home-2/">Top Baby Products</a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="index-2.html">Top Personal Care </a>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-post_type
-                        menu-item-object-page
-                      "
-                    >
-                      <a href="#home-4/">Top Groceries</a>
-                    </li>
+                   
                   </ul>
                 </li>
                 <li
@@ -1057,7 +1034,6 @@
                         menu-item-object-page menu-item-has-children
                       "
                     >
-                      <a href="#">Samsung</a>
                       <ul class="sub-menu">
                         <li
                           class="
@@ -1065,63 +1041,17 @@
                             menu-item-type-post_type
                             menu-item-object-page
                           "
-                        >
-                          <a href="#">Mobiles</a>
+                    :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in brands?.slice(0, 3)
+                        ">
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item.name}}
+                            </router-link>
                         </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?opt=right-sidebar">Waches</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=5&amp;opt=wide">Laptops Pcs</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=5&amp;opt=full-width">Headphones</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?shop_view=list_view">Tv And Projectors</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?ft=load-more">Gadgets</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?ft=infinite">Small Appliences</a>
-                        </li>
+                       
                       </ul>
                     </li>
                     <li
@@ -1131,7 +1061,6 @@
                         menu-item-object-product menu-item-has-children
                       "
                     >
-                      <a href="">Nestle</a>
                       <ul class="sub-menu">
                         <li
                           class="
@@ -1139,44 +1068,42 @@
                             menu-item-type-post_type
                             menu-item-object-product
                           "
+                           :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(4, 7)"
                         >
-                          <a href="">Nestle Milk</a>
-                        </li>
-                        <li
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
+                        </router-link>
+                        </li>     
+                      </ul>
+                    </li>
+                    <li
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-has-children
+                      "
+                    >
+                      <ul class="sub-menu">
+                       <li
                           class="
                             menu-item
                             menu-item-type-post_type
-                            menu-item-object-product
+                            menu-item-object-page
                           "
+                          :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(8, 11)"
                         >
-                          <a href="#">Nestle Powdered Milk</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
-                        >
-                          <a href="#">Nestle Juices</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
-                        >
-                          <a href="#">Nestle Coffee</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
-                        >
-                          <a href="#">Nestle Water</a>
+                         <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
+                        </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1188,147 +1115,22 @@
                         menu-item-has-children
                       "
                     >
-                      <a href="#">Lays</a>
                       <ul class="sub-menu">
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Dips</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Kettle Cooked </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Layers</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Poppibles</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                          <a href="#">Lays Stakes</a>
-                        </li>
-                        <li
+                      <li
                           class="
                             menu-item
                             menu-item-type-custom
                             menu-item-object-custom
                           "
+                          :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(11, 15)"
                         >
-                          <a href="#">Lays wavy</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Lays Varaity Pack </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-has-children
-                      "
-                    >
-                      <a href="#">Baladi Products</a>
-                      <ul class="sub-menu">
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Fruits </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Vegetables </a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#">Bakery</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=4">Eggs</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=4&amp;opt=wide">Milk And Laban</a>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=5&amp;opt=wide"
-                            >Fish And See Food</a
-                          >
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                          <a href="#?column=6&amp;opt=wide">Yughurt</a>
+                        <router-link
+                              class=""
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
+                        </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1403,7 +1205,10 @@
                   <!-- discount-products-header -->
 
                   <div class="products column-6">
-                    <div class="product" v-for="n in 6">
+                    <div class="product"
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in dicount">
                       <div class="product-wrapper">
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
@@ -1417,7 +1222,7 @@
                           <div class="content-wrapper">
                             <h3 class="product-title">
                               <a href=""
-                                >Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB</a
+                                >{{item.product.product_name}}</a
                               >
                             </h3>
                             <div class="product-rating">
@@ -1433,7 +1238,7 @@
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                                 {{ item.product.review_count }} <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <span class="price"
@@ -1443,7 +1248,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >9.00</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.previous_price
+                                    }}</bdi
                                   >
                                 </span></del
                               >
@@ -1453,7 +1261,10 @@
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
                                       >QAR </span
-                                    >4.00</bdi
+                                    >{{
+                                      item.product?.uom_products[0]
+                                        ?.regular_price
+                                    }}</bdi
                                   >
                                 </span></ins
                               ></span
@@ -1509,6 +1320,7 @@ export default {
   data: () => ({
     userdata: { name: "" },
     id: "",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     showmenu: "",
     results: [],
     overflow: "",
@@ -1516,10 +1328,15 @@ export default {
     isChecked: false,
     langCode: "en",
     searchResults: [],
+    dicount:[],
     guestCheck: true,
     loginCheck: false,
+    topcategory: [],
+    brands:[],
+    
   }),
   mounted() {
+
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.guestCheck = false;
@@ -1545,8 +1362,17 @@ export default {
     } else if (lang == "ar") {
       this.isChecked = true;
     }
+     axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=super_discount" 
+      )
+      .then((response) => {
+        this.dicount = response.data.data[0].products;
+        console.log("discount data", this.dicount);
+      })
+      .catch((error) => {});
     this.langCode = lang;
-
+ 
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=" +
@@ -1556,10 +1382,37 @@ export default {
         this.results = response.data.data.data;
       })
       .catch((error) => {});
-
+    axios
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/header/topCategories?locale=" +
+          lang
+      )
+      .then((response) => {
+        this.topcategory = response.data.data;
+        // console.log('hsdg',this.topcategory);
+       
+      })
+      .catch((error) => {});
+     var langCode = localStorage.getItem("lang");
+    axios
+      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands?locale=" +
+          langCode)
+      .then((response) => {
+        this.brands = response.data.data;
+        this.brands = this.split(this.brands,4);
+        // console.log('splitedbrands',this.brands);
+      })
+      .catch((error) => {});
+   
     this.getWishList();
+    
   },
   methods: {
+  split (array, cols) {
+    if (cols==1) return array;
+    var size = Math.ceil(array.length / cols);
+    return array.slice(0, size).concat([null]).concat(this.split(array.slice(size), cols-1));
+},
     getWishList() {
       if (localStorage.userInfo != null) {
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -1589,6 +1442,7 @@ export default {
         this.showmenu = "show";
       }
     },
+    
     searchproducts: function (event) {
       this.$router.push("category");
     },

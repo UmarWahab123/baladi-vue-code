@@ -1,4 +1,6 @@
 <template>
+  <CartLoader v-if="isloading" />
+
   <tr
     class="woocommerce-cart-form__cart-item cart_item"
     v-for="(item, indextr) in results"
@@ -96,11 +98,16 @@
 import axios from "axios";
 import { useProductStore } from "../../stores/ProductStore";
 const productStore = useProductStore();
+import CartLoader from "../Loader/CartLoader.vue";
+
 export default {
+  components: { CartLoader },
+
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
     langCode: "en",
+    isloading: true,
   }),
   mounted() {
     var lang = localStorage.getItem("lang");
@@ -144,6 +151,7 @@ export default {
             //     cartStore.items.push(item.uom_product);
             //   }
             // });
+            this.isloading = false;
           })
           .catch((error) => {});
       }

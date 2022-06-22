@@ -9,11 +9,13 @@
       </div>
       <!-- header-addons-icon -->
       <div class="header-addons-text hide-mobile header-setup-style">
-        <div class="sub-text">{{$t('total')}}</div>
+        <div class="sub-text">{{ $t("total") }}</div>
         <div class="primary-text cart-subtotal">
           <span class="woocommerce-Price-amount amount">
             <bdi
-              ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span>
+              ><span class="woocommerce-Price-currencySymbol"
+                >{{ $t("QAR") }}
+              </span>
               {{ productStore.cartTotal }}
             </bdi>
           </span>
@@ -133,21 +135,19 @@
                             href="#product/apple-11-inch-ipad-pro-2021-wi-fi-128gb/"
                           >
                             <!-- <img
-                                        width="90"
-                                        height="90"
-                                        :src="
-                                          'http://baladiweb.bteamwebs.com/storage/' +
-                                            item[0].images.length >
-                                          0
-                                            ? item[0].images[0].photo
-                                            : ''
-                                        "
-                                        class="
-                                          attachment-woocommerce_thumbnail
-                                          size-woocommerce_thumbnail
-                                        "
-                                        alt=""
-                                      /> -->
+                              width="90"
+                              height="90"
+                              :src="
+                                'http://baladi-v1.bteamwebs.com/storage/' +
+                                item[0]?.product?.gallery?.gallery_images[0]
+                                  ?.image_sm
+                              "
+                              class="
+                                attachment-woocommerce_thumbnail
+                                size-woocommerce_thumbnail
+                              "
+                              alt=""
+                            /> -->
                           </a>
                         </div>
                         <!-- thumbnail-wrapper -->
@@ -232,10 +232,12 @@
             </div>
           </div>
           <p class="woocommerce-mini-cart__total total">
-            <strong>{{$t('Subtotal')}}:</strong>
+            <strong>{{ $t("Subtotal") }}:</strong>
             <span class="woocommerce-Price-amount amount">
               <bdi
-                ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span>
+                ><span class="woocommerce-Price-currencySymbol"
+                  >{{ $t("QAR") }}
+                </span>
                 {{ productStore.cartTotal }}
               </bdi>
             </span>
@@ -244,19 +246,19 @@
             <router-link
               class="button wc-forward"
               :to="'/' + langCode + '/cart'"
-              >{{$t('Viewcart')}}
+              >{{ $t("Viewcart") }}
             </router-link>
 
             <router-link
               class="button checkout wc-forward"
               :to="'/' + langCode + '/checkout'"
             >
-              {{$t('Checkout')}}
+              {{ $t("Checkout") }}
             </router-link>
           </p>
         </div>
         <div v-else>
-          <h3 class="p-2">{{$t('Cart_is_Empty')}}</h3>
+          <h3 class="p-2">{{ $t("Cart_is_Empty") }}</h3>
         </div>
 
         <!-- cart-noticy -->

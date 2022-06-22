@@ -184,8 +184,10 @@ export default {
     langCode: "en",
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands")
+      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands?locale=" +
+          langCode)
       .then((response) => {
         this.results = response.data.data;
         console.log(this.results);

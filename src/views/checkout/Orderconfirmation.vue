@@ -231,6 +231,7 @@ export default {
     };
   },
   mounted() {
+    var langCode = localStorage.getItem("lang");
     var id = this.$route.params.id;
     console.log(id);
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -238,7 +239,7 @@ export default {
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/driver/orderdetails?order_id=" +
-          id,
+          id  + '&locale='+this.langCode,
         {
           headers: {
             Authorization: "Bearer " + this.token,

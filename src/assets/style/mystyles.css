@@ -6,6 +6,10 @@ span.tinvwl_add_to_wishlist-text {
     display: none;
 }
 
+.rtl .span.tinvwl_add_to_wishlist-text {
+    display: none;
+}
+
 ol.flex-control-thumbs .owl-item {
     display: inline-block;
 }
@@ -66,4 +70,12 @@ ol.flex-control-thumbs .owl-item {
 
 .rtl .woocommerce-MyAccount-navigation.terms-border-right {
     border-right: none;
+}
+
+.rtl .buttonsalignment {
+    margin-left: 5px;
+}
+
+.rtl .product-buttons {
+    right: auto !important;
 }

@@ -86,8 +86,9 @@ export default {
     langCode: "en",
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/getBrands")
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/getBrands&lang=" + langCode)
       .then((response) => {
         this.results = response.data.data.data;
         // console.log("brand", this.results);
