@@ -153,7 +153,7 @@
                         <div class="content-wrapper">
                           <h3 class="product-title">
                             <a href="javascript:void(0)">{{
-                              item[0]?.product?.product_name
+                              item[0]?.product?.product_name?item[0]?.product?.product_name:item[0]?.product_name
                             }}</a>
                           </h3>
                           <div class="entry-price">
@@ -168,7 +168,7 @@
                                   </span>
                                   {{
                                     cartStore.groupedCount(name) *
-                                    item[0]?.product?.variant_base_price
+                                    item[0]?.product?.variant_base_price?item[0]?.product?.variant_base_price:item[0]?.variant_base_price
                                   }}
                                 </bdi>
                               </span></span

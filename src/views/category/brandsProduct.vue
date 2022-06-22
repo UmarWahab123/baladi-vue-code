@@ -57,7 +57,7 @@
                     <div
                       :data="item"
                       :key="indextr"
-                      v-for="(item, indextr) in results"
+                      v-for="(item, indextr) in productStore.brandsProductlist"
                       class="product custom-hover"
                     >
                       <div class="product-wrapper product-type-1">
@@ -140,7 +140,7 @@
                           </div>
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href=""> {{ item.name }}</a>
+                              <a href=""> {{ item.product_name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -150,12 +150,14 @@
                               >
                                 <span style="width: 100%"
                                   >Rated
-                                  <strong class="rating">5.00</strong> out of
+                                  <strong class="rating">{{
+                                    item.rating
+                                  }}</strong> out of
                                   5</span
                                 >
                               </div>
                               <div class="count-rating">
-                                1 <span class="rating-text">Ratings</span>
+                                 {{ item.review_count }} <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <div class="product-price-cart">
@@ -166,7 +168,10 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >{{$t('QAR')}} </span
-                                      >{{ item.previous_price }}</bdi
+                                      >{{
+                                      item?.uom_products[0]
+                                        ?.previous_price
+                                    }}</bdi
                                     ></span
                                   ></del
                                 >
@@ -176,12 +181,15 @@
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
                                         >{{$t('QAR')}} </span
-                                      >{{ item.regular_price }}</bdi
+                                      >{{
+                                      item?.uom_products[0]
+                                        ?.regular_price
+                                    }}</bdi
                                     ></span
                                   ></ins
                                 ></span
                               ><a
-                                href="?add-to-cart=521"
+                                href="javascript:void(0)"
                                 data-quantity="1"
                                 class="
                                   button
@@ -193,6 +201,7 @@
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
                                 rel="nofollow"
+                                  @click="addtoCart(item)"
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
@@ -1469,6 +1478,11 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
 </script>
 <script>
 import axios from "axios";
@@ -1483,19 +1497,22 @@ export default {
     showbigmodalstyle: "",
     showcomparemodal: "",
     showcomparemodalstyle: "",
-    langCode: "en",
 
     errors: "",
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
+
     console.log("params", this.$route.params);
     var id = this.$route.params.id;
     console.log(id);
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/brandProducts/" + id +'&locale='+this.langCode)
+      .get("http://baladi-v1.bteamwebs.com/api/web/header/brandProducts/" + id + '&locale='+this.langCode)
       .then((response) => {
         this.results = response.data.data.data;
-        console.log("brand product", this.results);
+        const productStore = useProductStore();
+        productStore.brandsProduct(this.results);
+        // console.log("brandnewproduct", this.results);
       })
       .catch((error) => {});
 
@@ -1503,6 +1520,10 @@ export default {
     this.langCode = lang;
   },
   methods: {
+    addtoCart(item) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+    },
     clickmodal(index) {
       this.showmodal = "show";
       this.showmodalstyle = "display:block";

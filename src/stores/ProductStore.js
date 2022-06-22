@@ -13,6 +13,7 @@ export const useProductStore = defineStore("ProductStore", {
             wishListProduct: [],
             cartList: [],
             ids: [],
+            brandsProductlist:[]
         };
     },
     getters: {
@@ -64,6 +65,11 @@ export const useProductStore = defineStore("ProductStore", {
         async cartListData(products) {
             // console.log("products store", products);
             this.cartList = await products; //   console.log("products store", products);
+
+        },
+        async brandsProduct(products) {
+            // console.log("products store", products);
+            this.brandsProductlist = await products; //   console.log("products store", products);
 
         },
     },

@@ -1043,7 +1043,7 @@
                           "
                     :data="item"
                     :key="indextr"
-                    v-for="(item, indextr) in brands?.slice(0, 2)
+                    v-for="(item, indextr) in brands?.slice(0, 3)
                         ">
                          <router-link
                               class=""
@@ -1070,7 +1070,7 @@
                           "
                            :data="item"
                            :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(4, 6)"
+                           v-for="(item, indextr) in brands?.slice(4, 7)"
                         >
                         <router-link
                               class=""
@@ -1097,7 +1097,7 @@
                           "
                           :data="item"
                            :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(8, 10)"
+                           v-for="(item, indextr) in brands?.slice(8, 11)"
                         >
                          <router-link
                               class=""
@@ -1124,7 +1124,7 @@
                           "
                           :data="item"
                            :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(8, 10)"
+                           v-for="(item, indextr) in brands?.slice(11, 15)"
                         >
                         <router-link
                               class=""
