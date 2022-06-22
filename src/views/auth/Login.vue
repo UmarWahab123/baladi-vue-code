@@ -1,6 +1,6 @@
 <template>
   <div class="u-column1 col-md-6">
-    <h2>{{$t('login')}}</h2>
+    <h2>{{ $t("login") }}</h2>
     <div
       class="
         woocommerce-form woocommerce-form-login
@@ -19,7 +19,7 @@
         "
       >
         <label for="username"
-          >{{$t('uName_email')}}&nbsp;<span class="required">*</span></label
+          >{{ $t("uName_email") }}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.email"
@@ -39,7 +39,7 @@
         "
       >
         <label for="password"
-          >{{$t('password')}}&nbsp;<span class="required">*</span></label
+          >{{ $t("password") }}&nbsp;<span class="required">*</span></label
         >
         <span class="password-input"
           ><span class="password-input"
@@ -86,11 +86,11 @@
             id="rememberme"
             value="forever"
           />
-          <span>{{$t('remember_me')}}</span>
+          <span>{{ $t("remember_me") }}</span>
         </label>
         <p class="woocommerce-LostPassword lost_password">
           <router-link :to="'/' + langCode + '/forgot-password'"
-            >{{$t('lost_password')}}?</router-link
+            >{{ $t("lost_password") }}?</router-link
           >
         </p>
       </div>
@@ -101,7 +101,7 @@
         value="Log in"
         @click="submitdata()"
       >
-        {{$t('Log_in')}}
+        {{ $t("Log_in") }}
       </button>
       <a to="/" class="ml-5">
         <input
@@ -120,10 +120,10 @@
           value="Log in"
           @click="submitguestData()"
         >
-          {{$t('continue_as_guest')}}
+          {{ $t("continue_as_guest") }}
         </a></a
       >
-      <p class="mt-3">{{$t('connect_with')}}</p>
+      <p class="mt-3">{{ $t("connect_with") }}</p>
       <div class="social-share site-social colored">
         <ul class="social-container">
           <li>
@@ -163,17 +163,86 @@
           </li>
         </ul>
       </div>
+      <div id="firebaseui-auth-container"></div>
+      <div v-if="isSignedIn">
+        <button @click="handleSignOut">Sign Out</button>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import { ref } from "vue";
+import firebaseConfig from "../../firebaseConfig";
+// v9 compat packages are API compatible with v8 code
+import firebase from "firebase/compat/app";
+firebase.initializeApp(firebaseConfig);
+import * as firebaseui from "firebaseui";
+import "firebaseui/dist/firebaseui.css";
+import { getAuth, signOut } from "firebase/auth";
+const auth = getAuth();
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
 import { required, helpers } from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
-
 export default {
-  setup: () => ({ v$: useVuelidate() }),
+  setup() {
+    const v$ = useVuelidate();
+
+    const user = ref(null);
+    const isSignedIn = ref(false);
+    const uiConfig = {
+      signInFlow: "popup",
+      signinSuccessUrl: "http://localhost:8080/",
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function (authResult) {
+          user.value = authResult.user.displayName;
+          console.log(authResult);
+          isSignedIn.value = true;
+          console.log(
+            "Signed in by user " + user.value,
+            "authResult",
+            authResult
+          );
+
+          // so it doesn't refresh the page
+          return false;
+        },
+        uiShown: function () {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById("loader").style.display = "none";
+        },
+      },
+    };
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.start("#firebaseui-auth-container", uiConfig);
+    const handleSignOut = () => {
+      signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          user.value = null;
+          isSignedIn.value = false;
+          console.log("Signed out");
+          ui.start("#firebaseui-auth-container", uiConfig);
+        })
+        .catch((error) => {
+          // An error happened.
+          console.log(error);
+        });
+    };
+    return {
+      user,
+      isSignedIn,
+      handleSignOut,
+      v$,
+    };
+  },
   data() {
     return {
       formdata: {
