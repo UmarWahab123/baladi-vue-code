@@ -1041,39 +1041,17 @@
                             menu-item-type-post_type
                             menu-item-object-page
                           "
-                        >
+                    :data="item"
+                    :key="indextr"
+                    v-for="(item, indextr) in brands?.slice(0, 2)
+                        ">
                          <router-link
                               class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[0]?.id"
-                              >{{brands[0]?.name}}
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item.name}}
                             </router-link>
                         </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[1]?.id"
-                              >{{brands[1]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                       <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[2]?.id"
-                              >{{brands[2]?.name}}
-                        </router-link>
-                        </li>
+                       
                       </ul>
                     </li>
                     <li
@@ -1090,39 +1068,16 @@
                             menu-item-type-post_type
                             menu-item-object-product
                           "
+                           :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(4, 6)"
                         >
                         <router-link
                               class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[3]?.id"
-                              >{{brands[3]?.name}}
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
                         </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[4]?.id"
-                              >{{brands[4]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-product
-                          "
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[5]?.id"
-                              >{{brands[5]?.name}}
-                        </router-link>
-                        </li>       
+                        </li>     
                       </ul>
                     </li>
                     <li
@@ -1140,37 +1095,14 @@
                             menu-item-type-post_type
                             menu-item-object-page
                           "
+                          :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(8, 10)"
                         >
                          <router-link
                               class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[6]?.id"
-                              >{{brands[6]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                         <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[7]?.id"
-                              >{{brands[7]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[8]?.id"
-                              >{{brands[8]?.name}}
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
                         </router-link>
                         </li>
                       </ul>
@@ -1190,37 +1122,14 @@
                             menu-item-type-custom
                             menu-item-object-custom
                           "
+                          :data="item"
+                           :key="indextr"
+                           v-for="(item, indextr) in brands?.slice(8, 10)"
                         >
                         <router-link
                               class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[9]?.id"
-                              >{{brands[9]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[10]?.id"
-                              >{{brands[10]?.name}}
-                        </router-link>
-                        </li>
-                        <li
-                          class="
-                            menu-item
-                            menu-item-type-custom
-                            menu-item-object-custom
-                          "
-                        >
-                         <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + brands[11]?.id"
-                              >{{brands[11]?.name}}
+                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                              >{{item?.name}}
                         </router-link>
                         </li>
                       </ul>
@@ -1424,8 +1333,10 @@ export default {
     loginCheck: false,
     topcategory: [],
     brands:[],
+    
   }),
   mounted() {
+
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.guestCheck = false;
@@ -1488,7 +1399,8 @@ export default {
           langCode)
       .then((response) => {
         this.brands = response.data.data;
-        console.log('allbrands',this.brands);
+        this.brands = this.split(this.brands,4);
+        // console.log('splitedbrands',this.brands);
       })
       .catch((error) => {});
    
@@ -1496,6 +1408,11 @@ export default {
     
   },
   methods: {
+  split (array, cols) {
+    if (cols==1) return array;
+    var size = Math.ceil(array.length / cols);
+    return array.slice(0, size).concat([null]).concat(this.split(array.slice(size), cols-1));
+},
     getWishList() {
       if (localStorage.userInfo != null) {
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -1525,6 +1442,7 @@ export default {
         this.showmenu = "show";
       }
     },
+    
     searchproducts: function (event) {
       this.$router.push("category");
     },
