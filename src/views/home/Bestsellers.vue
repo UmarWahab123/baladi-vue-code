@@ -235,7 +235,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >{{$t('QAR')}} </span
+                                      >{{ $t("QAR") }} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.previous_price
@@ -248,7 +248,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >{{$t('QAR')}} </span
+                                      >{{ $t("QAR") }} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.regular_price
@@ -1549,7 +1549,6 @@ defineEmits(["addToCart"]);
 </script>
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { useProductStore } from "../../stores/ProductStore";
 import { useCartStore } from "../../stores/CartStore";
 
@@ -1672,8 +1671,8 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale="+ 
-            this.langCode,
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+              this.langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1700,7 +1699,9 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id + '&locale='+this.langCode
+            topseller_id +
+            "&locale=" +
+            this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

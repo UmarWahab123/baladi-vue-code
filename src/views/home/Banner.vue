@@ -149,15 +149,15 @@
                                 </h3>
                                 <div class="entry-description">
                                   <p>
-                                   {{$t('Last_call_for_up_to')}}
-                                    <strong>%20</strong>{{$t('off')}}
+                                    {{ $t("Last_call_for_up_to") }}
+                                    <strong>%20</strong>{{ $t("off") }}
                                   </p>
                                 </div>
                                 <div class="entry-button">
                                   <a
                                     href="#"
                                     class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}
+                                    >{{ $t("Shop_now") }}
                                   </a>
                                 </div>
                               </div>

@@ -19,6 +19,7 @@ if (langCode == "ar") {
   import("@/assets/rtl/style-rtl.css");
   import("@/assets/rtl/frontend-lite-rtl.min.css");
   import("@/assets/rtl/style-rtl.min.css");
+  import("@splidejs/splide/dist/css/themes/splide-default.min.css");
 
   // import("@/assets/rtl/style.css");
 } else {
@@ -30,6 +31,7 @@ if (langCode == "ar") {
   import("@/assets/style/base.css");
   import("@/assets/style/style.css");
   import("@/assets/style/frontend-lite.min.css");
+  import("@splidejs/splide/dist/css/themes/splide-default.min.css");
 }
 
 import i18n from "./i18n";
