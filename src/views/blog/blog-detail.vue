@@ -39,7 +39,7 @@
                             ><i class="klbth-icon-clock-outline"></i>
                             {{
                               moment(String(item.created_at)).format(
-                                "MM-DD-YYYY hh:mm"
+                                "DD-MMMM-YYYY"
                               )
                             }}</a
                           ></span
@@ -59,7 +59,7 @@
                         alt="But I must explain to you how all this mistaken idea"
                     /> -->
                       <img
-                        src="http://baladiweb.bteamwebs.com/storage/images/blogs/1650282422_product-3-400x400.webp"
+                       :src="url + item.photo"
                         alt="But I must explain to you how all this mistaken idea"
                       />
                     </a>
@@ -114,7 +114,7 @@
                             <div class="comment-metadata">
                               <time>{{
                                 moment(String(comment.created_at)).format(
-                                  "MM-DD-YYYY hh:mm"
+                                  "DD-MMMM-YYYY"
                                 )
                               }}</time>
                             </div>
@@ -167,7 +167,7 @@
                                 <div class="comment-metadata">
                                   <time>{{
                                     moment(String(reply.created_at)).format(
-                                      "MM-DD-YYYY hh:mm"
+                                      "DD-MMMM-YYYY"
                                     )
                                   }}</time>
                                 </div>
@@ -532,7 +532,7 @@ import moment from "moment";
 import axios from "axios";
 export default {
   data: () => ({
-    url: "http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     results: [],
     formdata: {
       blog_id: "",
@@ -654,7 +654,7 @@ export default {
         .get("http://baladi-v1.bteamwebs.com/api/web/blogdetails/" + id + '&locale='+this.langCode)
         .then((response) => {
           this.results = response.data.data;
-          console.log(this.results);
+          // console.log('blogdetails',this.results);
           this.formdata.blog_id = this.results[0].id;
           this.formdata1.blog_id = this.results[0].id;
         })

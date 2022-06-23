@@ -102,14 +102,7 @@
                                 value="/machic/order-tracking/?d=rtl"
                               />
                             </form>
-                             <div class="row ml-5">
-                              <p
-                                v-if="ordernotfound"
-                                class="alert alert-danger alert-dismissible fade show col-md-6 col-6"
-                              >
-                                Order Not found
-                              </p>
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
@@ -572,7 +565,23 @@ export default {
 
         this.results = response.data.data[0];
         if(response.data.data == ""){
-          this.ordernotfound = true;
+           const Toast = this.$swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "error",
+            title: 'Order Not Found',
+          });
+
         }else{
           this.ordernotfound = false;
         }

@@ -71,8 +71,7 @@
                             </p>
                           </div>
                           <div class="entry-button">
-                            <a href="#" class="btn small rounded link-color"
-                              >{{$t('Shop_now')}}</a
+           <router-link class="btn small rounded link-color" :to="'/' + langCode + '/category'">{{$t('Shop_now')}}</router-link
                             >
                           </div>
                         </div>
@@ -83,7 +82,7 @@
                           alt="banner"
                         />
                       </div>
-                      <a href="#" class="overlay-link"></a>
+                      <!-- <a href="#" class="overlay-link"></a> -->
                     </div>
                   </div>
                 </div>
@@ -1618,6 +1617,8 @@ export default {
       showcomparemodalstyle: "",
       quantity: 1,
       activeImage: 0,
+    // langCode:"en",
+
       //Hold the timeout, so we can clear it when it is needed
       autoSlideTimeout: null,
       //If the timer is stopped e.g. when hovering over the carousel

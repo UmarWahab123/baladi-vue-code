@@ -241,7 +241,7 @@ export default {
           langCode)
       .then((response) => {
         this.results = response.data.data;
-        // console.log(this.results);
+        // console.log('recentcat',this.results);
       })
       .catch((error) => {});
     axios

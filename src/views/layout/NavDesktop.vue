@@ -195,8 +195,10 @@
                     <input type="hidden" name="dgwt_wcas" value="1" />
                   </div>
                 </form>
+              
               </div>
             </div>
+       
             <div
               class="
                 dgwt-wcas-suggestions-wrapp
@@ -215,6 +217,23 @@
                 display: none;
               "
             >
+            <a href="javascript::void(0)"
+                class="dgwt-wcas-suggestion dgwt-wcas-suggestion-product"
+                data-index="0"
+                data-post-id="521"
+                 v-if="resultsnotfound"
+                >
+                <div class="dgwt-wcas-content-wrapp">
+                  <div class="dgwt-wcas-st">
+                    <span class="dgwt-wcas-st-title d-flex justify-content-center">
+                      <strong
+                        > {{$t('No_Data_found')}}</strong
+                      ></span
+                    >
+                  </div>
+            
+                </div></a
+              >
               <a
                 href="javascript::void(0)"
                 class="dgwt-wcas-suggestion dgwt-wcas-suggestion-product"
@@ -1006,11 +1025,12 @@
                         current-menu-item current_page_item
                         menu-item-home
                       "
-                       :data="item"
+                    :data="item"
                     :key="indextr"
                     v-for="(item, indextr) in topcategory"
                     >
-                      <a href="#">{{item.name}}</a>
+                    <router-link :to="'/' + langCode + '/category/'+ item?.id"
+                    >{{item.name}}</router-link>
                     </li>
                    
                   </ul>
@@ -1136,18 +1156,6 @@
                     </li>
                   </ul>
                 </li>
-                <li
-                  class="
-                    menu-item menu-item-type-taxonomy
-                    menu-item-object-product_cat
-                  "
-                >
-                  <router-link :to="'/' + langCode + '/category'"
-                    ><i class="klbth-icon-home"></i>
-                    {{ $t("home_and_living") }}</router-link
-                  >
-                </li>
-
                 <li
                   class="
                     menu-item
@@ -1331,6 +1339,7 @@ export default {
     dicount:[],
     guestCheck: true,
     loginCheck: false,
+    resultsnotfound:false,
     topcategory: [],
     brands:[],
     
@@ -1444,7 +1453,8 @@ export default {
     },
     
     searchproducts: function (event) {
-      this.$router.push("category");
+     var langCode = localStorage.getItem("lang");
+      this.$router.push('/'+langCode+'/category');
     },
     down: function () {
       var height = document.querySelector(".sidebar-sticky").scrollHeight;
@@ -1516,15 +1526,23 @@ export default {
             payload
           )
           .then((response) => {
-            this.searchResults = response.data.data.searchresults;
+          this.searchResults = response.data.data.searchresults;
+          if(response.data.data.searchresults==""){
+          this.resultsnotfound = true;
+          }else{
+          this.resultsnotfound = false;
+
+          }
             // this.searchResults.map((item) => {
             //   console.log("map", item);
             // });
-            // console.log("Search", this.searchResults);
+            console.log("Search", this.searchResults);
           })
           .catch((error) => {});
         // window.location.reload();
       } else {
+          this.resultsnotfound = false;
+
         var preloader = document.querySelector(".dgwt-wcas-preloader");
         var search = document.querySelector(".pre-suggestions");
         var searchsugget = document.querySelector(".js-dgwt-wcas-initialized");

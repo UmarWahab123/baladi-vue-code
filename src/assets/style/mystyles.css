@@ -79,3 +79,11 @@ ol.flex-control-thumbs .owl-item {
 .rtl .product-buttons {
     right: auto !important;
 }
+.rtl .testslider{
+    height: auto;
+    border: none;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    visibility: visible !important;
+}

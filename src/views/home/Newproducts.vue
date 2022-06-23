@@ -125,9 +125,9 @@
                             <p>{{$t('miss_the_last_opportunity')}}</p>
                           </div>
                           <div class="entry-button">
-                            <a href="" class="btn small rounded link-color"
-                              >{{$t('Shop_now')}}</a
-                            >
+                          <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                           </div>
                         </div>
                       </div>
@@ -137,7 +137,7 @@
                           alt="banner"
                         />
                       </div>
-                      <a href="#" class="overlay-link"></a>
+                      <!-- <a href="#" class="overlay-link"></a> -->
                     </div>
                   </div>
                 </div>
@@ -471,11 +471,9 @@
                                   <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
-                                  <a
-                                    href="#echo-dot-4th-gen-2020-release-smart-speaker/"
-                                    class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}</a
-                                  >
+                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                                 </div>
                               </div>
                             </div>
@@ -485,10 +483,10 @@
                                 alt="banner"
                               />
                             </div>
-                            <a
+                            <!-- <a
                               href="#echo-dot-4th-gen-2020-release-smart-speaker/"
                               class="overlay-link"
-                            ></a>
+                            ></a> -->
                           </div>
                         </div>
                       </div>
@@ -533,11 +531,9 @@
                                   <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
-                                  <a
-                                    href="#oneplus-8-pro-onyx-black-android-smartphone/"
-                                    class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}</a
-                                  >
+                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                                 </div>
                               </div>
                             </div>
@@ -547,10 +543,10 @@
                                 alt="banner"
                               />
                             </div>
-                            <a
+                            <!-- <a
                               href="#oneplus-8-pro-onyx-black-android-smartphone/"
                               class="overlay-link"
-                            ></a>
+                            ></a> -->
                           </div>
                         </div>
                       </div>
@@ -586,10 +582,8 @@
                           <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
-                          <a
-                            href="#beats-studio3-wireless-headphones-matte-black/"
-                            class="btn small rounded link-color"
-                            >{{$t('Shop_now')}}</a
+                         <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
                           >
                         </div>
                       </div>
@@ -600,10 +594,10 @@
                         alt="banner"
                       />
                     </div>
-                    <a
+                    <!-- <a
                       href="#beats-studio3-wireless-headphones-matte-black/"
                       class="overlay-link"
-                    ></a>
+                    ></a> -->
                   </div>
                 </div>
               </div>
@@ -764,7 +758,7 @@
                         <strong>{{$t('FREE256MAC')}}</strong>
                       </div>
                     </div>
-                    <a href="#" class="overlay-link"></a>
+                    <!-- <a href="#" class="overlay-link"></a> -->
                   </div>
                 </div>
               </div>
@@ -795,10 +789,8 @@
                           <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
-                          <a
-                            href="javascript:void(0)"
-                            class="btn small rounded link-color"
-                            >{{$t('Shop_now')}}</a
+                           <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
                           >
                         </div>
                       </div>
@@ -809,7 +801,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a href="javascript:void(0)" class="overlay-link"></a>
+                    <!-- <a href="javascript:void(0)" class="overlay-link"></a> -->
                   </div>
                 </div>
               </div>

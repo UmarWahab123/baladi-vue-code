@@ -33,10 +33,9 @@
                     </div>
                     <!-- banner-details -->
                     <div class="banner-button">
-                      <a
-                        href="javascript::void(0)"
-                        class="btn small rounded link-color"
-                        >{{$t('Shop_now')}}</a
+                     
+                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
                       >
                     </div>
                   </div>
@@ -50,3 +49,15 @@
     </div>
   </section>
 </template>
+<script >
+export default {
+  data: () => ({
+    url: "http://baladi-v1.bteamwebs.com/storage/",
+    langCode:"en"
+    
+  }),
+  mounted() {
+    var langCode = localStorage.getItem("lang");
+  },
+};
+</script>

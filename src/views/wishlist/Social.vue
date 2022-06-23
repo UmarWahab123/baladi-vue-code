@@ -1,5 +1,5 @@
 <template>
-      <div class="social-buttons">
+      <div class="social-buttons d-none">
                                                     <span>{{$t('share_on')}}</span>
                                                     <ul>
                                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fklbtheme.com%2Fmachic%2Fwishlist%2Ff30715%2F"

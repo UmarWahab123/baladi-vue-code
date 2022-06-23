@@ -147,7 +147,8 @@
             <li  :data="item"
                     :key="indextr"
                     v-for="(item, indextr) in results" 
-                    class="cat-item cat-item-29"><a href="#">{{item.name}}</a>
+                    class="cat-item cat-item-29"><router-link :to="'/' + langCode + '/category/'+ item?.id"
+                    >{{item.name}}</router-link>
                   </li>
               </ul>
             </div>

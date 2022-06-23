@@ -35,7 +35,11 @@
                         <span class="meta-item entry-published"
                           ><a href="#"
                             ><i class="klbth-icon-clock-outline"></i>
-                            {{ item.created_at }}</a
+                           <time>{{
+                                moment(String(item.created_at)).format(
+                                  "DD-MMMM-YYYY"
+                                )
+                              }}</time></a
                           ></span
                         >
                         <span class="meta-item category"
@@ -258,6 +262,7 @@ import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 </script>
 <script>
+import moment from "moment";
 import axios from "axios";
 export default {
   data: () => ({
