@@ -1,6 +1,6 @@
 <template>
   <div class="u-column1 col-md-6">
-    <h2>{{$t('login')}}</h2>
+    <h2>{{ $t("login") }}</h2>
     <div
       class="
         woocommerce-form woocommerce-form-login
@@ -19,7 +19,7 @@
         "
       >
         <label for="username"
-          >{{$t('uName_email')}}&nbsp;<span class="required">*</span></label
+          >{{ $t("uName_email") }}&nbsp;<span class="required">*</span></label
         >
         <input
           v-model="formdata.email"
@@ -39,7 +39,7 @@
         "
       >
         <label for="password"
-          >{{$t('password')}}&nbsp;<span class="required">*</span></label
+          >{{ $t("password") }}&nbsp;<span class="required">*</span></label
         >
         <span class="password-input"
           ><span class="password-input"
@@ -86,11 +86,11 @@
             id="rememberme"
             value="forever"
           />
-          <span>{{$t('remember_me')}}</span>
+          <span>{{ $t("remember_me") }}</span>
         </label>
         <p class="woocommerce-LostPassword lost_password">
           <router-link :to="'/' + langCode + '/forgot-password'"
-            >{{$t('lost_password')}}?</router-link
+            >{{ $t("lost_password") }}?</router-link
           >
         </p>
       </div>
@@ -101,7 +101,7 @@
         value="Log in"
         @click="submitdata()"
       >
-        {{$t('Log_in')}}
+        {{ $t("Log_in") }}
       </button>
       <a to="/" class="ml-5">
         <input
@@ -120,14 +120,17 @@
           value="Log in"
           @click="submitguestData()"
         >
-          {{$t('continue_as_guest')}}
+          {{ $t("continue_as_guest") }}
         </a></a
       >
-      <p class="mt-3">{{$t('connect_with')}}</p>
+      <p class="mt-3">{{ $t("connect_with") }}</p>
       <div class="social-share site-social colored">
         <ul class="social-container">
           <li>
-            <a href="" class="facebook" target="_blank"
+            <a
+              href="javascript:void(0)"
+              @click="loginWithFaceBook"
+              class="facebook"
               ><i class="klbth-icon-facebook"></i
             ></a>
           </li>
@@ -138,7 +141,7 @@
             ></a>
           </li>
           <li>
-            <a href="" class="google" target="_blank"
+            <a href="javascript:void(0)" @click="loginWithGoogle" class="google"
               ><i class="klbth-icon-google"></i
             ></a>
           </li>
@@ -166,14 +169,20 @@
     </div>
   </div>
 </template>
+
 <script>
+import { auth, provider, facbookprovider } from "../../firebaseConfig";
 import.meta.env.VITE_API_KEY;
 import axios from "axios";
 import { required, helpers } from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
-
 export default {
-  setup: () => ({ v$: useVuelidate() }),
+  setup() {
+    const v$ = useVuelidate();
+    return {
+      v$,
+    };
+  },
   data() {
     return {
       formdata: {
@@ -204,6 +213,22 @@ export default {
     this.langCode = lang;
   },
   methods: {
+    loginWithGoogle() {
+      auth
+        .signInWithPopup(provider)
+        .then(({ user }) => {
+          console.log(user.displayName);
+        })
+        .catch((error) => console.log(error.message));
+    },
+    loginWithFaceBook() {
+      auth
+        .signInWithPopup(facbookprovider)
+        .then(({ user }) => {
+          console.log(user.displayName);
+        })
+        .catch((error) => console.log(error.message));
+    },
     async submitdata() {
       const result = await this.v$.$validate();
       // alert(result);
