@@ -52,7 +52,7 @@
                               woocommerce-orders-table__header-order-number
                             "
                           >
-                            <span class="nobr">{{$t('address')}} </span>
+                            <span class="nobr">{{$t('Address_Type')}} </span>
                           </th>
 
                           <th
@@ -61,7 +61,7 @@
                               woocommerce-orders-table__header-order-total
                             "
                           >
-                            <span class="nobr">{{$t('total')}}</span>
+                            <span class="nobr">{{$t('address')}}</span>
                           </th>
                           <th
                             class="
@@ -81,6 +81,9 @@
                             woocommerce-orders-table__row--status-on-hold
                             order
                           "
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in addresses"
                         >
                           <td
                             class="
@@ -89,7 +92,9 @@
                             "
                             data-title="Order"
                           >
-                            <a href=""> Billing </a>
+                            <a v-if="item.shipping==0" href=""> {{$t('Billing')}} </a>
+                            <a v-if="item.shipping==1" href=""> {{$t('shipping')}}</a>
+
                           </td>
 
                           <td
@@ -103,84 +108,30 @@
                               ><span
                                 class="woocommerce-Price-currencySymbol"
                               ></span
-                              >1Jena Benjamin Oneill Mcintyre Associates 128
-                              East Green Old Road</span
-                            >
+                              >{{item.address_line_1}},&nbsp;{{item.address_line_2}}</span>
+                            
                           </td>
                           <td
                             class="
                               woocommerce-orders-table__cell
                               woocommerce-orders-table__cell-order-actions
-                              text-center
                             "
                             data-title="Actions"
                           >
                             <router-link
-                              :to="'/' + langCode + '/shipping'"
+                              :to="'/' + langCode + '/shipping/'+ item.id"
                               class="woocommerce-button button view buttonsalignment"
                               >{{$t('edit')}}
                             </router-link>
                             <router-link
-                              to=""
+                              :to="'/' + langCode + '/deleteaddress/'+ item.id"
                               style="margin-left: 5px; background-color: red"
                               class="woocommerce-button button view"
                               >{{$t('delete')}}
                             </router-link>
                           </td>
                         </tr>
-                        <tr
-                          class="
-                            woocommerce-orders-table__row
-                            woocommerce-orders-table__row--status-on-hold
-                            order
-                          "
-                        >
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-number
-                            "
-                            data-title="Order"
-                          >
-                            <a href=""> Shipping</a>
-                          </td>
-
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-total
-                            "
-                            data-title="Total"
-                          >
-                            <span class="woocommerce-Price-amount amount"
-                              ><span
-                                class="woocommerce-Price-currencySymbol"
-                              ></span
-                              >1Jena Benjamin Oneill Mcintyre Associates 128
-                              East Green Old Road</span
-                            >
-                          </td>
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-actions
-                              text-center
-                            "
-                            data-title="Actions"
-                          >
-                            <router-link
-                              to="shipping"
-                              class="woocommerce-button button view buttonsalignment"
-                              >{{$t('edit')}}
-                            </router-link>
-                            <router-link
-                              to=""
-                              style="margin-left: 5px; background-color: red"
-                              class="woocommerce-button button view"
-                              >{{$t('delete')}}
-                            </router-link>
-                          </td>
-                        </tr>
+                    
                       </tbody>
                     </table>
                   </div>
@@ -214,10 +165,16 @@ export default {
     return {
       isloading: true,
       langCode: "en",
+      addresses:[],
     };
   },
   mounted() {
+    // alert(a);
     if (localStorage.userInfo != null) {
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.addresses = userInfo.customer_addresses;
+      console.log('custaddress',this.addresses);
+
     } else {
       this.$router.push("myaccount");
     }

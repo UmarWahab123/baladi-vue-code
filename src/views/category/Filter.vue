@@ -9,8 +9,31 @@
           <h3 class="entry-title">{{$t('Filter_Products')}}</h3>
           <div class="close-sidebar"><i class="klbth-icon-cancel"></i></div>
         </div>
-
-        <div class="widget widget_klb_product_categories">
+        
+        <div v-if="id" class="widget widget_klb_product_categories">
+          <h4 class="widget-title">{{$t('product_categories')}}</h4>
+          <div class="widget-checkbox-list">
+            <ul>
+              <li
+                :data="item"
+                :key="indextr"
+                v-for="(item, indextr) in relatedcategory"
+              >
+                <a
+                  href="/machic/?s=apple&amp;post_type=product&amp;dgwt_wcas=1&amp;filter_cat=29"
+                  class="product_cat"
+                  ><input
+                    name="product_cat[]"
+                    value="29"
+                    id="Apple"
+                    type="checkbox"
+                  /><label><span></span>{{ item?.name }}</label></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div v-if="id==''" class="widget widget_klb_product_categories">
           <h4 class="widget-title">{{$t('product_categories')}}</h4>
           <div class="widget-checkbox-list">
             <ul>
@@ -27,7 +50,7 @@
                     value="29"
                     id="Apple"
                     type="checkbox"
-                  /><label><span></span>{{ item.name }}</label></a
+                  /><label><span></span>{{ item?.name }}</label></a
                 >
               </li>
             </ul>
@@ -233,9 +256,23 @@ export default {
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
     brands: [],
+    relatedcategory: [],
+    id:"",
   }),
   mounted() {
     var langCode = localStorage.getItem("lang");
+    var id = this.$route.params.id;
+    this.id = id;
+    // alert(id);
+    if(id){
+    axios
+    .get(import.meta.env.VITE_API_URL + "/api/mobile/product/relatedcategories/" + id)
+    .then((response) => {
+      this.relatedcategory = response.data.data;
+      // console.log('relatedproduct',this.results);
+    })
+    .catch((error) => {});
+    }else{
     axios
       .get(import.meta.env.VITE_API_URL + "/api/web/header/categories?locale=" +
           langCode)
@@ -244,6 +281,7 @@ export default {
         // console.log('recentcat',this.results);
       })
       .catch((error) => {});
+      }
     axios
       .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands?locale=" +
           langCode)

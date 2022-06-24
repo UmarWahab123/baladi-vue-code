@@ -16,7 +16,7 @@
                     <h3>Shipping address</h3>
                     <div class="woocommerce-address-fields">
                       <div class="woocommerce-address-fields__field-wrapper">
-                        <!-- <input type="hidden" v-bind="formdata.id" /> -->
+                        <input type="hidden" v-model="formdata.id" />
                         <p
                           class="form-row form-row-first validate-required"
                           id="shipping_first_name_field"
@@ -381,18 +381,18 @@ export default {
       url: "http://baladi-v1.bteamwebs.com/storage/",
       results: [],
       formdata: {
-        // id: "",
-        city_id: null,
-        first_name: null,
-        last_name: null,
-        zone: "zone 3",
-        contact: null,
-        address_line_1: null,
-        address_line_2: null,
-        zip: null,
-        latitude: 12.4454,
-        longitude: 87.099,
-        shipping: 1,
+        id: "",
+        city_id: "",
+        first_name: "",
+        last_name: "",
+        zone: "",
+        contact: "",
+        address_line_1: "",
+        address_line_2: "",
+        zip: "",
+        latitude: "",
+        longitude: "",
+        shipping: "",
       },
       errors: "",
       token: "",
@@ -426,15 +426,32 @@ export default {
   //   };
   // },
   mounted() {
+ 
     if (localStorage.userInfo != null) {
       this.token = JSON.parse(localStorage.userInfo).token;
       console.log(this.token);
       // this.formdata.id = JSON.parse(localStorage.userInfo).id;
       this.formdata.first_name = JSON.parse(localStorage.userInfo).name;
       this.formdata.contact = JSON.parse(localStorage.userInfo).phone;
+      var addresses = JSON.parse(localStorage.userInfo).customer_addresses;
+      this.formdata.address_line_1 = addresses[0].address_line_1;
     } else {
       this.$router.push("myaccount");
     }
+    var id = this.$route.params.id;
+    axios
+    .post("http://baladi-v1.bteamwebs.com/api/customer/address/update/"+ this.formdata +"/" +id,
+         {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+      )
+      .then((response) => {
+          console.log(response.data.message);
+
+      })
+      .catch((error) => {});
     // console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
     axios
