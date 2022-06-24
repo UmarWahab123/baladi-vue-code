@@ -13,17 +13,19 @@
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
 
-                    <h3>Shipping address</h3>
+                    <h3>{{$t('Shipping_address')}}</h3>
                     <div class="woocommerce-address-fields">
                       <div class="woocommerce-address-fields__field-wrapper">
                         <input type="hidden" v-model="formdata.id" />
+                        <input type="hidden" v-model="formdata.customer_id" />
+
                         <p
                           class="form-row form-row-first validate-required"
                           id="shipping_first_name_field"
                           data-priority="10"
                         >
                           <label for="shipping_first_name" class=""
-                            >First name&nbsp;<abbr
+                            >{{$t('first_name')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -47,7 +49,7 @@
                           data-priority="20"
                         >
                           <label for="shipping_last_name" class=""
-                            >Last name&nbsp;<abbr
+                            >{{$t('last_name')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -71,7 +73,7 @@
                           data-priority="30"
                         >
                           <label for="shipping_company" class=""
-                            >Zone&nbsp;<span class="optional"></span></label
+                            >{{$t('Zone')}}&nbsp;<span class="optional"></span></label
                           ><span class="woocommerce-input-wrapper"
                             ><input
                               type="text"
@@ -88,7 +90,7 @@
                           data-priority="30"
                         >
                           <label for="shipping_company" class=""
-                            >Contact&nbsp;<span class="optional"></span></label
+                            >{{$t('Contact')}}&nbsp;<span class="optional"></span></label
                           ><span class="woocommerce-input-wrapper"
                             ><input
                               type="text"
@@ -110,7 +112,7 @@
                           data-priority="50"
                         >
                           <label for="shipping_address_1" class=""
-                            >Address Line 1&nbsp;<abbr
+                            >{{$t('Address_Line1')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -121,7 +123,6 @@
                               class="input-text"
                               v-model="formdata.address_line_1"
                               id="shipping_address_1"
-                              placeholder="House number and street name"
                               autocomplete="address-line1"
                               data-placeholder="House number and street name"
                           /></span>
@@ -140,7 +141,7 @@
                           data-priority="50"
                         >
                           <label for="shipping_address_1" class=""
-                            >Address Line 2&nbsp;<abbr
+                            >{{$t('Address_Line2')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -151,7 +152,6 @@
                               class="input-text"
                               v-model="formdata.address_line_2"
                               id="shipping_address_1"
-                              placeholder="House number and street name"
                               autocomplete="address-line1"
                               data-placeholder="House number and street name"
                           /></span>
@@ -171,7 +171,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required"
                         >
                           <label for="shipping_city" class=""
-                            >Town / City&nbsp;<abbr
+                            >{{$t('town_city')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -186,7 +186,7 @@
                               autocomplete="address-level2"
                             >
                               <option value="" selected>
-                                Select an option…
+                                {{$t('Select_an_option')}}
                               </option>
                               <option
                                 :data="item"
@@ -214,34 +214,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Postcode / ZIP&nbsp;<abbr
-                              class="required"
-                              title="required"
-                              >*</abbr
-                            ></label
-                          ><span class="woocommerce-input-wrapper"
-                            ><input
-                              type="text"
-                              class="input-text"
-                              v-model="formdata.zip"
-                              id="shipping_postcode"
-                              placeholder=""
-                              autocomplete="postal-code"
-                          /></span>
-                        </p>
-                        <p
-                          class="
-                            form-row
-                            address-field
-                            validate-required validate-postcode
-                            form-row-wide
-                          "
-                          id="shipping_postcode_field"
-                          data-priority="90"
-                          data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
-                        >
-                          <label for="shipping_postcode" class=""
-                            >Latitude&nbsp;<abbr
+                            >{{$t('Latitude')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -271,7 +244,7 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Longitude&nbsp;<abbr
+                            >{{$t('Longitude')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -301,31 +274,47 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >Shipping&nbsp;<abbr
+                            >{{$t('Address_Type')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
                             ></label
                           ><span class="woocommerce-input-wrapper"
-                            ><input
+                            >
+                            <select
                               type="text"
                               class="input-text"
                               v-model="formdata.shipping"
-                              id="shipping_postcode"
+                              id="shipping_city"
                               placeholder=""
-                              autocomplete="latitude"
-                          /></span>
+                              autocomplete="address-level2"
+                            >
+                             <option value="0">
+                                0
+                              </option>
+                              <option value="1">
+                                1
+                              </option>
+                              </select>
+                         </span>
                         </p>
                       </div>
                       <p>
                         <button
                           type="submit"
                           class="button"
-                          name="save_address"
-                          value="Save address"
                           @click="saveaddress()"
+                          v-if="formdata.id==''"
                         >
-                          Save address
+                          {{$t('Save_address')}}
+                        </button>
+                        <button
+                          type="submit"
+                          class="button"
+                          @click="updateaddress()"
+                          v-if="formdata.id"
+                        >
+                          {{$t('Update_address')}}
                         </button>
                         <input
                           type="hidden"
@@ -383,13 +372,13 @@ export default {
       formdata: {
         id: "",
         city_id: "",
+        customer_id: "",
         first_name: "",
         last_name: "",
         zone: "",
         contact: "",
         address_line_1: "",
         address_line_2: "",
-        zip: "",
         latitude: "",
         longitude: "",
         shipping: "",
@@ -426,32 +415,23 @@ export default {
   //   };
   // },
   mounted() {
- 
-    if (localStorage.userInfo != null) {
-      this.token = JSON.parse(localStorage.userInfo).token;
-      console.log(this.token);
-      // this.formdata.id = JSON.parse(localStorage.userInfo).id;
-      this.formdata.first_name = JSON.parse(localStorage.userInfo).name;
-      this.formdata.contact = JSON.parse(localStorage.userInfo).phone;
-      var addresses = JSON.parse(localStorage.userInfo).customer_addresses;
-      this.formdata.address_line_1 = addresses[0].address_line_1;
-    } else {
-      this.$router.push("myaccount");
-    }
     var id = this.$route.params.id;
-    axios
-    .post("http://baladi-v1.bteamwebs.com/api/customer/address/update/"+ this.formdata +"/" +id,
-         {
-            headers: {
-              Authorization: "Bearer " + this.token,
-            },
-          }
-      )
-      .then((response) => {
-          console.log(response.data.message);
-
-      })
-      .catch((error) => {});
+    this.token = JSON.parse(localStorage.userInfo).token;
+    if (localStorage.userInfo != null && id != "") {
+      var addresses = JSON.parse(localStorage.userInfo).customer_addresses;
+      this.formdata.id = addresses[0].id;
+      this.formdata.customer_id = addresses[0].customer_id;
+      this.formdata.city_id = addresses[0].city_id;
+      this.formdata.first_name = addresses[0].first_name;
+      this.formdata.last_name = addresses[0].last_name;
+      this.formdata.address_line_1 = addresses[0].address_line_1;
+      this.formdata.address_line_2 = addresses[0].address_line_2;
+      this.formdata.zone = addresses[0].zone;
+      this.formdata.contact = addresses[0].contact;
+      this.formdata.latitude = addresses[0].latitude;
+      this.formdata.longitude = addresses[0].longitude;
+      this.formdata.shipping = addresses[0].shipping;
+    }
     // console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
     axios
@@ -463,6 +443,59 @@ export default {
       .catch((error) => {});
   },
   methods: {
+   async updateaddress(){
+    await axios
+    .post("http://baladi-v1.bteamwebs.com/api/customer/address/update/"+this.formdata.id,this.formdata,
+         {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+      )
+      .then((response) => {
+          console.log('responsemessage',response.data.message);
+            if (response.data.status == 400) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+            +console.log(response.data.data[0]);
+          } else {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
+          }
+
+      })
+      .catch((error) => {});
+    },
     async saveaddress() {
       // const result = await this.v$.$validate();
       // alert(result);
@@ -482,6 +515,8 @@ export default {
         .then((response) => {
           console.log(response.data.message);
           if (response.data.status == 400) {
+            alert('ghsdfhgsafd');
+
             const Toast = this.$swal.mixin({
               toast: true,
               position: "top-end",

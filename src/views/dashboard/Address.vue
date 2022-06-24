@@ -123,17 +123,25 @@
                               class="woocommerce-button button view buttonsalignment"
                               >{{$t('edit')}}
                             </router-link>
-                            <router-link
-                              :to="'/' + langCode + '/deleteaddress/'+ item.id"
+                            <a
+                              @click="deleteaddress(item.id)"
                               style="margin-left: 5px; background-color: red"
                               class="woocommerce-button button view"
                               >{{$t('delete')}}
-                            </router-link>
+                            </a>
                           </td>
                         </tr>
                     
                       </tbody>
                     </table>
+                      <div class="row text-center mb-5 p-4">
+                      <h2
+                        v-if="addressnotfound"
+                        class=""
+                      >
+                        {{$t('No_Data_found')}}
+                      </h2>
+                    </div>
                   </div>
                 </div>
                 <!-- my-account-wrapper -->
@@ -159,6 +167,7 @@ import Sidebar from "./Sidebar.vue";
 
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
 export default {
   components: { TheLoader },
   data() {
@@ -166,21 +175,66 @@ export default {
       isloading: true,
       langCode: "en",
       addresses:[],
+      addressnotfound:false,
+
     };
   },
   mounted() {
     // alert(a);
+    this.token = JSON.parse(localStorage.userInfo).token;
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.addresses = userInfo.customer_addresses;
-      console.log('custaddress',this.addresses);
+      console.log('newaddress',this.addresses);
+      if(userInfo.customer_addresses == ""){
+          this.addressnotfound = true;
+         }else{
+          this.addressnotfound = false;
+       }
+      // console.log('custaddress',this.addresses);
 
-    } else {
-      this.$router.push("myaccount");
     }
     setTimeout(() => (this.isloading = false), 1000);
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
+  methods:{
+   deleteaddress(id){
+      axios
+        .delete(
+          "http://baladi-v1.bteamwebs.com/api/customer/address/delete?id=" +
+            id,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          const Toast = this.$swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "success",
+            title: response.data.data[0]
+              ? response.data.data[0]
+              : response.data.message,
+          });
+
+          this.getWishList();
+        })
+        .catch((error) => {});
+    },
+  }
+   
 };
 </script>

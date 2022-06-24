@@ -461,7 +461,15 @@
     "Your_question": "سؤالك",
     "No_Data_found":"لاتوجد بيانات",
     "Billing":"الفواتير",
-    "Address_Type":"نوع العنوان"
+    "Address_Type":"نوع العنوان",
+    "Shipping_address":"عنوان الشحن",
+    "Zone":"المنطقة",
+    "Address_Line1":"1 خط عنوان",
+    "Address_Line2":"2 خط عنوان",
+    "Latitude":"خط العرض",
+    "Longitude":"خط الطول",
+    "Save_address":"حفظ العنوان",
+    "Update_address":"تحديث العنوان"
 
 
 
