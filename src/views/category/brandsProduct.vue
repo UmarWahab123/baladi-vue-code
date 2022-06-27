@@ -1521,8 +1521,19 @@ export default {
         )
         .then((response) => {
           this.results = response.data.data.data;
-          console.log("brand product", this.results);
+          // console.log("brand product", this.results);
           // this.brandProducts();
+          const User = {
+            template: '...',
+            created() {
+              this.$watch(
+                () => this.$route.params,
+                (toParams, previousParams) => {
+                  // react to route changes...
+                }
+              )
+            },
+          }
         })
         .catch((error) => {});
     },

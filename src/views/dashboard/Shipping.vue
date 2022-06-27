@@ -513,10 +513,7 @@ export default {
           }
         )
         .then((response) => {
-          console.log(response.data.message);
           if (response.data.status == 400) {
-            alert('ghsdfhgsafd');
-
             const Toast = this.$swal.mixin({
               toast: true,
               position: "top-end",

@@ -92,7 +92,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -110,7 +110,7 @@
                                   </div>
                                   <div class="slidingSection">
                                     <img
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -282,9 +282,8 @@
                           <!-- product-footer-buttons -->
                           <div class="product-footer-details">
                             <ul>
-                              <li class="SpecHighlights-list-label">laban</li>
-                              <li>Fresh</li>
-                              <li>2 kg</li>
+                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
+                             
                             </ul>
                             &nbsp;
                           </div>
@@ -1619,8 +1618,8 @@ export default {
           langCode
       )
       .then((response) => {
+        console.log('seller-data',response);
         this.results = response.data.data[0].products;
-        // console.log('seller data'this.results);
         const productStore = useProductStore();
         productStore.testData(this.results);
       })

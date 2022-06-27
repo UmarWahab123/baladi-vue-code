@@ -251,10 +251,9 @@
                           <div class="product-details">
                             <ul>
                               <li class="SpecHighlights-list-label">
-                                Screen Size 10.9 in
+                                {{ item.product.lg_description }}
                               </li>
-                              <li>Operating System Apple iOS</li>
-                              <li>Product Length 9.74 in</li>
+                             
                             </ul>
                             &nbsp;
                           </div>
@@ -1565,8 +1564,8 @@ export default {
           langCode
       )
       .then((response) => {
+        console.log("hot-deals",response);
         this.results = response.data.data[0].products;
-        // console.log(this.results);
         const productStore = useProductStore();
         productStore.HotDealData(this.results);
       })

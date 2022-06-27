@@ -268,10 +268,10 @@
                   <div class="product-footer-details">
                     <ul>
                       <li class="SpecHighlights-list-label">
-                        Screen Size 10.9 in
+                        {{
+                          item.product?.lg_description
+                        }}
                       </li>
-                      <li>Operating System Apple iOS</li>
-                      <li>Product Length 9.74 in</li>
                     </ul>
                     &nbsp;
                   </div>
@@ -1659,7 +1659,7 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist?locale=" +
           langCode,
             {
               headers: {

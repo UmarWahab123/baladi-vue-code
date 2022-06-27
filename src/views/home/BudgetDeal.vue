@@ -472,10 +472,8 @@
                           <div class="product-footer-details">
                             <ul>
                               <li class="SpecHighlights-list-label">
-                                Breakfast
+                                {{ item.product.lg_description }}
                               </li>
-                              <li>Fresh</li>
-                              <li>3kg</li>
                             </ul>
                             &nbsp;
                           </div>

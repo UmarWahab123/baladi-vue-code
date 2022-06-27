@@ -225,14 +225,9 @@
                   <div class="product-footer-details">
                     <ul>
                       <li class="SpecHighlights-list-label">
-                        Screen Size 11 in
+                           {{ item.product.lg_description }}
                       </li>
-                      <li>Operating SystemApple iOS</li>
-                      <li>
-                        <div class="SpecHighlights-list-label">
-                          RAM Memory 8 GB
-                        </div>
-                      </li>
+                     
                     </ul>
                   </div>
                 </div>

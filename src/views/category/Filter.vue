@@ -270,6 +270,17 @@ export default {
     .then((response) => {
       this.relatedcategory = response.data.data;
       // console.log('relatedproduct',this.results);
+         const User = {
+            template: '...',
+            created() {
+              this.$watch(
+                () => this.$route.params,
+                (toParams, previousParams) => {
+                  // react to route changes...
+                }
+              )
+            },
+          }
     })
     .catch((error) => {});
     }else{

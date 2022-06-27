@@ -81,27 +81,10 @@
       <div class="container">
         <div class="row">
           <div class="col col-12 col-lg-3">
-            <div class="klbfooterwidget widget widget_nav_menu mb-0">
-              <div class="site-brand">
-                <a href="#" title="Baladi – Electronics Store eCommerce Theme">
-                  <img
-                    src="@/assets/img//logo-dark.png"
-                    width="171"
-                    height="34"
-                    alt="Baladi – Electronics Store eCommerce Theme"
-                  />
-                </a>
-              </div>
-              <div class="menu-make-money-with-us-container py-2">
-                <p class="">
-                 {{$t('souq_albaladi_founded')}}
-                </p>
-
-                <strong class="text-dark"
-                  >UAN : <span class="">05434403434</span></strong
-                >
-              </div>
-            </div>
+          <div class="column align-center left">
+            <div class="site-brand"><a aria-current="page" href="/en" class="router-link-active router-link-exact-active" title="Machic – Electronics Store eCommerce Theme">
+              <img src="http://english-template.bteamwebs.com/src/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme"></a>
+              </div><!-- site-brand --></div>
             <div class="social-share site-social colored">
               <ul class="social-container">
                 <li>

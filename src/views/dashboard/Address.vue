@@ -125,7 +125,7 @@
                             </router-link>
                             <a
                               @click="deleteaddress(item.id)"
-                              style="margin-left: 5px; background-color: red"
+                              style="margin-left: 5px; background-color: red; cursor: pointer;"
                               class="woocommerce-button button view"
                               >{{$t('delete')}}
                             </a>
@@ -176,6 +176,7 @@ export default {
       langCode: "en",
       addresses:[],
       addressnotfound:false,
+      error:"",
 
     };
   },
@@ -202,7 +203,7 @@ export default {
    deleteaddress(id){
       axios
         .delete(
-          "http://baladi-v1.bteamwebs.com/api/customer/address/delete?id=" +
+          "http://baladi-v1.bteamwebs.com/api/customer/address/delete/" +
             id,
           {
             headers: {
@@ -222,12 +223,11 @@ export default {
               toast.addEventListener("mouseleave", Swal.resumeTimer);
             },
           });
-
           Toast.fire({
             icon: "success",
             title: response.data.data[0]
               ? response.data.data[0]
-              : response.data.message,
+              : response.data.data.original.message,
           });
 
           this.getWishList();

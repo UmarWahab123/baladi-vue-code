@@ -752,12 +752,6 @@
                               ></small
                             ></span
                           >
-                          <form
-                            action="javascript:void(0)"
-                            method="post"
-                            id="commentform"
-                            class="comment-form"
-                          >
                             <p class="comment-notes">
                               <span id="email-notes"
                                 >{{$t('email_address_will_not_be_published')}}</span
@@ -773,17 +767,16 @@
                               >
                               <p class="stars">
                                 <span>
-                                  <a class="star-1" href="#">1</a>
-                                  <a class="star-2" href="#">2</a>
-                                  <a class="star-3" href="#">3</a>
-                                  <a class="star-4" href="#">4</a>
-                                  <a class="star-5" href="#">5</a>
+                                  <a class="star-1 selectstar" value="1" href="#">1</a>
+                                  <a class="star-2 selectstar" value="2" href="#">2</a>
+                                  <a class="star-3 selectstar" value="3" href="#">3</a>
+                                  <a class="star-4 selectstar" value="4" href="#">4</a>
+                                  <a class="star-5 selectstar" value="5" href="#">5</a>
                                 </span>
                               </p>
                               <select
                                 name="rating"
                                 id="rating"
-                                required=""
                                 style="display: none"
                               >
                                 <option value="">Rate…</option>
@@ -801,41 +794,24 @@
                                 ></label
                               ><textarea
                                 id="comment"
-                                name="comment"
+                                name="review"
+                                v-model="formdata.review"
                                 cols="45"
                                 rows="8"
                                 required=""
                               ></textarea>
                             </p>
-                            <p class="comment-form-author">
-                              <label for="author"
-                                >{{$t('name')}}&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              ><input
-                                id="author"
-                                name="author"
-                                type="text"
-                                value=""
-                                size="30"
-                                required=""
+                             <p class="form-submit">
+                              <input
+                                name="submit"
+                                type="submit"
+                                 @click="storereview()"
+                                id="submit"
+                                class="submit"
+                                value="Submit"
                               />
                             </p>
-                            <p class="comment-form-email">
-                              <label for="email"
-                                >{{$t('email')}}&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              ><input
-                                id="email"
-                                name="email"
-                                type="email"
-                                value=""
-                                size="30"
-                                required=""
-                              />
-                            </p>
-                            <p class="comment-form-cookies-consent">
+                            <p class="comment-form-cookies-consent d-none">
                               <input
                                 id="wp-comment-cookies-consent"
                                 name="wp-comment-cookies-consent"
@@ -846,28 +822,6 @@
                                 >{{$t('Save_my_name')}}</label
                               >
                             </p>
-                            <p class="form-submit">
-                              <input
-                                name="submit"
-                                type="submit"
-                                id="submit"
-                                class="submit"
-                                value="Submit"
-                              />
-                              <input
-                                type="hidden"
-                                name="comment_post_ID"
-                                value="521"
-                                id="comment_post_ID"
-                              />
-                              <input
-                                type="hidden"
-                                name="comment_parent"
-                                id="comment_parent"
-                                value="0"
-                              />
-                            </p>
-                          </form>
                         </div>
                         <!-- #respond -->
                       </div>
@@ -2448,7 +2402,12 @@ export default {
     isloading: true,
     quantity: 1,
     url: "http://baladiweb.bteamwebs.com/storage/",
+    formdata: {
+        rating: "",
+        review: "",
 
+      },
+      token: "",
     errors: "",
     //Index of the active image
     activeImage: 0,
@@ -2520,7 +2479,7 @@ export default {
     var id = this.$route.params.id;
     console.log(id);
     var langCode = localStorage.getItem("lang");
-
+    this.token = JSON.parse(localStorage.userInfo).token;
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
@@ -2537,6 +2496,58 @@ export default {
     this.langCode = lang;
   },
   methods: {
+  async storereview() {
+      await axios
+        .post(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/review/store",
+          this.formdata,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          if (response.data.status == 400) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+            +console.log(response.data.data[0]);
+          } else {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
+          }
+        });
+    },
     increment: function () {
       // const input_index = event.currentTarget.getAttribute("input_Index");
       this.quantity = this.quantity + 1;
