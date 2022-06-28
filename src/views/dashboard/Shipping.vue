@@ -12,7 +12,6 @@
 
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
-
                     <h3>{{$t('Shipping_address')}}</h3>
                     <div class="woocommerce-address-fields">
                       <div class="woocommerce-address-fields__field-wrapper">
@@ -545,11 +544,12 @@ export default {
                 toast.addEventListener("mouseleave", Swal.resumeTimer);
               },
             });
-
             Toast.fire({
               icon: "success",
               title: response.data.message,
             });
+             var lang = localStorage.getItem("lang");
+            this.$router.push("/" + lang + "/edit-address");
           }
         });
     },

@@ -5,7 +5,10 @@
 span.tinvwl_add_to_wishlist-text {
     display: none;
 }
-
+i.fa.fa-star {
+    color: #ffc21f;
+    font-size: 12px;
+}
 .rtl .span.tinvwl_add_to_wishlist-text {
     display: none;
 }

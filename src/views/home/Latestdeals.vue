@@ -314,7 +314,7 @@
                                     add_to_cart_button
                                     ajax_add_to_cart
                                   "
-                                  @click="$emit(cartStore.items.push(item))"
+                                  @click="$emit(cartStore.items.push(item,indextr))"
                                   ><i class="klbth-icon-shop-1"></i> Add to
                                   cart</a
                                 >

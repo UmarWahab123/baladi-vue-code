@@ -461,10 +461,17 @@
                                   add_to_cart_button
                                   ajax_add_to_cart
                                 "
-                                @click="addtoCart(item)"
+                                @click="addtoCart(item,indextr)"
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
+                               <a
+                                  v-if="item?.check"
+                                  href="javascript:void(0)"
+                                  class="added_to_cart wc-forward"
+                                  title="View cart"
+                                  >View cart</a
+                                >
                             </div>
                           </div>
                         </div>
@@ -1824,9 +1831,10 @@ export default {
     this.langCode = lang;
   },
   methods: {
-    addtoCart(item) {
+    addtoCart(item,index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
+      this.results[index].check = true;
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");

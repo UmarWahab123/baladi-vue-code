@@ -1541,8 +1541,7 @@ export default {
           .catch((error) => {});
         // window.location.reload();
       } else {
-          this.resultsnotfound = false;
-
+        this.resultsnotfound = false;
         var preloader = document.querySelector(".dgwt-wcas-preloader");
         var search = document.querySelector(".pre-suggestions");
         var searchsugget = document.querySelector(".js-dgwt-wcas-initialized");

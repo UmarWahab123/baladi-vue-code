@@ -181,7 +181,7 @@
                                   ></ins
                                 ></span
                               ><a
-                                href="?add-to-cart=521"
+                                href="javascript::void(0)"
                                 data-quantity="1"
                                 class="
                                   button
@@ -193,9 +193,17 @@
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
                                 rel="nofollow"
+                                @click="addtoCart(item,indextr)"
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
+                               <a
+                                  v-if="item?.check"
+                                  href="javascript:void(0)"
+                                  class="added_to_cart wc-forward"
+                                  title="View cart"
+                                  >View cart</a
+                                >
                             </div>
                           </div>
                         </div>
@@ -203,10 +211,8 @@
                           <div class="product-footer-details">
                             <ul>
                               <li class="SpecHighlights-list-label">
-                                Breakfast
+                                {{item.lg_description}}
                               </li>
-                              <li>Fresh</li>
-                              <li>3kg</li>
                             </ul>
                             &nbsp;
                           </div>
@@ -1469,8 +1475,17 @@
 <script setup>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
+import { useCartStore } from "../../stores/CartStore";
+import { useProductStore } from "../../stores/ProductStore";
+const productStore = useProductStore();
+const cartStore = useCartStore();
+defineEmits(["addToCart"]);
 </script>
 <script>
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useProductStore } from "../../stores/ProductStore";
+import { useCartStore } from "../../stores/CartStore";
 import axios from "axios";
 export default {
   data: () => ({
@@ -1536,6 +1551,11 @@ export default {
           }
         })
         .catch((error) => {});
+    },
+    addtoCart(item, index) {
+      const cartStore = useCartStore();
+      cartStore.addcartapi(item);
+      this.results[index].check = true;
     },
     clickmodal(index) {
       this.showmodal = "show";

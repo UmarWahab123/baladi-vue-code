@@ -47,14 +47,19 @@
                       data-date="2022/04/15"
                       data-text="Expired"
                     >
-                      <div class="count-item days">51</div>
+
+
+                      <div class="count-item days">{{countdays}}</div>
                       <span>:</span>
-                      <div class="count-item hours">13</div>
+                      <div class="count-item hours">{{counthours}}</div>
                       <span>:</span>
-                      <div class="count-item minutes">11</div>
+                      <div class="count-item minutes">{{countminutes}}</div>
                       <span>:</span>
-                      <div class="count-item second">51</div>
+                      <div class="count-item second">{{countseconds}}</div>
                     </div>
+
+
+
                     <!-- countdown -->
                     <div class="countdown-text">
                       {{ $t("Remains_until_offer") }}
@@ -1567,6 +1572,10 @@ export default {
     results: [],
     quantity: 1,
     activeImage: 0,
+    countdays:0,
+    counthours:0,
+    countminutes:0,
+    countseconds:0,
     //Hold the timeout, so we can clear it when it is needed
     autoSlideTimeout: null,
     //If the timer is stopped e.g. when hovering over the carousel
@@ -1633,6 +1642,28 @@ export default {
 
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get today's date and time
+  var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  this.countdays = days;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  this.counthours = hours;
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  this.countminutes = minutes;
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  this.countseconds = seconds;
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
   },
   methods: {
     addtoCart(item) {
