@@ -90,3 +90,13 @@ ol.flex-control-thumbs .owl-item {
     box-shadow: none;
     visibility: visible !important;
 }
+.rtl .swiper-container{
+    direction: ltr;
+}
+.rtl .banner-content-wrapper.set-banner-text-alignment{
+    margin-right: auto !important;
+}
+.rtl a.woocommerce-button.button.address-btn.view.p-0{
+    margin-right: 448px !important;
+    margin-left: auto !important;
+}

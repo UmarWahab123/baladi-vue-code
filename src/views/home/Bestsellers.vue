@@ -49,13 +49,13 @@
                     >
 
 
-                      <div class="count-item days">{{countdays}}</div>
+                      <div class="count-item days"></div>
                       <span>:</span>
-                      <div class="count-item hours">{{counthours}}</div>
+                      <div class="count-item hours"></div>
                       <span>:</span>
-                      <div class="count-item minutes">{{countminutes}}</div>
+                      <div class="count-item minutes"></div>
                       <span>:</span>
-                      <div class="count-item second">{{countseconds}}</div>
+                      <div class="count-item second"></div>
                     </div>
 
 
@@ -1572,10 +1572,6 @@ export default {
     results: [],
     quantity: 1,
     activeImage: 0,
-    countdays:0,
-    counthours:0,
-    countminutes:0,
-    countseconds:0,
     //Hold the timeout, so we can clear it when it is needed
     autoSlideTimeout: null,
     //If the timer is stopped e.g. when hovering over the carousel
@@ -1652,13 +1648,13 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  this.countdays = days;
+  document.querySelector(".days").innerHTML = days;
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  this.counthours = hours;
+  document.querySelector(".hours").innerHTML = hours;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  this.countminutes = minutes;
+  document.querySelector(".minutes").innerHTML = minutes;
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  this.countseconds = seconds;
+  document.querySelector(".second").innerHTML = seconds;
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";

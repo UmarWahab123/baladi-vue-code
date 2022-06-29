@@ -141,7 +141,7 @@
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
                                 <h6 class="entry-subtitle style-3">
-                                  Weekend Discount2
+                                  {{$t('Weekend_discount')}}2
                                 </h6>
                                 <h3 class="entry-title">
                                   {{ item?.heading }}

@@ -18,17 +18,9 @@
                     >
                     <router-link
                       to="shipping"
-                      class="woocommerce-button button view ml-180"
+                      class="woocommerce-button button address-btn view p-0"
                     >
                       <button
-                        type="submit"
-                        class="
-                          woocommerce-Button woocommerce-button
-                          button
-                          woocommerce-form-register__submit
-                        "
-                        name="register"
-                        value="Register"
                       >
                         {{$t('add_address')}} 
                       </button>

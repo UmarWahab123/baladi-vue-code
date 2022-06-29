@@ -462,7 +462,7 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper">
+                              <div class="banner-content-wrapper set-banner-text-alignment">
                                 <h6 class="entry-subtitle style-2">
                                  {{$t('Weekend_discount')}}
                                 </h6>
@@ -522,7 +522,7 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper">
+                              <div class="banner-content-wrapper set-banner-text-alignment">
                                 <h6 class="entry-subtitle style-2">
                                   {{$t('Weekend_discount')}}
                                 </h6>
@@ -575,7 +575,7 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper">
+                      <div class="banner-content-wrapper set-banner-text-alignment">
                         <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
                         <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">
@@ -782,7 +782,7 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper">
+                      <div class="banner-content-wrapper set-banner-text-alignment">
                         <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
                         <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">

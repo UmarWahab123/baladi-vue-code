@@ -1517,7 +1517,6 @@ export default {
   mounted() {
     console.log("params", this.$route.params);
     var id = this.$route.params.id;
-
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
     this.product;

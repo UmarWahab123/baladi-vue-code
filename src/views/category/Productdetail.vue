@@ -2392,7 +2392,7 @@ export default {
     url: "http://baladiweb.bteamwebs.com/storage/",
     formdata: {
         product_id: "",
-        rating: 4,
+        rating: "",
         comment: "",
 
       },

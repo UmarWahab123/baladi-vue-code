@@ -788,7 +788,7 @@
                     "
                     :data="item"
                     :key="indextr"
-                    v-for="(item, indextr) in results?.slice(0, 11)"
+                    v-for="(item, indextr) in categories?.slice(0, 11)"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -1331,6 +1331,7 @@ export default {
     url: "http://baladi-v1.bteamwebs.com/storage/",
     showmenu: "",
     results: [],
+    categories:[],
     overflow: "",
     notificationheight: 0,
     isChecked: false,
@@ -1388,7 +1389,8 @@ export default {
           this.langCode
       )
       .then((response) => {
-        this.results = response.data.data.data;
+        this.categories = response.data.data.data;
+        console.log("categoryresults", this.categories);
       })
       .catch((error) => {});
     axios
