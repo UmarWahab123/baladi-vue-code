@@ -269,7 +269,7 @@ export default {
     .get(import.meta.env.VITE_API_URL + "/api/mobile/product/relatedcategories/" + id)
     .then((response) => {
       this.relatedcategory = response.data.data;
-      // console.log('relatedproduct',this.results);
+      console.log('relatedproduct',this.results);
          const User = {
             template: '...',
             created() {
