@@ -1,5 +1,6 @@
 <template>
   <form action="javascript:void(0)" method="post" autocomplete="off">
+   
     <table class="tinvwl-table-manage-list">
       <thead>
         <tr>
@@ -24,13 +25,17 @@
           <th class="product-action">&nbsp;</th>
         </tr>
       </thead>
+      
       <tbody>
+      
         <tr
           class="wishlist_item"
           v-for="(item, indextr) in results"
           :key="item.id"
         >
+          
           <td class="product-cb">
+            
             <input type="checkbox" :value="item.id" v-model="selected" />
           </td>
           <td class="product-remove">
@@ -114,7 +119,20 @@
             </button>
           </td>
         </tr>
+         
+         <tr  v-if="wishlistnotfound" >
+          <td colspan="9">
+                <h3
+                 
+                  class="d-flex justify-content-center"
+                >
+                  {{$t('No_Data_found')}}
+                </h3>
+          </td>
+          </tr>
+
       </tbody>
+             
       <tfoot>
         <tr>
           <td colspan="100">
@@ -145,8 +163,11 @@
                     {{$t('apply')}} <span class="tinvwl-mobile">{{$t('action')}}</span>
                   </button></span
                 >
+                
               </div>
+              
             </div>
+       
             <div class="tinvwl-to-right look_in">
               <button
                 class="btn"
@@ -180,7 +201,9 @@
           </td>
         </tr>
       </tfoot>
+       
     </table>
+   
   </form>
 </template>
 <script setup>
@@ -201,6 +224,7 @@ export default {
     token: "",
     moment: moment,
     items: [],
+    wishlistnotfound:false,
   }),
   mounted() {
     this.getWishList();
@@ -270,9 +294,15 @@ export default {
           )
           .then((response) => {
             this.results = response.data.data;
-            const productStore = useProductStore();
-            productStore.wishListData(this.results);
-            console.log(this.results);
+             if(response.data.data == ""){
+          this.wishlistnotfound = true;
+         }else{
+          const productStore = useProductStore();
+           productStore.wishListData(this.results);
+           this.wishlistnotfound = false;
+
+            // console.log(this.results);
+          }
           })
           .catch((error) => {});
       }

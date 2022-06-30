@@ -71,8 +71,7 @@
                             </p>
                           </div>
                           <div class="entry-button">
-                            <a href="#" class="btn small rounded link-color"
-                              >{{$t('Shop_now')}}</a
+           <router-link class="btn small rounded link-color" :to="'/' + langCode + '/category'">{{$t('Shop_now')}}</router-link
                             >
                           </div>
                         </div>
@@ -83,7 +82,7 @@
                           alt="banner"
                         />
                       </div>
-                      <a href="#" class="overlay-link"></a>
+                      <!-- <a href="#" class="overlay-link"></a> -->
                     </div>
                   </div>
                 </div>
@@ -315,7 +314,7 @@
                                     add_to_cart_button
                                     ajax_add_to_cart
                                   "
-                                  @click="$emit(cartStore.items.push(item))"
+                                  @click="$emit(cartStore.items.push(item,indextr))"
                                   ><i class="klbth-icon-shop-1"></i> Add to
                                   cart</a
                                 >
@@ -326,10 +325,9 @@
                             <div class="product-footer-details">
                               <ul>
                                 <li class="SpecHighlights-list-label">
-                                  Screen Size 10.9 in
+                                    {{ item.product.lg_description }}
                                 </li>
-                                <li>Operating System Apple iOS</li>
-                                <li>Product Length 9.74 in</li>
+                               
                               </ul>
                               &nbsp;
                             </div>
@@ -1618,6 +1616,8 @@ export default {
       showcomparemodalstyle: "",
       quantity: 1,
       activeImage: 0,
+    // langCode:"en",
+
       //Hold the timeout, so we can clear it when it is needed
       autoSlideTimeout: null,
       //If the timer is stopped e.g. when hovering over the carousel

@@ -130,7 +130,7 @@ const routes = [{
     },
     {
         name: "shipping",
-        path: "/" + langCode + "/shipping",
+        path: "/" + langCode + "/shipping/:id?",
         component: () =>
             import ("@/views/dashboard/Shipping.vue"),
     },

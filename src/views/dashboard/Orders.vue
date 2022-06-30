@@ -140,6 +140,14 @@
                           </tr>
                         </tbody>
                       </table>
+                      <div class="row text-center mb-5 p-4">
+                          <h2
+                            v-if="ordernotfound"
+                            class=""
+                          >
+                            {{$t('No_Data_found')}}
+                          </h2>
+                        </div>
                       <div class="order-list d-none">
                         <div class="order-item">
                           <div class="product-name">
@@ -204,6 +212,7 @@ export default {
       url: "http://baladi-v1.bteamwebs.com/storage/",
       results: [],
       token: "",
+      ordernotfound:false,
     };
   },
   mounted() {
@@ -236,7 +245,11 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data;
-        console.log(this.results);
+         if(response.data.data == ""){
+          this.ordernotfound = true;
+         }else{
+          this.ordernotfound = false;
+         }
       })
       .catch((error) => {});
   },

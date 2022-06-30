@@ -141,11 +141,11 @@
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
                                 <h6 class="entry-subtitle style-3">
-                                  Weekend Discount2
+                                  {{$t('Weekend_discount')}}2
                                 </h6>
                                 <h3 class="entry-title">
-                                  {{ item.heading }}
-                                  <strong> {{ item.subheading }}</strong>
+                                  {{ item?.heading }}
+                                  <strong> {{ item?.subheading }}</strong>
                                 </h3>
                                 <div class="entry-description">
                                   <p>
@@ -154,16 +154,14 @@
                                   </p>
                                 </div>
                                 <div class="entry-button">
-                                  <a
-                                    href="#"
-                                    class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}
-                                  </a>
+                          <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}
+                                   </router-link>
                                 </div>
                               </div>
                             </div>
                             <div class="banner-image">
-                              <img
+                              <img class="testslider"
                                 src="@/assets/img/slider-banner-3.jpg"
                                 alt="Sample 2"
                               />
@@ -193,6 +191,8 @@ export default defineComponent({
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
+    langCode:"en"
+
   }),
   mounted() {
     axios

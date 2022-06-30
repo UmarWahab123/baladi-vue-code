@@ -458,7 +458,19 @@
     "Points": "Points",
     "points_expires": "points expires",
     "frequently_asked_questions_below": "Find the answers for the most frequently asked questions below",
-    "Your_question": "Your question"
+    "Your_question": "Your question",
+    "No_Data_found":"No Data Found",
+    "Billing": "Billing",
+    "Address_Type": "Address Type",
+    "Shipping_address": "Shipping address",
+    "Zone":"Zone",
+    "Address_Line1":"Address Line 1",
+    "Address_Line2":"Address Line 2",
+    "Latitude":"Latitude",
+    "Longitude":"Longitude",
+    "Save_address":"Save address",
+    "Update_address":"Update address"
+
 
 
 

@@ -47,14 +47,19 @@
                       data-date="2022/04/15"
                       data-text="Expired"
                     >
-                      <div class="count-item days">51</div>
+
+
+                      <div class="count-item days"></div>
                       <span>:</span>
-                      <div class="count-item hours">13</div>
+                      <div class="count-item hours"></div>
                       <span>:</span>
-                      <div class="count-item minutes">11</div>
+                      <div class="count-item minutes"></div>
                       <span>:</span>
-                      <div class="count-item second">51</div>
+                      <div class="count-item second"></div>
                     </div>
+
+
+
                     <!-- countdown -->
                     <div class="countdown-text">
                       {{ $t("Remains_until_offer") }}
@@ -92,7 +97,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -110,7 +115,7 @@
                                   </div>
                                   <div class="slidingSection">
                                     <img
-                                      src="http://baladi-v1.bteamwebs.com/storage/images/compaigns/1654593869_product-15-90x90.jpg"
+                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -235,7 +240,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >{{$t('QAR')}} </span
+                                      >{{ $t("QAR") }} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.previous_price
@@ -248,7 +253,7 @@
                                   ><bdi
                                     ><span
                                       class="woocommerce-Price-currencySymbol"
-                                      >{{$t('QAR')}} </span
+                                      >{{ $t("QAR") }} </span
                                     >{{
                                       item.product?.uom_products[0]
                                         ?.regular_price
@@ -282,9 +287,8 @@
                           <!-- product-footer-buttons -->
                           <div class="product-footer-details">
                             <ul>
-                              <li class="SpecHighlights-list-label">laban</li>
-                              <li>Fresh</li>
-                              <li>2 kg</li>
+                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
+                             
                             </ul>
                             &nbsp;
                           </div>
@@ -1549,7 +1553,6 @@ defineEmits(["addToCart"]);
 </script>
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { useProductStore } from "../../stores/ProductStore";
 import { useCartStore } from "../../stores/CartStore";
 
@@ -1620,8 +1623,8 @@ export default {
           langCode
       )
       .then((response) => {
+        console.log('seller-data',response);
         this.results = response.data.data[0].products;
-        // console.log('seller data'this.results);
         const productStore = useProductStore();
         productStore.testData(this.results);
       })
@@ -1635,6 +1638,28 @@ export default {
 
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get today's date and time
+  var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  document.querySelector(".days").innerHTML = days;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  document.querySelector(".hours").innerHTML = hours;
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  document.querySelector(".minutes").innerHTML = minutes;
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.querySelector(".second").innerHTML = seconds;
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
   },
   methods: {
     addtoCart(item) {
@@ -1672,8 +1697,8 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale="+ 
-            this.langCode,
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+              this.langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1700,7 +1725,9 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id + '&locale='+this.langCode
+            topseller_id +
+            "&locale=" +
+            this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

@@ -125,9 +125,9 @@
                             <p>{{$t('miss_the_last_opportunity')}}</p>
                           </div>
                           <div class="entry-button">
-                            <a href="" class="btn small rounded link-color"
-                              >{{$t('Shop_now')}}</a
-                            >
+                          <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                           </div>
                         </div>
                       </div>
@@ -137,7 +137,7 @@
                           alt="banner"
                         />
                       </div>
-                      <a href="#" class="overlay-link"></a>
+                      <!-- <a href="#" class="overlay-link"></a> -->
                     </div>
                   </div>
                 </div>
@@ -301,13 +301,13 @@
                                   data-date="2022/04/13"
                                   data-text="Expired"
                                 >
-                                  <div class="count-item days">27</div>
+                                  <div class="count-item dayscounts"></div>
                                   <span>:</span>
-                                  <div class="count-item hours">10</div>
+                                  <div class="count-item hourscounts"></div>
                                   <span>:</span>
-                                  <div class="count-item minutes">09</div>
+                                  <div class="count-item minutescounts"></div>
                                   <span>:</span>
-                                  <div class="count-item second">59</div>
+                                  <div class="count-item secondcounts"></div>
                                 </div>
                                 <div class="countdown-text">
                                   Remains until the end of the offer
@@ -462,7 +462,7 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper">
+                              <div class="banner-content-wrapper set-banner-text-alignment">
                                 <h6 class="entry-subtitle style-2">
                                  {{$t('Weekend_discount')}}
                                 </h6>
@@ -471,11 +471,9 @@
                                   <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
-                                  <a
-                                    href="#echo-dot-4th-gen-2020-release-smart-speaker/"
-                                    class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}</a
-                                  >
+                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                                 </div>
                               </div>
                             </div>
@@ -485,10 +483,10 @@
                                 alt="banner"
                               />
                             </div>
-                            <a
+                            <!-- <a
                               href="#echo-dot-4th-gen-2020-release-smart-speaker/"
                               class="overlay-link"
-                            ></a>
+                            ></a> -->
                           </div>
                         </div>
                       </div>
@@ -524,7 +522,7 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper">
+                              <div class="banner-content-wrapper set-banner-text-alignment">
                                 <h6 class="entry-subtitle style-2">
                                   {{$t('Weekend_discount')}}
                                 </h6>
@@ -533,11 +531,9 @@
                                   <p>{{$t('miss_the_last_opportunity')}}</p>
                                 </div>
                                 <div class="entry-button">
-                                  <a
-                                    href="#oneplus-8-pro-onyx-black-android-smartphone/"
-                                    class="btn small rounded link-color"
-                                    >{{$t('Shop_now')}}</a
-                                  >
+                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
+                          >
                                 </div>
                               </div>
                             </div>
@@ -547,10 +543,10 @@
                                 alt="banner"
                               />
                             </div>
-                            <a
+                            <!-- <a
                               href="#oneplus-8-pro-onyx-black-android-smartphone/"
                               class="overlay-link"
-                            ></a>
+                            ></a> -->
                           </div>
                         </div>
                       </div>
@@ -579,17 +575,15 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper">
+                      <div class="banner-content-wrapper set-banner-text-alignment">
                         <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
                         <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">
                           <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
-                          <a
-                            href="#beats-studio3-wireless-headphones-matte-black/"
-                            class="btn small rounded link-color"
-                            >{{$t('Shop_now')}}</a
+                         <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
                           >
                         </div>
                       </div>
@@ -600,10 +594,10 @@
                         alt="banner"
                       />
                     </div>
-                    <a
+                    <!-- <a
                       href="#beats-studio3-wireless-headphones-matte-black/"
                       class="overlay-link"
-                    ></a>
+                    ></a> -->
                   </div>
                 </div>
               </div>
@@ -764,7 +758,7 @@
                         <strong>{{$t('FREE256MAC')}}</strong>
                       </div>
                     </div>
-                    <a href="#" class="overlay-link"></a>
+                    <!-- <a href="#" class="overlay-link"></a> -->
                   </div>
                 </div>
               </div>
@@ -788,17 +782,15 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper">
+                      <div class="banner-content-wrapper set-banner-text-alignment">
                         <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
                         <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
                         <div class="entry-description">
                           <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
                         <div class="entry-button">
-                          <a
-                            href="javascript:void(0)"
-                            class="btn small rounded link-color"
-                            >{{$t('Shop_now')}}</a
+                           <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
+                    >{{$t('Shop_now')}}</router-link
                           >
                         </div>
                       </div>
@@ -809,7 +801,7 @@
                         alt="banner"
                       />
                     </div>
-                    <a href="javascript:void(0)" class="overlay-link"></a>
+                    <!-- <a href="javascript:void(0)" class="overlay-link"></a> -->
                   </div>
                 </div>
               </div>
@@ -2112,6 +2104,27 @@ export default {
     },
   },
   mounted() {
+     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+  // Update the count down every 1 second
+    var x = setInterval(function() {
+    // Get today's date and time
+    var now = new Date().getTime();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.querySelector(".dayscounts").innerHTML = days;
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.querySelector(".hourscounts").innerHTML = hours;
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.querySelector(".minutescounts").innerHTML = minutes;
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.querySelector(".secondcounts").innerHTML = seconds;
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
     setTimeout(() => (this.isloading = false), 1000);
     var langCode = localStorage.getItem("lang");
 

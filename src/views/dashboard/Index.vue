@@ -15,7 +15,7 @@
                     <p>
                       {{$t('hello')}} <strong>{{ userdata.name }}</strong> ( {{$t('Not')}}
                       <strong>{{ userdata.name }}</strong
-                      >? <a href="#">{{$t('logout')}}</a>)
+                      >?  <a @click="logout()" href="javascript:void(0);">{{$t('logout')}}</a>)
                     </p>
 
                     <p>
@@ -94,6 +94,14 @@ export default {
     setTimeout(() => (this.isloading = false), 1000);
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+  },
+   methods: {
+    logout() {
+      localStorage.clear();
+      localStorage.setItem("lang", "en");
+      var lang = localStorage.getItem("lang");
+      this.$router.push("/" + lang + "/myaccount");
+    },
   },
 };
 </script>

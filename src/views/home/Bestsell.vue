@@ -258,9 +258,16 @@
                           add_to_cart_button
                           ajax_add_to_cart
                         "
-                        @click="addtoCart(item)"
+                        @click="addtoCart(item,indextr)"
                         ><i class="klbth-icon-shop-1"></i> Add to cart</a
                       >
+                       <a
+                          v-if="item?.check"
+                          href="javascript:void(0)"
+                          class="added_to_cart wc-forward"
+                          title="View cart"
+                          >View cart</a
+                            >
                     </div>
                   </div>
                 </div>
@@ -268,10 +275,10 @@
                   <div class="product-footer-details">
                     <ul>
                       <li class="SpecHighlights-list-label">
-                        Screen Size 10.9 in
+                        {{
+                          item.product?.lg_description
+                        }}
                       </li>
-                      <li>Operating System Apple iOS</li>
-                      <li>Product Length 9.74 in</li>
                     </ul>
                     &nbsp;
                   </div>
@@ -1624,9 +1631,11 @@ export default {
     this.langCode = lang;
   },
   methods: {
-    addtoCart(item) {
+    addtoCart(item,index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
+      this.bestresults[index].check = true;
+
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
@@ -1659,7 +1668,7 @@ export default {
         this.token = userInfo.token;
         axios
           .get(
-            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
+            "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist?locale=" +
           langCode,
             {
               headers: {

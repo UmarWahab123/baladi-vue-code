@@ -18,17 +18,9 @@
                     >
                     <router-link
                       to="shipping"
-                      class="woocommerce-button button view ml-180"
+                      class="woocommerce-button button address-btn view p-0"
                     >
                       <button
-                        type="submit"
-                        class="
-                          woocommerce-Button woocommerce-button
-                          button
-                          woocommerce-form-register__submit
-                        "
-                        name="register"
-                        value="Register"
                       >
                         {{$t('add_address')}} 
                       </button>
@@ -52,7 +44,7 @@
                               woocommerce-orders-table__header-order-number
                             "
                           >
-                            <span class="nobr">{{$t('address')}} </span>
+                            <span class="nobr">{{$t('Address_Type')}} </span>
                           </th>
 
                           <th
@@ -61,7 +53,7 @@
                               woocommerce-orders-table__header-order-total
                             "
                           >
-                            <span class="nobr">{{$t('total')}}</span>
+                            <span class="nobr">{{$t('address')}}</span>
                           </th>
                           <th
                             class="
@@ -81,6 +73,9 @@
                             woocommerce-orders-table__row--status-on-hold
                             order
                           "
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in addresses"
                         >
                           <td
                             class="
@@ -89,7 +84,9 @@
                             "
                             data-title="Order"
                           >
-                            <a href=""> Billing </a>
+                            <a v-if="item.shipping==0" href=""> {{$t('Billing')}} </a>
+                            <a v-if="item.shipping==1" href=""> {{$t('shipping')}}</a>
+
                           </td>
 
                           <td
@@ -103,86 +100,40 @@
                               ><span
                                 class="woocommerce-Price-currencySymbol"
                               ></span
-                              >1Jena Benjamin Oneill Mcintyre Associates 128
-                              East Green Old Road</span
-                            >
+                              >{{item.address_line_1}},&nbsp;{{item.address_line_2}}</span>
+                            
                           </td>
                           <td
                             class="
                               woocommerce-orders-table__cell
                               woocommerce-orders-table__cell-order-actions
-                              text-center
                             "
                             data-title="Actions"
                           >
                             <router-link
-                              :to="'/' + langCode + '/shipping'"
+                              :to="'/' + langCode + '/shipping/'+ item.id"
                               class="woocommerce-button button view buttonsalignment"
                               >{{$t('edit')}}
                             </router-link>
-                            <router-link
-                              to=""
-                              style="margin-left: 5px; background-color: red"
+                            <a
+                              @click="deleteaddress(item.id)"
+                              style="margin-left: 5px; background-color: red; cursor: pointer;"
                               class="woocommerce-button button view"
                               >{{$t('delete')}}
-                            </router-link>
+                            </a>
                           </td>
                         </tr>
-                        <tr
-                          class="
-                            woocommerce-orders-table__row
-                            woocommerce-orders-table__row--status-on-hold
-                            order
-                          "
-                        >
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-number
-                            "
-                            data-title="Order"
-                          >
-                            <a href=""> Shipping</a>
-                          </td>
-
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-total
-                            "
-                            data-title="Total"
-                          >
-                            <span class="woocommerce-Price-amount amount"
-                              ><span
-                                class="woocommerce-Price-currencySymbol"
-                              ></span
-                              >1Jena Benjamin Oneill Mcintyre Associates 128
-                              East Green Old Road</span
-                            >
-                          </td>
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-actions
-                              text-center
-                            "
-                            data-title="Actions"
-                          >
-                            <router-link
-                              to="shipping"
-                              class="woocommerce-button button view buttonsalignment"
-                              >{{$t('edit')}}
-                            </router-link>
-                            <router-link
-                              to=""
-                              style="margin-left: 5px; background-color: red"
-                              class="woocommerce-button button view"
-                              >{{$t('delete')}}
-                            </router-link>
-                          </td>
-                        </tr>
+                    
                       </tbody>
                     </table>
+                      <div class="row text-center mb-5 p-4">
+                      <h2
+                        v-if="addressnotfound"
+                        class=""
+                      >
+                        {{$t('No_Data_found')}}
+                      </h2>
+                    </div>
                   </div>
                 </div>
                 <!-- my-account-wrapper -->
@@ -208,22 +159,74 @@ import Sidebar from "./Sidebar.vue";
 
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
 export default {
   components: { TheLoader },
   data() {
     return {
       isloading: true,
       langCode: "en",
+      addresses:[],
+      addressnotfound:false,
+      error:"",
+
     };
   },
   mounted() {
+    // alert(a);
+    this.token = JSON.parse(localStorage.userInfo).token;
     if (localStorage.userInfo != null) {
-    } else {
-      this.$router.push("myaccount");
+      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.addresses = userInfo.customer_addresses;
+      console.log('newaddress',this.addresses);
+      if(userInfo.customer_addresses == ""){
+          this.addressnotfound = true;
+         }else{
+          this.addressnotfound = false;
+       }
+      // console.log('custaddress',this.addresses);
+
     }
     setTimeout(() => (this.isloading = false), 1000);
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
   },
+  methods:{
+   deleteaddress(id){
+      axios
+        .delete(
+          "http://baladi-v1.bteamwebs.com/api/customer/address/delete/" +
+            id,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          const Toast = this.$swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: response.data.data[0]
+              ? response.data.data[0]
+              : response.data.data.original.message,
+          });
+
+          this.getWishList();
+        })
+        .catch((error) => {});
+    },
+  }
+   
 };
 </script>

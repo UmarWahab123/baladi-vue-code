@@ -12,11 +12,12 @@
 
                   <div class="woocommerce-MyAccount-content">
                     <div class="woocommerce-notices-wrapper"></div>
-
                     <h3>{{$t('Shipping_address')}}</h3>
                     <div class="woocommerce-address-fields">
                       <div class="woocommerce-address-fields__field-wrapper">
-                        <!-- <input type="hidden" v-bind="formdata.id" /> -->
+                        <input type="hidden" v-model="formdata.id" />
+                        <input type="hidden" v-model="formdata.customer_id" />
+
                         <p
                           class="form-row form-row-first validate-required"
                           id="shipping_first_name_field"
@@ -38,9 +39,7 @@
                               autocomplete="given-name"
                           /></span>
                         </p>
-                        <!-- <div class="error text-danger" v-if="v$.formdata.first_name.$error">
-                            {{ v$.formdata.first_name.required.$message }}
-                         </div> -->
+                      
                         <p
                           class="form-row form-row-last validate-required"
                           id="shipping_last_name_field"
@@ -110,7 +109,7 @@
                           data-priority="50"
                         >
                           <label for="shipping_address_1" class=""
-                            >{{$t('Address_Line')}}&nbsp;<abbr
+                            >{{$t('Address_Line1')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
@@ -121,7 +120,6 @@
                               class="input-text"
                               v-model="formdata.address_line_1"
                               id="shipping_address_1"
-                              placeholder="House number and street name"
                               autocomplete="address-line1"
                               data-placeholder="House number and street name"
                           /></span>
@@ -151,7 +149,6 @@
                               class="input-text"
                               v-model="formdata.address_line_2"
                               id="shipping_address_1"
-                              placeholder="House number and street name"
                               autocomplete="address-line1"
                               data-placeholder="House number and street name"
                           /></span>
@@ -202,33 +199,6 @@
                         <!-- <div class="error text-danger" v-if="v$.formdata.city.$error">
                             {{ v$.formdata.city.required.$message }}
                            </div> -->
-                        <p
-                          class="
-                            form-row
-                            address-field
-                            validate-required validate-postcode
-                            form-row-wide
-                          "
-                          id="shipping_postcode_field"
-                          data-priority="90"
-                          data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
-                        >
-                          <label for="shipping_postcode" class=""
-                            >{{$t('Postcode_ZIP')}}&nbsp;<abbr
-                              class="required"
-                              title="required"
-                              >*</abbr
-                            ></label
-                          ><span class="woocommerce-input-wrapper"
-                            ><input
-                              type="text"
-                              class="input-text"
-                              v-model="formdata.zip"
-                              id="shipping_postcode"
-                              placeholder=""
-                              autocomplete="postal-code"
-                          /></span>
-                        </p>
                         <p
                           class="
                             form-row
@@ -301,31 +271,47 @@
                           data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                         >
                           <label for="shipping_postcode" class=""
-                            >{{$t('shipping')}}&nbsp;<abbr
+                            >{{$t('Address_Type')}}&nbsp;<abbr
                               class="required"
                               title="required"
                               >*</abbr
                             ></label
                           ><span class="woocommerce-input-wrapper"
-                            ><input
+                            >
+                            <select
                               type="text"
                               class="input-text"
                               v-model="formdata.shipping"
-                              id="shipping_postcode"
+                              id="shipping_city"
                               placeholder=""
-                              autocomplete="latitude"
-                          /></span>
+                              autocomplete="address-level2"
+                            >
+                             <option value="0">
+                                0
+                              </option>
+                              <option value="1">
+                                1
+                              </option>
+                              </select>
+                         </span>
                         </p>
                       </div>
                       <p>
                         <button
                           type="submit"
                           class="button"
-                          name="save_address"
-                          value="Save address"
                           @click="saveaddress()"
+                          v-if="formdata.id==''"
                         >
-                          {{$t("Save_address")}}
+                          {{$t('Save_address')}}
+                        </button>
+                        <button
+                          type="submit"
+                          class="button"
+                          @click="updateaddress()"
+                          v-if="formdata.id"
+                        >
+                          {{$t('Update_address')}}
                         </button>
                         <input
                           type="hidden"
@@ -370,10 +356,10 @@ import Sidebar from "./Sidebar.vue";
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
-// import { required, helpers } from "@vuelidate/validators";
-// import useVuelidate from "@vuelidate/core";
+import { required, helpers } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 export default {
-  // setup: () => ({ v$: useVuelidate() }),
+  setup: () => ({ v$: useVuelidate() }),
   components: { TheLoader },
   data() {
     return {
@@ -381,61 +367,52 @@ export default {
       url: "http://baladi-v1.bteamwebs.com/storage/",
       results: [],
       formdata: {
-        // id: "",
-        city_id: null,
-        first_name: null,
-        last_name: null,
-        zone: "zone 3",
-        contact: null,
-        address_line_1: null,
-        address_line_2: null,
-        zip: null,
-        latitude: 12.4454,
-        longitude: 87.099,
-        shipping: 1,
+        id: "",
+        city_id: "",
+        customer_id: "",
+        first_name: "",
+        last_name: "",
+        zone: "",
+        contact: "",
+        address_line_1: "",
+        address_line_2: "",
+        latitude: "",
+        longitude: "",
+        shipping: "",
       },
       errors: "",
       token: "",
     };
   },
-  // validations() {
-  //   return {
-  //     formdata: {
-  //       first_name: {
-  //         required: helpers.withMessage("Firstname cannot be empty!", required),
-  //       },
-  //       last_name: {
-  //         required: helpers.withMessage("Lastname cannot be empty!", required),
-  //       },
-  //       city_id: {
-  //         required: helpers.withMessage("City cannot be empty!", required),
-  //       },
-  //       address_line_1: {
-  //         required: helpers.withMessage("Address Line 1 cannot be empty!", required),
-  //       },
-  //      address_line_2: {
-  //         required: helpers.withMessage("Address Line 2 cannot be empty!", required),
-  //       },
-  //       latitude: {
-  //         required: helpers.withMessage("Latitude cannot be empty!", required),
-  //       },
-  //       longitude: {
-  //         required: helpers.withMessage("Longitude cannot be empty!", required),
-  //       },
-  //     },
-  //   };
-  // },
+  validations() {
+    return {
+      formdata: {
+        first_name: {
+          required: helpers.withMessage("first_name cannot be empty!", required),
+        },
+      
+      },
+    };
+  },
   mounted() {
-    if (localStorage.userInfo != null) {
-      this.token = JSON.parse(localStorage.userInfo).token;
-      console.log(this.token);
-      // this.formdata.id = JSON.parse(localStorage.userInfo).id;
-      this.formdata.first_name = JSON.parse(localStorage.userInfo).name;
-      this.formdata.contact = JSON.parse(localStorage.userInfo).phone;
-    } else {
-      this.$router.push("myaccount");
+    var id = this.$route.params.id;
+    this.token = JSON.parse(localStorage.userInfo).token;
+    if (localStorage.userInfo != null && id != "") {
+      alert(id);
+      var addresses = JSON.parse(localStorage.userInfo).customer_addresses;
+      this.formdata.id = addresses[0].id;
+      this.formdata.customer_id = addresses[0].customer_id;
+      this.formdata.city_id = addresses[0].city_id;
+      this.formdata.first_name = addresses[0].first_name;
+      this.formdata.last_name = addresses[0].last_name;
+      this.formdata.address_line_1 = addresses[0].address_line_1;
+      this.formdata.address_line_2 = addresses[0].address_line_2;
+      this.formdata.zone = addresses[0].zone;
+      this.formdata.contact = addresses[0].contact;
+      this.formdata.latitude = addresses[0].latitude;
+      this.formdata.longitude = addresses[0].longitude;
+      this.formdata.shipping = addresses[0].shipping;
     }
-    // console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
     axios
       .get("http://baladi-v1.bteamwebs.com/api/customer/cities")
@@ -446,25 +423,18 @@ export default {
       .catch((error) => {});
   },
   methods: {
-    async saveaddress() {
-      // const result = await this.v$.$validate();
-      // alert(result);
-      // if (!result) {
-      //   return;
-      // }
-      await axios
-        .post(
-          "http://baladi-v1.bteamwebs.com/api/customer/address/store",
-          this.formdata,
-          {
+   async updateaddress(){
+    await axios
+    .post("http://baladi-v1.bteamwebs.com/api/customer/address/update/"+this.formdata.id,this.formdata,
+         {
             headers: {
               Authorization: "Bearer " + this.token,
             },
           }
-        )
-        .then((response) => {
-          console.log(response.data.message);
-          if (response.data.status == 400) {
+      )
+      .then((response) => {
+          console.log('responsemessage',response.data.message);
+            if (response.data.status == 400) {
             const Toast = this.$swal.mixin({
               toast: true,
               position: "top-end",
@@ -501,6 +471,66 @@ export default {
               icon: "success",
               title: response.data.message,
             });
+          }
+
+      })
+      .catch((error) => {});
+    },
+    async saveaddress() {
+          const result = await this.v$.$validate();
+      alert(result);
+      if (!result) {
+        return;
+      }
+      await axios
+        .post(
+          "http://baladi-v1.bteamwebs.com/api/customer/address/store",
+          this.formdata,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+        .then((response) => {
+          if (response.data.status == 400) {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: response.data.data[0]
+                ? response.data.data[0]
+                : response.data.message,
+            });
+            +console.log(response.data.data[0]);
+          } else {
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+            Toast.fire({
+              icon: "success",
+              title: response.data.message,
+            });
+             var lang = localStorage.getItem("lang");
+            this.$router.push("/" + lang + "/edit-address");
           }
         });
     },
