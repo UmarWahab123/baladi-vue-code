@@ -789,6 +789,9 @@
                                 required=""
                               style="height:auto;"></textarea>
                             </p>
+                              <!-- <div class="error text-danger" v-if="v$.formdata?.comment?.$error">
+                                {{ v$.formdata.comment.required.$message }}
+                              </div> -->
                              <p class="form-submit">
                               <input
                                 name="submit"
@@ -2368,10 +2371,11 @@ import TheLoader from "../Loader/TheLoader.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import axios from "axios";
-
+import { required, helpers } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 export default {
+  setup: () => ({ v$: useVuelidate() }),
   components: { TheLoader, Splide, SplideSlide },
-
   data: () => ({
     id: "",
     specification: "",
@@ -2390,15 +2394,15 @@ export default {
     isloading: true,
     quantity: 1,
     url: "http://baladiweb.bteamwebs.com/storage/",
-    formdata: {
-        product_id: "",
-        rating: "",
-        comment: "",
-
-      },
+    // formdata: {
+    //     product_id: "",
+    //     rating: "",
+    //     comment: "",
+    //   },
+   
       token: "",
-    errors: "",
-    onestar:'',
+      error: "",
+      onestar:'',
       twostar:'' ,
       threestar:'' ,
       fourstar:'' ,
@@ -2460,6 +2464,15 @@ export default {
       return 100 - (this.timeLeft / this.autoSlideInterval) * 100;
     },
   },
+validations() {
+    return {
+      formdata: {
+        comment: {
+          required: helpers.withMessage("review comment cannot be empty!", required),
+        },
+      },
+    };
+  },
   mounted() {
     this.specification = "";
     this.showspecification = "";
@@ -2490,6 +2503,11 @@ export default {
   },
   methods: {
   async storereview() {
+    const result = await this.v$.$validate();
+      alert(result);
+    if (!result) {
+        return;
+      }
       await axios
         .post(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/review/store",

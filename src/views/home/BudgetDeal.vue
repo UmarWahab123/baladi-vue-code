@@ -68,13 +68,13 @@
                             data-date="2022/04/12"
                             data-text="Expired"
                           >
-                            <div class="count-item days">48</div>
+                            <div class="count-item dayscount"></div>
                             <span>:</span>
-                            <div class="count-item hours">13</div>
+                            <div class="count-item hourscount"></div>
                             <span>:</span>
-                            <div class="count-item minutes">08</div>
+                            <div class="count-item minutescount"></div>
                             <span>:</span>
-                            <div class="count-item second">12</div>
+                            <div class="count-item secondcount"></div>
                           </div>
                           <!-- countdown -->
                         </div>
@@ -1800,6 +1800,27 @@ export default {
     },
   },
   mounted() {
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+  // Update the count down every 1 second
+    var x = setInterval(function() {
+    // Get today's date and time
+    var now = new Date().getTime();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.querySelector(".dayscount").innerHTML = days;
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.querySelector(".hourscount").innerHTML = hours;
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.querySelector(".minutescount").innerHTML = minutes;
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.querySelector(".secondcount").innerHTML = seconds;
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
     var langCode = localStorage.getItem("lang");
     axios
       .get(
@@ -1829,6 +1850,7 @@ export default {
     }
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
+
   },
   methods: {
     addtoCart(item,index) {

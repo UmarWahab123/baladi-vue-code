@@ -39,9 +39,7 @@
                               autocomplete="given-name"
                           /></span>
                         </p>
-                        <!-- <div class="error text-danger" v-if="v$.formdata.first_name.$error">
-                            {{ v$.formdata.first_name.required.$message }}
-                         </div> -->
+                      
                         <p
                           class="form-row form-row-last validate-required"
                           id="shipping_last_name_field"
@@ -358,10 +356,10 @@ import Sidebar from "./Sidebar.vue";
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
-// import { required, helpers } from "@vuelidate/validators";
-// import useVuelidate from "@vuelidate/core";
+import { required, helpers } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 export default {
-  // setup: () => ({ v$: useVuelidate() }),
+  setup: () => ({ v$: useVuelidate() }),
   components: { TheLoader },
   data() {
     return {
@@ -386,37 +384,21 @@ export default {
       token: "",
     };
   },
-  // validations() {
-  //   return {
-  //     formdata: {
-  //       first_name: {
-  //         required: helpers.withMessage("Firstname cannot be empty!", required),
-  //       },
-  //       last_name: {
-  //         required: helpers.withMessage("Lastname cannot be empty!", required),
-  //       },
-  //       city_id: {
-  //         required: helpers.withMessage("City cannot be empty!", required),
-  //       },
-  //       address_line_1: {
-  //         required: helpers.withMessage("Address Line 1 cannot be empty!", required),
-  //       },
-  //      address_line_2: {
-  //         required: helpers.withMessage("Address Line 2 cannot be empty!", required),
-  //       },
-  //       latitude: {
-  //         required: helpers.withMessage("Latitude cannot be empty!", required),
-  //       },
-  //       longitude: {
-  //         required: helpers.withMessage("Longitude cannot be empty!", required),
-  //       },
-  //     },
-  //   };
-  // },
+  validations() {
+    return {
+      formdata: {
+        first_name: {
+          required: helpers.withMessage("first_name cannot be empty!", required),
+        },
+      
+      },
+    };
+  },
   mounted() {
     var id = this.$route.params.id;
     this.token = JSON.parse(localStorage.userInfo).token;
     if (localStorage.userInfo != null && id != "") {
+      alert(id);
       var addresses = JSON.parse(localStorage.userInfo).customer_addresses;
       this.formdata.id = addresses[0].id;
       this.formdata.customer_id = addresses[0].customer_id;
@@ -431,7 +413,6 @@ export default {
       this.formdata.longitude = addresses[0].longitude;
       this.formdata.shipping = addresses[0].shipping;
     }
-    // console.log(userInfo);
     setTimeout(() => (this.isloading = false), 1000);
     axios
       .get("http://baladi-v1.bteamwebs.com/api/customer/cities")
@@ -496,11 +477,11 @@ export default {
       .catch((error) => {});
     },
     async saveaddress() {
-      // const result = await this.v$.$validate();
-      // alert(result);
-      // if (!result) {
-      //   return;
-      // }
+          const result = await this.v$.$validate();
+      alert(result);
+      if (!result) {
+        return;
+      }
       await axios
         .post(
           "http://baladi-v1.bteamwebs.com/api/customer/address/store",
