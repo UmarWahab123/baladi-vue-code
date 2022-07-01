@@ -2,6 +2,16 @@
     display: none;
 } */
 
+.custome-name-style {
+    margin-left: 12px;
+    font-weight: 600;
+}
+.rtl .custome-name-style {
+    margin-left: 0px;
+    margin-right: 12px;
+    font-weight: 600;
+
+}
 span.tinvwl_add_to_wishlist-text {
     display: none;
 }
