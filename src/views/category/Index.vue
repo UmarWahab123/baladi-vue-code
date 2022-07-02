@@ -126,7 +126,7 @@
             <!-- row -->
           </div>
           <div class="row content-wrapper sidebar-left">
-            <Filterproducts />
+            <Filterproducts/>
             <Filter />
           </div>
         </div>
@@ -152,7 +152,7 @@ import Bar from "../home/partials/Bar.vue";
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 export default {
-  components: { TheLoader },
+  components: { TheLoader},
   data() {
     return {
       isloading: true,

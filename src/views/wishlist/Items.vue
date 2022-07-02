@@ -33,9 +33,7 @@
           v-for="(item, indextr) in results"
           :key="item.id"
         >
-          
           <td class="product-cb">
-            
             <input type="checkbox" :value="item.id" v-model="selected" />
           </td>
           <td class="product-remove">

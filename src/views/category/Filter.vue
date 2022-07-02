@@ -9,7 +9,6 @@
           <h3 class="entry-title">{{$t('Filter_Products')}}</h3>
           <div class="close-sidebar"><i class="klbth-icon-cancel"></i></div>
         </div>
-        
         <div v-if="id" class="widget widget_klb_product_categories">
           <h4 class="widget-title">{{$t('product_categories')}}</h4>
           <div class="widget-checkbox-list">
@@ -19,15 +18,14 @@
                 :key="indextr"
                 v-for="(item, indextr) in relatedcategory"
               >
-                <a
-                  href="/machic/?s=apple&amp;post_type=product&amp;dgwt_wcas=1&amp;filter_cat=29"
+                <span
                   class="product_cat"
                   ><input
-                    name="product_cat[]"
-                    value="29"
-                    id="Apple"
+                    @change="filterfunction"
+                    :value="item.category_id"
                     type="checkbox"
-                  /><label><span></span>{{ item?.name }}</label></a
+                    v-model="filterform.categories"
+                  /><label class="custome-name-style"><span></span>{{ item?.name }}</label></span
                 >
               </li>
             </ul>
@@ -197,7 +195,7 @@
           <ul
             :data="brand"
             :key="indextr"
-            v-for="(brand, indextr) in brands"
+            v-for="(brand, indextr) in allbrands?.slice(0, 10)"
             class="woocommerce-widget-layered-nav-list"
           >
             <li
@@ -207,11 +205,14 @@
               "
             >
               <div class="type-button">
-                <span class="button-box"></span
-                ><a
-                  rel="nofollow"
-                  href="avascript::void(0)e"
-                  >{{ brand.name }}</a
+                <span
+                  class="product_cat"
+                  ><input
+                    @change="filterfunction"
+                    :value="brand.id"
+                    type="checkbox"
+                    v-model="filterform.brands"
+                  /><label class="custome-name-style"><span></span>{{ brand?.brand_name }}</label></span
                 >
                 <span class="count">(12)</span>
               </div>
@@ -250,16 +251,24 @@
 
 <script>
 import.meta.env.VITE_API_KEY;
+import { async } from "@firebase/util";
 import axios from "axios";
 export default {
   data: () => ({
     url: import.meta.env.VITE_API_URL + "/storage/",
     results: [],
+    allbrands: [],
+    filterform:{
+    sortBy:"ASC",
+    popular_search:"",
     brands: [],
+    categories: [],
+    },
     relatedcategory: [],
     id:"",
   }),
   mounted() {
+    
     var langCode = localStorage.getItem("lang");
     var id = this.$route.params.id;
     this.id = id;
@@ -270,17 +279,7 @@ export default {
     .then((response) => {
       this.relatedcategory = response.data.data;
       // console.log('relatedproduct',this.results);
-         const User = {
-            template: '...',
-            created() {
-              this.$watch(
-                () => this.$route.params,
-                (toParams, previousParams) => {
-                  // react to route changes...
-                }
-              )
-            },
-          }
+        
     })
     .catch((error) => {});
     }else{
@@ -297,10 +296,23 @@ export default {
       .get(import.meta.env.VITE_API_URL + "/api/web/header/getBrands?locale=" +
           langCode)
       .then((response) => {
-        this.brands = response.data.data;
-        // console.log(this.brands);
+        this.allbrands = response.data.data.data;
       })
       .catch((error) => {});
   },
+  methods:{
+   filterfunction() {
+    // console.log('filterfunction',this.filterform);
+     axios
+       .post(
+          "http://baladi-v1.bteamwebs.com/api/mobile/product/filtersearch",
+          this.filterform,
+        )
+        .then((response) => {
+          this.filterresults = response.searchresults;
+          console.log('filterresults',this.filterresults);
+        })
+    },
+  }
 };
 </script>

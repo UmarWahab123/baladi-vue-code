@@ -165,7 +165,7 @@ export default {
   data() {
     return {
       isloading: true,
-      langCode: "en",
+      langCode: "",
       addresses:[],
       addressnotfound:false,
       error:"",
@@ -175,21 +175,28 @@ export default {
   mounted() {
     // alert(a);
     this.token = JSON.parse(localStorage.userInfo).token;
-    if (localStorage.userInfo != null) {
-      var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      this.addresses = userInfo.customer_addresses;
-      console.log('newaddress',this.addresses);
-      if(userInfo.customer_addresses == ""){
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
+    axios
+    .get("http://baladi-v1.bteamwebs.com/api/mobile/product/getcustomeraddresses?locale=" +
+           this.langCode,
+          {
+            headers: {
+              Authorization: "Bearer " + this.token,
+            },
+          }
+        )
+       .then((response) => {
+         this.addresses = response.data.data;
+        if(this.addresses == ""){
           this.addressnotfound = true;
          }else{
           this.addressnotfound = false;
        }
-      // console.log('custaddress',this.addresses);
-
-    }
+      })
+    .catch((error) => {});
     setTimeout(() => (this.isloading = false), 1000);
-    var lang = localStorage.getItem("lang");
-    this.langCode = lang;
+  
   },
   methods:{
    deleteaddress(id){
