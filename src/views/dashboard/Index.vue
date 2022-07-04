@@ -33,6 +33,7 @@
                         >{{$t('edit_password_account_details')}}</router-link
                       >.
                     </p>
+                    <router-link class="btn text-white my-3" :to="'/' + langCode + '/account'">Update profile</router-link>
                   </div>
                 </div>
                 <!-- my-account-wrapper -->

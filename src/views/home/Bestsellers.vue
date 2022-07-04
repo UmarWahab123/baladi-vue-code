@@ -1,5 +1,99 @@
 <template>
   <!-- 3rd section  -->
+  <section class="elementor-section elementor-top-section elementor-element elementor-element-8dff6a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8dff6a0" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-extended">
+                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="site-module banner-module">
+                                            <div class="module-wrapper">
+                                                <div class="banner dark align-center price-banner ">
+                                                    <div class="banner-content">
+                                                        <div class="banner-content-wrapper">
+                                                            <div class="entry-description">
+                                                            </div><!-- entry-description -->
+                                                            <p class="fw-bold">Personal Care</p>
+                                                            <div class="banner-price-content">
+                                                                <p>Weekend Discount</p>
+
+                                                                <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/personal-care" class="btn small rounded link-color">Shop Now</a>
+                                                                </div>
+                                                                <!-- price -->
+                                                            </div><!-- banner-price-content -->
+                                                        </div><!-- banner-content-wrapper -->
+                                                    </div><!-- banner-content -->
+                                                    <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/care.png" alt="banner">
+                                                    </div><a href="javascript::void(0);" class="overlay-link"></a>
+                                                </div><!-- banner -->
+                                            </div><!-- module-wrapper -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="site-module banner-module">
+                                            <div class="module-wrapper">
+                                                <div class="banner dark align-center price-banner ">
+                                                    <div class="banner-content">
+                                                        <div class="banner-content-wrapper">
+                                                            <div class="entry-description">
+                                                            </div><!-- entry-description -->
+                                                            <p class="fw-bold">Eggs and Dairy </p>
+                                                            <div class="banner-price-content">
+                                                                <p>Weekend Discount</p>
+
+                                                                <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/dairy-products-egg" class="btn small rounded link-color">Shop Now</a>
+                                                                </div>
+                                                                <!-- price -->
+                                                            </div><!-- banner-price-content -->
+                                                        </div><!-- banner-content-wrapper -->
+                                                    </div><!-- banner-content -->
+                                                    <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/grocery.png" alt="banner">
+                                                    </div><a href="javascript::void(0);" class="overlay-link"></a>
+                                                </div><!-- banner -->
+                                            </div><!-- module-wrapper -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
+                                <div class="elementor-widget-container">
+                                    <div class="site-module banner-module">
+                                        <div class="module-wrapper">
+                                            <div class="banner dark align-center price-banner ">
+                                                <div class="banner-content">
+                                                    <div class="banner-content-wrapper">
+                                                        <div class="entry-description">
+                                                        </div><!-- entry-description -->
+                                                        <p class="fw-bold">Groceries Food</p>
+                                                        <div class="banner-price-content">
+                                                            <p>Weekend Discount</p>
+
+                                                            <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/groceries" class="btn small rounded link-color">Shop Now</a>
+                                                            </div>
+                                                            <!-- price -->
+                                                        </div><!-- banner-price-content -->
+                                                    </div><!-- banner-content-wrapper -->
+                                                </div><!-- banner-content -->
+                                                <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/grocery1.png" alt="banner">
+                                                </div><a href="javascript::void(0);" class="overlay-link"></a>
+                                            </div><!-- banner -->
+                                        </div><!-- module-wrapper -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
   <section
     class="
       elementor-section

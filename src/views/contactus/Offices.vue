@@ -10,9 +10,19 @@
                                     data-id="58f7dcf" data-element_type="widget"
                                     data-widget_type="machic-custom-title.default">
                                     <div class="elementor-widget-container">
+                                        <div class="shop-page-header">
+                                            <nav class="woocommerce-breadcrumb">
+                                                <ul>
+                                                    <li><a href="/en">Home</a></li>
+                                                    <li><a href="/contact-us">
+                                                     Contact Us 
+                                                    </a></li>
+                                                </ul>
+                                            </nav>
+                                        </div><br>
                                         <div class="site-module module-title small">
                                             <h4 class="entry-subtitle">{{$t('You_can_ask_us_questions')}}</h4>
-                                            <h1 class="entry-title">{{$t('all_your_questions_and_opinions')}}</h1>
+                                            <h5 class="entry-titles">{{$t('all_your_questions_and_opinions')}}</h5>
                                         </div><!-- site-module -->
                                     </div>
                                 </div>

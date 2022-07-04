@@ -4,8 +4,20 @@
     <div class="site-content">
       <div class="klb-blog page-content">
         <div class="container">
+          <div class="shop-page-header">
+    <nav class="woocommerce-breadcrumb">
+          <ul>
+                <li><a href="/en">Home</a></li>
+                <li>
+                   <router-link :to="'/' + langCode + '/blog'"
+                      > {{$t('blogs')}}</router-link
+                    >
+                </li>
+            </ul>
+        </nav>
+    </div>
           <div class="row content-wrapper sidebar-right">
-            <div class="col col-12 col-lg-9 content-primary">
+            <div class="col col-12 col-lg-9 content-primary mx-auto">
               <div
                 :data="item"
                 :key="indextr"
@@ -35,21 +47,17 @@
                         <span class="meta-item entry-published"
                           ><a href="#"
                             ><i class="klbth-icon-clock-outline"></i>
-                           <time>{{
+                           <time><b>{{
                                 moment(String(item.created_at)).format(
-                                  "DD-MMMM-YYYY"
+                                  "MMMM DD YYYY"
                                 )
-                              }}</time></a
+                              }}</b></time></a
                           ></span
-                        >
-                        <span class="meta-item category"
-                          ><i class="klbth-icon-bookmark-empty"></i>
-                          <a href="#" rel="category tag">Watches</a></span
                         >
                         <span class="meta-item entry-tags"
                           ><i class="klbth-icon-cinema"></i
-                          ><a href="#" rel="tag">klbtheme</a>,
-                          <a href="#" rel="tag">themeforest</a>
+                          >
+                          <a href="#" rel="tag"><b>{{ item.title }}</b></a>
                         </span>
                       </div>
                     </div>
@@ -79,175 +87,6 @@
                     </div>
                   </div>
                 </article>
-              </div>
-            </div>
-            <div
-              id="sidebar"
-              class="col col-12 col-lg-3 content-secondary site-sidebar"
-            >
-              <div class="widget widget_search">
-                <div class="search_form">
-                  <form
-                    class="search-form"
-                    id="search-form"
-                    action="javascript:void(0)"
-                    method="get"
-                  >
-                    <input
-                      class="form_control"
-                      type="text"
-                      name="s"
-                      placeholder="Search..."
-                      autocomplete="off"
-                    />
-                    <button type="submit">
-                      <i class="klbth-icon-search"></i>
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="widget widget_categories">
-                <h4 class="widget-title">{{$t('categories')}}</h4>
-                <ul>
-                  <li class="cat-item cat-item-16"><a href="#/">Camera</a></li>
-                  <li class="cat-item cat-item-17">
-                    <a href="#">Smartphone</a>
-                  </li>
-                  <li class="cat-item cat-item-18"><a href="#">Tablet</a></li>
-                  <li class="cat-item cat-item-19"><a href="#">Watches</a></li>
-                </ul>
-              </div>
-              <div class="widget widget_tag_cloud">
-                <h4 class="widget-title">{{$t('tags')}}</h4>
-                <div class="tagcloud">
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-20 tag-link-position-1"
-                    style="font-size: 8pt"
-                    aria-label="envato (1 item)"
-                    >envato</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-21 tag-link-position-2"
-                    style="font-size: 8pt"
-                    aria-label="iPad (1 item)"
-                    >iPad</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-22 tag-link-position-3"
-                    style="font-size: 8pt"
-                    aria-label="klbtheme (1 item)"
-                    >klbtheme</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-23 tag-link-position-4"
-                    style="font-size: 8pt"
-                    aria-label="phone (1 item)"
-                    >phone</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-24 tag-link-position-5"
-                    style="font-size: 8pt"
-                    aria-label="photo (1 item)"
-                    >photo</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-25 tag-link-position-6"
-                    style="font-size: 8pt"
-                    aria-label="pro (1 item)"
-                    >pro</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-26 tag-link-position-7"
-                    style="font-size: 8pt"
-                    aria-label="standart (1 item)"
-                    >standart</a
-                  >
-                  <a
-                    href="#"
-                    class="tag-cloud-link tag-link-27 tag-link-position-8"
-                    style="font-size: 8pt"
-                    aria-label="themeforest (1 item)"
-                    >themeforest</a
-                  >
-                </div>
-              </div>
-              <div class="widget widget_popular_posts">
-                <h4 class="widget-title">{{$t('Popular_Posts')}}</h4>
-                <div class="widget-body">
-                  <ul class="posts-widget">
-                    <li class="post">
-                      <figure class="entry-media">
-                        <a href="#"
-                          ><img
-                            src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-1-100x100.jpg"
-                            alt="But I must explain to you how all this mistaken idea"
-                        /></a>
-                      </figure>
-                      <div class="post-content">
-                        <div class="entry-category">
-                          <a href="#" rel="category tag">Watches</a>
-                        </div>
-                        <h2 class="entry-title">
-                          <a
-                            href="#"
-                            title="But I must explain to you how all this mistaken idea"
-                            >But I must explain to you how all this mistaken
-                            idea</a
-                          >
-                        </h2>
-                      </div>
-                    </li>
-                    <li class="post">
-                      <figure class="entry-media">
-                        <a href="#"
-                          ><img
-                            src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-2-100x100.jpg"
-                            alt="The Problem With Typefaces on the Web"
-                        /></a>
-                      </figure>
-                      <div class="post-content">
-                        <div class="entry-category">
-                          <a href="#/" rel="category tag">Camera</a>
-                        </div>
-                        <h2 class="entry-title">
-                          <a
-                            href="#"
-                            title="The Problem With Typefaces on the Web"
-                            >The Problem With Typefaces on the Web</a
-                          >
-                        </h2>
-                      </div>
-                    </li>
-                    <li class="post">
-                      <figure class="entry-media">
-                        <a href="#"
-                          ><img
-                            src="https://klbtheme.com/machic/wp-content/uploads/2021/10/post-3-100x100.jpg"
-                            alt="English Breakfast Tea With Tasty Donut Desserts"
-                        /></a>
-                      </figure>
-                      <div class="post-content">
-                        <div class="entry-category">
-                          <a href="#" rel="category tag">Tablet</a>
-                        </div>
-                        <h2 class="entry-title">
-                          <a
-                            href="#"
-                            title="English Breakfast Tea With Tasty Donut Desserts"
-                            >English Breakfast Tea With Tasty Donut Desserts</a
-                          >
-                        </h2>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@
           elementor-top-column
           elementor-element
           elementor-element-b922ff9
-          elementor-hidden-tablet
+          elementor-hidden-tablet d-none
         "
         data-id="b922ff9"
         data-element_type="column"
@@ -241,7 +241,7 @@
       <div
         class="
           elementor-column
-          col-md-9
+          col-md-12
           elementor-top-column elementor-element elementor-element-ace6d3a
         "
         data-id="ace6d3a"

@@ -40,7 +40,7 @@
               <div class="klb-icon-box site-module iconbox-module">
                 <div class="icon">
                   <router-link to="/shipping">
-                    <i class="klbth-icon-shipment"></i
+                    <i class="klbth-icon-delivered"></i
                   ></router-link>
                 </div>
                 <!-- icon -->

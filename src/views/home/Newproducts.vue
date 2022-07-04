@@ -327,7 +327,7 @@
                 elementor-element
                 elementor-element-468435b
                 elementor-widget
-                elementor-widget-machic-product-list
+                elementor-widget-machic-product-list d-none
               "
               data-id="468435b"
               data-element_type="widget"

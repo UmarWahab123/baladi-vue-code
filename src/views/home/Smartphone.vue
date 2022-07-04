@@ -3,7 +3,7 @@
     <div class="site-module products-module">
       <div class="module-header">
         <h4 class="entry-title">
-          {{ $t("Smart_phone") }} {{ $t("accesseries") }}
+          {{ $t("FishSeaFood") }}
         </h4>
         <a href="#" class="btn link link move-to-left"
           >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
