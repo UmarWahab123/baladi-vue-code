@@ -225,8 +225,8 @@ validations() {
           id + '&locale='+this.langCode
       )
       .then((response) => {
-        this.formdata.product_id = response.data.data[0].id;
         this.results = response.data.data[0];
+        this.formdata.product_id = response.data.data[0].id;
         // console.log("this results", this.results);
         this.sub_products = response.data.data[0].uom_products[0];
       })

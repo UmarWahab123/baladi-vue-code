@@ -28,9 +28,7 @@
           </div>
           <div class="about_button pt-3">
             <div>
-              <a class="button btn btn-primary" href="#">{{
-                $t("more_about")
-              }}</a>
+             
             </div>
           </div>
         </div>

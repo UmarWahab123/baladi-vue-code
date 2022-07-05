@@ -186,12 +186,13 @@
                                 item.product.slug
                               "
                             >
-                              <div class="product-card">
+                              <div class="product-card" 
+                              >
                                 <div id="slidingWindow" ontouchstart="">
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -207,21 +208,22 @@
                                       ></div>
                                     </div>
                                   </div>
-                                  <div class="slidingSection">
+                                   <div class="slidingSection">
                                     <img
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-8-400x400.jpg"
+                                      class="img"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
                                         data-hover-slider-i="45"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
                                         class="
                                           hover-slider-indicator-dot
                                           active
                                         "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
                                       ></div>
                                     </div>
                                   </div>

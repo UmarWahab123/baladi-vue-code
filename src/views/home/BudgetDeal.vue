@@ -284,7 +284,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                     :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -302,7 +302,7 @@
                                   </div>
                                   <div class="slidingSection">
                                     <img
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                       :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div

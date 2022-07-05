@@ -82,8 +82,11 @@
         <div class="row">
           <div class="col col-12 col-lg-3">
           <div class="column align-center left">
-            <div class="site-brand"><a aria-current="page" href="/en" class="router-link-active router-link-exact-active" title="Machic – Electronics Store eCommerce Theme">
-              <img src="http://english-template.bteamwebs.com/src/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme"></a>
+            <div class="site-brand"><router-link
+                :to="'/' + langCode"
+                title="Machic – Electronics Store eCommerce Theme"
+              >
+              <img src="http://english-template.bteamwebs.com/src/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme"></router-link>
               </div><!-- site-brand --></div>
             <div class="social-share site-social colored">
               <ul class="social-container">
@@ -142,7 +145,7 @@
               <h4 class="widget-title">{{$t('let_us')}}</h4>
               <div class="menu-let-us-help-you-container">
                 <ul id="menu-let-us-help-you" class="menu">
-                  <li
+                  <!-- <li
                     id="menu-item-2525"
                     class="
                       menu-item
@@ -153,8 +156,8 @@
                     <router-link :to="'/' + langCode + '/replacement'"
                       >{{$t('returns')}} &amp; {{$t('replacements')}}</router-link
                     >
-                  </li>
-                  <li
+                  </li> -->
+                  <!-- <li
                     id="menu-item-2221"
                     class="
                       menu-item
@@ -165,7 +168,7 @@
                     <router-link :to="'/' + langCode + '/shoppingrates'"
                       >{{$t('shipping_rates')}} &amp; {{$t('policies')}}</router-link
                     >
-                  </li>
+                  </li> -->
                   <li
                     id="menu-item-2524"
                     class="
@@ -205,7 +208,7 @@
                       >{{$t('terms_and_condition')}}
                     </router-link>
                   </li>
-                  <li
+                  <!-- <li
                     id="menu-item-2185"
                     class="
                       menu-item
@@ -217,7 +220,7 @@
                     <router-link :to="'/' + langCode + '/helpcenter'"
                       >{{$t('help_center')}}</router-link
                     >
-                  </li>
+                  </li> -->
                   <li
                     id="menu-item-2182"
                     class="

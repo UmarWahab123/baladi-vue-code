@@ -39,6 +39,12 @@ const routes = [{
             import ("@/views/wishlist/Index.vue"),
     },
     {
+        name: "customerwishlist",
+        path: "/" + langCode + "/customerwishlist",
+        component: () =>
+            import ("@/views/dashboard/Wishlist.vue"),
+    },
+    {
         name: "checkout",
         path: "/" + langCode + "/checkout",
         component: () =>

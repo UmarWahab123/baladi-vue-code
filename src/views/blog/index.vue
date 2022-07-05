@@ -7,7 +7,8 @@
           <div class="shop-page-header">
     <nav class="woocommerce-breadcrumb">
           <ul>
-                <li><a href="/en">Home</a></li>
+                <li><router-link :to="'/' + langCode"
+                      >Home</router-link></li>
                 <li>
                    <router-link :to="'/' + langCode + '/blog'"
                       > {{$t('blogs')}}</router-link

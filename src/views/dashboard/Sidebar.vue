@@ -102,7 +102,7 @@
             woocommerce-MyAccount-navigation-link--tinv_wishlist
           "
         >
-          <router-link :to="'/' + langCode + '/wishlist'"
+          <router-link :to="'/' + langCode + '/customerwishlist'"
             >{{$t('wish_list')}}
           </router-link>
         </li>

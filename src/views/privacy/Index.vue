@@ -10,7 +10,6 @@
       >
         <div class="elementor-section-wrap">
           <Part1 />
-          <Part2 />
         </div>
       </div>
     </div>
@@ -24,5 +23,14 @@
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 import Part1 from "./Part1.vue";
-import Part2 from "./Part2.vue";
+</script>
+<script>
+export default {
+  data: () => ({
+    langCode: "en",
+  }),
+  mounted() {
+    var langCode = localStorage.getItem("lang");
+  },
+};
 </script>

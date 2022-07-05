@@ -792,7 +792,7 @@
                   >
                     <a href="#">
                       <div class="menu-icon">
-                        <i class="fa fa-cheese text-secondary" aria-hidden="true"></i>
+                        <i class="fa fa-cheese text-secondary" :class="item.icon_class" aria-hidden="true"></i>
                       </div>
                       {{ item.name }}
                     </a>

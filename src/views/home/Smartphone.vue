@@ -82,11 +82,50 @@
                           class="hover-slider-indicator-dot"
                         ></div>
                       </div>
-                      <img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                        class="hover-slider-init"
-                        data-options='{"touch":"end","preloadImages": true }'
-                      />
+                      <div class="product-card" 
+                              >
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                   <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      
                     </div>
                   </a>
                   <div class="product-buttons">

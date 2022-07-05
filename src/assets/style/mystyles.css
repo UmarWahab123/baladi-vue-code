@@ -110,3 +110,11 @@ ol.flex-control-thumbs .owl-item {
     margin-right: 448px !important;
     margin-left: auto !important;
 }
+.custom-file-upload{
+    background: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 3px 12px;
+    cursor: pointer;
+}
