@@ -10,12 +10,23 @@
               <span class="woocommerce-Price-amount amount"
                 ><bdi
                   ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
-                  >{{ cartTotal }}</bdi
+                  > {{ cartTotal }}</bdi
                 ></span
               >
             </td>
           </tr>
-          <tr class="woocommerce-shipping-totals shipping">
+          <tr class="cart-subtotal">
+            <th>{{$t('Discount')}}</th>
+            <td data-title="Subtotal">
+              <span class="woocommerce-Price-amount amount"
+                ><bdi
+                  ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
+                  > 0.00</bdi
+                ></span
+              >
+            </td>
+          </tr>
+          <tr class="woocommerce-shipping-totals shipping d-none">
             <th>{{$t('shipping')}}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
@@ -507,7 +518,7 @@
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
                     ><span class="woocommerce-Price-currencySymbol">{{$t('QAR')}} </span
-                    >{{ cartTotal }}</bdi
+                    > {{ cartTotal }}</bdi
                   ></span
                 ></strong
               >

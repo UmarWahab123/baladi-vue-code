@@ -90,13 +90,15 @@
 setTimeout(function () {
   document.getElementById("menu-sidebar-menu-1").classList.remove("show");
 }, 500);
+
+
+</script>
+
+<script>
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
 import Items from "./Items.vue";
 import Sidebar from "./Sidebar.vue";
-
-</script>
-<script>
 import TheLoader from "../Loader/TheLoader.vue";
 import moment from "moment";
 

@@ -16,7 +16,6 @@
               >
             </td>
           </tr>
-
           <tr class="woocommerce-shipping-totals shipping">
             <th>Shipping</th>
             <td data-title="Shipping">

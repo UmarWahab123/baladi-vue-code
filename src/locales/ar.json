@@ -337,7 +337,7 @@
     "change_address": "تغيير العنوان",
     "have_coupon": "هل لديك قسيمة",
     "Click_enter_your_code": "انقر هنا لإدخال الرمز الخاص بك",
-    "coupon_code": "إذا كان لديك رمز قسيمة، يرجى إدخاله أدناه",
+    "coupon_codes":"قم بتطبيقه أدناه ",
     "billing_details": "تفاصيل الفاتورة",
     "first_name": "الاسم الاول",
     "last_name": "اللقب",
@@ -360,12 +360,12 @@
     "order_notes": "ترتيب الملاحظات",
     "your_order": "طلبك",
     "flat_rate": "سعر موحد",
-    "credit_debit": "إضافة بطاقة الائتمان والخصم",
+    "credit_debit": ".ادفع نقدا عند الاستلام",
     "pay_now": "ادفع الآن",
-    "cash_delivery": "الدفع عند الاستلام",
+    "cash_delivery":"ادفع ببطاقة الائتمان / الخصم",
     "your_personal_data": "سيتم استخدام بياناتك الشخصية لمعالجة طلبك ودعم تجربتك في جميع أقسام وصفحات هذا الموقع ولأغراض أخرى موصوفة في موقعنا",
     "read_and_agree": "قرأت وأوافق",
-    "place_order": "أدخل طلباً",
+    "place_order": "أكد الطلب",
     "cardholder_name": "اسم صاحب البطاقة",
     "card_number": "رقم البطاقة",
     "add_card": "إضافة بطاقة",
@@ -470,7 +470,8 @@
     "Longitude":"خط الطول",
     "Save_address":"حفظ العنوان",
     "Update_address":"تحديث العنوان",
-    "FishSeaFood":"أسماك ومأكولات بحرية"
+    "FishSeaFood":"أسماك ومأكولات بحرية",
+    "AddressTitle":"عنوان العنوان"
 
 
 

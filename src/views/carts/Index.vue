@@ -44,21 +44,20 @@
                                 <input
                                   type="text"
                                   name="coupon_code"
-                                  class="input-text"
+                                  class="input-text d-none"
                                   id="coupon_code"
                                   value=""
                                   :placeholder="$t('Coupon_code')"
                                 />
                                 <button
                                   type="submit"
-                                  class="button"
+                                  class="button "
                                   name="apply_coupon"
                                   value="Apply coupon"
                                 >
-                                  {{$t('apply_coupon')}}
+                                  {{$t('Update_cart')}}
                                 </button>
                               </div>
-
                               <button
                                 type="submit"
                                 class="button"
