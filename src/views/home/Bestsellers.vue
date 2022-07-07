@@ -365,7 +365,9 @@
                           <!-- content-wrapper -->
                         </div>
                         <!-- product-content -->
+                      
                         <div class="product-footer">
+                          
                           <div class="product-footer-buttons">
                             <a
                               data-quantity="1"
@@ -375,13 +377,27 @@
                                 add_to_cart_button
                                 ajax_add_to_cart
                               "
-                              @click="addtoCart(item)"
-                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                            >
+                              @click="addtoCart(item,indextr)"
+                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">Add to cart</span>   
+                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div> 
+                              </a
+                            >  
+                             <router-link
+                                  v-if="item?.check"
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/cart'"
+                                  class="added_to_cart wc-forward"
+                                  title="View cart"
+                                  >View cart</router-link
+                                >
                           </div>
 
                           <!-- product-footer-buttons -->
-                          <div class="product-footer-details">
+                          <div class="product-footer-details d-none">
                             <ul>
                               <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
                              
@@ -1699,6 +1715,8 @@ export default {
     singleProduct: [],
     sub_products: [],
     token: "",
+    isText:true,
+    isSpinner:false,
   }),
   computed: {
     currentImage() {
@@ -1758,9 +1776,22 @@ var x = setInterval(function() {
 }, 1000);
   },
   methods: {
-    addtoCart(item) {
+    addtoCart(item,index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
+     this.isText = false;
+     this.isSpinner=true;
+      if(this.results[index]){
+        setTimeout(()=>{
+          this.isText = true;
+      this.results[index].check = true;
+
+      this.isSpinner=false;
+       } , 1000); 
+      }
+      // var cartspiner = document.getElementByClass("art-spinner-24");
+
+
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");

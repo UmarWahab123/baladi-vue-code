@@ -452,7 +452,15 @@
                                     ></span
                                   ></ins
                                 ></span
-                              ><a
+                              >
+                 
+                             </div>
+                            </div>
+                          </div>
+                        <div class="product-footer">
+                          <div class="product-footer-buttons">
+                         
+                              <a
                                 href="javascript:void(0)"
                                 data-quantity="1"
                                 class="
@@ -465,20 +473,20 @@
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
-                               <a
+                                  <router-link
                                   v-if="item?.check"
-                                  href="javascript:void(0)"
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/cart'"
                                   class="added_to_cart wc-forward"
                                   title="View cart"
-                                  >View cart</a
+                                  >View cart</router-link
                                 >
-                            </div>
                           </div>
-                        </div>
-                        <div class="product-footer">
                           <div class="product-footer-details">
                             <ul>
-                              <li class="SpecHighlights-list-label">
+                              <li class="SpecHighlights-list-label d-none">
                                 {{ item.product.lg_description }}
                               </li>
                             </ul>
