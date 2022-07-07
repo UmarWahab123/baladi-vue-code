@@ -39,6 +39,7 @@
     "vue-router": "^4.0.12",
     "vue-slick-carousel": "^1.0.6",
     "vue-social-auth": "^1.4.9",
+    "vue-styled-components": "^1.6.0",
     "vue-sweetalert2": "^5.0.5",
     "vue-toast-notification": "^3.0"
   },
