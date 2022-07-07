@@ -1,6 +1,5 @@
 <template>
   <form action="javascript:void(0)" method="post" autocomplete="off">
-   
     <table class="tinvwl-table-manage-list">
       <thead>
         <tr>
@@ -15,18 +14,26 @@
           </th>
           <th class="product-remove"></th>
           <th class="product-name">
-            <span class="tinvwl-full"><b>{{$t('product_name')}}</b></span
-            ><span class="tinvwl-mobile"><b>{{$t('Product')}}</b></span>
+            <span class="tinvwl-full"
+              ><b>{{ $t("product_name") }}</b></span
+            ><span class="tinvwl-mobile"
+              ><b>{{ $t("Product") }}</b></span
+            >
           </th>
-          <th class="product-price"><b>{{$t('unit_price')}}</b></th>
-          <th class="product-date"><b>{{$t('date_added')}}</b></th>
-          <th class="product-stock"><b>{{$t('stock_status')}}</b></th>
+          <th class="product-price">
+            <b>{{ $t("unit_price") }}</b>
+          </th>
+          <th class="product-date">
+            <b>{{ $t("date_added") }}</b>
+          </th>
+          <th class="product-stock">
+            <b>{{ $t("stock_status") }}</b>
+          </th>
           <th class="product-action">&nbsp;</th>
         </tr>
       </thead>
-      
+
       <tbody>
-      
         <tr
           class="wishlist_item"
           v-for="(item, indextr) in results"
@@ -86,24 +93,20 @@
               @click="addtoCart(item)"
             >
               <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt">{{$t('add_to_cart')}}</span>
+              ><span class="tinvwl-txt">{{ $t("add_to_cart") }}</span>
             </button>
           </td>
         </tr>
-         
-         <tr  v-if="wishlistnotfound" >
-          <td colspan="9">
-                <h3
-                 
-                  class="d-flex justify-content-center"
-                >
-                  {{$t('No_Data_found')}}
-                </h3>
-          </td>
-          </tr>
 
+        <tr v-if="wishlistnotfound">
+          <td colspan="9">
+            <h3 class="d-flex justify-content-center">
+              {{ $t("No_Data_found") }}
+            </h3>
+          </td>
+        </tr>
       </tbody>
-             
+
       <tfoot>
         <tr>
           <td colspan="100">
@@ -131,14 +134,13 @@
                     title="Apply Action"
                     style="display: none"
                   >
-                    {{$t('apply')}} <span class="tinvwl-mobile">{{$t('action')}}</span>
+                    {{ $t("apply") }}
+                    <span class="tinvwl-mobile">{{ $t("action") }}</span>
                   </button></span
                 >
-                
               </div>
-              
             </div>
-       
+
             <div class="tinvwl-to-right look_in">
               <button
                 class="btn"
@@ -147,7 +149,7 @@
                 title="Add Selected to Cart"
                 @click="AddSelected"
               >
-               {{$t('Add_Selected_to_Cart')}}
+                {{ $t("Add_Selected_to_Cart") }}
               </button>
               &nbsp;
               <button
@@ -156,7 +158,7 @@
                 title="Add All to Cart"
                 @click="AddAll"
               >
-               {{$t('Add_All_to_Cart')}}
+                {{ $t("Add_All_to_Cart") }}
               </button>
             </div>
             <input
@@ -172,9 +174,7 @@
           </td>
         </tr>
       </tfoot>
-       
     </table>
-   
   </form>
 </template>
 <script setup>
@@ -195,7 +195,7 @@ export default {
     token: "",
     moment: moment,
     items: [],
-    wishlistnotfound:false,
+    wishlistnotfound: false,
   }),
   mounted() {
     this.getWishList();
@@ -265,15 +265,15 @@ export default {
           )
           .then((response) => {
             this.results = response.data.data;
-             if(response.data.data == ""){
-          this.wishlistnotfound = true;
-         }else{
-          const productStore = useProductStore();
-           productStore.wishListData(this.results);
-           this.wishlistnotfound = false;
+            if (response.data.data == "") {
+              this.wishlistnotfound = true;
+            } else {
+              const productStore = useProductStore();
+              productStore.wishListData(this.results);
+              this.wishlistnotfound = false;
 
-            // console.log(this.results);
-          }
+              // console.log(this.results);
+            }
           })
           .catch((error) => {});
       }

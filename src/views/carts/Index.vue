@@ -26,10 +26,10 @@
                       <thead>
                         <tr>
                           <th class="product-thumbnail">&nbsp;</th>
-                          <th class="product-name">{{$t('Product')}}</th>
-                          <th class="product-price">{{$t('price')}}</th>
-                          <th class="product-quantity">{{$t('quantity')}}</th>
-                          <th class="product-subtotal">{{$t('Subtotal')}}</th>
+                          <th class="product-name">{{ $t("Product") }}</th>
+                          <th class="product-price">{{ $t("price") }}</th>
+                          <th class="product-quantity">{{ $t("quantity") }}</th>
+                          <th class="product-subtotal">{{ $t("Subtotal") }}</th>
                           <th class="product-remove">&nbsp;</th>
                         </tr>
                       </thead>
@@ -40,7 +40,9 @@
                           <td colspan="6" class="actions">
                             <div class="actions-wrapper">
                               <div class="coupon">
-                                <label for="coupon_code">{{$t('Coupon')}}:</label>
+                                <label for="coupon_code"
+                                  >{{ $t("Coupon") }}:</label
+                                >
                                 <input
                                   type="text"
                                   name="coupon_code"
@@ -51,23 +53,13 @@
                                 />
                                 <button
                                   type="submit"
-                                  class="button "
+                                  class="button"
                                   name="apply_coupon"
                                   value="Apply coupon"
                                 >
-                                  {{$t('Update_cart')}}
+                                  {{ $t("Update_cart") }}
                                 </button>
                               </div>
-                              <button
-                                type="submit"
-                                class="button"
-                                name="update_cart"
-                                value="Update cart"
-                                disabled=""
-                                aria-disabled="true"
-                              >
-                                {{$t('Update_cart')}}
-                              </button>
 
                               <input
                                 type="hidden"
@@ -97,7 +89,7 @@
               <div class="col">
                 <section class="site-module recently-viewed mt-30 d-mt-40">
                   <div class="module-header">
-                    <h4 class="entry-title">{{$t('suggested_products')}}</h4>
+                    <h4 class="entry-title">{{ $t("suggested_products") }}</h4>
                   </div>
                   <div class="products column-6 mobile-2">
                     <div
@@ -276,7 +268,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >99.99</bdi
                                     >
                                   </span></del
@@ -288,7 +280,7 @@
                                     <bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >49.99</bdi
                                     >
                                   </span></ins
@@ -306,7 +298,8 @@
                                 data-product_sku="BE45VGRT"
                                 aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
                                 rel="nofollow"
-                                ><i class="klbth-icon-shop-1"></i> {{$t('add_to_cart')}}</a
+                                ><i class="klbth-icon-shop-1"></i>
+                                {{ $t("add_to_cart") }}</a
                               >
                             </div>
                           </div>
@@ -1705,7 +1698,7 @@ export default {
       alert("ssd");
     },
     getCart() {
-    var langCode = localStorage.getItem("lang");
+      var langCode = localStorage.getItem("lang");
 
       if (localStorage.userInfo != null) {
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -1713,7 +1706,7 @@ export default {
         axios
           .get(
             "http://baladi-v1.bteamwebs.com/api/mobile/product/getUserCart?locale=" +
-          langCode,
+              langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,

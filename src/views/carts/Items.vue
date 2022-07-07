@@ -136,17 +136,6 @@
                 </button>
               </div>
 
-              <button
-                type="submit"
-                class="button"
-                name="update_cart"
-                value="Update cart"
-                disabled=""
-                aria-disabled="true"
-              >
-                Update cart
-              </button>
-
               <input
                 type="hidden"
                 id="woocommerce-cart-nonce"

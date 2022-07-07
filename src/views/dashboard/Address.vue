@@ -14,17 +14,17 @@
                     <div class="woocommerce-notices-wrapper"></div>
 
                     <strong class="">
-                      {{$t('addresses_on_checkout_page')}}</strong
+                      {{ $t("addresses_on_checkout_page") }}</strong
                     >
-                    <router-link
-                      to="shipping"
+                    <a
+                      href="javascript:void(0)"
+                      @click="clickcomparemodal"
                       class="woocommerce-button button address-btn view p-0"
                     >
-                      <button
-                      >
-                        {{$t('add_address')}} 
+                      <button>
+                        {{ $t("add_address") }}
                       </button>
-                    </router-link>
+                    </a>
                     <table
                       class="
                         woocommerce-orders-table
@@ -44,7 +44,7 @@
                               woocommerce-orders-table__header-order-number
                             "
                           >
-                            <span class="nobr">{{$t('Address_Type')}} </span>
+                            <span class="nobr">{{ $t("Address_Type") }} </span>
                           </th>
 
                           <th
@@ -53,7 +53,7 @@
                               woocommerce-orders-table__header-order-total
                             "
                           >
-                            <span class="nobr">{{$t('address')}}</span>
+                            <span class="nobr">{{ $t("address") }}</span>
                           </th>
                           <th
                             class="
@@ -61,7 +61,7 @@
                               woocommerce-orders-table__header-order-actions
                             "
                           >
-                            <span class="nobr">{{$t('action')}}</span>
+                            <span class="nobr">{{ $t("action") }}</span>
                           </th>
                         </tr>
                       </thead>
@@ -84,9 +84,12 @@
                             "
                             data-title="Order"
                           >
-                            <a v-if="item.shipping==0" href=""> {{$t('Billing')}} </a>
-                            <a v-if="item.shipping==1" href=""> {{$t('shipping')}}</a>
-
+                            <a v-if="item.shipping == 0" href="">
+                              {{ $t("Billing") }}
+                            </a>
+                            <a v-if="item.shipping == 1" href="">
+                              {{ $t("shipping") }}</a
+                            >
                           </td>
 
                           <td
@@ -100,8 +103,10 @@
                               ><span
                                 class="woocommerce-Price-currencySymbol"
                               ></span
-                              >{{item.address_line_1}},&nbsp;{{item.address_line_2}}</span>
-                            
+                              >{{ item.address_line_1 }},&nbsp;{{
+                                item.address_line_2
+                              }}</span
+                            >
                           </td>
                           <td
                             class="
@@ -111,27 +116,32 @@
                             data-title="Actions"
                           >
                             <router-link
-                              :to="'/' + langCode + '/shipping/'+ item.id"
-                              class="woocommerce-button button view buttonsalignment"
-                              >{{$t('edit')}}
+                              :to="'/' + langCode + '/shipping/' + item.id"
+                              class="
+                                woocommerce-button
+                                button
+                                view
+                                buttonsalignment
+                              "
+                              >{{ $t("edit") }}
                             </router-link>
                             <a
                               @click="deleteaddress(item.id)"
-                              style="margin-left: 5px; background-color: red; cursor: pointer;"
+                              style="
+                                margin-left: 5px;
+                                background-color: red;
+                                cursor: pointer;
+                              "
                               class="woocommerce-button button view"
-                              >{{$t('delete')}}
+                              >{{ $t("delete") }}
                             </a>
                           </td>
                         </tr>
-                    
                       </tbody>
                     </table>
-                      <div class="row text-center mb-5 p-4">
-                      <h2
-                        v-if="addressnotfound"
-                        class=""
-                      >
-                        {{$t('No_Data_found')}}
+                    <div class="row text-center mb-5 p-4">
+                      <h2 v-if="addressnotfound" class="">
+                        {{ $t("No_Data_found") }}
                       </h2>
                     </div>
                   </div>
@@ -148,6 +158,186 @@
     </div>
     <!-- site-content -->
   </main>
+  <div
+    style="display: none"
+    :class="showcomparemodal"
+    :style="showcomparemodalstyle"
+    id="myDIV"
+  >
+    <div class="mfp-bg mfp-ready"></div>
+    <div class="mfp-wrap mfp-auto-cursor mfp-ready" tabindex="-1">
+      <div class="mfp-container mfp-s-ready">
+        <div class="mfp-content">
+          <div
+            class="quickview-product single-product-wrapper product white-popup"
+            style="width: 800px"
+          >
+            <div class="quick-product-wrapper single-product-container">
+              <button
+                @click="closecomparemodal"
+                title="Close (Esc)"
+                type="button"
+                class="mfp-close"
+              >
+                ×
+              </button>
+
+              <!-- row -->
+            </div>
+            <div class="row">
+              <form
+                action="http://staging.baladiexpress.com/customer/addresses/store"
+                method="POST"
+                class="needs-validation"
+                novalidate=""
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="G0vgrItzDSzIeAT8zQ8fzmdUnYHn1RlDkcIkJsr0"
+                />
+                <div class="row">
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="first_name"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="first_name"
+                      id="first_name"
+                      required=""
+                      placeholder="First Name (optional) "
+                      value=""
+                    />
+
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="last_name"
+                      id="validationCustom01"
+                      required=""
+                      placeholder="Last Name (optional) "
+                      value=""
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Zone</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="zone"
+                      id="validationCustom01"
+                      placeholder="Zone"
+                      value=""
+                      required=""
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Building No
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="building"
+                      id="validationCustom01"
+                      placeholder="Building No "
+                      value=""
+                      required=""
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Contact</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="contact"
+                      id="validationCustom01"
+                      placeholder="Contact"
+                      value=""
+                      required=""
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Address Type</label
+                    >
+                    <select name="address_type" class="" required="" id="">
+                      <option value="" selected="" disabled="">
+                        Select Address Type
+                      </option>
+                      <option value="1">Shipping</option>
+                      <option value="0">Billing</option>
+                    </select>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Address Title</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="address_title"
+                      id="validationCustom01"
+                      placeholder="Address Title"
+                      value=""
+                      required=""
+                    />
+                    <small>(Home, Office, Work etc)</small><br />
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Address line 1</label
+                    >
+                    <textarea
+                      name="address_line_1"
+                      class=""
+                      required=""
+                      id=""
+0                      rows="6"
+                    ></textarea>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="validationCustom01"
+                      >Address line 2</label
+                    >
+                    <textarea name="address_line_2" rows="6"></textarea>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+
+                  <div class="mb-3 text-end">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- quick-product-wrapper -->
+          </div>
+          <!-- quickview-product -->
+        </div>
+      </div>
+    </div>
+  </div>
   <Footer />
 </template>
 
@@ -166,10 +356,11 @@ export default {
     return {
       isloading: true,
       langCode: "",
-      addresses:[],
-      addressnotfound:false,
-      error:"",
-
+      addresses: [],
+      addressnotfound: false,
+      error: "",
+      showcomparemodal: "",
+      showcomparemodalstyle: "",
     };
   },
   mounted() {
@@ -178,32 +369,39 @@ export default {
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
     axios
-    .get("http://baladi-v1.bteamwebs.com/api/mobile/product/getcustomeraddresses?locale=" +
-           this.langCode,
-          {
-            headers: {
-              Authorization: "Bearer " + this.token,
-            },
-          }
-        )
-       .then((response) => {
-         this.addresses = response.data.data;
-        if(this.addresses == ""){
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/mobile/product/getcustomeraddresses?locale=" +
+          this.langCode,
+        {
+          headers: {
+            Authorization: "Bearer " + this.token,
+          },
+        }
+      )
+      .then((response) => {
+        this.addresses = response.data.data;
+        if (this.addresses == "") {
           this.addressnotfound = true;
-         }else{
+        } else {
           this.addressnotfound = false;
-       }
+        }
       })
-    .catch((error) => {});
+      .catch((error) => {});
     setTimeout(() => (this.isloading = false), 1000);
-  
   },
-  methods:{
-   deleteaddress(id){
+  methods: {
+    clickcomparemodal() {
+      this.showcomparemodal = "show";
+      this.showcomparemodalstyle = "display:block";
+    },
+    closecomparemodal() {
+      this.showcomparemodal = "";
+      this.showcomparemodalstyle = "";
+    },
+    deleteaddress(id) {
       axios
         .delete(
-          "http://baladi-v1.bteamwebs.com/api/customer/address/delete/" +
-            id,
+          "http://baladi-v1.bteamwebs.com/api/customer/address/delete/" + id,
           {
             headers: {
               Authorization: "Bearer " + this.token,
@@ -233,7 +431,6 @@ export default {
         })
         .catch((error) => {});
     },
-  }
-   
+  },
 };
 </script>

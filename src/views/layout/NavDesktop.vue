@@ -20,7 +20,7 @@
                     >{{ $t("about_us") }}
                   </router-link>
                 </li>
-                <li
+                <!-- <li
                   id="menu-item-2199"
                   class="
                     menu-item
@@ -57,7 +57,7 @@
                   <router-link :to="'/' + langCode + '/replacement'">{{
                     $t("returns_replacements")
                   }}</router-link>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
@@ -66,7 +66,7 @@
           <div class="column align-center right lang-bttons">
             <nav class="site-menu horizontal">
               <ul id="menu-top-right-1" class="menu">
-                <li
+                <!-- <li
                   id="menu-item-2233"
                   class="
                     menu-item
@@ -78,7 +78,7 @@
                     ><i class="klbth-icon-earth-grid-symbol text-success"></i>
                     &nbsp; {{ $t("location_job") }}
                   </router-link>
-                </li>
+                </li> -->
                 <li
                   class="
                     menu-item
@@ -195,10 +195,9 @@
                     <input type="hidden" name="dgwt_wcas" value="1" />
                   </div>
                 </form>
-              
               </div>
             </div>
-       
+
             <div
               class="
                 dgwt-wcas-suggestions-wrapp
@@ -217,21 +216,21 @@
                 display: none;
               "
             >
-            <a href="javascript::void(0)"
+              <a
+                href="javascript::void(0)"
                 class="dgwt-wcas-suggestion dgwt-wcas-suggestion-product"
                 data-index="0"
                 data-post-id="521"
-                 v-if="resultsnotfound"
-                >
+                v-if="resultsnotfound"
+              >
                 <div class="dgwt-wcas-content-wrapp">
                   <div class="dgwt-wcas-st">
-                    <span class="dgwt-wcas-st-title d-flex justify-content-center">
-                      <strong
-                        > {{$t('No_Data_found')}}</strong
-                      ></span
+                    <span
+                      class="dgwt-wcas-st-title d-flex justify-content-center"
+                    >
+                      <strong> {{ $t("No_Data_found") }}</strong></span
                     >
                   </div>
-            
                 </div></a
               >
               <a
@@ -298,7 +297,14 @@
                 :to="'/' + langCode + '/userdashboard'"
               >
                 <div class="header-addons-icon">
-                  <i class="klbth-icon-user-1"></i>
+                  <div class="header-addons-icon">
+                    <img
+                      loading="lazy"
+                      src="http://staging.baladiexpress.com/images/user_image.jpeg"
+                      class="rounded-circle shadow-sm border"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </router-link>
               <router-link
@@ -312,31 +318,44 @@
               </router-link>
 
               <div class="header-addons-text">
-                <router-link
-                  v-if="userdata.name"
-                  class="primary-text"
-                  :to="'/' + langCode + '/userdashboard'"
-                >
-                  <div v-if="userdata.name" class="sub-text user-text-style">
-                    {{ userdata.name }}
-                  </div>
-                </router-link>
+                <div v-if="!userdata.name" class="sub-text user-text-style">
+                  {{ $t("Sign_In") }}
+                </div>
 
-                <div v-else class="sub-text user-text-style">{{$t('Sign_In')}}</div>
                 <router-link
-                  v-if="userdata.name"
-                  class="primary-text"
-                  :to="'/' + langCode + '/userdashboard'"
-                >
-                  {{ $t("Account") }}
-                </router-link>
-                <router-link
-                  v-else
+                  v-if="!userdata.name"
                   class="primary-text"
                   :to="'/' + langCode + '/myaccount'"
                 >
                   {{ $t("Account") }}
                 </router-link>
+              </div>
+              <div class="header-addons-text">
+                <a href="http://staging.baladiexpress.com/customer/dashboard">
+                </a>
+                <div
+                  class="dropdown"
+                  @mouseover="mouseover"
+                  @mouseleave="mouseleave"
+                >
+                  <router-link :to="'/' + langCode + '/userdashboard'">
+                    <span
+                      ><strong> {{ userdata.name }}</strong></span
+                    >
+                  </router-link>
+                  <div class="dropdown-content" v-if="isOpen">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <router-link :to="'/' + langCode + '/userdashboard'">
+                          Dashboard</router-link
+                        >
+                      </li>
+                      <li class="list-group-item">
+                        <a href="#"> Logout </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <!-- header-addons-text -->
             </div>
@@ -792,7 +811,11 @@
                   >
                     <a href="#">
                       <div class="menu-icon">
-                        <i class="fa fa-cheese text-secondary" :class="item.icon_class" aria-hidden="true"></i>
+                        <i
+                          class="fa fa-cheese text-secondary"
+                          :class="item.icon_class"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                       {{ item.name }}
                     </a>
@@ -1019,14 +1042,15 @@
                         current-menu-item current_page_item
                         menu-item-home
                       "
-                    :data="item"
-                    :key="indextr"
-                    v-for="(item, indextr) in topcategory"
+                      :data="item"
+                      :key="indextr"
+                      v-for="(item, indextr) in topcategory"
                     >
-                    <router-link :to="'/' + langCode + '/category/'+ item?.id"
-                    >{{item.name}}</router-link>
+                      <router-link
+                        :to="'/' + langCode + '/category/' + item?.id"
+                        >{{ item.name }}</router-link
+                      >
                     </li>
-                   
                   </ul>
                 </li>
                 <li
@@ -1055,17 +1079,16 @@
                             menu-item-type-post_type
                             menu-item-object-page
                           "
-                    :data="item"
-                    :key="indextr"
-                    v-for="(item, indextr) in brands?.slice(0, 3)
-                        ">
-                         <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
-                              >{{item.name}}
-                            </router-link>
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in brands?.slice(0, 3)"
+                        >
+                          <router-link
+                            class=""
+                            :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                            >{{ item.name }}
+                          </router-link>
                         </li>
-                       
                       </ul>
                     </li>
                     <li
@@ -1082,42 +1105,15 @@
                             menu-item-type-post_type
                             menu-item-object-product
                           "
-                           :data="item"
-                           :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(4, 7)"
-                        >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
-                              >{{item?.name}}
-                        </router-link>
-                        </li>     
-                      </ul>
-                    </li>
-                    <li
-                      class="
-                        menu-item
-                        menu-item-type-custom
-                        menu-item-object-custom
-                        menu-item-has-children
-                      "
-                    >
-                      <ul class="sub-menu">
-                       <li
-                          class="
-                            menu-item
-                            menu-item-type-post_type
-                            menu-item-object-page
-                          "
                           :data="item"
-                           :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(8, 11)"
+                          :key="indextr"
+                          v-for="(item, indextr) in brands?.slice(4, 7)"
                         >
-                         <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
-                              >{{item?.name}}
-                        </router-link>
+                          <router-link
+                            class=""
+                            :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                            >{{ item?.name }}
+                          </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1130,21 +1126,48 @@
                       "
                     >
                       <ul class="sub-menu">
-                      <li
+                        <li
+                          class="
+                            menu-item
+                            menu-item-type-post_type
+                            menu-item-object-page
+                          "
+                          :data="item"
+                          :key="indextr"
+                          v-for="(item, indextr) in brands?.slice(8, 11)"
+                        >
+                          <router-link
+                            class=""
+                            :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                            >{{ item?.name }}
+                          </router-link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="
+                        menu-item
+                        menu-item-type-custom
+                        menu-item-object-custom
+                        menu-item-has-children
+                      "
+                    >
+                      <ul class="sub-menu">
+                        <li
                           class="
                             menu-item
                             menu-item-type-custom
                             menu-item-object-custom
                           "
                           :data="item"
-                           :key="indextr"
-                           v-for="(item, indextr) in brands?.slice(11, 15)"
+                          :key="indextr"
+                          v-for="(item, indextr) in brands?.slice(11, 15)"
                         >
-                        <router-link
-                              class=""
-                              :to="'/' + langCode + '/brandsProduct/' + item?.id"
-                              >{{item?.name}}
-                        </router-link>
+                          <router-link
+                            class=""
+                            :to="'/' + langCode + '/brandsProduct/' + item?.id"
+                            >{{ item?.name }}
+                          </router-link>
                         </li>
                       </ul>
                     </li>
@@ -1157,7 +1180,8 @@
                     menu-item-object-page
                   "
                 >
-                  <router-link :to="'/' + langCode + '/category/'"> <i class="klbth-icon-shopping-bag-alt"></i>   Personal Care
+                  <router-link :to="'/' + langCode + '/category/'">
+                    <i class="klbth-icon-shopping-bag-alt"></i> Personal Care
                   </router-link>
                 </li>
                 <li
@@ -1217,10 +1241,12 @@
                   <!-- discount-products-header -->
 
                   <div class="products column-6">
-                    <div class="product"
+                    <div
+                      class="product"
                       :data="item"
                       :key="indextr"
-                      v-for="(item, indextr) in dicount">
+                      v-for="(item, indextr) in dicount"
+                    >
                       <div class="product-wrapper">
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
@@ -1233,9 +1259,7 @@
                           <!-- thumbnail-wrapper -->
                           <div class="content-wrapper">
                             <h3 class="product-title">
-                              <a href=""
-                                >{{item.product.product_name}}</a
-                              >
+                              <a href="">{{ item.product.product_name }}</a>
                             </h3>
                             <div class="product-rating">
                               <div
@@ -1250,7 +1274,8 @@
                                 >
                               </div>
                               <div class="count-rating">
-                                 {{ item.product.review_count }} <span class="rating-text">Ratings</span>
+                                {{ item.product.review_count }}
+                                <span class="rating-text">Ratings</span>
                               </div>
                             </div>
                             <span class="price"
@@ -1335,22 +1360,21 @@ export default {
     url: "http://baladi-v1.bteamwebs.com/storage/",
     showmenu: "",
     results: [],
-    categories:[],
+    categories: [],
     overflow: "",
     notificationheight: 0,
     isChecked: false,
     langCode: "en",
     searchResults: [],
-    dicount:[],
+    dicount: [],
     guestCheck: true,
     loginCheck: false,
-    resultsnotfound:false,
+    resultsnotfound: false,
     topcategory: [],
-    brands:[],
-    
+    brands: [],
+    isOpen: false,
   }),
   mounted() {
-
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.guestCheck = false;
@@ -1376,9 +1400,9 @@ export default {
     } else if (lang == "ar") {
       this.isChecked = true;
     }
-     axios
+    axios
       .get(
-        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=super_discount" 
+        "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=super_discount"
       )
       .then((response) => {
         this.dicount = response.data.data[0].products;
@@ -1386,7 +1410,7 @@ export default {
       })
       .catch((error) => {});
     this.langCode = lang;
- 
+
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/web/header/categories?locale=" +
@@ -1405,29 +1429,38 @@ export default {
       .then((response) => {
         this.topcategory = response.data.data;
         // console.log('hsdg',this.topcategory);
-       
       })
       .catch((error) => {});
-     var langCode = localStorage.getItem("lang");
+    var langCode = localStorage.getItem("lang");
     axios
-      .get("http://baladiweb.bteamwebs.com/api/web/header/getBrands?locale=" +
-          langCode)
+      .get(
+        "http://baladiweb.bteamwebs.com/api/web/header/getBrands?locale=" +
+          langCode
+      )
       .then((response) => {
         this.brands = response.data.data;
-        this.brands = this.split(this.brands,4);
+        this.brands = this.split(this.brands, 4);
         // console.log('splitedbrands',this.brands);
       })
       .catch((error) => {});
-   
+
     this.getWishList();
-    
   },
   methods: {
-  split (array, cols) {
-    if (cols==1) return array;
-    var size = Math.ceil(array.length / cols);
-    return array.slice(0, size).concat([null]).concat(this.split(array.slice(size), cols-1));
-},
+    mouseover() {
+      this.isOpen = true;
+    },
+    mouseleave() {
+      this.isOpen = false;
+    },
+    split(array, cols) {
+      if (cols == 1) return array;
+      var size = Math.ceil(array.length / cols);
+      return array
+        .slice(0, size)
+        .concat([null])
+        .concat(this.split(array.slice(size), cols - 1));
+    },
     getWishList() {
       if (localStorage.userInfo != null) {
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -1457,10 +1490,10 @@ export default {
         this.showmenu = "show";
       }
     },
-    
+
     searchproducts: function (event) {
-     var langCode = localStorage.getItem("lang");
-      this.$router.push('/'+langCode+'/category');
+      var langCode = localStorage.getItem("lang");
+      this.$router.push("/" + langCode + "/category");
     },
     down: function () {
       var height = document.querySelector(".sidebar-sticky").scrollHeight;
@@ -1532,13 +1565,12 @@ export default {
             payload
           )
           .then((response) => {
-          this.searchResults = response.data.data.searchresults;
-          if(response.data.data.searchresults==""){
-          this.resultsnotfound = true;
-          }else{
-          this.resultsnotfound = false;
-
-          }
+            this.searchResults = response.data.data.searchresults;
+            if (response.data.data.searchresults == "") {
+              this.resultsnotfound = true;
+            } else {
+              this.resultsnotfound = false;
+            }
             // this.searchResults.map((item) => {
             //   console.log("map", item);
             // });
