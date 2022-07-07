@@ -9,202 +9,101 @@
               <div class="col-12 col-md-12 col-lg-12 content-primary">
                 <div class="my-account-wrapper">
                   <Sidebar />
-                  <div class="woocommerce-MyAccount-content">
-                    <div class="woocommerce-notices-wrapper"></div>
-                    <!-- <legend>Basic Info change</legend> -->
-                    <!-- <input type="hidden" v-bind="formdata.id" /> -->
+                    <div class="woocommerce-MyAccount-content">
+                      <div class="woocommerce-notices-wrapper"></div>
+                      <div>
+                      </div>
+                          <!--update account form fields -->
 
-                    <p
-                      class="
-                        woocommerce-form-row woocommerce-form-row--last
-                        form-row form-row-last
-                      "
-                    >
-                      <label for="account_last_name"
-                        >{{$t('name')}}&nbsp;<span class="">*</span></label
-                      >
-                      <input
-                        v-model="formdata.name"
-                        type="text"
-                        class="
-                          woocommerce-Input woocommerce-Input--text
-                          input-text
-                        "
-                        id="account_last_name"
-                        autocomplete="family-name"
-                      />
-                      <span
-                        ><em
-                          >  {{$t('name_will_be_displayed')}}</em
-                        ></span
-                      >
-                    </p>
-                    <div class="clear"></div>
-
-                    <div class="clear"></div>
-
-                    <p
-                      class="
-                        woocommerce-form-row woocommerce-form-row--wide
-                        form-row form-row-wide
-                      "
-                    >
-                      <label for="account_email"
-                        >{{$t('email')}}&nbsp;<span class="required"
-                          >*</span
-                        ></label
-                      >
-                      <input
-                        v-model="formdata.email"
-                        type="email"
-                        class="
-                          woocommerce-Input woocommerce-Input--email
-                          input-text
-                        "
-                        id="account_email"
-                        autocomplete="email"
-                      />
-                    </p>
-                    <p
-                      class="
-                        woocommerce-form-row woocommerce-form-row--last
-                        form-row form-row-last
-                      "
-                    >
-                      <label for="account_last_name"
-                        >{{$t('phone')}}&nbsp;<span class="">*</span></label
-                      >
-                      <input
-                        v-model="formdata.phone"
-                        type="text"
-                        class="
-                          woocommerce-Input woocommerce-Input--text
-                          input-text
-                        "
-                        id="account_last_name"
-                        autocomplete="phone"
-                      />
-                      <span
-                        ><em
-                          >{{$t('name_will_be_displayed')}}</em
-                        ></span
-                      >
-                    </p>
-                    <button
-                      @click="updateprofile()"
-                      type="submit"
-                      class="woocommerce-Button button mb-3"
-                      name="save_account_details"
-                      value="Save changes"
-                    >
-                    {{$t('save_changes')}}
-                    </button>
-
-                    <fieldset class="mt-20">
-                      <legend>{{$t('pass_change')}}</legend>
-                      <input
-                        type="hidden"
-                        value="1"
-                        v-bind="passdata.customer_id"
-                      />
-
-                      <p
-                        class="
-                          woocommerce-form-row woocommerce-form-row--wide
-                          form-row form-row-wide
-                        "
-                      >
-                        <label for="password_current"
-                          >{{$t('current_pass')}}</label
-                        >
-                        <span class="password-input"
-                          ><input
-                            v-model="passdata.current_password"
-                            type="password"
-                            class="
-                              woocommerce-Input woocommerce-Input--password
-                              input-text
-                            "
-                            id="password_current"
-                            autocomplete="off" /><span
-                            class="show-password-input"
-                          ></span
-                        ></span>
-                      </p>
-                      <p
-                        class="
-                          woocommerce-form-row woocommerce-form-row--wide
-                          form-row form-row-wide
-                        "
-                      >
-                        <label for="password_1"
-                          >{{$t('new_pass')}}</label
-                        >
-                        <span class="password-input"
-                          ><input
-                            v-model="passdata.new_password"
-                            type="password"
-                            class="
-                              woocommerce-Input woocommerce-Input--password
-                              input-text
-                            "
-                            id="password_1"
-                            autocomplete="off" /><span
-                            class="show-password-input"
-                          ></span
-                        ></span>
-                      </p>
-                      <p
-                        class="
-                          woocommerce-form-row woocommerce-form-row--wide
-                          form-row form-row-wide
-                        "
-                      >
-                        <label for="password_2">{{$t('confirm_new_pass')}}</label>
-                        <span class="password-input"
-                          ><input
-                            type="password"
-                            class="
-                              woocommerce-Input woocommerce-Input--password
-                              input-text
-                            "
-                            name="password_2"
-                            id="password_2"
-                            autocomplete="off" /><span
-                            class="show-password-input"
-                          ></span
-                        ></span>
-                      </p>
-                    </fieldset>
-                    <div class="clear"></div>
-
-                    <p>
-                      <input
-                        type="hidden"
-                        id="save-account-details-nonce"
-                        name="save-account-details-nonce"
-                        value="6618061b2b"
-                      /><input
-                        type="hidden"
-                        name="_wp_http_referer"
-                        value="/machic/my-account/edit-account/"
-                      />
-                      <button
-                        type="submit"
-                        @click="updatepassword()"
-                        class="woocommerce-Button button"
-                        name="save_account_details"
-                        value="Save changes"
-                      >
-                        {{$t('save_changes')}}
-                      </button>
-                      <input
-                        type="hidden"
-                        name="action"
-                        value="save_account_details"
-                      />
-                    </p>
-                  </div>
+                          <input type="hidden" name="_token" value="0cvsPlVbt2T6z4Qv7RZYcZZc5JiMQFKUaQZavTEr">                                        
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="py-2">
+                                  <img loading="lazy" class="shadow border p-2" src="http://staging.baladiexpress.com/frontend/profile.jpg" hight="100" width="100" alt="" id="showImg">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+                                  <label for="account_first_name">First Name&nbsp;<span class="required">*</span></label>
+                                  <input type="text" class="woocommerce-Input woocommerce-Input--text input-text " name="first_name" id="first_name" autocomplete="given-name" value="umar">
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+                                  <label for="last_name">Last Name&nbsp;<span class="required">*</span></label>
+                                  <input type="text" class="woocommerce-Input woocommerce-Input--text input-text  " name="last_name" id="last_name" autocomplete="family-name" value="">
+                                </p>
+                                <div class="clear"></div>
+                            </div>
+                          </div>
+                          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                            <label for="account_display_name">Display Name&nbsp;<span class="required">*</span></label>
+                            <input type="text" disabled="" class="woocommerce-Input woocommerce-Input--text input-text" name="display_name" id="display_name" value="umar">
+                            <span><span>This will be how your name will be displayed in the account section and in reviews</span></span>
+                          </p>
+                          <div class="clear"></div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+                                  <label for="phone">Phone No&nbsp;<span class="required">*</span></label>
+                                  <input type="tel" class="woocommerce-Input woocommerce-Input--text input-text  " name="phone" id="account_last_name" autocomplete="phone no" value="">
+                                </p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                  <label for="account_email">Email address&nbsp;<span class="required">*</span></label>
+                                  <input type="email" disabled="" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="umarwahab672@gmail.com">
+                                </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+                                  <label for="phone">Date Of Birth&nbsp;<span class="required">*</span></label>
+                                  <input type="date" class="woocommerce-Input woocommerce-Input--text input-text" name="dob" id="account_last_name" value="" autocomplete="date">
+                                </p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row mb-0 form-row-wide">
+                                  <label>Upload Image&nbsp;<span class="required">*</span></label> <br>
+                                </p>
+                                <div class="border py-1 px-2 rounded-2">
+                                  <label for="custom-file" class="custom-file-upload">Choose file</label>
+                                </div>
+                                <input type="file" class="form-control border  pt-2" id="custom-file" name="photo" onchange="PreviewImg()" style="display: none">
+                                <p></p>
+                            </div>
+                            <div class="text-end mb-3">
+                                <button class="btn btn-success">Update</button>
+                            </div>
+                          </div>
+                          <!--update password form fields -->
+                          <input type="hidden" name="_token" value="0cvsPlVbt2T6z4Qv7RZYcZZc5JiMQFKUaQZavTEr">                                        
+                          <fieldset>
+                            <legend>Password change</legend>
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_current">Current password (leave blank to leave unchanged)</label>
+                                <span class="password-input"><input type="password" class="woocommerce-Input woocommerce-Input--password input-text  " name="current_password" min="7" id="password_current" autocomplete="off">
+                                <span class="show-password-input"></span></span>
+                            </p>
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_1">New password (leave blank to leave unchanged)</label>
+                                <span class="password-input"><input type="password" min="7" class="woocommerce-Input woocommerce-Input--password input-text  " name="password" id="password_1" autocomplete="off">
+                                <span class="show-password-input"></span></span>
+                            </p>
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_2">Confirm new password</label>
+                                <span class="password-input"><input type="password" min="7" class="woocommerce-Input woocommerce-Input--password input-text " name="password_confirmation" id="password_2" autocomplete="off">
+                                <span class="show-password-input"></span></span>
+                            </p>
+                          </fieldset>
+                          <p>
+                            <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="6618061b2b"><input type="hidden" name="_wp_http_referer" value="/machic/my-account/edit-account/"> <button type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">Change Password</button>
+                            <input type="hidden" name="action" value="save_account_details">
+                          </p>
+                    </div>
                 </div>
                 <!-- my-account-wrapper -->
               </div>
@@ -261,9 +160,10 @@ export default {
           },
         })
         .then((response) => {
-          this.formdata.name = response.data.data.name;
-          this.formdata.email = response.data.data.email;
-          this.formdata.phone = response.data.data.phone;
+          //temprary commented below line
+          // this.formdata.name = response.data.data.name;
+          // this.formdata.email = response.data.data.email;
+          // this.formdata.phone = response.data.data.phone;
         })
         .catch((error) => {});
 

@@ -20,89 +20,22 @@
               />
             </div>
             <div class="section_title_content pt-20">
-              <h5>{{ $t("about_covid") }} 19</h5>
-              <h2>
-                {{ $t("food_supply_chain") }}
-              </h2>
+              <h5>{{ $t("about_covid") }}</h5>
               <p>
                 {{ $t("common_symptoms") }}
               </p>
             </div>
           </div>
-          <div class="single_about mb-2">
-            <div class="single_about_icon mr-2">
-              <i class="fa fa-check-circle"></i>
-            </div>
-            <div class="single_about_text">
-              <p>{{ $t("once_contaminated") }}</p>
-            </div>
-          </div>
-          <div class="single_about mb-2">
-            <div class="single_about_icon mr-2">
-              <i class="fa fa-check-circle"></i>
-            </div>
-            <div class="single_about_text">
-              <p>{{ $t("transfer_virus") }}</p>
-            </div>
-          </div>
-          <div class="single_about mb-2">
-            <div class="single_about_icon mr-2">
-              <i class="fa fa-check-circle"></i>
-            </div>
-            <div class="single_about_text">
-              <p>{{ $t("get_register") }}</p>
-            </div>
-          </div>
           <div class="about_button pt-3">
             <div>
-              <a class="button btn btn-primary" href="#">{{
-                $t("more_about")
-              }}</a>
+             
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section_title_content pt-2">
-            <h5>{{ $t("corona_virus") }}</h5>
-            <h2>{{ $t("need_know_about") }}</h2>
-            <p>
-              {{ $t("most_common_symptoms") }}
-            </p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
           <div id="accordion">
-            <div class="card mb-4">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button
-                    class="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="false"
-                    aria-controls="collapseOne"
-                  >
-                    {{ $t("bottleneck_remains") }}
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseOne"
-                class="collapse show in"
-                aria-labelledby="headingOne"
-                data-parent="#accordion"
-                style=""
-              >
-                <div class="card-body">
-                  {{ $t("who_announced") }}
-                </div>
-              </div>
-            </div>
             <div class="card mb-4">
               <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">

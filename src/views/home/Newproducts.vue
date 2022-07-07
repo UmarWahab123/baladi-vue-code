@@ -169,7 +169,7 @@
                               <a
                                 href="#bose-noise-cancelling-wireless-bluetooth/"
                                 ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/noise3.jpeg"
+                                 :src="url + dealsoftheweek?.product?.gallery?.gallery_images[0].image_md"
                                   alt="Bose Noise Cancelling Wireless Bluetooth"
                               /></a>
                               <div class="product-buttons">
@@ -327,7 +327,7 @@
                 elementor-element
                 elementor-element-468435b
                 elementor-widget
-                elementor-widget-machic-product-list
+                elementor-widget-machic-product-list d-none
               "
               data-id="468435b"
               data-element_type="widget"
@@ -641,7 +641,7 @@
                                 href="#dragon-touch-max10-tablet-android-10-0-os/"
                                 title="Dragon Touch Max10 Tablet Android 10.0 OS"
                                 ><img
-                                  src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-6.jpg"
+                                  :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                   alt="Dragon Touch Max10 Tablet Android 10.0 OS"
                               /></a>
                             </div>

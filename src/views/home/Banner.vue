@@ -162,7 +162,7 @@
                             </div>
                             <div class="banner-image">
                               <img class="testslider"
-                                src="@/assets/img/slider-banner-3.jpg"
+                                src="http://staging.baladiexpress.com/storage/images/sliders/1655877281_grocery slider.png"
                                 alt="Sample 2"
                               />
                             </div>

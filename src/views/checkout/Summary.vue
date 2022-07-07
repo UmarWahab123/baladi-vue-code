@@ -110,7 +110,6 @@
           </tr>
         </tfoot>
       </table>
-
       <div id="payment" class="woocommerce-checkout-payment">
         <ul class="wc_payment_methods payment_methods methods">
           <li class="wc_payment_method payment_method_bacs">
@@ -122,7 +121,6 @@
               value="bacs"
               data-order_button_text=""
             />
-
             <label for="payment_method_bacs">{{ $t("credit_debit") }} </label>
             <div class="panel payment_box payment_method_bacs p-3">
               <button

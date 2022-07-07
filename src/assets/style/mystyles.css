@@ -76,7 +76,6 @@ ol.flex-control-thumbs .owl-item {
     background-image: url('https://igtechservices.com/public/uploads/banners/1652945405-WhatsAppImage2022-03-31at12.56.24PM.jpeg');
     background-position: center;
 }
-
 .rtl .col-4.text-right.date-align-setup {
     text-align: end;
 }
@@ -109,4 +108,12 @@ ol.flex-control-thumbs .owl-item {
 .rtl a.woocommerce-button.button.address-btn.view.p-0{
     margin-right: 448px !important;
     margin-left: auto !important;
+}
+.custom-file-upload{
+    background: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 3px 12px;
+    cursor: pointer;
 }

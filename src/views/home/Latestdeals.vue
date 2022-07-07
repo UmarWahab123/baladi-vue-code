@@ -7,7 +7,7 @@
       elementor-element-4cd6823
       elementor-section-boxed
       elementor-section-height-default
-      elementor-section-height-default
+      elementor-section-height-default d-none
     "
     data-id="4cd6823"
     data-element_type="section"
@@ -25,7 +25,7 @@
       data-id="3f452c4"
       data-element_type="section"
     >
-      <HotDeals />
+      <!-- <HotDeals /> -->
       <div class="elementor-container elementor-column-gap-extended">
         <div
           class="

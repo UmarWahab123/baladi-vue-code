@@ -3,32 +3,18 @@
                     class="elementor-section elementor-top-section elementor-element elementor-element-187d03f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                     data-id="187d03f" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-extended">
-                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-62d71e4"
-                            data-id="62d71e4" data-element_type="column">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-c476ea2 elementor-widget elementor-widget-heading"
-                                    data-id="c476ea2" data-element_type="widget" data-widget_type="heading.default">
+                       <div class="elementor-column col-md-6 elementor-top-column elementor-element elementor-element-62d71e4" data-id="62d71e4" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated mt-0">
+
+                                <div class="elementor-element elementor-element-71fe4e1 elementor-widget elementor-widget-image" data-id="71fe4e1" data-element_type="widget" data-widget_type="image.default">
                                     <div class="elementor-widget-container">
 
-                                        <p class="elementor-heading-title elementor-size-default">Nam maximus nunc a
-                                            augue pulvinar, non euismod mauris tempus. Cras non elit vel magna molestie
-                                            pellentesque in eu dui. Donec laoreet quis erat vitae finibus. Vestibulum
-                                            enim eros, porta eget quam et, euismod dictum elit.</p>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-71fe4e1 elementor-widget elementor-widget-image"
-                                    data-id="71fe4e1" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container">
-                                        <img width="1200" height="1200"
-                                            src="https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1.jpg"
-                                            class="attachment-full size-full" alt="" loading="lazy"
-                                            srcset="https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1.jpg 1200w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-90x90.jpg 90w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-54x54.jpg 54w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-600x600.jpg 600w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-64x64.jpg 64w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-300x300.jpg 300w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-1024x1024.jpg 1024w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-150x150.jpg 150w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-768x768.jpg 768w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-450x450.jpg 450w, https://klbtheme.com/machic/wp-content/uploads/2021/10/contact-1-96x96.jpg 96w"
-                                            sizes="(max-width: 1200px) 100vw, 1200px">
+                                        <img loading="lazy" width="auto" style="height: 35rem; object-fit: cover;" src="http://staging.baladiexpress.com/frontend/src/img/support.png" class="attachment-full size-full" alt="" sizes="(max-width: 1200px) 100vw, 1200px">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e2c097e elementor-hidden-tablet elementor-hidden-mobile"
+                        <div class="elementor-column elementor-col-6 elementor-top-column elementor-element elementor-element-e2c097e elementor-hidden-tablet elementor-hidden-mobile"
                             data-id="e2c097e" data-element_type="column">
                             <div class="elementor-widget-wrap">
                             </div>

@@ -42,7 +42,7 @@
         >
           <router-link :to="'/' + langCode + '/orders'">{{$t('orders')}} </router-link>
         </li>
-        <li
+        <!-- <li
           class="
             woocommerce-MyAccount-navigation-link
             woocommerce-MyAccount-navigation-link--orders
@@ -52,8 +52,8 @@
           <router-link :to="'/' + langCode + '/my-wallet'"
             >{{$t('my_wallet')}} 
           </router-link>
-        </li>
-        <li
+        </li> -->
+        <!-- <li
           class="
             woocommerce-MyAccount-navigation-link
             woocommerce-MyAccount-navigation-link--orders
@@ -61,8 +61,8 @@
           :class="voucher"
         >
           <router-link :to="'/' + langCode + '/voucher'">{{$t('voucher')}}  </router-link>
-        </li>
-        <li
+        </li> -->
+        <!-- <li
           class="
             woocommerce-MyAccount-navigation-link
             woocommerce-MyAccount-navigation-link--orders
@@ -72,7 +72,7 @@
           <router-link :to="'/' + langCode + '/reward-points'"
             >{{$t('reward_points')}}
           </router-link>
-        </li>
+        </li> -->
 
         <li
           class="
@@ -102,7 +102,7 @@
             woocommerce-MyAccount-navigation-link--tinv_wishlist
           "
         >
-          <router-link :to="'/' + langCode + '/wishlist'"
+          <router-link :to="'/' + langCode + '/customerwishlist'"
             >{{$t('wish_list')}}
           </router-link>
         </li>

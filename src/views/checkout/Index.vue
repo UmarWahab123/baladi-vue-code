@@ -6,35 +6,25 @@
         <div class="container">
           <div class="woocommerce">
             <div class="woocommerce-notices-wrapper"></div>
-            <div class="woocommerce-form-coupon-toggle">
-              <div class="woocommerce-info">
-                {{ $t("have_coupon") }}?
-                <a href="#" class="showcoupon" @click="Coupon">{{
-                  $t("Click_enter_your_code")
-                }}</a>
-              </div>
-            </div>
-
+           
             <form
               class="checkout_coupon woocommerce-form-coupon"
               method="post"
               action="javascript:void(0)"
-              v-if="showCoupon"
             >
-              <p>{{ $t("coupon_code") }}</p>
+                <p>{{$t('have_coupon')}}? {{$t('coupon_codes')}}</p>
 
-              <p class="form-row form-row-first">
+                <div class="row">
+                 <div class="col-auto">
+                <div class="input-group">
                 <input
                   type="text"
                   name="coupon_code"
-                  class="input-text"
+                  class="form-control"
                   placeholder="Coupon code"
                   id="coupon_code"
                   v-model="coupon_Code"
                 />
-              </p>
-
-              <p class="form-row form-row-last">
                 <button
                   class="button"
                   name="apply_coupon"
@@ -43,8 +33,9 @@
                 >
                   {{ $t("apply_coupon") }}
                 </button>
-              </p>
-
+                </div>
+            </div>
+        </div>
               <div class="clear"></div>
             </form>
             <div class="woocommerce-notices-wrapper"></div>
@@ -66,7 +57,59 @@
                           <div
                             class="woocommerce-billing-fields__field-wrapper"
                           >
-                            <p
+                             <div class="form-row">
+                                <label style="font-size:1rem; font-weight:600;">Your Saved Addresses:&nbsp;</label>
+                            </div>
+                            <div class="form-row addresses-row" style="margin-left: 333px;">
+                                <div class="py-3" style="width:max-content;">
+                                    <span class="existAddress badge bg-theme mx-2" style="cursor: pointer;background-color: #2ba447;color: white;">Add New</span>
+                                    
+                                </div>
+                            </div>
+                          <p
+                              class="form-row form-row-wide"
+                              id="billing_company_field"
+                              data-priority="30"
+                              style="max-width: 50% !important;"
+                            >
+                              <label for="billing_company" class=""
+                                >{{ $t("AddressTitle") }}<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  v-model="billing_address.address_title"
+                                  autocomplete="organization"
+                              /></span>
+                            </p>
+                              <p
+                                class="
+                                  form-row form-row-wide
+                                  validate-required validate-phone
+                                "
+                                id="billing_phone_field"
+                                data-priority="100"
+                              >
+                                <label for="billing_phone" class=""
+                                  >{{ $t("phone") }}&nbsp;<abbr
+                                    class="required"
+                                    title="required"
+                                    >*</abbr
+                                  ></label
+                                ><span class="woocommerce-input-wrapper"
+                                  ><input
+                                    type="tel"
+                                    class="input-text"
+                                    placeholder=""
+                                    v-model="shipping_address.contact_no"
+                                    autocomplete="tel"
+                                /></span>
+                              </p>
+                           <p
                               class="form-row form-row-first validate-required"
                               id="billing_first_name_field"
                               data-priority="10"
@@ -111,57 +154,67 @@
                               /></span>
                             </p>
                             <p
-                              class="form-row form-row-wide"
-                              id="billing_company_field"
-                              data-priority="30"
+                              class="
+                                form-row
+                                address-field
+                                validate-required validate-postcode
+                                form-row-wide
+                              "
+                               style="max-width: 50% !important;"
+                              id="billing_postcode_field"
+                              data-priority="90"
+                              data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
                             >
-                              <label for="billing_company" class=""
-                                >{{ $t("company_name") }}&nbsp;<span
-                                  class="optional"
-                                  >({{ $t("optional") }})</span
+                              <label for="billing_postcode" class=""
+                                >{{ $t("zip_code") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
                                 ></label
                               ><span class="woocommerce-input-wrapper"
                                 ><input
                                   type="text"
                                   class="input-text"
-                                  v-model="billing_address.address_title"
-                                  autocomplete="organization"
-                              /></span>
-                            </p>
-                            <p
-                              class="
-                                form-row form-row-wide
-                                address-field
-                                update_totals_on_change
-                                validate-required
-                              "
-                              id="billing_country_field"
-                              data-priority="40"
-                            >
-                              <label for="billing_country" class=""
-                                >{{ $t("country") }} /
-                                {{ $t("region") }}&nbsp;<abbr
-                                  class="required"
-                                  title="required"
-                                  >*</abbr
-                                ></label
-                              >
-                              <span class="woocommerce-input-wrapper"
-                                ><input
-                                  readonly
-                                  type="text"
-                                  class="input-text"
-                                  placeholder="Qatar"
-                                  value="Qatar"
+                                  name="billing_postcode"
+                                  id="billing_postcode"
+                                  placeholder=""
+                                  v-model="billing_address.zone_no"
                               /></span>
                             </p>
                             <p
                               class="
                                 form-row
                                 address-field
+                                validate-required validate-state
+                                form-row-wide
+                              "
+                              style="max-width: 50% !important;"
+                              id="billing_state_field"
+                              data-priority="80"
+                              data-o_class="form-row form-row-wide address-field validate-required validate-state"
+                            >
+                              <label for="billing_state" class=""
+                                >{{ $t("BuildingNo") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  placeholder=""
+                                  v-model="billing_address.building_no"
+                              /></span>
+                            </p>
+                             <p
+                              class="
+                                form-row
+                                address-field
                                 validate-required
                                 form-row-wide
                               "
+                              style="max-width: 50% !important;"
                               id="billing_address_1_field"
                               data-priority="50"
                             >
@@ -187,13 +240,13 @@
                               class="form-row address-field form-row-wide"
                               id="billing_address_2_field"
                               data-priority="60"
+                              style="max-width: 50% !important;"
                             >
-                              <label
-                                for="billing_address_2"
-                                class="screen-reader-text"
-                                >{{ $t("apartment_etc") }}&nbsp;<span
-                                  class="optional"
-                                  >({{ $t("optional") }})</span
+                              <label for="billing_address_1" class=""
+                                >{{ $t("optional") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
                                 ></label
                               ><span class="woocommerce-input-wrapper"
                                 ><input
@@ -207,7 +260,7 @@
                                   data-placeholder="Apartment, suite, unit, etc. (optional)"
                               /></span>
                             </p>
-                            <p
+                           <p
                               class="
                                 form-row
                                 address-field
@@ -216,6 +269,7 @@
                               "
                               id="billing_city_field"
                               data-priority="70"
+                              style="max-width: 50% !important;"
                               data-o_class="form-row form-row-wide address-field validate-required"
                             >
                               <label for="billing_city" class=""
@@ -237,82 +291,7 @@
                                 </select>
                               </span>
                             </p>
-                            <p
-                              class="
-                                form-row
-                                address-field
-                                validate-required validate-state
-                                form-row-wide
-                              "
-                              id="billing_state_field"
-                              data-priority="80"
-                              data-o_class="form-row form-row-wide address-field validate-required validate-state"
-                            >
-                              <label for="billing_state" class=""
-                                >{{ $t("BuildingNo") }}&nbsp;<abbr
-                                  class="required"
-                                  title="required"
-                                  >*</abbr
-                                ></label
-                              ><span class="woocommerce-input-wrapper"
-                                ><input
-                                  type="text"
-                                  class="input-text"
-                                  placeholder=""
-                                  v-model="billing_address.building_no"
-                              /></span>
-                            </p>
-                            <p
-                              class="
-                                form-row
-                                address-field
-                                validate-required validate-postcode
-                                form-row-wide
-                              "
-                              id="billing_postcode_field"
-                              data-priority="90"
-                              data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
-                            >
-                              <label for="billing_postcode" class=""
-                                >{{ $t("zip_code") }}&nbsp;<abbr
-                                  class="required"
-                                  title="required"
-                                  >*</abbr
-                                ></label
-                              ><span class="woocommerce-input-wrapper"
-                                ><input
-                                  type="text"
-                                  class="input-text"
-                                  name="billing_postcode"
-                                  id="billing_postcode"
-                                  placeholder=""
-                                  v-model="billing_address.zone_no"
-                                  autocomplete="postal-code"
-                              /></span>
-                            </p>
-                            <p
-                              class="
-                                form-row form-row-wide
-                                validate-required validate-phone
-                              "
-                              id="billing_phone_field"
-                              data-priority="100"
-                            >
-                              <label for="billing_phone" class=""
-                                >{{ $t("phone") }}&nbsp;<abbr
-                                  class="required"
-                                  title="required"
-                                  >*</abbr
-                                ></label
-                              ><span class="woocommerce-input-wrapper"
-                                ><input
-                                  type="tel"
-                                  class="input-text"
-                                  placeholder=""
-                                  v-model="billing_address.contact_no"
-                                  autocomplete="tel"
-                              /></span>
-                            </p>
+                          
                             <!-- <p
                               class="
                                 form-row form-row-wide
@@ -353,7 +332,7 @@
                               class="
                                 woocommerce-form__label
                                 woocommerce-form__label-for-checkbox
-                                checkbox
+                                checkbox d-none
                               "
                             >
                               <input
@@ -421,8 +400,68 @@
                           </div>
                         </div>
                       </div>
+                       
+                       <div class="col-2 shadow p-3 mb-4" id="stripe_card" style="display: none">
+                            <div class="woocommerce-shipping-fields">
+                                <div class="shipping_address">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default credit-card-box">
+                                                <div class="panel-heading display-table">
+                                                    <div class="row display-tr">
+                                                        <h3 class="panel-title display-td">Payment Details</h3>
+                                                        <div class="rightbar-overlay">
+                                                            <img loading="lazy" class="img-responsive pull-right" width="200px" src="http://staging.baladiexpress.com/images/stripe-payment-icons.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
 
-                      <div class="col-2">
+                                                                                                        
+                                                    <div class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_test_QqZqFAlWRHZY0Da341HnZOki" id="payment-form">
+                                                        <div class="form-row row mb-3 mt-2">
+                                                            <div class="col-xs-12 form-group required">
+                                                                <label class="control-label">Name on Card</label> <input class=" owner-name" size="4" type="text">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row row mb-3">
+                                                            <div class="col-xs-12 form-group required">
+                                                                <label class="control-label">Card Number</label> <input autocomplete="off" class=" card-number" size="20" type="text">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row row mb-3">
+                                                            <div class="col-xs-12 col-md-4 form-group cvc required">
+                                                                <label class="control-label">CVC</label> <input autocomplete="off" class=" card-cvc" placeholder="ex. 311" size="4" type="text">
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-4 form-group expiration required">
+                                                                <label class="control-label">Expiration Month</label> <input class=" card-expiry-month" placeholder="MM" size="2" type="text">
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-4 form-group expiration required">
+                                                                <label class="control-label">Expiration Year</label> <input class=" card-expiry-year" placeholder="YYYY" size="4" type="text">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row row">
+                                                            <div class="col-md-12 error form-group d-none">
+                                                                <div class="alert-danger alert">Please correct the errors and try again.</div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                      <div class="col-2 shadow p-3 mb-4">
                         <div class="woocommerce-shipping-fields">
                           <h3 id="ship-to-different-address">
                             <label
@@ -444,7 +483,7 @@
                                 name="ship_to_different_address"
                                 value="1"
                               />
-                              <span>{{ $t("ship_different_address") }}</span>
+                              <span class="ml-10">{{ $t("ship_different_address") }}</span>
                             </label>
                           </h3>
 
@@ -453,239 +492,29 @@
                             class="shipping_address"
                             style="display: none"
                           >
-                            <div
-                              class="woocommerce-shipping-fields__field-wrapper"
+                             <div
+                            class="woocommerce-billing-fields__field-wrapper"
+                          >
+                          <p
+                              class="form-row form-row-wide"
+                              id="billing_company_field"
+                              data-priority="30"
+                              style="max-width: 50% !important;"
                             >
-                              <p
-                                class="
-                                  form-row form-row-first
-                                  validate-required
-                                "
-                                id="shipping_first_name_field"
-                                data-priority="10"
-                              >
-                                <label for="shipping_first_name" class=""
-                                  >{{ $t("first_name") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    name="shipping_first_name"
-                                    id="shipping_first_name"
-                                    placeholder=""
-                                    v-model="shipping_address.first_name"
-                                    autocomplete="given-name"
-                                /></span>
-                              </p>
-                              <p
-                                class="form-row form-row-last validate-required"
-                                id="shipping_last_name_field"
-                                data-priority="20"
-                              >
-                                <label for="shipping_last_name" class=""
-                                  >{{ $t("last_name") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    name="shipping_last_name"
-                                    id="shipping_last_name"
-                                    placeholder=""
-                                    v-model="shipping_address.last_name"
-                                    autocomplete="family-name"
-                                /></span>
-                              </p>
-                              <p
-                                class="form-row form-row-wide"
-                                id="shipping_company_field"
-                                data-priority="30"
-                              >
-                                <label for="shipping_company" class=""
-                                  >{{ $t("company_name") }}&nbsp;<span
-                                    class="optional"
-                                    >({{ $t("optional") }})</span
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    name="shipping_company"
-                                    id="shipping_company"
-                                    placeholder=""
-                                    v-model="shipping_address.address_title"
-                                    autocomplete="organization"
-                                /></span>
-                              </p>
-                              <p
-                                class="
-                                  form-row form-row-wide
-                                  address-field
-                                  update_totals_on_change
-                                  validate-required
-                                "
-                                id="shipping_country_field"
-                                data-priority="40"
-                              >
-                                <label for="shipping_country" class=""
-                                  >{{ $t("country") }} /
-                                  {{ $t("region") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper">
-                                  <input
-                                    readonly
-                                    type="text"
-                                    class="input-text"
-                                    placeholder="Qatar"
-                                    value="Qatar"
-                                  />
-                                </span>
-                              </p>
-                              <p
-                                class="
-                                  form-row
-                                  address-field
-                                  validate-required
-                                  form-row-wide
-                                "
-                                id="shipping_address_1_field"
-                                data-priority="50"
-                              >
-                                <label for="shipping_address_1" class=""
-                                  >{{ $t("street_address") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    placeholder="House number and street name"
-                                    v-model="shipping_address.address_line_1"
-                                    autocomplete="address-line1"
-                                    data-placeholder="House number and street name"
-                                /></span>
-                              </p>
-                              <p
-                                class="form-row address-field form-row-wide"
-                                id="shipping_address_2_field"
-                                data-priority="60"
-                              >
-                                <label
-                                  for="shipping_address_2"
-                                  class="screen-reader-text"
-                                  >{{ $t("apartment_etc") }}&nbsp;<span
-                                    class="optional"
-                                    >({{ $t("optional") }})</span
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    placeholder="Apartment, suite, unit, etc. (optional)"
-                                    v-model="shipping_address.address_line_2"
-                                    autocomplete="address-line2"
-                                    data-placeholder="Apartment, suite, unit, etc. (optional)"
-                                /></span>
-                              </p>
-                              <p
-                                class="
-                                  form-row
-                                  address-field
-                                  validate-required
-                                  form-row-wide
-                                "
-                                id="shipping_city_field"
-                                data-priority="70"
-                                data-o_class="form-row form-row-wide address-field validate-required"
-                              >
-                                <label for="shipping_city" class=""
-                                  >{{ $t("town_city") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><select v-model="shipping_address.city_id">
-                                    <option
-                                      :data="item"
-                                      :key="indextr"
-                                      v-for="(item, indextr) in cities"
-                                      :value="item.id"
-                                    >
-                                      {{ item.name }}
-                                    </option>
-                                  </select></span
-                                >
-                              </p>
-                              <p
-                                class="
-                                  form-row
-                                  address-field
-                                  validate-required validate-state
-                                  form-row-wide
-                                "
-                                id="shipping_state_field"
-                                data-priority="80"
-                                data-o_class="form-row form-row-wide address-field validate-required validate-state"
-                              >
-                                <label for="shipping_state" class=""
-                                  >{{ $t("BuildingNo") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                >
-                                <span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    name="shipping_postcode"
-                                    id="shipping_postcode"
-                                    placeholder=""
-                                    v-model="shipping_address.building_no"
-                                    autocomplete="postal-code"
-                                /></span>
-                              </p>
-                              <p
-                                class="
-                                  form-row
-                                  address-field
-                                  validate-required validate-postcode
-                                  form-row-wide
-                                "
-                                id="shipping_postcode_field"
-                                data-priority="90"
-                                data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
-                              >
-                                <label for="shipping_postcode" class=""
-                                  >{{ $t("zip_code") }}&nbsp;<abbr
-                                    class="required"
-                                    title="required"
-                                    >*</abbr
-                                  ></label
-                                ><span class="woocommerce-input-wrapper"
-                                  ><input
-                                    type="text"
-                                    class="input-text"
-                                    name="shipping_postcode"
-                                    id="shipping_postcode"
-                                    placeholder=""
-                                    v-model="shipping_address.zone_no"
-                                    autocomplete="postal-code"
-                                /></span>
-                              </p>
+                              <label for="billing_company" class=""
+                                >{{ $t("AddressTitle") }}<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  v-model="shipping_address.address_title"
+                                  autocomplete="organization"
+                              /></span>
+                            </p>
                               <p
                                 class="
                                   form-row form-row-wide
@@ -709,7 +538,215 @@
                                     autocomplete="tel"
                                 /></span>
                               </p>
-                            </div>
+                           <p
+                              class="form-row form-row-first validate-required"
+                              id="billing_first_name_field"
+                              data-priority="10"
+                            >
+                              <label for="billing_first_name" class=""
+                                >{{ $t("first_name") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  name="billing_first_name"
+                                  id="billing_first_name"
+                                  placeholder=""
+                                  v-model="shipping_address.first_name"
+                                  autocomplete="given-name"
+                              /></span>
+                            </p>
+                            <p
+                              class="form-row form-row-last validate-required"
+                              id="billing_last_name_field"
+                              data-priority="20"
+                            >
+                              <label for="billing_last_name" class=""
+                                >{{ $t("last_name") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  name="billing_last_name"
+                                  id="billing_last_name"
+                                  placeholder=""
+                                  v-model="shipping_address.last_name"
+                                  autocomplete="family-name"
+                              /></span>
+                            </p>
+                            <p
+                              class="
+                                form-row
+                                address-field
+                                validate-required validate-postcode
+                                form-row-wide
+                              "
+                               style="max-width: 50% !important;"
+                              id="billing_postcode_field"
+                              data-priority="90"
+                              data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
+                            >
+                              <label for="billing_postcode" class=""
+                                >{{ $t("zip_code") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  name="billing_postcode"
+                                  id="billing_postcode"
+                                  placeholder=""
+                                  v-model="shipping_address.zone_no"
+                              /></span>
+                            </p>
+                            <p
+                              class="
+                                form-row
+                                address-field
+                                validate-required validate-state
+                                form-row-wide
+                              "
+                              style="max-width: 50% !important;"
+                              id="billing_state_field"
+                              data-priority="80"
+                              data-o_class="form-row form-row-wide address-field validate-required validate-state"
+                            >
+                              <label for="billing_state" class=""
+                                >{{ $t("BuildingNo") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  placeholder=""
+                                  v-model="shipping_address.building_no"
+                              /></span>
+                            </p>
+                             <p
+                              class="
+                                form-row
+                                address-field
+                                validate-required
+                                form-row-wide
+                              "
+                              style="max-width: 50% !important;"
+                              id="billing_address_1_field"
+                              data-priority="50"
+                            >
+                              <label for="billing_address_1" class=""
+                                >{{ $t("street_address") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  name="billing_address_1"
+                                  id="billing_address_1"
+                                  placeholder="House number and street name"
+                                  v-model="shipping_address.address_line_1"
+                                  autocomplete="address-line1"
+                                  data-placeholder="House number and street name"
+                              /></span>
+                            </p>
+                            <p
+                              class="form-row address-field form-row-wide"
+                              id="billing_address_2_field"
+                              data-priority="60"
+                              style="max-width: 50% !important;"
+                            >
+                              <label for="billing_address_1" class=""
+                                >{{ $t("optional") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="text"
+                                  class="input-text"
+                                  name="billing_address_2"
+                                  id="billing_address_2"
+                                  placeholder="Apartment, suite, unit, etc. (optional)"
+                                  v-model="shipping_address.address_line_2"
+                                  autocomplete="address-line2"
+                                  data-placeholder="Apartment, suite, unit, etc. (optional)"
+                              /></span>
+                            </p>
+                           <p
+                              class="
+                                form-row
+                                address-field
+                                validate-required
+                                form-row-wide
+                              "
+                              id="billing_city_field"
+                              data-priority="70"
+                              style="max-width: 50% !important;"
+                              data-o_class="form-row form-row-wide address-field validate-required"
+                            >
+                              <label for="billing_city" class=""
+                                >{{ $t("town_city") }}&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper">
+                                <select v-model="shipping_address.city_id">
+                                  <option
+                                    :data="item"
+                                    :key="indextr"
+                                    v-for="(item, indextr) in cities"
+                                    :value="item.id"
+                                  >
+                                    {{ item.name }}
+                                  </option>
+                                </select>
+                              </span>
+                            </p>
+                          
+                            <!-- <p
+                              class="
+                                form-row form-row-wide
+                                validate-required validate-email
+                              "
+                              id="billing_email_field"
+                              data-priority="110"
+                            >
+                              <label for="billing_email" class=""
+                                >Email address&nbsp;<abbr
+                                  class="required"
+                                  title="required"
+                                  >*</abbr
+                                ></label
+                              ><span class="woocommerce-input-wrapper"
+                                ><input
+                                  type="email"
+                                  class="input-text"
+                                  name="billing_email"
+                                  id="billing_email"
+                                  placeholder=""
+                                  value=""
+                                  autocomplete="email"
+                              /></span>
+                            </p> -->
+                          </div>
                           </div>
                         </div>
                         <div class="woocommerce-additional-fields">
@@ -772,7 +809,6 @@ import axios from "axios";
 export default {
   data: () => ({
     // url: import.meta.env.VITE_API_URL + "/storage/",
-    showCoupon: false,
     guestCheck: true,
     loginCheck: false,
     coupon_Code: "",
@@ -812,7 +848,6 @@ export default {
   mounted() {
     var acc = document.getElementsByClassName("input-radio");
     var i;
-
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -853,13 +888,13 @@ export default {
         text.style.display = "none";
       }
     },
-    Coupon() {
-      if (this.showCoupon == false) {
-        this.showCoupon = true;
-      } else {
-        this.showCoupon = false;
-      }
-    },
+    // Coupon() {
+    //   if (this.showCoupon == false) {
+    //     this.showCoupon = true;
+    //   } else {
+    //     this.showCoupon = false;
+    //   }
+    // },
     onClickChild() {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
       this.token = userInfo.token;

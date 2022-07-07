@@ -115,7 +115,7 @@
             widget
             woocommerce
             widget_layered_nav
-            woocommerce-widget-layered-nav
+            woocommerce-widget-layered-nav d-none
           "
         >
           <h4 class="widget-title">{{$t('Filter_by_Color')}}</h4>
@@ -154,7 +154,7 @@
             </li>
           </ul>
         </div>
-        <div class="widget widget_product_status">
+        <div class="widget widget_product_status d-none">
           <h4 class="widget-title">{{$t('Product_Status')}}</h4>
           <div class="widget-checkbox-list">
             <ul>
@@ -219,7 +219,7 @@
             </li>
           </ul>
         </div>
-        <div class="widget widget_media_image">
+        <div class="widget widget_media_image d-none">
           <img
             width="293"
             height="587"

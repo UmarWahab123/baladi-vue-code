@@ -8,12 +8,9 @@
             <nav class="woocommerce-breadcrumb">
               <ul>
                 <li>
-                  <a href="javascript:void(0)">{{ $t("Home") }}</a>
+                 <router-link :to="'/' + langCode"
+                      >{{ $t("Home") }}</router-link>
                 </li>
-                <li>
-                  <a href="">{{ $t("Vegetables") }}</a>
-                </li>
-                <li>{{ $t("Organic_Food_with_fresh_quality") }}</li>
               </ul>
             </nav>
 
@@ -123,9 +120,19 @@
 
                   <div class="col col-12 col-lg-6">
                     <h1 class="product_title entry-title">
-                      {{ results.product_name }}
+                      {{ results?.product_name }}
                     </h1>
-                    <div class="product-meta">
+                     <p>{{ results.description }}</p>
+                     <div class="product-meta">
+                      <div class="product-model">
+                          <span>PCS</span>
+
+                      </div><!-- product-model -->
+                      <div class="sku-wrapper">
+
+                      </div><!-- sku-wrapper -->
+                  </div>
+                    <div class="product-meta d-none">
                       <div class="product-model">
                         <span>{{ $t("weight") }}:</span>
                         {{ results.weight }}
@@ -181,7 +188,7 @@
                       >
                     </div>
 
-                    <div class="product-price">
+                    <div class="product-price d-none">
                       <div class="gap-2">
                         <input
                           type="radio"
@@ -271,7 +278,7 @@
                               button button-primary
                               add_to_cart_button
                               single_add_to_cart_button
-                              button
+                              button d-none
                               alt
                             "
                           >
@@ -310,7 +317,7 @@
                             }}</span></a
                           >
                           <div class="tinv-wishlist-clear"></div>
-                          <div class="tinvwl-tooltip-custom test-margin">
+                          <div class="ml-5 tinvwl-tooltip-custom test-margin">
                             {{ $t("Add_to_Wishlist") }}
                           </div>
                         </div>
@@ -362,12 +369,10 @@
                       <span class="sku_wrapper"
                         >SKU: <span class="sku">BE45VGRT</span></span
                       >
-
+                
                       <span class="posted_in"
                         >{{ $t("categories") }}:
-                        <a href="#" rel="tag">{{ $t("Vegetables") }}</a
-                        >, <a href="#" rel="tag">{{ $t("Fruits") }}</a></span
-                      >
+                        <router-link :to="'/' + langCode +'/category/'+ results?.category_id"> {{ results?.category?.name }}</router-link></span>
                     </div>
                     <div class="social-share site-social colored">
                       <ul class="social-container">
@@ -385,22 +390,6 @@
                             class="twitter"
                             target="_blank"
                             ><i class="klbth-icon-twitter"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fklbtheme.com%2FBaladi%2Fproduct%2Fapple-10-9-inch-ipad-air-wi-fi-cellular-64gb%2F&amp;media=https%3A%2F%2Fklbtheme.com%2FBaladi%2Fwp-content%2Fuploads%2F2021%2F09%2Flogo-light.png&amp;description=Apple%2010.9-inch%20iPad%20Air%20Wi-Fi%20Cellular%2064GB%20%E2%80%93%20Baladi%20%E2%80%93%20Electronics%20Store%20eCommerce%20Theme"
-                            class="pinterest"
-                            target="_blank"
-                            ><i class="klbth-icon-pinterest"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://www.linkedin.com/shareArticle?mini=true&amp;ro=true&amp;title=Apple%2010.9-inch%20iPad%20Air%20Wi-Fi%20Cellular%2064GB%20%E2%80%93%20Baladi%20%E2%80%93%20Electronics%20Store%20eCommerce%20Theme&amp;url=https%3A%2F%2Fklbtheme.com%2FBaladi%2Fproduct%2Fapple-10-9-inch-ipad-air-wi-fi-cellular-64gb%2F&amp;summary=Apple%2010.9-inch%20iPad%20Air%20Wi-Fi%20Cellular%2064GB%20%E2%80%93%20Baladi%20%E2%80%93%20Electronics%20Store%20eCommerce%20Theme&amp;source=Apple%2010.9-inch%20iPad%20Air%20Wi-Fi%20Cellular%2064GB%20%E2%80%93%20Baladi%20%E2%80%93%20Electronics%20Store%20eCommerce%20Theme&amp;armin=armin"
-                            class="linkedin"
-                            target="_blank"
-                            ><i class="klbth-icon-linkedin"></i
                           ></a>
                         </li>
                         <li>
@@ -1432,7 +1421,7 @@
                               add_to_cart_button
                               single_add_to_cart_button
                               button
-                              alt
+                              alt 
                             "
                           >
                             <span>Buy Now</span>
@@ -2380,9 +2369,8 @@ export default {
           id + '&locale='+this.langCode
       )
       .then((response) => {
-        this.formdata.product_id = response.data.data[0].id;
         this.results = response.data.data[0];
-        // console.log("this results", this.results);
+        console.log("thisdetailsresults", this.results);
         this.sub_products = response.data.data[0].uom_products[0];
       })
       .catch((error) => {});

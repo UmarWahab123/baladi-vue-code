@@ -347,7 +347,7 @@
     "change_address": "Change address",
     "have_coupon": "Have a coupon",
     "Click_enter_your_code": "Click here to enter your code",
-    "coupon_code": "If you have a coupon code, please apply it below",
+    "coupon_codes": "apply it below",
     "billing_details": "Billing details",
     "first_name": "First name",
     "last_name": "Last name",
@@ -373,16 +373,16 @@
     "flat_rate": "Flat rate",
     "Updatetotals": "Update totals",
     "amount_stated_above_if": "button before placing your order. You may be charged more than the  amount stated above if you fail to do so.",
-    "credit_debit": "Add Credit and Debit Card",
+    "credit_debit": "Pay with cash upon delivery.",
     "pay_now": "Pay Now",
     "UpdateTotals": "Update Totals",
-    "cash_delivery": "Cash on delivery",
+    "cash_delivery": "Pay with Credit/Debit Card.",
     "please_ensure_you_click_the": "Since your browser does not support JavaScript, or it is disabled, please ensure you click the",
     "Please_send_a_check_to_Store": "Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.",
     "Pay_with_cash_upon_delivery": "Pay with cash upon delivery.",
     "your_personal_data": " Your personal data will be used to process your order, supportyour experience throughout this website, and for other purposes described in our",
     "read_and_agree": "I have read and agree to the website",
-    "place_order": "Place order",
+    "place_order": " Confirm Order",
     "cardholder_name": "Cardholder Name",
     "card_number": "Card Number",
     " add_card": " Add card",
@@ -469,7 +469,9 @@
     "Latitude":"Latitude",
     "Longitude":"Longitude",
     "Save_address":"Save address",
-    "Update_address":"Update address"
+    "Update_address":"Update address",
+    "FishSeaFood":"Fish & Sea Food",
+    "AddressTitle":"Address Title"
 
 
 

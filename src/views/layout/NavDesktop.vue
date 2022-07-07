@@ -792,13 +792,7 @@
                   >
                     <a href="#">
                       <div class="menu-icon">
-                        <img
-                          style="padding: 1px"
-                          :src="
-                            'http://baladi-v1.bteamwebs.com/storage/' +
-                            item.photo
-                          "
-                        />
+                        <i class="fa fa-cheese text-secondary" :class="item.icon_class" aria-hidden="true"></i>
                       </div>
                       {{ item.name }}
                     </a>
@@ -1155,6 +1149,16 @@
                       </ul>
                     </li>
                   </ul>
+                </li>
+                <li
+                  class="
+                    menu-item
+                    menu-item-type-post_type
+                    menu-item-object-page
+                  "
+                >
+                  <router-link :to="'/' + langCode + '/category/'"> <i class="klbth-icon-shopping-bag-alt"></i>   Personal Care
+                  </router-link>
                 </li>
                 <li
                   class="

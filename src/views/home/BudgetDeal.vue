@@ -35,7 +35,7 @@
           elementor-top-column
           elementor-element
           elementor-element-b922ff9
-          elementor-hidden-tablet
+          elementor-hidden-tablet d-none
         "
         data-id="b922ff9"
         data-element_type="column"
@@ -241,7 +241,7 @@
       <div
         class="
           elementor-column
-          col-md-9
+          col-md-12
           elementor-top-column elementor-element elementor-element-ace6d3a
         "
         data-id="ace6d3a"
@@ -284,7 +284,7 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                     :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -302,7 +302,7 @@
                                   </div>
                                   <div class="slidingSection">
                                     <img
-                                      src="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-11-400x400.jpg"
+                                       :src="url + item?.product?.gallery?.gallery_images[0].image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -452,7 +452,15 @@
                                     ></span
                                   ></ins
                                 ></span
-                              ><a
+                              >
+                 
+                             </div>
+                            </div>
+                          </div>
+                        <div class="product-footer">
+                          <div class="product-footer-buttons">
+                         
+                              <a
                                 href="javascript:void(0)"
                                 data-quantity="1"
                                 class="
@@ -465,20 +473,20 @@
                                 ><i class="klbth-icon-shop-1"></i> Add to
                                 cart</a
                               >
-                               <a
+                                  <router-link
                                   v-if="item?.check"
-                                  href="javascript:void(0)"
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/cart'"
                                   class="added_to_cart wc-forward"
                                   title="View cart"
-                                  >View cart</a
+                                  >View cart</router-link
                                 >
-                            </div>
                           </div>
-                        </div>
-                        <div class="product-footer">
                           <div class="product-footer-details">
                             <ul>
-                              <li class="SpecHighlights-list-label">
+                              <li class="SpecHighlights-list-label d-none">
                                 {{ item.product.lg_description }}
                               </li>
                             </ul>

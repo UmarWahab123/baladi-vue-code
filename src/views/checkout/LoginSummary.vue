@@ -21,7 +21,7 @@
             <td class="product-total">
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span>
+                  ><span class="woocommerce-Price-currencySymbol">QAR </span>
                   {{
                     item.quantity * item.uom_product.product.variant_base_price
                   }}</bdi
@@ -36,14 +36,24 @@
             <td>
               <span class="woocommerce-Price-amount amount"
                 ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
+                  ><span class="woocommerce-Price-currencySymbol">QAR </span
                   >{{ cartTotal }}</bdi
                 ></span
               >
             </td>
           </tr>
-
-          <tr class="woocommerce-shipping-totals shipping">
+        <tr class="cart-subtotal">
+                <th>{{ $t("Discount") }}</th>
+                <td>
+                  <span class="woocommerce-Price-amount amount"
+                    ><bdi
+                      ><span class="woocommerce-Price-currencySymbol">QAR </span
+                      > 0.00</bdi
+                    ></span
+                  >
+                </td>
+              </tr>
+          <tr class="woocommerce-shipping-totals shipping d-none">
             <th>{{ $t("shipping") }}</th>
             <td data-title="Shipping">
               <ul id="shipping_method" class="woocommerce-shipping-methods">
@@ -60,7 +70,7 @@
                     >{{ $t("Flat_rate") }}:
                     <span class="woocommerce-Price-amount amount"
                       ><bdi
-                        ><span class="woocommerce-Price-currencySymbol">$</span
+                        ><span class="woocommerce-Price-currencySymbol">QAR </span
                         >5.00</bdi
                       ></span
                     ></label
@@ -100,8 +110,21 @@
               <strong
                 ><span class="woocommerce-Price-amount amount"
                   ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">$</span
+                    ><span class="woocommerce-Price-currencySymbol">QAR </span
                     >{{ cartTotal }}</bdi
+                  ></span
+                ></strong
+              >
+            </td>
+          </tr>
+            <tr class="order-total">
+            <th>Payment Method</th>
+            <td>
+              <strong
+                ><span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol"> </span
+                    ></bdi
                   ></span
                 ></strong
               >
@@ -119,12 +142,13 @@
               class="input-radio"
               name="payment_method"
               value="bacs"
+               :onchange="myPayment"
               checked="checked"
               data-order_button_text=""
             />
 
             <label for="payment_method_bacs">{{ $t("credit_debit") }} </label>
-            <div class="panel payment_box payment_method_bacs p-3">
+            <div class="panel payment_box payment_method_bacs p-3 d-none">
               <button
                 type="button"
                 class="button"
@@ -168,6 +192,7 @@
               type="radio"
               class="input-radio"
               name="payment_method"
+               @change="myPayment"
               value="cod"
               data-order_button_text=""
             />
@@ -180,8 +205,29 @@
               <p>{{ $t("Pay_with_cash_upon_delivery") }}</p>
             </div>
           </li>
-        </ul>
-        <div class="form-row place-order">
+        </ul><hr>
+        <div style="text-align:center;">   <a
+            href="javascript:void(0)"
+            type=""
+            class="button alt"
+            value="Place order"
+            data-value="Place order"
+            @click="onClickButton"
+            >{{ $t("place_order") }}</a
+          >
+
+          <input
+            type="hidden"
+            id="woocommerce-process-checkout-nonce"
+            name="woocommerce-process-checkout-nonce"
+            value="810eb5aef0"
+          /><input
+            type="hidden"
+            name="_wp_http_referer"
+            value="/machic/?wc-ajax=update_order_review"
+          /></div>
+    
+        <div class="form-row place-order d-none">
           <noscript>
             Since your browser does not support JavaScript, or it is disabled,
             please ensure you click the <em>Update Totals</em>
@@ -502,6 +548,21 @@ export default {
     this.getCart();
   },
   methods: {
+    myPayment() {
+      // Get the checkbox
+      var delivery = document.getElementById(
+        "payment_method_cod"
+      );
+      // Get the output text
+      var paymentmodal = document.getElementById("stripe_card");
+
+      // If the checkbox is checked, display the output
+      if (delivery.checked == true) {
+        paymentmodal.style.display = "block";
+      } else {
+        paymentmodal.style.display = "none";
+      }
+    },
     Modal: function () {
       this.showmodal = "show";
       this.stylemodal = "display: block; padding-right: 0.200073px;";
