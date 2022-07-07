@@ -17,8 +17,8 @@ if (langCode != null) {
 // var params = localStorage.getItem("lang");
 const routes = [{
         name: "Home",
-        // path: "/" + langCode,
-        path: "/",
+        path: "/" + langCode,
+        // path: "/",
         component: Home,
         // component: () =>
         // import ("@/views/category/Index.vue"),
