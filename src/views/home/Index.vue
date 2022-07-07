@@ -11,23 +11,15 @@
         style="transform: none"
       >
         <div class="elementor-section-wrap" style="transform: none">
-          <Banner />
-          <Boxinfo />
-          <!-- <Brand/> -->
-          <Topcat />
-          <Bestsellers />
-          <!-- black bar  -->
-          <Banner2 />
+           <Banner />
+            <Boxinfo />
+            <Topcat />
+                      <Bestsellers />
+            <Banner2 />
           <Brand />
-          <!-- Budget Deals -->
           <BudgetDeal />
-          <SaveBar />
-
-          <Latestdeals />
-          <!-- 2nd bar  -->
-          <!-- last section  -->
+            <SaveBar />
           <Newproducts />
-          <!-- logo slider  -->
         </div>
       </div>
     </div>
@@ -44,18 +36,16 @@ setTimeout(function () {
 }, 500);
 import Header from "../layout/Header.vue";
 import Footer from "../layout/Footer.vue";
-import Topcat from "./Topcat.vue";
 import Banner from "./Banner.vue";
-import Brand from "./Brand.vue";
-import Leftbar from "./Leftbar.vue";
-import Bestsellers from "./Bestsellers.vue";
-import Latestdeals from "./Latestdeals.vue";
-import Newproducts from "./Newproducts.vue";
 import Boxinfo from "./Boxinfo.vue";
-import Bar from "./partials/Bar.vue";
-import Banner2 from "./partials/Banner.vue";
-import BudgetDeal from "./BudgetDeal.vue";
+import Newproducts from "./Newproducts.vue";
 import SaveBar from "./SaveBar.vue";
+import Topcat from "./Topcat.vue";
+import Banner2 from "./partials/Banner.vue";
+import Brand from "./Brand.vue";
+import Bestsellers from "./Bestsellers.vue";
+import BudgetDeal from "./BudgetDeals.vue";
+
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";

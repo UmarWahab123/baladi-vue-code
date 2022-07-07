@@ -34,7 +34,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <Guesttable v-if="guestCheck" />
+                     <!--   <Guesttable v-if="guestCheck" />-->
                         <Loginuser v-if="loginCheck" />
                         <tr>
                           <td colspan="6" class="actions">
@@ -1621,7 +1621,7 @@ setTimeout(function () {
 </script>
 
 <script>
-import Guesttable from "./Guesttable.vue";
+// import Guesttable from "./Guesttable.vue";
 import GuestTotal from "./GuestTotal.vue";
 import LoginTotal from "./LoginTotal.vue";
 import Loginuser from "./Loginuser.vue";

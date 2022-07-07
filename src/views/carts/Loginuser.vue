@@ -144,7 +144,7 @@ export default {
           .then((response) => {
             this.results = response.data.data;
             console.log("results", this.results);
-            productStore.cartListData(this.results);
+            // productStore.cartListData(this.results);
             // this.results.map((item, index) => {
             //   for (var i = 1; i <= item.quantity; i++) {
             //     console.log("item", index, item);

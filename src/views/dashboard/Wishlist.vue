@@ -72,7 +72,6 @@
                                       "
                                     >
                                       <div class="tinv-header">
-                                        <h2>{{ $t("Wishlist") }}</h2>
                                       </div>
                                       <items />
                                     </div>

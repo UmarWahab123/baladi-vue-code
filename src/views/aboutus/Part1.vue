@@ -1,14 +1,5 @@
 <template>
-  <main id="main" class="site-primary">
-    <div class="site-content">
-      <div class="homepage-content">
-        <div
-          data-elementor-type="wp-page"
-          data-elementor-id="1544"
-          class="elementor elementor-1544"
-          data-elementor-settings="[]"
-        >
-          <div class="elementor-section-wrap">
+  <div class="elementor-section-wrap">
             <section
               class="elementor-section mt-3 elementor-top-section elementor-element elementor-element-3551755 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
               data-id="3551755"
@@ -274,8 +265,14 @@
               </div>
             </section>
           </div>
-        </div>
-      </div>
-    </div>
-  </main>
 </template>
+<script>
+export default {
+  data: () => ({
+    langCode: "en",
+  }),
+  mounted() {
+    var langCode = localStorage.getItem("lang");
+  },
+};
+</script>

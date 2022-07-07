@@ -266,20 +266,7 @@
                       >{{$t('about_us')}}</router-link
                     >
                   </li>
-                  <li
-                    id="menu-item-2513"
-                    class="
-                      menu-item
-                      menu-item-type-post_type
-                      menu-item-object-page
-                      menu-item-privacy-policy
-                      menu-item-2513
-                    "
-                  >
-                    <router-link :to="'/' + langCode + '/privacy-policy'"
-                      >{{$t('privacy_policy')}}
-                    </router-link>
-                  </li>
+                 
                   <li
                     id="menu-item-2509"
                     class="
