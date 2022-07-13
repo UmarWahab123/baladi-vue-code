@@ -12,7 +12,7 @@
               <ul>
                 <li><router-link :to="'/' + langCode"
                       >Home</router-link></li>
-                <li>Apple</li>
+                <li>{{categoryname}}</li>
               </ul>
             </nav>
           </div>
@@ -45,7 +45,7 @@
               </div>
               <!-- col -->
               <div class="col col-12 col-lg-3 sidebar-column hide-mobile">
-                <p class="woocommerce-result-count">{{$t('Showing_all_results')}}</p>
+                <p class="woocommerce-result-count">{{$t('Showing_all')}} {{showingcat}} {{$t('results')}}</p>
               </div>
               <!-- col -->
             </div>
@@ -76,18 +76,37 @@ import Topcat from "../home/Topcat.vue";
 </script>
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
+import axios from "axios";
+import.meta.env.VITE_API_KEY;
+
 export default {
   components: { TheLoader},
   data() {
     return {
       isloading: true,
       langCode:"en",
+    categoryname:"",
+relatedcategory:[],
+showingcat:"",
     };
+
   },
   mounted() {
     setTimeout(() => (this.isloading = false), 1000);
     var langCode = localStorage.getItem("lang");
-
+    var name = this.$route.params.name;
+    this.categoryname = name;
+    var id = this.$route.params.id;
+    this.id = id;
+    if(id){
+    axios
+    .get(import.meta.env.VITE_API_URL + "/api/mobile/product/relatedcategories/" + id)
+    .then((response) => {
+      this.relatedcategory = response.data.data;
+      this.showingcat = this.relatedcategory.length;
+        
+    })
+    }
   },
 };
 </script>

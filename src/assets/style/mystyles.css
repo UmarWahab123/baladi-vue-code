@@ -109,6 +109,28 @@ ol.flex-control-thumbs .owl-item {
     margin-right: 448px !important;
     margin-left: auto !important;
 }
+.rtl .order-tracking-style{
+    font-size: large;
+}
+.rtl .about-us-style{
+    font-size: large;
+    margin-right: 22px;
+}
+.rtl .header-nav{
+    margin-right: 14px;
+}
+.order-tracking-style{
+    font-size: unset;
+}
+.about-us-style{
+    font-size: unset;
+}
+.rtl .column.align-center.left{
+    margin-right: -31px;
+}
+.rtl .column.align-center.right.header-aligment-setup{
+    margin-left: -50px;
+}
 .custom-file-upload{
     background: #f7f7f7;
     border-radius: 5px;

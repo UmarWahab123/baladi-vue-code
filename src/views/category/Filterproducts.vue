@@ -1761,7 +1761,6 @@ export default {
     var id = this.$route.params.id;
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
-    // alert(id);
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/categoryproducts/" +

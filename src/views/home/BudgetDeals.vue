@@ -274,7 +274,7 @@
                                 ajax_add_to_cart
                               "
                               @click="addtoCart(item,indextr)"
-                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">Add to cart</span>   
+                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
                               <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
                                 <span class="visually-hidden">Loading...</span>
                             </div> 
@@ -288,7 +288,7 @@
                                     '/cart'"
                                   class="added_to_cart wc-forward"
                                   title="View cart"
-                                  >View cart</router-link
+                                  >{{$t('Viewcart')}}</router-link
                                 >
                           </div>
 

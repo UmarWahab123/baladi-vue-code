@@ -231,40 +231,48 @@
                           ></span
                         ></ins
                       ></span
-                    ><a
-                      href="javascript:void(0)"
-                      data-quantity="1"
-                      class="
-                        button
-                        product_type_simple
-                        add_to_cart_button
-                        ajax_add_to_cart
-                      "
-                        @click="addtoCart(item,indextr)"
-                      ><i class="klbth-icon-shop-1"></i> Add to cart</a
-                    >
-                    <a
-                      v-if="item?.check"
-                      href="javascript:void(0)"
-                      class="added_to_cart wc-forward"
-                      title="View cart"
-                      >View cart</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="product-footer">
-                <div class="product-footer-details">
-                  <ul>
-                    <li class="SpecHighlights-list-label">
-                      Screen Size 10.9 in
-                    </li>
-                    <li>Operating System Apple iOS</li>
-                    <li>Product Length 9.74 in</li>
-                  </ul>
-                  &nbsp;
-                </div>
-              </div>
+          <div class="product-footer">
+                          <div class="product-footer-buttons">
+                            <a
+                              data-quantity="1"
+                              class="
+                                button
+                                product_type_simple
+                                add_to_cart_button
+                                ajax_add_to_cart
+                              "
+                              @click="addtoCart(item,indextr)"
+                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
+                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div> 
+                              </a
+                            >  
+                             <router-link
+                                  v-if="item?.check"
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/cart'"
+                                  class="added_to_cart wc-forward"
+                                  title="View cart"
+                                  >{{$t('Viewcart')}}</router-link
+                                >
+                          </div>
+
+                          <!-- product-footer-buttons -->
+                          <div class="product-footer-details d-none">
+                            <ul>
+                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
+                             
+                            </ul>
+                            &nbsp;
+                          </div>
+                        </div>
             </div>
             <div
               class="product-content-fade"
@@ -1569,6 +1577,8 @@ export default {
       sub_products: [],
       wishlist: [],
       langCode: "en",
+    isText:true,
+    isSpinner:false,
     };
   },
   computed: {
@@ -1614,7 +1624,15 @@ export default {
     addtoCart(item,index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
+       this.isText = false;
+       this.isSpinner=true;
+       if(this.smartphone[index]){
+       setTimeout(()=>{
+      this.isText = true;
       this.smartphone[index].check = true;
+      this.isSpinner=false;
+       } , 1000); 
+      }
 
     },
     clickmodal(event) {

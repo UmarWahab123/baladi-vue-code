@@ -25,7 +25,7 @@ const routes = [{
     },
     {
         name: "category",
-        path: "/" + langCode + "/category/:id?",
+        path: "/" + langCode + "/category/:name?/:id?",
         component: () =>
             import ("@/views/category/Index.vue"),
     },

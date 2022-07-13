@@ -266,19 +266,17 @@ export default {
     },
     relatedcategory: [],
     id:"",
+
   }),
   mounted() {
-    
     var langCode = localStorage.getItem("lang");
     var id = this.$route.params.id;
     this.id = id;
-    // alert(id);
     if(id){
     axios
     .get(import.meta.env.VITE_API_URL + "/api/mobile/product/relatedcategories/" + id)
     .then((response) => {
       this.relatedcategory = response.data.data;
-      // console.log('relatedproduct',this.results);
         
     })
     .catch((error) => {});

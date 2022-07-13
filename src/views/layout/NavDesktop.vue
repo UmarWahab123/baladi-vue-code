@@ -15,7 +15,7 @@
                   "
                 >
                   <router-link
-                    class="nav-link"
+                    class="nav-link about-us-style"
                     :to="'/' + langCode + '/aboutus'"
                     >{{ $t("about_us") }}
                   </router-link>
@@ -86,7 +86,7 @@
                     menu-item-object-page menu-item-2233
                   "
                 >
-                  <router-link :to="'/' + langCode + '/order-tracking'"
+                  <router-link class="order-tracking-style" :to="'/' + langCode + '/order-tracking'"
                     >{{ $t("orders_tracking") }}
                   </router-link>
                 </li>
@@ -131,6 +131,7 @@
           <div class="column align-center left">
             <div class="site-brand">
               <router-link
+               v-if="langCode=='en'"
                 :to="'/' + langCode"
                 title="Machic – Electronics Store eCommerce Theme"
               >
@@ -139,12 +140,21 @@
                   alt="Machic2 – Electronics Store eCommerce Theme"
                 />
               </router-link>
+               <router-link
+                v-if="langCode=='ar'" :to="'/' + langCode"
+                title="Machic – Electronics Store eCommerce Theme"
+              >
+                <img
+                  src="http://staging.baladiexpress.com/frontend/src/img/logo-arabic.png"
+                  alt="Machic2 – Electronics Store eCommerce Theme"
+                />
+              </router-link>
             </div>
             <!-- site-brand -->
           </div>
           <!-- column -->
 
-          <div class="column align-center right">
+          <div class="column align-center right header-aligment-setup">
             <div class="header-form site-search">
               <div
                 class="
@@ -267,9 +277,9 @@
                         ><span class="woocommerce-Price-amount amount">
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >{{
-                              searchItem?.uom_products[0]?.previous_price
+                              searchItem?.uom_products[0]?.previous_price 
                             }}</bdi
                           ></span
                         ></del
@@ -278,7 +288,7 @@
                         ><span class="woocommerce-Price-amount amount">
                           <bdi
                             ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                              >QAR </span
                             >{{ searchItem.variant_base_price }}</bdi
                           ></span
                         ></ins
@@ -360,7 +370,7 @@
               <!-- header-addons-text -->
             </div>
             <!-- header-addons -->
-            <div class="header-addons cart-button custom-margin-style">
+            <div v-if="userInfo.name != null" class="header-addons cart-button custom-margin-style">
               <router-link :to="'/' + langCode + '/cart'">
                 <div class="header-addons-icon heart-style-custom">
                   <i class="far fa-bell"></i>
@@ -737,9 +747,9 @@
               <!-- cart-dropdown -->
             </div>
 
-            <div class="header-addons wishlist-button">
+            <div  v-if="userInfo.name != null" class="header-addons wishlist-button">
               <div class="header-addons-icon heart-style-custom">
-                <router-link :to="'/' + langCode + '/wishlist'"
+                <router-link :to="'/' + langCode + '/customerwishlist'"
                   ><i class="klbth-icon-heart"></i
                 ></router-link>
                 <div class="button-count">
@@ -1047,7 +1057,7 @@
                       v-for="(item, indextr) in topcategory"
                     >
                       <router-link
-                        :to="'/' + langCode + '/category/' + item?.id"
+                        :to="'/' + langCode + '/category/'+ item?.name +'/' + item?.id"
                         >{{ item.name }}</router-link
                       >
                     </li>
@@ -1373,10 +1383,12 @@ export default {
     topcategory: [],
     brands: [],
     isOpen: false,
+    userInfo: {},
   }),
   mounted() {
     if (localStorage.userInfo != null) {
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      this.userInfo = userInfo;
       this.guestCheck = false;
       this.loginCheck = true;
 
