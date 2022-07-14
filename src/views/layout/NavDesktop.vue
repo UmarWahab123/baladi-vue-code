@@ -711,6 +711,7 @@
                           aria-controls="swiper-wrapper-20bf436108c0df10df"
                           aria-disabled="true"
                           @click="down"
+
                         ></div>
                         <div
                           class="swiper-button-next"
@@ -1191,7 +1192,7 @@
                   "
                 >
                   <router-link :to="'/' + langCode + '/category/'">
-                    <i class="klbth-icon-shopping-bag-alt"></i> Personal Care
+                   {{$t('FeaturedProducts')}}
                   </router-link>
                 </li>
                 <li

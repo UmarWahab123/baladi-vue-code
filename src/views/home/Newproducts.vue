@@ -120,7 +120,7 @@
                       <div class="banner-content">
                         <div class="banner-content-wrapper">
                           <h6 class="entry-subtitle style-2">{{$t('Super_discount')}}</h6>
-                          <h3 class="entry-title">{{$t('New_phone')}}</h3>
+                          <h3 class="entry-title">Fresh Fruits and Vegetables</h3>
                           <div class="entry-description">
                             <p>{{$t('miss_the_last_opportunity')}}</p>
                           </div>
@@ -133,7 +133,7 @@
                       </div>
                       <div class="banner-image">
                         <img
-                          src="https://klbtheme.com/machic/wp-content/uploads/2021/09/banner-3.jpg"
+                          src="http://staging.baladiexpress.com/frontend/src/img/frame.png"
                           alt="banner"
                         />
                       </div>
@@ -466,9 +466,13 @@
                                 <h6 class="entry-subtitle style-2">
                                  {{$t('Weekend_discount')}}
                                 </h6>
-                                <h3 class="entry-title">{{$t('Home_speaker')}}</h3>
+                                <h3 class="entry-title">Meat and Poultry</h3>
                                 <div class="entry-description">
-                                  <p>{{$t('miss_the_last_opportunity')}}</p>
+                               <br>
+                               <br>
+                               <br>
+                               <br>
+
                                 </div>
                                 <div class="entry-button">
                                  <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
@@ -479,7 +483,7 @@
                             </div>
                             <div class="banner-image">
                               <img
-                                src="https://klbtheme.com/machic/wp-content/plugins/machic-core/elementor/images/banner-box.jpg"
+                                src="http://staging.baladiexpress.com/frontend/src/img/poltry-440.png"
                                 alt="banner"
                               />
                             </div>
@@ -526,9 +530,12 @@
                                 <h6 class="entry-subtitle style-2">
                                   {{$t('Weekend_discount')}}
                                 </h6>
-                                <h3 class="entry-title">{{$t('New_smartphones')}}</h3>
+                                <h3 class="entry-title">Bakery</h3>
                                 <div class="entry-description">
-                                  <p>{{$t('miss_the_last_opportunity')}}</p>
+                                  <br>
+                                  <br>
+                                  <br>
+
                                 </div>
                                 <div class="entry-button">
                                  <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
@@ -539,7 +546,7 @@
                             </div>
                             <div class="banner-image">
                               <img
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/banner-2.jpg"
+                                src="http://staging.baladiexpress.com/frontend/src/img/bakery-440.png"
                                 alt="banner"
                               />
                             </div>
@@ -783,8 +790,8 @@
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
                       <div class="banner-content-wrapper set-banner-text-alignment">
-                        <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
-                        <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
+                        <h6 class="entry-subtitle style-2 text-white">{{$t('Weekend_discount')}}</h6>
+                        <h3 class="entry-title">Fish & Sea Food</h3>
                         <div class="entry-description">
                           <p>{{$t('miss_the_last_opportunity')}}</p>
                         </div>
@@ -797,7 +804,7 @@
                     </div>
                     <div class="banner-image">
                       <img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/banner-6.jpg"
+                        src="http://staging.baladiexpress.com/frontend/src/img/frozan.png"
                         alt="banner"
                       />
                     </div>

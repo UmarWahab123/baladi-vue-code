@@ -140,18 +140,15 @@
                           >
                             <div class="banner-content">
                               <div class="banner-content-wrapper">
-                                <h6 class="entry-subtitle style-3">
+                                <h6 class="entry-subtitle style-3 d-none">
                                   {{$t('Weekend_discount')}}2
                                 </h6>
                                 <h3 class="entry-title">
                                   {{ item?.heading }}
-                                  <strong> {{ item?.subheading }}</strong>
+                                  <strong> {{ item?.sub_heading }}</strong>
                                 </h3>
                                 <div class="entry-description">
-                                  <p>
-                                   {{$t('Last_call_for_up_to')}}
-                                    <strong>%20</strong>{{$t('off')}}
-                                  </p>
+                                    {{item?.description}}
                                 </div>
                                 <div class="entry-button">
                           <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
@@ -162,7 +159,7 @@
                             </div>
                             <div class="banner-image">
                               <img class="testslider"
-                                src="http://staging.baladiexpress.com/storage/images/sliders/1655877281_grocery slider.png"
+                                :src="url + item.image_url"
                                 alt="Sample 2"
                               />
                             </div>
@@ -195,11 +192,13 @@ export default defineComponent({
 
   }),
   mounted() {
+    var langCode = localStorage.getItem("lang");
     axios
-      .get(import.meta.env.VITE_API_URL + "/api/web/home/mainslider")
+      .get("http://baladi-v1.bteamwebs.com/api/web/sliders?slider_name=main-slider&locale=" +
+          langCode)
       .then((response) => {
-        this.results = response.data.data;
-        // console.log(this.results);
+        this.results = response.data.data.slider_slides;
+        console.log('mainslidernew',this.results);
       })
       .catch((error) => {});
   },
