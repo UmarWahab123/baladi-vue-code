@@ -6,7 +6,7 @@
         <h4 class="container newsletter_content-head">
           {{$t('our_newsletter')}}
         </h4>
-        <p class="container newsletter_content-p">
+        <p class="" style="font-size: 1rem;font-weight:500;text-align:center">
          {{$t('sign_up_to_our_newsletter')}}
         </p>
         <div class="">

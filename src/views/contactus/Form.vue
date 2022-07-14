@@ -27,9 +27,7 @@
                                     data-widget_type="machic-contact-form-7.default">
                                     <div class="elementor-widget-container">
                                         <div class="contact-form">
-                                            <h3 class="entry-title">{{$t('Get_in_Touch')}}</h3>
-                                            <p>Quisque mattis tortor eu tristique sodales. Aenean sit amet justo nec sem
-                                                vestibulum.</p>
+                                           
                                             <div role="form" class="wpcf7" id="wpcf7-f2012-p1985-o1" lang="en-US"
                                                 dir="ltr">
                                                 <div class="screen-reader-response">

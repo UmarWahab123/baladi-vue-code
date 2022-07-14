@@ -30,7 +30,7 @@
                 <div class="product-content">
                   <div class="thumbnail-wrapper">
                     <div class="product-badges">
-                      <span class="badge super">Super Price</span>
+                      <span class=" badge onsale">53%</span>
                     </div>
                     <router-link
                       :to="'/' + langCode + '/product-detail' + item.product.id"

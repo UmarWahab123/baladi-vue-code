@@ -808,6 +808,7 @@
                   class="departments-menu collapse"
                   :class="showmenu"
                 >
+
                   <li
                     class="
                       menu-item menu-item-type-taxonomy
@@ -818,7 +819,7 @@
                     "
                     :data="item"
                     :key="indextr"
-                    v-for="(item, indextr) in categories?.slice(0, 11)"
+                    v-for="(item, indextr) in categories?.slice(0, 10)"
                   >
                     <a href="#">
                       <div class="menu-icon">
@@ -914,18 +915,25 @@
                                                       }}</router-link
                                                     >
                                                   </li>
+
                                                 </ul>
                                               </li>
+
                                             </div>
                                           </div>
                                         </ul>
+
                                       </li>
+
                                     </ul>
                                   </nav>
+
                                 </li>
+
                               </ul>
                             </li>
-                          </div>
+
+                          </div> 
                           <div class="col" style="display: none">Column</div>
                           <div class="col" style="display: none">
                             <li
@@ -1027,6 +1035,20 @@
                       </div>
                     </ul>
                   </li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat has-image column-1">
+                   <router-link
+                                                      :to="
+                                                        '/' +
+                                                        langCode +
+                                                        '/all_categories/' 
+                                                      "
+                                                      >
+
+                                            <div class="menu-icon"><div class="menu-icon"><i class="text-secondary"></i></div>
+                                            </div>
+                                            More Categories
+                                        </router-link>
+                                    </li>
                 </ul>
               </div>
               <!-- site-departments-wrapper -->
@@ -1047,6 +1069,7 @@
                   </router-link>
 
                   <ul class="sub-menu">
+                    
                     <li
                       class="
                         menu-item menu-item-type-custom menu-item-object-custom
@@ -1084,6 +1107,7 @@
                       "
                     >
                       <ul class="sub-menu">
+
                         <li
                           class="
                             menu-item

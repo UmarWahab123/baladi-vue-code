@@ -41,11 +41,11 @@
                                     data-id="52f9fd2" data-element_type="widget"
                                     data-widget_type="machic-address-box.default">
                                     <div class="elementor-widget-container">
-                                        <div class="address-detail"><span class="country">United States</span>
-                                            <h5 class="address-title">United States Office</h5>
-                                            <p class="address">205 Middle Road, 2nd Floor, New York</p>
-                                            <p class="phone"><a href="tel:+1 1234 567 88">+1 1234 567 88</a></p>
-                                            <p class="email"><a href="mailto:info@example.com">info@example.com</a></p>
+                                        <div class="address-detail"><span class="country">Souq AL-Baladi</span>
+                                            <h5 class="address-title">Wholesale Market</h5>
+                                            <p class="address">ZONE:56,STREET NO:570, BUILDING NO:141, Wholesale Market St, Doha, Qatar</p>
+                                            <p class="phone"><a href="tel:97444447488">97444447488</a></p>
+                                            <p class="email"><a href="mailto:info@baladiexpress.com">info@baladiexpress.com</a></p>
                                         </div><!-- address-detail -->
                                     </div>
                                 </div>
@@ -58,12 +58,11 @@
                                     data-id="4e7afea" data-element_type="widget"
                                     data-widget_type="machic-address-box.default">
                                     <div class="elementor-widget-container">
-                                        <div class="address-detail"><span class="country">United Kingdom</span>
-                                            <h5 class="address-title">United Kingdom Office</h5>
-                                            <p class="address">79 Manor Way, 2nd Floor, Great Fransham</p>
-                                            <p class="phone"><a href="tel:+49 1234 567 88">+49 1234 567 88</a></p>
-                                            <p class="email"><a
-                                                    href="mailto:contact@example.com">contact@example.com</a></p>
+                                        <div class="address-detail"><span class="country">Souq AL-Baladi</span>
+                                            <h5 class="address-title">Qatar complex</h5>
+                                            <p class="address">Qatar complex al markhiya halool street</p>
+                                            <p class="phone"><a href="tel:97444446434">97444446434</a></p>
+                                            <p class="email"><a href="mailto:info@baladiexpress.com">info@baladiexpress.com</a></p>
                                         </div><!-- address-detail -->
                                     </div>
                                 </div>
@@ -76,11 +75,11 @@
                                     data-id="b7bb014" data-element_type="widget"
                                     data-widget_type="machic-address-box.default">
                                     <div class="elementor-widget-container">
-                                        <div class="address-detail"><span class="country">Germany</span>
-                                            <h5 class="address-title">Germany Office</h5>
-                                            <p class="address">Holstenwall 86, Sachsen-Anhalt, Zschornewitz</p>
-                                            <p class="phone"><a href="tel:+44 1234 567 88">+44 1234 567 88</a></p>
-                                            <p class="email"><a href="mailto:info@example.com">info@example.com</a></p>
+                                        <div class="address-detail"><span class="country">Souq AL-Baladi</span>
+                                            <h5 class="address-title">Abu Hamour</h5>
+                                            <p class="address">Zone 58, Street 819, Abu Hamour, Doha</p>
+                                            <p class="phone"><a href="tel:5090222288">50902222</a></p>
+                                           <p class="email"><a href="mailto:info@baladiexpress.com">info@baladiexpress.com</a></p>
                                         </div><!-- address-detail -->
                                     </div>
                                 </div>
