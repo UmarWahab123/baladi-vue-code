@@ -148,7 +148,10 @@
                                   <strong> {{ item?.sub_heading }}</strong>
                                 </h3>
                                 <div class="entry-description">
-                                    {{item?.description}}
+                               <p><span
+                          v-html="item?.description"
+                        ></span></p>
+                                  
                                 </div>
                                 <div class="entry-button">
                           <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"

@@ -541,7 +541,9 @@ button:not(:disabled) {
   cursor: pointer;
   border: none;
 }
-
+.splide__arrows {
+  display: none;
+}
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;

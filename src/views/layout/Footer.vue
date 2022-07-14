@@ -85,9 +85,27 @@
             <div class="site-brand"><router-link
                 :to="'/' + langCode"
                 title="Machic – Electronics Store eCommerce Theme"
+                v-if="langCode=='en'"
               >
               <img src="http://english-template.bteamwebs.com/src/img/logo-dark.png" alt="Machic2 – Electronics Store eCommerce Theme"></router-link>
-              </div><!-- site-brand --></div>
+              <router-link
+                v-if="langCode=='ar'"
+                :to="'/' + langCode"
+                title="Machic – Electronics Store eCommerce Theme"
+              >
+              <img src="http://staging.baladiexpress.com/frontend/src/img/logo-arabic.png" alt="Machic2 – Electronics Store eCommerce Theme"></router-link>
+              </div><!-- site-brand -->
+              </div>
+              <div class="menu-make-money-with-us-container py-2">
+              
+                            <p class="" style="font-size: 0.8125rem;color:#818ea0 ;">
+                                {{$t('footertext')}}
+                            </p>
+
+                            <strong class="text-dark"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; <span class="h6 fw-bold">50902222</span></strong>
+
+
+                        </div>
             <div class="social-share site-social colored">
               <ul class="social-container">
                 <li>
@@ -373,8 +391,7 @@
             <div class="footer-bottom">
               <div class="site-copyright">
                 <p>
-                  Copyright 2022 © Baladi <strong>Express</strong> All Rights
-                  Reserved.
+                  {{$t('copyrighttext')}} <strong>{{$t('express')}}</strong> {{$t('reservetext')}}
                 </p>
               </div>
             </div>
