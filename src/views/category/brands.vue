@@ -1,6 +1,19 @@
 <template>
   <Header />
   <div class="container">
+           <div class="shop-page-header">
+    <nav class="woocommerce-breadcrumb">
+          <ul>
+                <li><router-link :to="'/' + langCode"
+                      >Home</router-link></li>
+                <li>
+                   <router-link :to="'/' + langCode + '/brands'"
+                      >{{$t('brands')}}</router-link
+                    >
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div class="before-shop-loop" data-select2-id="19">
       <div class="row sidebar-left" data-select2-id="18">
         <div class="col col-12 col-lg-9 content-column" data-select2-id="17">
@@ -59,7 +72,6 @@
 
             <!-- For perpage option-->
             <div class="sorting-product hide-mobile" data-select2-id="15">
-              <span>{{$t('Show')}}:</span>
               <form
                 class="woocommerce-ordering product-filter products-per-page"
                 method="get"

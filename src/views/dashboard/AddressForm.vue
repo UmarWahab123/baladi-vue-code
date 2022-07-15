@@ -28,9 +28,6 @@
                               autocomplete="given-name"
                           /></span>
                         </p>
-                        
-                       
-                     
                         <p
                           class="form-row form-row-last validate-required"
                           id="shipping_last_name_field"

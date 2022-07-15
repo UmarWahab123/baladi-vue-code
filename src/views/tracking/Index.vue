@@ -62,7 +62,7 @@
                                 track_order
                               "
                             >
-                              <p class="form-row form-row-first">
+                              <p class="form-row form-row-first mb-0">
                                 <label for="orderid">{{$t('Order_ID')}}</label>
                                 <input
                                   class="input-text"
@@ -73,10 +73,19 @@
                                   placeholder="Found in your order confirmation email."
                                 />
                               </p>
-
-                              <div class="clear"></div>
-
-                              <p class="form-row">
+                              <small
+                                  v-if="emptymessage"
+                                  class="text-danger"
+                                >
+                                Please enter your order id
+                              </small>
+                              <small
+                                  v-if="ordernotfound"
+                                  class="text-danger"
+                                >
+                                Order Id does't exist.
+                              </small>
+                              <p class="form-row mt-10">
                                 <a
                                   href="javascript:void(0)"
                                   @click="trackOrder"
@@ -533,19 +542,20 @@ export default {
       moment: moment,
       trackingdetailstyle:"",
       ordernotfound: false,
-
+      emptymessage: false,
     };
   },
   mounted() {
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
-    
   },
   methods: {
     trackOrder() {
       if (this.trakingId == "") {
-        alert("Please enter order id");
+        this.emptymessage = true;
         return;
+      }else{
+          this.emptymessage = false;
       }
     var id = this.trakingId;
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -565,23 +575,7 @@ export default {
 
         this.results = response.data.data[0];
         if(response.data.data == ""){
-           const Toast = this.$swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener("mouseenter", Swal.stopTimer);
-              toast.addEventListener("mouseleave", Swal.resumeTimer);
-            },
-          });
-
-          Toast.fire({
-            icon: "error",
-            title: 'Order Not Found',
-          });
-
+          this.ordernotfound = true;
         }else{
           this.ordernotfound = false;
         }

@@ -1037,18 +1037,17 @@
                   </li>
                   <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat has-image column-1">
                    <router-link
-                                                      :to="
-                                                        '/' +
-                                                        langCode +
-                                                        '/all_categories/' 
-                                                      "
-                                                      >
-
-                                            <div class="menu-icon"><div class="menu-icon"><i class="text-secondary"></i></div>
-                                            </div>
-                                            More Categories
-                                        </router-link>
-                                    </li>
+                      :to="
+                        '/' +
+                        langCode +
+                        '/all_categories' 
+                      "
+                      >
+                      <div class="menu-icon"><div class="menu-icon"><i class="text-secondary"></i></div>
+                      </div>
+                      More Categories
+                  </router-link>
+              </li>
                 </ul>
               </div>
               <!-- site-departments-wrapper -->

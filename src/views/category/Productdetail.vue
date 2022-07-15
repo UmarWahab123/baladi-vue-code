@@ -168,7 +168,7 @@
                     <div class="product-price">
                       <span class="price"
                         ><del
-                          ><span class="woocommerce-Price-amount amount"
+                          ><span class="woocommerce-Price-amount amount d-none"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
                                 >{{ $t("QAR") }} </span
@@ -181,7 +181,7 @@
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
                                 >{{ $t("QAR") }} </span
-                              >{{ sub_products.regular_price }}</bdi
+                              > {{ sub_products.regular_price }}</bdi
                             ></span
                           ></ins
                         ></span
@@ -392,7 +392,7 @@
                             ><i class="klbth-icon-twitter"></i
                           ></a>
                         </li>
-                        <li>
+                        <li class="d-none">
                           <a
                             href="https://wa.me/?text=https%3A%2F%2Fklbtheme.com%2FBaladi%2Fproduct%2Fapple-10-9-inch-ipad-air-wi-fi-cellular-64gb%2F"
                             class="whatsapp"
@@ -405,7 +405,7 @@
                     <div
                       class="
                         product-extra-detail
-                        woocommerce-product-details__short-description
+                        woocommerce-product-details__short-description d-none
                       "
                     >
                       <!-- <ul>
@@ -1341,7 +1341,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >95.00</bdi
                             ></span
                           ></del
@@ -1350,7 +1350,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >$</span
+                                >QAR </span
                               >65.00</bdi
                             ></span
                           ></ins
@@ -2580,6 +2580,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: #585858;
+  display: none;
 }
 .actions > span {
   cursor: pointer;

@@ -1851,6 +1851,10 @@ body .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
     border-radius: var(--size-form-radius);
 }
 
+.single-product-wrapper.product.white-popup {
+    height: 600px;
+     overflow-y: auto;
+}
 body form.dgwt-wcas-search-form:before {
     font-family: "klbtheme";
     font-style: normal;

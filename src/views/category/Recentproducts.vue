@@ -198,36 +198,47 @@
                             >
                           </span></ins
                         ></span
-                      ><a
-                        href="javascript:void(0)"
-                        data-quantity="1"
-                        class="
-                          button
-                          product_type_simple
-                          add_to_cart_button
-                          ajax_add_to_cart
-                        "
-                        data-product_id="521"
-                        data-product_sku="BE45VGRT"
-                        aria-label="Add “Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB” to your cart"
-                        rel="nofollow"
-                        ><i class="klbth-icon-shop-1"></i> Add to cart</a
                       >
                     </div>
                   </div>
                 </div>
-                <div class="product-footer">
-                  <div class="product-footer-details">
-                    <ul>
-                      <li class="SpecHighlights-list-label">
-                        Screen Size 10.9 in
-                      </li>
-                      <li>Operating System Apple iOS</li>
-                      <li>Product Length 9.74 in</li>
-                    </ul>
-                    &nbsp;
-                  </div>
-                </div>
+                 <div class="product-footer">
+                          
+                          <div class="product-footer-buttons">
+                            <a
+                              data-quantity="1"
+                              class="
+                                button
+                                product_type_simple
+                                add_to_cart_button
+                                ajax_add_to_cart
+                              "
+                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
+                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div> 
+                              </a
+                            >  
+                             <router-link
+                                  v-if="item?.check"
+                                  :to="
+                                    '/' +
+                                    langCode +
+                                    '/cart'"
+                                  class="added_to_cart wc-forward"
+                                  title="View cart"
+                                  >{{$t('Viewcart')}}</router-link
+                                >
+                          </div>
+
+                          <!-- product-footer-buttons -->
+                          <div class="product-footer-details d-none">
+                            <ul>
+                             
+                            </ul>
+                            &nbsp;
+                          </div>
+                        </div>
               </div>
               <div
                 class="product-content-fade"

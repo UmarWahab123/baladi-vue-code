@@ -18,23 +18,20 @@
                   <div class="site-newsletter-form">
                     <div class="subscribe-form">
                       <!-- Mailchimp for WordPress v4.8.6 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                      <form
-                        id="mc4wp-form-1"
-                        class="mc4wp-form mc4wp-form-1852"
-                        method="post"
-                        data-id="1852"
-                        data-name="Baladi"
-                      >
                         <div class="mc4wp-form-fields d-flex">
                           <input
                             type="email"
+                            v-model="email"
                             class="subscribe-input"
                             name="EMAIL"
                             placeholder="Your email address"
                             required=""
                           />
-                          <button class="sub-btn" type="submit">{{$t('sign_up')}}</button>
+                          
+                          <button class="sub-btn" @click="subscribed" type="submit">{{$t('Subscribe')}}</button>
                         </div>
+                        <div class="mc4wp-response text-warning" v-if="emailerror" id="sub-response-msg" style="font-size:20px !important">Please type a valid email.</div>
+                        <div class="mc4wp-response text-white" v-if="validemail" id="sub-response-msg" style="font-size:20px !important">Email successfully subscribed to newsletter.</div>
                         <label style="display: none !important"
                           >{{$t('leave_this_field')}}:
                           <input
@@ -61,7 +58,6 @@
                           value="mc4wp-form-1"
                         />
                         <div class="mc4wp-response"></div>
-                      </form>
                       <!-- / Mailchimp for WordPress Plugin -->
                     </div>
                   </div>
@@ -573,6 +569,9 @@ export default {
       langCode: "en",
       url: "http://baladi-v1.bteamwebs.com/storage/",
       results: [],
+      email: "",
+      emailerror:false,
+      validemail:false,
 
     };
   },
@@ -596,6 +595,19 @@ export default {
       .catch((error) => {});
   },
   methods: {
+    subscribed() {
+    if (this.email == "") {
+      this.emailerror = true;
+    }else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)){
+       this.emailerror = true;
+      }else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)){
+       this.validemail = true;
+        this.emailerror = false;
+
+      }else{
+        this.emailerror = false;
+      }
+    },
     handleScroll: function () {
       if (this.scTimer) return;
       this.scTimer = setTimeout(() => {

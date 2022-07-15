@@ -9,7 +9,7 @@
                                 <div class="elementor-element elementor-element-71fe4e1 elementor-widget elementor-widget-image" data-id="71fe4e1" data-element_type="widget" data-widget_type="image.default">
                                     <div class="elementor-widget-container">
 
-                                        <img loading="lazy" width="auto" style="height: 35rem; object-fit: cover;" src="http://staging.baladiexpress.com/frontend/src/img/support.png" class="attachment-full size-full" alt="" sizes="(max-width: 1200px) 100vw, 1200px">
+                                        <img loading="lazy" width="auto" style="height: 34.5rem; object-fit: cover;" src="http://staging.baladiexpress.com/frontend/src/img/support.png" class="attachment-full size-full" alt="" sizes="(max-width: 1200px) 100vw, 1200px">
                                     </div>
                                 </div>
                             </div>

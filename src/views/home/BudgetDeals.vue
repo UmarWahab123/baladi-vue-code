@@ -85,29 +85,12 @@
                               <div class="product-card" 
                               >
                                 <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
+                                  <div :data="items"
+                                     :key="indextr"
+                                     v-for="(items, indextr) in item?.product?.gallery?.gallery_images" class="slidingSection">
                                     <img
                                       class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                   <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                      :src="url + items?.image_md"
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -1634,7 +1617,7 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data[0].products;
-        // console.log(this.results);
+        // console.log("budgetdealslatest",this.results);
         const productStore = useProductStore();
         productStore.BudgetDealData(this.results);
       
