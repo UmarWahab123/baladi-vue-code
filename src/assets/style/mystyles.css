@@ -141,3 +141,10 @@ ol.flex-control-thumbs .owl-item {
 }
 .tinv-wishlist table th{color:black !important;}
 .contact-form{padding: 5.1rem !important;}
+.site-offcanvas-row.site-offcanvas-header {
+    background: #fff;
+}
+.single-product-wrapper form.cart .add_to_cart_button{
+    padding-left: 0.875rem !important;
+}
+.swiper-wrapper .actions {display:none !important;}

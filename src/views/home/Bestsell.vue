@@ -26,11 +26,11 @@
               :key="indextr"
               v-for="(item, indextr) in productStore.BestSellerProducts"
             >
-              <div class="product-wrapper product-type-1">
+               <div class="product-wrapper product-type-1">
                 <div class="product-content">
                   <div class="thumbnail-wrapper">
                     <div class="product-badges">
-                      <span class="badge onsale">11%</span>
+                      <span class=" badge onsale">53%</span>
                     </div>
                     <router-link
                       :to="'/' + langCode + '/product-detail' + item.product.id"
@@ -43,93 +43,74 @@
                           <div
                             class="hover-slider-toggle-pane"
                             data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/product-15-400x400.jpg"
-                            data-hover-slider-i="1"
+                            data-hover-slider-i="37"
                             style="flex-grow: 1"
                           ></div>
                           <div
                             class="hover-slider-toggle-pane"
-                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-2-400x400.jpg"
-                            data-hover-slider-i="2"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad2-400x400.jpg"
+                            data-hover-slider-i="38"
                             style="flex-grow: 1"
                           ></div>
                           <div
                             class="hover-slider-toggle-pane"
-                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-3-400x400.jpg"
-                            data-hover-slider-i="3"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad3-400x400.jpg"
+                            data-hover-slider-i="39"
                             style="flex-grow: 1"
                           ></div>
                           <div
                             class="hover-slider-toggle-pane"
-                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air3-400x400.jpg"
-                            data-hover-slider-i="4"
-                            style="flex-grow: 1"
-                          ></div>
-                          <div
-                            class="hover-slider-toggle-pane"
-                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/air4-400x400.jpg"
-                            data-hover-slider-i="5"
+                            data-hover-slider-image="https://klbtheme.com/machic/wp-content/uploads/2021/09/ipad4-400x400.jpg"
+                            data-hover-slider-i="40"
                             style="flex-grow: 1"
                           ></div>
                         </div>
-                        <div class="hover-slider-indicator">
-                          <div
-                            data-hover-slider-i="1"
-                            class="hover-slider-indicator-dot"
-                          ></div>
-                          <div
-                            data-hover-slider-i="2"
-                            class="hover-slider-indicator-dot active"
-                          ></div>
-                          <div
-                            data-hover-slider-i="3"
-                            class="hover-slider-indicator-dot"
-                          ></div>
-                          <div
-                            data-hover-slider-i="4"
-                            class="hover-slider-indicator-dot"
-                          ></div>
-                          <div
-                            data-hover-slider-i="5"
-                            class="hover-slider-indicator-dot"
-                          ></div>
-                        </div>
-                        <div class="product-card">
-                          <div id="slidingWindow" ontouchstart="">
-                            <div class="slidingSection">
-                              <img
-                                class="img"
-                                :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                              />
-                              <div class="hover-slider-indicator">
-                                <div
-                                  data-hover-slider-i="45"
-                                  class="hover-slider-indicator-dot active"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="46"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
+                         <div class="product-card" 
+                              >
+                                <div id="slidingWindow" ontouchstart="">
+                                  <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                   <div class="slidingSection">
+                                    <img
+                                      class="img"
+                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                    />
+                                    <div class="hover-slider-indicator">
+                                      <div
+                                        data-hover-slider-i="45"
+                                        class="
+                                          hover-slider-indicator-dot
+                                          active
+                                        "
+                                      ></div>
+                                      <div
+                                        data-hover-slider-i="46"
+                                        class="hover-slider-indicator-dot"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                            <div class="slidingSection">
-                              <img
-                                :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                              />
-                              <div class="hover-slider-indicator">
-                                <div
-                                  data-hover-slider-i="45"
-                                  class="hover-slider-indicator-dot"
-                                ></div>
-                                <div
-                                  data-hover-slider-i="46"
-                                  class="hover-slider-indicator-dot active"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </router-link>
+
                     <div class="product-buttons">
                       <div
                         class="
@@ -138,29 +119,10 @@
                           tinv-wishlist
                           tinvwl-shortcode-add-to-cart
                         "
-                        data-product_id="521"
+                        data-product_id="478"
                       >
                         <div class="tinv-wishlist-clear"></div>
-                        <a
-                          :onclick="clickmodal"
-                          role="button"
-                          tabindex="0"
-                          aria-label="Add to Wishlist"
-                          class="
-                            tinvwl_add_to_wishlist_button
-                            d-none
-                            tinvwl-icon-heart tinvwl-position-after
-                          "
-                          data-tinv-wl-list="[]"
-                          data-tinv-wl-product="521"
-                          data-tinv-wl-productvariation="0"
-                          data-tinv-wl-productvariations="[0]"
-                          data-tinv-wl-producttype="simple"
-                          data-tinv-wl-action="add"
-                          ><span class="tinvwl_add_to_wishlist-text"
-                            >Add to Wishlist</span
-                          ></a
-                        >
+
                         <a
                           :onclick="clickmodal"
                           v-bind:wishlist_id="item.product.id"
@@ -174,13 +136,15 @@
                         <div class="tinv-wishlist-clear"></div>
                         <div class="tinvwl-tooltip">Add to Wishlist</div>
                       </div>
-                      <a href="#?featured=yes" class="most-comments"
+                      <a href="javascript:void(0)" class="most-comments"
                         ><img
                           src="https://klbtheme.com/machic/wp-content/themes/machic/assets/images/featured.png"
                           alt="featured" /></a
                       ><a
                         href="javascript::void(0)"
-                        class="woosc-btn woosc-btn-521"
+                        class="
+                          woosc-btn woosc-btn-521 woosc-btn-added woosc-added
+                        "
                         :onclick="clickcomparemodal"
                         data-id="521"
                         >Compare</a
@@ -219,8 +183,8 @@
                         >
                       </div>
                       <div class="count-rating">
-                        {{ item.product.review_count
-                        }}<span class="rating-text">Ratings</span>
+                        {{ item.product.review_count }}
+                        <span class="rating-text">Ratings</span>
                       </div>
                     </div>
                     <div class="product-price-cart">
@@ -249,12 +213,12 @@
                             ></span
                           ></ins
                         ></span
-                      > 
+                      >
                     </div>
                   </div>
                 </div>
-                 <div class="product-footer">
-                          <div class="product-footer-buttons">
+              <div class="product-footer">
+                  <div class="product-footer-buttons">
                             <a
                               data-quantity="1"
                               class="
@@ -290,7 +254,7 @@
                             </ul>
                             &nbsp;
                           </div>
-                        </div>
+                     </div>
               </div>
               <div
                 class="product-content-fade"

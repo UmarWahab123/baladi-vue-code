@@ -490,25 +490,7 @@
                   <h6>{{ results.short_description }}</h6>
 
                   <p>{{ results.description }}</p>
-                  <!-- <p>Key Features:</p>
-                  <ul>
-                    <li>slim body with metal cover</li>
-                    <li>
-                      latest Intel Core i5-1135G7 processor (4 cores / 8
-                      threads)
-                    </li>
-                    <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
-                    <li>NVIDIA GeForce MX350 2GB GDDR5 graphics card</li>
-                    <li>backlit keyboard, touchpad with gesture support</li>
-                  </ul> -->
-                  <!-- <p>Key Features:</p> -->
-                  <!-- <ul>
-                                    <li>slim body with metal cover</li>
-                                    <li>latest Intel Core i5-1135G7 processor (4 cores / 8 threads)</li>
-                                    <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
-                                    <li>NVIDIA GeForce MX350 2GB GDDR5 graphics card</li>
-                                    <li>backlit keyboard, touchpad with gesture support</li>
-                                </ul> -->
+                
                 </div>
                 <div
                   class="
@@ -526,63 +508,9 @@
                 >
                   <div class="specification-content">
                     <h2>{{$t('General')}}</h2>
-                    <!-- <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Alternate names</td>
-                                                <td>iPad 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brand</td>
-                                                <td>Apple</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Model</td>
-                                                <td>iPad Air Wi-Fi + Cellular</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Release date</td>
-                                                <td>September 2013</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dimensions (mm)</td>
-                                                <td>240.00 x 169.50 x 7.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Weight (g)</td>
-                                                <td>478.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Battery capacity (mAh)</td>
-                                                <td>8820</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Removable battery</td>
-                                                <td>No</td>
-                                            </tr>
-                                        </tbody>
-                                    </table> -->
+                  
                     <h2>{{$t('Display')}}</h2>
-                    <!-- <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Screen size (inches)</td>
-                                                <td>9.70</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Touchscreen</td>
-                                                <td>No</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Resolution</td>
-                                                <td>1536x2048 pixels</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pixels per inch (PPI)</td>
-                                                <td>264</td>
-                                            </tr>
-                                        </tbody>
-                                    </table> -->
+                   
                     <h2>{{$t('Hardware')}}</h2>
                     <table>
                       <tbody>
@@ -2351,6 +2279,7 @@ export default {
     },
   },
   mounted() {
+
     this.specification = "";
     this.showspecification = "";
     this.showspecification = "d-none";
@@ -2359,10 +2288,14 @@ export default {
     this.showsreviews = "d-none";
     this.description = "active";
     this.showdescription = "active show";
+
     setTimeout(() => (this.isloading = false), 1000);
     var id = this.$route.params.id;
+
     var langCode = localStorage.getItem("lang");
-    this.token = JSON.parse(localStorage.userInfo).token;
+
+    // this.token = JSON.parse(localStorage.userInfo).token;
+
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
@@ -2580,7 +2513,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: #585858;
-  display: none;
+  display:none;
 }
 .actions > span {
   cursor: pointer;

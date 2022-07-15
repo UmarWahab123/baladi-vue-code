@@ -109,10 +109,6 @@ export default {
   components: { TheLoader, Splide, SplideSlide },
   data: () => ({
     id: "",
-    specification: "",
-    description: "",
-    showdescription: "",
-    showspecification: "",
     reviews: "",
     showsreviews: "",
     results: [],
@@ -122,8 +118,6 @@ export default {
     showbigmodalstyle: "",
     showcomparemodal: "",
     showcomparemodalstyle: "",
-    isloading: true,
-    quantity: 1,
     url: "http://baladiweb.bteamwebs.com/storage/",
     formdata: {
         product_id: "",
@@ -137,63 +131,11 @@ export default {
       threestar:'' ,
       fourstar:'' ,
       fivestar:'',
-    //Index of the active image
-    activeImage: 0,
-    //Hold the timeout, so we can clear it when it is needed
-    autoSlideTimeout: null,
-    //If the timer is stopped e.g. when hovering over the carousel
-    stopSlider: false,
-    //Hold the time left until changing to the next image
-    timeLeft: 0,
-    //Hold the interval so we can clear it when needed
-    timerInterval: null,
-    //Every 10ms decrease the timeLeft
-    countdownInterval: 10,
+  
     langCode: "en",
-    sub_products: [],
-    results: {
-      name: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
-      price: 233,
-      images: [
-        {
-          photo:
-            "images/products/jacobs-kronung-instant-coffee-100-gm/760x760-1649745536648.jpg",
-        },
-      ],
-      sale_price: 233,
-    },
-    images: {
-      0: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
-      },
-      1: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
-        length: 1,
-      },
-      2: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
-      },
-    },
+   
   }),
-  computed: {
-    // currentImage gets called whenever activeImage changes
-    // and is the reason why we don't have to worry about the
-    // big image getting updated
-    currentImage() {
-      this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
-      return this.images[this.activeImage].thumb;
-    },
-    progressBar() {
-      //Calculate the width of the progressbar
-      return 100 - (this.timeLeft / this.autoSlideInterval) * 100;
-    },
-  },
+ 
 validations() {
     return {
       formdata: {
@@ -207,32 +149,7 @@ validations() {
     };
   },
   mounted() {
-    this.specification = "";
-    this.showspecification = "";
-    this.showspecification = "d-none";
-    this.reviews = "";
-    this.showsreviews = "";
-    this.showsreviews = "d-none";
-    this.description = "active";
-    this.showdescription = "active show";
-    setTimeout(() => (this.isloading = false), 1000);
-    var id = this.$route.params.id;
-    var langCode = localStorage.getItem("lang");
-    this.token = JSON.parse(localStorage.userInfo).token;
-    axios
-      .get(
-        "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-          id + '&locale='+this.langCode
-      )
-      .then((response) => {
-        this.results = response.data.data[0];
-        this.formdata.product_id = response.data.data[0].id;
-        // console.log("this results", this.results);
-        this.sub_products = response.data.data[0].uom_products[0];
-      })
-      .catch((error) => {});
-    var lang = localStorage.getItem("lang");
-    this.langCode = lang;
+  
   },
   methods: {
   async storereview() {
@@ -340,35 +257,7 @@ validations() {
       this.fivestar='active';
       this.formdata.rating = count;
    },
-    increment: function () {
-      // const input_index = event.currentTarget.getAttribute("input_Index");
-      this.quantity = this.quantity + 1;
-    },
-    decrement: function () {
-      // const input_index = event.currentTarget.getAttribute("input_Index");
-
-      this.quantity = this.quantity - 1;
-    },
-    clickdescription: function () {
-      this.specification = "";
-      this.showspecification = "";
-      this.showspecification = "d-none";
-      this.reviews = "";
-      this.showsreviews = "";
-      this.showsreviews = "d-none";
-      this.description = "active";
-      this.showdescription = "active show";
-    },
-    clickspecification: function () {
-      this.description = "";
-      this.showdescription = "";
-      this.showdescription = "d-none";
-      this.reviews = "";
-      this.showsreviews = "";
-      this.showsreviews = "d-none";
-      this.specification = "active";
-      this.showspecification = "active show";
-    },
+   
     clickreviews: function () {
       this.description = "";
       this.showdescription = "";
@@ -379,106 +268,8 @@ validations() {
       this.reviews = "active";
       this.showsreviews = "active show";
     },
-    clickmodal(index) {
-      this.showmodal = "show";
-      this.showmodalstyle = "display:block";
-    },
-    closemodal() {
-      this.showmodal = "";
-      this.showmodalstyle = "";
-    },
-    clickbigmodal(index) {
-      this.showbigmodal = "show";
-      this.showbigmodalstyle = "display:block";
-    },
-    closebigmodal() {
-      this.showbigmodal = "";
-      this.showbigmodalstyle = "";
-    },
-    clickcomparemodal(index) {
-      this.showcomparemodal = "show";
-      this.showcomparemodalstyle = "display:block";
-    },
-    closecomparemodal() {
-      this.showcomparemodal = "";
-      this.showcomparemodalstyle = "";
-    },
-    nextImage() {
-      var active = this.activeImage + 1;
-      if (active >= 3) {
-        active = 0;
-      }
-      this.activateImage(active);
-    },
-    // Go backwards on the images array
-    // or go at the last image
-    prevImage() {
-      var active = this.activeImage - 1;
-      if (active < 0) {
-        active = 3 - 1;
-      }
-      this.activateImage(active);
-    },
-    activateImage(imageIndex) {
-      this.activeImage = imageIndex;
-    },
-    //Wait until 'interval' and go to the next image;
-    startTimer(interval) {
-      if (interval && interval > 0 && !this.stopSlider) {
-        var self = this;
-        clearTimeout(this.autoSlideTimeout);
-        this.autoSlideTimeout = setTimeout(function () {
-          self.nextImage();
-          self.startTimer(self.autoSlideInterval);
-        }, interval);
-      }
-    },
-    //Stop the timer when hovering over the carousel
-    stopTimer() {
-      clearTimeout(this.autoSlideTimeout);
-      this.stopSlider = true;
-      clearInterval(this.timerInterval);
-    },
-    //Restart the timer(with 'timeLeft') when leaving from the carousel
-    restartTimer() {
-      this.stopSlider = false;
-      clearInterval(this.timerInterval);
-      this.startCountdown();
-      this.startTimer(this.timeLeft);
-    },
-    //Start countdown from 'autoSlideInterval' to 0
-    startCountdown() {
-      if (!this.showProgressBar) return;
-      var self = this;
-      this.timerInterval = setInterval(function () {
-        self.timeLeft -= self.countdownInterval;
-        if (self.timeLeft <= 0) {
-          self.timeLeft = self.autoSlideInterval;
-        }
-      }, this.countdownInterval);
-    },
+  
   },
-  created() {
-    //Check if startingImage prop was given and if the index is inside the images array bounds
-    if (
-      this.startingImage &&
-      this.startingImage >= 0 &&
-      this.startingImage < this.images.length
-    ) {
-      this.activeImage = this.startingImage;
-    }
-    //Check if autoSlideInterval prop was given and if it is a positive number
-    if (
-      this.autoSlideInterval &&
-      this.autoSlideInterval > this.countdownInterval
-    ) {
-      //Start the timer to go to the next image
-      this.startTimer(this.autoSlideInterval);
-      this.timeLeft = this.autoSlideInterval;
-      //Start countdown to show the progressbar
-      this.startCountdown();
-    }
-  },
-  props: ["startingImage", "autoSlideInterval", "showProgressBar"],
+
 };
 </script>
