@@ -1,8 +1,6 @@
 <template>
   <!-- 3rd section  -->
-               
-  
-  
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -17,8 +15,7 @@
       </div>
     </div>
   </div>
-  
-  
+
   <section
     class="
       elementor-section
@@ -58,7 +55,6 @@
           >
             <div class="elementor-widget-container">
               <div class="site-module products-module">
-               
                 <div class="module-wrapper">
                   <div class="products column-5 mobile-2 total-5">
                     <div
@@ -82,12 +78,15 @@
                                 item.product.slug
                               "
                             >
-                              <div class="product-card" 
-                              >
+                              <div class="product-card">
                                 <div id="slidingWindow" ontouchstart="">
-                                  <div :data="items"
-                                     :key="indextr"
-                                     v-for="(items, indextr) in item?.product?.gallery?.gallery_images" class="slidingSection">
+                                  <div
+                                    :data="items"
+                                    :key="indextr"
+                                    v-for="(items, indextr) in item?.product
+                                      ?.gallery?.gallery_images"
+                                    class="slidingSection"
+                                  >
                                     <img
                                       class="img"
                                       :src="url + items?.image_md"
@@ -244,9 +243,8 @@
                           <!-- content-wrapper -->
                         </div>
                         <!-- product-content -->
-                      
+
                         <div class="product-footer">
-                          
                           <div class="product-footer-buttons">
                             <a
                               data-quantity="1"
@@ -256,30 +254,46 @@
                                 add_to_cart_button
                                 ajax_add_to_cart
                               "
-                              @click="addtoCart(item,indextr)"
-                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
-                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
+                              @click="addtoCart(item, indextr)"
+                              ><i
+                                class="klbth-icon-shop-1"
+                                style="display: block !important"
+                              ></i
+                              ><span
+                                v-if="isText"
+                                id="add-cart-text"
+                                class="add-cart-text-238"
+                                >{{ $t("add_to_cart") }}</span
+                              >
+                              <div
+                                v-if="isSpinner"
+                                class="
+                                  spinner-border
+                                  text-white
+                                  cart-spinner-247
+                                  text-center
+                                  spinner-border-sm
+                                "
+                                role="status"
+                              >
                                 <span class="visually-hidden">Loading...</span>
-                            </div> 
-                              </a
-                            >  
-                             <router-link
-                                  v-if="item?.check"
-                                  :to="
-                                    '/' +
-                                    langCode +
-                                    '/cart'"
-                                  class="added_to_cart wc-forward"
-                                  title="View cart"
-                                  >{{$t('Viewcart')}}</router-link
-                                >
+                              </div>
+                            </a>
+                            <router-link
+                              v-if="item?.check"
+                              :to="'/' + langCode + '/cart'"
+                              class="added_to_cart wc-forward"
+                              title="View cart"
+                              >{{ $t("Viewcart") }}</router-link
+                            >
                           </div>
 
                           <!-- product-footer-buttons -->
                           <div class="product-footer-details d-none">
                             <ul>
-                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
-                             
+                              <li class="SpecHighlights-list-label">
+                                {{ item.product.lg_description }}
+                              </li>
                             </ul>
                             &nbsp;
                           </div>
@@ -289,7 +303,7 @@
                       <!-- product-wrapper -->
                       <div
                         class="product-content-fade"
-                        style="margin-bottom: -177px"
+                        style="margin-bottom: -59px"
                       ></div>
                     </div>
                   </div>
@@ -1574,7 +1588,7 @@ export default {
     //Every 10ms decrease the timeLeft
     countdownInterval: 10,
     langCode: "en",
-     images: {
+    images: {
       0: {
         thumb:
           "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
@@ -1594,8 +1608,8 @@ export default {
     singleProduct: [],
     sub_products: [],
     token: "",
-    isText:true,
-    isSpinner:false,
+    isText: true,
+    isSpinner: false,
   }),
   computed: {
     currentImage() {
@@ -1620,7 +1634,6 @@ export default {
         // console.log("budgetdealslatest",this.results);
         const productStore = useProductStore();
         productStore.BudgetDealData(this.results);
-      
       })
       .catch((error) => {});
 
@@ -1633,45 +1646,45 @@ export default {
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
 
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  document.querySelector(".days").innerHTML = days;
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  document.querySelector(".hours").innerHTML = hours;
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  document.querySelector(".minutes").innerHTML = minutes;
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.querySelector(".second").innerHTML = seconds;
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.querySelector(".days").innerHTML = days;
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      document.querySelector(".hours").innerHTML = hours;
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.querySelector(".minutes").innerHTML = minutes;
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.querySelector(".second").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   },
   methods: {
-    addtoCart(item,index) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
-     this.isText = false;
-     this.isSpinner=true;
-      if(this.results[index]){
-        setTimeout(()=>{
+      this.isText = false;
+      this.isSpinner = true;
+      if (this.results[index]) {
+        setTimeout(() => {
           this.isText = true;
-      this.results[index].check = true;
+          this.results[index].check = true;
 
-      this.isSpinner=false;
-       } , 1000); 
+          this.isSpinner = false;
+        }, 1000);
       }
       // var cartspiner = document.getElementByClass("art-spinner-24");
-
-
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");

@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="site-module list-products">
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-   <section
+  <section
     class="
       elementor-section
       elementor-top-section
@@ -35,7 +35,8 @@
           elementor-top-column
           elementor-element
           elementor-element-b922ff9
-          elementor-hidden-tablet d-none
+          elementor-hidden-tablet
+          d-none
         "
         data-id="b922ff9"
         data-element_type="column"
@@ -117,8 +118,7 @@
                                 >Add to Wishlist</span
                               ></a
                             >
-                            <a
-                              href="javascript:void(0)"
+                            <a href="javascript:void(0)"
                               ><i class="fa fa-heart" aria-hidden="true"></i
                               ><span class="tinvwl_add_to_wishlist-text"
                                 >Add to Wishlist</span
@@ -183,7 +183,7 @@
                             ><span class="woocommerce-Price-amount amount"
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >{{$t('QAR')}} </span
+                                  >{{ $t("QAR") }} </span
                                 >{{
                                   specialoffer?.product?.uom_products[0]
                                     ?.previous_price
@@ -195,7 +195,7 @@
                             ><span class="woocommerce-Price-amount amount"
                               ><bdi
                                 ><span class="woocommerce-Price-currencySymbol"
-                                  >{{$t('QAR')}} </span
+                                  >{{ $t("QAR") }} </span
                                 >{{
                                   specialoffer?.product?.uom_products[0]
                                     ?.regular_price
@@ -280,7 +280,11 @@
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                     :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                      :src="
+                                        url +
+                                        item?.product?.gallery
+                                          ?.gallery_images[0].image_md
+                                      "
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -298,7 +302,11 @@
                                   </div>
                                   <div class="slidingSection">
                                     <img
-                                       :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                      :src="
+                                        url +
+                                        item?.product?.gallery
+                                          ?.gallery_images[0].image_md
+                                      "
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -425,7 +433,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.previous_price
@@ -440,7 +448,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.regular_price
@@ -449,36 +457,30 @@
                                   ></ins
                                 ></span
                               >
-                 
-                             </div>
                             </div>
                           </div>
+                        </div>
                         <div class="product-footer">
                           <div class="product-footer-buttons">
-                         
-                              <a
-                                href="javascript:void(0)"
-                                data-quantity="1"
-                                class="
-                                  button
-                                  product_type_simple
-                                  add_to_cart_button
-                                  ajax_add_to_cart
-                                "
-                                @click="addtoCart(item,indextr)"
-                                ><i class="klbth-icon-shop-1"></i> Add to
-                                cart</a
-                              >
-                                  <router-link
-                                  v-if="item?.check"
-                                  :to="
-                                    '/' +
-                                    langCode +
-                                    '/cart'"
-                                  class="added_to_cart wc-forward"
-                                  title="View cart"
-                                  >View cart</router-link
-                                >
+                            <a
+                              href="javascript:void(0)"
+                              data-quantity="1"
+                              class="
+                                button
+                                product_type_simple
+                                add_to_cart_button
+                                ajax_add_to_cart
+                              "
+                              @click="addtoCart(item, indextr)"
+                              ><i class="klbth-icon-shop-1"></i> Add to cart</a
+                            >
+                            <router-link
+                              v-if="item?.check"
+                              :to="'/' + langCode + '/cart'"
+                              class="added_to_cart wc-forward"
+                              title="View cart"
+                              >View cart</router-link
+                            >
                           </div>
                           <div class="product-footer-details">
                             <ul>
@@ -492,7 +494,7 @@
                       </div>
                       <div
                         class="product-content-fade"
-                        style="margin-bottom: -109px"
+                        style="margin-bottom: -59px"
                       ></div>
                     </div>
                   </div>
@@ -504,8 +506,6 @@
       </div>
     </div>
   </section>
-  
- 
 </template>
 <style scoped>
 #slidingWindow {
@@ -573,7 +573,7 @@ export default {
   data: () => ({
     showmodal: "",
     showmodalstyle: "",
-      url: "http://baladi-v1.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     showbigmodal: "",
     showbigmodalstyle: "",
     showcomparemodal: "",
@@ -617,7 +617,7 @@ export default {
     wistlist: [],
   }),
   // computed: {
-   
+
   //   currentImage() {
   //     this.timeLeft = this.autoSlideInterval;
   //     return this.images[this.activeImage].thumb;
@@ -628,26 +628,28 @@ export default {
   // },
   mounted() {
     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-  // Update the count down every 1 second
-    var x = setInterval(function() {
-    // Get today's date and time
-    var now = new Date().getTime();
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.querySelector(".dayscount").innerHTML = days;
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.querySelector(".hourscount").innerHTML = hours;
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    document.querySelector(".minutescount").innerHTML = minutes;
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.querySelector(".secondcount").innerHTML = seconds;
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.querySelector(".dayscount").innerHTML = days;
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      document.querySelector(".hourscount").innerHTML = hours;
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.querySelector(".minutescount").innerHTML = minutes;
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.querySelector(".secondcount").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
     var langCode = localStorage.getItem("lang");
     axios
       .get(
@@ -659,7 +661,6 @@ export default {
         // console.log(this.results);
         const productStore = useProductStore();
         productStore.BudgetDealData(this.results);
-      
       })
       .catch((error) => {});
     axios
@@ -677,10 +678,9 @@ export default {
     }
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
-
   },
   methods: {
-    addtoCart(item,index) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
       this.results[index].check = true;
@@ -713,14 +713,16 @@ export default {
       this.showmodal = "";
       this.showmodalstyle = "";
     },
-  
+
     clickbigmodal(event) {
       const topseller_id = event.currentTarget.getAttribute("topseller_id");
       // alert(topseller_id);
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id + '&locale='+this.langCode
+            topseller_id +
+            "&locale=" +
+            this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

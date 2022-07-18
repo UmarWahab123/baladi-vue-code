@@ -13,9 +13,11 @@
     <div class="elementor-widget-container">
       <div class="site-module products-module">
         <div class="module-header">
-          <h4 class="entry-title">{{$t('Best_seller')}}</h4>
-          <a href="#?orderby=popularity&amp;paged=1" class="btn link move-to-left"
-            >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+          <h4 class="entry-title">{{ $t("Best_seller") }}</h4>
+          <a
+            href="#?orderby=popularity&amp;paged=1"
+            class="btn link move-to-left"
+            >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
           ></a>
         </div>
         <div class="module-wrapper">
@@ -26,11 +28,11 @@
               :key="indextr"
               v-for="(item, indextr) in productStore.BestSellerProducts"
             >
-               <div class="product-wrapper product-type-1">
+              <div class="product-wrapper product-type-1">
                 <div class="product-content">
                   <div class="thumbnail-wrapper">
                     <div class="product-badges">
-                      <span class=" badge onsale">53%</span>
+                      <span class="badge onsale">53%</span>
                     </div>
                     <router-link
                       :to="'/' + langCode + '/product-detail' + item.product.id"
@@ -65,49 +67,50 @@
                             style="flex-grow: 1"
                           ></div>
                         </div>
-                         <div class="product-card" 
-                              >
-                                <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                   <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </div>
+                        <div class="product-card">
+                          <div id="slidingWindow" ontouchstart="">
+                            <div class="slidingSection">
+                              <img
+                                class="img"
+                                :src="
+                                  url +
+                                  item?.product?.gallery?.gallery_images[0]
+                                    .image_md
+                                "
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
                               </div>
+                            </div>
+                            <div class="slidingSection">
+                              <img
+                                class="img"
+                                :src="
+                                  url +
+                                  item?.product?.gallery?.gallery_images[0]
+                                    .image_md
+                                "
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </router-link>
 
@@ -193,7 +196,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{
                                 item.product?.uom_products[0]?.previous_price
                               }}</bdi
@@ -206,7 +209,7 @@
                             style="margin: 4px"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{
                                 item.product?.uom_products[0]?.regular_price
                               }}</bdi
@@ -217,48 +220,64 @@
                     </div>
                   </div>
                 </div>
-              <div class="product-footer">
+                <div class="product-footer">
                   <div class="product-footer-buttons">
-                            <a
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              @click="addtoCart(item,indextr)"
-                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
-                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div> 
-                              </a
-                            >  
-                             <router-link
-                                  v-if="item?.check"
-                                  :to="
-                                    '/' +
-                                    langCode +
-                                    '/cart'"
-                                  class="added_to_cart wc-forward"
-                                  title="View cart"
-                                  >{{$t('Viewcart')}}</router-link
-                                >
-                          </div>
+                    <a
+                      data-quantity="1"
+                      class="
+                        button
+                        product_type_simple
+                        add_to_cart_button
+                        ajax_add_to_cart
+                      "
+                      @click="addtoCart(item, indextr)"
+                      ><i
+                        class="klbth-icon-shop-1"
+                        style="display: block !important"
+                      ></i
+                      ><span
+                        v-if="isText"
+                        id="add-cart-text"
+                        class="add-cart-text-238"
+                        >{{ $t("add_to_cart") }}</span
+                      >
+                      <div
+                        v-if="isSpinner"
+                        class="
+                          spinner-border
+                          text-white
+                          cart-spinner-247
+                          text-center
+                          spinner-border-sm
+                        "
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </a>
+                    <router-link
+                      v-if="item?.check"
+                      :to="'/' + langCode + '/cart'"
+                      class="added_to_cart wc-forward"
+                      title="View cart"
+                      >{{ $t("Viewcart") }}</router-link
+                    >
+                  </div>
 
-                          <!-- product-footer-buttons -->
-                          <div class="product-footer-details d-none">
-                            <ul>
-                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
-                             
-                            </ul>
-                            &nbsp;
-                          </div>
-                     </div>
+                  <!-- product-footer-buttons -->
+                  <div class="product-footer-details d-none">
+                    <ul>
+                      <li class="SpecHighlights-list-label">
+                        {{ item.product.lg_description }}
+                      </li>
+                    </ul>
+                    &nbsp;
+                  </div>
+                </div>
               </div>
               <div
                 class="product-content-fade"
-                style="margin-bottom: -109px"
+                style="margin-bottom: -59px"
               ></div>
             </div>
           </div>
@@ -952,7 +971,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -961,7 +980,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -972,7 +991,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -981,7 +1000,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -992,7 +1011,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1001,7 +1020,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1561,8 +1580,8 @@ export default {
       wishlist: [],
       langCode: "en",
       token: "",
-       isText:true,
-    isSpinner:false,
+      isText: true,
+      isSpinner: false,
     };
   },
   computed: {
@@ -1605,19 +1624,18 @@ export default {
     this.langCode = lang;
   },
   methods: {
-    addtoCart(item,index) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
       this.isText = false;
-     this.isSpinner=true;
-      if(this.bestresults[index]){
-       setTimeout(()=>{
-      this.isText = true;
-      this.bestresults[index].check = true;
-      this.isSpinner=false;
-       } , 1000); 
+      this.isSpinner = true;
+      if (this.bestresults[index]) {
+        setTimeout(() => {
+          this.isText = true;
+          this.bestresults[index].check = true;
+          this.isSpinner = false;
+        }, 1000);
       }
-
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
@@ -1651,7 +1669,7 @@ export default {
         axios
           .get(
             "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist?locale=" +
-          langCode,
+              langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1677,7 +1695,9 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id +'&locale='+this.langCode
+            topseller_id +
+            "&locale=" +
+            this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];

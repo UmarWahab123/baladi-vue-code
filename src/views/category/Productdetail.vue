@@ -8,8 +8,9 @@
             <nav class="woocommerce-breadcrumb">
               <ul>
                 <li>
-                 <router-link :to="'/' + langCode"
-                      >{{ $t("Home") }}</router-link>
+                  <router-link :to="'/' + langCode">{{
+                    $t("Home")
+                  }}</router-link>
                 </li>
               </ul>
             </nav>
@@ -122,16 +123,15 @@
                     <h1 class="product_title entry-title">
                       {{ results?.product_name }}
                     </h1>
-                     <p>{{ results.description }}</p>
-                     <div class="product-meta">
+                    <p>{{ results.description }}</p>
+                    <div class="product-meta">
                       <div class="product-model">
-                          <span>PCS</span>
-
-                      </div><!-- product-model -->
-                      <div class="sku-wrapper">
-
-                      </div><!-- sku-wrapper -->
-                  </div>
+                        <span>PCS</span>
+                      </div>
+                      <!-- product-model -->
+                      <div class="sku-wrapper"></div>
+                      <!-- sku-wrapper -->
+                    </div>
                     <div class="product-meta d-none">
                       <div class="product-model">
                         <span>{{ $t("weight") }}:</span>
@@ -145,7 +145,23 @@
 
                     <div class="product-ratings">
                       <div class="product-rating">
-                        <i class="fa fa-star" v-for="n in results.reviews"></i>
+                        <i
+                          class="fa fa-star"
+                          v-for="n in results.reviews"
+                          v-if="results.review_count > 0"
+                        ></i>
+                        <div
+                          class="star-rating"
+                          role=""
+                          aria-label="Rated 5 out of 5"
+                          v-else
+                        >
+                          <span style="width: 0%"
+                            >Rated <strong class="rating">5.00</strong> out of 5
+                            based on <span class="rating">0</span> customer
+                            rating</span
+                          >
+                        </div>
                         <div class="count-rating">
                           <a
                             href="javascript:void(0)"
@@ -180,8 +196,9 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{ $t("QAR") }} </span
-                              > {{ sub_products.regular_price }}</bdi
+                                >{{ $t("QAR") }}
+                              </span>
+                              {{ sub_products.regular_price }}</bdi
                             ></span
                           ></ins
                         ></span
@@ -197,9 +214,11 @@
                           id="radio1"
                           autocomplete="off"
                         />
-                        <label class="button2 btn-outline-dark btngaf" for="radio1">{{
-                          $t("PCS")
-                        }}</label>
+                        <label
+                          class="button2 btn-outline-dark btngaf"
+                          for="radio1"
+                          >{{ $t("PCS") }}</label
+                        >
                         <input
                           type="radio"
                           class="btn-check"
@@ -260,7 +279,9 @@
                               button button-primary
                               add_to_cart_button
                               single_add_to_cart_button
-                              button alt btn-align-setup
+                              button
+                              alt
+                              btn-align-setup
                             "
                             @click="
                               cartStore.addMultipleItems(
@@ -278,7 +299,8 @@
                               button button-primary
                               add_to_cart_button
                               single_add_to_cart_button
-                              button d-none
+                              button
+                              d-none
                               alt
                             "
                           >
@@ -369,10 +391,17 @@
                       <span class="sku_wrapper"
                         >SKU: <span class="sku">BE45VGRT</span></span
                       >
-                
+
                       <span class="posted_in"
                         >{{ $t("categories") }}:
-                        <router-link :to="'/' + langCode +'/category/'+ results?.category_id"> {{ results?.category?.name }}</router-link></span>
+                        <router-link
+                          :to="
+                            '/' + langCode + '/category/' + results?.category_id
+                          "
+                        >
+                          {{ results?.category?.name }}</router-link
+                        ></span
+                      >
                     </div>
                     <div class="social-share site-social colored">
                       <ul class="social-container">
@@ -405,7 +434,8 @@
                     <div
                       class="
                         product-extra-detail
-                        woocommerce-product-details__short-description d-none
+                        woocommerce-product-details__short-description
+                        d-none
                       "
                     >
                       <!-- <ul>
@@ -490,7 +520,6 @@
                   <h6>{{ results.short_description }}</h6>
 
                   <p>{{ results.description }}</p>
-                
                 </div>
                 <div
                   class="
@@ -507,11 +536,11 @@
                   aria-labelledby="tab-title-specification"
                 >
                   <div class="specification-content">
-                    <h2>{{$t('General')}}</h2>
-                  
-                    <h2>{{$t('Display')}}</h2>
-                   
-                    <h2>{{$t('Hardware')}}</h2>
+                    <h2>{{ $t("General") }}</h2>
+
+                    <h2>{{ $t("Display") }}</h2>
+
+                    <h2>{{ $t("Hardware") }}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -536,7 +565,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h2>{{$t('Camera')}}</h2>
+                    <h2>{{ $t("Camera") }}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -549,7 +578,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h2>{{$t('Software')}}</h2>
+                    <h2>{{ $t("Software") }}</h2>
                     <table>
                       <tbody>
                         <tr>
@@ -577,7 +606,8 @@
                   <div id="reviews" class="woocommerce-Reviews">
                     <div id="comments">
                       <h2 class="woocommerce-Reviews-title">
-                        {{$t('review_for')}} <span>{{$t('Vegetables')}}</span>
+                        {{ $t("review_for") }}
+                        <span>{{ $t("Vegetables") }}</span>
                       </h2>
 
                       <ol class="commentlist">
@@ -695,10 +725,12 @@
                             <div class="elementor-widget-container">
                               <div class="site-module products-module">
                                 <div class="module-header">
-                                  <h4 class="entry-title">{{$t('Related_Products')}}</h4>
+                                  <h4 class="entry-title">
+                                    {{ $t("Related_Products") }}
+                                  </h4>
                                   <div class="product-countdown"></div>
                                   <a href="" class="btn link"
-                                    >{{$t('View_all')}}
+                                    >{{ $t("View_all") }}
                                     <i class="klbth-icon-right-arrow"></i
                                   ></a>
                                 </div>
@@ -917,7 +949,7 @@
                                                       class="
                                                         woocommerce-Price-currencySymbol
                                                       "
-                                                      >{{$t('QAR')}} </span
+                                                      >{{ $t("QAR") }} </span
                                                     >699.99</bdi
                                                   ></span
                                                 ></del
@@ -933,7 +965,7 @@
                                                       class="
                                                         woocommerce-Price-currencySymbol
                                                       "
-                                                      >{{$t('QAR')}} </span
+                                                      >{{ $t("QAR") }} </span
                                                     >629.99</bdi
                                                   ></span
                                                 ></ins
@@ -1349,7 +1381,7 @@
                               add_to_cart_button
                               single_add_to_cart_button
                               button
-                              alt 
+                              alt
                             "
                           >
                             <span>Buy Now</span>
@@ -2218,8 +2250,8 @@ export default {
     isloading: true,
     quantity: 1,
     url: "http://baladiweb.bteamwebs.com/storage/",
-      token: "",
-      error: "",
+    token: "",
+    error: "",
 
     //Index of the active image
     activeImage: 0,
@@ -2279,7 +2311,6 @@ export default {
     },
   },
   mounted() {
-
     this.specification = "";
     this.showspecification = "";
     this.showspecification = "d-none";
@@ -2299,11 +2330,13 @@ export default {
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-          id + '&locale='+this.langCode
+          id +
+          "&locale=" +
+          this.langCode
       )
       .then((response) => {
         this.results = response.data.data[0];
-        console.log("thisdetailsresults", this.results);
+        // console.log("thisdetailsresults", this.results);
         this.sub_products = response.data.data[0].uom_products[0];
       })
       .catch((error) => {});
@@ -2311,7 +2344,6 @@ export default {
     this.langCode = lang;
   },
   methods: {
-
     increment: function () {
       // const input_index = event.currentTarget.getAttribute("input_Index");
       this.quantity = this.quantity + 1;
@@ -2513,7 +2545,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: #585858;
-  display:none;
+  display: none;
 }
 .actions > span {
   cursor: pointer;

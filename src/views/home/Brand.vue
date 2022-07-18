@@ -38,7 +38,7 @@
           >
             <div class="elementor-widget-container">
               <div class="site-module logos-module">
-                <div class="module-body">
+                <div class="module-body brandlogos">
                   <Splide
                     :options="{
                       perPage: 5,
@@ -88,7 +88,10 @@ export default {
   mounted() {
     var langCode = localStorage.getItem("lang");
     axios
-      .get("http://baladi-v1.bteamwebs.com/api/web/header/getBrands?lang=" + langCode)
+      .get(
+        "http://baladi-v1.bteamwebs.com/api/web/header/getBrands?lang=" +
+          langCode
+      )
       .then((response) => {
         this.results = response.data.data.data;
         // console.log("brand", this.results);

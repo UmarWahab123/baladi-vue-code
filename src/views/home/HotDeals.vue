@@ -278,7 +278,7 @@
                     </div>
                     <div
                       class="product-content-fade"
-                      style="margin-bottom: -68px"
+                      style="margin-bottom: -59px"
                     ></div>
                   </div>
                 </div>

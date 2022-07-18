@@ -1,99 +1,222 @@
 <template>
   <!-- 3rd section  -->
-  <section class="elementor-section elementor-top-section elementor-element elementor-element-8dff6a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8dff6a0" data-element_type="section">
-                    <div class="elementor-container elementor-column-gap-extended">
-                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="site-module banner-module">
-                                            <div class="module-wrapper">
-                                                <div class="banner dark align-center price-banner ">
-                                                    <div class="banner-content">
-                                                        <div class="banner-content-wrapper">
-                                                            <div class="entry-description">
-                                                            </div><!-- entry-description -->
-                                                            <p class="fw-bold">Personal Care</p>
-                                                            <div class="banner-price-content">
-                                                                <p>Weekend Discount</p>
+  <section
+    class="
+      elementor-section
+      elementor-top-section
+      elementor-element
+      elementor-element-8dff6a0
+      elementor-section-boxed
+      elementor-section-height-default
+      elementor-section-height-default
+    "
+    data-id="8dff6a0"
+    data-element_type="section"
+  >
+    <div class="elementor-container elementor-column-gap-extended">
+      <div
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-1715083
+        "
+        data-id="1715083"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="
+              elementor-element
+              elementor-element-9ee7e40
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
+            data-id="9ee7e40"
+            data-element_type="widget"
+            data-widget_type="machic-banner-box2.default"
+          >
+            <div class="elementor-widget-container">
+              <div class="site-module banner-module">
+                <div class="module-wrapper">
+                  <div class="banner dark align-center price-banner">
+                    <div class="banner-content">
+                      <div class="banner-content-wrapper">
+                        <div class="entry-description"></div>
+                        <!-- entry-description -->
+                        <p class="fw-bold">Personal Care</p>
+                        <div class="banner-price-content">
+                          <p>Weekend Discount</p>
 
-                                                                <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/personal-care" class="btn small rounded link-color">Shop Now</a>
-                                                                </div>
-                                                                <!-- price -->
-                                                            </div><!-- banner-price-content -->
-                                                        </div><!-- banner-content-wrapper -->
-                                                    </div><!-- banner-content -->
-                                                    <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/care.png" alt="banner">
-                                                    </div><a href="javascript::void(0);" class="overlay-link"></a>
-                                                </div><!-- banner -->
-                                            </div><!-- module-wrapper -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <div class="entry-button">
+                            <a
+                              href="http://staging.baladiexpress.com/search_all/category/personal-care"
+                              class="btn small rounded link-color"
+                              >Shop Now</a
+                            >
+                          </div>
+                          <!-- price -->
                         </div>
-                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="site-module banner-module">
-                                            <div class="module-wrapper">
-                                                <div class="banner dark align-center price-banner ">
-                                                    <div class="banner-content">
-                                                        <div class="banner-content-wrapper">
-                                                            <div class="entry-description">
-                                                            </div><!-- entry-description -->
-                                                            <p class="fw-bold">Eggs and Dairy </p>
-                                                            <div class="banner-price-content">
-                                                                <p>Weekend Discount</p>
-
-                                                                <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/dairy-products-egg" class="btn small rounded link-color">Shop Now</a>
-                                                                </div>
-                                                                <!-- price -->
-                                                            </div><!-- banner-price-content -->
-                                                        </div><!-- banner-content-wrapper -->
-                                                    </div><!-- banner-content -->
-                                                    <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/grocery.png" alt="banner">
-                                                    </div><a href="javascript::void(0);" class="overlay-link"></a>
-                                                </div><!-- banner -->
-                                            </div><!-- module-wrapper -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1715083" data-id="1715083" data-element_type="column">
-                        <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-9ee7e40 elementor-widget elementor-widget-machic-banner-box2" data-id="9ee7e40" data-element_type="widget" data-widget_type="machic-banner-box2.default">
-                                <div class="elementor-widget-container">
-                                    <div class="site-module banner-module">
-                                        <div class="module-wrapper">
-                                            <div class="banner dark align-center price-banner ">
-                                                <div class="banner-content">
-                                                    <div class="banner-content-wrapper">
-                                                        <div class="entry-description">
-                                                        </div><!-- entry-description -->
-                                                        <p class="fw-bold">Groceries Food</p>
-                                                        <div class="banner-price-content">
-                                                            <p>Weekend Discount</p>
-
-                                                            <div class="entry-button"><a href="http://staging.baladiexpress.com/search_all/category/groceries" class="btn small rounded link-color">Shop Now</a>
-                                                            </div>
-                                                            <!-- price -->
-                                                        </div><!-- banner-price-content -->
-                                                    </div><!-- banner-content-wrapper -->
-                                                </div><!-- banner-content -->
-                                                <div class="banner-image"><img loading="lazy" class="fliprtl" src="http://staging.baladiexpress.com/frontend/src/img/grocery1.png" alt="banner">
-                                                </div><a href="javascript::void(0);" class="overlay-link"></a>
-                                            </div><!-- banner -->
-                                        </div><!-- module-wrapper -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- banner-price-content -->
+                      </div>
+                      <!-- banner-content-wrapper -->
                     </div>
+                    <!-- banner-content -->
+                    <div class="banner-image">
+                      <img
+                        loading="lazy"
+                        class="fliprtl"
+                        src="http://staging.baladiexpress.com/frontend/src/img/care.png"
+                        alt="banner"
+                      />
                     </div>
-                </section>
+                    <a href="javascript::void(0);" class="overlay-link"></a>
+                  </div>
+                  <!-- banner -->
+                </div>
+                <!-- module-wrapper -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-1715083
+        "
+        data-id="1715083"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="
+              elementor-element
+              elementor-element-9ee7e40
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
+            data-id="9ee7e40"
+            data-element_type="widget"
+            data-widget_type="machic-banner-box2.default"
+          >
+            <div class="elementor-widget-container">
+              <div class="site-module banner-module">
+                <div class="module-wrapper">
+                  <div class="banner dark align-center price-banner">
+                    <div class="banner-content">
+                      <div class="banner-content-wrapper">
+                        <div class="entry-description"></div>
+                        <!-- entry-description -->
+                        <p class="fw-bold">Eggs and Dairy</p>
+                        <div class="banner-price-content">
+                          <p>Weekend Discount</p>
+
+                          <div class="entry-button">
+                            <a
+                              href="http://staging.baladiexpress.com/search_all/category/dairy-products-egg"
+                              class="btn small rounded link-color"
+                              >Shop Now</a
+                            >
+                          </div>
+                          <!-- price -->
+                        </div>
+                        <!-- banner-price-content -->
+                      </div>
+                      <!-- banner-content-wrapper -->
+                    </div>
+                    <!-- banner-content -->
+                    <div class="banner-image">
+                      <img
+                        loading="lazy"
+                        class="fliprtl"
+                        src="http://staging.baladiexpress.com/frontend/src/img/grocery.png"
+                        alt="banner"
+                      />
+                    </div>
+                    <a href="javascript::void(0);" class="overlay-link"></a>
+                  </div>
+                  <!-- banner -->
+                </div>
+                <!-- module-wrapper -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          elementor-column
+          elementor-col-33
+          elementor-top-column
+          elementor-element
+          elementor-element-1715083
+        "
+        data-id="1715083"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="
+              elementor-element
+              elementor-element-9ee7e40
+              elementor-widget
+              elementor-widget-machic-banner-box2
+            "
+            data-id="9ee7e40"
+            data-element_type="widget"
+            data-widget_type="machic-banner-box2.default"
+          >
+            <div class="elementor-widget-container">
+              <div class="site-module banner-module">
+                <div class="module-wrapper">
+                  <div class="banner dark align-center price-banner">
+                    <div class="banner-content">
+                      <div class="banner-content-wrapper">
+                        <div class="entry-description"></div>
+                        <!-- entry-description -->
+                        <p class="fw-bold">Groceries Food</p>
+                        <div class="banner-price-content">
+                          <p>Weekend Discount</p>
+
+                          <div class="entry-button">
+                            <a
+                              href="http://staging.baladiexpress.com/search_all/category/groceries"
+                              class="btn small rounded link-color"
+                              >Shop Now</a
+                            >
+                          </div>
+                          <!-- price -->
+                        </div>
+                        <!-- banner-price-content -->
+                      </div>
+                      <!-- banner-content-wrapper -->
+                    </div>
+                    <!-- banner-content -->
+                    <div class="banner-image">
+                      <img
+                        loading="lazy"
+                        class="fliprtl"
+                        src="http://staging.baladiexpress.com/frontend/src/img/grocery1.png"
+                        alt="banner"
+                      />
+                    </div>
+                    <a href="javascript::void(0);" class="overlay-link"></a>
+                  </div>
+                  <!-- banner -->
+                </div>
+                <!-- module-wrapper -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section
     class="
       elementor-section
@@ -141,8 +264,6 @@
                       data-date="2022/04/15"
                       data-text="Expired"
                     >
-
-
                       <div class="count-item days"></div>
                       <span>:</span>
                       <div class="count-item hours"></div>
@@ -151,8 +272,6 @@
                       <span>:</span>
                       <div class="count-item second"></div>
                     </div>
-
-
 
                     <!-- countdown -->
                     <div class="countdown-text">
@@ -186,13 +305,16 @@
                                 item.product.slug
                               "
                             >
-                              <div class="product-card" 
-                              >
+                              <div class="product-card">
                                 <div id="slidingWindow" ontouchstart="">
                                   <div class="slidingSection">
                                     <img
                                       class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                      :src="
+                                        url +
+                                        item?.product?.gallery
+                                          ?.gallery_images[0].image_md
+                                      "
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -208,10 +330,14 @@
                                       ></div>
                                     </div>
                                   </div>
-                                   <div class="slidingSection">
+                                  <div class="slidingSection">
                                     <img
                                       class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                      :src="
+                                        url +
+                                        item?.product?.gallery
+                                          ?.gallery_images[0].image_md
+                                      "
                                     />
                                     <div class="hover-slider-indicator">
                                       <div
@@ -331,7 +457,7 @@
                               </div>
                             </div>
                             <span class="price"
-                              ><del aria-hidden="true"
+                              ><del aria-hidden="true" class="d-none"
                                 ><span class="woocommerce-Price-amount amount"
                                   ><bdi
                                     ><span
@@ -365,9 +491,8 @@
                           <!-- content-wrapper -->
                         </div>
                         <!-- product-content -->
-                      
+
                         <div class="product-footer">
-                          
                           <div class="product-footer-buttons">
                             <a
                               data-quantity="1"
@@ -377,30 +502,46 @@
                                 add_to_cart_button
                                 ajax_add_to_cart
                               "
-                              @click="addtoCart(item,indextr)"
-                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
-                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
+                              @click="addtoCart(item, indextr)"
+                              ><i
+                                class="klbth-icon-shop-1"
+                                style="display: block !important"
+                              ></i
+                              ><span
+                                v-if="isText"
+                                id="add-cart-text"
+                                class="add-cart-text-238"
+                                >{{ $t("add_to_cart") }}</span
+                              >
+                              <div
+                                v-if="isSpinner"
+                                class="
+                                  spinner-border
+                                  text-white
+                                  cart-spinner-247
+                                  text-center
+                                  spinner-border-sm
+                                "
+                                role="status"
+                              >
                                 <span class="visually-hidden">Loading...</span>
-                            </div> 
-                              </a
-                            >  
-                             <router-link
-                                  v-if="item?.check"
-                                  :to="
-                                    '/' +
-                                    langCode +
-                                    '/cart'"
-                                  class="added_to_cart wc-forward"
-                                  title="View cart"
-                                  >{{$t('Viewcart')}}</router-link
-                                >
+                              </div>
+                            </a>
+                            <router-link
+                              v-if="item?.check"
+                              :to="'/' + langCode + '/cart'"
+                              class="added_to_cart wc-forward"
+                              title="View cart"
+                              >{{ $t("Viewcart") }}</router-link
+                            >
                           </div>
 
                           <!-- product-footer-buttons -->
                           <div class="product-footer-details d-none">
                             <ul>
-                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
-                             
+                              <li class="SpecHighlights-list-label">
+                                {{ item.product.lg_description }}
+                              </li>
                             </ul>
                             &nbsp;
                           </div>
@@ -410,7 +551,7 @@
                       <!-- product-wrapper -->
                       <div
                         class="product-content-fade"
-                        style="margin-bottom: -177px"
+                        style="margin-bottom: -59px"
                       ></div>
                     </div>
                   </div>
@@ -682,11 +823,12 @@
                   </div>
                   <div class="product-price">
                     <span class="price"
-                      ><del
+                      ><del class="d-none"
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                            ><span class="woocommerce-Price-currencySymbol">{{
+                              $t("QAR")
+                            }}</span
                             >{{ sub_products.previous_price }}</bdi
                           ></span
                         ></del
@@ -694,8 +836,9 @@
                       <ins
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                            ><span class="woocommerce-Price-currencySymbol">{{
+                              $t("QAR")
+                            }}</span
                             >{{ singleProduct.variant_base_price }}</bdi
                           ></span
                         ></ins
@@ -1715,8 +1858,8 @@ export default {
     singleProduct: [],
     sub_products: [],
     token: "",
-    isText:true,
-    isSpinner:false,
+    isText: true,
+    isSpinner: false,
   }),
   computed: {
     currentImage() {
@@ -1737,7 +1880,7 @@ export default {
           langCode
       )
       .then((response) => {
-        console.log('seller-data',response);
+        console.log("seller-data", response);
         this.results = response.data.data[0].products;
         const productStore = useProductStore();
         productStore.testData(this.results);
@@ -1753,44 +1896,44 @@ export default {
     var lang = localStorage.getItem("lang");
     this.langCode = lang;
 
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  document.querySelector(".days").innerHTML = days;
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  document.querySelector(".hours").innerHTML = hours;
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  document.querySelector(".minutes").innerHTML = minutes;
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.querySelector(".second").innerHTML = seconds;
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.querySelector(".days").innerHTML = days;
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      document.querySelector(".hours").innerHTML = hours;
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.querySelector(".minutes").innerHTML = minutes;
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.querySelector(".second").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   },
   methods: {
-    addtoCart(item,index) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
-     this.isText = false;
-     this.isSpinner=true;
-      if(this.results[index]){
-       setTimeout(()=>{
-      this.isText = true;
-      this.results[index].check = true;
-      this.isSpinner=false;
-       } , 1000); 
+      this.isText = false;
+      this.isSpinner = true;
+      if (this.results[index]) {
+        setTimeout(() => {
+          this.isText = true;
+          this.results[index].check = true;
+          this.isSpinner = false;
+        }, 1000);
       }
       // var cartspiner = document.getElementByClass("art-spinner-24");
-
-
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");

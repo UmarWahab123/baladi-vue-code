@@ -68,9 +68,11 @@
                       <div class="item">
                         <div class="icon"><i class="klbth-icon-box-1"></i></div>
                         <div class="text">
-                          <h5 class="entry-title">{{$t('International_shipment')}}</h5>
+                          <h5 class="entry-title">
+                            {{ $t("International_shipment") }}
+                          </h5>
                           <p>
-                           {{$t('Your_between_countries')}}
+                            {{ $t("Your_between_countries") }}
                           </p>
                         </div>
                       </div>
@@ -79,7 +81,9 @@
                           <i class="klbth-icon-delivery-return"></i>
                         </div>
                         <div class="text">
-                          <h5 class="entry-title">{{$t('Extended_day_returns')}}</h5>
+                          <h5 class="entry-title">
+                            {{ $t("Extended_day_returns") }}
+                          </h5>
                           <p>
                             You have the right to return your orders within 45
                             days.
@@ -91,9 +95,11 @@
                           <i class="klbth-icon-payment-security"></i>
                         </div>
                         <div class="text">
-                          <h5 class="entry-title">{{$t('Secure_payment')}}</h5>
+                          <h5 class="entry-title">
+                            {{ $t("Secure_payment") }}
+                          </h5>
                           <p>
-                            {{$t('Your_our_privat_network')}}
+                            {{ $t("Your_our_privat_network") }}
                           </p>
                         </div>
                       </div>
@@ -119,15 +125,21 @@
                     <div class="banner dark align-top medium vertical">
                       <div class="banner-content">
                         <div class="banner-content-wrapper">
-                          <h6 class="entry-subtitle style-2">{{$t('Super_discount')}}</h6>
-                          <h3 class="entry-title">Fresh Fruits and Vegetables</h3>
+                          <h6 class="entry-subtitle style-2">
+                            {{ $t("Super_discount") }}
+                          </h6>
+                          <h3 class="entry-title">
+                            Fresh Fruits and Vegetables
+                          </h3>
                           <div class="entry-description">
-                            <p>{{$t('miss_the_last_opportunity')}}</p>
+                            <p>{{ $t("miss_the_last_opportunity") }}</p>
                           </div>
                           <div class="entry-button">
-                          <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
-                    >{{$t('Shop_now')}}</router-link
-                          >
+                            <router-link
+                              class="btn small rounded link-color"
+                              :to="'/' + langCode + '/category'"
+                              >{{ $t("Shop_now") }}</router-link
+                            >
                           </div>
                         </div>
                       </div>
@@ -156,7 +168,7 @@
             >
               <div class="elementor-widget-container">
                 <div class="widget widget_klb_counter_product">
-                  <h4 class="widget-title">{{$t('Deals_of_the_week')}}</h4>
+                  <h4 class="widget-title">{{ $t("Deals_of_the_week") }}</h4>
                   <div class="widget-body">
                     <div class="products align-center">
                       <div class="product">
@@ -169,7 +181,11 @@
                               <a
                                 href="#bose-noise-cancelling-wireless-bluetooth/"
                                 ><img
-                                 :src="url + dealsoftheweek?.product?.gallery?.gallery_images[0].image_md"
+                                  :src="
+                                    url +
+                                    dealsoftheweek?.product?.gallery
+                                      ?.gallery_images[0].image_md
+                                  "
                                   alt="Bose Noise Cancelling Wireless Bluetooth"
                               /></a>
                               <div class="product-buttons">
@@ -272,7 +288,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         dealsoftheweek?.product?.uom_products[0]
                                           ?.previous_price
@@ -285,7 +301,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         dealsoftheweek?.product?.uom_products[0]
                                           ?.regular_price
@@ -327,7 +343,8 @@
                 elementor-element
                 elementor-element-468435b
                 elementor-widget
-                elementor-widget-machic-product-list d-none
+                elementor-widget-machic-product-list
+                d-none
               "
               data-id="468435b"
               data-element_type="widget"
@@ -335,7 +352,7 @@
             >
               <div class="elementor-widget-container">
                 <div class="widget widget_klb_products_list">
-                  <h4 class="widget-title">{{$t('Trending_products')}}</h4>
+                  <h4 class="widget-title">{{ $t("Trending_products") }}</h4>
                   <div class="widget-body">
                     <div class="products column-1 mobile-1">
                       <div
@@ -374,7 +391,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}}  <br /></span
+                                        >{{ $t("QAR") }} <br /></span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.previous_price
@@ -387,7 +404,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}}  <br /></span
+                                        >{{ $t("QAR") }} <br /></span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.regular_price
@@ -462,22 +479,28 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper set-banner-text-alignment">
+                              <div
+                                class="
+                                  banner-content-wrapper
+                                  set-banner-text-alignment
+                                "
+                              >
                                 <h6 class="entry-subtitle style-2">
-                                 {{$t('Weekend_discount')}}
+                                  {{ $t("Weekend_discount") }}
                                 </h6>
                                 <h3 class="entry-title">Meat and Poultry</h3>
                                 <div class="entry-description">
-                               <br>
-                               <br>
-                               <br>
-                               <br>
-
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <br />
                                 </div>
                                 <div class="entry-button">
-                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
-                    >{{$t('Shop_now')}}</router-link
-                          >
+                                  <router-link
+                                    class="btn small rounded link-color"
+                                    :to="'/' + langCode + '/category'"
+                                    >{{ $t("Shop_now") }}</router-link
+                                  >
                                 </div>
                               </div>
                             </div>
@@ -526,21 +549,27 @@
                         <div class="module-wrapper">
                           <div class="banner dark align-center medium bordered">
                             <div class="banner-content">
-                              <div class="banner-content-wrapper set-banner-text-alignment">
+                              <div
+                                class="
+                                  banner-content-wrapper
+                                  set-banner-text-alignment
+                                "
+                              >
                                 <h6 class="entry-subtitle style-2">
-                                  {{$t('Weekend_discount')}}
+                                  {{ $t("Weekend_discount") }}
                                 </h6>
                                 <h3 class="entry-title">Bakery</h3>
                                 <div class="entry-description">
-                                  <br>
-                                  <br>
-                                  <br>
-
+                                  <br />
+                                  <br />
+                                  <br />
                                 </div>
                                 <div class="entry-button">
-                                 <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
-                    >{{$t('Shop_now')}}</router-link
-                          >
+                                  <router-link
+                                    class="btn small rounded link-color"
+                                    :to="'/' + langCode + '/category'"
+                                    >{{ $t("Shop_now") }}</router-link
+                                  >
                                 </div>
                               </div>
                             </div>
@@ -582,22 +611,30 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper set-banner-text-alignment">
-                        <h6 class="entry-subtitle style-2">{{$t('Weekend_discount')}}</h6>
-                        <h3 class="entry-title">{{$t('Momentum_headphones')}}</h3>
-                        <div class="entry-description">
-                          <p>{{$t('miss_the_last_opportunity')}}</p>
-                        </div>
-                        <div class="entry-button">
-                         <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
-                    >{{$t('Shop_now')}}</router-link
+                      <div
+                        class="banner-content-wrapper set-banner-text-alignment"
+                      >
+                        <h6 class="entry-subtitle style-2">
+                          {{ $t("Weekend_discount") }}
+                        </h6>
+                        <h3 class="entry-title">
+                          {{ $t("Baby_care") }}
+                        </h3>
+                        <!-- <div class="entry-description">
+                          <p>{{ $t("miss_the_last_opportunity") }}</p>
+                        </div> -->
+                        <div class="entry-button mt-20">
+                          <router-link
+                            class="btn small rounded link-color"
+                            :to="'/' + langCode + '/category'"
+                            >{{ $t("Shop_now") }}</router-link
                           >
                         </div>
                       </div>
                     </div>
                     <div class="banner-image">
                       <img
-                        src="https://klbtheme.com/machic/wp-content/uploads/2021/09/banner-4.jpg"
+                        src="http://staging.baladiexpress.com/frontend/src/img/banner-6.png"
                         alt="banner"
                       />
                     </div>
@@ -624,9 +661,9 @@
             <div class="elementor-widget-container">
               <div class="site-module product-deals-module">
                 <div class="module-header no-border">
-                  <h4 class="entry-title">{{$t('Mega_deals')}}</h4>
+                  <h4 class="entry-title">{{ $t("Mega_deals") }}</h4>
                   <a href="" class="btn link move-to-left"
-                    >{{$t('View_all')}} <i class="klbth-icon-right-arrow"></i
+                    >{{ $t("View_all") }} <i class="klbth-icon-right-arrow"></i
                   ></a>
                 </div>
                 <div class="module-wrapper">
@@ -648,7 +685,11 @@
                                 href="#dragon-touch-max10-tablet-android-10-0-os/"
                                 title="Dragon Touch Max10 Tablet Android 10.0 OS"
                                 ><img
-                                  :src="url + item?.product?.gallery?.gallery_images[0].image_md"
+                                  :src="
+                                    url +
+                                    item?.product?.gallery?.gallery_images[0]
+                                      .image_md
+                                  "
                                   alt="Dragon Touch Max10 Tablet Android 10.0 OS"
                               /></a>
                             </div>
@@ -689,7 +730,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.previous_price
@@ -702,7 +743,7 @@
                                     ><bdi
                                       ><span
                                         class="woocommerce-Price-currencySymbol"
-                                        >{{$t('QAR')}} </span
+                                        >{{ $t("QAR") }} </span
                                       >{{
                                         item.product?.uom_products[0]
                                           ?.regular_price
@@ -754,15 +795,15 @@
                     <div class="coupon-detail">
                       <div class="text">
                         <h4 class="entry-title">
-                          {{$t('Super_discount_first_purchase')}}
+                          {{ $t("Super_discount_first_purchase") }}
                         </h4>
                         <div class="entry-description">
-                          {{$t('Use_discount_code')}}
+                          {{ $t("Use_discount_code") }}
                         </div>
                       </div>
                       <div class="entry-coupon move-to-left">
                         <i class="klbth-icon-ticket"></i>
-                        <strong>{{$t('FREE256MAC')}}</strong>
+                        <strong>{{ $t("FREE256MAC") }}</strong>
                       </div>
                     </div>
                     <!-- <a href="#" class="overlay-link"></a> -->
@@ -789,15 +830,21 @@
                 <div class="module-wrapper">
                   <div class="banner dark align-center medium bordered x1">
                     <div class="banner-content">
-                      <div class="banner-content-wrapper set-banner-text-alignment">
-                        <h6 class="entry-subtitle style-2 text-white">{{$t('Weekend_discount')}}</h6>
+                      <div
+                        class="banner-content-wrapper set-banner-text-alignment"
+                      >
+                        <h6 class="entry-subtitle style-2 text-white">
+                          {{ $t("Weekend_discount") }}
+                        </h6>
                         <h3 class="entry-title">Fish & Sea Food</h3>
                         <div class="entry-description">
-                          <p>{{$t('miss_the_last_opportunity')}}</p>
+                          <p>{{ $t("miss_the_last_opportunity") }}</p>
                         </div>
                         <div class="entry-button">
-                           <router-link  class="btn small rounded link-color" :to="'/' + langCode + '/category'"
-                    >{{$t('Shop_now')}}</router-link
+                          <router-link
+                            class="btn small rounded link-color"
+                            :to="'/' + langCode + '/category'"
+                            >{{ $t("Shop_now") }}</router-link
                           >
                         </div>
                       </div>
@@ -1534,7 +1581,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1543,7 +1590,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1554,7 +1601,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1563,7 +1610,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1574,7 +1621,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1583,7 +1630,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -2111,27 +2158,29 @@ export default {
     },
   },
   mounted() {
-     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-  // Update the count down every 1 second
-    var x = setInterval(function() {
-    // Get today's date and time
-    var now = new Date().getTime();
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.querySelector(".dayscounts").innerHTML = days;
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.querySelector(".hourscounts").innerHTML = hours;
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    document.querySelector(".minutescounts").innerHTML = minutes;
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.querySelector(".secondcounts").innerHTML = seconds;
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.querySelector(".dayscounts").innerHTML = days;
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      document.querySelector(".hourscounts").innerHTML = hours;
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.querySelector(".minutescounts").innerHTML = minutes;
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.querySelector(".secondcounts").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
     setTimeout(() => (this.isloading = false), 1000);
     var langCode = localStorage.getItem("lang");
 
