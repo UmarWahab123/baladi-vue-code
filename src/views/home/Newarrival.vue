@@ -30,7 +30,7 @@
                 <div class="product-content">
                   <div class="thumbnail-wrapper">
                     <div class="product-badges">
-                      <span class=" badge onsale">53%</span>
+                      <span class="badge onsale">53%</span>
                     </div>
                     <router-link
                       :to="'/' + langCode + '/product-detail' + item.product.id"
@@ -65,49 +65,50 @@
                             style="flex-grow: 1"
                           ></div>
                         </div>
-                         <div class="product-card" 
-                              >
-                                <div id="slidingWindow" ontouchstart="">
-                                  <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                   <div class="slidingSection">
-                                    <img
-                                      class="img"
-                                      :src="url + item?.product?.gallery?.gallery_images[0].image_md"
-                                    />
-                                    <div class="hover-slider-indicator">
-                                      <div
-                                        data-hover-slider-i="45"
-                                        class="
-                                          hover-slider-indicator-dot
-                                          active
-                                        "
-                                      ></div>
-                                      <div
-                                        data-hover-slider-i="46"
-                                        class="hover-slider-indicator-dot"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </div>
+                        <div class="product-card">
+                          <div id="slidingWindow" ontouchstart="">
+                            <div class="slidingSection">
+                              <img
+                                class="img"
+                                :src="
+                                  url +
+                                  item?.product?.gallery?.gallery_images[0]
+                                    .image_md
+                                "
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
                               </div>
+                            </div>
+                            <div class="slidingSection">
+                              <img
+                                class="img"
+                                :src="
+                                  url +
+                                  item?.product?.gallery?.gallery_images[0]
+                                    .image_md
+                                "
+                              />
+                              <div class="hover-slider-indicator">
+                                <div
+                                  data-hover-slider-i="45"
+                                  class="hover-slider-indicator-dot active"
+                                ></div>
+                                <div
+                                  data-hover-slider-i="46"
+                                  class="hover-slider-indicator-dot"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </router-link>
 
@@ -193,7 +194,7 @@
                           ><span class="woocommerce-Price-amount amount"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{
                                 item.product?.uom_products[0]?.previous_price
                               }}</bdi
@@ -206,7 +207,7 @@
                             style="margin: 4px"
                             ><bdi
                               ><span class="woocommerce-Price-currencySymbol"
-                                >{{$t('QAR')}} </span
+                                >{{ $t("QAR") }} </span
                               >{{
                                 item.product?.uom_products[0]?.regular_price
                               }}</bdi
@@ -217,44 +218,60 @@
                     </div>
                   </div>
                 </div>
-              <div class="product-footer">
+                <div class="product-footer">
                   <div class="product-footer-buttons">
-                            <a
-                              data-quantity="1"
-                              class="
-                                button
-                                product_type_simple
-                                add_to_cart_button
-                                ajax_add_to_cart
-                              "
-                              @click="addtoCart(item,indextr)"
-                              ><i class="klbth-icon-shop-1" style="display: block !important;"></i><span v-if="isText" id="add-cart-text" class="add-cart-text-238">{{$t('add_to_cart')}}</span>   
-                              <div v-if="isSpinner" class="spinner-border text-white cart-spinner-247 text-center spinner-border-sm" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div> 
-                              </a
-                            >  
-                             <router-link
-                                  v-if="item?.check"
-                                  :to="
-                                    '/' +
-                                    langCode +
-                                    '/cart'"
-                                  class="added_to_cart wc-forward"
-                                  title="View cart"
-                                  >{{$t('Viewcart')}}</router-link
-                                >
-                          </div>
+                    <a
+                      data-quantity="1"
+                      class="
+                        button
+                        product_type_simple
+                        add_to_cart_button
+                        ajax_add_to_cart
+                      "
+                      @click="addtoCart(item, indextr)"
+                      ><i
+                        class="klbth-icon-shop-1"
+                        style="display: block !important"
+                      ></i
+                      ><span
+                        v-if="isText"
+                        id="add-cart-text"
+                        class="add-cart-text-238"
+                        >{{ $t("add_to_cart") }}</span
+                      >
+                      <div
+                        v-if="isSpinner"
+                        class="
+                          spinner-border
+                          text-white
+                          cart-spinner-247
+                          text-center
+                          spinner-border-sm
+                        "
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </a>
+                    <router-link
+                      v-if="item?.check"
+                      :to="'/' + langCode + '/cart'"
+                      class="added_to_cart wc-forward"
+                      title="View cart"
+                      >{{ $t("Viewcart") }}</router-link
+                    >
+                  </div>
 
-                          <!-- product-footer-buttons -->
-                          <div class="product-footer-details d-none">
-                            <ul>
-                              <li class="SpecHighlights-list-label">{{ item.product.lg_description }}</li>
-                             
-                            </ul>
-                            &nbsp;
-                          </div>
-                     </div>
+                  <!-- product-footer-buttons -->
+                  <div class="product-footer-details d-none">
+                    <ul>
+                      <li class="SpecHighlights-list-label">
+                        {{ item.product.lg_description }}
+                      </li>
+                    </ul>
+                    &nbsp;
+                  </div>
+                </div>
               </div>
               <div
                 class="product-content-fade"
@@ -446,7 +463,7 @@
                                 ]"
                                 @click="activateImage(index)"
                               >
-                                <img :src="image.thumb" />
+                                <img :src="url + image.image_md" />
                               </div>
                             </div>
                             <!-- swiper-slide -->
@@ -483,14 +500,13 @@
                   </h1>
                   <div class="product-meta">
                     <div class="product-model">
-                      <span>Model:</span>
-                      A248458
+                      <span>PCS</span>
                     </div>
                     <!-- product-model -->
-                    <div class="sku-wrapper">
+                    <!-- <div class="sku-wrapper">
                       <span>SKU:</span>
                       <span class="sku">KM45VGRT</span>
-                    </div>
+                    </div> -->
                     <!-- sku-wrapper -->
                   </div>
                   <!-- product-meta -->
@@ -536,9 +552,10 @@
                       <ins
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
-                            >{{ singleProduct.variant_base_price }}</bdi
+                            ><span class="woocommerce-Price-currencySymbol">{{
+                              $t("QAR")
+                            }}</span>
+                            {{ singleProduct.variant_base_price }}</bdi
                           ></span
                         ></ins
                       ></span
@@ -614,6 +631,7 @@
                             single_add_to_cart_button
                             button
                             alt
+                            d-none
                           "
                         >
                           <span>Buy Now</span>
@@ -633,7 +651,7 @@
                         </div>
                       </form>
 
-                      <div class="product-actions">
+                      <div class="product-actions d-none">
                         <div
                           class="custom-wish-style"
                           :onclick="clickmodal"
@@ -675,7 +693,7 @@
                                 ><i class="klbth-icon-twitter"></i
                               ></a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a href="" class="youtube" target="_blank"
                                 ><i class="klbth-icon-youtube"></i
                               ></a>
@@ -689,7 +707,7 @@
                               <a href="" class="whatsapp" target="_blank"
                                 ><i class="klbth-icon-whatsapp"></i
                               ></a>
-                            </li>
+                            </li> -->
                           </ul>
                         </div>
                       </div>
@@ -714,11 +732,9 @@
 
                     <span class="posted_in"
                       >Category:
-                      <a
-                        href="https://klbtheme.com/machic/product-category/smartwatches/"
-                        rel="tag"
-                        >Smartwatches</a
-                      ></span
+                      <a href="javascript:void(0)" rel="tag">{{
+                        singleProduct?.category?.name
+                      }}</a></span
                     >
                   </div>
                 </div>
@@ -994,7 +1010,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >189.99</bdi
                         ></span
                       ></del
@@ -1003,7 +1019,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >129.99</bdi
                         ></span
                       ></ins
@@ -1014,7 +1030,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >699.99</bdi
                         ></span
                       ></del
@@ -1023,7 +1039,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >629.99</bdi
                         ></span
                       ></ins
@@ -1034,7 +1050,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >478.67</bdi
                         ></span
                       ></del
@@ -1043,7 +1059,7 @@
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
-                            >{{$t('QAR')}} </span
+                            >{{ $t("QAR") }} </span
                           >438.67</bdi
                         ></span
                       ></ins
@@ -1538,30 +1554,14 @@ export default {
       timerInterval: null,
       //Every 10ms decrease the timeLeft
       countdownInterval: 10,
-      images: {
-        0: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-          length: 1,
-        },
-        1: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
-          length: 1,
-        },
-        2: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-          length: 1,
-        },
-      },
+      images: [],
       langCode: "en",
       singleProduct: [],
       sub_products: [],
       wishlist: [],
       token: "",
-    isText:true,
-    isSpinner:false,
+      isText: true,
+      isSpinner: false,
     };
   },
   computed: {
@@ -1570,8 +1570,8 @@ export default {
     // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
-      return this.images[this.activeImage].thumb;
+      // console.log(this.images[this.activeImage]);
+      return this.url + this.images[this.activeImage]?.image_md;
     },
     progressBar() {
       //Calculate the width of the progressbar
@@ -1582,7 +1582,6 @@ export default {
     setTimeout(() => (this.isloading = false), 1000);
     var langCode = localStorage.getItem("lang");
 
-
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/web/product/getcampaign?campaign_name=trending-products&locale=" +
@@ -1590,7 +1589,7 @@ export default {
       )
       .then((response) => {
         this.arrivel = response.data.data[0].products;
-        console.log('testing',this.arrivel);
+        console.log("testing", this.arrivel);
         // const productStore = useProductStore();
         // productStore.testData(this.results);
       })
@@ -1617,19 +1616,18 @@ export default {
     this.langCode = lang;
   },
   methods: {
-    addtoCart(item,index) {
+    addtoCart(item, index) {
       const cartStore = useCartStore();
       cartStore.addcartapi(item);
       this.isText = false;
-     this.isSpinner=true;
-      if(this.trends[index]){
-       setTimeout(()=>{
-      this.isText = true;
-      this.trends[index].check = true;
-      this.isSpinner=false;
-       } , 1000); 
+      this.isSpinner = true;
+      if (this.trends[index]) {
+        setTimeout(() => {
+          this.isText = true;
+          this.trends[index].check = true;
+          this.isSpinner = false;
+        }, 1000);
       }
-
     },
     clickmodal(event) {
       const wishlistid = event.currentTarget.getAttribute("wishlist_id");
@@ -1663,7 +1661,7 @@ export default {
         axios
           .get(
             "http://baladi-v1.bteamwebs.com/api/mobile/product/getWIshlist&locale=" +
-          langCode,
+              langCode,
             {
               headers: {
                 Authorization: "Bearer " + this.token,
@@ -1689,10 +1687,13 @@ export default {
       axios
         .get(
           "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
-            topseller_id  + '&locale='+this.langCode
+            topseller_id +
+            "&locale=" +
+            this.langCode
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];
+          this.images = this.singleProduct.images;
           this.sub_products = response.data.data[0].uom_products[0];
           // console.log("response.data.data", this.singleProduct);
         })
@@ -1723,7 +1724,7 @@ export default {
     },
     nextImage() {
       var active = this.activeImage + 1;
-      if (active >= 3) {
+      if (active >= this.images?.length) {
         active = 0;
       }
       this.activateImage(active);
@@ -1733,7 +1734,7 @@ export default {
     prevImage() {
       var active = this.activeImage - 1;
       if (active < 0) {
-        active = 3 - 1;
+        active = this.images?.length - 1;
       }
       this.activateImage(active);
     },

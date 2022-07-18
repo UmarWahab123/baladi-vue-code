@@ -585,10 +585,9 @@ button:not(:disabled) {
   font-weight: 500;
 }
 
-
-.tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart {
+/* .tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart {
   display: none;
-}
+} */
 
 a.woosc-btn.woosc-btn-521.woosc-btn-added.woosc-added {
   display: none !important;
@@ -603,5 +602,9 @@ a.most-comments {
 
 .rtl .link-color {
   background: #00a046 !important;
-  border:1px solid #00a046 !important;
+  border: 1px solid #00a046 !important;
+}
+
+.rtl .banner-content {
+  direction: rtl;
 }

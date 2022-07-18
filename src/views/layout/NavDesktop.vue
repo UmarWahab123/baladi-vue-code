@@ -1442,7 +1442,7 @@ export default {
       )
       .then((response) => {
         this.dicount = response.data.data[0].products;
-        console.log("discount data", this.dicount);
+        // console.log("discount data", this.dicount);
       })
       .catch((error) => {});
     this.langCode = lang;
@@ -1454,7 +1454,7 @@ export default {
       )
       .then((response) => {
         this.categories = response.data.data.data;
-        console.log("categoryresults", this.categories);
+        // console.log("categoryresults", this.categories);
       })
       .catch((error) => {});
     axios
