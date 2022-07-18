@@ -4069,3 +4069,10 @@ input.check-toggle-round-flat:checked + label:after {
   margin: auto !important;
   vertical-align: middle !important;
 }
+
+span.price del {
+  display: none !important;
+}
+.products .product-price-cart .price {
+  font-size: 1.1125rem !important;
+}

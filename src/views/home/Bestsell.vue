@@ -423,7 +423,7 @@
                                 ]"
                                 @click="activateImage(index)"
                               >
-                                <img :src="image.thumb" />
+                                <img :src="url + image.image_md" />
                               </div>
                             </div>
                             <!-- swiper-slide -->
@@ -460,14 +460,13 @@
                   </h1>
                   <div class="product-meta">
                     <div class="product-model">
-                      <span>Model:</span>
-                      A248458
+                      <span>PCS</span>
                     </div>
                     <!-- product-model -->
-                    <div class="sku-wrapper">
+                    <!-- <div class="sku-wrapper">
                       <span>SKU:</span>
                       <span class="sku">KM45VGRT</span>
-                    </div>
+                    </div> -->
                     <!-- sku-wrapper -->
                   </div>
                   <!-- product-meta -->
@@ -504,8 +503,9 @@
                       ><del
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                            ><span class="woocommerce-Price-currencySymbol">{{
+                              $t("QAR")
+                            }}</span
                             >{{ sub_products.previous_price }}</bdi
                           ></span
                         ></del
@@ -513,8 +513,9 @@
                       <ins
                         ><span class="woocommerce-Price-amount amount"
                           ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >$</span
+                            ><span class="woocommerce-Price-currencySymbol">{{
+                              $t("QAR")
+                            }}</span
                             >{{ singleProduct.variant_base_price }}</bdi
                           ></span
                         ></ins
@@ -591,6 +592,7 @@
                             single_add_to_cart_button
                             button
                             alt
+                            d-none
                           "
                         >
                           <span>Buy Now</span>
@@ -610,7 +612,7 @@
                         </div>
                       </form>
 
-                      <div class="product-actions">
+                      <div class="product-actions d-none">
                         <div
                           class="custom-wish-style"
                           :onclick="clickmodal"
@@ -652,7 +654,7 @@
                                 ><i class="klbth-icon-twitter"></i
                               ></a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a href="" class="youtube" target="_blank"
                                 ><i class="klbth-icon-youtube"></i
                               ></a>
@@ -666,7 +668,7 @@
                               <a href="" class="whatsapp" target="_blank"
                                 ><i class="klbth-icon-whatsapp"></i
                               ></a>
-                            </li>
+                            </li> -->
                           </ul>
                         </div>
                       </div>
@@ -694,7 +696,7 @@
                       <a
                         href="https://klbtheme.com/machic/product-category/smartwatches/"
                         rel="tag"
-                        >Smartwatches</a
+                        >{{ singleProduct?.category?.name }}</a
                       ></span
                     >
                   </div>
@@ -1558,23 +1560,7 @@ export default {
       timerInterval: null,
       //Every 10ms decrease the timeLeft
       countdownInterval: 10,
-      images: {
-        0: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-          length: 1,
-        },
-        1: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
-          length: 1,
-        },
-        2: {
-          thumb:
-            "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-          length: 1,
-        },
-      },
+      images: [],
       singleProduct: [],
       sub_products: [],
       wishlist: [],
@@ -1590,8 +1576,8 @@ export default {
     // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
-      return this.images[this.activeImage].thumb;
+      // console.log(this.images[this.activeImage]);
+      return this.url + this.images[this.activeImage]?.image_lg;
     },
     progressBar() {
       //Calculate the width of the progressbar
@@ -1701,6 +1687,7 @@ export default {
         )
         .then((response) => {
           this.singleProduct = response.data.data[0];
+          this.images = this.singleProduct.images;
           this.sub_products = response.data.data[0].uom_products[0];
           // console.log("response.data.data", this.singleProduct);
         })
@@ -1731,7 +1718,7 @@ export default {
     },
     nextImage() {
       var active = this.activeImage + 1;
-      if (active >= 3) {
+      if (active >= this.images?.length) {
         active = 0;
       }
       this.activateImage(active);
@@ -1741,7 +1728,7 @@ export default {
     prevImage() {
       var active = this.activeImage - 1;
       if (active < 0) {
-        active = 3 - 1;
+        active = this.images?.length - 1;
       }
       this.activateImage(active);
     },

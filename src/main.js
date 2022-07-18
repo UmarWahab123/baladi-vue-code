@@ -15,11 +15,11 @@ if (langCode == "ar") {
   import("@/assets/rtl/styles-rtl.css");
   import("@/assets/rtl/webfont-rtl.min.css");
   import("@/assets/rtl/public-rtl.min.css");
-  import("@/assets/rtl/base-rtl.css");
   import("@/assets/rtl/style-rtl.css");
   import("@/assets/rtl/frontend-lite-rtl.min.css");
   import("@/assets/rtl/style-rtl.min.css");
   import("@splidejs/splide/dist/css/themes/splide-default.min.css");
+  import("@/assets/rtl/base-rtl.css");
 
   // import("@/assets/rtl/style.css");
 } else {

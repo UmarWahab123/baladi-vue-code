@@ -111,7 +111,7 @@
                               ]"
                               @click="activateImage(index)"
                             >
-                              <img :src="image.thumb" />
+                              <img :src="url + image.image_sm" />
                             </div>
                           </div>
                         </ol>
@@ -998,27 +998,13 @@
                                             >
                                           </div>
                                           <!-- product-footer-buttons -->
-                                          <div class="product-footer-details">
-                                            <ul>
-                                              <li
-                                                class="
-                                                  SpecHighlights-list-label
-                                                "
-                                              >
-                                                Vegetables
-                                              </li>
-                                              <li>Fresh</li>
-                                              <li>2 kg</li>
-                                            </ul>
-                                            &nbsp;
-                                          </div>
                                         </div>
                                         <!-- product-footer -->
                                       </div>
                                       <!-- product-wrapper -->
                                       <div
                                         class="product-content-fade"
-                                        style="margin-bottom: -177px"
+                                        style="margin-bottom: -59px"
                                       ></div>
                                     </div>
                                   </div>
@@ -1220,7 +1206,7 @@
                                   ]"
                                   @click="activateImage(index)"
                                 >
-                                  <img :src="image.thumb" />
+                                  <img :src="image.image_sm" />
                                 </div>
                               </div>
                               <!-- swiper-slide -->
@@ -2249,7 +2235,7 @@ export default {
     showcomparemodalstyle: "",
     isloading: true,
     quantity: 1,
-    url: "http://baladiweb.bteamwebs.com/storage/",
+    url: "http://baladi-v1.bteamwebs.com/storage/",
     token: "",
     error: "",
 
@@ -2267,34 +2253,8 @@ export default {
     countdownInterval: 10,
     langCode: "en",
     sub_products: [],
-    results: {
-      name: "Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB",
-      price: 233,
-      images: [
-        {
-          photo:
-            "images/products/jacobs-kronung-instant-coffee-100-gm/760x760-1649745536648.jpg",
-        },
-      ],
-      sale_price: 233,
-    },
-    images: {
-      0: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
-      },
-      1: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1-96x96.jpg",
-        length: 1,
-      },
-      2: {
-        thumb:
-          "https://klbtheme.com/machic/wp-content/uploads/2021/09/product-2-96x96.jpg",
-        length: 1,
-      },
-    },
+
+    images: [],
   }),
   computed: {
     // currentImage gets called whenever activeImage changes
@@ -2302,8 +2262,8 @@ export default {
     // big image getting updated
     currentImage() {
       this.timeLeft = this.autoSlideInterval;
-      console.log(this.images[this.activeImage]);
-      return this.images[this.activeImage].thumb;
+      // console.log("Prosdfsadf", this.images[this.activeImage]?.image_lg);
+      return this.url + this.images[this.activeImage]?.image_lg;
     },
     progressBar() {
       //Calculate the width of the progressbar
@@ -2319,14 +2279,10 @@ export default {
     this.showsreviews = "d-none";
     this.description = "active";
     this.showdescription = "active show";
-
     setTimeout(() => (this.isloading = false), 1000);
     var id = this.$route.params.id;
-
     var langCode = localStorage.getItem("lang");
-
     // this.token = JSON.parse(localStorage.userInfo).token;
-
     axios
       .get(
         "http://baladi-v1.bteamwebs.com/api/mobile/product/getproductbyslug?slug=" +
@@ -2336,7 +2292,8 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data[0];
-        // console.log("thisdetailsresults", this.results);
+        // console.log("thisdetailsresults", this.results.images);
+        this.images = this.results.images;
         this.sub_products = response.data.data[0].uom_products[0];
       })
       .catch((error) => {});
@@ -2409,7 +2366,7 @@ export default {
     },
     nextImage() {
       var active = this.activeImage + 1;
-      if (active >= 3) {
+      if (active >= this.images?.length) {
         active = 0;
       }
       this.activateImage(active);
@@ -2419,11 +2376,12 @@ export default {
     prevImage() {
       var active = this.activeImage - 1;
       if (active < 0) {
-        active = 3 - 1;
+        active = this.images?.length - 1;
       }
       this.activateImage(active);
     },
     activateImage(imageIndex) {
+      // console.log({ imageIndex });
       this.activeImage = imageIndex;
     },
     //Wait until 'interval' and go to the next image;
