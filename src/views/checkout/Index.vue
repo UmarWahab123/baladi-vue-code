@@ -863,6 +863,7 @@ export default {
       this.guestCheck = false;
       this.loginCheck = true;
       var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      console.log('testuserInfo',userInfo);
       this.token = userInfo.token;
     }
     axios

@@ -16,16 +16,8 @@
                     <strong class="">
                       {{$t('addresses_on_checkout_page')}}</strong
                     >
-                    <router-link
-                      to="shipping"
-                      class="woocommerce-button button address-btn view p-0"
-                    >
-                      <button
-                      >
-                        {{$t('add_address')}} 
-                      </button>
-                    </router-link>
                     <table
+                    style="table-layout:fixed;"
                       class="
                         woocommerce-orders-table
                         rounded
@@ -41,19 +33,18 @@
                           <th
                             class="
                               woocommerce-orders-table__header
-                              woocommerce-orders-table__header-order-number
-                            "
-                          >
-                            <span class="nobr">{{$t('Address_Type')}} </span>
-                          </th>
-
-                          <th
-                            class="
-                              woocommerce-orders-table__header
                               woocommerce-orders-table__header-order-total
                             "
                           >
                             <span class="nobr">{{$t('address')}}</span>
+                          </th>
+                          <th
+                            class="
+                              woocommerce-orders-table__header
+                              woocommerce-orders-table__header-order-number
+                            "
+                          >
+                            <span class="nobr">{{$t('Address_Type')}} </span>
                           </th>
                           <th
                             class="
@@ -80,18 +71,6 @@
                           <td
                             class="
                               woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-number
-                            "
-                            data-title="Order"
-                          >
-                            <a v-if="item.shipping==0" href=""> {{$t('Billing')}} </a>
-                            <a v-if="item.shipping==1" href=""> {{$t('shipping')}}</a>
-
-                          </td>
-
-                          <td
-                            class="
-                              woocommerce-orders-table__cell
                               woocommerce-orders-table__cell-order-total
                             "
                             data-title="Total"
@@ -106,21 +85,16 @@
                           <td
                             class="
                               woocommerce-orders-table__cell
-                              woocommerce-orders-table__cell-order-actions
+                              woocommerce-orders-table__cell-order-number
                             "
-                            data-title="Actions"
+                            data-title="Order"
                           >
-                            <router-link
-                              :to="'/' + langCode + '/shipping/'+ item.id"
-                              class="woocommerce-button button view buttonsalignment"
-                              >{{$t('edit')}}
-                            </router-link>
-                            <a
-                              @click="deleteaddress(item.id)"
-                              style="margin-left: 5px; background-color: red; cursor: pointer;"
-                              class="woocommerce-button button view"
-                              >{{$t('delete')}}
-                            </a>
+                            <a v-if="item.shipping==0" href=""> {{$t('Billing')}} </a>
+                            <a v-if="item.shipping==1" href=""> {{$t('shipping')}}</a>
+
+                          </td>
+                          <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+                              <a href="#"  @click="deleteaddress(item.id)" data-id="107" class="woocommerce-button button bg-danger view delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
                           </td>
                         </tr>
                     

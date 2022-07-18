@@ -1284,11 +1284,12 @@
                       <div class="product-wrapper">
                         <div class="product-content">
                           <div class="thumbnail-wrapper">
-                            <a href=""
-                              ><img
-                                src="https://klbtheme.com/machic/wp-content/uploads/2021/09/single-1.jpg"
+                              <img
+                                :src="url +
+                                item?.product?.gallery
+                                  ?.gallery_images[0].image_md"
                                 alt="Apple 10.9-inch iPad Air Wi-Fi Cellular 64GB"
-                            /></a>
+                            />
                           </div>
                           <!-- thumbnail-wrapper -->
                           <div class="content-wrapper">
@@ -1313,18 +1314,6 @@
                               </div>
                             </div>
                             <span class="price"
-                              ><del aria-hidden="true"
-                                ><span class="woocommerce-Price-amount amount">
-                                  <bdi
-                                    ><span
-                                      class="woocommerce-Price-currencySymbol"
-                                      >QAR </span
-                                    >{{
-                                      item.product?.uom_products[0]
-                                        ?.previous_price
-                                    }}</bdi
-                                  >
-                                </span></del
                               >
                               <ins
                                 ><span class="woocommerce-Price-amount amount">

@@ -56,7 +56,15 @@
                                 woocommerce-orders-table__header-order-total
                               "
                             >
-                              <span class="nobr">{{$t('total')}}</span>
+                              <span class="nobr">{{$t('quantity')}}</span>
+                            </th>
+                             <th
+                              class="
+                                woocommerce-orders-table__header
+                                woocommerce-orders-table__header-order-total
+                              "
+                            >
+                              <span class="nobr">{{$t('price')}}</span>
                             </th>
                             <th
                               class="
@@ -96,8 +104,10 @@
                               "
                               data-title="Date"
                             >
-                              <time datetime="2022-02-28T05:29:17+00:00">{{
-                                item.created_at
+                            <time>{{
+                                moment(String(item.created_at)).format(
+                                  "MMMM DD YYYY"
+                                )
                               }}</time>
                             </td>
                             <td
@@ -107,9 +117,19 @@
                               "
                               data-title="Status"
                             >
-                              <span class="badge bg-info">Hold</span>
+                              <span class="badge bg-info">{{ item.last_order_status.title }}</span>
                             </td>
                             <td
+                              class="
+                                woocommerce-orders-table__cell
+                                woocommerce-orders-table__cell-order-total
+                              "
+                              data-title="Total"
+                            >
+                             
+                          {{ item.total_products }} items
+                            </td>
+                             <td
                               class="
                                 woocommerce-orders-table__cell
                                 woocommerce-orders-table__cell-order-total
@@ -121,7 +141,6 @@
                                   >{{$t('QAR')}} </span
                                 >{{ item.net_amount }}</span
                               >
-                              for {{ item.total_products }} items
                             </td>
                             <td
                               class="
@@ -203,6 +222,7 @@ import Sidebar from "./Sidebar.vue";
 <script>
 import TheLoader from "../Loader/TheLoader.vue";
 import axios from "axios";
+import moment from "moment";
 export default {
   components: { TheLoader },
   data() {
@@ -245,6 +265,7 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data;
+        console.log("dashboard order",this.results);
          if(response.data.data == ""){
           this.ordernotfound = true;
          }else{

@@ -12,6 +12,9 @@
     font-weight: 600;
 
 }
+.site-module.products-module {
+    overflow: hidden;
+}
 span.tinvwl_add_to_wishlist-text {
     display: none;
 }

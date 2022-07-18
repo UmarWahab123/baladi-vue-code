@@ -5,23 +5,39 @@
       <div class="shop-content my-account-page mt-60">
         <div class="container">
           <div class="woocommerce">
+              
             <div class="row content-wrapper sidebar-right">
               <div class="col-12 col-md-12 col-lg-12 content-primary">
                 <div class="my-account-wrapper">
+                 
                   <Sidebar />
-
                   <div class="woocommerce-MyAccount-content">
+                     <div class="mb-4">
+                  <div class="row d-flex justify-content-center align-items-center">
+                      <div class="col">
+                          <div class="card card-stepper" style="border-radius: 10px;">
+                              <div class="card-body p-4">
+                                  <div class="track">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
                     <div class="woocommerce-notices-wrapper"></div>
-                    <p>
-                      {{$t('Order')}} #<mark class="order-number">{{
+                    <h2 class="woocommerce-order-details__title">
+                        ORDER# {{
                               results?.id
-                            }}</mark> {{$t('was_placed_on')}} <mark class="order-date">{{
-                              results?.created_at
-                            }}</mark> {{$t('and')}}
-                      {{$t('is_currently')}} <mark class="order-status badge bg-success">On hold</mark>.
-                    </p>
-
+                             }}
+                                <br>
+                                <span class="text-muted small mt-1">  <time>{{
+                                moment(String(results?.created_at)).format(
+                                  "MMMM DD YYYY"
+                                )
+                              }}</time></span>
+                         </h2>
                     <section class="woocommerce-order-details">
+                   
                       <h2 class="woocommerce-order-details__title">
                         {{$t('Order_details')}}
                       </h2>
@@ -207,3 +223,4 @@ export default {
   },
 };
 </script>
+<style
