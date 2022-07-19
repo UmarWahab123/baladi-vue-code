@@ -357,11 +357,11 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
                         <router-link :to="'/' + langCode + '/userdashboard'">
-                          Dashboard</router-link
+                          {{$t('dashboard')}}</router-link
                         >
                       </li>
                       <li class="list-group-item">
-                        <a href="#"> Logout </a>
+                        <a @click="logout()" href="javascript:void(0);">{{$t('logout')}}</a>
                       </li>
                     </ul>
                   </div>
@@ -1566,7 +1566,12 @@ export default {
         window.location.reload();
       }
     },
-
+ logout() {
+      localStorage.clear();
+      localStorage.setItem("lang", "en");
+      var lang = localStorage.getItem("lang");
+      this.$router.push("/" + lang + "/myaccount");
+    },
     onchangesearch: function (event) {
       if (event.target.value) {
         const inputsearch = event.target.value;

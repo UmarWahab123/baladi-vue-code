@@ -12,21 +12,23 @@
                  
                   <Sidebar />
                   <div class="woocommerce-MyAccount-content">
-                     <div class="mb-4">
-                  <div class="row d-flex justify-content-center align-items-center">
-                      <div class="col">
-                          <div class="card card-stepper" style="border-radius: 10px;">
-                              <div class="card-body p-4">
-                                  <div class="track">
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                  <div class="mb-4">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col">
+                            <div class="card card-stepper" style="border-radius: 10px;">
+                                <div class="card-body p-4">
+                                    <div class="track">
+                                      <div class="step active"> <span class="icon"> <i class="fa fa-check" style="margin-top: 11px;" aria-hidden="true"></i> </span> <span class="text">04:11 pm</span> <span class="text"> {{$t('Processing')}}</span> </div>
+                                      <div class="step"> <span class="icon"> <i class="fa fa-check" style="margin-top: 11px;" aria-hidden="true"></i> </span> <span class="text"></span> <span class="text"></span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="woocommerce-notices-wrapper"></div>
                     <h2 class="woocommerce-order-details__title">
-                        ORDER# {{
+                        {{$t('ORDER')}}# {{
                               results?.id
                              }}
                                 <br>
@@ -37,11 +39,6 @@
                               }}</time></span>
                          </h2>
                     <section class="woocommerce-order-details">
-                   
-                      <h2 class="woocommerce-order-details__title">
-                        {{$t('Order_details')}}
-                      </h2>
-
                       <table
                         class="
                           woocommerce-table woocommerce-table--order-details
@@ -103,25 +100,24 @@
                             </td>
                           </tr>
                         </tbody>
-
                         <tfoot>
                           <tr>
-                            <th scope="row">{{$t('Subtotal')}}:</th>
+                            <th scope="row">{{$t('SubTotal')}}:</th>
                             <td>
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >{{$t('QAR')}}</span
-                                >{{ results.net_amount }}</span
+                                >{{ results?.net_amount }}</span
                               >
                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">{{$t('Shipping')}}:</th>
-                            <td>Local pickup</td>
+                            <th scope="row">{{$t('Discount')}}:</th>
+                            <td>{{ results?.order_discount }}</td>
                           </tr>
                           <tr>
                             <th scope="row">{{$t('Payment_method')}}:</th>
-                            <td>Check payments</td>
+                            <td>Cash on delivery</td>
                           </tr>
                           <tr>
                             <th scope="row">{{$t('total')}}:</th>
@@ -129,34 +125,47 @@
                               <span class="woocommerce-Price-amount amount"
                                 ><span class="woocommerce-Price-currencySymbol"
                                   >{{$t('QAR')}}</span
-                                >{{ results?.sale_amount }}</span
+                                >{{ results?.net_amount }}</span
                               >
                             </td>
-                          </tr>
-                          <tr>
-                            <th>{{$t('Note')}}:</th>
-                            <td>{{ results?.delivery_note }}</td>
                           </tr>
                         </tfoot>
                       </table>
                     </section>
-
-                    <section class="woocommerce-customer-details">
-                      <h2 class="woocommerce-column__title">{{$t('Billing_address')}}</h2>
-
+              <div class="row">
+                <section class="woocommerce-customer-details col-6">
+                    <h2 class="woocommerce-column__title">{{$t('BILLING_ADDRESS')}}</h2>
+                    <address>
+                      <span>df</span> <br>
+                      <span>32</span> <br>
+                      <span>3423</span> <br>
+                      <span> sdfsd sdfs</span>
+                      <p class="woocommerce-customer-details--phone"> 32423</p>
+                    </address>
+                </section>
+                <section class="woocommerce-customer-details col-6">
+                    <h2 class="woocommerce-column__title">{{$t('SHIPPING_ADDRESS')}}</h2>
+                    <address>
+                      <span>df</span> <br>
+                      <span>32</span> <br>
+                      <span>3423</span> <br>
+                      <span> sdfsd sdfs</span>
+                      <p class="woocommerce-customer-details--phone"> 32423</p>
+                    </address>
+                </section>
+              </div>
+                   <div class="row">
+                  <section class="woocommerce-customer-details col-12">
+                      <h2 class="woocommerce-column__title">{{$t('Driver_Information')}}</h2>
                       <address>
-                        Jena Benjamin<br />Oneill Mcintyre Associates<br />128
-                        East Green Old Road<br />Illum nostrud saepe<br />Quisquam
-                        est id aliq<br />Cuscatlán<br />77241<br />El Salvador
-                        <p class="woocommerce-customer-details--phone">
-                          +1 (701) 969-9051
-                        </p>
-
-                        <p class="woocommerce-customer-details--email">
-                          wagipihako@mailinator.com
-                        </p>
+                        <div class="row">
+                            <div class="col-3">
+                              <strong>{{$t('Pending')}}</strong> <br>
+                            </div>
+                        </div>
                       </address>
-                    </section>
+                  </section>
+                </div>
                   </div>
                 </div>
                 <!-- my-account-wrapper -->
@@ -192,6 +201,7 @@ export default {
       isloading: true,
       results: [],
       moment: moment,
+      langCode: "en",
     };
   },
   mounted() {
@@ -204,6 +214,7 @@ export default {
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
     this.token = userInfo.token;
     var langCode = localStorage.getItem("lang");
+    this.langCode = langCode;
 
     axios
       .get(
@@ -217,10 +228,87 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data[0];
-        console.log("blog-details:",this.results);
+        console.log("order-details:",this.results);
       })
       .catch((error) => {});
   },
 };
 </script>
-<style
+<style>
+.align-items-center {
+    align-items: center !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.col {
+    flex: 1 0 0%;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+.track {
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+.track .step {
+    -webkit-box-flex: 1;
+    /* -ms-flex-positive: 1; */
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative;
+}
+.track .step.active:before {
+    background: #2ba447;
+}
+
+.track .step::before {
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px;
+}
+.track .step.active .icon {
+    background: #2ba447;
+    color: #fff;
+}
+.track .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd;
+}
+.track .step.active .text {
+  font-size: 15px;
+    color: #000;
+}
+.track .text {
+    display: block;
+    margin-top: 7px;
+}
+</style>

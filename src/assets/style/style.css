@@ -1759,6 +1759,7 @@ ul.woocommerce-thankyou-order-details {
 .woocommerce-order-details td,
 .woocommerce-order-details th {
   padding: 8px;
+  font-size: medium;
 }
 
 h2.woocommerce-order-details__title,

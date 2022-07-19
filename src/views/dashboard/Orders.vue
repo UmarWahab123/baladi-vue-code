@@ -127,7 +127,7 @@
                               data-title="Total"
                             >
                              
-                          {{ item.total_products }} items
+                          {{ item.total_products }} {{$t('items')}}
                             </td>
                              <td
                               class="
@@ -265,7 +265,7 @@ export default {
       )
       .then((response) => {
         this.results = response.data.data;
-        console.log("dashboard order",this.results);
+        // console.log("dashboard order",this.results);
          if(response.data.data == ""){
           this.ordernotfound = true;
          }else{

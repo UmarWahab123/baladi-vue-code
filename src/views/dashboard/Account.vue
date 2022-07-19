@@ -24,35 +24,35 @@
                             </div>
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-                                  <label for="account_first_name">First Name&nbsp;<span class="required">*</span></label>
+                                  <label for="account_first_name">{{$t('First_Name')}}&nbsp;<span class="required">*</span></label>
                                   <input type="text" class="woocommerce-Input woocommerce-Input--text input-text " name="first_name" id="first_name" autocomplete="given-name" value="umar">
                                 </p>
                             </div>
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-                                  <label for="last_name">Last Name&nbsp;<span class="required">*</span></label>
+                                  <label for="last_name">{{$t('Last_Name')}}&nbsp;<span class="required">*</span></label>
                                   <input type="text" class="woocommerce-Input woocommerce-Input--text input-text  " name="last_name" id="last_name" autocomplete="family-name" value="">
                                 </p>
                                 <div class="clear"></div>
                             </div>
                           </div>
                           <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                            <label for="account_display_name">Display Name&nbsp;<span class="required">*</span></label>
+                            <label for="account_display_name">{{$t('Display_Name')}}&nbsp;<span class="required">*</span></label>
                             <input type="text" disabled="" class="woocommerce-Input woocommerce-Input--text input-text" name="display_name" id="display_name" value="umar">
-                            <span><span>This will be how your name will be displayed in the account section and in reviews</span></span>
+                            <span><span>{{$t('name-display-msg')}}</span></span>
                           </p>
                           <div class="clear"></div>
                           <div class="row">
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-                                  <label for="phone">Phone No&nbsp;<span class="required">*</span></label>
-                                  <input type="tel" class="woocommerce-Input woocommerce-Input--text input-text  " name="phone" id="account_last_name" autocomplete="phone no" value="">
+                                  <label for="phone">{{$t('Phone_No')}}&nbsp;<span class="required">*</span></label>
+                                  <input type="tel" class="woocommerce-Input woocommerce-Input--text input-text" name="phone" id="account_last_name" autocomplete="phone no" value="">
                                 </p>
                                 <div class="clear"></div>
                             </div>
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                  <label for="account_email">Email address&nbsp;<span class="required">*</span></label>
+                                  <label for="account_email">{{$t('email_address')}}&nbsp;<span class="required">*</span></label>
                                   <input type="email" disabled="" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="umarwahab672@gmail.com">
                                 </p>
                             </div>
@@ -60,47 +60,47 @@
                           <div class="row">
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-                                  <label for="phone">Date Of Birth&nbsp;<span class="required">*</span></label>
+                                  <label for="phone">{{$t('Date_Of_Birth')}}&nbsp;<span class="required">*</span></label>
                                   <input type="date" class="woocommerce-Input woocommerce-Input--text input-text" name="dob" id="account_last_name" value="" autocomplete="date">
                                 </p>
                                 <div class="clear"></div>
                             </div>
                             <div class="col-md-6">
                                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row mb-0 form-row-wide">
-                                  <label>Upload Image&nbsp;<span class="required">*</span></label> <br>
+                                  <label>{{$t('Upload_Image')}}&nbsp;<span class="required">*</span></label> <br>
                                 </p>
                                 <div class="border py-1 px-2 rounded-2">
-                                  <label for="custom-file" class="custom-file-upload">Choose file</label>
+                                  <label for="custom-file" class="custom-file-upload">{{$t('Choose_file')}}</label>
                                 </div>
                                 <input type="file" class="form-control border  pt-2" id="custom-file" name="photo" onchange="PreviewImg()" style="display: none">
                                 <p></p>
                             </div>
                             <div class="text-end mb-3">
-                                <button class="btn btn-success">Update</button>
+                                <button class="btn btn-success">{{$t('update')}}</button>
                             </div>
                           </div>
                           <!--update password form fields -->
                           <input type="hidden" name="_token" value="0cvsPlVbt2T6z4Qv7RZYcZZc5JiMQFKUaQZavTEr">                                        
                           <fieldset>
-                            <legend>Password change</legend>
+                            <legend>{{$t('pass_change')}}</legend>
                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                <label for="password_current">Current password (leave blank to leave unchanged)</label>
+                                <label for="password_current">{{$t('current_pass')}}</label>
                                 <span class="password-input"><input type="password" class="woocommerce-Input woocommerce-Input--password input-text  " name="current_password" min="7" id="password_current" autocomplete="off">
                                 <span class="show-password-input"></span></span>
                             </p>
                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                <label for="password_1">New password (leave blank to leave unchanged)</label>
+                                <label for="password_1">{{$t('new_pass')}}</label>
                                 <span class="password-input"><input type="password" min="7" class="woocommerce-Input woocommerce-Input--password input-text  " name="password" id="password_1" autocomplete="off">
                                 <span class="show-password-input"></span></span>
                             </p>
                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                <label for="password_2">Confirm new password</label>
+                                <label for="password_2">{{$t('confirm_new_pass')}}</label>
                                 <span class="password-input"><input type="password" min="7" class="woocommerce-Input woocommerce-Input--password input-text " name="password_confirmation" id="password_2" autocomplete="off">
                                 <span class="show-password-input"></span></span>
                             </p>
                           </fieldset>
                           <p>
-                            <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="6618061b2b"><input type="hidden" name="_wp_http_referer" value="/machic/my-account/edit-account/"> <button type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">Change Password</button>
+                            <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="6618061b2b"><input type="hidden" name="_wp_http_referer" value="/machic/my-account/edit-account/"> <button type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">{{$t('Change_Password')}}</button>
                             <input type="hidden" name="action" value="save_account_details">
                           </p>
                     </div>

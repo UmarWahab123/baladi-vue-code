@@ -94,10 +94,9 @@
 
                           </td>
                           <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
-                              <a href="#"  @click="deleteaddress(item.id)" data-id="107" class="woocommerce-button button bg-danger view delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                              <a href="#" @click="deleteaddress(item.id)" data-id="107" class="woocommerce-button button bg-danger view delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
                           </td>
                         </tr>
-                    
                       </tbody>
                     </table>
                       <div class="row text-center mb-5 p-4">

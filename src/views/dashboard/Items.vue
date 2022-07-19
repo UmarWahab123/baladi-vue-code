@@ -1,185 +1,88 @@
 <template>
-  <form action="javascript:void(0)" method="post" autocomplete="off">
-    <table class="tinvwl-table-manage-list">
-      <thead>
-        <tr>
-          <th class="product-cb">
-            <input
-              type="checkbox"
-              class="global-cb"
-              title="Select all for bulk action"
-              @click="select"
-              v-model="select_all"
-            />
-          </th>
-          <th class="product-remove"></th>
-          <th class="product-name">
-            <span class="tinvwl-full"
-              ><b>{{ $t("product_name") }}</b></span
-            ><span class="tinvwl-mobile"
-              ><b>{{ $t("Product") }}</b></span
-            >
-          </th>
-          <th class="product-price">
-            <b>{{ $t("unit_price") }}</b>
-          </th>
-          <th class="product-date">
-            <b>{{ $t("date_added") }}</b>
-          </th>
-          <th class="product-stock">
-            <b>{{ $t("stock_status") }}</b>
-          </th>
-          <th class="product-action">&nbsp;</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr
-          class="wishlist_item"
-          v-for="(item, indextr) in results"
-          :key="item.id"
-        >
-          <td class="product-cb">
-            <input type="checkbox" :value="item.id" v-model="selected" />
-          </td>
-          <td class="product-remove">
-            <button
-              type="submit"
-              name="tinvwl-remove"
-              value="605"
-              title="Remove"
-              @click="remove(item.product_id)"
-            >
-              <i class="ftinvwl ftinvwl-times"></i>
-            </button>
-          </td>
-          <td class="product-name">
-            <a href="javascript:void(0)">{{ item?.product?.product_name }}</a>
-          </td>
-          <td class="product-price">
-            <del aria-hidden="true"
-              ><span class="woocommerce-Price-amount amount"
-                ><bdi
-                  ><span class="woocommerce-Price-currencySymbol">$</span
-                  >{{ item?.product?.uom_products[0]?.previous_price }}</bdi
-                ></span
-              ></del
-            >
-            <ins
-              ><span class="woocommerce-Price-amount amount"
-                ><bdi
-                  ><span class="woocommerce-Price-currencySymbol"> $</span
-                  >{{ item?.product?.variant_base_price }}</bdi
-                ></span
-              ></ins
-            >
-          </td>
-          <td class="product-date">
-            <time class="entry-date" :datetime="item.created_at"></time>
-            {{ moment(item.created_at).format("MMMM , DD YYYY ") }}
-          </td>
-          <td class="product-stock">
-            <p class="stock in-stock">
-              <span><i class="ftinvwl ftinvwl-check"></i></span
-              ><span>In Stock</span>
-            </p>
-          </td>
-          <td class="product-action">
-            <button
-              class="button alt"
-              name="tinvwl-add-to-cart"
-              value="605"
-              title="Add to Cart"
-              @click="addtoCart(item)"
-            >
-              <i class="ftinvwl ftinvwl-shopping-cart"></i
-              ><span class="tinvwl-txt">{{ $t("add_to_cart") }}</span>
-            </button>
-          </td>
-        </tr>
-
-        <tr v-if="wishlistnotfound">
-          <td colspan="9">
-            <h3 class="d-flex justify-content-center">
-              {{ $t("No_Data_found") }}
-            </h3>
-          </td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <td colspan="100">
-            <div class="tinvwl-to-left look_in">
-              <div class="tinvwl-input-group tinvwl-no-full">
-                <input
-                  type="hidden"
-                  name="lists_per_page"
-                  value="10"
-                  id="tinvwl_lists_per_page"
-                /><select
-                  name="product_actions"
-                  id="tinvwl_product_actions"
-                  class="tinvwl-break-input-filed form-control"
-                  style="display: none"
-                >
-                  <option value="" selected="selected">Actions</option>
-                  <option value="add_selected">Add to Cart</option>
-                  <option value="remove">Remove</option></select
-                ><span class="tinvwl-input-group-btn"
-                  ><button
-                    class="button tinvwl-break-input tinvwl-break-checkbox"
-                    name="tinvwl-action"
-                    value="product_apply"
-                    title="Apply Action"
-                    style="display: none"
-                  >
-                    {{ $t("apply") }}
-                    <span class="tinvwl-mobile">{{ $t("action") }}</span>
-                  </button></span
-                >
-              </div>
-            </div>
-
-            <div class="tinvwl-to-right look_in">
-              <button
-                class="btn"
-                name="tinvwl-action"
-                value="product_selected"
-                title="Add Selected to Cart"
-                @click="AddSelected"
-              >
-                {{ $t("Add_Selected_to_Cart") }}
-              </button>
-              &nbsp;
-              <button
-                class="btn"
-                name="tinvwl-action"
-                title="Add All to Cart"
-                @click="AddAll"
-              >
-                {{ $t("Add_All_to_Cart") }}
-              </button>
-            </div>
-            <input
-              type="hidden"
-              id="wishlist_nonce"
-              name="wishlist_nonce"
-              value="f0ab8a2cc0"
-            /><input
-              type="hidden"
-              name="_wp_http_referer"
-              value="/machic/wishlist/"
-            />
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-  </form>
+   <div class="klb-orders-style1 custome-rtl-div-alignment" style="margin-top: -15px !important;">
+      <table class="woocommerce-orders-table rounded woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders wishliast-account-orders-table account-orders-table">
+         <thead>
+            <tr>
+               <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number">
+                  <span class="nobr">{{$t('Product')}}</span>
+               </th>
+               <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date">
+                  <span class="nobr">{{ $t("unit_price") }}</span>
+               </th>
+               <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status">
+                  <span class="nobr">{{ $t("date_added") }}</span>
+               </th>
+               <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total">
+                  <span class="nobr">{{ $t("stock_status") }}</span>
+               </th>
+               <th style="width:35% !important" class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions">
+                  <span class="nobr">{{$t('action')}}</span>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr v-for="(item, indextr) in results"
+                :key="item.id" class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order">
+               <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order">
+                  <a href="http://staging.baladiexpress.com/product-details/baladna-orange-juice-"> {{ item?.product?.product_name }} </a>
+               </td>
+               <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+                  <span class="">{{ item?.product?.variant_base_price }}</span>
+               </td>
+               <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+                  <span class="">
+                    <time class="entry-date" :datetime="item.created_at"></time>
+            {{ moment(item.created_at).format("MMMM , DD YYYY ") }}</span> 
+               </td>
+               <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+                  <span class="badge bg-info">
+                 {{$t('In_Stock')}}
+                  </span>
+               </td>
+               <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+                   <button @click="remove(item.product_id)" id="wishlist-remove" data-id="340" class="btn mt-arabic btn-sm bg-danger custome-danger-styles"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  <a @click="addtoCart(item,indextr)" style="width: max-content; margin-left:5px; color:white;" data-uom_product_id="298" data-quantity="1" class="button button-primary mt-3 mt-md-0 add_to_cart_button single_add_to_cart_button button alt add-product-to-cart add-style-to-cart-btn" role="button">
+                      <span
+                        v-if="isText"
+                        id="add-cart-text"
+                        class="add-cart-text-238"
+                        >{{ $t("add_to_cart") }}</span
+                      >
+                     <div
+                        v-if="isSpinner"
+                        class="
+                          spinner-border
+                          text-white
+                          cart-spinner-247
+                          text-center
+                          spinner-border-sm
+                        "
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                  </a>
+                     <router-link
+                        v-if="item?.check"
+                        :to="'/' + langCode + '/cart'"
+                        class="added_to_cart wc-forward"
+                        title="View cart"
+                        >{{ $t("Viewcart") }}</router-link>
+               </td>
+            </tr>
+               <tr v-if="wishlistnotfound">
+                <td colspan="9">
+                  <h3 class="d-flex justify-content-center">
+                    {{ $t("No_Data_found") }}
+                  </h3>
+                </td>
+              </tr>
+         </tbody>
+      </table>
+   </div>
 </template>
 <script setup>
 import { useCartStore } from "../../stores/CartStore";
-const cartStore = useCartStore();
 defineEmits(["addToCart"]);
 </script>
 <script>
@@ -195,9 +98,15 @@ export default {
     token: "",
     moment: moment,
     items: [],
+    langCode: "en",
+
     wishlistnotfound: false,
+      isText: true,
+    isSpinner: false,
   }),
   mounted() {
+    var lang = localStorage.getItem("lang");
+    this.langCode = lang;
     this.getWishList();
   },
   methods: {
@@ -265,6 +174,7 @@ export default {
           )
           .then((response) => {
             this.results = response.data.data;
+            // console.log("resultswishlist", this.results);
             if (response.data.data == "") {
               this.wishlistnotfound = true;
             } else {
@@ -299,10 +209,21 @@ export default {
         alert("Please select All item");
       }
     },
-    addtoCart(item) {
+    addtoCart(item,index) {
       // cartStore.items.push(item);
       cartStore.addcartapi(item);
+        this.results[index].isSpinner = true;
+      if (this.results[index]) {
+        setTimeout(() => {
+          this.isText = true;
+          this.results[index].check = true;
+          this.results[index].isSpinner = false;
+        }, 1000);
+       }
+    }
+    }
 
+};
       // console.log("product_name", item.product.product_name);
       // console.log("item", item);
       // const quanitiy = cartStore.groupedCount(item.product.product_name);
@@ -324,8 +245,6 @@ export default {
       //     console.log(response.data);
       //   })
       //   .catch((error) => {});
-    },
-  },
-};
+ 
 </script>
 
